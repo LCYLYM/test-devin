@@ -202,6 +202,12 @@
     } else if (/^[1-7]$/.test(e.key) && window.SalaryApp) {
       var direct = ['pig','charge','meter','pixel','neon','mono','paper'][Number(e.key) - 1];
       if (direct) window.SalaryApp.setTemplate(direct);
+    } else if (e.key === 'e' && window.SalaryApp) {
+      window.SalaryApp.toggleDemo();
+    } else if (e.key === 'x' && window.SalaryApp) {
+      var cc = ['CNY','USD','EUR','JPY','KRW','HKD','VND','IDR','ZIM'];
+      var cur2 = window.SalaryApp.getState().preferences.currency;
+      window.SalaryApp.setCurrency(cc[(cc.indexOf(cur2) + 1) % cc.length]);
     } else if (e.key === 'c' && window.SalaryApp) {
       window.SalaryApp.openDialog('calendarDialog');
     } else if (e.key === 'o') {
