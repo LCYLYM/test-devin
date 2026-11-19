@@ -868,3 +868,5 @@ body.is-focus .ticker{display:none}
 body[data-glow] .amount-area{text-shadow:0 0 26px rgba(var(--accent-rgb),.4)}
 body[data-glow] .status-dot{animation:glowPulse 2.4s ease-in-out infinite}
 @keyframes glowPulse{0%,100%{box-shadow:0 0 6px rgba(var(--accent-rgb),.6)}50%{box-shadow:0 0 16px rgba(var(--accent-rgb),1)}}
+body[data-eink]{filter:grayscale(1)}
+body[data-eink] *{animation:none!important;transition:none!important}

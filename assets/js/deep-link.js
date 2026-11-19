@@ -597,7 +597,24 @@
     }
     if (params.get('light') === '1') document.body.dataset.light = '1';
     else if (params.get('light') === '0') delete document.body.dataset.light;
-    else if (!themeParam) { try { if (localStorage.getItem('salaryFlow.light') === '1') document.body.dataset.light = '1'; } catch (e) {} }
+    else if (params.get('light') === 'auto') { var lhr = new Date().getHours(); if (lhr >= 7 && lhr < 19) document.body.dataset.light = '1'; }
+    if (params.get('eink') === '1') document.body.dataset.eink = '1';
+    var shiftP = params.get('shift');
+    if (shiftP) {
+      var shiftPairs = shiftP.split(',').slice(0, 4).map(function (seg) {
+        var sm = /^(\d{1,2})(?::?(\d{2}))?-(\d{1,2})(?::?(\d{2}))?$/.exec(seg);
+        if (!sm) return null;
+        var s = (+sm[1]) * 60 + (+(sm[2] || 0)), e = (+sm[3]) * 60 + (+(sm[4] || 0));
+        if (e > 1440 || s >= e) return null;
+        var fmt = function (x) { return String(Math.floor(x / 60)).padStart(2, '0') + ':' + String(x % 60).padStart(2, '0'); };
+        return [fmt(s), fmt(e)];
+      });
+      if (shiftPairs.length && shiftPairs.every(Boolean)) {
+        var sst = window.SalaryApp && window.SalaryApp.getState && window.SalaryApp.getState();
+        if (sst && sst.config) { sst.config.intervals = shiftPairs; if (window.SalaryApp.render) window.SalaryApp.render(); }
+      }
+    }
+    if (!params.get('light') && !themeParam) { try { if (localStorage.getItem('salaryFlow.light') === '1') document.body.dataset.light = '1'; } catch (e) {} }
     window.__toggleLight = function () {
       var on = document.body.dataset.light !== '1';
       if (on) document.body.dataset.light = '1'; else delete document.body.dataset.light;
@@ -850,7 +867,9 @@
       if (window.__noKeys) u.searchParams.set('keys', '0');
       if (window.__noConfetti) u.searchParams.set('confetti', '0');
       if (window.__milestones) u.searchParams.set('milestone', window.__milestones.length ? window.__milestones.join(',') : '0');
-      if (document.body.dataset.light === '1') u.searchParams.set('light', '1');
+      var lgp = params.get('light'); if (document.body.dataset.light === '1') u.searchParams.set('light', lgp === 'auto' ? 'auto' : '1');
+      if (document.body.dataset.eink === '1') u.searchParams.set('eink', '1');
+      var shp = params.get('shift'); if (shp) u.searchParams.set('shift', shp);
       var thp = params.get('theme'); if (thp) u.searchParams.set('theme', thp);
       if (window.__dirDown) u.searchParams.set('dir', 'down');
       var szp = params.get('size'); if (szp) u.searchParams.set('size', szp);
