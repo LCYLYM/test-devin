@@ -1684,6 +1684,12 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .is-anemone .instrument{border-color:rgba(230,120,150,.4)}
 .is-bobcat{background:linear-gradient(180deg,#1d140f 0%,#120c08 100%)}
 .is-bobcat .instrument{border-color:rgba(205,140,90,.4)}
+.is-caracal{background:linear-gradient(180deg,#1f1310 0%,#130b08 100%)}
+.is-caracal .instrument{border-color:rgba(215,110,80,.4)}
+.is-dormouse{background:linear-gradient(180deg,#191512 0%,#100d0a 100%)}
+.is-dormouse .instrument{border-color:rgba(190,170,150,.4)}
+.is-eland{background:linear-gradient(180deg,#1b1610 0%,#110d08 100%)}
+.is-eland .instrument{border-color:rgba(185,160,115,.4)}
 .is-oatmeal{background:linear-gradient(180deg,#1d1912,#2f291e 50%,#433a2a)}
 .is-oatmeal .instrument{border-color:rgba(215,195,155,.4)}
 .is-thyme{background:linear-gradient(180deg,#121a14,#1c2a20 50%,#28392c)}
