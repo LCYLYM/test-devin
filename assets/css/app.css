@@ -1082,3 +1082,5 @@ body[data-prism] .instrument::before{content:"";position:absolute;inset:-1px;bor
 @property --prism-a{syntax:'<angle>';initial-value:0deg;inherits:false}
 @keyframes prismSpin{to{--prism-a:360deg}}
 @media(prefers-reduced-motion:reduce){body[data-prism] .instrument::before{animation:none}}
+.payday.lunch{color:#fdba74}
+.payday.off{color:#94a3b8}

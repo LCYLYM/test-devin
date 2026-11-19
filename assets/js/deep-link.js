@@ -314,12 +314,12 @@
         requestAnimationFrame(mFrame);
       })();
     }
-    if (['snow', 'sakura', 'rain', 'stars', 'leaves', 'bubble', 'ember', 'firefly', 'dust', 'meteor', 'warp', 'cloud'].indexOf(fxParam) >= 0 && !(window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches)) {
+    if (['snow', 'sakura', 'rain', 'stars', 'leaves', 'bubble', 'ember', 'firefly', 'dust', 'meteor', 'warp', 'cloud', 'paper'].indexOf(fxParam) >= 0 && !(window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches)) {
       var fxc = document.createElement('canvas');
       fxc.style.cssText = 'position:fixed;inset:0;width:100%;height:100%;pointer-events:none;opacity:.65';
       document.body.prepend(fxc);
       var fxctx = fxc.getContext('2d');
-      var parts = [], N = fxParam === 'rain' ? 90 : fxParam === 'stars' ? 70 : fxParam === 'meteor' ? 0 : fxParam === 'cloud' ? 12 : 45;
+      var parts = [], N = fxParam === 'rain' ? 90 : fxParam === 'stars' ? 70 : fxParam === 'meteor' ? 0 : fxParam === 'cloud' ? 12 : fxParam === 'paper' ? 10 : 45;
       var meteors = [];
       function fxResize(){ fxc.width = innerWidth; fxc.height = innerHeight; }
       fxResize(); window.addEventListener('resize', fxResize);
@@ -388,6 +388,15 @@
             fxctx.fillStyle = 'rgba(220,230,240,.05)';
             fxctx.beginPath(); fxctx.ellipse(q.x, q.y, q.r * 7, q.r * 3, 0, 0, 6.3); fxctx.fill();
             fxctx.beginPath(); fxctx.ellipse(q.x + q.r * 4, q.y + q.r, q.r * 4.5, q.r * 2.2, 0, 0, 6.3); fxctx.fill();
+            continue;
+          }
+          if (fxParam === 'paper') {
+            q.x += q.v * 1.6; q.y += q.v * 0.5 + Math.sin(q.s += 0.03) * 0.8;
+            if (q.x > innerWidth + 30) { q.x = -30; q.y = Math.random() * innerHeight * 0.7; }
+            fxctx.save(); fxctx.translate(q.x, q.y); fxctx.rotate(0.3 + Math.sin(q.s) * 0.15);
+            fxctx.fillStyle = 'rgba(230,238,248,.7)';
+            fxctx.beginPath(); fxctx.moveTo(q.r * 6, 0); fxctx.lineTo(-q.r * 3, -q.r * 2.2); fxctx.lineTo(-q.r * 1.2, 0); fxctx.lineTo(-q.r * 3, q.r * 2.2); fxctx.closePath(); fxctx.fill();
+            fxctx.restore();
             continue;
           }
           if (fxParam === 'bubble') {
@@ -1259,6 +1268,33 @@
     if (params.get('prism') === '1' && !(window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches)) {
       document.body.dataset.prism = '1';
     }
+    if (params.get('lunch') === '1') {
+      var lub = document.getElementById('lunchBadge'), lut = document.getElementById('lunchText');
+      if (lub && lut) {
+        var luUpd = function () {
+          var lh = new Date().getHours() + new Date().getMinutes() / 60;
+          if (lh >= 11 && lh < 13.5) { lut.textContent = '干饭时间'; lub.hidden = false; }
+          else if (lh >= 13.5 && lh < 14) { lut.textContent = '饭毕收心'; lub.hidden = false; }
+          else lub.hidden = true;
+        };
+        luUpd();
+        setInterval(luUpd, 60000);
+      }
+    }
+    if (params.get('off') === '1') {
+      var ofb = document.getElementById('offBadge'), oft = document.getElementById('offText');
+      if (ofb && oft) {
+        var ofUpd = function () {
+          var working = !!document.querySelector('.instrument.is-working');
+          var oh2 = new Date().getHours();
+          if (working) { ofb.hidden = true; return; }
+          oft.textContent = (oh2 >= 0 && oh2 < 6) ? '深夜自由' : '已收工';
+          ofb.hidden = false;
+        };
+        ofUpd();
+        setInterval(ofUpd, 30000);
+      }
+    }
     if (params.get('hex') === '1') {
       var hxb = document.getElementById('hexBadge'), hxd = document.getElementById('hexDot'), hxv = document.getElementById('hexVal');
       if (hxb && hxd && hxv) {
@@ -1832,6 +1868,8 @@
       if (params.get('hours') === '1') u.searchParams.set('hours', '1');
       if (params.get('charm') === '1') u.searchParams.set('charm', '1');
       if (params.get('prism') === '1') u.searchParams.set('prism', '1');
+      if (params.get('lunch') === '1') u.searchParams.set('lunch', '1');
+      if (params.get('off') === '1') u.searchParams.set('off', '1');
       if (params.get('rays') === '1') u.searchParams.set('rays', '1');
       if (params.get('flat') === '1') u.searchParams.set('flat', '1');
       var idl = params.get('idle'); if (idl) u.searchParams.set('idle', idl);

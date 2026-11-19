@@ -199,7 +199,8 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `stamp` | `1` 打卡印章 |
 | `tock` | `1` 金额每秒轻跳 |
 | `gains` | `1` 每秒收益飘字 |
-| `fx` | `…|cloud` 云朵漂移 |
+| `fx` | `…|cloud` 云朵漂移
+| `fx` | `…|paper` 纸飞机 |
 | `hour` | `1` 当前小时进度徽章 |
 | `greet` | `1` 时段问候徽章 |
 | `sat` | `0`–`200` 仪表饱和度（%） |
@@ -238,12 +239,14 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `hours` | `1` 今日工时进度徽章 |
 | `charm` | `1` 每日幸运符徽章 |
 | `prism` | `1` 棱镜彩虹描边 |
+| `lunch` | `1` 干饭时段提醒徽章 |
+| `off` | `1` 收工状态徽章 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 
 币种现在共 12 种：CNY/USD/EUR/JPY/KRW/HKD/VND/IDR/GBP/SGD/AUD + ZIM 趣味。
 
-`fx` 可选 `snow`/`sakura`/`rain`/`matrix`（字符雨）/`stars`（闪烁星空）/`leaves`/`bubble`/`ember`/`firefly`/`dust`/`meteor`/`warp`。
+`fx` 可选 `snow`/`sakura`/`rain`/`matrix`（字符雨）/`stars`（闪烁星空）/`leaves`/`bubble`/`ember`/`firefly`/`dust`/`meteor`/`warp`/`cloud`/`paper`。
 
 彩蛋：页面里按 ↑↑↓↓←→←→BA 解锁暴富模式（KONAMI）。
 
