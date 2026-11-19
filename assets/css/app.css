@@ -1534,6 +1534,10 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .dbl-big .amount{transform:scale(1.35)}
 #amountArea .amount{transition:transform .25s var(--motion)}
 .is-focus .payday.quota{display:none}
+.payday.beats{color:#67e8f9}
+.payday.unix{color:#a3e635}
+.payday.era{color:#f9a8d4}
+.is-focus .payday.beats,.is-focus .payday.unix,.is-focus .payday.era{display:none}
 .is-forest{background:linear-gradient(180deg,#0d1f14,#12291a)}
 .is-forest .instrument{border-color:rgba(74,222,128,.38)}
 .is-sand{background:linear-gradient(180deg,#241c10,#2f2614)}

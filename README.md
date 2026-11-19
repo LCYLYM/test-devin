@@ -572,6 +572,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `fawn` | `1` 小鹿配色 |
 | `bracken` | `1` 蕨丛配色 |
 | `reed` | `1` 芦苇配色 |
+| `beats` | `1` Swatch 网络时间徽章 |
+| `unix` | `1` Unix 时间戳徽章 |
+| `era` | `1` 令和年号徽章 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 

@@ -3098,6 +3098,33 @@
     if (params.get('reed') === '1') {
       document.body.classList.add('is-reed');
     }
+    if (params.get('beats') === '1') {
+      var btb = document.getElementById('beatsBadge'), btv = document.getElementById('beatsVal');
+      if (btb && btv) {
+        var btUpd = function () {
+          var d = new Date();
+          var secs = (d.getUTCHours() + 1) % 24 * 3600 + d.getUTCMinutes() * 60 + d.getUTCSeconds();
+          btv.textContent = Math.floor(secs / 86.4);
+          btb.hidden = false;
+        };
+        btUpd(); setInterval(btUpd, 8640);
+      }
+    }
+    if (params.get('unix') === '1') {
+      var unb = document.getElementById('unixBadge'), unv = document.getElementById('unixVal');
+      if (unb && unv) {
+        var unUpd = function () { unv.textContent = Math.floor(Date.now() / 1000); unb.hidden = false; };
+        unUpd(); setInterval(unUpd, 1000);
+      }
+    }
+    if (params.get('era') === '1') {
+      var erb = document.getElementById('eraBadge'), erv = document.getElementById('eraVal');
+      if (erb && erv) {
+        var y = new Date().getFullYear();
+        erv.textContent = '令和' + (y - 2018) + '年';
+        erb.hidden = false;
+      }
+    }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -3912,6 +3939,9 @@
       if (params.get('fawn') === '1') u.searchParams.set('fawn', '1');
       if (params.get('bracken') === '1') u.searchParams.set('bracken', '1');
       if (params.get('reed') === '1') u.searchParams.set('reed', '1');
+      if (params.get('beats') === '1') u.searchParams.set('beats', '1');
+      if (params.get('unix') === '1') u.searchParams.set('unix', '1');
+      if (params.get('era') === '1') u.searchParams.set('era', '1');
       if (params.get('tile') === '1') u.searchParams.set('tile', '1');
       if (params.get('outline') === '1') u.searchParams.set('outline', '1');
       if (params.get('stripe') === '1') u.searchParams.set('stripe', '1');
