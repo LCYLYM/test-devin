@@ -3837,6 +3837,9 @@
     if (params.get('platy') === '1') { document.body.classList.add('is-platy'); }
     if (params.get('swordtail') === '1') { document.body.classList.add('is-swordtail'); }
     if (params.get('danio') === '1') { document.body.classList.add('is-danio'); }
+    if (params.get('gourami') === '1') { document.body.classList.add('is-gourami'); }
+    if (params.get('rasbora') === '1') { document.body.classList.add('is-rasbora'); }
+    if (params.get('koi') === '1') { document.body.classList.add('is-koi'); }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -5032,6 +5035,9 @@
         if (params.get('platy') === '1') u.searchParams.set('platy', '1');
         if (params.get('swordtail') === '1') u.searchParams.set('swordtail', '1');
         if (params.get('danio') === '1') u.searchParams.set('danio', '1');
+        if (params.get('gourami') === '1') u.searchParams.set('gourami', '1');
+        if (params.get('rasbora') === '1') u.searchParams.set('rasbora', '1');
+        if (params.get('koi') === '1') u.searchParams.set('koi', '1');
       if (params.get('tile') === '1') u.searchParams.set('tile', '1');
       if (params.get('outline') === '1') u.searchParams.set('outline', '1');
       if (params.get('stripe') === '1') u.searchParams.set('stripe', '1');

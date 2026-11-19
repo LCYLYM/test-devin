@@ -953,6 +953,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `platy` | `1` 月光鱼配色 |
 | `swordtail` | `1` 剑尾鱼配色 |
 | `danio` | `1` 斑马鱼配色 |
+| `gourami` | `1` 丽丽鱼配色 |
+| `rasbora` | `1` 波鱼配色 |
+| `koi` | `1` 锦鲤配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 

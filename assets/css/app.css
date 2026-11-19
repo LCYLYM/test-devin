@@ -2104,6 +2104,12 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .is-swordtail .instrument{border-color:rgba(220,110,140,.4)}
 .is-danio{background:linear-gradient(180deg,#10181d 0%,#0a1014 100%)}
 .is-danio .instrument{border-color:rgba(120,190,220,.4)}
+.is-gourami{background:linear-gradient(180deg,#141a1e 0%,#0c1114 100%)}
+.is-gourami .instrument{border-color:rgba(130,190,205,.4)}
+.is-rasbora{background:linear-gradient(180deg,#1e1412 0%,#150d0b 100%)}
+.is-rasbora .instrument{border-color:rgba(235,135,95,.4)}
+.is-koi{background:linear-gradient(180deg,#1b1b18 0%,#121210 100%)}
+.is-koi .instrument{border-color:rgba(235,160,80,.4)}
 .is-oatmeal{background:linear-gradient(180deg,#1d1912,#2f291e 50%,#433a2a)}
 .is-oatmeal .instrument{border-color:rgba(215,195,155,.4)}
 .is-thyme{background:linear-gradient(180deg,#121a14,#1c2a20 50%,#28392c)}
