@@ -233,7 +233,9 @@
     const info = dayInfo(date, cfg);
     const month = monthInfo(date, cfg);
     const intervals = dayIntervals(date, cfg);
-    const daySeconds = month.standardDaySeconds;
+    // Real elapsed seconds between today's interval timestamps — stays correct
+    // across DST shifts, unlike the wall-clock month.standardDaySeconds.
+    const daySeconds = intervals.reduce((sum, pair) => sum + (pair[1] - pair[0]) / 1000, 0);
     const workSecondsToday = info.work ? daySeconds : 0;
     let elapsedSecondsToday = 0;
     let status = 'off';
