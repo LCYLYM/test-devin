@@ -4080,6 +4080,9 @@
     if (params.get('bloodstain') === '1') { document.body.classList.add('is-bloodstain'); }
     if (params.get('firedot') === '1') { document.body.classList.add('is-firedot'); }
     if (params.get('lungwort') === '1') { document.body.classList.add('is-lungwort'); }
+    if (params.get('rockposy') === '1') { document.body.classList.add('is-rockposy'); }
+    if (params.get('golddust') === '1') { document.body.classList.add('is-golddust'); }
+    if (params.get('blackeye') === '1') { document.body.classList.add('is-blackeye'); }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -5518,6 +5521,9 @@
         if (params.get('bloodstain') === '1') u.searchParams.set('bloodstain', '1');
         if (params.get('firedot') === '1') u.searchParams.set('firedot', '1');
         if (params.get('lungwort') === '1') u.searchParams.set('lungwort', '1');
+        if (params.get('rockposy') === '1') u.searchParams.set('rockposy', '1');
+        if (params.get('golddust') === '1') u.searchParams.set('golddust', '1');
+        if (params.get('blackeye') === '1') u.searchParams.set('blackeye', '1');
       if (params.get('tile') === '1') u.searchParams.set('tile', '1');
       if (params.get('outline') === '1') u.searchParams.set('outline', '1');
       if (params.get('stripe') === '1') u.searchParams.set('stripe', '1');

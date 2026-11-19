@@ -2590,6 +2590,12 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .is-firedot .instrument{border-color:rgba(226,146,58,.4)}
 .is-lungwort{background:linear-gradient(180deg,#151a16 0%,#10130f 100%)}
 .is-lungwort .instrument{border-color:rgba(128,166,116,.4)}
+.is-rockposy{background:linear-gradient(180deg,#181918 0%,#121312 100%)}
+.is-rockposy .instrument{border-color:rgba(164,172,158,.4)}
+.is-golddust{background:linear-gradient(180deg,#1e1a0e 0%,#161206 100%)}
+.is-golddust .instrument{border-color:rgba(214,178,64,.4)}
+.is-blackeye{background:linear-gradient(180deg,#131314 0%,#0e0e0f 100%)}
+.is-blackeye .instrument{border-color:rgba(122,124,134,.4)}
 .is-oatmeal{background:linear-gradient(180deg,#1d1912,#2f291e 50%,#433a2a)}
 .is-oatmeal .instrument{border-color:rgba(215,195,155,.4)}
 .is-thyme{background:linear-gradient(180deg,#121a14,#1c2a20 50%,#28392c)}

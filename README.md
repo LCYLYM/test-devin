@@ -1196,6 +1196,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `bloodstain` | `1` 血斑衣配色 |
 | `firedot` | `1` 火点衣配色 |
 | `lungwort` | `1` 肺衣配色 |
+| `rockposy` | `1` 石花衣配色 |
+| `golddust` | `1` 金粉衣配色 |
+| `blackeye` | `1` 黑眼衣配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 
