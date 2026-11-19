@@ -2,7 +2,8 @@
   'use strict';
   const $ = id => document.getElementById(id);
   const clamp = (n,a=0,b=1) => Math.min(b,Math.max(a,n));
-  const motion = window.matchMedia('(prefers-reduced-motion: reduce)');
+  const motionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+  const motion = { get matches() { return motionQuery.matches || (typeof preferences === 'object' && preferences !== null && preferences.motion === 'reduce'); } };
   const instrument = $('earningsCard');
   let frame=0, latest=null, lastTime=0, lastDigitTime=0, lastPulseSecond=-1, lastPixelTime=0;
   let amountShown=0, amountFrom=0, amountTarget=0, tweenStart=0, tweenDuration=0;

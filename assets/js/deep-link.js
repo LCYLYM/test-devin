@@ -58,6 +58,7 @@
     }
 
     if (params.get('sound') === '1') app.setPreference('sound', true);
+    else if (params.get('sound') === '0') app.setPreference('sound', false);
 
     // ?accent=%234de3ff — override the theme accent color (shareable).
     var paydayParam = params.get('payday');
@@ -152,6 +153,10 @@
     }
     applyThemeColor(app.getState().preferences.template);
     window.addEventListener('salary-template', function (e) { applyThemeColor(e.detail && e.detail.template); });
+
+    var motion = params.get('motion');
+    if (motion === '0' || motion === 'reduce') app.setPreference('motion', 'reduce');
+    else if (motion === '1') app.setPreference('motion', 'full');
 
     if (params.get('zen') === '1' || params.get('ui') === '0') document.body.classList.add('is-focus');
 
@@ -306,6 +311,8 @@
       if (ints && ints.length && JSON.stringify(ints) !== '[["09:00","12:00"],["13:30","18:00"]]') {
         u.searchParams.set('work', ints.map(function (p) { return p.join('-').replace(/:/g, ''); }).join(','));
       }
+      var bgc = document.body.style.getPropertyValue('--bg');
+      if (/^#?([0-9a-fA-F]{3,4}|[0-9a-fA-F]{6}|[0-9a-fA-F]{8})$/.test(bgc)) u.searchParams.set('bg', bgc);
       var pd = params.get('payday') || (function () { try { return localStorage.getItem('salaryFlow.payday'); } catch (e) { return ''; } })();
       if (pd && /^[0-9]{1,2}$/.test(pd)) u.searchParams.set('payday', pd);
       var text = u.toString();
