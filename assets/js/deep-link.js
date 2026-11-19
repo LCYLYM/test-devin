@@ -932,6 +932,12 @@
     if (params.get('drift') === '1') document.body.dataset.drift = '1';
     if (params.get('wide') === '1') document.body.dataset.wide = '1';
     if (params.get('rb') === '1') document.body.dataset.rb = '1';
+    if (params.get('slim') === '1') document.body.dataset.slim = '1';
+    if (params.get('lift') === '1') document.body.dataset.lift = '1';
+    var curP = params.get('cursor');
+    if (curP && /^[\S]{1,4}$/u.test(curP)) {
+      document.body.style.cursor = 'url("data:image/svg+xml,' + encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"><text y="24" font-size="24">' + curP + '</text></svg>') + '") 16 16, auto';
+    }
     var borderC = params.get('border');
     if (borderC && /^#?([0-9a-fA-F]{3,4}|[0-9a-fA-F]{6}|[0-9a-fA-F]{8})$/.test(borderC)) {
       var inst = document.querySelector('.instrument');
@@ -1448,6 +1454,9 @@
       if (params.get('drift') === '1') u.searchParams.set('drift', '1');
       if (params.get('wide') === '1') u.searchParams.set('wide', '1');
       if (params.get('rb') === '1') u.searchParams.set('rb', '1');
+      if (params.get('slim') === '1') u.searchParams.set('slim', '1');
+      if (params.get('lift') === '1') u.searchParams.set('lift', '1');
+      var cup = params.get('cursor'); if (cup) u.searchParams.set('cursor', cup.slice(0, 4));
       var bdc = params.get('border'); if (bdc) u.searchParams.set('border', bdc.slice(0, 9));
       if (params.get('ripple') === '1') u.searchParams.set('ripple', '1');
       params.forEach(function (v, k) { if (k.indexOf('utm_') === 0 && v) u.searchParams.set(k, v.slice(0, 64)); });
