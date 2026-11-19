@@ -39,6 +39,11 @@
     if (params.get('demo') === '1') {
       if (!app.getState().demo) app.toggleDemo();
     }
+
+    if (params.get('focus') === 'salary') {
+      var salaryInput = document.getElementById('salaryInput');
+      if (salaryInput) { salaryInput.focus(); salaryInput.select(); }
+    }
   });
 
   /* Live tab title: show the ticking amount. ?title=0 disables. */
@@ -120,8 +125,42 @@
         });
     });
     field.appendChild(btn);
+
+    var textBtn = document.createElement('button');
+    textBtn.type = 'button';
+    textBtn.className = 'small-button';
+    textBtn.textContent = '复制分享文案';
+    textBtn.addEventListener('click', function () {
+      var app = window.SalaryApp;
+      var state = app && app.getState();
+      var snap = state && state.snapshot;
+      var url = publicBase(location.href) || 'https://xd.syal.site/';
+      var lines = ['我在看自己的工资一秒一秒往上涨 · 薪动'];
+      if (snap && isFinite(snap.todayEarned)) lines.push('今天已赚 ' + app.formatMoney(snap.todayEarned));
+      if (state && state.config && state.config.salary) lines.push('月薪 ¥' + state.config.salary);
+      lines.push(url);
+      var text = lines.join('\n');
+      (navigator.clipboard ? navigator.clipboard.writeText(text) : Promise.reject())
+        .then(function () { textBtn.textContent = '已复制 ✓'; setTimeout(function(){ textBtn.textContent='复制分享文案'; }, 1500); })
+        .catch(function () { textBtn.textContent = '复制失败'; setTimeout(function(){ textBtn.textContent='复制分享文案'; }, 1500); });
+    });
+    field.appendChild(textBtn);
   }
   var obs = new MutationObserver(wireCopyLink);
   obs.observe(document.body, { childList: true, subtree: true });
   wireCopyLink();
+
+  /* Install prompt: surface a toast when the browser offers PWA install. */
+  var deferredInstall = null;
+  window.addEventListener('beforeinstallprompt', function (e) {
+    e.preventDefault();
+    deferredInstall = e;
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'i' && deferredInstall && !e.metaKey && !e.ctrlKey && !e.altKey) {
+      var tag = (e.target.tagName || '').toLowerCase();
+      if (tag === 'input' || tag === 'textarea' || tag === 'select' || e.target.isContentEditable) return;
+      deferredInstall.prompt();
+    }
+  });
 })();
