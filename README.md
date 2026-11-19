@@ -827,6 +827,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `avocet` | `1` 反嘴鹬配色 |
 | `bandicoot` | `1` 袋狸配色 |
 | `cotinga` | `1` 伞鸟配色 |
+| `dugite` | `1` 杜氏蛇配色 |
+| `firefinch` | `1` 火雀配色 |
+| `goshawk` | `1` 苍鹰配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 

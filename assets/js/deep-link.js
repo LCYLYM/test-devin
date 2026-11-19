@@ -3711,6 +3711,9 @@
     if (params.get('avocet') === '1') { document.body.classList.add('is-avocet'); }
     if (params.get('bandicoot') === '1') { document.body.classList.add('is-bandicoot'); }
     if (params.get('cotinga') === '1') { document.body.classList.add('is-cotinga'); }
+    if (params.get('dugite') === '1') { document.body.classList.add('is-dugite'); }
+    if (params.get('firefinch') === '1') { document.body.classList.add('is-firefinch'); }
+    if (params.get('goshawk') === '1') { document.body.classList.add('is-goshawk'); }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -4780,6 +4783,9 @@
         if (params.get('avocet') === '1') u.searchParams.set('avocet', '1');
         if (params.get('bandicoot') === '1') u.searchParams.set('bandicoot', '1');
         if (params.get('cotinga') === '1') u.searchParams.set('cotinga', '1');
+        if (params.get('dugite') === '1') u.searchParams.set('dugite', '1');
+        if (params.get('firefinch') === '1') u.searchParams.set('firefinch', '1');
+        if (params.get('goshawk') === '1') u.searchParams.set('goshawk', '1');
       if (params.get('tile') === '1') u.searchParams.set('tile', '1');
       if (params.get('outline') === '1') u.searchParams.set('outline', '1');
       if (params.get('stripe') === '1') u.searchParams.set('stripe', '1');
