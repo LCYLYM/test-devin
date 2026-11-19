@@ -2855,6 +2855,15 @@
     if (params.get('pewter') === '1') {
       document.body.classList.add('is-pewter');
     }
+    if (params.get('dawn') === '1') {
+      document.body.classList.add('is-dawn');
+    }
+    if (params.get('thicket') === '1') {
+      document.body.classList.add('is-thicket');
+    }
+    if (params.get('blossom') === '1') {
+      document.body.classList.add('is-blossom');
+    }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -3588,6 +3597,9 @@
       if (params.get('kelp') === '1') u.searchParams.set('kelp', '1');
       if (params.get('maple') === '1') u.searchParams.set('maple', '1');
       if (params.get('pewter') === '1') u.searchParams.set('pewter', '1');
+      if (params.get('dawn') === '1') u.searchParams.set('dawn', '1');
+      if (params.get('thicket') === '1') u.searchParams.set('thicket', '1');
+      if (params.get('blossom') === '1') u.searchParams.set('blossom', '1');
       if (params.get('tile') === '1') u.searchParams.set('tile', '1');
       if (params.get('outline') === '1') u.searchParams.set('outline', '1');
       if (params.get('stripe') === '1') u.searchParams.set('stripe', '1');

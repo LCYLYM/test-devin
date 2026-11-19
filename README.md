@@ -491,6 +491,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `kelp` | `1` 海草配色 |
 | `maple` | `1` 枫红配色 |
 | `pewter` | `1` 锡器配色 |
+| `dawn` | `1` 黎明配色 |
+| `thicket` | `1` 灌木配色 |
+| `blossom` | `1` 花期配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 
