@@ -1052,6 +1052,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `crow` | `1` 乌鸦配色 |
 | `pigeon` | `1` 鸽子配色 |
 | `pelican` | `1` 鹈鹕配色 |
+| `flamingo` | `1` 火烈鸟配色 |
+| `swan` | `1` 天鹅配色 |
+| `crane` | `1` 仙鹤配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 

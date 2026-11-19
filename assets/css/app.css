@@ -2302,6 +2302,12 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .is-pigeon .instrument{border-color:rgba(175,175,205,.4)}
 .is-pelican{background:linear-gradient(180deg,#1b1516 0%,#130f10 100%)}
 .is-pelican .instrument{border-color:rgba(225,160,140,.4)}
+.is-flamingo{background:linear-gradient(180deg,#1f1116 0%,#160b10 100%)}
+.is-flamingo .instrument{border-color:rgba(245,120,150,.4)}
+.is-swan{background:linear-gradient(180deg,#1a1c20 0%,#121315 100%)}
+.is-swan .instrument{border-color:rgba(210,215,230,.4)}
+.is-crane{background:linear-gradient(180deg,#16181a 0%,#0f1113 100%)}
+.is-crane .instrument{border-color:rgba(185,195,205,.4)}
 .is-oatmeal{background:linear-gradient(180deg,#1d1912,#2f291e 50%,#433a2a)}
 .is-oatmeal .instrument{border-color:rgba(215,195,155,.4)}
 .is-thyme{background:linear-gradient(180deg,#121a14,#1c2a20 50%,#28392c)}
