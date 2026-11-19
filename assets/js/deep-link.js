@@ -153,9 +153,11 @@
       var u = new URL(base);
       var state = app && app.getState();
       var salary = state && state.config && state.config.salary;
-      var template = state && state.preferences && state.preferences.template;
+      var prefs = state && state.preferences;
       if (salary) u.searchParams.set('salary', salary);
-      if (template) u.searchParams.set('template', template);
+      if (prefs && prefs.template) u.searchParams.set('template', prefs.template);
+      if (prefs && prefs.currency && prefs.currency !== 'CNY') u.searchParams.set('currency', prefs.currency);
+      if (prefs && prefs.period && prefs.period !== 'day') u.searchParams.set('period', prefs.period);
       var text = u.toString();
       (navigator.clipboard ? navigator.clipboard.writeText(text) : Promise.reject())
         .then(function () { btn.textContent = '已复制 ✓'; setTimeout(function(){ btn.textContent='复制当前链接'; }, 1500); })
