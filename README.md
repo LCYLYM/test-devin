@@ -956,6 +956,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `gourami` | `1` 丽丽鱼配色 |
 | `rasbora` | `1` 波鱼配色 |
 | `koi` | `1` 锦鲤配色 |
+| `arowana` | `1` 龙鱼配色 |
+| `discus` | `1` 七彩神仙配色 |
+| `oscarfish` | `1` 地图鱼配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 

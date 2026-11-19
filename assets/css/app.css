@@ -2110,6 +2110,12 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .is-rasbora .instrument{border-color:rgba(235,135,95,.4)}
 .is-koi{background:linear-gradient(180deg,#1b1b18 0%,#121210 100%)}
 .is-koi .instrument{border-color:rgba(235,160,80,.4)}
+.is-arowana{background:linear-gradient(180deg,#1c1210 0%,#130c0a 100%)}
+.is-arowana .instrument{border-color:rgba(240,140,80,.4)}
+.is-discus{background:linear-gradient(180deg,#17121c 0%,#100c14 100%)}
+.is-discus .instrument{border-color:rgba(180,140,220,.4)}
+.is-oscarfish{background:linear-gradient(180deg,#141714 0%,#0d100d 100%)}
+.is-oscarfish .instrument{border-color:rgba(140,200,120,.4)}
 .is-oatmeal{background:linear-gradient(180deg,#1d1912,#2f291e 50%,#433a2a)}
 .is-oatmeal .instrument{border-color:rgba(215,195,155,.4)}
 .is-thyme{background:linear-gradient(180deg,#121a14,#1c2a20 50%,#28392c)}
