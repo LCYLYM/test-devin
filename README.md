@@ -695,6 +695,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `weasel` | `1` 黄鼬配色 |
 | `rhubarb` | `1` 大黄配色 |
 | `stork` | `1` 鹳配色 |
+| `goanna` | `1` 巨蜥配色 |
+| `cumin` | `1` 孜然配色 |
+| `chinchilla` | `1` 龙猫配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 
