@@ -1102,3 +1102,5 @@ body[data-compact] .payday{font-size:11px;padding:2px 8px}
 .payday.advent{color:#86efac}
 .payday.newyear{color:#fde047}
 .payday.week7{color:#d8b4fe}
+.payday.over{color:#fbbf24}
+body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}

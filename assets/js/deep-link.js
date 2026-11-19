@@ -1386,6 +1386,34 @@
         setInterval(w7Upd, 8000);
       }
     }
+    if (params.get('over') === '1') {
+      var ovb = document.getElementById('overBadge'), ova = document.getElementById('overAmt');
+      if (ovb && ova) {
+        var ovUpd = function () {
+          var ovs = window.SalaryApp && window.SalaryApp.getState && window.SalaryApp.getState();
+          var sn4 = ovs && ovs.snapshot;
+          if (!sn4 || !sn4.daySalary) { ovb.hidden = true; return; }
+          var surplus = sn4.todayEarned - sn4.daySalary;
+          if (surplus <= 0) { ovb.hidden = true; return; }
+          ova.textContent = window.SalaryApp.formatMoney ? window.SalaryApp.formatMoney(surplus) : surplus.toFixed(2);
+          ovb.hidden = false;
+        };
+        ovUpd();
+        setInterval(ovUpd, 5000);
+      }
+    }
+    if (params.get('fson') === '1') {
+      document.addEventListener('pointerdown', function fsonOnce() {
+        document.removeEventListener('pointerdown', fsonOnce);
+        if (!document.fullscreenElement) document.documentElement.requestFullscreen?.();
+      });
+    }
+    var opaParam = params.get('opacity');
+    if (opaParam) {
+      var opa = Math.min(100, Math.max(20, parseFloat(opaParam)));
+      if (isFinite(opa)) document.documentElement.style.setProperty('--inst-opacity', (opa / 100).toString());
+      document.body.dataset.opacity = '1';
+    }
     var titleParam = params.get('title');
     if (titleParam) window.__customTitle = titleParam.trim().slice(0, 30);
     if (params.get('tabearn') === '1' || window.__customTitle) {
@@ -1985,6 +2013,9 @@
       if (params.get('week7') === '1') u.searchParams.set('week7', '1');
       if (params.get('tabearn') === '1') u.searchParams.set('tabearn', '1');
       var ttp = params.get('title'); if (ttp) u.searchParams.set('title', ttp);
+      if (params.get('over') === '1') u.searchParams.set('over', '1');
+      if (params.get('fson') === '1') u.searchParams.set('fson', '1');
+      var opp = params.get('opacity'); if (opp) u.searchParams.set('opacity', opp);
       if (params.get('rays') === '1') u.searchParams.set('rays', '1');
       if (params.get('flat') === '1') u.searchParams.set('flat', '1');
       var idl = params.get('idle'); if (idl) u.searchParams.set('idle', idl);

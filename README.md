@@ -253,6 +253,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `week7` | `1` 近7天累计入账徽章 |
 | `tabearn` | `1` 页签标题实时金额 |
 | `title` | `文字` 自定义页签标题 |
+| `over` | `1` 超额入账徽章（达标后显示） |
+| `fson` | `1` 首次点击自动全屏（挂屏用） |
+| `opacity` | `20-100` 仪表整体透明度 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 
