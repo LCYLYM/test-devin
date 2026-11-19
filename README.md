@@ -1226,6 +1226,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `maidenhair` | `1` 铁线蕨配色 |
 | `hartstongue` | `1` 对开蕨配色 |
 | `polypody` | `1` 水龙骨配色 |
+| `spleenwort` | `1` 铁角蕨配色 |
+| `shieldfern` | `1` 鳞毛蕨配色 |
+| `oakfern` | `1` 岩蕨配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 
