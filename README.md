@@ -1169,6 +1169,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `saffronmilkcap` | `1` 松乳菇配色 |
 | `kingoyster` | `1` 杏鲍菇配色 |
 | `shimeji` | `1` 蟹味菇配色 |
+| `nameko` | `1` 滑子菇配色 |
+| `maitake` | `1` 舞茸配色 |
+| `woodear` | `1` 木耳配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 
