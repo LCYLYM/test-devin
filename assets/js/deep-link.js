@@ -1717,6 +1717,39 @@
       }
     }
     if (params.get('pix') === '1') { document.body.classList.add('is-pix'); }
+    if (params.get('ratio') === '1') {
+      var rrb = document.getElementById('ratioBadge'), rrv = document.getElementById('ratioVal');
+      if (rrb && rrv) {
+        var rrUpd = function () {
+          var st = window.SalaryApp && window.SalaryApp.getState && window.SalaryApp.getState();
+          var sn = st && st.snapshot;
+          var avg = 30; // 娱乐参考：社平时薪 ¥30/h
+          if (sn && sn.hourSalary > 0) { rrv.textContent = (sn.hourSalary / avg).toFixed(1) + 'x'; rrb.hidden = false; }
+        };
+        rrUpd(); setInterval(rrUpd, 10000);
+      }
+    }
+    if (params.get('done') === '1') {
+      var dnb = document.getElementById('doneBadge'), dnv = document.getElementById('doneVal');
+      if (dnb && dnv) {
+        var dnUpd = function () {
+          var st = window.SalaryApp && window.SalaryApp.getState && window.SalaryApp.getState();
+          var sn = st && st.snapshot;
+          if (sn && sn.progress != null) { dnv.textContent = Math.min(100, Math.round(sn.progress * 100)) + '%'; dnb.hidden = false; }
+        };
+        dnUpd(); setInterval(dnUpd, 5000);
+      }
+    }
+    if (params.get('tilt2') === '1' && !(window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches)) {
+      var inst3 = document.querySelector('.instrument');
+      if (inst3) {
+        inst3.style.transition = 'transform .25s ease';
+        document.addEventListener('mousemove', function (e) {
+          var dx = (e.clientX / innerWidth - .5) * 6, dy = (e.clientY / innerHeight - .5) * -6;
+          inst3.style.transform = 'perspective(900px) rotateY(' + dx + 'deg) rotateX(' + dy + 'deg)';
+        });
+      }
+    }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -2377,6 +2410,9 @@
       var qtp = params.get('quote'); if (qtp) u.searchParams.set('quote', qtp);
       if (params.get('cheer') === '1') u.searchParams.set('cheer', '1');
       if (params.get('pix') === '1') u.searchParams.set('pix', '1');
+      if (params.get('ratio') === '1') u.searchParams.set('ratio', '1');
+      if (params.get('done') === '1') u.searchParams.set('done', '1');
+      if (params.get('tilt2') === '1') u.searchParams.set('tilt2', '1');
       if (params.get('rays') === '1') u.searchParams.set('rays', '1');
       if (params.get('flat') === '1') u.searchParams.set('flat', '1');
       var idl = params.get('idle'); if (idl) u.searchParams.set('idle', idl);

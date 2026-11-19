@@ -286,6 +286,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `quote` | `文字` 自定义金句行 |
 | `cheer` | `1` 打气语录徽章（30 秒轮换） |
 | `pix` | `1` 像素化渲染 |
+| `ratio` | `1` 时薪倍数徽章（对比社平 ¥30/h，娱乐） |
+| `done` | `1` 下班倒计时百分比徽章 |
+| `tilt2` | `1` 仪表跟随鼠标 3D 倾斜 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 
