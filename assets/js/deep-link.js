@@ -1121,6 +1121,25 @@
       eql.innerHTML = '<i></i><i></i><i></i><i></i><i></i>';
       document.body.appendChild(eql);
     }
+    var lumP = params.get('lum');
+    if (lumP !== null && isFinite(Number(lumP))) {
+      var lumV = Math.max(40, Math.min(160, Number(lumP)));
+      document.body.style.setProperty('--lum-pct', lumV + '%');
+      document.body.dataset.lum = '1';
+    }
+    if (params.get('rail') === '1') {
+      var rl = document.createElement('div');
+      rl.className = 'rail-layer'; rl.setAttribute('aria-hidden', 'true');
+      document.body.appendChild(rl);
+      var rlFill = function () {
+        var rls = window.SalaryApp && window.SalaryApp.getState && window.SalaryApp.getState();
+        var rsn = rls && rls.snapshot;
+        var rw = rsn && rsn.daySalary ? Math.min(100, (rsn.todayEarned || 0) / rsn.daySalary * 100) : 0;
+        rl.style.setProperty('--rail-w', rw.toFixed(1) + '%');
+      };
+      rlFill(); setInterval(rlFill, 30000);
+    }
+    if (params.get('hover') === '1') document.body.dataset.hover = '1';
     if (params.get('hex') === '1') {
       var hxb = document.getElementById('hexBadge'), hxd = document.getElementById('hexDot'), hxv = document.getElementById('hexVal');
       if (hxb && hxd && hxv) {
@@ -1676,6 +1695,9 @@
       if (params.get('hex') === '1') u.searchParams.set('hex', '1');
       if (params.get('spin') === '1') u.searchParams.set('spin', '1');
       if (params.get('pop') === '1') u.searchParams.set('pop', '1');
+      var lumX = params.get('lum'); if (lumX) u.searchParams.set('lum', lumX);
+      if (params.get('rail') === '1') u.searchParams.set('rail', '1');
+      if (params.get('hover') === '1') u.searchParams.set('hover', '1');
       if (params.get('rays') === '1') u.searchParams.set('rays', '1');
       if (params.get('flat') === '1') u.searchParams.set('flat', '1');
       var idl = params.get('idle'); if (idl) u.searchParams.set('idle', idl);

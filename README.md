@@ -220,6 +220,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `hex` | `1` 今日幸运色徽章 |
 | `spin` | `1` 徽章图标旋转 |
 | `pop` | `1` 徽章弹出入场 |
+| `lum` | `40`–`160` 仪表亮度（%） |
+| `rail` | `1` 页面底部进度轨 |
+| `hover` | `1` 徽章悬停上浮 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 

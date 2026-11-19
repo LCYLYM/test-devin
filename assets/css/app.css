@@ -1046,3 +1046,12 @@ body[data-pop] .payday:nth-child(3n){animation-delay:.08s}
 body[data-pop] .payday:nth-child(3n+1){animation-delay:.16s}
 @keyframes popIn{from{transform:scale(.4);opacity:0}to{transform:scale(1);opacity:1}}
 @media(prefers-reduced-motion:reduce){body[data-spin] .payday>span:first-child,body[data-pop] .payday{animation:none}}
+body[data-lum] .instrument{filter:brightness(var(--lum-pct,100%))}
+body[data-lum][data-sat] .instrument{filter:brightness(var(--lum-pct,100%)) saturate(var(--sat-pct,100%))}
+body[data-lum][data-hue] .instrument{filter:brightness(var(--lum-pct,100%)) hue-rotate(var(--hue-rot,0deg))}
+body[data-lum][data-sat][data-hue] .instrument{filter:brightness(var(--lum-pct,100%)) saturate(var(--sat-pct,100%)) hue-rotate(var(--hue-rot,0deg))}
+.rail-layer{position:fixed;left:0;right:0;bottom:0;height:3px;background:rgba(255,255,255,.06);pointer-events:none;z-index:6}
+.rail-layer::after{content:'';display:block;height:100%;width:var(--rail-w,0%);background:var(--accent,#67e494);transition:width .6s ease}
+.is-focus .rail-layer{display:none}
+body[data-hover] .payday{transition:transform .2s var(--motion,ease)}
+body[data-hover] .payday:hover{transform:translateY(-3px)}
