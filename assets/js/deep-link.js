@@ -151,6 +151,29 @@
         .catch(function () { textBtn.textContent = '复制失败'; setTimeout(function(){ textBtn.textContent='复制分享文案'; }, 1500); });
     });
     field.appendChild(textBtn);
+
+    var share = document.createElement('div');
+    share.style.cssText = 'display:flex;gap:10px;margin-top:8px;font-size:12px';
+    share.innerHTML = '分享到：'
+      + '<a href="#" data-intent="x" style="color:inherit">X/Twitter</a>'
+      + '<a href="#" data-intent="weibo" style="color:inherit">微博</a>'
+      + '<a href="#" data-intent="tg" style="color:inherit">Telegram</a>';
+    share.addEventListener('click', function (e) {
+      var a = e.target.closest('a[data-intent]');
+      if (!a) return;
+      e.preventDefault();
+      var state = window.SalaryApp && window.SalaryApp.getState();
+      var snap = state && state.snapshot;
+      var url = publicBase(location.href) || 'https://xd.syal.site/';
+      var text = '我在看自己的工资一秒一秒往上涨 · 薪动'
+        + (snap && isFinite(snap.todayEarned) ? '，今天已赚 ' + window.SalaryApp.formatMoney(snap.todayEarned) : '');
+      var enc = encodeURIComponent, u;
+      if (a.dataset.intent === 'x') u = 'https://twitter.com/intent/tweet?text=' + enc(text) + '&url=' + enc(url);
+      else if (a.dataset.intent === 'weibo') u = 'https://service.weibo.com/share/share.php?title=' + enc(text + ' ' + url);
+      else u = 'https://t.me/share/url?url=' + enc(url) + '&text=' + enc(text);
+      window.open(u, '_blank', 'noopener,noreferrer,width=640,height=560');
+    });
+    field.appendChild(share);
   }
   var obs = new MutationObserver(wireCopyLink);
   obs.observe(document.body, { childList: true, subtree: true });
