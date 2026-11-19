@@ -4074,6 +4074,9 @@
     if (params.get('pixiecups') === '1') { document.body.classList.add('is-pixiecups'); }
     if (params.get('mapdust') === '1') { document.body.classList.add('is-mapdust'); }
     if (params.get('rosette') === '1') { document.body.classList.add('is-rosette'); }
+    if (params.get('wolflichen') === '1') { document.body.classList.add('is-wolflichen'); }
+    if (params.get('sunburst') === '1') { document.body.classList.add('is-sunburst'); }
+    if (params.get('tarspots') === '1') { document.body.classList.add('is-tarspots'); }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -5506,6 +5509,9 @@
         if (params.get('pixiecups') === '1') u.searchParams.set('pixiecups', '1');
         if (params.get('mapdust') === '1') u.searchParams.set('mapdust', '1');
         if (params.get('rosette') === '1') u.searchParams.set('rosette', '1');
+        if (params.get('wolflichen') === '1') u.searchParams.set('wolflichen', '1');
+        if (params.get('sunburst') === '1') u.searchParams.set('sunburst', '1');
+        if (params.get('tarspots') === '1') u.searchParams.set('tarspots', '1');
       if (params.get('tile') === '1') u.searchParams.set('tile', '1');
       if (params.get('outline') === '1') u.searchParams.set('outline', '1');
       if (params.get('stripe') === '1') u.searchParams.set('stripe', '1');

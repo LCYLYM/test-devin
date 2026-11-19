@@ -1190,6 +1190,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `pixiecups` | `1` 小精灵杯配色 |
 | `mapdust` | `1` 地图衣配色 |
 | `rosette` | `1` 莲座衣配色 |
+| `wolflichen` | `1` 狼衣配色 |
+| `sunburst` | `1` 旭衣配色 |
+| `tarspots` | `1` 黑斑衣配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 

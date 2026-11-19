@@ -2578,6 +2578,12 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .is-mapdust .instrument{border-color:rgba(148,166,124,.4)}
 .is-rosette{background:linear-gradient(180deg,#1d1616 0%,#161010 100%)}
 .is-rosette .instrument{border-color:rgba(190,110,124,.4)}
+.is-wolflichen{background:linear-gradient(180deg,#1a1a10 0%,#14140c 100%)}
+.is-wolflichen .instrument{border-color:rgba(196,186,74,.4)}
+.is-sunburst{background:linear-gradient(180deg,#20160e 0%,#181008 100%)}
+.is-sunburst .instrument{border-color:rgba(232,142,52,.4)}
+.is-tarspots{background:linear-gradient(180deg,#121214 0%,#0e0e10 100%)}
+.is-tarspots .instrument{border-color:rgba(132,130,140,.4)}
 .is-oatmeal{background:linear-gradient(180deg,#1d1912,#2f291e 50%,#433a2a)}
 .is-oatmeal .instrument{border-color:rgba(215,195,155,.4)}
 .is-thyme{background:linear-gradient(180deg,#121a14,#1c2a20 50%,#28392c)}
