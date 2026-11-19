@@ -2783,6 +2783,15 @@
     if (params.get('abyss') === '1') {
       document.body.classList.add('is-abyss');
     }
+    if (params.get('lagoon') === '1') {
+      document.body.classList.add('is-lagoon');
+    }
+    if (params.get('dune') === '1') {
+      document.body.classList.add('is-dune');
+    }
+    if (params.get('orchid') === '1') {
+      document.body.classList.add('is-orchid');
+    }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -3492,6 +3501,9 @@
       if (params.get('porcelain') === '1') u.searchParams.set('porcelain', '1');
       if (params.get('twilight') === '1') u.searchParams.set('twilight', '1');
       if (params.get('abyss') === '1') u.searchParams.set('abyss', '1');
+      if (params.get('lagoon') === '1') u.searchParams.set('lagoon', '1');
+      if (params.get('dune') === '1') u.searchParams.set('dune', '1');
+      if (params.get('orchid') === '1') u.searchParams.set('orchid', '1');
       if (params.get('tile') === '1') u.searchParams.set('tile', '1');
       if (params.get('outline') === '1') u.searchParams.set('outline', '1');
       if (params.get('stripe') === '1') u.searchParams.set('stripe', '1');
