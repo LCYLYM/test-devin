@@ -2554,6 +2554,12 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .is-winecap .instrument{border-color:rgba(178,96,108,.4)}
 .is-parasol{background:linear-gradient(180deg,#1a1812 0%,#14120c 100%)}
 .is-parasol .instrument{border-color:rgba(190,168,110,.4)}
+.is-dryad{background:linear-gradient(180deg,#181a14 0%,#12140e 100%)}
+.is-dryad .instrument{border-color:rgba(158,168,110,.4)}
+.is-gypsy{background:linear-gradient(180deg,#1c1712 0%,#15110d 100%)}
+.is-gypsy .instrument{border-color:rgba(186,148,96,.4)}
+.is-webcap{background:linear-gradient(180deg,#1d1716 0%,#161110 100%)}
+.is-webcap .instrument{border-color:rgba(176,110,96,.4)}
 .is-oatmeal{background:linear-gradient(180deg,#1d1912,#2f291e 50%,#433a2a)}
 .is-oatmeal .instrument{border-color:rgba(215,195,155,.4)}
 .is-thyme{background:linear-gradient(180deg,#121a14,#1c2a20 50%,#28392c)}

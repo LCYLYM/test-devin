@@ -1178,6 +1178,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `cauliflower` | `1` 绣球菌配色 |
 | `winecap` | `1` 大球盖菇配色 |
 | `parasol` | `1` 高伞菇配色 |
+| `dryad` | `1` 鳞孔菌配色 |
+| `gypsy` | `1` 赭盖菇配色 |
+| `webcap` | `1` 丝膜菌配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 

@@ -4062,6 +4062,9 @@
     if (params.get('cauliflower') === '1') { document.body.classList.add('is-cauliflower'); }
     if (params.get('winecap') === '1') { document.body.classList.add('is-winecap'); }
     if (params.get('parasol') === '1') { document.body.classList.add('is-parasol'); }
+    if (params.get('dryad') === '1') { document.body.classList.add('is-dryad'); }
+    if (params.get('gypsy') === '1') { document.body.classList.add('is-gypsy'); }
+    if (params.get('webcap') === '1') { document.body.classList.add('is-webcap'); }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -5482,6 +5485,9 @@
         if (params.get('cauliflower') === '1') u.searchParams.set('cauliflower', '1');
         if (params.get('winecap') === '1') u.searchParams.set('winecap', '1');
         if (params.get('parasol') === '1') u.searchParams.set('parasol', '1');
+        if (params.get('dryad') === '1') u.searchParams.set('dryad', '1');
+        if (params.get('gypsy') === '1') u.searchParams.set('gypsy', '1');
+        if (params.get('webcap') === '1') u.searchParams.set('webcap', '1');
       if (params.get('tile') === '1') u.searchParams.set('tile', '1');
       if (params.get('outline') === '1') u.searchParams.set('outline', '1');
       if (params.get('stripe') === '1') u.searchParams.set('stripe', '1');
