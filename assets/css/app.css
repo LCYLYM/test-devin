@@ -635,6 +635,7 @@ body[data-template=paper] .paper-visual{display:block;padding:6px 10px 0}
 .paper-foot{display:flex;justify-content:space-between;align-items:center;color:#a08c66;font-size:11px}
 .paper-stamp{border:1.5px solid #b25a24;color:#b25a24;border-radius:3px;padding:1px 7px;font-size:11px;letter-spacing:2px;transform:rotate(-4deg);opacity:.85}
 
+body[data-template=mono] .charge-visual{display:none}
 body[data-template=mono] .energy-stage{display:block;margin:14px 0 6px}
 body[data-template=mono] .mono-visual{display:block}
 .mono-track{height:1px;background:#3a3a3a;position:relative;max-width:520px;margin:0 auto}
