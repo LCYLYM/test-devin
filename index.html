@@ -5,6 +5,8 @@
   <meta name="theme-color" content="#131415">
   <meta name="generator" content="薪动 1.1.0">
   <meta name="application-name" content="薪动">
+  <meta name="apple-mobile-web-app-title" content="薪动">
+  <meta name="format-detection" content="telephone=no">
   <meta name="color-scheme" content="dark">
   <title>薪动 · 每一秒，都算数 — 实时工资秒表</title>
   <meta name="description" content="薪动是一个免费的实时工资计算器：输入月薪，看着收入按秒跳动。支持中国大陆节假日、自定义排班、加班时薪、多币种换算与分享海报。数据只存本地，无需注册。">
@@ -355,7 +357,7 @@ SOFTWARE.
 
         <div class="energy-stage" id="energyStage">
           <div class="charge-visual" aria-hidden="true"><div class="charge-capsule"><div class="charge-track"><div class="charge-fill" id="heroProgressFill" style="width: 100%;"><span class="charge-stream"></span><span class="charge-stream delayed"></span></div><div class="charge-head" id="chargeHead" style="left: 100%;"><svg class="icon"><use href="#icon-zap"></use></svg><span id="chargePercent">100.0%</span></div></div><span class="charge-terminal"></span></div></div>
-          <div class="meter-visual" aria-hidden="true"><div class="meter-ruler"><span>0</span><span>50</span><span>100</span></div><div class="segment-bars" id="segmentBars"></div><div class="meter-caption"><span id="meterChargeLabel">工作时段内累计</span><span class="tiny-signal"><i></i><i></i><i></i></span></div></div>
+          <div class="meter-visual" aria-hidden="true"><div class="meter-ruler"><span>0</span><span>50</span><span>100</span></div><div class="segment-bars" id="segmentBars" role="img" aria-label="今日工作进度分段图"></div><div class="meter-caption"><span id="meterChargeLabel">工作时段内累计</span><span class="tiny-signal"><i></i><i></i><i></i></span></div></div>
           <div class="pig-visual"><div class="pig-object"><img id="piggyImage" class="piggy-image" src="./assets/img/piggy.webp" width="800" height="800" fetchpriority="low" decoding="async" alt="粉色陶瓷猪猪存钱罐"><img id="pigCoin" class="pig-coin" src="./assets/img/piggy.webp" width="800" height="800" loading="lazy" decoding="async" alt="" aria-hidden="true"><div class="pig-deposit" id="pigDeposit" aria-hidden="true">+ ¥0.01</div></div><div class="pig-note"><span>一点一点，存起来。</span><b id="pigPercent">100.0%</b></div></div>
           <div class="pixel-visual"><div class="pixel-heading"><span id="pixelTitle">今天的积累</span><span class="pixel-key"><i></i>已赚 <i></i>待完成</span></div><canvas id="pixelCanvas" width="640" height="310" aria-label="按工作时段计算的累计收入像素图"></canvas><div class="pixel-axis" id="pixelAxis"><span>09:00</span><span>12:00</span><span>13:30</span><span>18:00</span></div></div>
         </div>

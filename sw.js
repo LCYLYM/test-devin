@@ -22,6 +22,10 @@ self.addEventListener('activate', (e) => {
       .then((keys) => Promise.all(
         keys.filter((k) => k.startsWith('xindong-') && k !== CACHE).map((k) => caches.delete(k))
       ))
+      .then(() => caches.open(CACHE))
+      .then((cache) => cache.keys().then((reqs) => Promise.all(
+        reqs.filter((r) => !SHELL.some((p) => r.url.endsWith(p.replace('./', '/')))).map((r) => cache.delete(r))
+      )))
       .then(() => self.clients.claim())
   );
 });
