@@ -410,6 +410,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `knit` | `1` 针织纹背景 |
 | `ivory` | `1` 象牙配色 |
 | `onyx` | `1` 黑玛瑙配色 |
+| `coral` | `1` 珊瑚配色 |
+| `indigo` | `1` 靛蓝配色 |
+| `moss` | `1` 苔藓配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 
