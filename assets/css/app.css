@@ -2296,6 +2296,12 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .is-swallow .instrument{border-color:rgba(120,180,215,.4)}
 .is-swift{background:linear-gradient(180deg,#15151d 0%,#0f0f15 100%)}
 .is-swift .instrument{border-color:rgba(165,165,215,.4)}
+.is-crow{background:linear-gradient(180deg,#12121a 0%,#0c0c12 100%)}
+.is-crow .instrument{border-color:rgba(140,145,185,.4)}
+.is-pigeon{background:linear-gradient(180deg,#17171d 0%,#101014 100%)}
+.is-pigeon .instrument{border-color:rgba(175,175,205,.4)}
+.is-pelican{background:linear-gradient(180deg,#1b1516 0%,#130f10 100%)}
+.is-pelican .instrument{border-color:rgba(225,160,140,.4)}
 .is-oatmeal{background:linear-gradient(180deg,#1d1912,#2f291e 50%,#433a2a)}
 .is-oatmeal .instrument{border-color:rgba(215,195,155,.4)}
 .is-thyme{background:linear-gradient(180deg,#121a14,#1c2a20 50%,#28392c)}
