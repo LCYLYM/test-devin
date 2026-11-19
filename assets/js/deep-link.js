@@ -2792,6 +2792,15 @@
     if (params.get('orchid') === '1') {
       document.body.classList.add('is-orchid');
     }
+    if (params.get('cinnabar') === '1') {
+      document.body.classList.add('is-cinnabar');
+    }
+    if (params.get('alpine') === '1') {
+      document.body.classList.add('is-alpine');
+    }
+    if (params.get('nectar') === '1') {
+      document.body.classList.add('is-nectar');
+    }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -3504,6 +3513,9 @@
       if (params.get('lagoon') === '1') u.searchParams.set('lagoon', '1');
       if (params.get('dune') === '1') u.searchParams.set('dune', '1');
       if (params.get('orchid') === '1') u.searchParams.set('orchid', '1');
+      if (params.get('cinnabar') === '1') u.searchParams.set('cinnabar', '1');
+      if (params.get('alpine') === '1') u.searchParams.set('alpine', '1');
+      if (params.get('nectar') === '1') u.searchParams.set('nectar', '1');
       if (params.get('tile') === '1') u.searchParams.set('tile', '1');
       if (params.get('outline') === '1') u.searchParams.set('outline', '1');
       if (params.get('stripe') === '1') u.searchParams.set('stripe', '1');

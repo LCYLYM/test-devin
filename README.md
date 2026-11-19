@@ -470,6 +470,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `lagoon` | `1` 潟湖配色 |
 | `dune` | `1` 沙丘配色 |
 | `orchid` | `1` 兰花配色 |
+| `cinnabar` | `1` 朱砂配色 |
+| `alpine` | `1` 高山配色 |
+| `nectar` | `1` 花蜜配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 
