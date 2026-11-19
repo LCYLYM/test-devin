@@ -773,6 +773,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `indri` | `1` 大狐猴配色 |
 | `jabiru` | `1` 裸颈鹳配色 |
 | `klipspringer` | `1` 山羚配色 |
+| `lapwing` | `1` 凤头麦鸡配色 |
+| `mudskipper` | `1` 弹涂鱼配色 |
+| `nighthawk` | `1` 夜鹰配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 

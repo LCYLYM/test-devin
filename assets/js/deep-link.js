@@ -3657,6 +3657,9 @@
     if (params.get('indri') === '1') { document.body.classList.add('is-indri'); }
     if (params.get('jabiru') === '1') { document.body.classList.add('is-jabiru'); }
     if (params.get('klipspringer') === '1') { document.body.classList.add('is-klipspringer'); }
+    if (params.get('lapwing') === '1') { document.body.classList.add('is-lapwing'); }
+    if (params.get('mudskipper') === '1') { document.body.classList.add('is-mudskipper'); }
+    if (params.get('nighthawk') === '1') { document.body.classList.add('is-nighthawk'); }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -4672,6 +4675,9 @@
         if (params.get('indri') === '1') u.searchParams.set('indri', '1');
         if (params.get('jabiru') === '1') u.searchParams.set('jabiru', '1');
         if (params.get('klipspringer') === '1') u.searchParams.set('klipspringer', '1');
+        if (params.get('lapwing') === '1') u.searchParams.set('lapwing', '1');
+        if (params.get('mudskipper') === '1') u.searchParams.set('mudskipper', '1');
+        if (params.get('nighthawk') === '1') u.searchParams.set('nighthawk', '1');
       if (params.get('tile') === '1') u.searchParams.set('tile', '1');
       if (params.get('outline') === '1') u.searchParams.set('outline', '1');
       if (params.get('stripe') === '1') u.searchParams.set('stripe', '1');
