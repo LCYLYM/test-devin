@@ -915,3 +915,9 @@ body[data-orb] .instrument{position:relative}
 .orb-ring i{position:absolute;top:-4px;left:50%;width:10px;height:10px;margin-left:-5px;border-radius:50%;background:var(--accent,#7dd3fc);box-shadow:0 0 14px var(--accent,#7dd3fc)}
 @keyframes orbSpin{to{transform:rotate(360deg)}}
 .is-focus .orb-ring{display:none}
+.payday.grade{color:#fbbf24}
+body[data-lava]::before,body[data-lava]::after{content:"";position:fixed;border-radius:50%;filter:blur(60px);opacity:.28;pointer-events:none;z-index:0}
+body[data-lava]::before{width:44vmin;height:44vmin;left:-8%;top:-6%;background:#f97316;animation:lavaA 14s ease-in-out infinite alternate}
+body[data-lava]::after{width:36vmin;height:36vmin;right:-6%;bottom:-8%;background:#dc2626;animation:lavaB 18s ease-in-out infinite alternate}
+@keyframes lavaA{to{transform:translate(12%,18%) scale(1.25)}}
+@keyframes lavaB{to{transform:translate(-14%,-16%) scale(1.3)}}

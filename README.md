@@ -154,6 +154,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `orb` | `1` 环绕仪表的光点 |
 | `steady` | `1` 关闭数字滚动动画（低功耗/无障碍） |
 | `mins` | `1` 今日已搬砖时长徽章 |
+| `grade` | `1` 时薪段位徽章（S/A/B/C/D，娱乐） |
+| `lava` | `1` 熔岩光斑背景 |
+| `fx` | `…|ember` 余烬上升特效 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 

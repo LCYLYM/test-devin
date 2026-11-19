@@ -309,7 +309,7 @@
         requestAnimationFrame(mFrame);
       })();
     }
-    if (['snow', 'sakura', 'rain', 'stars', 'leaves', 'bubble'].indexOf(fxParam) >= 0 && !(window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches)) {
+    if (['snow', 'sakura', 'rain', 'stars', 'leaves', 'bubble', 'ember'].indexOf(fxParam) >= 0 && !(window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches)) {
       var fxc = document.createElement('canvas');
       fxc.style.cssText = 'position:fixed;inset:0;width:100%;height:100%;pointer-events:none;opacity:.65';
       document.body.prepend(fxc);
@@ -326,6 +326,13 @@
             q.ph += 0.02;
             fxctx.fillStyle = 'rgba(240,246,255,' + (0.2 + 0.6 * Math.abs(Math.sin(q.ph))).toFixed(2) + ')';
             fxctx.beginPath(); fxctx.arc(q.x, q.y, q.r * 0.8, 0, 6.3); fxctx.fill();
+            continue;
+          }
+          if (fxParam === 'ember') {
+            q.y -= q.v * 0.8; q.x += Math.sin(q.s += 0.02) * 1.1; q.ph += 0.05;
+            if (q.y < -10) { q.y = innerHeight + 10; q.x = Math.random() * innerWidth; }
+            fxctx.fillStyle = 'rgba(251,' + (140 + (i2 % 3) * 40) + ',60,' + (0.3 + 0.5 * Math.abs(Math.sin(q.ph))).toFixed(2) + ')';
+            fxctx.beginPath(); fxctx.arc(q.x, q.y, q.r * 0.9, 0, 6.3); fxctx.fill();
             continue;
           }
           if (fxParam === 'bubble') {
@@ -860,6 +867,20 @@
         mb.hidden = false; mFill(); setInterval(mFill, 30000);
       }
     }
+    if (params.get('grade') === '1') {
+      var gb = document.getElementById('gradeBadge'), gv = document.getElementById('gradeVal');
+      if (gb && gv) {
+        var gFill = function () {
+          var gst = window.SalaryApp && window.SalaryApp.getState && window.SalaryApp.getState();
+          var sn = gst && gst.snapshot;
+          if (!sn || !sn.daySalary) { gv.textContent = '—'; return; }
+          var h = sn.daySalary / (sn.hoursPerDay || 8);
+          gv.textContent = h >= 200 ? 'S' : h >= 100 ? 'A' : h >= 50 ? 'B' : h >= 25 ? 'C' : 'D';
+        };
+        gb.hidden = false; gFill(); setInterval(gFill, 60000);
+      }
+    }
+    if (params.get('lava') === '1') document.body.dataset.lava = '1';
     if (params.get('zodiac') === '1') {
       var zb = document.getElementById('zodiacBadge');
       if (zb) {
@@ -1311,6 +1332,8 @@
       if (params.get('orb') === '1') u.searchParams.set('orb', '1');
       if (params.get('steady') === '1') u.searchParams.set('steady', '1');
       if (params.get('mins') === '1') u.searchParams.set('mins', '1');
+      if (params.get('grade') === '1') u.searchParams.set('grade', '1');
+      if (params.get('lava') === '1') u.searchParams.set('lava', '1');
       params.forEach(function (v, k) { if (k.indexOf('utm_') === 0 && v) u.searchParams.set(k, v.slice(0, 64)); });
       var text = u.toString();
       (navigator.clipboard ? navigator.clipboard.writeText(text) : Promise.reject())
