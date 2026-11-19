@@ -265,6 +265,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `sec` | `1` 秒薪徽章（每秒工资） |
 | `alt` | `币种` 今日已赚外币等值徽章 |
 | `motto` | `文字` 金额下方自定义座右铭 |
+| `dow` | `1` 星期徽章 |
+| `vib` | `1` 每攒 ¥10 手机震动（移动端） |
+| `tint` | `HEX` 全局叠色滤镜 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 

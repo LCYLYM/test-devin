@@ -1508,6 +1508,34 @@
         alUpd(); setInterval(alUpd, 3000);
       }
     }
+    if (params.get('dow') === '1') {
+      var dwb = document.getElementById('dowBadge'), dwt = document.getElementById('dowText');
+      if (dwb && dwt) {
+        var DOWS = ['日', '一', '二', '三', '四', '五', '六'];
+        var dwUpd = function () { dwt.textContent = '星期' + DOWS[new Date().getDay()]; dwb.hidden = false; };
+        dwUpd(); setInterval(dwUpd, 30000);
+      }
+    }
+    if (params.get('vib') === '1' && navigator.vibrate) {
+      var vibLast = -1;
+      window.addEventListener('salary-update', function (e) {
+        var sn = e.detail && e.detail.snapshot;
+        if (sn && isFinite(sn.todayEarned)) {
+          var m = Math.floor(sn.todayEarned / 10);
+          if (m > vibLast) { vibLast = m; if (m > 0) try { navigator.vibrate(30); } catch (_) { } }
+        }
+      });
+    }
+    var tintParam = params.get('tint');
+    if (tintParam) {
+      var tc = decodeURIComponent(tintParam).trim();
+      if (/^#?[0-9a-fA-F]{3,8}$/.test(tc)) {
+        if (tc[0] !== '#') tc = '#' + tc;
+        var tl = document.createElement('div');
+        tl.className = 'tint-layer'; tl.style.background = tc;
+        document.body.appendChild(tl);
+      }
+    }
     var mottoParam = params.get('motto');
     if (mottoParam) {
       var mt = mottoParam.slice(0, 24);
@@ -2137,6 +2165,9 @@
       if (params.get('sec') === '1') u.searchParams.set('sec', '1');
       var alp = params.get('alt'); if (alp) u.searchParams.set('alt', alp);
       var mtp = params.get('motto'); if (mtp) u.searchParams.set('motto', mtp);
+      if (params.get('dow') === '1') u.searchParams.set('dow', '1');
+      if (params.get('vib') === '1') u.searchParams.set('vib', '1');
+      var tnp = params.get('tint'); if (tnp) u.searchParams.set('tint', tnp);
       if (params.get('rays') === '1') u.searchParams.set('rays', '1');
       if (params.get('flat') === '1') u.searchParams.set('flat', '1');
       var idl = params.get('idle'); if (idl) u.searchParams.set('idle', idl);

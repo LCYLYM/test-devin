@@ -1111,5 +1111,8 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .payday.tapn{color:#c4b5fd}
 .payday.sec{color:#67e8f9}
 .payday.alt{color:#fca5a5}
+.payday.dow{color:#fdba74}
+.tint-layer{position:fixed;inset:0;pointer-events:none;opacity:.12;mix-blend-mode:overlay;z-index:1}
+.is-focus .tint-layer{display:none}
 .motto-line{font-size:.72rem;opacity:.65;letter-spacing:.04em;margin-top:2px}
 .is-quiet .toast-stack,.is-quiet .click-ripple,.is-quiet .confetti-piece{display:none}
