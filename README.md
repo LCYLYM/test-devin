@@ -1127,6 +1127,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `phalarope` | `1` 瓣蹼鹬配色 |
 | `courser` | `1` 走鸻配色 |
 | `coot` | `1` 白骨顶配色 |
+| `gallinule` | `1` 紫水鸡配色 |
+| `moorhen` | `1` 黑水鸡配色 |
+| `crake` | `1` 田鸡配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 
