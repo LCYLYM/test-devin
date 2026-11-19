@@ -890,6 +890,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `yellowtail` | `1` 黄尾鰤配色 |
 | `amberjack` | `1` 琥珀鱼配色 |
 | `cobia` | `1` 军曹鱼配色 |
+| `dorado` | `1` 鲯鳅配色 |
+| `tarpon` | `1` 大海鲢配色 |
+| `grouper` | `1` 石斑鱼配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 

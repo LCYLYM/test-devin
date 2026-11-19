@@ -3774,6 +3774,9 @@
     if (params.get('yellowtail') === '1') { document.body.classList.add('is-yellowtail'); }
     if (params.get('amberjack') === '1') { document.body.classList.add('is-amberjack'); }
     if (params.get('cobia') === '1') { document.body.classList.add('is-cobia'); }
+    if (params.get('dorado') === '1') { document.body.classList.add('is-dorado'); }
+    if (params.get('tarpon') === '1') { document.body.classList.add('is-tarpon'); }
+    if (params.get('grouper') === '1') { document.body.classList.add('is-grouper'); }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -4906,6 +4909,9 @@
         if (params.get('yellowtail') === '1') u.searchParams.set('yellowtail', '1');
         if (params.get('amberjack') === '1') u.searchParams.set('amberjack', '1');
         if (params.get('cobia') === '1') u.searchParams.set('cobia', '1');
+        if (params.get('dorado') === '1') u.searchParams.set('dorado', '1');
+        if (params.get('tarpon') === '1') u.searchParams.set('tarpon', '1');
+        if (params.get('grouper') === '1') u.searchParams.set('grouper', '1');
       if (params.get('tile') === '1') u.searchParams.set('tile', '1');
       if (params.get('outline') === '1') u.searchParams.set('outline', '1');
       if (params.get('stripe') === '1') u.searchParams.set('stripe', '1');

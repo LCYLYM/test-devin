@@ -1978,6 +1978,12 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .is-amberjack .instrument{border-color:rgba(220,165,105,.4)}
 .is-cobia{background:linear-gradient(180deg,#12181c 0%,#0b1013 100%)}
 .is-cobia .instrument{border-color:rgba(140,175,195,.4)}
+.is-dorado{background:linear-gradient(180deg,#101c14 0%,#08130c 100%)}
+.is-dorado .instrument{border-color:rgba(100,200,130,.4)}
+.is-tarpon{background:linear-gradient(180deg,#151a20 0%,#0d1217 100%)}
+.is-tarpon .instrument{border-color:rgba(155,180,210,.4)}
+.is-grouper{background:linear-gradient(180deg,#1c1315 0%,#130c0e 100%)}
+.is-grouper .instrument{border-color:rgba(210,130,150,.4)}
 .is-oatmeal{background:linear-gradient(180deg,#1d1912,#2f291e 50%,#433a2a)}
 .is-oatmeal .instrument{border-color:rgba(215,195,155,.4)}
 .is-thyme{background:linear-gradient(180deg,#121a14,#1c2a20 50%,#28392c)}
