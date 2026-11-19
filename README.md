@@ -902,6 +902,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `trout` | `1` 鳟鱼配色 |
 | `bass` | `1` 鲈鱼配色 |
 | `pike` | `1` 狗鱼配色 |
+| `sturgeon` | `1` 鲟鱼配色 |
+| `paddlefish` | `1` 匙吻鲟配色 |
+| `gar` | `1` 雀鳝配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 

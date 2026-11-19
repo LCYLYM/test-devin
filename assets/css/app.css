@@ -2002,6 +2002,12 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .is-bass .instrument{border-color:rgba(150,190,105,.4)}
 .is-pike{background:linear-gradient(180deg,#121a1a 0%,#0b1212 100%)}
 .is-pike .instrument{border-color:rgba(130,185,180,.4)}
+.is-sturgeon{background:linear-gradient(180deg,#161519 0%,#0e0d11 100%)}
+.is-sturgeon .instrument{border-color:rgba(165,160,180,.4)}
+.is-paddlefish{background:linear-gradient(180deg,#121a1c 0%,#0b1214 100%)}
+.is-paddlefish .instrument{border-color:rgba(135,180,190,.4)}
+.is-gar{background:linear-gradient(180deg,#1a1a0f 0%,#111109 100%)}
+.is-gar .instrument{border-color:rgba(190,190,105,.4)}
 .is-oatmeal{background:linear-gradient(180deg,#1d1912,#2f291e 50%,#433a2a)}
 .is-oatmeal .instrument{border-color:rgba(215,195,155,.4)}
 .is-thyme{background:linear-gradient(180deg,#121a14,#1c2a20 50%,#28392c)}
