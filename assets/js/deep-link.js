@@ -3582,6 +3582,15 @@
     if (params.get('wombat') === '1') {
       document.body.classList.add('is-wombat');
     }
+    if (params.get('redpanda') === '1') {
+      document.body.classList.add('is-redpanda');
+    }
+    if (params.get('dewberry') === '1') {
+      document.body.classList.add('is-dewberry');
+    }
+    if (params.get('cormorant') === '1') {
+      document.body.classList.add('is-cormorant');
+    }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -4540,6 +4549,9 @@
       if (params.get('hornbill') === '1') u.searchParams.set('hornbill', '1');
       if (params.get('millet') === '1') u.searchParams.set('millet', '1');
       if (params.get('wombat') === '1') u.searchParams.set('wombat', '1');
+      if (params.get('redpanda') === '1') u.searchParams.set('redpanda', '1');
+      if (params.get('dewberry') === '1') u.searchParams.set('dewberry', '1');
+      if (params.get('cormorant') === '1') u.searchParams.set('cormorant', '1');
       if (params.get('tile') === '1') u.searchParams.set('tile', '1');
       if (params.get('outline') === '1') u.searchParams.set('outline', '1');
       if (params.get('stripe') === '1') u.searchParams.set('stripe', '1');

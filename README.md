@@ -716,6 +716,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `hornbill` | `1` 犀鸟配色 |
 | `millet` | `1` 小米配色 |
 | `wombat` | `1` 袋熊配色 |
+| `redpanda` | `1` 小熊猫配色 |
+| `dewberry` | `1` 露莓配色 |
+| `cormorant` | `1` 鸬鹚配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 
