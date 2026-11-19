@@ -125,6 +125,12 @@
     const p=clamp(data.progress);
     setText('chargePercent',(p*100).toFixed(1)+'%');
     setText('pigPercent',(p*100).toFixed(1)+'%');
+    setText('neonPercent',(p*100).toFixed(1)+'%');
+    setText('paperPercent',(p*100).toFixed(1)+'%');
+    setText('monoPercent',(p*100).toFixed(1)+'%');
+    const na=$('neonArc');if(na)na.style.strokeDashoffset=String(100*(1-p));
+    const pp=$('paperPath');if(pp)pp.style.strokeDashoffset=String(100*(1-p));
+    const mf=$('monoFill');if(mf)mf.style.width=(p*100)+'%';
     const coinRate=data.fun?data.secondRate/1e8:data.secondRate;
     setText('pigDeposit','+ '+data.symbol+coinRate.toLocaleString('en-US',{maximumFractionDigits:2,minimumFractionDigits:2})+(data.fun?' 亿':''));
     const overtimeHours=Number(state?.config.estimatedOvertime)||0;

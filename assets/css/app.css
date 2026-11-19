@@ -608,3 +608,43 @@ body[data-template=paper] .seo-faq h2{color:#3a3226}
 body[data-template=paper] .seo-faq details{border-top-color:#ddd5c4}
 body[data-template=paper] .kbd-hint{color:#a79d8a}
 body[data-template=paper] .instrument-footer{color:#7a7263}
+
+/* iter-97: dedicated visuals for the three new skins */
+.neon-visual,.paper-visual,.mono-visual{display:none}
+
+body[data-template=neon] .charge-visual{display:none}
+body[data-template=neon] .neon-visual{display:flex;justify-content:center;padding:6px 0 2px}
+.neon-ring{width:190px;height:190px;transform:rotate(-90deg)}
+.neon-track{fill:none;stroke:#232849;stroke-width:10}
+.neon-arc{fill:none;stroke:var(--accent);stroke-width:10;stroke-linecap:round;stroke-dasharray:100;stroke-dashoffset:100;transition:stroke-dashoffset .8s linear;filter:drop-shadow(0 0 9px rgba(77,227,255,.85)) drop-shadow(0 0 26px rgba(77,227,255,.35))}
+.neon-ring text{transform:rotate(90deg);transform-origin:110px 110px}
+.neon-pct{fill:#e8ecff;font-family:'Geist',sans-serif;font-size:30px;font-weight:500}
+.neon-sub{fill:#7a82b4;font-size:11px;letter-spacing:2px}
+.instrument.is-working .neon-arc{animation:neon-pulse 2.2s ease-in-out infinite}
+@keyframes neon-pulse{50%{filter:drop-shadow(0 0 14px rgba(77,227,255,1)) drop-shadow(0 0 34px rgba(77,227,255,.5))}}
+
+body[data-template=paper] .charge-visual{display:none}
+body[data-template=paper] .paper-visual{display:block;padding:6px 10px 0}
+.paper-card{position:relative;max-width:430px;margin:0 auto;background:#fbf7ec;border:1px solid #e2d9c3;border-radius:3px;padding:20px 24px 16px;box-shadow:0 8px 22px rgba(90,70,40,.10),inset 0 0 40px rgba(190,160,110,.07);background-image:repeating-linear-gradient(transparent,transparent 23px,#e9e0cb 23px,#e9e0cb 24px);transform:rotate(-.6deg)}
+.paper-tape{position:absolute;top:-9px;width:64px;height:20px;background:rgba(210,190,140,.45);border-left:1px dashed rgba(120,90,50,.25);border-right:1px dashed rgba(120,90,50,.25)}
+.paper-tape.tl{left:34px;transform:rotate(-4deg)}.paper-tape.tr{right:34px;transform:rotate(3deg)}
+.paper-head{display:flex;justify-content:space-between;align-items:baseline;color:#6d5c40;font-size:13px;letter-spacing:1px}
+.paper-head b{font-size:20px;color:#a4531f;font-weight:600;font-variant-numeric:tabular-nums}
+.paper-stroke{width:100%;height:30px;margin:8px 0 4px}
+.paper-ink{stroke:#b25a24;stroke-width:3;stroke-linecap:round;stroke-dasharray:100;stroke-dashoffset:100;transition:stroke-dashoffset .8s linear}
+.paper-foot{display:flex;justify-content:space-between;align-items:center;color:#a08c66;font-size:11px}
+.paper-stamp{border:1.5px solid #b25a24;color:#b25a24;border-radius:3px;padding:1px 7px;font-size:11px;letter-spacing:2px;transform:rotate(-4deg);opacity:.85}
+
+body[data-template=mono] .energy-stage{display:block;margin:14px 0 6px}
+body[data-template=mono] .mono-visual{display:block}
+.mono-track{height:1px;background:#3a3a3a;position:relative;max-width:520px;margin:0 auto}
+.mono-fill{position:absolute;left:0;top:-1px;height:3px;width:0;background:#e8e8e8;transition:width .8s linear}
+.mono-foot{display:flex;justify-content:space-between;max-width:520px;margin:10px auto 0;color:#8a8a8a;font-size:11px;letter-spacing:2px}
+.mono-foot #monoPercent{color:#e8e8e8;font-variant-numeric:tabular-nums;letter-spacing:1px}
+
+@media(max-width:760px){
+  .neon-ring{width:150px;height:150px}
+  .neon-pct{font-size:24px}
+  .paper-card{padding:16px 18px 12px;max-width:100%}
+  .paper-head b{font-size:16px}
+}
