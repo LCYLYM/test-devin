@@ -560,3 +560,51 @@ dialog.drawer[open] { animation: drawer-arrive 300ms cubic-bezier(.2,.75,.25,1) 
 /* keyboard hint */
 .kbd-hint{font-size:11px;color:#5c6660;letter-spacing:.3px}
 @media(max-width:640px){.kbd-hint{display:none}}
+
+/* iter-52: neon skin — charge layout, cyan glow */
+body[data-template=neon]{--bg:#0c0e18;--surface:#141728;--surface-2:#1d2138;--line:#2c3155;--text:#e8ecff;--accent:#4de3ff;--accent-rgb:77,227,255;--instrument:#090b14;--muted:#8a90b8;--dim:#565c85}
+body[data-template=neon] .instrument{border-color:#2b3a6e;box-shadow:0 0 34px rgba(77,227,255,.07),inset 0 0 60px rgba(77,227,255,.03)}
+body[data-template=neon] .charge-capsule{box-shadow:0 0 24px rgba(77,227,255,.28)}
+body[data-template=neon] .amount-area{text-shadow:0 0 26px rgba(77,227,255,.35)}
+body[data-template=neon] .template-slider{background:#1f2a52}
+body[data-template=neon] .template-switch button.selected{color:#7deeff}
+body[data-template=neon] .period-tabs button.selected{color:#c9f4ff}
+body[data-template=neon] .summary-item strong{color:#e8ecff}
+body[data-template=neon] .currency-pill{background:#12152a;border-color:#313a66}
+body[data-template=neon] .brand-icon{filter:drop-shadow(0 0 6px rgba(77,227,255,.8))}
+
+/* iter-53: mono skin — stripped down to the number */
+body[data-template=mono]{--bg:#111;--surface:#1a1a1a;--surface-2:#242424;--line:#333;--text:#f0f0f0;--accent:#e8e8e8;--accent-rgb:232,232,232;--instrument:#111;--muted:#9a9a9a;--dim:#666}
+body[data-template=mono] .instrument{border:0;border-radius:0;padding:30px 20px;min-height:400px}
+body[data-template=mono] .value-cluster{text-align:center}
+body[data-template=mono] .hero-status{justify-content:center}
+body[data-template=mono] .amount-area{justify-content:center;--amount-size:168px;min-height:190px;font-weight:300}
+body[data-template=mono] .money-symbol{font-weight:250}
+body[data-template=mono] .income-caption{justify-content:center;align-items:center;flex-direction:column;gap:8px;margin-top:10px}
+body[data-template=mono] .energy-stage{display:none}
+body[data-template=mono] .template-slider{background:#333}
+body[data-template=mono] .period-tabs button.selected{color:#eee}
+body[data-template=mono] .summary-item strong{color:#eee}
+body[data-template=mono] .currency-pill{background:#191919;border-color:#383838}
+@media(max-width:760px){body[data-template=mono] .amount-area{--amount-size:104px}}
+
+/* iter-54: paper skin — light ink-on-paper */
+body[data-template=paper]{--bg:#f2efe7;--surface:#faf7f0;--surface-2:#eee9dd;--line:#d8d1c2;--text:#241f18;--accent:#c2622f;--accent-rgb:194,98,47;--instrument:#fbf8f1;--muted:#7a7263;--dim:#a79d8a}
+body[data-template=paper]{color-scheme:light}
+body[data-template=paper] .instrument{border-color:#ddd5c4;box-shadow:0 4px 18px rgba(60,45,20,.07)}
+body[data-template=paper] .template-switch{background:#e9e3d5;border-color:#d5cbb8}
+body[data-template=paper] .template-slider{background:#d8ccb6;box-shadow:0 1px 3px rgba(80,60,30,.15)}
+body[data-template=paper] .template-switch button{color:#8a8070}
+body[data-template=paper] .template-switch button.selected{color:#7a3d16}
+body[data-template=paper] .period-tabs button.selected{color:#3a2e20;border-color:#c2622f}
+body[data-template=paper] .summary-item strong{color:#241f18}
+body[data-template=paper] .currency-pill{background:#f0ebdf;border-color:#d9cfbd}
+body[data-template=paper] .charge-capsule{background:#efe9db;border-color:#d8cfbc}
+body[data-template=paper] .amount-area{color:#241f18}
+body[data-template=paper] .digit-slot.small{color:#8a8070}
+body[data-template=paper] .money-symbol{color:#7a3d16}
+body[data-template=paper] .seo-faq{color:#6b6355}
+body[data-template=paper] .seo-faq h2{color:#3a3226}
+body[data-template=paper] .seo-faq details{border-top-color:#ddd5c4}
+body[data-template=paper] .kbd-hint{color:#a79d8a}
+body[data-template=paper] .instrument-footer{color:#7a7263}
