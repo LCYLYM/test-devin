@@ -3636,6 +3636,9 @@
     if (params.get('impala') === '1') { document.body.classList.add('is-impala'); }
     if (params.get('jackdaw') === '1') { document.body.classList.add('is-jackdaw'); }
     if (params.get('kakapo') === '1') { document.body.classList.add('is-kakapo'); }
+    if (params.get('lorikeet') === '1') { document.body.classList.add('is-lorikeet'); }
+    if (params.get('markhor') === '1') { document.body.classList.add('is-markhor'); }
+    if (params.get('numbat') === '1') { document.body.classList.add('is-numbat'); }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -4630,6 +4633,9 @@
         if (params.get('impala') === '1') u.searchParams.set('impala', '1');
         if (params.get('jackdaw') === '1') u.searchParams.set('jackdaw', '1');
         if (params.get('kakapo') === '1') u.searchParams.set('kakapo', '1');
+        if (params.get('lorikeet') === '1') u.searchParams.set('lorikeet', '1');
+        if (params.get('markhor') === '1') u.searchParams.set('markhor', '1');
+        if (params.get('numbat') === '1') u.searchParams.set('numbat', '1');
       if (params.get('tile') === '1') u.searchParams.set('tile', '1');
       if (params.get('outline') === '1') u.searchParams.set('outline', '1');
       if (params.get('stripe') === '1') u.searchParams.set('stripe', '1');

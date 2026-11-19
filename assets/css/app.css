@@ -1702,6 +1702,12 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .is-jackdaw .instrument{border-color:rgba(140,150,170,.4)}
 .is-kakapo{background:linear-gradient(180deg,#121c10 0%,#0a1208 100%)}
 .is-kakapo .instrument{border-color:rgba(140,190,100,.4)}
+.is-lorikeet{background:linear-gradient(180deg,#1c1016 0%,#12080d 100%)}
+.is-lorikeet .instrument{border-color:rgba(220,90,120,.4)}
+.is-markhor{background:linear-gradient(180deg,#1a150f 0%,#100d08 100%)}
+.is-markhor .instrument{border-color:rgba(190,165,115,.4)}
+.is-numbat{background:linear-gradient(180deg,#1d130e 0%,#120b08 100%)}
+.is-numbat .instrument{border-color:rgba(210,130,80,.4)}
 .is-oatmeal{background:linear-gradient(180deg,#1d1912,#2f291e 50%,#433a2a)}
 .is-oatmeal .instrument{border-color:rgba(215,195,155,.4)}
 .is-thyme{background:linear-gradient(180deg,#121a14,#1c2a20 50%,#28392c)}

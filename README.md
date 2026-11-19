@@ -752,6 +752,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `impala` | `1` 黑斑羚配色 |
 | `jackdaw` | `1` 寒鸦配色 |
 | `kakapo` | `1` 鸮鹦鹉配色 |
+| `lorikeet` | `1` 吸蜜鹦鹉配色 |
+| `markhor` | `1` 捻角山羊配色 |
+| `numbat` | `1` 袋食蚁兽配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 
