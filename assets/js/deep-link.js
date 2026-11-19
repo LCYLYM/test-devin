@@ -2179,6 +2179,20 @@
     if (params.get('vel') === '1') {
       document.body.classList.add('is-vel');
     }
+    if (params.get('syn') === '1') {
+      var syb = document.getElementById('synBadge'), syv = document.getElementById('synVal');
+      if (syb && syv) {
+        var syMap = ['周日回血中', '周一综合征', '周二渐入状态', '周三过半啦', '周四冲刺', '周五快乐', '周六撒欢'];
+        syv.textContent = syMap[new Date().getDay()];
+        syb.hidden = false;
+      }
+    }
+    if (params.get('frost') === '1') {
+      document.body.classList.add('is-frost');
+    }
+    if (params.get('arg') === '1') {
+      document.body.classList.add('is-arg');
+    }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -2762,6 +2776,9 @@
       if (params.get('yp') === '1') u.searchParams.set('yp', '1');
       if (params.get('zeb') === '1') u.searchParams.set('zeb', '1');
       if (params.get('vel') === '1') u.searchParams.set('vel', '1');
+      if (params.get('syn') === '1') u.searchParams.set('syn', '1');
+      if (params.get('frost') === '1') u.searchParams.set('frost', '1');
+      if (params.get('arg') === '1') u.searchParams.set('arg', '1');
       if (params.get('tile') === '1') u.searchParams.set('tile', '1');
       if (params.get('outline') === '1') u.searchParams.set('outline', '1');
       if (params.get('stripe') === '1') u.searchParams.set('stripe', '1');

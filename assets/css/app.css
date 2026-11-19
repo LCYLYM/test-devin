@@ -1148,6 +1148,9 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .payday.eta{color:#a5b4fc}
 .payday.cof{color:#d4a373}
 .payday.yp{color:#c4b5fd}
+.payday.syn{color:#fda4af}
+.is-frost .instrument{border:2px solid rgba(186,230,253,.35);box-shadow:inset 0 0 30px rgba(186,230,253,.08)}
+.is-arg{background-image:repeating-linear-gradient(45deg,rgba(148,163,184,.07) 0 2px,transparent 2px 26px),repeating-linear-gradient(-45deg,rgba(148,163,184,.07) 0 2px,transparent 2px 26px)}
 .is-zeb{background-image:repeating-linear-gradient(-45deg,rgba(148,163,184,.08) 0 14px,transparent 14px 28px)}
 .is-vel{background-image:radial-gradient(ellipse 120% 80% at 50% -10%,rgba(153,27,27,.22),transparent 55%)}
 @keyframes silkFlow{to{background-position:300px 0}}
