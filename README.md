@@ -971,6 +971,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `cobra` | `1` 眼镜蛇配色 |
 | `boa` | `1` 蚺蛇配色 |
 | `mamba` | `1` 曼巴蛇配色 |
+| `anaconda` | `1` 森蚺配色 |
+| `taipan` | `1` 太攀蛇配色 |
+| `krait` | `1` 环蛇配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 
