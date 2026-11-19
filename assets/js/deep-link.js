@@ -3452,6 +3452,15 @@
     if (params.get('dingo') === '1') {
       document.body.classList.add('is-dingo');
     }
+    if (params.get('ocelot') === '1') {
+      document.body.classList.add('is-ocelot');
+    }
+    if (params.get('safflower') === '1') {
+      document.body.classList.add('is-safflower');
+    }
+    if (params.get('tapir') === '1') {
+      document.body.classList.add('is-tapir');
+    }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -4371,6 +4380,9 @@
       if (params.get('ibis') === '1') u.searchParams.set('ibis', '1');
       if (params.get('tamarind') === '1') u.searchParams.set('tamarind', '1');
       if (params.get('dingo') === '1') u.searchParams.set('dingo', '1');
+      if (params.get('ocelot') === '1') u.searchParams.set('ocelot', '1');
+      if (params.get('safflower') === '1') u.searchParams.set('safflower', '1');
+      if (params.get('tapir') === '1') u.searchParams.set('tapir', '1');
       if (params.get('tile') === '1') u.searchParams.set('tile', '1');
       if (params.get('outline') === '1') u.searchParams.set('outline', '1');
       if (params.get('stripe') === '1') u.searchParams.set('stripe', '1');

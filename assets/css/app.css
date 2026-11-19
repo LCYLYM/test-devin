@@ -1732,6 +1732,12 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .is-tamarind .instrument{border-color:rgba(225,150,80,.42)}
 .is-dingo{background:linear-gradient(180deg,#191207,#2d210d 50%,#423214)}
 .is-dingo .instrument{border-color:rgba(220,170,90,.42)}
+.is-ocelot{background:linear-gradient(180deg,#1a1208,#2d1e0e 50%,#422c14)}
+.is-ocelot .instrument{border-color:rgba(220,160,80,.42)}
+.is-safflower{background:linear-gradient(180deg,#1e0d08,#341410 50%,#4a1e18)}
+.is-safflower .instrument{border-color:rgba(235,120,95,.42)}
+.is-tapir{background:linear-gradient(180deg,#12151a,#1c242e 50%,#283442)}
+.is-tapir .instrument{border-color:rgba(145,170,200,.42)}
 .is-forest{background:linear-gradient(180deg,#0d1f14,#12291a)}
 .is-forest .instrument{border-color:rgba(74,222,128,.38)}
 .is-sand{background:linear-gradient(180deg,#241c10,#2f2614)}
