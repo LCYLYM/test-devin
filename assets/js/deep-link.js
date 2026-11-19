@@ -314,7 +314,7 @@
         requestAnimationFrame(mFrame);
       })();
     }
-    if (['snow', 'sakura', 'rain', 'stars', 'leaves', 'bubble', 'ember', 'firefly', 'dust', 'meteor'].indexOf(fxParam) >= 0 && !(window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches)) {
+    if (['snow', 'sakura', 'rain', 'stars', 'leaves', 'bubble', 'ember', 'firefly', 'dust', 'meteor', 'warp'].indexOf(fxParam) >= 0 && !(window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches)) {
       var fxc = document.createElement('canvas');
       fxc.style.cssText = 'position:fixed;inset:0;width:100%;height:100%;pointer-events:none;opacity:.65';
       document.body.prepend(fxc);
@@ -341,6 +341,19 @@
         }
         for (var i2 = 0; i2 < parts.length; i2++) {
           var q = parts[i2];
+          if (fxParam === 'warp') {
+            var wx = q.x - innerWidth / 2, wy = q.y - innerHeight / 2;
+            var wd = Math.sqrt(wx * wx + wy * wy) || 1;
+            var sp = (wd / 200 + 0.3) * q.v * 3;
+            fxctx.strokeStyle = 'rgba(180,220,255,' + Math.min(0.8, wd / innerWidth).toFixed(2) + ')';
+            fxctx.lineWidth = Math.min(2.5, wd / 220);
+            fxctx.beginPath(); fxctx.moveTo(q.x, q.y); fxctx.lineTo(q.x + wx / wd * sp * 4, q.y + wy / wd * sp * 4); fxctx.stroke();
+            q.x += wx / wd * sp * 4; q.y += wy / wd * sp * 4;
+            if (q.x < -50 || q.x > innerWidth + 50 || q.y < -50 || q.y > innerHeight + 50) {
+              q.x = innerWidth / 2 + (Math.random() - .5) * 300; q.y = innerHeight / 2 + (Math.random() - .5) * 300;
+            }
+            continue;
+          }
           if (fxParam === 'stars') {
             q.ph += 0.02;
             fxctx.fillStyle = 'rgba(240,246,255,' + (0.2 + 0.6 * Math.abs(Math.sin(q.ph))).toFixed(2) + ')';
@@ -935,6 +948,8 @@
     if (params.get('slim') === '1') document.body.dataset.slim = '1';
     if (params.get('lift') === '1') document.body.dataset.lift = '1';
     if (params.get('glitch') === '1') document.body.dataset.glitch = '1';
+    if (params.get('cinema') === '1') document.body.dataset.cinema = '1';
+    if (params.get('frame') === '1') document.body.dataset.frame = '1';
     if (params.get('shimmer') === '1') document.body.dataset.shimmer = '1';
     if (params.get('fog') === '1' && !(window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches)) {
       document.body.dataset.fog = '1';
@@ -1466,6 +1481,8 @@
       if (params.get('slim') === '1') u.searchParams.set('slim', '1');
       if (params.get('lift') === '1') u.searchParams.set('lift', '1');
       if (params.get('glitch') === '1') u.searchParams.set('glitch', '1');
+      if (params.get('cinema') === '1') u.searchParams.set('cinema', '1');
+      if (params.get('frame') === '1') u.searchParams.set('frame', '1');
       if (params.get('shimmer') === '1') u.searchParams.set('shimmer', '1');
       if (params.get('fog') === '1') u.searchParams.set('fog', '1');
       var cup = params.get('cursor'); if (cup) u.searchParams.set('cursor', cup.slice(0, 4));
