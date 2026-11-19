@@ -1232,6 +1232,12 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .is-steel .instrument{border-color:rgba(148,163,184,.45)}
 .is-lilac{background:linear-gradient(180deg,#1c1728,#261f38)}
 .is-lilac .instrument{border-color:rgba(216,180,254,.4)}
+.payday.dleft{color:#93c5fd}
+.is-cobalt{background:linear-gradient(180deg,#0d1b3d,#12275a)}
+.is-cobalt .instrument{border-color:rgba(96,165,250,.45)}
+.is-wine{background:linear-gradient(180deg,#260d16,#33101f)}
+.is-wine .instrument{border-color:rgba(251,113,133,.4)}
+.is-focus .payday.dleft{display:none}
 @keyframes hueSpin{to{filter:hue-rotate(360deg)}}
 .is-hue .instrument{animation:hueSpin 12s linear infinite}
 @media (prefers-reduced-motion:reduce){.is-hue .instrument{animation:none}}

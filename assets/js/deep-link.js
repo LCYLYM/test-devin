@@ -2536,6 +2536,25 @@
     if (params.get('lilac') === '1') {
       document.body.classList.add('is-lilac');
     }
+    if (params.get('dleft') === '1') {
+      var dlB = document.getElementById('dleftBadge'), dlV = document.getElementById('dleftVal');
+      if (dlB && dlV) {
+        var dlUpd = function () {
+          var st = window.SalaryApp && window.SalaryApp.getState && window.SalaryApp.getState();
+          if (!st || !st.snapshot) return;
+          var left = Math.max(0, (st.snapshot.workdays || 0) - (st.snapshot.elapsedWorkdays || 0));
+          dlV.textContent = '本月剩 ' + left + ' 个工作日';
+          dlB.hidden = false;
+        };
+        dlUpd();
+      }
+    }
+    if (params.get('cobalt') === '1') {
+      document.body.classList.add('is-cobalt');
+    }
+    if (params.get('wine') === '1') {
+      document.body.classList.add('is-wine');
+    }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -3179,6 +3198,9 @@
       if (params.get('amber') === '1') u.searchParams.set('amber', '1');
       if (params.get('steel') === '1') u.searchParams.set('steel', '1');
       if (params.get('lilac') === '1') u.searchParams.set('lilac', '1');
+      if (params.get('dleft') === '1') u.searchParams.set('dleft', '1');
+      if (params.get('cobalt') === '1') u.searchParams.set('cobalt', '1');
+      if (params.get('wine') === '1') u.searchParams.set('wine', '1');
       if (params.get('tile') === '1') u.searchParams.set('tile', '1');
       if (params.get('outline') === '1') u.searchParams.set('outline', '1');
       if (params.get('stripe') === '1') u.searchParams.set('stripe', '1');
