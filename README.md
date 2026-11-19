@@ -329,6 +329,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `born` | `YYYY` 工龄徽章 |
 | `radar` | `1` 雷达扫光 |
 | `hatch` | `1` 斜纹背景 |
+| `felt` | `1` 实际时薪（含加班）徽章 |
+| `stack` | `1` 卡片堆叠阴影 |
+| `candle` | `1` 烛光闪烁 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 

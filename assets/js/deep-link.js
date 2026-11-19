@@ -2103,6 +2103,23 @@
     if (params.get('hatch') === '1') {
       document.body.classList.add('is-hatch');
     }
+    if (params.get('felt') === '1') {
+      var ftb = document.getElementById('feltBadge'), ftv = document.getElementById('feltVal');
+      if (ftb && ftv) {
+        var ftUpd = function () {
+          var st = window.SalaryApp && window.SalaryApp.getState && window.SalaryApp.getState();
+          var h = st && st.snapshot && st.snapshot.actualHourSalary;
+          if (h != null) { ftv.textContent = '实际时薪 ' + window.SalaryApp.formatMoney(h, st.currency); ftb.hidden = false; }
+        };
+        ftUpd(); setInterval(ftUpd, 2000);
+      }
+    }
+    if (params.get('stack') === '1') {
+      document.body.classList.add('is-stack');
+    }
+    if (params.get('candle') === '1' && !(window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches)) {
+      document.body.classList.add('is-candle');
+    }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -2674,6 +2691,9 @@
       if (params.get('born') !== null) u.searchParams.set('born', params.get('born'));
       if (params.get('radar') === '1') u.searchParams.set('radar', '1');
       if (params.get('hatch') === '1') u.searchParams.set('hatch', '1');
+      if (params.get('felt') === '1') u.searchParams.set('felt', '1');
+      if (params.get('stack') === '1') u.searchParams.set('stack', '1');
+      if (params.get('candle') === '1') u.searchParams.set('candle', '1');
       if (params.get('tile') === '1') u.searchParams.set('tile', '1');
       if (params.get('outline') === '1') u.searchParams.set('outline', '1');
       if (params.get('stripe') === '1') u.searchParams.set('stripe', '1');

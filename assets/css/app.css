@@ -1144,6 +1144,11 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .payday.lvl{color:#fbbf24}
 .payday.sum{color:#34d399}
 .payday.born{color:#f9a8d4}
+.payday.felt{color:#fb923c}
+.is-stack .instrument{box-shadow:0 6px 0 -2px rgba(148,163,184,.14),0 12px 0 -4px rgba(148,163,184,.09)}
+@keyframes candleFlk{0%,100%{opacity:1}25%{opacity:.86}55%{opacity:.97}80%{opacity:.9}}
+.is-candle #amountArea{animation:candleFlk .9s ease-in-out infinite}
+@media (prefers-reduced-motion:reduce){.is-candle #amountArea{animation:none}}
 @keyframes radarSweep{to{transform:rotate(360deg)}}
 .radar-layer{position:absolute;inset:0;pointer-events:none;overflow:hidden;border-radius:inherit;z-index:4}
 .radar-layer::before{content:'';position:absolute;top:50%;left:50%;width:150%;height:150%;transform-origin:0 0;background:conic-gradient(from 0deg,rgba(56,189,248,.16),transparent 60deg);animation:radarSweep 4s linear infinite}
