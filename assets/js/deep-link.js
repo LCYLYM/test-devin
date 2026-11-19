@@ -3804,6 +3804,9 @@
     if (params.get('halibut') === '1') { document.body.classList.add('is-halibut'); }
     if (params.get('turbot') === '1') { document.body.classList.add('is-turbot'); }
     if (params.get('sole') === '1') { document.body.classList.add('is-sole'); }
+    if (params.get('plaice') === '1') { document.body.classList.add('is-plaice'); }
+    if (params.get('dab') === '1') { document.body.classList.add('is-dab'); }
+    if (params.get('fluke') === '1') { document.body.classList.add('is-fluke'); }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -4966,6 +4969,9 @@
         if (params.get('halibut') === '1') u.searchParams.set('halibut', '1');
         if (params.get('turbot') === '1') u.searchParams.set('turbot', '1');
         if (params.get('sole') === '1') u.searchParams.set('sole', '1');
+        if (params.get('plaice') === '1') u.searchParams.set('plaice', '1');
+        if (params.get('dab') === '1') u.searchParams.set('dab', '1');
+        if (params.get('fluke') === '1') u.searchParams.set('fluke', '1');
       if (params.get('tile') === '1') u.searchParams.set('tile', '1');
       if (params.get('outline') === '1') u.searchParams.set('outline', '1');
       if (params.get('stripe') === '1') u.searchParams.set('stripe', '1');
