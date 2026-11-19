@@ -3200,6 +3200,15 @@
     if (params.get('russet') === '1') {
       document.body.classList.add('is-russet');
     }
+    if (params.get('dijon') === '1') {
+      document.body.classList.add('is-dijon');
+    }
+    if (params.get('spruce') === '1') {
+      document.body.classList.add('is-spruce');
+    }
+    if (params.get('merlot') === '1') {
+      document.body.classList.add('is-merlot');
+    }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -4035,6 +4044,9 @@
       if (params.get('oatmeal') === '1') u.searchParams.set('oatmeal', '1');
       if (params.get('thyme') === '1') u.searchParams.set('thyme', '1');
       if (params.get('russet') === '1') u.searchParams.set('russet', '1');
+      if (params.get('dijon') === '1') u.searchParams.set('dijon', '1');
+      if (params.get('spruce') === '1') u.searchParams.set('spruce', '1');
+      if (params.get('merlot') === '1') u.searchParams.set('merlot', '1');
       if (params.get('tile') === '1') u.searchParams.set('tile', '1');
       if (params.get('outline') === '1') u.searchParams.set('outline', '1');
       if (params.get('stripe') === '1') u.searchParams.set('stripe', '1');

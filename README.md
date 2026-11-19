@@ -593,6 +593,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `oatmeal` | `1` 燕麦配色 |
 | `thyme` | `1` 百里香配色 |
 | `russet` | `1` 赤褐配色 |
+| `dijon` | `1` 芥末配色 |
+| `spruce` | `1` 云杉配色 |
+| `merlot` | `1` 梅洛配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 
