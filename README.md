@@ -560,6 +560,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `bramble` | `1` 荆棘配色 |
 | `cider` | `1` 苹果酒配色 |
 | `pebble` | `1` 卵石配色 |
+| `suede` | `1` 麂皮配色 |
+| `mimosa` | `1` 含羞草配色 |
+| `canopy` | `1` 树冠配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 
