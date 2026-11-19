@@ -1129,6 +1129,9 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .payday.done{color:#6ee7b7}
 .payday.tax{color:#fda4af}
 .payday.bean{color:#d4a373}
+.payday.wage{color:#f0abfc}
+.is-mini .instrument{transform:scale(.86);transform-origin:top center}
+.is-mini .summary-strip,.is-mini .overtime-disclosure{display:none}
 .is-eco .fx-layer,.is-eco .tint-layer,.is-eco .veil-layer,.is-eco .lofi-layer,.is-eco .noise-layer{display:none}
 .is-eco *{animation-duration:.01ms !important;animation-iteration-count:1 !important;transition-duration:.01ms !important}
 .is-bloom .instrument{filter:brightness(1.08) saturate(1.2) drop-shadow(0 0 18px rgba(var(--accent-rgb),.35))}

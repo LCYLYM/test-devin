@@ -295,6 +295,8 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `auto` | `1` 自动徽章包（星期+时钟+进度+KPI） |
 | `eco` | `1` 省电模式（停装饰层与动画） |
 | `bloom` | `1` 泛光滤镜 |
+| `wage` | `1` 实时时薪徽章 |
+| `mini` | `1` 迷你模式（缩小仪表、隐藏摘要） |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 

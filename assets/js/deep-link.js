@@ -314,7 +314,7 @@
         requestAnimationFrame(mFrame);
       })();
     }
-    if (['snow', 'sakura', 'rain', 'stars', 'leaves', 'bubble', 'ember', 'firefly', 'dust', 'meteor', 'warp', 'cloud', 'paper', 'fireworks'].indexOf(fxParam) >= 0 && params.get('eco') !== '1' && !(window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches)) {
+    if (['snow', 'sakura', 'rain', 'stars', 'leaves', 'bubble', 'ember', 'firefly', 'dust', 'meteor', 'warp', 'cloud', 'paper', 'fireworks', 'petal'].indexOf(fxParam) >= 0 && params.get('eco') !== '1' && !(window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches)) {
       var fxc = document.createElement('canvas');
       fxc.className = 'fx-layer';
       fxc.style.cssText = 'position:fixed;inset:0;width:100%;height:100%;pointer-events:none;opacity:.65';
@@ -420,6 +420,7 @@
           if (q.y > innerHeight + 12) { q.y = -12; q.x = Math.random() * innerWidth; }
           if (fxParam === 'snow') { fxctx.fillStyle = 'rgba(240,246,255,.85)'; fxctx.beginPath(); fxctx.arc(q.x, q.y, q.r, 0, 6.3); fxctx.fill(); }
           else if (fxParam === 'sakura') { fxctx.save(); fxctx.translate(q.x, q.y); fxctx.rotate(q.rot); fxctx.fillStyle = 'rgba(255,183,197,.8)'; fxctx.beginPath(); fxctx.ellipse(0, 0, q.r * 1.6, q.r, 0, 0, 6.3); fxctx.fill(); fxctx.restore(); }
+          else if (fxParam === 'petal') { fxctx.save(); fxctx.translate(q.x, q.y); fxctx.rotate(q.rot); fxctx.fillStyle = ['rgba(249,168,212,.75)', 'rgba(251,207,232,.7)', 'rgba(244,114,182,.65)'][i2 % 3]; fxctx.beginPath(); fxctx.moveTo(0, -q.r * 2); fxctx.quadraticCurveTo(q.r * 1.6, -q.r * .5, 0, q.r * 1.8); fxctx.quadraticCurveTo(-q.r * 1.6, -q.r * .5, 0, -q.r * 2); fxctx.fill(); fxctx.restore(); }
           else if (fxParam === 'leaves') { fxctx.save(); fxctx.translate(q.x, q.y); fxctx.rotate(q.rot); fxctx.fillStyle = ['rgba(217,119,6,.75)', 'rgba(180,83,9,.7)', 'rgba(202,138,4,.7)'][i2 % 3]; fxctx.beginPath(); fxctx.ellipse(0, 0, q.r * 1.8, q.r * .9, 0, 0, 6.3); fxctx.fill(); fxctx.restore(); }
           else { fxctx.strokeStyle = 'rgba(140,180,220,.5)'; fxctx.lineWidth = 1; fxctx.beginPath(); fxctx.moveTo(q.x, q.y); fxctx.lineTo(q.x - 1.5, q.y + 14); fxctx.stroke(); }
         }
@@ -1794,6 +1795,19 @@
       lf.className = 'lofi-layer';
       document.body.appendChild(lf);
     }
+    if (params.get('wage') === '1') {
+      var wgb = document.getElementById('wageBadge'), wgv = document.getElementById('wageVal');
+      if (wgb && wgv) {
+        var wgUpd = function () {
+          var st = window.SalaryApp && window.SalaryApp.getState && window.SalaryApp.getState();
+          var sn = st && st.snapshot;
+          var v = sn && (sn.actualHourSalary || sn.hourSalary);
+          if (v) { wgv.textContent = window.SalaryApp.formatMoney ? window.SalaryApp.formatMoney(v) : v.toFixed(2); wgb.hidden = false; }
+        };
+        wgUpd(); setInterval(wgUpd, 5000);
+      }
+    }
+    if (params.get('mini') === '1') { document.body.classList.add('is-mini'); }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -2463,6 +2477,8 @@
       var txp = params.get('tax'); if (txp) u.searchParams.set('tax', txp);
       var bnp = params.get('bean'); if (bnp) u.searchParams.set('bean', bnp);
       if (params.get('lofi') === '1') u.searchParams.set('lofi', '1');
+      if (params.get('wage') === '1') u.searchParams.set('wage', '1');
+      if (params.get('mini') === '1') u.searchParams.set('mini', '1');
       if (params.get('rays') === '1') u.searchParams.set('rays', '1');
       if (params.get('flat') === '1') u.searchParams.set('flat', '1');
       var idl = params.get('idle'); if (idl) u.searchParams.set('idle', idl);
