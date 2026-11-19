@@ -4077,6 +4077,9 @@
     if (params.get('wolflichen') === '1') { document.body.classList.add('is-wolflichen'); }
     if (params.get('sunburst') === '1') { document.body.classList.add('is-sunburst'); }
     if (params.get('tarspots') === '1') { document.body.classList.add('is-tarspots'); }
+    if (params.get('bloodstain') === '1') { document.body.classList.add('is-bloodstain'); }
+    if (params.get('firedot') === '1') { document.body.classList.add('is-firedot'); }
+    if (params.get('lungwort') === '1') { document.body.classList.add('is-lungwort'); }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -5512,6 +5515,9 @@
         if (params.get('wolflichen') === '1') u.searchParams.set('wolflichen', '1');
         if (params.get('sunburst') === '1') u.searchParams.set('sunburst', '1');
         if (params.get('tarspots') === '1') u.searchParams.set('tarspots', '1');
+        if (params.get('bloodstain') === '1') u.searchParams.set('bloodstain', '1');
+        if (params.get('firedot') === '1') u.searchParams.set('firedot', '1');
+        if (params.get('lungwort') === '1') u.searchParams.set('lungwort', '1');
       if (params.get('tile') === '1') u.searchParams.set('tile', '1');
       if (params.get('outline') === '1') u.searchParams.set('outline', '1');
       if (params.get('stripe') === '1') u.searchParams.set('stripe', '1');

@@ -1193,6 +1193,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `wolflichen` | `1` 狼衣配色 |
 | `sunburst` | `1` 旭衣配色 |
 | `tarspots` | `1` 黑斑衣配色 |
+| `bloodstain` | `1` 血斑衣配色 |
+| `firedot` | `1` 火点衣配色 |
+| `lungwort` | `1` 肺衣配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 

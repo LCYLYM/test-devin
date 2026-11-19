@@ -2584,6 +2584,12 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .is-sunburst .instrument{border-color:rgba(232,142,52,.4)}
 .is-tarspots{background:linear-gradient(180deg,#121214 0%,#0e0e10 100%)}
 .is-tarspots .instrument{border-color:rgba(132,130,140,.4)}
+.is-bloodstain{background:linear-gradient(180deg,#1e1212 0%,#160d0d 100%)}
+.is-bloodstain .instrument{border-color:rgba(196,74,74,.4)}
+.is-firedot{background:linear-gradient(180deg,#1e1710 0%,#161108 100%)}
+.is-firedot .instrument{border-color:rgba(226,146,58,.4)}
+.is-lungwort{background:linear-gradient(180deg,#151a16 0%,#10130f 100%)}
+.is-lungwort .instrument{border-color:rgba(128,166,116,.4)}
 .is-oatmeal{background:linear-gradient(180deg,#1d1912,#2f291e 50%,#433a2a)}
 .is-oatmeal .instrument{border-color:rgba(215,195,155,.4)}
 .is-thyme{background:linear-gradient(180deg,#121a14,#1c2a20 50%,#28392c)}
