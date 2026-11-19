@@ -833,6 +833,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `hamerkop` | `1` 锤头鹳配色 |
 | `ibisbill` | `1` 鹮嘴鹬配色 |
 | `joey` | `1` 幼袋鼠配色 |
+| `kakariki` | `1` 红额鹦鹉配色 |
+| `limpet` | `1` 帽贝配色 |
+| `mudfish` | `1` 泥鳅配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 

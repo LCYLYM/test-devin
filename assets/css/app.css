@@ -1864,6 +1864,12 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .is-ibisbill .instrument{border-color:rgba(150,195,205,.4)}
 .is-joey{background:linear-gradient(180deg,#1d1510 0%,#130d08 100%)}
 .is-joey .instrument{border-color:rgba(215,155,105,.4)}
+.is-kakariki{background:linear-gradient(180deg,#0f1c12 0%,#08120a 100%)}
+.is-kakariki .instrument{border-color:rgba(90,200,110,.4)}
+.is-limpet{background:linear-gradient(180deg,#15181b 0%,#0d0f12 100%)}
+.is-limpet .instrument{border-color:rgba(165,175,185,.4)}
+.is-mudfish{background:linear-gradient(180deg,#1a1510 0%,#100d08 100%)}
+.is-mudfish .instrument{border-color:rgba(180,155,110,.4)}
 .is-oatmeal{background:linear-gradient(180deg,#1d1912,#2f291e 50%,#433a2a)}
 .is-oatmeal .instrument{border-color:rgba(215,195,155,.4)}
 .is-thyme{background:linear-gradient(180deg,#121a14,#1c2a20 50%,#28392c)}
