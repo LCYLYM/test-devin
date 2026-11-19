@@ -952,6 +952,14 @@
     if (params.get('frame') === '1') document.body.dataset.frame = '1';
     if (params.get('amber') === '1') document.body.dataset.amber = '1';
     if (params.get('dots') === '1') document.body.dataset.dots = '1';
+    if (params.get('tile') === '1') document.body.dataset.tile = '1';
+    if (params.get('outline') === '1') document.body.dataset.outline = '1';
+    if (params.get('rays') === '1' && !(window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches)) {
+      document.body.dataset.rays = '1';
+      var raysL = document.createElement('div');
+      raysL.className = 'rays-layer'; raysL.setAttribute('aria-hidden', 'true');
+      document.body.appendChild(raysL);
+    }
     if (params.get('shimmer') === '1') document.body.dataset.shimmer = '1';
     if (params.get('fog') === '1' && !(window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches)) {
       document.body.dataset.fog = '1';
@@ -1436,6 +1444,9 @@
       var plp = params.get('pal'); if (plp && ['forest', 'ocean', 'sunset', 'grape', 'vapor'].indexOf(plp) >= 0) u.searchParams.set('pal', plp);
       if (params.get('amber') === '1') u.searchParams.set('amber', '1');
       if (params.get('dots') === '1') u.searchParams.set('dots', '1');
+      if (params.get('tile') === '1') u.searchParams.set('tile', '1');
+      if (params.get('outline') === '1') u.searchParams.set('outline', '1');
+      if (params.get('rays') === '1') u.searchParams.set('rays', '1');
       if (params.get('flat') === '1') u.searchParams.set('flat', '1');
       var idl = params.get('idle'); if (idl) u.searchParams.set('idle', idl);
       if (params.get('wake') === '1') u.searchParams.set('wake', '1');

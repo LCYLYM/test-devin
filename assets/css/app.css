@@ -967,3 +967,9 @@ body[data-frame]{border:10px solid var(--accent,#67e494);box-sizing:border-box;m
 body[data-pal=vapor]{--bg:#1a1024;--surface:#241536;--surface-2:#301c46;--line:#4a2a66;--accent:#f472b6;--accent-rgb:244,114,182;--instrument:#120a1c;--muted:#b8a3d0;--dim:#6b5580}
 body[data-amber] .instrument{filter:sepia(.9) hue-rotate(-18deg) saturate(1.9) brightness(.95)}
 body[data-dots]{background-image:radial-gradient(rgba(var(--accent-rgb,103,228,148),.12) 1.5px,transparent 1.5px);background-size:26px 26px}
+body[data-tile]{background-image:repeating-conic-gradient(rgba(var(--accent-rgb,103,228,148),.06) 0% 25%,transparent 0% 50%);background-size:36px 36px}
+body[data-outline] .digit-inner>span,body[data-outline] .num-mark{color:transparent;-webkit-text-stroke:1.5px var(--accent,#67e494)}
+body[data-outline] .money-symbol{color:transparent;-webkit-text-stroke:1px var(--accent,#67e494)}
+.rays-layer{position:fixed;left:50%;top:50%;width:200vmax;height:200vmax;transform:translate(-50%,-50%);pointer-events:none;z-index:0;background:repeating-conic-gradient(rgba(var(--accent-rgb,103,228,148),.05) 0deg 8deg,transparent 8deg 24deg);animation:raysSpin 60s linear infinite;-webkit-mask-image:radial-gradient(circle,#000 0%,transparent 55%);mask-image:radial-gradient(circle,#000 0%,transparent 55%)}
+@keyframes raysSpin{to{transform:translate(-50%,-50%) rotate(360deg)}}
+.is-focus .rays-layer{opacity:.5}
