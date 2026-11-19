@@ -3843,6 +3843,9 @@
     if (params.get('arowana') === '1') { document.body.classList.add('is-arowana'); }
     if (params.get('discus') === '1') { document.body.classList.add('is-discus'); }
     if (params.get('oscarfish') === '1') { document.body.classList.add('is-oscarfish'); }
+    if (params.get('pleco') === '1') { document.body.classList.add('is-pleco'); }
+    if (params.get('corydoras') === '1') { document.body.classList.add('is-corydoras'); }
+    if (params.get('flowerhorn') === '1') { document.body.classList.add('is-flowerhorn'); }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -5044,6 +5047,9 @@
         if (params.get('arowana') === '1') u.searchParams.set('arowana', '1');
         if (params.get('discus') === '1') u.searchParams.set('discus', '1');
         if (params.get('oscarfish') === '1') u.searchParams.set('oscarfish', '1');
+        if (params.get('pleco') === '1') u.searchParams.set('pleco', '1');
+        if (params.get('corydoras') === '1') u.searchParams.set('corydoras', '1');
+        if (params.get('flowerhorn') === '1') u.searchParams.set('flowerhorn', '1');
       if (params.get('tile') === '1') u.searchParams.set('tile', '1');
       if (params.get('outline') === '1') u.searchParams.set('outline', '1');
       if (params.get('stripe') === '1') u.searchParams.set('stripe', '1');

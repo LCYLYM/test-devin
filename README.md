@@ -959,6 +959,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `arowana` | `1` 龙鱼配色 |
 | `discus` | `1` 七彩神仙配色 |
 | `oscarfish` | `1` 地图鱼配色 |
+| `pleco` | `1` 清道夫配色 |
+| `corydoras` | `1` 鼠鱼配色 |
+| `flowerhorn` | `1` 罗汉鱼配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 

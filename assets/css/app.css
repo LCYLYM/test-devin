@@ -2116,6 +2116,12 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .is-discus .instrument{border-color:rgba(180,140,220,.4)}
 .is-oscarfish{background:linear-gradient(180deg,#141714 0%,#0d100d 100%)}
 .is-oscarfish .instrument{border-color:rgba(140,200,120,.4)}
+.is-pleco{background:linear-gradient(180deg,#13171a 0%,#0c0f12 100%)}
+.is-pleco .instrument{border-color:rgba(150,170,190,.4)}
+.is-corydoras{background:linear-gradient(180deg,#181412 0%,#100d0b 100%)}
+.is-corydoras .instrument{border-color:rgba(210,170,120,.4)}
+.is-flowerhorn{background:linear-gradient(180deg,#1e1116 0%,#150b10 100%)}
+.is-flowerhorn .instrument{border-color:rgba(240,110,150,.4)}
 .is-oatmeal{background:linear-gradient(180deg,#1d1912,#2f291e 50%,#433a2a)}
 .is-oatmeal .instrument{border-color:rgba(215,195,155,.4)}
 .is-thyme{background:linear-gradient(180deg,#121a14,#1c2a20 50%,#28392c)}
