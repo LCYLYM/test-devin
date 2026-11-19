@@ -1219,6 +1219,12 @@ body[data-hover] .payday:hover{transform:translateY(-3px)}
 .is-volcano .instrument{border-color:rgba(245,100,55,.45)}
 .is-glade{background:linear-gradient(180deg,#0e1e14,#183022 55%,#224230)}
 .is-glade .instrument{border-color:rgba(130,210,160,.4)}
+.is-delta{background:linear-gradient(180deg,#0e1a1c,#16282a 55%,#203838)}
+.is-delta .instrument{border-color:rgba(120,195,190,.4)}
+.is-prairie{background:linear-gradient(180deg,#1c1a0c,#2c2814 55%,#3c361c)}
+.is-prairie .instrument{border-color:rgba(215,200,120,.4)}
+.is-cove{background:linear-gradient(180deg,#0a1620,#12242f 55%,#1a323e)}
+.is-cove .instrument{border-color:rgba(120,175,205,.4)}
 .is-focus .payday.morale{display:none}
 body[data-pillar] .page-shell{border-left:1px solid rgba(var(--accent-rgb,103,228,148),.22);border-right:1px solid rgba(var(--accent-rgb,103,228,148),.22)}
 body[data-gloom]{--bg:#0a0c0b}

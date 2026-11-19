@@ -2927,6 +2927,15 @@
     if (params.get('glade') === '1') {
       document.body.classList.add('is-glade');
     }
+    if (params.get('delta') === '1') {
+      document.body.classList.add('is-delta');
+    }
+    if (params.get('prairie') === '1') {
+      document.body.classList.add('is-prairie');
+    }
+    if (params.get('cove') === '1') {
+      document.body.classList.add('is-cove');
+    }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -3684,6 +3693,9 @@
       if (params.get('willow') === '1') u.searchParams.set('willow', '1');
       if (params.get('volcano') === '1') u.searchParams.set('volcano', '1');
       if (params.get('glade') === '1') u.searchParams.set('glade', '1');
+      if (params.get('delta') === '1') u.searchParams.set('delta', '1');
+      if (params.get('prairie') === '1') u.searchParams.set('prairie', '1');
+      if (params.get('cove') === '1') u.searchParams.set('cove', '1');
       if (params.get('tile') === '1') u.searchParams.set('tile', '1');
       if (params.get('outline') === '1') u.searchParams.set('outline', '1');
       if (params.get('stripe') === '1') u.searchParams.set('stripe', '1');

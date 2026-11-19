@@ -515,6 +515,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `willow` | `1` 柳树配色 |
 | `volcano` | `1` 火山配色 |
 | `glade` | `1` 林间配色 |
+| `delta` | `1` 三角洲配色 |
+| `prairie` | `1` 草原配色 |
+| `cove` | `1` 海湾配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 
