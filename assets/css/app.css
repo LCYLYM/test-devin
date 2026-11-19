@@ -1147,6 +1147,12 @@ body[data-hover] .payday:hover{transform:translateY(-3px)}
 .is-saffron .instrument{border-color:rgba(244,150,60,.45)}
 .is-oasis{background:linear-gradient(180deg,#0a1e1a,#103028 55%,#164236)}
 .is-oasis .instrument{border-color:rgba(90,200,160,.4)}
+.is-tulip{background:linear-gradient(180deg,#260e18,#3a1626 55%,#4e1e34)}
+.is-tulip .instrument{border-color:rgba(235,120,160,.4)}
+.is-birch{background:linear-gradient(180deg,#1a1a16,#262a22 55%,#32382e)}
+.is-birch .instrument{border-color:rgba(190,200,170,.4)}
+.is-smoke{background:linear-gradient(180deg,#141416,#1e1e22 55%,#28282e)}
+.is-smoke .instrument{border-color:rgba(160,160,170,.35)}
 .is-focus .payday.morale{display:none}
 body[data-pillar] .page-shell{border-left:1px solid rgba(var(--accent-rgb,103,228,148),.22);border-right:1px solid rgba(var(--accent-rgb,103,228,148),.22)}
 body[data-gloom]{--bg:#0a0c0b}

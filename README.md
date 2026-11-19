@@ -479,6 +479,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `raven` | `1` 鸦青配色 |
 | `saffron` | `1` 藏红配色 |
 | `oasis` | `1` 绿洲配色 |
+| `tulip` | `1` 郁金香配色 |
+| `birch` | `1` 白桦配色 |
+| `smoke` | `1` 烟灰配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 
