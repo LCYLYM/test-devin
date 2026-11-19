@@ -899,6 +899,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `tilapia` | `1` 罗非鱼配色 |
 | `catfish` | `1` 鲶鱼配色 |
 | `carp` | `1` 鲤鱼配色 |
+| `trout` | `1` 鳟鱼配色 |
+| `bass` | `1` 鲈鱼配色 |
+| `pike` | `1` 狗鱼配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 
