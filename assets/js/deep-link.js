@@ -2000,6 +2000,23 @@
     if (params.get('noir') === '1') {
       document.body.classList.add('is-noir');
     }
+    if (params.get('chil') === '1') {
+      var chb = document.getElementById('chilBadge'), chv = document.getElementById('chilVal');
+      if (chb && chv) {
+        var chUpd = function () {
+          var st = window.SalaryApp && window.SalaryApp.getState && window.SalaryApp.getState();
+          var p = st && st.snapshot && st.snapshot.progress;
+          if (p != null) { chv.textContent = Math.max(0, Math.round((1 - p) * 100)) + '%'; chb.hidden = false; }
+        };
+        chUpd(); setInterval(chUpd, 1000);
+      }
+    }
+    if (params.get('ref') === '1') {
+      document.body.classList.add('is-ref');
+    }
+    if (params.get('duo') === '1') {
+      document.body.classList.add('is-duo');
+    }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -2689,6 +2706,9 @@
       if (params.get('mar') === '1') u.searchParams.set('mar', '1');
       if (params.get('idx') === '1') u.searchParams.set('idx', '1');
       if (params.get('noir') === '1') u.searchParams.set('noir', '1');
+      if (params.get('chil') === '1') u.searchParams.set('chil', '1');
+      if (params.get('ref') === '1') u.searchParams.set('ref', '1');
+      if (params.get('duo') === '1') u.searchParams.set('duo', '1');
       if (params.get('rays') === '1') u.searchParams.set('rays', '1');
       if (params.get('flat') === '1') u.searchParams.set('flat', '1');
       var idl = params.get('idle'); if (idl) u.searchParams.set('idle', idl);

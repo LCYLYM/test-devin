@@ -315,6 +315,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `mar` | `1` 工时折马拉松距离徽章 |
 | `idx` | `1` 当前参数计数徽章 |
 | `noir` | `1` 黑白电影模式 |
+| `chil` | `1` 摸鱼指数徽章 |
+| `ref` | `1` 仪表倒影 |
+| `duo` | `1` 双色分屏背景 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 
