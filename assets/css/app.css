@@ -1810,6 +1810,12 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .is-zorilla .instrument{border-color:rgba(180,170,190,.4)}
 .is-agouti{background:linear-gradient(180deg,#1b140f 0%,#110c08 100%)}
 .is-agouti .instrument{border-color:rgba(195,140,90,.4)}
+.is-bongo{background:linear-gradient(180deg,#1f120e 0%,#130a07 100%)}
+.is-bongo .instrument{border-color:rgba(225,110,70,.4)}
+.is-civet{background:linear-gradient(180deg,#191510 0%,#100d09 100%)}
+.is-civet .instrument{border-color:rgba(190,170,130,.4)}
+.is-dugong{background:linear-gradient(180deg,#101a1d 0%,#081113 100%)}
+.is-dugong .instrument{border-color:rgba(140,190,200,.4)}
 .is-oatmeal{background:linear-gradient(180deg,#1d1912,#2f291e 50%,#433a2a)}
 .is-oatmeal .instrument{border-color:rgba(215,195,155,.4)}
 .is-thyme{background:linear-gradient(180deg,#121a14,#1c2a20 50%,#28392c)}

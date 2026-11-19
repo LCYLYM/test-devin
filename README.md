@@ -806,6 +806,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `yellowlegs` | `1` 黄脚鹬配色 |
 | `zorilla` | `1` 非洲艾虎配色 |
 | `agouti` | `1` 刺豚鼠配色 |
+| `bongo` | `1` 紫羚配色 |
+| `civet` | `1` 灵猫配色 |
+| `dugong` | `1` 儒艮配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 
