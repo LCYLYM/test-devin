@@ -29,6 +29,14 @@
 
     var template = params.get('template') || params.get('skin');
     if (template) app.setTemplate(template);
+    else {
+      // First-visit default follows the OS: light mode gets the paper skin.
+      // Skipped once the user has any saved preference or an explicit ?skin=.
+      var hasStored = false;
+      try { hasStored = !!(JSON.parse(localStorage.getItem('salaryFlow.v2') || 'null') || {}).preferences; } catch (e) {}
+      if (!hasStored && window.matchMedia && matchMedia('(prefers-color-scheme: light)').matches)
+        app.setTemplate('paper');
+    }
 
     var currency = (params.get('currency') || '').toUpperCase();
     if (currency) app.setCurrency(currency);
