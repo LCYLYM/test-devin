@@ -938,6 +938,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `tilefish` | `1` 方头鱼配色 |
 | `hogfish` | `1` 猪隆头鱼配色 |
 | `parrotfish` | `1` 鹦嘴鱼配色 |
+| `damselfish` | `1` 雀鲷配色 |
+| `clownfish` | `1` 小丑鱼配色 |
+| `angelfish` | `1` 神仙鱼配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 
