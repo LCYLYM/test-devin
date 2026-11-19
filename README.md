@@ -533,6 +533,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `turquoise` | `1` 绿松石配色 |
 | `walnut` | `1` 胡桃配色 |
 | `cherry` | `1` 樱桃配色 |
+| `espresso` | `1` 浓缩配色 |
+| `peridot` | `1` 橄榄石配色 |
+| `amethyst` | `1` 紫水晶配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 

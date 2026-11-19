@@ -2981,6 +2981,15 @@
     if (params.get('cherry') === '1') {
       document.body.classList.add('is-cherry');
     }
+    if (params.get('espresso') === '1') {
+      document.body.classList.add('is-espresso');
+    }
+    if (params.get('peridot') === '1') {
+      document.body.classList.add('is-peridot');
+    }
+    if (params.get('amethyst') === '1') {
+      document.body.classList.add('is-amethyst');
+    }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -3756,6 +3765,9 @@
       if (params.get('turquoise') === '1') u.searchParams.set('turquoise', '1');
       if (params.get('walnut') === '1') u.searchParams.set('walnut', '1');
       if (params.get('cherry') === '1') u.searchParams.set('cherry', '1');
+      if (params.get('espresso') === '1') u.searchParams.set('espresso', '1');
+      if (params.get('peridot') === '1') u.searchParams.set('peridot', '1');
+      if (params.get('amethyst') === '1') u.searchParams.set('amethyst', '1');
       if (params.get('tile') === '1') u.searchParams.set('tile', '1');
       if (params.get('outline') === '1') u.searchParams.set('outline', '1');
       if (params.get('stripe') === '1') u.searchParams.set('stripe', '1');
