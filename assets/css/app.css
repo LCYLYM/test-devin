@@ -1618,6 +1618,12 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .is-persimmon .instrument{border-color:rgba(240,140,60,.42)}
 .is-capybara{background:linear-gradient(180deg,#171208,#281d0e 50%,#3a2a14)}
 .is-capybara .instrument{border-color:rgba(205,160,95,.42)}
+.is-toucan{background:linear-gradient(180deg,#0f1a14,#183028 50%,#23453a)}
+.is-toucan .instrument{border-color:rgba(240,170,60,.45)}
+.is-taro{background:linear-gradient(180deg,#171223,#282040 50%,#392e5c)}
+.is-taro .instrument{border-color:rgba(175,155,230,.42)}
+.is-mongoose{background:linear-gradient(180deg,#18120c,#2b1f12 50%,#3e2d1a)}
+.is-mongoose .instrument{border-color:rgba(210,165,100,.42)}
 .is-oatmeal{background:linear-gradient(180deg,#1d1912,#2f291e 50%,#433a2a)}
 .is-oatmeal .instrument{border-color:rgba(215,195,155,.4)}
 .is-thyme{background:linear-gradient(180deg,#121a14,#1c2a20 50%,#28392c)}

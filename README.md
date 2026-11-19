@@ -710,6 +710,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `narwhal` | `1` 独角鲸配色 |
 | `persimmon` | `1` 柿子配色 |
 | `capybara` | `1` 水豚配色 |
+| `toucan` | `1` 巨嘴鸟配色 |
+| `taro` | `1` 芋头配色 |
+| `mongoose` | `1` 猫鼬配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 
