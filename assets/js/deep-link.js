@@ -178,6 +178,8 @@
 
     if (params.get('confetti') === '0') window.__noConfetti = true;
 
+    if (params.get('keys') === '0') window.__noKeys = true;
+
     var QUOTES = ['打工不摸鱼，不如回家种地','今天的砖，格外烫手','薪尽自然凉','只要我够快，贫穷就追不上我','上班如上坟，下班如过年','人在工位坐，薪从秒上跳','摸鱼是打工人的浪漫','卷不动的时候，就看看余额'];
     var quoteCustom = params.get('quote');
     if (quoteCustom && !['0', '1', 'off', 'true', 'on'].includes(quoteCustom)) quoteCustom = quoteCustom.slice(0, 40);
@@ -260,6 +262,7 @@
 
   /* Keyboard shortcuts: / focus salary · f fullscreen · ? help */
   document.addEventListener('keydown', function (e) {
+    if (window.__noKeys) return;
     if (e.metaKey || e.ctrlKey || e.altKey) return;
     var tag = (e.target.tagName || '').toLowerCase();
     if (tag === 'input' || tag === 'textarea' || tag === 'select' || e.target.isContentEditable) return;
@@ -491,6 +494,7 @@
     wireCopyLink();
   });
   document.addEventListener('keydown', function (e) {
+    if (window.__noKeys) return;
     if (e.key === 'i' && deferredInstall && !e.metaKey && !e.ctrlKey && !e.altKey) {
       var tag = (e.target.tagName || '').toLowerCase();
       if (tag === 'input' || tag === 'textarea' || tag === 'select' || e.target.isContentEditable) return;

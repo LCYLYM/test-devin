@@ -1,12 +1,12 @@
 // 薪动 service worker — cache-first for app shell, network-first for navigations.
-const CACHE = 'xindong-v34';
+const CACHE = 'xindong-v35';
 const SHELL = [
   './',
   './index.html',
-  './assets/css/app.css?v=20261120g',
-  './assets/js/salary-engine.js?v=20261120g',
-  './assets/js/app.js?v=20261120g',
-  './assets/js/deep-link.js?v=20261120g',
+  './assets/css/app.css?v=20261120h',
+  './assets/js/salary-engine.js?v=20261120h',
+  './assets/js/app.js?v=20261120h',
+  './assets/js/deep-link.js?v=20261120h',
   './assets/img/favicon.svg',
   './assets/img/piggy.webp',
   './site.webmanifest'

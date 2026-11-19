@@ -58,6 +58,7 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `emoji` | 状态角标 emoji：`?emoji=🔥` |
 | `quote` | `1` 每日打工人语录，或自定义文本 `?quote=摸鱼万岁`（`q` 键切换，记忆） |
 | `clock` | `12` 使用 12 小时制时钟 |
+| `keys` | `0` 禁用全部快捷键（嵌入场景） |
 
 ## 本地跑
 
