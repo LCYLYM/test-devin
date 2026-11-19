@@ -1145,6 +1145,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `skua` | `1` 贼鸥配色 |
 | `jaeger` | `1` 中贼鸥配色 |
 | `tropicbird` | `1` 鹲配色 |
+| `frigatebird` | `1` 军舰鸟配色 |
+| `booby` | `1` 鲣鸟配色 |
+| `noddy` | `1` 玄燕鸥配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 
