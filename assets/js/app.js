@@ -341,7 +341,7 @@
     ZIM: {code:'ZIM', name:'津巴布韦 · 趣味', symbol:'Z$', fun:true}
   };
   const PRESET_RATES = {CNY:1, USD:.14981, EUR:.13344, JPY:23.71, KRW:199.13, HKD:1.1766, VND:3869.68, IDR:2699.77, ZIM:1e11};
-  const defaultPreferences = {template:'charge', sound:false, period:'day', currency:'CNY', goal:{name:'一杯咖啡',price:25}, manualRates:{}};
+  const defaultPreferences = {template:'pig', sound:false, period:'day', currency:'CNY', goal:{name:'一杯咖啡',price:25}, manualRates:{}};
   const clone = object => JSON.parse(JSON.stringify(object));
   const $ = id => document.getElementById(id);
   const all = selector => [...document.querySelectorAll(selector)];
@@ -402,7 +402,7 @@
       }
       const p = stored.preferences || {};
       preferences={...clone(defaultPreferences),...p};
-      if (!['charge','meter','pixel','pig'].includes(preferences.template)) preferences.template='charge';
+      if (!['charge','meter','pixel','pig'].includes(preferences.template)) preferences.template='pig';
       if (!['day','month'].includes(preferences.period)) preferences.period='day';
       if (!CURRENCIES[preferences.currency]) preferences.currency='CNY';
       preferences.sound=Boolean(preferences.sound);
