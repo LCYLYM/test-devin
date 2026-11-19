@@ -413,6 +413,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `coral` | `1` 珊瑚配色 |
 | `indigo` | `1` 靛蓝配色 |
 | `moss` | `1` 苔藓配色 |
+| `quota` | `1` 日均配额徽章 |
+| `haze` | `1` 薄雾配色 |
+| `dbl` | `1` 双击放大金额 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 

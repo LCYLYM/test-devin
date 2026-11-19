@@ -2582,6 +2582,32 @@
     if (params.get('moss') === '1') {
       document.body.classList.add('is-moss');
     }
+    if (params.get('quota') === '1') {
+      var qB = document.getElementById('quotaBadge'), qV = document.getElementById('quotaVal');
+      if (qB && qV) {
+        var qUpd = function () {
+          var st = window.SalaryApp && window.SalaryApp.getState && window.SalaryApp.getState();
+          if (!st || !st.snapshot) return;
+          var ds = st.snapshot.daySalary || 0;
+          var me = st.snapshot.monthEarned || 0;
+          var ew = Math.max(1, st.snapshot.elapsedWorkdays || 1);
+          var q = me / ew;
+          qV.textContent = '日均 ' + window.SalaryApp.formatMoney(q, st.currency) + ' / 目标 ' + window.SalaryApp.formatMoney(ds, st.currency);
+          qB.hidden = false;
+        };
+        qUpd();
+        setInterval(qUpd, 10000);
+      }
+    }
+    if (params.get('haze') === '1') {
+      document.body.classList.add('is-haze');
+    }
+    if (params.get('dbl') === '1') {
+      var dEl = document.getElementById('amountArea');
+      if (dEl) dEl.addEventListener('dblclick', function () {
+        dEl.classList.toggle('dbl-big');
+      });
+    }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -3237,6 +3263,9 @@
       if (params.get('coral') === '1') u.searchParams.set('coral', '1');
       if (params.get('indigo') === '1') u.searchParams.set('indigo', '1');
       if (params.get('moss') === '1') u.searchParams.set('moss', '1');
+      if (params.get('quota') === '1') u.searchParams.set('quota', '1');
+      if (params.get('haze') === '1') u.searchParams.set('haze', '1');
+      if (params.get('dbl') === '1') u.searchParams.set('dbl', '1');
       if (params.get('tile') === '1') u.searchParams.set('tile', '1');
       if (params.get('outline') === '1') u.searchParams.set('outline', '1');
       if (params.get('stripe') === '1') u.searchParams.set('stripe', '1');

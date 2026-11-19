@@ -1255,6 +1255,12 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .is-indigo .instrument{border-color:rgba(129,140,248,.45)}
 .is-moss{background:linear-gradient(180deg,#141c12,#1c2716)}
 .is-moss .instrument{border-color:rgba(163,230,53,.32)}
+.payday.quota{color:#a5b4fc}
+.is-haze{background:linear-gradient(180deg,#1a2230,#232f42 55%,#2a3750);filter:none}
+.is-haze .instrument{box-shadow:0 0 60px rgba(147,197,253,.08)}
+.dbl-big .amount{transform:scale(1.35)}
+#amountArea .amount{transition:transform .25s var(--motion)}
+.is-focus .payday.quota{display:none}
 @keyframes hueSpin{to{filter:hue-rotate(360deg)}}
 .is-hue .instrument{animation:hueSpin 12s linear infinite}
 @media (prefers-reduced-motion:reduce){.is-hue .instrument{animation:none}}
