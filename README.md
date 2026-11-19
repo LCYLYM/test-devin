@@ -749,6 +749,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `fossa` | `1` 马岛獴配色 |
 | `gerenuk` | `1` 长颈羚配色 |
 | `hutia` | `1` 硬毛鼠配色 |
+| `impala` | `1` 黑斑羚配色 |
+| `jackdaw` | `1` 寒鸦配色 |
+| `kakapo` | `1` 鸮鹦鹉配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 
