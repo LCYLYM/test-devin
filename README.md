@@ -38,6 +38,8 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `period` | `day` / `month` |
 | `demo` | `1` 开启演示模式 |
 | `focus` | `salary` 打开时聚焦月薪输入 |
+| `zen` | `1` 进入专注模式 |
+| `sound` | `1` 开启音效 |
 | `title` | `0` 关闭标签页金额跳动 |
 
 ## 本地跑
