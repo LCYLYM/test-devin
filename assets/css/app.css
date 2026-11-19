@@ -2386,6 +2386,12 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .is-chickadee .instrument{border-color:rgba(145,160,175,.4)}
 .is-redstart{background:linear-gradient(180deg,#1d1210 0%,#150d0b 100%)}
 .is-redstart .instrument{border-color:rgba(230,120,90,.4)}
+.is-whinchat{background:linear-gradient(180deg,#191713 0%,#12110e 100%)}
+.is-whinchat .instrument{border-color:rgba(195,175,125,.4)}
+.is-wheatear{background:linear-gradient(180deg,#141a1d 0%,#0e1315 100%)}
+.is-wheatear .instrument{border-color:rgba(130,185,205,.4)}
+.is-stonechat{background:linear-gradient(180deg,#1b1310 0%,#140e0b 100%)}
+.is-stonechat .instrument{border-color:rgba(220,135,95,.4)}
 .is-oatmeal{background:linear-gradient(180deg,#1d1912,#2f291e 50%,#433a2a)}
 .is-oatmeal .instrument{border-color:rgba(215,195,155,.4)}
 .is-thyme{background:linear-gradient(180deg,#121a14,#1c2a20 50%,#28392c)}

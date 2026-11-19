@@ -3978,6 +3978,9 @@
     if (params.get('treecreeper') === '1') { document.body.classList.add('is-treecreeper'); }
     if (params.get('chickadee') === '1') { document.body.classList.add('is-chickadee'); }
     if (params.get('redstart') === '1') { document.body.classList.add('is-redstart'); }
+    if (params.get('whinchat') === '1') { document.body.classList.add('is-whinchat'); }
+    if (params.get('wheatear') === '1') { document.body.classList.add('is-wheatear'); }
+    if (params.get('stonechat') === '1') { document.body.classList.add('is-stonechat'); }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -5314,6 +5317,9 @@
         if (params.get('treecreeper') === '1') u.searchParams.set('treecreeper', '1');
         if (params.get('chickadee') === '1') u.searchParams.set('chickadee', '1');
         if (params.get('redstart') === '1') u.searchParams.set('redstart', '1');
+        if (params.get('whinchat') === '1') u.searchParams.set('whinchat', '1');
+        if (params.get('wheatear') === '1') u.searchParams.set('wheatear', '1');
+        if (params.get('stonechat') === '1') u.searchParams.set('stonechat', '1');
       if (params.get('tile') === '1') u.searchParams.set('tile', '1');
       if (params.get('outline') === '1') u.searchParams.set('outline', '1');
       if (params.get('stripe') === '1') u.searchParams.set('stripe', '1');

@@ -1094,6 +1094,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `treecreeper` | `1` 旋木雀配色 |
 | `chickadee` | `1` 山雀配色 |
 | `redstart` | `1` 红尾鸲配色 |
+| `whinchat` | `1` 野䳭配色 |
+| `wheatear` | `1` 穗䳭配色 |
+| `stonechat` | `1` 石䳭配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 
