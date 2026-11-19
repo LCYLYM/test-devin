@@ -86,6 +86,12 @@
       var skins = ['pig', 'charge', 'meter', 'pixel', 'neon', 'mono', 'paper'];
       var cur = window.SalaryApp.getState().preferences.template;
       window.SalaryApp.setTemplate(skins[(skins.indexOf(cur) + 1) % skins.length]);
+    } else if (e.key === 'z') {
+      var fb = document.getElementById('focusButton');
+      if (fb) fb.click();
+    } else if (e.key === 'm') {
+      var sb = document.getElementById('soundButton');
+      if (sb) sb.click();
     }
   });
 
