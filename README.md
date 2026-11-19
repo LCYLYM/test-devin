@@ -776,6 +776,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `lapwing` | `1` 凤头麦鸡配色 |
 | `mudskipper` | `1` 弹涂鱼配色 |
 | `nighthawk` | `1` 夜鹰配色 |
+| `potoo` | `1` 林鸱配色 |
+| `solenodon` | `1` 沟齿鼩配色 |
+| `tarsier` | `1` 眼镜猴配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 

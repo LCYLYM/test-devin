@@ -3660,6 +3660,9 @@
     if (params.get('lapwing') === '1') { document.body.classList.add('is-lapwing'); }
     if (params.get('mudskipper') === '1') { document.body.classList.add('is-mudskipper'); }
     if (params.get('nighthawk') === '1') { document.body.classList.add('is-nighthawk'); }
+    if (params.get('potoo') === '1') { document.body.classList.add('is-potoo'); }
+    if (params.get('solenodon') === '1') { document.body.classList.add('is-solenodon'); }
+    if (params.get('tarsier') === '1') { document.body.classList.add('is-tarsier'); }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -4678,6 +4681,9 @@
         if (params.get('lapwing') === '1') u.searchParams.set('lapwing', '1');
         if (params.get('mudskipper') === '1') u.searchParams.set('mudskipper', '1');
         if (params.get('nighthawk') === '1') u.searchParams.set('nighthawk', '1');
+        if (params.get('potoo') === '1') u.searchParams.set('potoo', '1');
+        if (params.get('solenodon') === '1') u.searchParams.set('solenodon', '1');
+        if (params.get('tarsier') === '1') u.searchParams.set('tarsier', '1');
       if (params.get('tile') === '1') u.searchParams.set('tile', '1');
       if (params.get('outline') === '1') u.searchParams.set('outline', '1');
       if (params.get('stripe') === '1') u.searchParams.set('stripe', '1');
