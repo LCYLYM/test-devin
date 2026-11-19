@@ -2620,6 +2620,12 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .is-spoonmoss .instrument{border-color:rgba(140,178,106,.4)}
 .is-broommoss{background:linear-gradient(180deg,#171a12 0%,#11130c 100%)}
 .is-broommoss .instrument{border-color:rgba(158,178,100,.4)}
+.is-stairstep{background:linear-gradient(180deg,#161a16 0%,#111310 100%)}
+.is-stairstep .instrument{border-color:rgba(146,172,128,.4)}
+.is-rockmoss{background:linear-gradient(180deg,#161815 0%,#111210 100%)}
+.is-rockmoss .instrument{border-color:rgba(150,156,128,.4)}
+.is-junipermoss{background:linear-gradient(180deg,#131a16 0%,#0e130f 100%)}
+.is-junipermoss .instrument{border-color:rgba(116,164,126,.4)}
 .is-oatmeal{background:linear-gradient(180deg,#1d1912,#2f291e 50%,#433a2a)}
 .is-oatmeal .instrument{border-color:rgba(215,195,155,.4)}
 .is-thyme{background:linear-gradient(180deg,#121a14,#1c2a20 50%,#28392c)}

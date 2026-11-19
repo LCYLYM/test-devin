@@ -1211,6 +1211,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `fernmoss` | `1` 蕨藓配色 |
 | `spoonmoss` | `1` 匙叶藓配色 |
 | `broommoss` | `1` 凤尾藓配色 |
+| `stairstep` | `1` 褶叶藓配色 |
+| `rockmoss` | `1` 石藓配色 |
+| `junipermoss` | `1` 桧藓配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 
