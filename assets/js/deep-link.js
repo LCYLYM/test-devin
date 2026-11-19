@@ -2120,6 +2120,34 @@
     if (params.get('candle') === '1' && !(window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches)) {
       document.body.classList.add('is-candle');
     }
+    if (params.get('eta') === '1') {
+      var etb = document.getElementById('etaBadge'), etv = document.getElementById('etaVal');
+      if (etb && etv) {
+        var etUpd = function () {
+          var st = window.SalaryApp && window.SalaryApp.getState && window.SalaryApp.getState();
+          var r = st && st.snapshot && st.snapshot.remainingWorkSeconds;
+          if (r != null) {
+            if (!st.snapshot.isWorkday || r <= 0) { etv.textContent = '已收工'; }
+            else { var d = new Date(Date.now() + r * 1000); etv.textContent = '预计 ' + String(d.getHours()).padStart(2, '0') + ':' + String(d.getMinutes()).padStart(2, '0') + ' 下班'; }
+            etb.hidden = false;
+          }
+        };
+        etUpd(); setInterval(etUpd, 15000);
+      }
+    }
+    if (params.get('lift') === '1') {
+      document.body.classList.add('is-lift');
+      var liftIv = setInterval(function () {
+        var st = window.SalaryApp && window.SalaryApp.getState && window.SalaryApp.getState();
+        if (st && st.snapshot && st.snapshot.progress >= 1) document.body.classList.add('lift-on');
+      }, 1000);
+    }
+    if (params.get('beam') === '1') {
+      var bm = document.createElement('div');
+      bm.className = 'beam-layer';
+      bm.setAttribute('aria-hidden', 'true');
+      document.body.appendChild(bm);
+    }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -2694,6 +2722,9 @@
       if (params.get('felt') === '1') u.searchParams.set('felt', '1');
       if (params.get('stack') === '1') u.searchParams.set('stack', '1');
       if (params.get('candle') === '1') u.searchParams.set('candle', '1');
+      if (params.get('eta') === '1') u.searchParams.set('eta', '1');
+      if (params.get('lift') === '1') u.searchParams.set('lift', '1');
+      if (params.get('beam') === '1') u.searchParams.set('beam', '1');
       if (params.get('tile') === '1') u.searchParams.set('tile', '1');
       if (params.get('outline') === '1') u.searchParams.set('outline', '1');
       if (params.get('stripe') === '1') u.searchParams.set('stripe', '1');

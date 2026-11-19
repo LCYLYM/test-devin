@@ -332,6 +332,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `felt` | `1` 实际时薪（含加班）徽章 |
 | `stack` | `1` 卡片堆叠阴影 |
 | `candle` | `1` 烛光闪烁 |
+| `eta` | `1` 预计下班时间徽章 |
+| `lift` | `1` 满额时金额上抬高亮 |
+| `beam` | `1` 顶部聚光 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 

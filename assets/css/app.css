@@ -1145,6 +1145,10 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .payday.sum{color:#34d399}
 .payday.born{color:#f9a8d4}
 .payday.felt{color:#fb923c}
+.payday.eta{color:#a5b4fc}
+.is-lift.lift-on #amountArea{transform:translateY(-8px);transition:transform .6s}
+.beam-layer{position:fixed;top:0;left:50%;transform:translateX(-50%);width:60vw;height:60vh;pointer-events:none;z-index:3;background:radial-gradient(ellipse 50% 100% at 50% 0%,rgba(250,204,21,.10),transparent 70%)}
+.is-focus .beam-layer{display:none}
 .is-stack .instrument{box-shadow:0 6px 0 -2px rgba(148,163,184,.14),0 12px 0 -4px rgba(148,163,184,.09)}
 @keyframes candleFlk{0%,100%{opacity:1}25%{opacity:.86}55%{opacity:.97}80%{opacity:.9}}
 .is-candle #amountArea{animation:candleFlk .9s ease-in-out infinite}
