@@ -551,6 +551,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `mulberry` | `1` 桑葚配色 |
 | `sienna` | `1` 赭石配色 |
 | `aqua` | `1` 水色配色 |
+| `flax` | `1` 亚麻配色 |
+| `heather` | `1` 石楠配色 |
+| `tawny` | `1` 茶褐配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 
