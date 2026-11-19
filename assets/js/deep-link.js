@@ -189,8 +189,24 @@
     if (params.get('confetti') === '0') window.__noConfetti = true;
 
     if (params.get('keys') === '0') window.__noKeys = true;
+    var themeParam = params.get('theme');
+    if (themeParam === 'light') document.body.dataset.light = '1';
+    else if (themeParam === 'dark') delete document.body.dataset.light;
+    else if (themeParam === 'auto' && window.matchMedia && matchMedia('(prefers-color-scheme: light)').matches) document.body.dataset.light = '1';
     var symParam = params.get('symbol');
     if (symParam) window.__symbol = symParam.slice(0, 3);
+    var brandParam = params.get('brand');
+    if (brandParam) {
+      var bs = document.querySelector('.brand span');
+      if (bs) bs.textContent = brandParam.slice(0, 12);
+      if (!params.get('title')) document.title = brandParam.slice(0, 12) + ' · ' + document.title.split('·').slice(-1)[0].trim();
+    }
+    var sizeParam = parseFloat(params.get('size'));
+    if (isFinite(sizeParam) && sizeParam > 0.4 && sizeParam <= 2.5) {
+      var vc = document.querySelector('.value-cluster');
+      if (vc) vc.style.zoom = String(sizeParam);
+    }
+    if (params.get('dir') === 'down') window.__dirDown = true;
     var msParam = params.get('milestone');
     if (msParam !== null) {
       window.__milestones = (msParam === '0' || msParam === '') ? []

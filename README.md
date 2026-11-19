@@ -62,6 +62,10 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `milestone` | `25,100` 自定义破额提醒阈值；`0` 关闭（默认 10/20/50/100/200/500/1000） |
 | `light` | `1` 浅色模式（`l` 键切换，记忆本地） |
 | `symbol` | 自定义货币符号，≤3 字符，如 `?symbol=€` `?symbol=💰` |
+| `theme` | `light` / `dark` / `auto`（auto 跟随系统） |
+| `brand` | 自定义左上角品牌名，≤12 字符 |
+| `dir` | `down` 倒计时模式：显示距离目标还差多少 |
+| `size` | `0.4–2.5` 数字区缩放（电视/投屏用） |
 
 ## 本地跑
 

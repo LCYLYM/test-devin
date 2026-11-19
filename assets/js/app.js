@@ -125,6 +125,12 @@
 
   function update(data){
     const tick=performance.now();const state=window.SalaryApp?.getState();
+    if(window.__dirDown&&data.snapshot){
+      const monthly=data.period==='month';
+      const total=monthly&&data.snapshot.monthProgress>0?data.snapshot.monthEarned/data.snapshot.monthProgress:data.snapshot.daySalary;
+      const got=monthly?data.snapshot.monthEarned:data.snapshot.todayEarned;
+      data.displayAmount=Math.max(0,(total-got)*((data.currency&&data.currency.rate)||1));
+    }
     const signature=data.currency.code+'|'+data.currency.rate+'|'+data.period+'|'+(data.demo?'demo':'real')+'|'+state?.config.salary+'|'+data.snapshot.workdays+'|'+data.snapshot.hoursPerDay+'|'+data.snapshot.dayKey;
     const changed=signature!==lastSignature;
     latest=data;lastTime=tick;
