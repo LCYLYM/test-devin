@@ -839,6 +839,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `potoroo` | `1` 草原袋鼠配色 |
 | `quail` | `1` 鹌鹑配色 |
 | `ratel` | `1` 蜜獾配色 |
+| `shoebill` | `1` 鲸头鹳配色 |
+| `tanuki` | `1` 狸猫配色 |
+| `zinnia` | `1` 百日菊配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 
