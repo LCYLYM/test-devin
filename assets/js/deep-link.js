@@ -909,6 +909,19 @@
         db.hidden = false; dFill(); setInterval(dFill, 30000);
       }
     }
+    if (params.get('pulse') === '1') document.body.dataset.pulse = '1';
+    if (params.get('aurora') === '1') document.body.dataset.aurora = '1';
+    if (params.get('day') === '1') {
+      var db2 = document.getElementById('dayBadge'), dp = document.getElementById('dayPct'), di = document.getElementById('dayIcon');
+      if (db2 && dp) {
+        var dayFill = function () {
+          var dn = new Date(), hrs = dn.getHours() + dn.getMinutes() / 60;
+          if (hrs >= 6 && hrs <= 19) { if (di) di.textContent = '☀️'; dp.textContent = '白昼 ' + Math.round((hrs - 6) / 13 * 100) + '%'; }
+          else { if (di) di.textContent = '🌙'; dp.textContent = '夜晚'; }
+        };
+        db2.hidden = false; dayFill(); setInterval(dayFill, 60000);
+      }
+    }
     if (params.get('card') === '1') {
       var cb = document.getElementById('cardBadge'), cn2 = document.getElementById('cardName');
       if (cb && cn2) {
@@ -1390,6 +1403,9 @@
       if (params.get('bar') === '1') u.searchParams.set('bar', '1');
       if (params.get('date') === '1') u.searchParams.set('date', '1');
       if (params.get('card') === '1') u.searchParams.set('card', '1');
+      if (params.get('pulse') === '1') u.searchParams.set('pulse', '1');
+      if (params.get('aurora') === '1') u.searchParams.set('aurora', '1');
+      if (params.get('day') === '1') u.searchParams.set('day', '1');
       params.forEach(function (v, k) { if (k.indexOf('utm_') === 0 && v) u.searchParams.set(k, v.slice(0, 64)); });
       var text = u.toString();
       (navigator.clipboard ? navigator.clipboard.writeText(text) : Promise.reject())

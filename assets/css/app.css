@@ -925,3 +925,9 @@ body[data-lava]::after{width:36vmin;height:36vmin;right:-6%;bottom:-8%;backgroun
 .is-focus .top-progress{display:none}
 .payday.date{color:#93c5fd}
 .payday.card{color:#c4b5fd}
+.payday.day{color:#fdba74}
+body[data-pulse] .amount-area{animation:pulseBeat 1.2s ease-in-out infinite}
+@keyframes pulseBeat{0%,100%{transform:scale(1)}50%{transform:scale(1.015)}}
+body[data-aurora]::before{content:"";position:fixed;inset:-20%;z-index:0;pointer-events:none;opacity:.3;background:linear-gradient(115deg,#22d3ee22,#a78bfa22,#34d39922,#f472b622,#22d3ee22);background-size:300% 300%;filter:blur(40px);animation:auroraShift 18s ease-in-out infinite}
+@keyframes auroraShift{0%,100%{background-position:0% 40%}50%{background-position:100% 60%}}
+body.is-focus[data-aurora]::before{opacity:.18}
