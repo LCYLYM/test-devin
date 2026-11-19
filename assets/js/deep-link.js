@@ -70,6 +70,11 @@
 
     if (params.get('zen') === '1') document.body.classList.add('is-focus');
 
+    // ?dialog=share|about|settings|goal|calendar|currency|overtime — open a panel directly.
+    var dlg = params.get('dialog') || params.get('share') === '1' && 'share' || '';
+    var dlgMap = {share:'shareDialog',about:'aboutDialog',settings:'settingsDialog',goal:'goalDialog',calendar:'calendarDialog',currency:'currencyDialog',overtime:'overtimeDialog'};
+    if (dlgMap[dlg]) app.openDialog(dlgMap[dlg]);
+
     if (params.get('focus') === 'salary') {
       var salaryInput = document.getElementById('salaryInput');
       if (salaryInput) { salaryInput.focus(); salaryInput.select(); }
