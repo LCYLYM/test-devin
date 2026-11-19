@@ -3801,6 +3801,9 @@
     if (params.get('stingray') === '1') { document.body.classList.add('is-stingray'); }
     if (params.get('manta') === '1') { document.body.classList.add('is-manta'); }
     if (params.get('flounder') === '1') { document.body.classList.add('is-flounder'); }
+    if (params.get('halibut') === '1') { document.body.classList.add('is-halibut'); }
+    if (params.get('turbot') === '1') { document.body.classList.add('is-turbot'); }
+    if (params.get('sole') === '1') { document.body.classList.add('is-sole'); }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -4960,6 +4963,9 @@
         if (params.get('stingray') === '1') u.searchParams.set('stingray', '1');
         if (params.get('manta') === '1') u.searchParams.set('manta', '1');
         if (params.get('flounder') === '1') u.searchParams.set('flounder', '1');
+        if (params.get('halibut') === '1') u.searchParams.set('halibut', '1');
+        if (params.get('turbot') === '1') u.searchParams.set('turbot', '1');
+        if (params.get('sole') === '1') u.searchParams.set('sole', '1');
       if (params.get('tile') === '1') u.searchParams.set('tile', '1');
       if (params.get('outline') === '1') u.searchParams.set('outline', '1');
       if (params.get('stripe') === '1') u.searchParams.set('stripe', '1');

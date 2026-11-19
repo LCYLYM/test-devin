@@ -2032,6 +2032,12 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .is-manta .instrument{border-color:rgba(115,190,200,.4)}
 .is-flounder{background:linear-gradient(180deg,#1b1711 0%,#12100a 100%)}
 .is-flounder .instrument{border-color:rgba(200,175,120,.4)}
+.is-halibut{background:linear-gradient(180deg,#131a1b 0%,#0c1213 100%)}
+.is-halibut .instrument{border-color:rgba(140,180,185,.4)}
+.is-turbot{background:linear-gradient(180deg,#1a1613 0%,#110f0c 100%)}
+.is-turbot .instrument{border-color:rgba(195,170,140,.4)}
+.is-sole{background:linear-gradient(180deg,#181416 0%,#100d0f 100%)}
+.is-sole .instrument{border-color:rgba(185,155,165,.4)}
 .is-oatmeal{background:linear-gradient(180deg,#1d1912,#2f291e 50%,#433a2a)}
 .is-oatmeal .instrument{border-color:rgba(215,195,155,.4)}
 .is-thyme{background:linear-gradient(180deg,#121a14,#1c2a20 50%,#28392c)}
