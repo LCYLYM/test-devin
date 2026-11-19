@@ -148,6 +148,10 @@
       document.body.style.setProperty('--bg', bg[0] === '#' ? bg : '#' + bg);
       var tm = document.querySelector('meta[name=theme-color]');
       if (tm) tm.content = bg[0] === '#' ? bg : '#' + bg;
+    } else if (bg && /^[a-zA-Z]{3,20}$/.test(bg)) {
+      document.body.style.setProperty('--bg', bg);
+      var tm2 = document.querySelector('meta[name=theme-color]');
+      if (tm2) tm2.content = bg;
     }
 
     if (accent && /^#?([0-9a-fA-F]{3,4}|[0-9a-fA-F]{6}|[0-9a-fA-F]{8})$/.test(accent)) {
@@ -173,6 +177,9 @@
     if (cmd) { var tc = document.querySelector('.term-cmd'); if (tc) tc.textContent = cmd.slice(0, 40); }
 
     if (params.get('confetti') === '0') window.__noConfetti = true;
+
+    var emojiParam = params.get('emoji');
+    if (emojiParam) { var es = document.getElementById('statusEmoji'); if (es) { es.textContent = emojiParam.slice(0, 4); es.hidden = false; } }
 
     var rateParam = {sec: 0, second: 0, s: 0, min: 1, minute: 1, m: 1, hour: 2, h: 2}[params.get('rate') || ''];
     if (rateParam !== undefined) { try { localStorage.setItem('salaryFlow.rateMode', String(rateParam)); } catch (e) {} }
@@ -363,7 +370,7 @@
         u.searchParams.set('work', ints.map(function (p) { return p.join('-').replace(/:/g, ''); }).join(','));
       }
       var bgc = document.body.style.getPropertyValue('--bg');
-      if (/^#?([0-9a-fA-F]{3,4}|[0-9a-fA-F]{6}|[0-9a-fA-F]{8})$/.test(bgc)) u.searchParams.set('bg', bgc);
+      if (/^#?([0-9a-fA-F]{3,4}|[0-9a-fA-F]{6}|[0-9a-fA-F]{8})$/.test(bgc) || /^[a-zA-Z]{3,20}$/.test(bgc)) u.searchParams.set('bg', bgc);
       var pd = params.get('payday') || (function () { try { return localStorage.getItem('salaryFlow.payday'); } catch (e) { return ''; } })();
       if (pd && /^[0-9]{1,2}$/.test(pd)) u.searchParams.set('payday', pd);
       if (window.__vsItem) u.searchParams.set('vs', window.__vsItem.name + '@' + window.__vsItem.price);

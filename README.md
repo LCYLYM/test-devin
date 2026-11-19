@@ -54,6 +54,8 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `confetti` | `0` 关闭达成 100% 时的撒花 |
 | `dec` | 金额小数位 `2`–`6`（配 `?demo=` 高速演示更爽） |
 | `rate` | 费率单位：`sec`/`min`/`hour`（同点按费率胶囊，记忆） |
+| `bg` | 自定义页面背景（hex 或 CSS 颜色名），`off` 清除（记忆） |
+| `emoji` | 状态角标 emoji：`?emoji=🔥` |
 
 ## 本地跑
 

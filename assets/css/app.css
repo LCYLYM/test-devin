@@ -772,3 +772,6 @@ body[data-template=wave]{--bg:#0b1526}
 
 /* iter-179: 时薪对比徽章 */
 .payday.avg{color:#a78bfa}
+
+/* iter-197: 状态 emoji 角标 */
+.status-emoji{font-size:14px;line-height:1}
