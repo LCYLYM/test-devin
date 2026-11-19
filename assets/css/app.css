@@ -951,3 +951,14 @@ body[data-rb] .instrument{animation:rbBorder 5s linear infinite}
 @media(prefers-reduced-motion:reduce){body[data-drift] .instrument,body[data-rb] .instrument{animation:none}}
 body[data-slim] .amount-area{font-weight:300;letter-spacing:-6px}
 body[data-lift] .instrument{box-shadow:0 24px 60px -18px rgba(0,0,0,.55),0 8px 24px -12px rgba(0,0,0,.4)}
+body[data-glitch] .amount-area{animation:glitchJit 3.6s steps(1) infinite}
+@keyframes glitchJit{0%,93%,100%{transform:none;text-shadow:none}94%{transform:translate(-2px,1px) skewX(2deg);text-shadow:2px 0 #f0f,-2px 0 #0ff}96%{transform:translate(2px,-1px);text-shadow:-2px 0 #f0f,2px 0 #0ff}98%{transform:none;text-shadow:1px 0 #f0f}}
+body[data-shimmer] .rate-pill{background:linear-gradient(100deg,var(--accent) 30%,#fff 50%,var(--accent) 70%);background-size:200% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:shimmerX 3s linear infinite}
+@keyframes shimmerX{to{background-position:-200% 0}}
+.fog-layer{position:fixed;inset:0;pointer-events:none;overflow:hidden;z-index:0}
+.fog-layer i{position:absolute;width:60vmax;height:24vmax;border-radius:50%;background:rgba(200,215,225,.09);filter:blur(50px);animation:fogDrift 26s ease-in-out infinite alternate}
+.fog-layer i:first-child{top:8%;left:-20%}
+.fog-layer i:last-child{bottom:5%;right:-20%;animation-duration:34s;animation-direction:alternate-reverse}
+@keyframes fogDrift{to{transform:translateX(45vw)}}
+.is-focus .fog-layer{display:none}
+@media(prefers-reduced-motion:reduce){body[data-glitch] .amount-area{animation:none}}
