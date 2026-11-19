@@ -2727,6 +2727,15 @@
     if (params.get('cocoa') === '1') {
       document.body.classList.add('is-cocoa');
     }
+    if (params.get('latte') === '1') {
+      document.body.classList.add('is-latte');
+    }
+    if (params.get('storm') === '1') {
+      document.body.classList.add('is-storm');
+    }
+    if (params.get('citrus') === '1') {
+      document.body.classList.add('is-citrus');
+    }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -3421,6 +3430,9 @@
       if (params.get('jade') === '1') u.searchParams.set('jade', '1');
       if (params.get('azure') === '1') u.searchParams.set('azure', '1');
       if (params.get('cocoa') === '1') u.searchParams.set('cocoa', '1');
+      if (params.get('latte') === '1') u.searchParams.set('latte', '1');
+      if (params.get('storm') === '1') u.searchParams.set('storm', '1');
+      if (params.get('citrus') === '1') u.searchParams.set('citrus', '1');
       if (params.get('tile') === '1') u.searchParams.set('tile', '1');
       if (params.get('outline') === '1') u.searchParams.set('outline', '1');
       if (params.get('stripe') === '1') u.searchParams.set('stripe', '1');

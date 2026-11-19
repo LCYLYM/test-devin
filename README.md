@@ -452,6 +452,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `jade` | `1` 翡翠配色 |
 | `azure` | `1` 蔚蓝配色 |
 | `cocoa` | `1` 可可配色 |
+| `latte` | `1` 拿铁配色 |
+| `storm` | `1` 风暴配色 |
+| `citrus` | `1` 柑橘配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 

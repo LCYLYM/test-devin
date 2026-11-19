@@ -1094,6 +1094,12 @@ body[data-hover] .payday:hover{transform:translateY(-3px)}
 .is-azure .instrument{border-color:rgba(125,211,252,.42)}
 .is-cocoa{background:linear-gradient(180deg,#201610,#2a1c14)}
 .is-cocoa .instrument{border-color:rgba(215,171,132,.38)}
+.is-latte{background:linear-gradient(180deg,#221a14,#2c221a)}
+.is-latte .instrument{border-color:rgba(230,199,164,.38)}
+.is-storm{background:linear-gradient(180deg,#0e1620,#16202e)}
+.is-storm .instrument{border-color:rgba(125,160,202,.4)}
+.is-citrus{background:linear-gradient(180deg,#20200c,#2c2c10)}
+.is-citrus .instrument{border-color:rgba(253,224,71,.4)}
 body[data-pillar] .page-shell{border-left:1px solid rgba(var(--accent-rgb,103,228,148),.22);border-right:1px solid rgba(var(--accent-rgb,103,228,148),.22)}
 body[data-gloom]{--bg:#0a0c0b}
 body[data-gloom] .instrument{box-shadow:inset 0 0 60px rgba(0,0,0,.5)}
