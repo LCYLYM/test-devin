@@ -1392,8 +1392,8 @@
         var ovUpd = function () {
           var ovs = window.SalaryApp && window.SalaryApp.getState && window.SalaryApp.getState();
           var sn4 = ovs && ovs.snapshot;
-          if (!sn4 || !sn4.daySalary) { ovb.hidden = true; return; }
-          var surplus = sn4.todayEarned - sn4.daySalary;
+          // todayEarned 封顶在日薪——"超额"实际是当日加班补贴（记了加班且配了 extraPay）
+          var surplus = sn4 && sn4.dayOvertimeHours > 0 ? Math.max(0, Number(ovs.config && ovs.config.extraPay) || 0) : 0;
           if (surplus <= 0) { ovb.hidden = true; return; }
           ova.textContent = window.SalaryApp.formatMoney ? window.SalaryApp.formatMoney(surplus) : surplus.toFixed(2);
           ovb.hidden = false;
@@ -1403,8 +1403,9 @@
       }
     }
     if (params.get('fson') === '1') {
-      document.addEventListener('pointerdown', function fsonOnce() {
-        document.removeEventListener('pointerdown', fsonOnce);
+      // click 才带全输入类型的用户激活（触屏/笔的激活在 pointerup 才产生）
+      document.addEventListener('click', function fsonOnce() {
+        document.removeEventListener('click', fsonOnce);
         if (!document.fullscreenElement) document.documentElement.requestFullscreen?.();
       });
     }
