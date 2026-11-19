@@ -50,6 +50,13 @@
 
     if (params.get('sound') === '1') app.setPreference('sound', true);
 
+    // ?accent=%234de3ff — override the theme accent color (shareable).
+    var accent = params.get('accent');
+    if (accent && /^#?[0-9a-fA-F]{3,8}$/.test(accent)) {
+      var v = accent[0] === '#' ? accent : '#' + accent;
+      document.body.style.setProperty('--accent', v);
+    }
+
     var THEME_COLORS = {pig:'#1a1716',charge:'#131415',meter:'#171715',pixel:'#151515',neon:'#0c0e18',mono:'#111111',paper:'#f2efe7'};
     function applyThemeColor(t) {
       var m = document.querySelector('meta[name=theme-color]');
