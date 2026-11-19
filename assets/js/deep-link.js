@@ -318,6 +318,20 @@
         .then(function () { if (window.SalaryApp && window.SalaryApp.toast) window.SalaryApp.toast('已复制 ' + txt); })
         .catch(function () {});
     });
+    var spdParam = parseInt(params.get('speed') || '', 10);
+    if (spdParam >= 1 && spdParam <= 200) window.__demoSpeed = spdParam;
+    if (params.get('year') === '1') {
+      var yn = new Date();
+      var y0 = new Date(yn.getFullYear(), 0, 1);
+      var ytotal = Math.round((new Date(yn.getFullYear() + 1, 0, 1) - y0) / 864e5);
+      var ydone = (yn - y0) / 864e5;
+      var yb = document.getElementById('yearBadge');
+      if (yb) {
+        yb.hidden = false;
+        document.getElementById('yearPct').textContent = (ydone / ytotal * 100).toFixed(1) + '%';
+        yb.title = '今年已过 ' + Math.floor(ydone) + ' / ' + ytotal + ' 天';
+      }
+    }
     if (params.get('crt') === '1') {
       var crt = document.createElement('div');
       crt.className = 'crt-overlay';
@@ -448,11 +462,19 @@
   }
 
   /* Keyboard shortcuts: / focus salary · f fullscreen · ? help */
+  var konamiBuf = [];
   document.addEventListener('keydown', function (e) {
     if (window.__noKeys) return;
     if (e.metaKey || e.ctrlKey || e.altKey) return;
     var tag = (e.target.tagName || '').toLowerCase();
     if (tag === 'input' || tag === 'textarea' || tag === 'select' || e.target.isContentEditable) return;
+    konamiBuf.push(e.key); if (konamiBuf.length > 10) konamiBuf.shift();
+    if (konamiBuf.join(',') === 'ArrowUp,ArrowUp,ArrowDown,ArrowDown,ArrowLeft,ArrowRight,ArrowLeft,ArrowRight,b,a') {
+      konamiBuf.length = 0;
+      var rkb = document.getElementById('richQuickButton');
+      if (rkb) rkb.click();
+      if (window.SalaryApp && window.SalaryApp.toast) window.SalaryApp.toast('🎮 KONAMI！暴富模式解锁');
+    }
     if (e.key === '/') {
       e.preventDefault();
       var input = document.getElementById('salaryInput');
@@ -624,6 +646,8 @@
       if (params.get('crt') === '1') u.searchParams.set('crt', '1');
       if (params.get('invert') === '1') u.searchParams.set('invert', '1');
       var anp = params.get('anni'); if (anp) { u.searchParams.set('anni', anp); var ann = params.get('anniname'); if (ann) u.searchParams.set('anniname', ann.slice(0, 12)); }
+      if (params.get('year') === '1') u.searchParams.set('year', '1');
+      var spp = params.get('speed'); if (spp) u.searchParams.set('speed', spp);
       var text = u.toString();
       (navigator.clipboard ? navigator.clipboard.writeText(text) : Promise.reject())
         .then(function () { btn.textContent = '已复制 ✓'; setTimeout(function(){ btn.textContent='复制当前链接'; }, 1500); })

@@ -624,10 +624,11 @@
       const minute=Math.floor((E.timeMinutes(pair[0])+E.timeMinutes(pair[1]))/2);
       chosen.setHours(Math.floor(minute/60),minute%60,0,0);
     }
-    demo={anchor:chosen.getTime(),started:performance.now(),speed:20};
+    const demoSpeed=(window.__demoSpeed>=1&&window.__demoSpeed<=200)?window.__demoSpeed:20;
+    demo={anchor:chosen.getTime(),started:performance.now(),speed:demoSpeed};
     hidden('demoBanner',false);
     const copy=$('demoBanner')?.querySelector('[data-demo-copy],span');
-    if(copy) copy.innerHTML=icon('play')+'<b>正在体验</b> · 模拟 '+escapeHTML(E.dateKey(chosen))+' '+chosen.toTimeString().slice(0,5)+'，时间以 20 倍流动';
+    if(copy) copy.innerHTML=icon('play')+'<b>正在体验</b> · 模拟 '+escapeHTML(E.dateKey(chosen))+' '+chosen.toTimeString().slice(0,5)+'，时间以 '+demoSpeed+' 倍流动';
     render();
     return true;
   }
