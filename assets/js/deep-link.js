@@ -4044,6 +4044,9 @@
     if (params.get('amanita') === '1') { document.body.classList.add('is-amanita'); }
     if (params.get('reishi') === '1') { document.body.classList.add('is-reishi'); }
     if (params.get('portobello') === '1') { document.body.classList.add('is-portobello'); }
+    if (params.get('bolete') === '1') { document.body.classList.add('is-bolete'); }
+    if (params.get('puffball') === '1') { document.body.classList.add('is-puffball'); }
+    if (params.get('russula') === '1') { document.body.classList.add('is-russula'); }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -5446,6 +5449,9 @@
         if (params.get('amanita') === '1') u.searchParams.set('amanita', '1');
         if (params.get('reishi') === '1') u.searchParams.set('reishi', '1');
         if (params.get('portobello') === '1') u.searchParams.set('portobello', '1');
+        if (params.get('bolete') === '1') u.searchParams.set('bolete', '1');
+        if (params.get('puffball') === '1') u.searchParams.set('puffball', '1');
+        if (params.get('russula') === '1') u.searchParams.set('russula', '1');
       if (params.get('tile') === '1') u.searchParams.set('tile', '1');
       if (params.get('outline') === '1') u.searchParams.set('outline', '1');
       if (params.get('stripe') === '1') u.searchParams.set('stripe', '1');

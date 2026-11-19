@@ -1160,6 +1160,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `amanita` | `1` 鹅膏配色 |
 | `reishi` | `1` 灵芝配色 |
 | `portobello` | `1` 褐菇配色 |
+| `bolete` | `1` 牛肝蕈配色 |
+| `puffball` | `1` 马勃配色 |
+| `russula` | `1` 红菇配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 

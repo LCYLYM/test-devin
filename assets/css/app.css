@@ -2518,6 +2518,12 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .is-reishi .instrument{border-color:rgba(215,95,80,.4)}
 .is-portobello{background:linear-gradient(180deg,#171310 0%,#110e0b 100%)}
 .is-portobello .instrument{border-color:rgba(175,140,105,.4)}
+.is-bolete{background:linear-gradient(180deg,#191410 0%,#120f0b 100%)}
+.is-bolete .instrument{border-color:rgba(190,155,110,.4)}
+.is-puffball{background:linear-gradient(180deg,#1a1a15 0%,#13130f 100%)}
+.is-puffball .instrument{border-color:rgba(210,205,165,.4)}
+.is-russula{background:linear-gradient(180deg,#1b1114 0%,#140c0f 100%)}
+.is-russula .instrument{border-color:rgba(225,110,130,.4)}
 .is-oatmeal{background:linear-gradient(180deg,#1d1912,#2f291e 50%,#433a2a)}
 .is-oatmeal .instrument{border-color:rgba(215,195,155,.4)}
 .is-thyme{background:linear-gradient(180deg,#121a14,#1c2a20 50%,#28392c)}
