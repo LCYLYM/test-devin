@@ -4038,6 +4038,9 @@
     if (params.get('chanterelle') === '1') { document.body.classList.add('is-chanterelle'); }
     if (params.get('porcini') === '1') { document.body.classList.add('is-porcini'); }
     if (params.get('shiitake') === '1') { document.body.classList.add('is-shiitake'); }
+    if (params.get('truffle') === '1') { document.body.classList.add('is-truffle'); }
+    if (params.get('enoki') === '1') { document.body.classList.add('is-enoki'); }
+    if (params.get('matsutake') === '1') { document.body.classList.add('is-matsutake'); }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -5434,6 +5437,9 @@
         if (params.get('chanterelle') === '1') u.searchParams.set('chanterelle', '1');
         if (params.get('porcini') === '1') u.searchParams.set('porcini', '1');
         if (params.get('shiitake') === '1') u.searchParams.set('shiitake', '1');
+        if (params.get('truffle') === '1') u.searchParams.set('truffle', '1');
+        if (params.get('enoki') === '1') u.searchParams.set('enoki', '1');
+        if (params.get('matsutake') === '1') u.searchParams.set('matsutake', '1');
       if (params.get('tile') === '1') u.searchParams.set('tile', '1');
       if (params.get('outline') === '1') u.searchParams.set('outline', '1');
       if (params.get('stripe') === '1') u.searchParams.set('stripe', '1');

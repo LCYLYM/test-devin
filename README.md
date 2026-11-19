@@ -1154,6 +1154,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `chanterelle` | `1` 鸡油菌配色 |
 | `porcini` | `1` 牛肝菌配色 |
 | `shiitake` | `1` 香菇配色 |
+| `truffle` | `1` 松露配色 |
+| `enoki` | `1` 金针菇配色 |
+| `matsutake` | `1` 松茸配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 
