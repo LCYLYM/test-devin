@@ -2410,6 +2410,12 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .is-redpoll .instrument{border-color:rgba(220,95,105,.4)}
 .is-bullfinch{background:linear-gradient(180deg,#1b1016 0%,#140b10 100%)}
 .is-bullfinch .instrument{border-color:rgba(225,105,140,.4)}
+.is-greenfinch{background:linear-gradient(180deg,#131a10 0%,#0d130b 100%)}
+.is-greenfinch .instrument{border-color:rgba(135,185,85,.4)}
+.is-waxwing{background:linear-gradient(180deg,#1a1512 0%,#13100e 100%)}
+.is-waxwing .instrument{border-color:rgba(200,160,135,.4)}
+.is-snowfinch{background:linear-gradient(180deg,#161b1f 0%,#101417 100%)}
+.is-snowfinch .instrument{border-color:rgba(170,195,215,.4)}
 .is-oatmeal{background:linear-gradient(180deg,#1d1912,#2f291e 50%,#433a2a)}
 .is-oatmeal .instrument{border-color:rgba(215,195,155,.4)}
 .is-thyme{background:linear-gradient(180deg,#121a14,#1c2a20 50%,#28392c)}
