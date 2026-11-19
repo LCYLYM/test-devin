@@ -3975,6 +3975,9 @@
     if (params.get('shrike') === '1') { document.body.classList.add('is-shrike'); }
     if (params.get('dipper') === '1') { document.body.classList.add('is-dipper'); }
     if (params.get('nuthatch') === '1') { document.body.classList.add('is-nuthatch'); }
+    if (params.get('treecreeper') === '1') { document.body.classList.add('is-treecreeper'); }
+    if (params.get('chickadee') === '1') { document.body.classList.add('is-chickadee'); }
+    if (params.get('redstart') === '1') { document.body.classList.add('is-redstart'); }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -5308,6 +5311,9 @@
         if (params.get('shrike') === '1') u.searchParams.set('shrike', '1');
         if (params.get('dipper') === '1') u.searchParams.set('dipper', '1');
         if (params.get('nuthatch') === '1') u.searchParams.set('nuthatch', '1');
+        if (params.get('treecreeper') === '1') u.searchParams.set('treecreeper', '1');
+        if (params.get('chickadee') === '1') u.searchParams.set('chickadee', '1');
+        if (params.get('redstart') === '1') u.searchParams.set('redstart', '1');
       if (params.get('tile') === '1') u.searchParams.set('tile', '1');
       if (params.get('outline') === '1') u.searchParams.set('outline', '1');
       if (params.get('stripe') === '1') u.searchParams.set('stripe', '1');

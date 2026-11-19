@@ -1091,6 +1091,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `shrike` | `1` 伯劳配色 |
 | `dipper` | `1` 河乌配色 |
 | `nuthatch` | `1` 䴓配色 |
+| `treecreeper` | `1` 旋木雀配色 |
+| `chickadee` | `1` 山雀配色 |
+| `redstart` | `1` 红尾鸲配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 

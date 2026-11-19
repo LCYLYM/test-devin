@@ -2380,6 +2380,12 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .is-dipper .instrument{border-color:rgba(120,175,200,.4)}
 .is-nuthatch{background:linear-gradient(180deg,#151a17 0%,#0f1310 100%)}
 .is-nuthatch .instrument{border-color:rgba(130,185,160,.4)}
+.is-treecreeper{background:linear-gradient(180deg,#171510 0%,#11100c 100%)}
+.is-treecreeper .instrument{border-color:rgba(180,165,110,.4)}
+.is-chickadee{background:linear-gradient(180deg,#141619 0%,#0e1113 100%)}
+.is-chickadee .instrument{border-color:rgba(145,160,175,.4)}
+.is-redstart{background:linear-gradient(180deg,#1d1210 0%,#150d0b 100%)}
+.is-redstart .instrument{border-color:rgba(230,120,90,.4)}
 .is-oatmeal{background:linear-gradient(180deg,#1d1912,#2f291e 50%,#433a2a)}
 .is-oatmeal .instrument{border-color:rgba(215,195,155,.4)}
 .is-thyme{background:linear-gradient(180deg,#121a14,#1c2a20 50%,#28392c)}
