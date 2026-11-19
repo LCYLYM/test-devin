@@ -1678,6 +1678,12 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .is-lynx .instrument{border-color:rgba(185,165,120,.42)}
 .is-polar{background:linear-gradient(180deg,#0f151c,#18232e 50%,#213243)}
 .is-polar .instrument{border-color:rgba(145,190,220,.42)}
+.is-mustard{background:linear-gradient(180deg,#1a1508,#2f250f 50%,#453716)}
+.is-mustard .instrument{border-color:rgba(220,185,80,.42)}
+.is-celery{background:linear-gradient(180deg,#101a0d,#1b2c15 50%,#27401e)}
+.is-celery .instrument{border-color:rgba(155,200,110,.42)}
+.is-oryx{background:linear-gradient(180deg,#161310,#262019 50%,#362e24)}
+.is-oryx .instrument{border-color:rgba(195,175,150,.42)}
 .is-forest{background:linear-gradient(180deg,#0d1f14,#12291a)}
 .is-forest .instrument{border-color:rgba(74,222,128,.38)}
 .is-sand{background:linear-gradient(180deg,#241c10,#2f2614)}

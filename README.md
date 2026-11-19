@@ -650,6 +650,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `marsala` | `1` 玛莎拉配色 |
 | `lynx` | `1` 猞猁配色 |
 | `polar` | `1` 极地配色 |
+| `mustard` | `1` 芥末配色 |
+| `celery` | `1` 芹菜配色 |
+| `oryx` | `1` 羚羊配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 

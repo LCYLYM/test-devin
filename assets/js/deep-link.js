@@ -3371,6 +3371,15 @@
     if (params.get('polar') === '1') {
       document.body.classList.add('is-polar');
     }
+    if (params.get('mustard') === '1') {
+      document.body.classList.add('is-mustard');
+    }
+    if (params.get('celery') === '1') {
+      document.body.classList.add('is-celery');
+    }
+    if (params.get('oryx') === '1') {
+      document.body.classList.add('is-oryx');
+    }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -4263,6 +4272,9 @@
       if (params.get('marsala') === '1') u.searchParams.set('marsala', '1');
       if (params.get('lynx') === '1') u.searchParams.set('lynx', '1');
       if (params.get('polar') === '1') u.searchParams.set('polar', '1');
+      if (params.get('mustard') === '1') u.searchParams.set('mustard', '1');
+      if (params.get('celery') === '1') u.searchParams.set('celery', '1');
+      if (params.get('oryx') === '1') u.searchParams.set('oryx', '1');
       if (params.get('tile') === '1') u.searchParams.set('tile', '1');
       if (params.get('outline') === '1') u.searchParams.set('outline', '1');
       if (params.get('stripe') === '1') u.searchParams.set('stripe', '1');
