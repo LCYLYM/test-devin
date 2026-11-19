@@ -2999,6 +2999,15 @@
     if (params.get('teak') === '1') {
       document.body.classList.add('is-teak');
     }
+    if (params.get('fern') === '1') {
+      document.body.classList.add('is-fern');
+    }
+    if (params.get('lapis') === '1') {
+      document.body.classList.add('is-lapis');
+    }
+    if (params.get('topaz') === '1') {
+      document.body.classList.add('is-topaz');
+    }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -3780,6 +3789,9 @@
       if (params.get('cerulean') === '1') u.searchParams.set('cerulean', '1');
       if (params.get('garnet') === '1') u.searchParams.set('garnet', '1');
       if (params.get('teak') === '1') u.searchParams.set('teak', '1');
+      if (params.get('fern') === '1') u.searchParams.set('fern', '1');
+      if (params.get('lapis') === '1') u.searchParams.set('lapis', '1');
+      if (params.get('topaz') === '1') u.searchParams.set('topaz', '1');
       if (params.get('tile') === '1') u.searchParams.set('tile', '1');
       if (params.get('outline') === '1') u.searchParams.set('outline', '1');
       if (params.get('stripe') === '1') u.searchParams.set('stripe', '1');
