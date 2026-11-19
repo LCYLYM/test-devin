@@ -569,6 +569,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `amoled` | `1` 纯黑省电配色 |
 | `chestnut` | `1` 栗色配色 |
 | `seashell` | `1` 贝壳配色 |
+| `fawn` | `1` 小鹿配色 |
+| `bracken` | `1` 蕨丛配色 |
+| `reed` | `1` 芦苇配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 

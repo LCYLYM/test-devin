@@ -3089,6 +3089,15 @@
     if (params.get('seashell') === '1') {
       document.body.classList.add('is-seashell');
     }
+    if (params.get('fawn') === '1') {
+      document.body.classList.add('is-fawn');
+    }
+    if (params.get('bracken') === '1') {
+      document.body.classList.add('is-bracken');
+    }
+    if (params.get('reed') === '1') {
+      document.body.classList.add('is-reed');
+    }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -3900,6 +3909,9 @@
       if (params.get('amoled') === '1') u.searchParams.set('amoled', '1');
       if (params.get('chestnut') === '1') u.searchParams.set('chestnut', '1');
       if (params.get('seashell') === '1') u.searchParams.set('seashell', '1');
+      if (params.get('fawn') === '1') u.searchParams.set('fawn', '1');
+      if (params.get('bracken') === '1') u.searchParams.set('bracken', '1');
+      if (params.get('reed') === '1') u.searchParams.set('reed', '1');
       if (params.get('tile') === '1') u.searchParams.set('tile', '1');
       if (params.get('outline') === '1') u.searchParams.set('outline', '1');
       if (params.get('stripe') === '1') u.searchParams.set('stripe', '1');
