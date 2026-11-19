@@ -881,6 +881,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `sprat` | `1` 黍鲱配色 |
 | `anchovy` | `1` 凤尾鱼配色 |
 | `herring` | `1` 鲱鱼配色 |
+| `sardine` | `1` 沙丁鱼配色 |
+| `capelin` | `1` 毛鳞鱼配色 |
+| `mullet` | `1` 鲻鱼配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 
