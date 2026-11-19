@@ -767,6 +767,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `binturong` | `1` 熊狸配色 |
 | `caribou` | `1` 北美驯鹿配色 |
 | `dikdik` | `1` 犬羚配色 |
+| `echidna` | `1` 针鼹配色 |
+| `gelada` | `1` 狮尾狒配色 |
+| `hoopoe` | `1` 戴胜配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 
