@@ -3227,6 +3227,15 @@
     if (params.get('tweed') === '1') {
       document.body.classList.add('is-tweed');
     }
+    if (params.get('caramel') === '1') {
+      document.body.classList.add('is-caramel');
+    }
+    if (params.get('sable') === '1') {
+      document.body.classList.add('is-sable');
+    }
+    if (params.get('pistachio') === '1') {
+      document.body.classList.add('is-pistachio');
+    }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -4071,6 +4080,9 @@
       if (params.get('basil') === '1') u.searchParams.set('basil', '1');
       if (params.get('falcon') === '1') u.searchParams.set('falcon', '1');
       if (params.get('tweed') === '1') u.searchParams.set('tweed', '1');
+      if (params.get('caramel') === '1') u.searchParams.set('caramel', '1');
+      if (params.get('sable') === '1') u.searchParams.set('sable', '1');
+      if (params.get('pistachio') === '1') u.searchParams.set('pistachio', '1');
       if (params.get('tile') === '1') u.searchParams.set('tile', '1');
       if (params.get('outline') === '1') u.searchParams.set('outline', '1');
       if (params.get('stripe') === '1') u.searchParams.set('stripe', '1');

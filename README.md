@@ -602,6 +602,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `basil` | `1` 罗勒配色 |
 | `falcon` | `1` 猎鹰配色 |
 | `tweed` | `1` 花呢配色 |
+| `caramel` | `1` 焦糖配色 |
+| `sable` | `1` 黑貂配色 |
+| `pistachio` | `1` 开心果配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 
