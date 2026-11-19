@@ -692,6 +692,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `manatee` | `1` 海牛配色 |
 | `thistle` | `1` 蓟配色 |
 | `raccoon` | `1` 浣熊配色 |
+| `weasel` | `1` 黄鼬配色 |
+| `rhubarb` | `1` 大黄配色 |
+| `stork` | `1` 鹳配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 

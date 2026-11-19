@@ -3510,6 +3510,15 @@
     if (params.get('raccoon') === '1') {
       document.body.classList.add('is-raccoon');
     }
+    if (params.get('weasel') === '1') {
+      document.body.classList.add('is-weasel');
+    }
+    if (params.get('rhubarb') === '1') {
+      document.body.classList.add('is-rhubarb');
+    }
+    if (params.get('stork') === '1') {
+      document.body.classList.add('is-stork');
+    }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -4444,6 +4453,9 @@
       if (params.get('manatee') === '1') u.searchParams.set('manatee', '1');
       if (params.get('thistle') === '1') u.searchParams.set('thistle', '1');
       if (params.get('raccoon') === '1') u.searchParams.set('raccoon', '1');
+      if (params.get('weasel') === '1') u.searchParams.set('weasel', '1');
+      if (params.get('rhubarb') === '1') u.searchParams.set('rhubarb', '1');
+      if (params.get('stork') === '1') u.searchParams.set('stork', '1');
       if (params.get('tile') === '1') u.searchParams.set('tile', '1');
       if (params.get('outline') === '1') u.searchParams.set('outline', '1');
       if (params.get('stripe') === '1') u.searchParams.set('stripe', '1');
