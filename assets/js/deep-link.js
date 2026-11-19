@@ -2990,6 +2990,15 @@
     if (params.get('amethyst') === '1') {
       document.body.classList.add('is-amethyst');
     }
+    if (params.get('cerulean') === '1') {
+      document.body.classList.add('is-cerulean');
+    }
+    if (params.get('garnet') === '1') {
+      document.body.classList.add('is-garnet');
+    }
+    if (params.get('teak') === '1') {
+      document.body.classList.add('is-teak');
+    }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -3768,6 +3777,9 @@
       if (params.get('espresso') === '1') u.searchParams.set('espresso', '1');
       if (params.get('peridot') === '1') u.searchParams.set('peridot', '1');
       if (params.get('amethyst') === '1') u.searchParams.set('amethyst', '1');
+      if (params.get('cerulean') === '1') u.searchParams.set('cerulean', '1');
+      if (params.get('garnet') === '1') u.searchParams.set('garnet', '1');
+      if (params.get('teak') === '1') u.searchParams.set('teak', '1');
       if (params.get('tile') === '1') u.searchParams.set('tile', '1');
       if (params.get('outline') === '1') u.searchParams.set('outline', '1');
       if (params.get('stripe') === '1') u.searchParams.set('stripe', '1');

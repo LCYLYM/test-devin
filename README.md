@@ -536,6 +536,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `espresso` | `1` 浓缩配色 |
 | `peridot` | `1` 橄榄石配色 |
 | `amethyst` | `1` 紫水晶配色 |
+| `cerulean` | `1` 蔚蓝配色 |
+| `garnet` | `1` 石榴石配色 |
+| `teak` | `1` 柚木配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 

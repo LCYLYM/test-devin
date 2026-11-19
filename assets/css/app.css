@@ -1261,6 +1261,12 @@ body[data-hover] .payday:hover{transform:translateY(-3px)}
 .is-peridot .instrument{border-color:rgba(175,220,110,.4)}
 .is-amethyst{background:linear-gradient(180deg,#1b1028,#2a1a40 55%,#3a2456)}
 .is-amethyst .instrument{border-color:rgba(185,140,240,.42)}
+.is-cerulean{background:linear-gradient(180deg,#0a1826,#12283e 55%,#1a3854)}
+.is-cerulean .instrument{border-color:rgba(100,175,230,.42)}
+.is-garnet{background:linear-gradient(180deg,#250a10,#3a121c 55%,#4f1a28)}
+.is-garnet .instrument{border-color:rgba(225,95,120,.42)}
+.is-teak{background:linear-gradient(180deg,#1e160c,#2e2414 55%,#3e321c)}
+.is-teak .instrument{border-color:rgba(200,165,105,.4)}
 .is-focus .payday.morale{display:none}
 body[data-pillar] .page-shell{border-left:1px solid rgba(var(--accent-rgb,103,228,148),.22);border-right:1px solid rgba(var(--accent-rgb,103,228,148),.22)}
 body[data-gloom]{--bg:#0a0c0b}
