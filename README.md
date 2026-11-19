@@ -407,6 +407,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `slate` | `1` 石板配色 |
 | `mint` | `1` 薄荷配色 |
 | `char` | `1` 炭黑配色 |
+| `knit` | `1` 针织纹背景 |
+| `ivory` | `1` 象牙配色 |
+| `onyx` | `1` 黑玛瑙配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 

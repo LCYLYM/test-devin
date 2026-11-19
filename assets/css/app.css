@@ -1244,6 +1244,11 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .is-mint .instrument{border-color:rgba(110,231,183,.4)}
 .is-char{background:linear-gradient(180deg,#101010,#181818)}
 .is-char .instrument{border-color:rgba(115,115,115,.45)}
+.is-knit{background-image:repeating-linear-gradient(90deg,rgba(255,255,255,.03) 0 4px,transparent 4px 12px),repeating-linear-gradient(0deg,rgba(255,255,255,.02) 0 4px,transparent 4px 12px)}
+.is-ivory{background:linear-gradient(180deg,#23201a,#2c2820)}
+.is-ivory .instrument{border-color:rgba(254,243,199,.4)}
+.is-onyx{background:linear-gradient(180deg,#08080c,#101018)}
+.is-onyx .instrument{border-color:rgba(226,232,240,.25);box-shadow:0 0 30px rgba(148,163,184,.08)}
 @keyframes hueSpin{to{filter:hue-rotate(360deg)}}
 .is-hue .instrument{animation:hueSpin 12s linear infinite}
 @media (prefers-reduced-motion:reduce){.is-hue .instrument{animation:none}}

@@ -2564,6 +2564,15 @@
     if (params.get('char') === '1') {
       document.body.classList.add('is-char');
     }
+    if (params.get('knit') === '1') {
+      document.body.classList.add('is-knit');
+    }
+    if (params.get('ivory') === '1') {
+      document.body.classList.add('is-ivory');
+    }
+    if (params.get('onyx') === '1') {
+      document.body.classList.add('is-onyx');
+    }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -3213,6 +3222,9 @@
       if (params.get('slate') === '1') u.searchParams.set('slate', '1');
       if (params.get('mint') === '1') u.searchParams.set('mint', '1');
       if (params.get('char') === '1') u.searchParams.set('char', '1');
+      if (params.get('knit') === '1') u.searchParams.set('knit', '1');
+      if (params.get('ivory') === '1') u.searchParams.set('ivory', '1');
+      if (params.get('onyx') === '1') u.searchParams.set('onyx', '1');
       if (params.get('tile') === '1') u.searchParams.set('tile', '1');
       if (params.get('outline') === '1') u.searchParams.set('outline', '1');
       if (params.get('stripe') === '1') u.searchParams.set('stripe', '1');
