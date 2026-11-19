@@ -2963,6 +2963,15 @@
     if (params.get('flame') === '1') {
       document.body.classList.add('is-flame');
     }
+    if (params.get('pastel') === '1') {
+      document.body.classList.add('is-pastel');
+    }
+    if (params.get('mahogany') === '1') {
+      document.body.classList.add('is-mahogany');
+    }
+    if (params.get('lime') === '1') {
+      document.body.classList.add('is-lime');
+    }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -3732,6 +3741,9 @@
       if (params.get('summer') === '1') u.searchParams.set('summer', '1');
       if (params.get('bamboo') === '1') u.searchParams.set('bamboo', '1');
       if (params.get('flame') === '1') u.searchParams.set('flame', '1');
+      if (params.get('pastel') === '1') u.searchParams.set('pastel', '1');
+      if (params.get('mahogany') === '1') u.searchParams.set('mahogany', '1');
+      if (params.get('lime') === '1') u.searchParams.set('lime', '1');
       if (params.get('tile') === '1') u.searchParams.set('tile', '1');
       if (params.get('outline') === '1') u.searchParams.set('outline', '1');
       if (params.get('stripe') === '1') u.searchParams.set('stripe', '1');

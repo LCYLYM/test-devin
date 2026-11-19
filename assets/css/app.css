@@ -1243,6 +1243,12 @@ body[data-hover] .payday:hover{transform:translateY(-3px)}
 .is-bamboo .instrument{border-color:rgba(150,200,140,.4)}
 .is-flame{background:linear-gradient(180deg,#240a04,#381206 55%,#4c1a0a)}
 .is-flame .instrument{border-color:rgba(250,110,50,.45)}
+.is-pastel{background:linear-gradient(180deg,#1e1a22,#2c2632 55%,#3a3242)}
+.is-pastel .instrument{border-color:rgba(215,190,220,.4)}
+.is-mahogany{background:linear-gradient(180deg,#200e08,#321610 55%,#441e18)}
+.is-mahogany .instrument{border-color:rgba(210,110,85,.4)}
+.is-lime{background:linear-gradient(180deg,#141e08,#22300e 55%,#304214)}
+.is-lime .instrument{border-color:rgba(190,230,90,.42)}
 .is-focus .payday.morale{display:none}
 body[data-pillar] .page-shell{border-left:1px solid rgba(var(--accent-rgb,103,228,148),.22);border-right:1px solid rgba(var(--accent-rgb,103,228,148),.22)}
 body[data-gloom]{--bg:#0a0c0b}

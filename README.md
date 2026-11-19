@@ -527,6 +527,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `summer` | `1` 夏色配色 |
 | `bamboo` | `1` 竹色配色 |
 | `flame` | `1` 火焰配色 |
+| `pastel` | `1` 粉彩配色 |
+| `mahogany` | `1` 红木配色 |
+| `lime` | `1` 青柠配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 
