@@ -3789,6 +3789,9 @@
     if (params.get('sturgeon') === '1') { document.body.classList.add('is-sturgeon'); }
     if (params.get('paddlefish') === '1') { document.body.classList.add('is-paddlefish'); }
     if (params.get('gar') === '1') { document.body.classList.add('is-gar'); }
+    if (params.get('bowfin') === '1') { document.body.classList.add('is-bowfin'); }
+    if (params.get('burbot') === '1') { document.body.classList.add('is-burbot'); }
+    if (params.get('lamprey') === '1') { document.body.classList.add('is-lamprey'); }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -4936,6 +4939,9 @@
         if (params.get('sturgeon') === '1') u.searchParams.set('sturgeon', '1');
         if (params.get('paddlefish') === '1') u.searchParams.set('paddlefish', '1');
         if (params.get('gar') === '1') u.searchParams.set('gar', '1');
+        if (params.get('bowfin') === '1') u.searchParams.set('bowfin', '1');
+        if (params.get('burbot') === '1') u.searchParams.set('burbot', '1');
+        if (params.get('lamprey') === '1') u.searchParams.set('lamprey', '1');
       if (params.get('tile') === '1') u.searchParams.set('tile', '1');
       if (params.get('outline') === '1') u.searchParams.set('outline', '1');
       if (params.get('stripe') === '1') u.searchParams.set('stripe', '1');
