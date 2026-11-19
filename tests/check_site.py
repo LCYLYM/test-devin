@@ -41,13 +41,20 @@ extra = buttons - {'charge','meter','pixel','pig','neon','mono','paper'}
 if extra:
     missing.append('template buttons not in JS whitelist: ' + ','.join(sorted(extra)))
 
+# iter-111: ?dialog targets must be real dialog ids
+dl = open(os.path.join(ROOT, 'assets/js/deep-link.js'), encoding='utf-8').read()
+dialogs = set(re.findall(r'id="(\w+Dialog)"', html))
+for t in ['shareDialog','aboutDialog','settingsDialog','goalDialog','calendarDialog','currencyDialog','overtimeDialog']:
+    if t not in dialogs:
+        missing.append('dialog target missing: ' + t)
+
 # iter-85: shortcuts + share + new skins actually wired
 if 'kbd-hint' not in html:
     missing.append('footer kbd-hint missing')
 for skin in ['neon', 'mono', 'paper']:
     if 'data-template="' + skin + '"' not in html:
         missing.append('template button ' + skin + ' missing')
-dl = open(os.path.join(ROOT, 'assets/js/deep-link.js'), encoding='utf-8').read()
+
 for needle in ['navigator.share', "e.key === 'z'", "e.key === 'm'", "e.key === 'p'", 'is-focus']:
     if needle not in dl:
         missing.append('deep-link.js missing ' + needle)
