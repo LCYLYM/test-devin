@@ -24,7 +24,8 @@ self.addEventListener('activate', (e) => {
       ))
       .then(() => caches.open(CACHE))
       .then((cache) => cache.keys().then((reqs) => Promise.all(
-        reqs.filter((r) => !SHELL.some((p) => r.url.endsWith(p.replace('./', '/')))).map((r) => cache.delete(r))
+        reqs.filter((r) => new URL(r.url).hostname !== 'api.frankfurter.dev'
+          && !SHELL.some((p) => r.url.endsWith(p.replace('./', '/')))).map((r) => cache.delete(r))
       )))
       .then(() => self.clients.claim())
   );
@@ -33,6 +34,20 @@ self.addEventListener('activate', (e) => {
 self.addEventListener('fetch', (e) => {
   if (e.request.method !== 'GET') return;
   const url = new URL(e.request.url);
+  // Frankfurter rates: network-first, cache the last good response so
+  // currency conversion keeps working offline.
+  if (url.hostname === 'api.frankfurter.dev') {
+    e.respondWith(
+      fetch(e.request).then((res) => {
+        if (res.ok) {
+          const copy = res.clone();
+          caches.open(CACHE).then((c) => c.put(e.request, copy));
+        }
+        return res;
+      }).catch(() => caches.match(e.request))
+    );
+    return;
+  }
   if (url.origin !== location.origin) return;
   if (e.request.mode === 'navigate') {
     e.respondWith(fetch(e.request).catch(() => caches.match('./index.html')));
