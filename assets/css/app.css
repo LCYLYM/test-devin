@@ -2014,6 +2014,12 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .is-burbot .instrument{border-color:rgba(185,165,130,.4)}
 .is-lamprey{background:linear-gradient(180deg,#1b1418 0%,#120d10 100%)}
 .is-lamprey .instrument{border-color:rgba(200,145,170,.4)}
+.is-hagfish{background:linear-gradient(180deg,#18141a 0%,#100d11 100%)}
+.is-hagfish .instrument{border-color:rgba(185,150,185,.4)}
+.is-oarfish{background:linear-gradient(180deg,#121a1f 0%,#0b1216 100%)}
+.is-oarfish .instrument{border-color:rgba(135,185,205,.4)}
+.is-moray{background:linear-gradient(180deg,#101c15 0%,#08130d 100%)}
+.is-moray .instrument{border-color:rgba(105,195,140,.4)}
 .is-oatmeal{background:linear-gradient(180deg,#1d1912,#2f291e 50%,#433a2a)}
 .is-oatmeal .instrument{border-color:rgba(215,195,155,.4)}
 .is-thyme{background:linear-gradient(180deg,#121a14,#1c2a20 50%,#28392c)}

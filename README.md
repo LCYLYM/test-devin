@@ -908,6 +908,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `bowfin` | `1` 弓鳍鱼配色 |
 | `burbot` | `1` 江鳕配色 |
 | `lamprey` | `1` 七鳃鳗配色 |
+| `hagfish` | `1` 盲鳗配色 |
+| `oarfish` | `1` 皇带鱼配色 |
+| `moray` | `1` 海鳝配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 
