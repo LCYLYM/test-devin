@@ -15,6 +15,7 @@
     { "src": "./assets/img/piggy.webp", "sizes": "800x800", "type": "image/webp", "purpose": "any" }
   ],
   "shortcuts": [
+    {"name": "专注模式", "url": "./index.html?zen=1", "description": "只看跳动的金额"},
     {"name": "本月累计", "url": "./index.html?period=month", "description": "查看本月累计收入"},
     {
       "name": "演示模式",
