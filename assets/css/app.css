@@ -1004,3 +1004,7 @@ body[data-tock] .amount-area{animation:tockPulse 1s ease-in-out infinite}
 @media(prefers-reduced-motion:reduce){body[data-tock] .amount-area,.stamp-seal{animation:none}}
 .payday.hour{color:#93c5fd}
 .payday.greet{color:#fcd34d}
+body[data-sat] .instrument{filter:saturate(var(--sat-pct,100%))}
+body[data-sat][data-hue] .instrument{filter:saturate(var(--sat-pct,100%)) hue-rotate(var(--hue-rot,0deg))}
+.payday.wotd{color:#a5b4fc}
+.payday.half{color:#fdba74}

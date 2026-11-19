@@ -202,6 +202,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `fx` | `…|cloud` 云朵漂移 |
 | `hour` | `1` 当前小时进度徽章 |
 | `greet` | `1` 时段问候徽章 |
+| `sat` | `0`–`200` 仪表饱和度（%） |
+| `wotd` | `1` 今日打工词条徽章（娱乐） |
+| `half` | `1` 上下半场进度徽章 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 

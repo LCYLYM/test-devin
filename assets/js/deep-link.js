@@ -1049,6 +1049,35 @@
         grb.hidden = false;
       }
     }
+    var satP = params.get('sat');
+    if (satP !== null && isFinite(Number(satP))) {
+      var satV = Math.max(0, Math.min(200, Number(satP)));
+      document.body.style.setProperty('--sat-pct', satV + '%');
+      document.body.dataset.sat = '1';
+    }
+    if (params.get('wotd') === '1') {
+      var wdb = document.getElementById('wotdBadge'), wdw = document.getElementById('wotdWord');
+      if (wdb && wdw) {
+        var WOTD = ['搬砖', '摸鱼', '内卷', '躺平', '搞钱', '画饼', '跑路', '上岸', '充电', '筑基', '续命', '通勤', '月光', '牛马', '加班', '周报', '例会', '对齐', '冲刺', '干饭'];
+        var wsn = window.SalaryApp && window.SalaryApp.getState && window.SalaryApp.getState();
+        var wdk = (wsn && wsn.snapshot && wsn.snapshot.dayKey) || new Date().toISOString().slice(0, 10);
+        var wh = 0; for (var wji = 0; wji < wdk.length; wji++) wh = (wh * 31 + wdk.charCodeAt(wji)) % 997;
+        wdw.textContent = WOTD[wh % WOTD.length];
+        wdb.hidden = false;
+      }
+    }
+    if (params.get('half') === '1') {
+      var hfb = document.getElementById('halfBadge'), hft = document.getElementById('halfText');
+      if (hfb && hft) {
+        var hfFill = function () {
+          var hfs = window.SalaryApp && window.SalaryApp.getState && window.SalaryApp.getState();
+          var hsn = hfs && hfs.snapshot;
+          if (!hsn || !hsn.daySalary) { hft.textContent = '—'; return; }
+          hft.textContent = (hsn.todayEarned || 0) >= hsn.daySalary / 2 ? '下半场' : '上半场';
+        };
+        hfb.hidden = false; hfFill(); setInterval(hfFill, 30000);
+      }
+    }
     if (params.get('rays') === '1' && !(window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches)) {
       document.body.dataset.rays = '1';
       var raysL = document.createElement('div');
@@ -1555,6 +1584,9 @@
       if (params.get('gains') === '1') u.searchParams.set('gains', '1');
       if (params.get('hour') === '1') u.searchParams.set('hour', '1');
       if (params.get('greet') === '1') u.searchParams.set('greet', '1');
+      var satX = params.get('sat'); if (satX) u.searchParams.set('sat', satX);
+      if (params.get('wotd') === '1') u.searchParams.set('wotd', '1');
+      if (params.get('half') === '1') u.searchParams.set('half', '1');
       if (params.get('rays') === '1') u.searchParams.set('rays', '1');
       if (params.get('flat') === '1') u.searchParams.set('flat', '1');
       var idl = params.get('idle'); if (idl) u.searchParams.set('idle', idl);
