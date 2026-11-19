@@ -3621,6 +3621,9 @@
     if (params.get('hyena') === '1') { document.body.classList.add('is-hyena'); }
     if (params.get('urchin') === '1') { document.body.classList.add('is-urchin'); }
     if (params.get('viper') === '1') { document.body.classList.add('is-viper'); }
+    if (params.get('wapiti') === '1') { document.body.classList.add('is-wapiti'); }
+    if (params.get('xerus') === '1') { document.body.classList.add('is-xerus'); }
+    if (params.get('yellowfin') === '1') { document.body.classList.add('is-yellowfin'); }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -4600,6 +4603,9 @@
         if (params.get('hyena') === '1') u.searchParams.set('hyena', '1');
         if (params.get('urchin') === '1') u.searchParams.set('urchin', '1');
         if (params.get('viper') === '1') u.searchParams.set('viper', '1');
+        if (params.get('wapiti') === '1') u.searchParams.set('wapiti', '1');
+        if (params.get('xerus') === '1') u.searchParams.set('xerus', '1');
+        if (params.get('yellowfin') === '1') u.searchParams.set('yellowfin', '1');
       if (params.get('tile') === '1') u.searchParams.set('tile', '1');
       if (params.get('outline') === '1') u.searchParams.set('outline', '1');
       if (params.get('stripe') === '1') u.searchParams.set('stripe', '1');

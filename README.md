@@ -737,6 +737,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `hyena` | `1` 鬣狗配色 |
 | `urchin` | `1` 海胆配色 |
 | `viper` | `1` 蝰蛇配色 |
+| `wapiti` | `1` 马鹿配色 |
+| `xerus` | `1` 地松鼠配色 |
+| `yellowfin` | `1` 黄鳍金枪鱼配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 
