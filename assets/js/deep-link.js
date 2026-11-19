@@ -34,6 +34,11 @@
     }
 
     var template = params.get('template') || params.get('skin');
+    if (template === 'daily') {
+      var dayNum = Math.floor(Date.now() / 864e5);
+      var dailyList = ['pig', 'charge', 'meter', 'pixel', 'neon', 'mono', 'paper', 'term', 'ecg'];
+      template = dailyList[dayNum % dailyList.length];
+    }
     if (template === 'random') template = ['charge','meter','pixel','pig','neon','mono','paper','term','ecg'][Math.floor(Math.random() * 9)];
     if (template) app.setTemplate(template);
     else {
@@ -49,7 +54,7 @@
     var period = params.get('period');
     if (period === 'day' || period === 'month') app.setPeriod(period);
 
-    var demoParam = params.get('demo');
+    var demoParam = params.get('demo') || params.get('speed');
     if (demoParam && demoParam !== '0') {
       if (!app.getState().demo) app.toggleDemo();
       var speed = parseFloat(demoParam);
@@ -94,7 +99,10 @@
       var gname = params.get('goalname');
       if (gp) gp.value = String(goal);
       if (gn && gname) gn.value = gname.slice(0, 12);
-      if (window.SalaryApp) window.SalaryApp.openDialog('goalDialog');
+      var gform = document.getElementById('goalForm');
+      if (params.get('goalapply') === '1' && gform && gn && gn.value) {
+        gform.requestSubmit ? gform.requestSubmit() : gform.dispatchEvent(new Event('submit', { cancelable: true }));
+      } else if (window.SalaryApp) window.SalaryApp.openDialog('goalDialog');
     }
 
     var work = params.get('work') || params.get('intervals');
