@@ -179,20 +179,20 @@
     if (params.get('confetti') === '0') window.__noConfetti = true;
 
     var QUOTES = ['打工不摸鱼，不如回家种地','今天的砖，格外烫手','薪尽自然凉','只要我够快，贫穷就追不上我','上班如上坟，下班如过年','人在工位坐，薪从秒上跳','摸鱼是打工人的浪漫','卷不动的时候，就看看余额'];
+    var quoteCustom = params.get('quote');
+    if (quoteCustom && !['0', '1', 'off', 'true', 'on'].includes(quoteCustom)) quoteCustom = quoteCustom.slice(0, 40);
+    else quoteCustom = '';
     var showQuote = function () {
       var q = document.getElementById('quoteLine'); if (!q) return;
       q.hidden = false;
-      q.textContent = QUOTES[Math.floor(Date.now() / 864e5) % QUOTES.length];
+      q.textContent = quoteCustom || QUOTES[Math.floor(Date.now() / 864e5) % QUOTES.length];
     };
     var quoteParam = params.get('quote');
     if (quoteParam === '0' || quoteParam === 'off') { try { localStorage.removeItem('salaryFlow.quote'); } catch (e) {} }
     else if (quoteParam) { try { localStorage.setItem('salaryFlow.quote', '1'); } catch (e) {} }
     var quoteOn = quoteParam && quoteParam !== '0' && quoteParam !== 'off';
     if (!quoteOn) { try { quoteOn = localStorage.getItem('salaryFlow.quote') === '1'; } catch (e) {} }
-    if (quoteParam && !['0', '1', 'off', 'true', 'on'].includes(quoteParam)) {
-      var qc = document.getElementById('quoteLine');
-      if (qc) { qc.hidden = false; qc.textContent = quoteParam.slice(0, 40); }
-    } else if (quoteOn) showQuote();
+    if (quoteOn || quoteCustom) showQuote();
     window.__toggleQuote = function () {
       var q2 = document.getElementById('quoteLine'); if (!q2) return;
       if (q2.hidden) showQuote();
