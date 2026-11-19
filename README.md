@@ -136,6 +136,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `astro` | `MM-DD` 星座徽章（♈白羊…） |
 | `rank` | `1` 时薪打败全网百分比（娱乐） |
 | `banner` | 文字：页面顶部公告条 |
+| `zoom` | `50`–`200` 显示缩放（%），挂屏/大屏用 |
+| `mirror` | `1` 镜像仪表盘（彩蛋） |
+| `lot` | `1` 今日幸运数字徽章 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 

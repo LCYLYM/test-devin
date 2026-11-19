@@ -734,6 +734,19 @@
       var sb = document.getElementById('siteBanner');
       if (sb) { sb.textContent = bannerP.slice(0, 60); sb.hidden = false; document.body.dataset.banner = '1'; }
     }
+    var zoomP = Number(params.get('zoom'));
+    if (isFinite(zoomP) && zoomP >= 50 && zoomP <= 200) document.body.style.zoom = (zoomP / 100).toFixed(2);
+    if (params.get('mirror') === '1') document.body.dataset.mirror = '1';
+    if (params.get('lot') === '1') {
+      var lb = document.getElementById('lotBadge'), ln = document.getElementById('lotNum');
+      if (lb && ln) {
+        var lsn = window.SalaryApp && window.SalaryApp.getState && window.SalaryApp.getState();
+        var ldk = (lsn && lsn.snapshot && lsn.snapshot.dayKey) || new Date().toISOString().slice(0, 10);
+        var lh = 0; for (var li = 0; li < ldk.length; li++) lh = (lh * 31 + ldk.charCodeAt(li)) % 997;
+        ln.textContent = String(lh % 99 + 1);
+        lb.hidden = false;
+      }
+    }
     if (params.get('zodiac') === '1') {
       var zb = document.getElementById('zodiacBadge');
       if (zb) {
@@ -1167,6 +1180,9 @@
       if (params.get('astro')) u.searchParams.set('astro', params.get('astro'));
       if (params.get('rank') === '1') u.searchParams.set('rank', '1');
       if (params.get('banner')) u.searchParams.set('banner', params.get('banner'));
+      if (params.get('zoom')) u.searchParams.set('zoom', params.get('zoom'));
+      if (params.get('mirror') === '1') u.searchParams.set('mirror', '1');
+      if (params.get('lot') === '1') u.searchParams.set('lot', '1');
       params.forEach(function (v, k) { if (k.indexOf('utm_') === 0 && v) u.searchParams.set(k, v.slice(0, 64)); });
       var text = u.toString();
       (navigator.clipboard ? navigator.clipboard.writeText(text) : Promise.reject())

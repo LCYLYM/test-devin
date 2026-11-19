@@ -893,3 +893,5 @@ body[data-blink] .amount-area::after{content:"▌";color:var(--accent,#7dd3fc);a
 .payday.rank{color:#fcd34d}
 .site-banner{padding:7px 16px;text-align:center;font-size:12px;letter-spacing:.04em;background:var(--accent,#7dd3fc);color:#0b1220;font-weight:600}
 .is-focus .site-banner{display:none}
+.payday.lot{color:#fda4af}
+body[data-mirror] .instrument{transform:scaleX(-1)}
