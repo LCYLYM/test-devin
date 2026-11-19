@@ -3795,6 +3795,9 @@
     if (params.get('hagfish') === '1') { document.body.classList.add('is-hagfish'); }
     if (params.get('oarfish') === '1') { document.body.classList.add('is-oarfish'); }
     if (params.get('moray') === '1') { document.body.classList.add('is-moray'); }
+    if (params.get('conger') === '1') { document.body.classList.add('is-conger'); }
+    if (params.get('remora') === '1') { document.body.classList.add('is-remora'); }
+    if (params.get('skate') === '1') { document.body.classList.add('is-skate'); }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -4948,6 +4951,9 @@
         if (params.get('hagfish') === '1') u.searchParams.set('hagfish', '1');
         if (params.get('oarfish') === '1') u.searchParams.set('oarfish', '1');
         if (params.get('moray') === '1') u.searchParams.set('moray', '1');
+        if (params.get('conger') === '1') u.searchParams.set('conger', '1');
+        if (params.get('remora') === '1') u.searchParams.set('remora', '1');
+        if (params.get('skate') === '1') u.searchParams.set('skate', '1');
       if (params.get('tile') === '1') u.searchParams.set('tile', '1');
       if (params.get('outline') === '1') u.searchParams.set('outline', '1');
       if (params.get('stripe') === '1') u.searchParams.set('stripe', '1');
