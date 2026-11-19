@@ -211,6 +211,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `frost` | `1` 霜冻玻璃仪表 |
 | `led` | `1` LED 辉光数字 |
 | `sky` | `1` 背景随时刻变化（晨/昼/暮/夜） |
+| `weeks` | `1` 今年第几周徽章 |
+| `flick` | `1` 胶片闪烁 |
+| `eq` | `1` 左下角均衡器律动 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 

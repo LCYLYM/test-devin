@@ -1102,6 +1102,25 @@
       sg.textContent = '— ' + signP.trim().slice(0, 30);
       document.body.appendChild(sg);
     }
+    if (params.get('weeks') === '1') {
+      var wkb = document.getElementById('weeksBadge'), wkn = document.getElementById('weeksNum');
+      if (wkb && wkn) {
+        var wkd = new Date();
+        var wkj = new Date(wkd.getFullYear(), 0, 1);
+        wkn.textContent = Math.ceil((((wkd - wkj) / 864e5) + wkj.getDay() + 1) / 7);
+        wkb.hidden = false;
+      }
+    }
+    if (params.get('flick') === '1' && !(window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches)) {
+      document.body.dataset.flick = '1';
+    }
+    if (params.get('eq') === '1' && !(window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches)) {
+      document.body.dataset.eq = '1';
+      var eql = document.createElement('div');
+      eql.className = 'eq-layer'; eql.setAttribute('aria-hidden', 'true');
+      eql.innerHTML = '<i></i><i></i><i></i><i></i><i></i>';
+      document.body.appendChild(eql);
+    }
     if (params.get('frost') === '1') document.body.dataset.frost = '1';
     if (params.get('led') === '1') document.body.dataset.led = '1';
     if (params.get('sky') === '1') {
@@ -1626,6 +1645,9 @@
       if (params.get('frost') === '1') u.searchParams.set('frost', '1');
       if (params.get('led') === '1') u.searchParams.set('led', '1');
       if (params.get('sky') === '1') u.searchParams.set('sky', '1');
+      if (params.get('weeks') === '1') u.searchParams.set('weeks', '1');
+      if (params.get('flick') === '1') u.searchParams.set('flick', '1');
+      if (params.get('eq') === '1') u.searchParams.set('eq', '1');
       if (params.get('rays') === '1') u.searchParams.set('rays', '1');
       if (params.get('flat') === '1') u.searchParams.set('flat', '1');
       var idl = params.get('idle'); if (idl) u.searchParams.set('idle', idl);
