@@ -93,6 +93,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `breath` | `1` 仪表盘呼吸灯发光 |
 | `notify` | `1` 里程碑到账时发系统通知（需授权） |
 | `bw` / `sepia` | `1` 黑白 / 怀旧棕色滤镜 |
+| `season` | `auto` 按季节自动特效（冬雪·春樱·夏雨） |
+| `friday` | `1` 周五倒计时徽章 |
+| `bday` | `MM-DD` 生日倒计时徽章（当天🎂） |
 
 币种现在共 12 种：CNY/USD/EUR/JPY/KRW/HKD/VND/IDR/GBP/SGD/AUD + ZIM 趣味。
 

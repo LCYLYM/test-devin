@@ -823,6 +823,8 @@ body[data-template=therm] .therm-visual{display:flex}
 .cn-amount{font-size:13px;color:var(--muted,#888);letter-spacing:2px;margin-top:4px}
 .payday.pomo{color:#fca5a5}
 .payday.pomo.is-break{color:#86efac}
+.payday.friday{color:#86efac}
+.payday.bday{color:#fda4af}
 body[data-glass] .instrument,body[data-glass] .summary-strip{backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);background:rgba(140,160,200,.08);border:1px solid rgba(255,255,255,.14)}
 @property --rgb-h{syntax:'<angle>';inherits:true;initial-value:190deg}
 @media(prefers-reduced-motion:no-preference){body[data-rgb]{--accent:hsl(var(--rgb-h) 90% 60%);animation:rgbSpin 6s linear infinite}}

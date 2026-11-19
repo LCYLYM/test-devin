@@ -268,6 +268,11 @@
     if (params.get('dir') === 'down') window.__dirDown = true;
     if (params.get('compact') === '0') window.__noCompact = true;
     if (params.get('vibrate') === '1') window.__vibrate = true;
+    if (params.get('season') === 'auto' && !params.get('fx')) {
+      var sm = new Date().getMonth();
+      var sfx = sm === 11 || sm <= 1 ? 'snow' : sm === 2 || sm === 3 ? 'sakura' : sm >= 5 && sm <= 7 ? 'rain' : '';
+      if (sfx) params.set('fx', sfx);
+    }
     var fxParam = params.get('fx');
     if (fxParam === 'matrix' && !(window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches)) {
       var mc = document.createElement('canvas');
@@ -426,6 +431,50 @@
           abadge.title = aname + ' ' + am + '月' + ad + '日';
           var add = document.getElementById('anniDays');
           if (add) add.textContent = adays === 0 ? '🎉' : String(adays);
+        }
+      }
+    }
+    if (params.get('friday') === '1') {
+      var fb = document.getElementById('friBadge');
+      if (fb) {
+        var fdow = new Date().getDay();
+        var fdays = (5 - fdow + 7) % 7;
+        fb.hidden = false;
+        var fl = document.getElementById('friLabel');
+        var fd = document.getElementById('friDays');
+        var fu = document.getElementById('friUnit');
+        if (fdays === 0) {
+          if (fl) fl.textContent = '今天是周五';
+          if (fd) fd.textContent = '🎉';
+          if (fu) fu.hidden = true;
+        } else if (fd) fd.textContent = String(fdays);
+      }
+    }
+    var bdayMatch = /^(\d{1,2})[-./](\d{1,2})$/.exec(params.get('bday') || '');
+    if (bdayMatch) {
+      var bm = +bdayMatch[1], bd = +bdayMatch[2];
+      var bn = new Date(), by = bn.getFullYear();
+      var blast = new Date(by, bm, 0).getDate();
+      var btarget = (bm >= 1 && bm <= 12 && bd >= 1 && bd <= blast) ? new Date(by, bm - 1, bd) : null;
+      if (btarget) {
+        if (btarget < new Date(by, bn.getMonth(), bn.getDate())) { by++; btarget = new Date(by, bm - 1, bd); }
+        var bdays = Math.round((btarget - new Date(bn.getFullYear(), bn.getMonth(), bn.getDate())) / 864e5);
+        var bb = document.getElementById('bdayBadge');
+        if (bb) {
+          bb.hidden = false;
+          bb.title = '生日 ' + bm + '月' + bd + '日';
+          var bl = document.getElementById('bdayLabel');
+          var bdd = document.getElementById('bdayDays');
+          var bu2 = document.getElementById('bdayUnit');
+          if (bdays === 0) {
+            if (bl) bl.textContent = '生日快乐';
+            if (bdd) bdd.textContent = '🎂';
+            if (bu2) bu2.hidden = true;
+            if (window.SalaryApp && window.SalaryApp.toast) setTimeout(function(){ window.SalaryApp.toast('🎂 生日快乐！'); }, 1500);
+          } else {
+            if (bl) bl.textContent = '距生日';
+            if (bdd) bdd.textContent = String(bdays);
+          }
         }
       }
     }
@@ -722,6 +771,9 @@
       if (window.__notify) u.searchParams.set('notify', '1');
       if (params.get('bw') === '1') u.searchParams.set('bw', '1');
       if (params.get('sepia') === '1') u.searchParams.set('sepia', '1');
+      if (params.get('friday') === '1') u.searchParams.set('friday', '1');
+      var bp = params.get('bday'); if (bp) u.searchParams.set('bday', bp);
+      var seap = params.get('season'); if (seap) u.searchParams.set('season', seap);
       var text = u.toString();
       (navigator.clipboard ? navigator.clipboard.writeText(text) : Promise.reject())
         .then(function () { btn.textContent = '已复制 ✓'; setTimeout(function(){ btn.textContent='复制当前链接'; }, 1500); })
