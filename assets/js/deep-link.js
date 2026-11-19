@@ -3125,6 +3125,48 @@
         erb.hidden = false;
       }
     }
+    if (params.get('stardate') === '1') {
+      var sdb = document.getElementById('stardateBadge'), sdv = document.getElementById('stardateVal');
+      if (sdb && sdv) {
+        var sdUpd = function () {
+          sdv.textContent = (41000 + (Date.now() - new Date('2012-01-01').getTime()) / 31557600).toFixed(1);
+          sdb.hidden = false;
+        };
+        sdUpd(); setInterval(sdUpd, 60000);
+      }
+    }
+    if (params.get('easter') === '1') {
+      var eab = document.getElementById('easterBadge'), eav = document.getElementById('easterDays');
+      if (eab && eav) {
+        var easterOf = function (y) {
+          var a = y % 19, b = Math.floor(y / 100), c = y % 100, d2 = Math.floor(b / 4), e = b % 4;
+          var f = Math.floor((b + 8) / 25), g = Math.floor((b - f + 1) / 3);
+          var h = (19 * a + b - d2 - g + 15) % 30, i = Math.floor(c / 4), k = c % 4;
+          var l = (32 + 2 * e + 2 * i - h - k) % 7, m = Math.floor((a + 11 * h + 22 * l) / 451);
+          return new Date(y, Math.floor((h + l - 7 * m + 114) / 31) - 1, (h + l - 7 * m + 114) % 31 + 1);
+        };
+        var eaUpd = function () {
+          var now = new Date(), t = easterOf(now.getFullYear());
+          if (t <= now) t = easterOf(now.getFullYear() + 1);
+          eav.textContent = Math.max(0, Math.round((t - now) / 86400000));
+          eab.hidden = false;
+        };
+        eaUpd(); setInterval(eaUpd, 3600000);
+      }
+    }
+    if (params.get('olympic') === '1') {
+      var olb = document.getElementById('olympicBadge'), olv = document.getElementById('olympicDays');
+      if (olb && olv) {
+        var olyTargets = [new Date('2028-07-14'), new Date('2030-02-08'), new Date('2032-07-23')];
+        var olUpd = function () {
+          var now = Date.now(), t = olyTargets.find(function (d) { return d.getTime() > now; });
+          if (!t) { olb.hidden = true; return; }
+          olv.textContent = Math.ceil((t.getTime() - now) / 86400000);
+          olb.hidden = false;
+        };
+        olUpd(); setInterval(olUpd, 3600000);
+      }
+    }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -3942,6 +3984,9 @@
       if (params.get('beats') === '1') u.searchParams.set('beats', '1');
       if (params.get('unix') === '1') u.searchParams.set('unix', '1');
       if (params.get('era') === '1') u.searchParams.set('era', '1');
+      if (params.get('stardate') === '1') u.searchParams.set('stardate', '1');
+      if (params.get('easter') === '1') u.searchParams.set('easter', '1');
+      if (params.get('olympic') === '1') u.searchParams.set('olympic', '1');
       if (params.get('tile') === '1') u.searchParams.set('tile', '1');
       if (params.get('outline') === '1') u.searchParams.set('outline', '1');
       if (params.get('stripe') === '1') u.searchParams.set('stripe', '1');
