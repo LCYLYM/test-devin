@@ -310,6 +310,8 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `look` | `1` 眼神跟随鼠标彩蛋 |
 | `raw` | `1` 原始数值徽章（6 位小数实时滚动） |
 | `swirl` | `1` 旋涡背景 |
+| `rev` | `1` 距日薪目标还差徽章 |
+| `cap` | `文字` 自定义副标题 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 

@@ -314,7 +314,7 @@
         requestAnimationFrame(mFrame);
       })();
     }
-    if (['snow', 'sakura', 'rain', 'stars', 'leaves', 'bubble', 'ember', 'firefly', 'dust', 'meteor', 'warp', 'cloud', 'paper', 'fireworks', 'petal', 'fish'].indexOf(fxParam) >= 0 && params.get('eco') !== '1' && !(window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches)) {
+    if (['snow', 'sakura', 'rain', 'stars', 'leaves', 'bubble', 'ember', 'firefly', 'dust', 'meteor', 'warp', 'cloud', 'paper', 'fireworks', 'petal', 'fish', 'heart'].indexOf(fxParam) >= 0 && params.get('eco') !== '1' && !(window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches)) {
       var fxc = document.createElement('canvas');
       fxc.className = 'fx-layer';
       fxc.style.cssText = 'position:fixed;inset:0;width:100%;height:100%;pointer-events:none;opacity:.65';
@@ -418,6 +418,19 @@
             fxctx.beginPath(); fxctx.moveTo(-q.r * 3, 0); fxctx.lineTo(-q.r * 5, -q.r * 1.6); fxctx.lineTo(-q.r * 5, q.r * 1.6); fxctx.closePath(); fxctx.fill();
             fxctx.fillStyle = '#0b2239'; fxctx.beginPath(); fxctx.arc(q.r * 1.6, -q.r * 0.4, q.r * 0.35, 0, 6.3); fxctx.fill();
             fxctx.restore();
+            continue;
+          }
+          if (fxParam === 'heart') {
+            q.y -= q.v * 1.1; q.x += Math.sin(q.s += 0.015) * 0.4;
+            if (q.y < -24) { q.y = innerHeight + 24; q.x = Math.random() * innerWidth; }
+            fxctx.save(); fxctx.translate(q.x, q.y); fxctx.scale(q.r / 6, q.r / 6);
+            fxctx.fillStyle = 'rgba(251,113,133,.55)';
+            fxctx.beginPath(); fxctx.moveTo(0, 3);
+            fxctx.bezierCurveTo(-5, -3, -10, -3, -10, 2);
+            fxctx.bezierCurveTo(-10, 6, -5, 9, 0, 13);
+            fxctx.bezierCurveTo(5, 9, 10, 6, 10, 2);
+            fxctx.bezierCurveTo(10, -3, 5, -3, 0, 3);
+            fxctx.fill(); fxctx.restore();
             continue;
           }
           if (fxParam === 'bubble') {
@@ -1945,6 +1958,27 @@
     if (params.get('swirl') === '1' && !(window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches)) {
       document.body.classList.add('is-swirl');
     }
+    if (params.get('rev') === '1') {
+      var rvb = document.getElementById('revBadge'), rvv = document.getElementById('revVal');
+      if (rvb && rvv) {
+        var rvUpd = function () {
+          var st = window.SalaryApp && window.SalaryApp.getState && window.SalaryApp.getState();
+          if (!st || !st.snapshot) return;
+          var r = Math.max(0, st.snapshot.daySalary - st.snapshot.todayEarned);
+          rvv.textContent = window.SalaryApp.formatMoney(r, st.currency);
+          rvb.hidden = false;
+        };
+        rvUpd(); setInterval(rvUpd, 500);
+      }
+    }
+    var capParam2 = params.get('cap');
+    if (capParam2 !== null) {
+      var capEl = document.getElementById('incomeCaption');
+      if (capEl) {
+        if (capParam2.length > 120) capParam2 = capParam2.slice(0, 120);
+        capEl.textContent = capParam2 || '·';
+      }
+    }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -2629,6 +2663,8 @@
       if (params.get('look') === '1') u.searchParams.set('look', '1');
       if (params.get('raw') === '1') u.searchParams.set('raw', '1');
       if (params.get('swirl') === '1') u.searchParams.set('swirl', '1');
+      if (params.get('rev') === '1') u.searchParams.set('rev', '1');
+      if (params.get('cap') !== null) u.searchParams.set('cap', params.get('cap'));
       if (params.get('rays') === '1') u.searchParams.set('rays', '1');
       if (params.get('flat') === '1') u.searchParams.set('flat', '1');
       var idl = params.get('idle'); if (idl) u.searchParams.set('idle', idl);
