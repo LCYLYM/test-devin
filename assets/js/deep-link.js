@@ -22,7 +22,7 @@
     var hasStored = false;
     try { hasStored = !!(JSON.parse(localStorage.getItem('salaryFlow.v2') || 'null') || {}).preferences; } catch (e) {}
 
-    var salaryRaw = (params.get('salary') || '').toLowerCase().replace(/万/g, 'w');
+    var salaryRaw = (params.get('salary') || '').toLowerCase().replace(/万/g, 'w').replace(/[,_\s]/g, '');
     var salary = /^[\d.]+w$/.test(salaryRaw) ? parseFloat(salaryRaw) * 1e4 : Number(salaryRaw);
     if (isFinite(salary) && salary > 0) {
       var input = document.getElementById('salaryInput');
@@ -130,6 +130,16 @@
     if (accent === 'off' || accent === '0') { try { localStorage.removeItem('salaryFlow.accent'); } catch (e) {} accent = ''; }
     else if (accent) { try { localStorage.setItem('salaryFlow.accent', accent); } catch (e) {} }
     if (!accent) { try { accent = localStorage.getItem('salaryFlow.accent') || ''; } catch (e) { accent = ''; } }
+    var bg = params.get('bg');
+    if (bg === 'off' || bg === '0') { try { localStorage.removeItem('salaryFlow.bg'); } catch (e) {} bg = ''; }
+    else if (bg) { try { localStorage.setItem('salaryFlow.bg', bg); } catch (e) {} }
+    if (!bg) { try { bg = localStorage.getItem('salaryFlow.bg') || ''; } catch (e) { bg = ''; } }
+    if (bg && /^#?([0-9a-fA-F]{3,4}|[0-9a-fA-F]{6}|[0-9a-fA-F]{8})$/.test(bg)) {
+      document.body.style.setProperty('--bg', bg[0] === '#' ? bg : '#' + bg);
+      var tm = document.querySelector('meta[name=theme-color]');
+      if (tm) tm.content = bg[0] === '#' ? bg : '#' + bg;
+    }
+
     if (accent && /^#?([0-9a-fA-F]{3,4}|[0-9a-fA-F]{6}|[0-9a-fA-F]{8})$/.test(accent)) {
       var v = accent[0] === '#' ? accent : '#' + accent;
       document.body.style.setProperty('--accent', v);
@@ -189,6 +199,9 @@
     } else if (e.key === 'p' && window.SalaryApp) {
       var st = window.SalaryApp.getState();
       window.SalaryApp.setPeriod(st.preferences.period === 'day' ? 'month' : 'day');
+    } else if (/^[1-7]$/.test(e.key) && window.SalaryApp) {
+      var direct = ['pig','charge','meter','pixel','neon','mono','paper'][Number(e.key) - 1];
+      if (direct) window.SalaryApp.setTemplate(direct);
     } else if (e.key === 'c' && window.SalaryApp) {
       window.SalaryApp.openDialog('calendarDialog');
     } else if (e.key === 'o') {
