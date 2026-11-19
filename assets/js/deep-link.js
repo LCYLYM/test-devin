@@ -2846,6 +2846,15 @@
     if (params.get('ginger') === '1') {
       document.body.classList.add('is-ginger');
     }
+    if (params.get('kelp') === '1') {
+      document.body.classList.add('is-kelp');
+    }
+    if (params.get('maple') === '1') {
+      document.body.classList.add('is-maple');
+    }
+    if (params.get('pewter') === '1') {
+      document.body.classList.add('is-pewter');
+    }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -3576,6 +3585,9 @@
       if (params.get('harbor') === '1') u.searchParams.set('harbor', '1');
       if (params.get('cosmos') === '1') u.searchParams.set('cosmos', '1');
       if (params.get('ginger') === '1') u.searchParams.set('ginger', '1');
+      if (params.get('kelp') === '1') u.searchParams.set('kelp', '1');
+      if (params.get('maple') === '1') u.searchParams.set('maple', '1');
+      if (params.get('pewter') === '1') u.searchParams.set('pewter', '1');
       if (params.get('tile') === '1') u.searchParams.set('tile', '1');
       if (params.get('outline') === '1') u.searchParams.set('outline', '1');
       if (params.get('stripe') === '1') u.searchParams.set('stripe', '1');

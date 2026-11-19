@@ -488,6 +488,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `harbor` | `1` 港湾配色 |
 | `cosmos` | `1` 宇宙配色 |
 | `ginger` | `1` 姜黄配色 |
+| `kelp` | `1` 海草配色 |
+| `maple` | `1` 枫红配色 |
+| `pewter` | `1` 锡器配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 
