@@ -518,6 +518,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `delta` | `1` 三角洲配色 |
 | `prairie` | `1` 草原配色 |
 | `cove` | `1` 海湾配色 |
+| `sierra` | `1` 山峦配色 |
+| `dusty` | `1` 尘色配色 |
+| `marine` | `1` 海蓝配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 

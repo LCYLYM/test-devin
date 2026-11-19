@@ -2936,6 +2936,15 @@
     if (params.get('cove') === '1') {
       document.body.classList.add('is-cove');
     }
+    if (params.get('sierra') === '1') {
+      document.body.classList.add('is-sierra');
+    }
+    if (params.get('dusty') === '1') {
+      document.body.classList.add('is-dusty');
+    }
+    if (params.get('marine') === '1') {
+      document.body.classList.add('is-marine');
+    }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -3696,6 +3705,9 @@
       if (params.get('delta') === '1') u.searchParams.set('delta', '1');
       if (params.get('prairie') === '1') u.searchParams.set('prairie', '1');
       if (params.get('cove') === '1') u.searchParams.set('cove', '1');
+      if (params.get('sierra') === '1') u.searchParams.set('sierra', '1');
+      if (params.get('dusty') === '1') u.searchParams.set('dusty', '1');
+      if (params.get('marine') === '1') u.searchParams.set('marine', '1');
       if (params.get('tile') === '1') u.searchParams.set('tile', '1');
       if (params.get('outline') === '1') u.searchParams.set('outline', '1');
       if (params.get('stripe') === '1') u.searchParams.set('stripe', '1');
