@@ -1073,6 +1073,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `dodo` | `1` 渡渡鸟配色 |
 | `gannet` | `1` 塘鹅配色 |
 | `lyrebird` | `1` 琴鸟配色 |
+| `tanager` | `1` 唐纳雀配色 |
+| `starling` | `1` 椋鸟配色 |
+| `myna` | `1` 八哥配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 
