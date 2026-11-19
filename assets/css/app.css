@@ -1972,6 +1972,12 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .is-bonito .instrument{border-color:rgba(140,155,220,.4)}
 .is-albacore{background:linear-gradient(180deg,#19141c 0%,#100d13 100%)}
 .is-albacore .instrument{border-color:rgba(190,150,205,.4)}
+.is-yellowtail{background:linear-gradient(180deg,#1c1a0e 0%,#131109 100%)}
+.is-yellowtail .instrument{border-color:rgba(215,200,100,.4)}
+.is-amberjack{background:linear-gradient(180deg,#1e1610 0%,#140f09 100%)}
+.is-amberjack .instrument{border-color:rgba(220,165,105,.4)}
+.is-cobia{background:linear-gradient(180deg,#12181c 0%,#0b1013 100%)}
+.is-cobia .instrument{border-color:rgba(140,175,195,.4)}
 .is-oatmeal{background:linear-gradient(180deg,#1d1912,#2f291e 50%,#433a2a)}
 .is-oatmeal .instrument{border-color:rgba(215,195,155,.4)}
 .is-thyme{background:linear-gradient(180deg,#121a14,#1c2a20 50%,#28392c)}

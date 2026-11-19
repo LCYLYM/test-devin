@@ -3771,6 +3771,9 @@
     if (params.get('mackerel') === '1') { document.body.classList.add('is-mackerel'); }
     if (params.get('bonito') === '1') { document.body.classList.add('is-bonito'); }
     if (params.get('albacore') === '1') { document.body.classList.add('is-albacore'); }
+    if (params.get('yellowtail') === '1') { document.body.classList.add('is-yellowtail'); }
+    if (params.get('amberjack') === '1') { document.body.classList.add('is-amberjack'); }
+    if (params.get('cobia') === '1') { document.body.classList.add('is-cobia'); }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -4900,6 +4903,9 @@
         if (params.get('mackerel') === '1') u.searchParams.set('mackerel', '1');
         if (params.get('bonito') === '1') u.searchParams.set('bonito', '1');
         if (params.get('albacore') === '1') u.searchParams.set('albacore', '1');
+        if (params.get('yellowtail') === '1') u.searchParams.set('yellowtail', '1');
+        if (params.get('amberjack') === '1') u.searchParams.set('amberjack', '1');
+        if (params.get('cobia') === '1') u.searchParams.set('cobia', '1');
       if (params.get('tile') === '1') u.searchParams.set('tile', '1');
       if (params.get('outline') === '1') u.searchParams.set('outline', '1');
       if (params.get('stripe') === '1') u.searchParams.set('stripe', '1');
