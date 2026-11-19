@@ -928,6 +928,21 @@
     if (params.get('halo') === '1') document.body.dataset.halo = '1';
     if (params.get('fade') === '1') document.body.dataset.fade = '1';
     if (params.get('vig') === '1') document.body.dataset.vig = '1';
+    if (params.get('round') === '1') document.body.dataset.round = '1';
+    var borderC = params.get('border');
+    if (borderC && /^#?([0-9a-fA-F]{3,4}|[0-9a-fA-F]{6}|[0-9a-fA-F]{8})$/.test(borderC)) {
+      var inst = document.querySelector('.instrument');
+      if (inst) inst.style.borderColor = borderC[0] === '#' ? borderC : '#' + borderC;
+    }
+    if (params.get('ripple') === '1' && !(window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches)) {
+      document.addEventListener('pointerdown', function (ev) {
+        var rp = document.createElement('span');
+        rp.className = 'click-ripple';
+        rp.style.left = ev.clientX + 'px'; rp.style.top = ev.clientY + 'px';
+        document.body.appendChild(rp);
+        setTimeout(function () { rp.remove(); }, 700);
+      });
+    }
     if (params.get('day') === '1') {
       var db2 = document.getElementById('dayBadge'), dp = document.getElementById('dayPct'), di = document.getElementById('dayIcon');
       if (db2 && dp) {
@@ -1426,6 +1441,9 @@
       if (params.get('halo') === '1') u.searchParams.set('halo', '1');
       if (params.get('fade') === '1') u.searchParams.set('fade', '1');
       if (params.get('vig') === '1') u.searchParams.set('vig', '1');
+      if (params.get('round') === '1') u.searchParams.set('round', '1');
+      var bdc = params.get('border'); if (bdc) u.searchParams.set('border', bdc.slice(0, 9));
+      if (params.get('ripple') === '1') u.searchParams.set('ripple', '1');
       params.forEach(function (v, k) { if (k.indexOf('utm_') === 0 && v) u.searchParams.set(k, v.slice(0, 64)); });
       var text = u.toString();
       (navigator.clipboard ? navigator.clipboard.writeText(text) : Promise.reject())
