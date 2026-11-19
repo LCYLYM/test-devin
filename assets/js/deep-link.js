@@ -3963,6 +3963,9 @@
     if (params.get('warbler') === '1') { document.body.classList.add('is-warbler'); }
     if (params.get('cardinal') === '1') { document.body.classList.add('is-cardinal'); }
     if (params.get('canary') === '1') { document.body.classList.add('is-canary'); }
+    if (params.get('goldfinch') === '1') { document.body.classList.add('is-goldfinch'); }
+    if (params.get('siskin') === '1') { document.body.classList.add('is-siskin'); }
+    if (params.get('thrush') === '1') { document.body.classList.add('is-thrush'); }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -5284,6 +5287,9 @@
         if (params.get('warbler') === '1') u.searchParams.set('warbler', '1');
         if (params.get('cardinal') === '1') u.searchParams.set('cardinal', '1');
         if (params.get('canary') === '1') u.searchParams.set('canary', '1');
+        if (params.get('goldfinch') === '1') u.searchParams.set('goldfinch', '1');
+        if (params.get('siskin') === '1') u.searchParams.set('siskin', '1');
+        if (params.get('thrush') === '1') u.searchParams.set('thrush', '1');
       if (params.get('tile') === '1') u.searchParams.set('tile', '1');
       if (params.get('outline') === '1') u.searchParams.set('outline', '1');
       if (params.get('stripe') === '1') u.searchParams.set('stripe', '1');

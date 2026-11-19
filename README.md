@@ -1079,6 +1079,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `warbler` | `1` 莺配色 |
 | `cardinal` | `1` 红雀配色 |
 | `canary` | `1` 金丝雀配色 |
+| `goldfinch` | `1` 金翅雀配色 |
+| `siskin` | `1` 黄雀配色 |
+| `thrush` | `1` 鸫配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 
