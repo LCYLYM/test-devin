@@ -2322,6 +2322,28 @@
     if (params.get('gild') === '1') {
       document.body.classList.add('is-gild');
     }
+    if (params.get('bonk') === '1') {
+      var aa = document.getElementById('amountArea');
+      if (aa) aa.addEventListener('click', function () {
+        aa.classList.remove('bonk-pop');
+        void aa.offsetWidth;
+        aa.classList.add('bonk-pop');
+      });
+    }
+    if (params.get('ray') === '1') {
+      document.body.classList.add('is-ray');
+    }
+    if (params.get('vibe') === '1') {
+      document.body.classList.add('is-vibe');
+      var vUpd = function () {
+        var st = window.SalaryApp && window.SalaryApp.getState && window.SalaryApp.getState();
+        if (!st || !st.snapshot) return;
+        var p = Math.max(0, Math.min(1, st.snapshot.progress || 0));
+        document.body.style.setProperty('--vibe-hue', String(Math.round(210 - p * 150)));
+      };
+      vUpd();
+      setInterval(vUpd, 3000);
+    }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -2929,6 +2951,9 @@
       if (params.get('wkn') === '1') u.searchParams.set('wkn', '1');
       if (params.get('plaid') === '1') u.searchParams.set('plaid', '1');
       if (params.get('gild') === '1') u.searchParams.set('gild', '1');
+      if (params.get('bonk') === '1') u.searchParams.set('bonk', '1');
+      if (params.get('ray') === '1') u.searchParams.set('ray', '1');
+      if (params.get('vibe') === '1') u.searchParams.set('vibe', '1');
       if (params.get('tile') === '1') u.searchParams.set('tile', '1');
       if (params.get('outline') === '1') u.searchParams.set('outline', '1');
       if (params.get('stripe') === '1') u.searchParams.set('stripe', '1');

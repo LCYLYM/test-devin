@@ -365,6 +365,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `wkn` | `1` 本周第N个工作日徽章 |
 | `plaid` | `1` 格子纹背景 |
 | `gild` | `1` 金边仪表 |
+| `bonk` | `1` 点击金额弹跳 |
+| `ray` | `1` 顶部扫光 |
+| `vibe` | `1` 背景色随进度变 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 

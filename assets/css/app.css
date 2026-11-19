@@ -1157,6 +1157,14 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .payday.wkn{color:#fdba74}
 .is-plaid{background-image:repeating-linear-gradient(0deg,rgba(148,163,184,.07) 0 2px,transparent 2px 30px),repeating-linear-gradient(90deg,rgba(148,163,184,.07) 0 2px,transparent 2px 30px)}
 .is-gild .instrument{border:2px solid rgba(250,204,21,.45);box-shadow:0 0 18px rgba(250,204,21,.12)}
+.bonk-pop{animation:bonkPop .35s var(--motion)}
+@keyframes bonkPop{0%{transform:scale(1)}40%{transform:scale(1.06)}100%{transform:scale(1)}}
+.is-ray .instrument{position:relative;overflow:hidden}
+.is-ray .instrument::before{content:"";position:absolute;top:0;bottom:0;width:60px;left:-80px;background:linear-gradient(100deg,transparent,rgba(255,255,255,.14),transparent);animation:raySweep 5s linear infinite;pointer-events:none}
+@keyframes raySweep{to{left:110%}}
+.is-vibe{background:linear-gradient(160deg,hsl(var(--vibe-hue,210),40%,12%),hsl(var(--vibe-hue,210),50%,8%))}
+@media (prefers-reduced-motion:reduce){.bonk-pop{animation:none}.is-ray .instrument::before{display:none}}
+.is-focus .is-ray .instrument::before{display:none}
 @keyframes hueSpin{to{filter:hue-rotate(360deg)}}
 .is-hue .instrument{animation:hueSpin 12s linear infinite}
 @media (prefers-reduced-motion:reduce){.is-hue .instrument{animation:none}}
