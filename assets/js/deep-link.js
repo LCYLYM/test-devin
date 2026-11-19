@@ -3209,6 +3209,15 @@
     if (params.get('merlot') === '1') {
       document.body.classList.add('is-merlot');
     }
+    if (params.get('camel') === '1') {
+      document.body.classList.add('is-camel');
+    }
+    if (params.get('petrol') === '1') {
+      document.body.classList.add('is-petrol');
+    }
+    if (params.get('sangria') === '1') {
+      document.body.classList.add('is-sangria');
+    }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -4047,6 +4056,9 @@
       if (params.get('dijon') === '1') u.searchParams.set('dijon', '1');
       if (params.get('spruce') === '1') u.searchParams.set('spruce', '1');
       if (params.get('merlot') === '1') u.searchParams.set('merlot', '1');
+      if (params.get('camel') === '1') u.searchParams.set('camel', '1');
+      if (params.get('petrol') === '1') u.searchParams.set('petrol', '1');
+      if (params.get('sangria') === '1') u.searchParams.set('sangria', '1');
       if (params.get('tile') === '1') u.searchParams.set('tile', '1');
       if (params.get('outline') === '1') u.searchParams.set('outline', '1');
       if (params.get('stripe') === '1') u.searchParams.set('stripe', '1');
