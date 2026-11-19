@@ -1097,6 +1097,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `whinchat` | `1` 野䳭配色 |
 | `wheatear` | `1` 穗䳭配色 |
 | `stonechat` | `1` 石䳭配色 |
+| `flycatcher` | `1` 鹟配色 |
+| `crossbill` | `1` 交嘴雀配色 |
+| `brambling` | `1` 燕雀配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 
