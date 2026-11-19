@@ -1121,6 +1121,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `knot` | `1` 红腹滨鹬配色 |
 | `ruff` | `1` 流苏鹬配色 |
 | `sanderling` | `1` 三趾滨鹬配色 |
+| `whimbrel` | `1` 中杓鹬配色 |
+| `oystercatcher` | `1` 蛎鹬配色 |
+| `pratincole` | `1` 燕鸻配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 
