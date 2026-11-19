@@ -1954,6 +1954,12 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .is-gudgeon .instrument{border-color:rgba(195,170,115,.4)}
 .is-bleak{background:linear-gradient(180deg,#161921 0%,#0e1017 100%)}
 .is-bleak .instrument{border-color:rgba(160,170,210,.4)}
+.is-sprat{background:linear-gradient(180deg,#12191f 0%,#0b1116 100%)}
+.is-sprat .instrument{border-color:rgba(135,175,200,.4)}
+.is-anchovy{background:linear-gradient(180deg,#181213 0%,#100b0c 100%)}
+.is-anchovy .instrument{border-color:rgba(200,140,140,.4)}
+.is-herring{background:linear-gradient(180deg,#14181e 0%,#0d1015 100%)}
+.is-herring .instrument{border-color:rgba(150,170,200,.4)}
 .is-oatmeal{background:linear-gradient(180deg,#1d1912,#2f291e 50%,#433a2a)}
 .is-oatmeal .instrument{border-color:rgba(215,195,155,.4)}
 .is-thyme{background:linear-gradient(180deg,#121a14,#1c2a20 50%,#28392c)}

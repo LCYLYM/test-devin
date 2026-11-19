@@ -3762,6 +3762,9 @@
     if (params.get('minnow') === '1') { document.body.classList.add('is-minnow'); }
     if (params.get('gudgeon') === '1') { document.body.classList.add('is-gudgeon'); }
     if (params.get('bleak') === '1') { document.body.classList.add('is-bleak'); }
+    if (params.get('sprat') === '1') { document.body.classList.add('is-sprat'); }
+    if (params.get('anchovy') === '1') { document.body.classList.add('is-anchovy'); }
+    if (params.get('herring') === '1') { document.body.classList.add('is-herring'); }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -4882,6 +4885,9 @@
         if (params.get('minnow') === '1') u.searchParams.set('minnow', '1');
         if (params.get('gudgeon') === '1') u.searchParams.set('gudgeon', '1');
         if (params.get('bleak') === '1') u.searchParams.set('bleak', '1');
+        if (params.get('sprat') === '1') u.searchParams.set('sprat', '1');
+        if (params.get('anchovy') === '1') u.searchParams.set('anchovy', '1');
+        if (params.get('herring') === '1') u.searchParams.set('herring', '1');
       if (params.get('tile') === '1') u.searchParams.set('tile', '1');
       if (params.get('outline') === '1') u.searchParams.set('outline', '1');
       if (params.get('stripe') === '1') u.searchParams.set('stripe', '1');
