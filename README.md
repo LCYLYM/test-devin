@@ -130,6 +130,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `tap` | `1` 点金额蹦出金币彩蛋 |
 | `holiday` | `1` 下个法定节假日倒计时（放假中显示节名） |
 | `cny` | `1` 春节倒计时徽章（春节快乐 🧧） |
+| `yuan` | `1` 距下一个整元倒计时徽章 |
+| `pace` | `1` 实时时薪徽章 |
+| `blink` | `1` 金额末尾闪烁光标 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 

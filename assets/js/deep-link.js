@@ -671,6 +671,36 @@
         setTimeout(function () { sp.remove(); }, 900);
       });
     }
+    if (params.get('yuan') === '1') {
+      var yb = document.getElementById('yuanBadge'), yl = document.getElementById('yuanLeft');
+      if (yb && yl) {
+        var yFill = function () {
+          var ys = window.SalaryApp && window.SalaryApp.getState && window.SalaryApp.getState();
+          var sn = ys && ys.snapshot;
+          if (!sn || !sn.daySalary) { yl.textContent = '—'; return; }
+          var perSec = sn.daySalary / ((sn.hoursPerDay || 8) * 3600);
+          var frac = (sn.todayEarned || 0) % 1;
+          var secs = perSec > 0 ? Math.max(0, Math.ceil((1 - frac) / perSec)) : 0;
+          yl.textContent = secs >= 3600 ? Math.round(secs / 60) + 'm' : secs + 's';
+        };
+        yb.hidden = false; yFill(); setInterval(yFill, 1000);
+      }
+    }
+    if (params.get('pace') === '1') {
+      var pb = document.getElementById('paceBadge'), pv = document.getElementById('paceVal');
+      if (pb && pv) {
+        var pFill = function () {
+          var ps = window.SalaryApp && window.SalaryApp.getState && window.SalaryApp.getState();
+          var sn = ps && ps.snapshot;
+          if (!sn || !sn.daySalary) { pv.textContent = '—'; return; }
+          var cur = ps.currency || { rate: 1, symbol: '¥' };
+          var hourly = sn.daySalary * (cur.rate || 1) / (sn.hoursPerDay || 8);
+          pv.textContent = (cur.symbol || '¥') + (hourly >= 100 ? Math.round(hourly) : hourly.toFixed(1));
+        };
+        pb.hidden = false; pFill(); setInterval(pFill, 60000);
+      }
+    }
+    if (params.get('blink') === '1') document.body.dataset.blink = '1';
     if (params.get('zodiac') === '1') {
       var zb = document.getElementById('zodiacBadge');
       if (zb) {
@@ -1098,6 +1128,9 @@
       if (params.get('tap') === '1') u.searchParams.set('tap', '1');
       if (params.get('holiday') === '1') u.searchParams.set('holiday', '1');
       if (params.get('cny') === '1') u.searchParams.set('cny', '1');
+      if (params.get('yuan') === '1') u.searchParams.set('yuan', '1');
+      if (params.get('pace') === '1') u.searchParams.set('pace', '1');
+      if (params.get('blink') === '1') u.searchParams.set('blink', '1');
       params.forEach(function (v, k) { if (k.indexOf('utm_') === 0 && v) u.searchParams.set(k, v.slice(0, 64)); });
       var text = u.toString();
       (navigator.clipboard ? navigator.clipboard.writeText(text) : Promise.reject())
