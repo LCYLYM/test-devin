@@ -409,6 +409,27 @@
     if (params.get('invert') === '1') document.documentElement.style.filter = 'invert(1) hue-rotate(180deg)';
     if (params.get('bw') === '1') document.documentElement.style.filter = 'grayscale(1)';
     if (params.get('sepia') === '1') document.documentElement.style.filter = 'sepia(.85)';
+    if (params.get('contrast') === '1') document.body.dataset.contrast = '1';
+    if (params.get('spark') === '1') {
+      window.__spark = true;
+      var scv = document.getElementById('sparkCanvas'); if (scv) scv.hidden = false;
+    }
+    var dimM = /^(\d{1,2})-(\d{1,2})$/.exec(params.get('dim') || '');
+    if (dimM) {
+      var dh = +dimM[1], de = +dimM[2];
+      if (dh >= 0 && dh <= 24 && de >= 0 && de <= 24) {
+        var dimEl = document.createElement('div');
+        dimEl.setAttribute('aria-hidden', 'true');
+        dimEl.style.cssText = 'position:fixed;inset:0;background:#000;opacity:0;pointer-events:none;transition:opacity 1.2s;z-index:40';
+        document.body.appendChild(dimEl);
+        var dimCheck = function () {
+          var h = new Date().getHours();
+          var on = dh <= de ? (h >= dh && h < de) : (h >= dh || h < de);
+          dimEl.style.opacity = on ? '.55' : '0';
+        };
+        dimCheck(); setInterval(dimCheck, 60000);
+      }
+    }
     var anniMatch = /^(\d{1,2})[-./](\d{1,2})$/.exec(params.get('anni') || '');
     if (anniMatch) {
       var am = +anniMatch[1], ad = +anniMatch[2];
@@ -774,6 +795,9 @@
       if (params.get('friday') === '1') u.searchParams.set('friday', '1');
       var bp = params.get('bday'); if (bp) u.searchParams.set('bday', bp);
       var seap = params.get('season'); if (seap) u.searchParams.set('season', seap);
+      if (window.__spark) u.searchParams.set('spark', '1');
+      if (document.body.dataset.contrast === '1') u.searchParams.set('contrast', '1');
+      var dimp = params.get('dim'); if (dimp) u.searchParams.set('dim', dimp);
       var text = u.toString();
       (navigator.clipboard ? navigator.clipboard.writeText(text) : Promise.reject())
         .then(function () { btn.textContent = '已复制 ✓'; setTimeout(function(){ btn.textContent='复制当前链接'; }, 1500); })

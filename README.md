@@ -96,6 +96,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `season` | `auto` 按季节自动特效（冬雪·春樱·夏雨） |
 | `friday` | `1` 周五倒计时徽章 |
 | `bday` | `MM-DD` 生日倒计时徽章（当天🎂） |
+| `spark` | `1` 今日收入迷你走势图 |
+| `dim` | `22-6` 该时段自动调暗 55%（夜间保护） |
+| `contrast` | `1` 高对比模式（无障碍） |
 
 币种现在共 12 种：CNY/USD/EUR/JPY/KRW/HKD/VND/IDR/GBP/SGD/AUD + ZIM 趣味。
 

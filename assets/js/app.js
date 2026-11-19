@@ -234,6 +234,23 @@
         cnEl.textContent=(data.symbol||'')+String(Math.abs(data.displayAmount).toFixed(data.decimals??2)).split('').map(ch=>ch>='0'&&ch<='9'?CN[+ch]:(ch==='.'?'点':ch)).join('');
       }else cnEl.hidden=true;
     }
+    if(window.__spark&&data.working&&data.snapshot){
+      const sc=$('sparkCanvas');
+      if(sc){
+        const buf=window.__spBuf=window.__spBuf||[];
+        if(!buf.length||buf[buf.length-1].d!==data.snapshot.dayKey){buf.length=0;buf.push({d:data.snapshot.dayKey,v:data.displayAmount,t:tick});}
+        if(tick-buf[buf.length-1].t>=2000)buf.push({d:data.snapshot.dayKey,v:data.displayAmount,t:tick});
+        if(buf.length>240)buf.shift();
+        const ctx2=sc.getContext('2d'),W=sc.width=Math.max(1,sc.clientWidth*2),H=sc.height=36;
+        ctx2.clearRect(0,0,W,H);
+        if(buf.length>1){
+          const v0=buf[0].v,mx=Math.max.apply(null,buf.map(p=>p.v-v0).concat([1e-9]));
+          ctx2.strokeStyle='rgba(125,211,252,.9)';ctx2.lineWidth=2;ctx2.lineJoin='round';ctx2.beginPath();
+          buf.forEach((p,i)=>{const x=i/(buf.length-1)*W,y=H-3-(p.v-v0)/mx*(H-6);i?ctx2.lineTo(x,y):ctx2.moveTo(x,y);});
+          ctx2.stroke();
+        }
+      }
+    }
     // Keep the compact date suited to both desktop and phone layouts.
     const date=data.now;
     setText('currentDate',(date.getMonth()+1)+'月'+date.getDate()+'日 · 周'+'日一二三四五六'[date.getDay()]);
