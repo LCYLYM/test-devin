@@ -955,6 +955,25 @@
     if (params.get('tile') === '1') document.body.dataset.tile = '1';
     if (params.get('outline') === '1') document.body.dataset.outline = '1';
     if (params.get('stripe') === '1') document.body.dataset.stripe = '1';
+    if (params.get('bezel') === '1') document.body.dataset.bezel = '1';
+    var hueP = Number(params.get('hue'));
+    if (isFinite(hueP) && params.get('hue') !== null && params.get('hue') !== '') {
+      document.body.style.setProperty('--hue-rot', ((hueP % 360) + 360) % 360 + 'deg');
+      document.body.dataset.hue = '1';
+    }
+    var bornM = /^\d{4}-\d{1,2}-\d{1,2}$/.test(params.get('born') || '') ? params.get('born') : null;
+    if (bornM) {
+      var bParts = bornM.split('-').map(Number);
+      var bDate = new Date(bParts[0], bParts[1] - 1, bParts[2]);
+      var bb = document.getElementById('bornBadge'), bd = document.getElementById('bornDays');
+      if (bb && bd && !isNaN(bDate.getTime()) && bDate.getTime() < Date.now()) {
+        var bFill = function () {
+          bd.textContent = String(Math.floor((Date.now() - bDate.getTime()) / 864e5));
+        };
+        bb.title = bParts[0] + '年' + bParts[1] + '月' + bParts[2] + '日出生';
+        bb.hidden = false; bFill(); setInterval(bFill, 60000);
+      }
+    }
     if (params.get('disco') === '1') document.body.dataset.disco = '1';
     if (params.get('wiggle') === '1') document.body.dataset.wiggle = '1';
     if (params.get('rays') === '1' && !(window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches)) {
@@ -1450,6 +1469,9 @@
       if (params.get('tile') === '1') u.searchParams.set('tile', '1');
       if (params.get('outline') === '1') u.searchParams.set('outline', '1');
       if (params.get('stripe') === '1') u.searchParams.set('stripe', '1');
+      if (params.get('bezel') === '1') u.searchParams.set('bezel', '1');
+      var hup = params.get('hue'); if (hup) u.searchParams.set('hue', hup.slice(0, 5));
+      var bop = params.get('born'); if (bop) u.searchParams.set('born', bop.slice(0, 10));
       if (params.get('disco') === '1') u.searchParams.set('disco', '1');
       if (params.get('wiggle') === '1') u.searchParams.set('wiggle', '1');
       if (params.get('rays') === '1') u.searchParams.set('rays', '1');
