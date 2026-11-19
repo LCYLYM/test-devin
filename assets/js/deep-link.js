@@ -3191,6 +3191,15 @@
     if (params.get('aprilfools') === '1') dayCountdown('aprilfoolsBadge', 'aprilfoolsDays', 4, 1);
     if (params.get('double12') === '1') dayCountdown('double12Badge', 'double12Days', 12, 12);
     if (params.get('lastday') === '1') dayCountdown('lastdayBadge', 'lastdayDays', 12, 31);
+    if (params.get('oatmeal') === '1') {
+      document.body.classList.add('is-oatmeal');
+    }
+    if (params.get('thyme') === '1') {
+      document.body.classList.add('is-thyme');
+    }
+    if (params.get('russet') === '1') {
+      document.body.classList.add('is-russet');
+    }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -4023,6 +4032,9 @@
       if (params.get('aprilfools') === '1') u.searchParams.set('aprilfools', '1');
       if (params.get('double12') === '1') u.searchParams.set('double12', '1');
       if (params.get('lastday') === '1') u.searchParams.set('lastday', '1');
+      if (params.get('oatmeal') === '1') u.searchParams.set('oatmeal', '1');
+      if (params.get('thyme') === '1') u.searchParams.set('thyme', '1');
+      if (params.get('russet') === '1') u.searchParams.set('russet', '1');
       if (params.get('tile') === '1') u.searchParams.set('tile', '1');
       if (params.get('outline') === '1') u.searchParams.set('outline', '1');
       if (params.get('stripe') === '1') u.searchParams.set('stripe', '1');

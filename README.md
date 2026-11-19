@@ -590,6 +590,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `aprilfools` | `1` 愚人节倒计时 |
 | `double12` | `1` 双十二倒计时 |
 | `lastday` | `1` 年末倒计时 |
+| `oatmeal` | `1` 燕麦配色 |
+| `thyme` | `1` 百里香配色 |
+| `russet` | `1` 赤褐配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 
