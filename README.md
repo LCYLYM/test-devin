@@ -1139,6 +1139,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `murre` | `1` 海鸦配色 |
 | `guillemot` | `1` 海鸽配色 |
 | `razorbill` | `1` 刀嘴海雀配色 |
+| `auklet` | `1` 小海雀配色 |
+| `shearwater` | `1` 鹱配色 |
+| `petrel` | `1` 海燕配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 
