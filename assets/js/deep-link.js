@@ -299,19 +299,25 @@
         requestAnimationFrame(mFrame);
       })();
     }
-    if (['snow', 'sakura', 'rain'].indexOf(fxParam) >= 0 && !(window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches)) {
+    if (['snow', 'sakura', 'rain', 'stars'].indexOf(fxParam) >= 0 && !(window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches)) {
       var fxc = document.createElement('canvas');
       fxc.style.cssText = 'position:fixed;inset:0;width:100%;height:100%;pointer-events:none;opacity:.65';
       document.body.prepend(fxc);
       var fxctx = fxc.getContext('2d');
-      var parts = [], N = fxParam === 'rain' ? 90 : 45;
+      var parts = [], N = fxParam === 'rain' ? 90 : fxParam === 'stars' ? 70 : 45;
       function fxResize(){ fxc.width = innerWidth; fxc.height = innerHeight; }
       fxResize(); window.addEventListener('resize', fxResize);
-      for (var i = 0; i < N; i++) parts.push({x: Math.random() * innerWidth, y: Math.random() * innerHeight, r: 1 + Math.random() * (fxParam === 'rain' ? 1 : 3.2), v: fxParam === 'rain' ? 9 + Math.random() * 6 : 0.6 + Math.random() * 1.4, s: Math.random() * 6.28, rot: Math.random() * 6.28, vr: (Math.random() - .5) * .06});
+      for (var i = 0; i < N; i++) parts.push({x: Math.random() * innerWidth, y: Math.random() * innerHeight, r: 1 + Math.random() * (fxParam === 'rain' ? 1 : 3.2), v: fxParam === 'rain' ? 9 + Math.random() * 6 : 0.6 + Math.random() * 1.4, s: Math.random() * 6.28, rot: Math.random() * 6.28, vr: (Math.random() - .5) * .06, ph: Math.random() * 6.28});
       (function fxFrame(){
         fxctx.clearRect(0, 0, fxc.width, fxc.height);
         for (var i2 = 0; i2 < parts.length; i2++) {
           var q = parts[i2];
+          if (fxParam === 'stars') {
+            q.ph += 0.02;
+            fxctx.fillStyle = 'rgba(240,246,255,' + (0.2 + 0.6 * Math.abs(Math.sin(q.ph))).toFixed(2) + ')';
+            fxctx.beginPath(); fxctx.arc(q.x, q.y, q.r * 0.8, 0, 6.3); fxctx.fill();
+            continue;
+          }
           q.y += q.v; q.x += Math.sin(q.s += 0.01) * (fxParam === 'rain' ? 0.4 : 0.7); q.rot += q.vr;
           if (q.y > innerHeight + 12) { q.y = -12; q.x = Math.random() * innerWidth; }
           if (fxParam === 'snow') { fxctx.fillStyle = 'rgba(240,246,255,.85)'; fxctx.beginPath(); fxctx.arc(q.x, q.y, q.r, 0, 6.3); fxctx.fill(); }
@@ -471,6 +477,13 @@
         } else if (fd) fd.textContent = String(fdays);
       }
     }
+    if (params.get('visits') === '1') {
+      var vc = 0;
+      try { vc = (parseInt(localStorage.getItem('salaryFlow.visits'), 10) || 0) + 1; localStorage.setItem('salaryFlow.visits', String(vc)); } catch (e) { vc = 1; }
+      var vb2 = document.getElementById('visitsBadge');
+      if (vb2) { vb2.hidden = false; var vn = document.getElementById('visitsCount'); if (vn) vn.textContent = String(vc); }
+    }
+    if (params.get('chime') === '1') window.__chime = true;
     var bdayMatch = /^(\d{1,2})[-./](\d{1,2})$/.exec(params.get('bday') || '');
     if (bdayMatch) {
       var bm = +bdayMatch[1], bd = +bdayMatch[2];
@@ -798,6 +811,8 @@
       if (window.__spark) u.searchParams.set('spark', '1');
       if (document.body.dataset.contrast === '1') u.searchParams.set('contrast', '1');
       var dimp = params.get('dim'); if (dimp) u.searchParams.set('dim', dimp);
+      if (params.get('visits') === '1') u.searchParams.set('visits', '1');
+      if (window.__chime) u.searchParams.set('chime', '1');
       var text = u.toString();
       (navigator.clipboard ? navigator.clipboard.writeText(text) : Promise.reject())
         .then(function () { btn.textContent = '已复制 ✓'; setTimeout(function(){ btn.textContent='复制当前链接'; }, 1500); })

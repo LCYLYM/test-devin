@@ -234,6 +234,10 @@
         cnEl.textContent=(data.symbol||'')+String(Math.abs(data.displayAmount).toFixed(data.decimals??2)).split('').map(ch=>ch>='0'&&ch<='9'?CN[+ch]:(ch==='.'?'点':ch)).join('');
       }else cnEl.hidden=true;
     }
+    if(window.__chime&&data.working&&audioReady){
+      const hr=data.now.getHours();
+      if(window.__lastChimeHr!==hr){window.__lastChimeHr=hr;if(data.now.getMinutes()===0)playTick(true);}
+    }
     if(window.__spark&&data.working&&data.snapshot){
       const sc=$('sparkCanvas');
       if(sc){

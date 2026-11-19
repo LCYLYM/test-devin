@@ -99,10 +99,12 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `spark` | `1` 今日收入迷你走势图 |
 | `dim` | `22-6` 该时段自动调暗 55%（夜间保护） |
 | `contrast` | `1` 高对比模式（无障碍） |
+| `visits` | `1` 累计打开次数徽章（localStorage 计数） |
+| `chime` | `1` 整点报时音（需先开 `?sound=1`） |
 
 币种现在共 12 种：CNY/USD/EUR/JPY/KRW/HKD/VND/IDR/GBP/SGD/AUD + ZIM 趣味。
 
-`fx` 还可选 `matrix`（打工人字符雨）。
+`fx` 可选 `snow`/`sakura`/`rain`/`matrix`（字符雨）/`stars`（闪烁星空）。
 
 彩蛋：页面里按 ↑↑↓↓←→←→BA 解锁暴富模式（KONAMI）。
 
