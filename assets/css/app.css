@@ -1202,6 +1202,13 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .is-arctic .instrument{border-color:rgba(125,211,252,.4)}
 .is-vapor{background:linear-gradient(180deg,#1a1030,#241545 55%,#301a52)}
 .is-vapor .instrument{border-color:rgba(232,121,249,.4)}
+.payday.ampm{color:#fcd34d}
+.is-olive{background:linear-gradient(180deg,#1a2013,#232b18)}
+.is-olive .instrument{border-color:rgba(163,230,53,.35)}
+.is-plasma{background:radial-gradient(80% 80% at 20% 30%,rgba(147,51,234,.25),transparent),radial-gradient(80% 80% at 80% 70%,rgba(236,72,153,.2),transparent),#0e0a1a;background-size:200% 200%;animation:plasmaDrift 16s ease-in-out infinite}
+@keyframes plasmaDrift{0%,100%{background-position:0% 0%,100% 100%,0 0}50%{background-position:100% 100%,0% 0%,0 0}}
+.is-focus .payday.ampm{display:none}
+@media (prefers-reduced-motion:reduce){.is-plasma{animation:none}}
 @keyframes hueSpin{to{filter:hue-rotate(360deg)}}
 .is-hue .instrument{animation:hueSpin 12s linear infinite}
 @media (prefers-reduced-motion:reduce){.is-hue .instrument{animation:none}}

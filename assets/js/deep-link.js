@@ -2459,6 +2459,24 @@
     if (params.get('vapor') === '1') {
       document.body.classList.add('is-vapor');
     }
+    if (params.get('am') === '1') {
+      var pB = document.getElementById('ampmBadge'), pV = document.getElementById('ampmVal');
+      if (pB && pV) {
+        var pUpd = function () {
+          var h = new Date().getHours();
+          pV.textContent = h < 12 ? '上午 ' + (h === 0 ? 12 : h) + ' 点' : '下午 ' + (h === 12 ? 12 : h - 12) + ' 点';
+          pB.hidden = false;
+        };
+        pUpd();
+        setInterval(pUpd, 60000);
+      }
+    }
+    if (params.get('olive') === '1') {
+      document.body.classList.add('is-olive');
+    }
+    if (params.get('plasma') === '1') {
+      document.body.classList.add('is-plasma');
+    }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -3087,6 +3105,9 @@
       if (params.get('mocha') === '1') u.searchParams.set('mocha', '1');
       if (params.get('arctic') === '1') u.searchParams.set('arctic', '1');
       if (params.get('vapor') === '1') u.searchParams.set('vapor', '1');
+      if (params.get('am') === '1') u.searchParams.set('am', '1');
+      if (params.get('olive') === '1') u.searchParams.set('olive', '1');
+      if (params.get('plasma') === '1') u.searchParams.set('plasma', '1');
       if (params.get('tile') === '1') u.searchParams.set('tile', '1');
       if (params.get('outline') === '1') u.searchParams.set('outline', '1');
       if (params.get('stripe') === '1') u.searchParams.set('stripe', '1');

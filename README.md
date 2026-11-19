@@ -386,6 +386,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `mocha` | `1` 摩卡配色 |
 | `arctic` | `1` 极地配色 |
 | `vapor` | `1` 蒸汽波配色 |
+| `am` | `1` 上午/下午徽章 |
+| `olive` | `1` 橄榄配色 |
+| `plasma` | `1` 等离子背景 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 
