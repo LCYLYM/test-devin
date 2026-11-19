@@ -482,6 +482,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `tulip` | `1` 郁金香配色 |
 | `birch` | `1` 白桦配色 |
 | `smoke` | `1` 烟灰配色 |
+| `lotus` | `1` 莲花配色 |
+| `ebony` | `1` 乌木配色 |
+| `sprout` | `1` 嫩芽配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 
