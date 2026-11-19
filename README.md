@@ -1019,6 +1019,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `tiger` | `1` 老虎配色 |
 | `leopard` | `1` 豹配色 |
 | `jaguar` | `1` 美洲豹配色 |
+| `lion` | `1` 狮子配色 |
+| `cheetah` | `1` 猎豹配色 |
+| `panther` | `1` 黑豹配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 

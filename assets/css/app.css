@@ -2236,6 +2236,12 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .is-leopard .instrument{border-color:rgba(220,170,90,.4)}
 .is-jaguar{background:linear-gradient(180deg,#191510 0%,#120f0a 100%)}
 .is-jaguar .instrument{border-color:rgba(210,165,95,.4)}
+.is-lion{background:linear-gradient(180deg,#1e160d 0%,#151008 100%)}
+.is-lion .instrument{border-color:rgba(230,175,80,.4)}
+.is-cheetah{background:linear-gradient(180deg,#1d160f 0%,#15100a 100%)}
+.is-cheetah .instrument{border-color:rgba(225,165,85,.4)}
+.is-panther{background:linear-gradient(180deg,#131318 0%,#0d0d11 100%)}
+.is-panther .instrument{border-color:rgba(150,155,190,.4)}
 .is-oatmeal{background:linear-gradient(180deg,#1d1912,#2f291e 50%,#433a2a)}
 .is-oatmeal .instrument{border-color:rgba(215,195,155,.4)}
 .is-thyme{background:linear-gradient(180deg,#121a14,#1c2a20 50%,#28392c)}
