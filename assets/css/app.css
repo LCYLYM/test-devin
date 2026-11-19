@@ -1207,6 +1207,12 @@ body[data-hover] .payday:hover{transform:translateY(-3px)}
 .is-clover .instrument{border-color:rgba(125,205,135,.4)}
 .is-brick{background:linear-gradient(180deg,#220e0a,#361a12 55%,#4a241a)}
 .is-brick .instrument{border-color:rgba(220,120,90,.4)}
+.is-rosewood{background:linear-gradient(180deg,#1e0e14,#2e1820 55%,#40222c)}
+.is-rosewood .instrument{border-color:rgba(215,120,145,.4)}
+.is-marsh{background:linear-gradient(180deg,#121a0e,#1e2816 55%,#2a361e)}
+.is-marsh .instrument{border-color:rgba(160,190,110,.38)}
+.is-iceberg{background:linear-gradient(180deg,#0c1c26,#142e3c 55%,#1c4050)}
+.is-iceberg .instrument{border-color:rgba(150,220,240,.45)}
 .is-focus .payday.morale{display:none}
 body[data-pillar] .page-shell{border-left:1px solid rgba(var(--accent-rgb,103,228,148),.22);border-right:1px solid rgba(var(--accent-rgb,103,228,148),.22)}
 body[data-gloom]{--bg:#0a0c0b}

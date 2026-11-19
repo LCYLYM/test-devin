@@ -509,6 +509,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `midnight` | `1` 午夜配色 |
 | `clover` | `1` 三叶草配色 |
 | `brick` | `1` 砖红配色 |
+| `rosewood` | `1` 紫檀配色 |
+| `marsh` | `1` 沼泽配色 |
+| `iceberg` | `1` 冰山配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 

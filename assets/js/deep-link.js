@@ -2909,6 +2909,15 @@
     if (params.get('brick') === '1') {
       document.body.classList.add('is-brick');
     }
+    if (params.get('rosewood') === '1') {
+      document.body.classList.add('is-rosewood');
+    }
+    if (params.get('marsh') === '1') {
+      document.body.classList.add('is-marsh');
+    }
+    if (params.get('iceberg') === '1') {
+      document.body.classList.add('is-iceberg');
+    }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -3660,6 +3669,9 @@
       if (params.get('midnight') === '1') u.searchParams.set('midnight', '1');
       if (params.get('clover') === '1') u.searchParams.set('clover', '1');
       if (params.get('brick') === '1') u.searchParams.set('brick', '1');
+      if (params.get('rosewood') === '1') u.searchParams.set('rosewood', '1');
+      if (params.get('marsh') === '1') u.searchParams.set('marsh', '1');
+      if (params.get('iceberg') === '1') u.searchParams.set('iceberg', '1');
       if (params.get('tile') === '1') u.searchParams.set('tile', '1');
       if (params.get('outline') === '1') u.searchParams.set('outline', '1');
       if (params.get('stripe') === '1') u.searchParams.set('stripe', '1');
