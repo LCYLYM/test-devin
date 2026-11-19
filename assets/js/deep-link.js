@@ -314,7 +314,7 @@
         requestAnimationFrame(mFrame);
       })();
     }
-    if (['snow', 'sakura', 'rain', 'stars', 'leaves', 'bubble', 'ember', 'firefly', 'dust', 'meteor', 'warp', 'cloud', 'paper', 'fireworks', 'petal', 'fish', 'heart'].indexOf(fxParam) >= 0 && params.get('eco') !== '1' && !(window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches)) {
+    if (['snow', 'sakura', 'rain', 'stars', 'leaves', 'bubble', 'ember', 'firefly', 'dust', 'meteor', 'warp', 'cloud', 'paper', 'fireworks', 'petal', 'fish', 'heart', 'comet'].indexOf(fxParam) >= 0 && params.get('eco') !== '1' && !(window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches)) {
       var fxc = document.createElement('canvas');
       fxc.className = 'fx-layer';
       fxc.style.cssText = 'position:fixed;inset:0;width:100%;height:100%;pointer-events:none;opacity:.65';
@@ -431,6 +431,19 @@
             fxctx.bezierCurveTo(5, 9, 10, 6, 10, 2);
             fxctx.bezierCurveTo(10, -3, 5, -3, 0, 3);
             fxctx.fill(); fxctx.restore();
+            continue;
+          }
+          if (fxParam === 'comet') {
+            q.x += q.v * 3.5; q.y += q.v * 1.4;
+            if (q.x > innerWidth + 60 || q.y > innerHeight + 60) {
+              q.x = Math.random() * innerWidth * 0.5 - 60; q.y = Math.random() * innerHeight * 0.3 - 40;
+            }
+            var cgr = fxctx.createLinearGradient(q.x - q.v * 30, q.y - q.v * 12, q.x, q.y);
+            cgr.addColorStop(0, 'rgba(186,230,253,0)');
+            cgr.addColorStop(1, 'rgba(186,230,253,.8)');
+            fxctx.strokeStyle = cgr; fxctx.lineWidth = q.r * 0.8;
+            fxctx.beginPath(); fxctx.moveTo(q.x - q.v * 30, q.y - q.v * 12); fxctx.lineTo(q.x, q.y); fxctx.stroke();
+            fxctx.fillStyle = '#e0f2fe'; fxctx.beginPath(); fxctx.arc(q.x, q.y, q.r * 0.6, 0, 6.3); fxctx.fill();
             continue;
           }
           if (fxParam === 'bubble') {
@@ -2033,6 +2046,23 @@
       var inst5 = document.querySelector('.instrument-card, .instrument');
       (inst5 || document.body).appendChild(cam);
     }
+    if (params.get('lvl') === '1') {
+      var lvb = document.getElementById('lvlBadge'), lvv = document.getElementById('lvlVal');
+      if (lvb && lvv) {
+        var lvUpd = function () {
+          var st = window.SalaryApp && window.SalaryApp.getState && window.SalaryApp.getState();
+          var p = st && st.snapshot && st.snapshot.progress;
+          if (p != null) {
+            lvv.textContent = p >= 1 ? '王者' : p >= 0.75 ? '钻石' : p >= 0.5 ? '黄金' : p >= 0.25 ? '白银' : '青铜';
+            lvb.hidden = false;
+          }
+        };
+        lvUpd(); setInterval(lvUpd, 2000);
+      }
+    }
+    if (params.get('dots') === '1') {
+      document.body.classList.add('is-dots');
+    }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -2728,6 +2758,8 @@
       if (params.get('sky') === '1') u.searchParams.set('sky', '1');
       if (params.get('bob') === '1') u.searchParams.set('bob', '1');
       if (params.get('cam') === '1') u.searchParams.set('cam', '1');
+      if (params.get('lvl') === '1') u.searchParams.set('lvl', '1');
+      if (params.get('dots') === '1') u.searchParams.set('dots', '1');
       if (params.get('rays') === '1') u.searchParams.set('rays', '1');
       if (params.get('flat') === '1') u.searchParams.set('flat', '1');
       var idl = params.get('idle'); if (idl) u.searchParams.set('idle', idl);

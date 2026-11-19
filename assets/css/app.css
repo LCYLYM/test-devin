@@ -1141,6 +1141,8 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .payday.mar{color:#86efac}
 .payday.idx{color:#93c5fd}
 .payday.chil{color:#67e8f9}
+.payday.lvl{color:#fbbf24}
+.is-dots{background-image:radial-gradient(rgba(148,163,184,.18) 1px,transparent 1px);background-size:22px 22px}
 .sky-dawn{background-image:linear-gradient(180deg,rgba(251,146,60,.14),rgba(244,114,182,.1) 55%,transparent)}
 .sky-day{background-image:linear-gradient(180deg,rgba(56,189,248,.12),transparent 60%)}
 .sky-dusk{background-image:linear-gradient(180deg,rgba(129,140,248,.14),rgba(251,113,133,.1) 55%,transparent)}

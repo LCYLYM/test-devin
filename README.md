@@ -321,6 +321,8 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `sky` | `1` 按时段切换天空渐变色 |
 | `bob` | `1` 徽章轮流浮起 |
 | `cam` | `1` 取景框四角标记 |
+| `lvl` | `1` 打工人勋章等级徽章 |
+| `dots` | `1` 点阵背景 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 
