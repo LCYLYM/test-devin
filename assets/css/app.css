@@ -556,3 +556,7 @@ dialog.drawer[open] { animation: drawer-arrive 300ms cubic-bezier(.2,.75,.25,1) 
   body{background:#fff !important}
   .instrument{border:1px solid #ddd}
 }
+
+/* keyboard hint */
+.kbd-hint{font-size:11px;color:#5c6660;letter-spacing:.3px}
+@media(max-width:640px){.kbd-hint{display:none}}

@@ -3,6 +3,8 @@
   
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
   <meta name="theme-color" content="#131415">
+  <meta name="generator" content="薪动 1.1.0">
+  <meta name="application-name" content="薪动">
   <meta name="color-scheme" content="dark">
   <title>薪动 · 每一秒，都算数 — 实时工资秒表</title>
   <meta name="description" content="薪动是一个免费的实时工资计算器：输入月薪，看着收入按秒跳动。支持中国大陆节假日、自定义排班、加班时薪、多币种换算与分享海报。数据只存本地，无需注册。">
@@ -16,8 +18,11 @@
   <meta name="apple-mobile-web-app-title" content="薪动">
   <meta name="format-detection" content="telephone=no">
   <link rel="canonical" href="https://xd.syal.site/">
+  <link rel="author" href="./humans.txt">
+  <link rel="me" href="https://github.com/LCYLYM">
   <link rel="icon" href="./assets/img/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="./assets/img/piggy.webp">
+  <link rel="preconnect" href="https://api.frankfurter.dev" crossorigin>
   <link rel="manifest" href="./site.webmanifest">
   <link rel="search" type="application/opensearchdescription+xml" title="薪动" href="./opensearch.xml">
   <meta property="og:type" content="website">
@@ -363,7 +368,7 @@ SOFTWARE.
     <details class="overtime-disclosure" id="overtimeDisclosure"><summary><span><svg class="icon"><use href="#icon-clock-3"></use></svg>加班后，每小时还值多少？</span><span class="overtime-summary-value" id="overtimeSummaryValue">展开</span><svg class="icon disclosure-chevron"><use href="#icon-chevron-down"></use></svg></summary><section class="overtime-strip entrance" aria-label="加班时薪模拟"><div class="overtime-simulator"><div class="overtime-control-label"><label for="overtimeRange">每天多加班 <strong id="overtimeValue">0</strong> 小时</label><button class="text-btn" data-open="overtimeDialog" id="overtimeRecordButton"><span id="overtimeRecordLabel">记录加班</span><svg class="icon"><use href="#icon-chevron-right"></use></svg></button></div><input id="overtimeRange" type="range" min="0" max="8" step="0.5" value="0" aria-describedby="overtimeScenarioNote" style="--range-progress: 0%;"><div class="range-ticks"><span>准点下班</span><span>4h</span><span>8h</span></div></div><div class="overtime-result"><div><span>加班后时薪</span><div class="actual-hourly"><strong id="compareActual" title="¥25.40 CNY">¥25.40</strong><span class="loss-badge" id="lossBadge">准点下班</span></div><div class="actual-track"><i id="actualBar" style="width: 100%;"></i></div></div><div class="discount-badge"><strong id="discountNumber">10.0</strong><span>折</span></div></div><div class="overtime-extra"><button class="text-btn" id="extraPayToggle">有加班费？<svg class="icon"><use href="#icon-plus"></use></svg></button><span id="overtimeScenarioNote">拖动模拟加班后的时薪</span><div class="extra-pay-field" id="extraPayField" hidden=""><label for="extraPayInput">每天额外（元）</label><input id="extraPayInput" type="number" min="0" max="1000000" step="1" value="0" inputmode="decimal"></div></div><span id="compareStandard" hidden="" title="¥25.40 CNY">¥25.40</span><span id="overtimeImpactNote" hidden="">当前按标准工时计算</span></section></details>
 
     <div class="bottom-row"><button class="text-btn schedule-link" data-open="settingsDialog"><svg class="icon"><use href="#icon-clock-3"></use></svg><span id="scheduleLabel">09:00–12:00 · 13:30–18:00</span><span class="schedule-hours" id="hoursLabel">每天 7.5 小时</span><svg class="icon"><use href="#icon-chevron-right"></use></svg></button><button class="demo-button" id="demoButton" aria-pressed="false"><svg class="icon" aria-hidden="true"><use href="#icon-play"></use></svg>体验涨薪</button></div>
-    <footer class="app-footer"><span class="save-state"><i></i>仅本地保存</span><div><button class="text-btn" data-open="aboutDialog">计算说明</button><span class="footer-dot">·</span><button class="icon-btn" id="soundButton" title="开启收入音效" aria-label="开启收入音效" aria-pressed="false"><svg class="icon" aria-hidden="true"><use href="#icon-volume-x"></use></svg></button><button class="icon-btn fullscreen-button" id="fullscreenButton" title="全屏沉浸" aria-label="全屏沉浸"><svg class="icon"><use href="#icon-maximize"></use></svg></button><button class="text-btn" id="focusButton"><svg class="icon"><use href="#icon-eye"></use></svg>专注模式</button></div><a class="syal-back" href="https://tool.syal.site/" aria-label="返回工具桌">← 工具桌</a><span class="syal-credit">©️ <a href="https://github.com/LCYLYM" target="_blank" rel="noopener noreferrer">生鱼安乐</a></span></footer>
+    <footer class="app-footer"><span class="save-state"><i></i>仅本地保存</span><span class="kbd-hint" aria-hidden="true">/ 输入月薪 · f 全屏 · ? 说明</span><div><button class="text-btn" data-open="aboutDialog">计算说明</button><span class="footer-dot">·</span><button class="icon-btn" id="soundButton" title="开启收入音效" aria-label="开启收入音效" aria-pressed="false"><svg class="icon" aria-hidden="true"><use href="#icon-volume-x"></use></svg></button><button class="icon-btn fullscreen-button" id="fullscreenButton" title="全屏沉浸" aria-label="全屏沉浸"><svg class="icon"><use href="#icon-maximize"></use></svg></button><button class="text-btn" id="focusButton"><svg class="icon"><use href="#icon-eye"></use></svg>专注模式</button></div><a class="syal-back" href="https://tool.syal.site/" aria-label="返回工具桌">← 工具桌</a><span class="syal-credit">©️ <a href="https://github.com/LCYLYM" target="_blank" rel="noopener noreferrer">生鱼安乐</a></span></footer>
 
     <section class="seo-faq" aria-label="常见问题">
       <h2>常见问题</h2>
