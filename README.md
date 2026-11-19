@@ -1043,6 +1043,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `samoyed` | `1` 萨摩耶配色 |
 | `akita` | `1` 秋田犬配色 |
 | `malamute` | `1` 阿拉斯加配色 |
+| `eagle` | `1` 老鹰配色 |
+| `sparrow` | `1` 麻雀配色 |
+| `finch` | `1` 雀配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 
