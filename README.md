@@ -428,6 +428,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `bronze` | `1` 古铜配色 |
 | `fjord` | `1` 峡湾配色 |
 | `blush` | `1` 腮红配色 |
+| `pulse` | `1` 金额脉冲 |
+| `rgb` | `1` RGB 描边循环 |
+| `topo` | `1` 地形线纹背景 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 
