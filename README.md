@@ -1133,6 +1133,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `corncrake` | `1` 长脚秧鸡配色 |
 | `swamphen` | `1` 紫青水鸡配色 |
 | `grebe` | `1` 䴙䴘配色 |
+| `dabchick` | `1` 小䴙䴘配色 |
+| `loon` | `1` 潜鸟配色 |
+| `auk` | `1` 海雀配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 

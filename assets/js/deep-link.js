@@ -4017,6 +4017,9 @@
     if (params.get('corncrake') === '1') { document.body.classList.add('is-corncrake'); }
     if (params.get('swamphen') === '1') { document.body.classList.add('is-swamphen'); }
     if (params.get('grebe') === '1') { document.body.classList.add('is-grebe'); }
+    if (params.get('dabchick') === '1') { document.body.classList.add('is-dabchick'); }
+    if (params.get('loon') === '1') { document.body.classList.add('is-loon'); }
+    if (params.get('auk') === '1') { document.body.classList.add('is-auk'); }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -5392,6 +5395,9 @@
         if (params.get('corncrake') === '1') u.searchParams.set('corncrake', '1');
         if (params.get('swamphen') === '1') u.searchParams.set('swamphen', '1');
         if (params.get('grebe') === '1') u.searchParams.set('grebe', '1');
+        if (params.get('dabchick') === '1') u.searchParams.set('dabchick', '1');
+        if (params.get('loon') === '1') u.searchParams.set('loon', '1');
+        if (params.get('auk') === '1') u.searchParams.set('auk', '1');
       if (params.get('tile') === '1') u.searchParams.set('tile', '1');
       if (params.get('outline') === '1') u.searchParams.set('outline', '1');
       if (params.get('stripe') === '1') u.searchParams.set('stripe', '1');
