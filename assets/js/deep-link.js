@@ -2214,6 +2214,28 @@
     if (params.get('ink') === '1') {
       document.body.classList.add('is-ink');
     }
+    if (params.get('smp') === '1') {
+      var spb = document.getElementById('smpBadge'), spv = document.getElementById('smpVal');
+      if (spb && spv) {
+        var marks = [1, 10, 50, 100, 250, 500, 1000, 5000, 10000];
+        var smUpd = function () {
+          var st = window.SalaryApp && window.SalaryApp.getState && window.SalaryApp.getState();
+          var e = st && st.snapshot && st.snapshot.todayEarned;
+          if (e != null) {
+            var nxt = marks.find(function (m) { return e < m; });
+            spv.textContent = nxt != null ? '下个里程碑 ' + window.SalaryApp.formatMoney(nxt, st.currency) : '已破万';
+            spb.hidden = false;
+          }
+        };
+        smUpd(); setInterval(smUpd, 500);
+      }
+    }
+    if (params.get('twe') === '1' && !(window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches)) {
+      document.body.classList.add('is-twe');
+    }
+    if (params.get('crumb') === '1') {
+      document.body.classList.add('is-crumb');
+    }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -2803,6 +2825,9 @@
       if (params.get('brk') === '1') u.searchParams.set('brk', '1');
       if (params.get('blind') === '1') u.searchParams.set('blind', '1');
       if (params.get('ink') === '1') u.searchParams.set('ink', '1');
+      if (params.get('smp') === '1') u.searchParams.set('smp', '1');
+      if (params.get('twe') === '1') u.searchParams.set('twe', '1');
+      if (params.get('crumb') === '1') u.searchParams.set('crumb', '1');
       if (params.get('tile') === '1') u.searchParams.set('tile', '1');
       if (params.get('outline') === '1') u.searchParams.set('outline', '1');
       if (params.get('stripe') === '1') u.searchParams.set('stripe', '1');

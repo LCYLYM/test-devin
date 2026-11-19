@@ -347,6 +347,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `brk` | `1` 连续工时休息建议徽章 |
 | `blind` | `1` 百叶窗横条 |
 | `ink` | `1` 墨迹晕染背景 |
+| `smp` | `1` 下一入账里程碑徽章 |
+| `twe` | `1` 金额周期辉光 |
+| `crumb` | `1` 虚线描边 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 
