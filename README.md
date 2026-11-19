@@ -1124,6 +1124,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `whimbrel` | `1` 中杓鹬配色 |
 | `oystercatcher` | `1` 蛎鹬配色 |
 | `pratincole` | `1` 燕鸻配色 |
+| `phalarope` | `1` 瓣蹼鹬配色 |
+| `courser` | `1` 走鸻配色 |
+| `coot` | `1` 白骨顶配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 

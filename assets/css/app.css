@@ -2446,6 +2446,12 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .is-oystercatcher .instrument{border-color:rgba(175,175,185,.4)}
 .is-pratincole{background:linear-gradient(180deg,#19150f 0%,#12100b 100%)}
 .is-pratincole .instrument{border-color:rgba(215,175,110,.4)}
+.is-phalarope{background:linear-gradient(180deg,#12191a 0%,#0d1213 100%)}
+.is-phalarope .instrument{border-color:rgba(125,190,190,.4)}
+.is-courser{background:linear-gradient(180deg,#1a1510 0%,#13100b 100%)}
+.is-courser .instrument{border-color:rgba(210,160,100,.4)}
+.is-coot{background:linear-gradient(180deg,#141619 0%,#0e1013 100%)}
+.is-coot .instrument{border-color:rgba(145,160,170,.4)}
 .is-oatmeal{background:linear-gradient(180deg,#1d1912,#2f291e 50%,#433a2a)}
 .is-oatmeal .instrument{border-color:rgba(215,195,155,.4)}
 .is-thyme{background:linear-gradient(180deg,#121a14,#1c2a20 50%,#28392c)}
