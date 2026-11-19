@@ -4050,6 +4050,9 @@
     if (params.get('lionsmane') === '1') { document.body.classList.add('is-lionsmane'); }
     if (params.get('woodblewit') === '1') { document.body.classList.add('is-woodblewit'); }
     if (params.get('cremini') === '1') { document.body.classList.add('is-cremini'); }
+    if (params.get('saffronmilkcap') === '1') { document.body.classList.add('is-saffronmilkcap'); }
+    if (params.get('kingoyster') === '1') { document.body.classList.add('is-kingoyster'); }
+    if (params.get('shimeji') === '1') { document.body.classList.add('is-shimeji'); }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -5458,6 +5461,9 @@
         if (params.get('lionsmane') === '1') u.searchParams.set('lionsmane', '1');
         if (params.get('woodblewit') === '1') u.searchParams.set('woodblewit', '1');
         if (params.get('cremini') === '1') u.searchParams.set('cremini', '1');
+        if (params.get('saffronmilkcap') === '1') u.searchParams.set('saffronmilkcap', '1');
+        if (params.get('kingoyster') === '1') u.searchParams.set('kingoyster', '1');
+        if (params.get('shimeji') === '1') u.searchParams.set('shimeji', '1');
       if (params.get('tile') === '1') u.searchParams.set('tile', '1');
       if (params.get('outline') === '1') u.searchParams.set('outline', '1');
       if (params.get('stripe') === '1') u.searchParams.set('stripe', '1');

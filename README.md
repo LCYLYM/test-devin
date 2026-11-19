@@ -1166,6 +1166,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `lionsmane` | `1` 猴头菇配色 |
 | `woodblewit` | `1` 紫晶蘑配色 |
 | `cremini` | `1` 小褐菇配色 |
+| `saffronmilkcap` | `1` 松乳菇配色 |
+| `kingoyster` | `1` 杏鲍菇配色 |
+| `shimeji` | `1` 蟹味菇配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 
