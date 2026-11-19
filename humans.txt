@@ -1,0 +1,8 @@
+/* TEAM */
+Site: 薪动 · 每一秒，都算数
+Author: 生鱼安乐 (@LCYLYM)
+Location: Earth
+
+/* TECH */
+Stack: vanilla HTML/CSS/JS, zero dependencies, zero tracking
+Deployment: static files only
