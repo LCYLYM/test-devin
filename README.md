@@ -635,6 +635,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `crocus` | `1` 番红花配色 |
 | `magpie` | `1` 喜鹊配色 |
 | `tatami` | `1` 榻榻米配色 |
+| `heron` | `1` 苍鹭配色 |
+| `yuzu` | `1` 柚子配色 |
+| `balsam` | `1` 凤仙花配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 

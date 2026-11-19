@@ -1648,6 +1648,12 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .is-magpie .instrument{border-color:rgba(120,170,215,.4)}
 .is-tatami{background:linear-gradient(180deg,#17140c,#252013 50%,#342d1b)}
 .is-tatami .instrument{border-color:rgba(200,180,120,.4)}
+.is-heron{background:linear-gradient(180deg,#101820,#1a2832 50%,#24384a)}
+.is-heron .instrument{border-color:rgba(140,180,205,.42)}
+.is-yuzu{background:linear-gradient(180deg,#1c1508,#33270f 50%,#4a3a16)}
+.is-yuzu .instrument{border-color:rgba(230,200,90,.42)}
+.is-balsam{background:linear-gradient(180deg,#1e0f16,#331a24 50%,#472633)}
+.is-balsam .instrument{border-color:rgba(215,140,175,.42)}
 .is-forest{background:linear-gradient(180deg,#0d1f14,#12291a)}
 .is-forest .instrument{border-color:rgba(74,222,128,.38)}
 .is-sand{background:linear-gradient(180deg,#241c10,#2f2614)}
