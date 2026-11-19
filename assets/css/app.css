@@ -2560,6 +2560,12 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .is-gypsy .instrument{border-color:rgba(186,148,96,.4)}
 .is-webcap{background:linear-gradient(180deg,#1d1716 0%,#161110 100%)}
 .is-webcap .instrument{border-color:rgba(176,110,96,.4)}
+.is-milkcap{background:linear-gradient(180deg,#1c1812 0%,#161209 100%)}
+.is-milkcap .instrument{border-color:rgba(206,166,96,.4)}
+.is-fieldmushroom{background:linear-gradient(180deg,#191a15 0%,#131410 100%)}
+.is-fieldmushroom .instrument{border-color:rgba(168,170,124,.4)}
+.is-blacktrumpet{background:linear-gradient(180deg,#121214 0%,#0d0d10 100%)}
+.is-blacktrumpet .instrument{border-color:rgba(120,114,142,.4)}
 .is-oatmeal{background:linear-gradient(180deg,#1d1912,#2f291e 50%,#433a2a)}
 .is-oatmeal .instrument{border-color:rgba(215,195,155,.4)}
 .is-thyme{background:linear-gradient(180deg,#121a14,#1c2a20 50%,#28392c)}

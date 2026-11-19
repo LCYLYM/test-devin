@@ -1181,6 +1181,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `dryad` | `1` 鳞孔菌配色 |
 | `gypsy` | `1` 赭盖菇配色 |
 | `webcap` | `1` 丝膜菌配色 |
+| `milkcap` | `1` 奶浆菌配色 |
+| `fieldmushroom` | `1` 四孢蘑菇配色 |
+| `blacktrumpet` | `1` 黑喇叭菌配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 
