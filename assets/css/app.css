@@ -648,3 +648,19 @@ body[data-template=mono] .mono-visual{display:block}
   .paper-card{padding:16px 18px 12px;max-width:100%}
   .paper-head b{font-size:16px}
 }
+
+/* iter-98: deeper per-skin typography/layout differentiation */
+body[data-template=paper] .amount-area{font-family:Georgia,'Times New Roman',serif;letter-spacing:-3px;font-weight:500}
+body[data-template=paper] .money-symbol{color:#a4531f}
+body[data-template=paper] .instrument{border-radius:14px}
+body[data-template=paper] .instrument-footer{border-top:1px dashed #ddd5c4;padding-top:14px}
+body[data-template=paper] .charge-head,.paper-head b{letter-spacing:0}
+body[data-template=paper] .period-tabs button.selected{color:#7a3d16}
+body[data-template=paper] .status-dot{box-shadow:none}
+body[data-template=paper] .summary-item>strong{color:#3d342a}
+body[data-template=paper] .app-footer,body[data-template=paper] .save-state{color:#8a7f6a}
+body[data-template=neon] .amount-area{letter-spacing:-3px}
+body[data-template=neon] .progress-info>strong{color:#7deeff}
+body[data-template=neon] .income-caption{text-shadow:0 0 14px rgba(77,227,255,.4)}
+body[data-template=mono] .instrument-footer{letter-spacing:1px}
+body[data-template=mono] .day-target{display:none}
