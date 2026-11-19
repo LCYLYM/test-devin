@@ -3924,6 +3924,9 @@
     if (params.get('labrador') === '1') { document.body.classList.add('is-labrador'); }
     if (params.get('beagle') === '1') { document.body.classList.add('is-beagle'); }
     if (params.get('dachshund') === '1') { document.body.classList.add('is-dachshund'); }
+    if (params.get('samoyed') === '1') { document.body.classList.add('is-samoyed'); }
+    if (params.get('akita') === '1') { document.body.classList.add('is-akita'); }
+    if (params.get('malamute') === '1') { document.body.classList.add('is-malamute'); }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -5206,6 +5209,9 @@
         if (params.get('labrador') === '1') u.searchParams.set('labrador', '1');
         if (params.get('beagle') === '1') u.searchParams.set('beagle', '1');
         if (params.get('dachshund') === '1') u.searchParams.set('dachshund', '1');
+        if (params.get('samoyed') === '1') u.searchParams.set('samoyed', '1');
+        if (params.get('akita') === '1') u.searchParams.set('akita', '1');
+        if (params.get('malamute') === '1') u.searchParams.set('malamute', '1');
       if (params.get('tile') === '1') u.searchParams.set('tile', '1');
       if (params.get('outline') === '1') u.searchParams.set('outline', '1');
       if (params.get('stripe') === '1') u.searchParams.set('stripe', '1');
