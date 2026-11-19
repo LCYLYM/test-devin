@@ -668,6 +668,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `badger` | `1` 獾配色 |
 | `marlin` | `1` 旗鱼配色 |
 | `banyan` | `1` 榕树配色 |
+| `kestrel` | `1` 红隼配色 |
+| `poppy` | `1` 罂粟配色 |
+| `yak` | `1` 牦牛配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 

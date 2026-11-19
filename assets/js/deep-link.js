@@ -3425,6 +3425,15 @@
     if (params.get('banyan') === '1') {
       document.body.classList.add('is-banyan');
     }
+    if (params.get('kestrel') === '1') {
+      document.body.classList.add('is-kestrel');
+    }
+    if (params.get('poppy') === '1') {
+      document.body.classList.add('is-poppy');
+    }
+    if (params.get('yak') === '1') {
+      document.body.classList.add('is-yak');
+    }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -4335,6 +4344,9 @@
       if (params.get('badger') === '1') u.searchParams.set('badger', '1');
       if (params.get('marlin') === '1') u.searchParams.set('marlin', '1');
       if (params.get('banyan') === '1') u.searchParams.set('banyan', '1');
+      if (params.get('kestrel') === '1') u.searchParams.set('kestrel', '1');
+      if (params.get('poppy') === '1') u.searchParams.set('poppy', '1');
+      if (params.get('yak') === '1') u.searchParams.set('yak', '1');
       if (params.get('tile') === '1') u.searchParams.set('tile', '1');
       if (params.get('outline') === '1') u.searchParams.set('outline', '1');
       if (params.get('stripe') === '1') u.searchParams.set('stripe', '1');
