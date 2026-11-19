@@ -1016,6 +1016,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `redfox` | `1` 赤狐配色 |
 | `grizzly` | `1` 灰熊配色 |
 | `puma` | `1` 美洲狮配色 |
+| `tiger` | `1` 老虎配色 |
+| `leopard` | `1` 豹配色 |
+| `jaguar` | `1` 美洲豹配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 
