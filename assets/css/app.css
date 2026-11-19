@@ -2494,6 +2494,12 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .is-booby .instrument{border-color:rgba(135,195,170,.4)}
 .is-noddy{background:linear-gradient(180deg,#17161a 0%,#110f13 100%)}
 .is-noddy .instrument{border-color:rgba(175,155,190,.4)}
+.is-kittiwake{background:linear-gradient(180deg,#151a1d 0%,#0f1315 100%)}
+.is-kittiwake .instrument{border-color:rgba(150,190,205,.4)}
+.is-sula{background:linear-gradient(180deg,#1a1a10 0%,#13130c 100%)}
+.is-sula .instrument{border-color:rgba(225,215,110,.4)}
+.is-prion{background:linear-gradient(180deg,#13191c 0%,#0d1214 100%)}
+.is-prion .instrument{border-color:rgba(125,180,200,.4)}
 .is-oatmeal{background:linear-gradient(180deg,#1d1912,#2f291e 50%,#433a2a)}
 .is-oatmeal .instrument{border-color:rgba(215,195,155,.4)}
 .is-thyme{background:linear-gradient(180deg,#121a14,#1c2a20 50%,#28392c)}
