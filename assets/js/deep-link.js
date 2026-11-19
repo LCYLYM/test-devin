@@ -402,6 +402,8 @@
       document.body.appendChild(crt);
     }
     if (params.get('invert') === '1') document.documentElement.style.filter = 'invert(1) hue-rotate(180deg)';
+    if (params.get('bw') === '1') document.documentElement.style.filter = 'grayscale(1)';
+    if (params.get('sepia') === '1') document.documentElement.style.filter = 'sepia(.85)';
     var anniMatch = /^(\d{1,2})[-./](\d{1,2})$/.exec(params.get('anni') || '');
     if (anniMatch) {
       var am = +anniMatch[1], ad = +anniMatch[2];
@@ -576,7 +578,7 @@
     } else if (e.key === 'e' && window.SalaryApp) {
       window.SalaryApp.toggleDemo();
     } else if (e.key === 'x' && window.SalaryApp) {
-      var cc = ['CNY','USD','EUR','JPY','KRW','HKD','VND','IDR','ZIM'];
+      var cc = ['CNY','USD','EUR','JPY','KRW','HKD','VND','IDR','GBP','SGD','AUD','ZIM'];
       var cur2 = window.SalaryApp.getState().preferences.currency;
       window.SalaryApp.setCurrency(cc[(cc.indexOf(cur2) + 1) % cc.length]);
     } else if (e.key === 'c' && window.SalaryApp) {
@@ -718,6 +720,8 @@
       if (document.body.dataset.rgb === '1') u.searchParams.set('rgb', '1');
       if (document.body.dataset.breath === '1') u.searchParams.set('breath', '1');
       if (window.__notify) u.searchParams.set('notify', '1');
+      if (params.get('bw') === '1') u.searchParams.set('bw', '1');
+      if (params.get('sepia') === '1') u.searchParams.set('sepia', '1');
       var text = u.toString();
       (navigator.clipboard ? navigator.clipboard.writeText(text) : Promise.reject())
         .then(function () { btn.textContent = '已复制 ✓'; setTimeout(function(){ btn.textContent='复制当前链接'; }, 1500); })

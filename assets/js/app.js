@@ -423,7 +423,7 @@
   const E = window.SalaryEngine;
   if (!E) throw new Error('SalaryEngine is required.');
   const STORAGE_KEY = 'salaryFlow.v2';
-  const RATE_ENDPOINT = 'https://api.frankfurter.dev/v2/rates?base=CNY&quotes=USD,EUR,JPY,KRW,HKD,VND,IDR';
+  const RATE_ENDPOINT = 'https://api.frankfurter.dev/v2/rates?base=CNY&quotes=USD,EUR,JPY,KRW,HKD,VND,IDR,GBP,SGD,AUD';
   const CURRENCIES = {
     CNY: {code:'CNY', name:'人民币', symbol:'¥'},
     USD: {code:'USD', name:'美元', symbol:'$'},
@@ -433,9 +433,12 @@
     HKD: {code:'HKD', name:'港币', symbol:'HK$'},
     VND: {code:'VND', name:'越南盾', symbol:'₫'},
     IDR: {code:'IDR', name:'印尼盾', symbol:'Rp'},
+    GBP: {code:'GBP', name:'英镑', symbol:'£'},
+    SGD: {code:'SGD', name:'新元', symbol:'S$'},
+    AUD: {code:'AUD', name:'澳元', symbol:'A$'},
     ZIM: {code:'ZIM', name:'津巴布韦 · 趣味', symbol:'Z$', fun:true}
   };
-  const PRESET_RATES = {CNY:1, USD:.14981, EUR:.13344, JPY:23.71, KRW:199.13, HKD:1.1766, VND:3869.68, IDR:2699.77, ZIM:1e11};
+  const PRESET_RATES = {CNY:1, USD:.14981, EUR:.13344, JPY:23.71, KRW:199.13, HKD:1.1766, VND:3869.68, IDR:2699.77, GBP:.10712, SGD:.19347, AUD:.21614, ZIM:1e11};
   const defaultPreferences = {template:'pig', sound:false, period:'day', currency:'CNY', goal:{name:'一杯咖啡',price:25}, manualRates:{}};
   const clone = object => JSON.parse(JSON.stringify(object));
   const $ = id => document.getElementById(id);

@@ -34,7 +34,7 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | --- | --- |
 | `salary` | 月薪数字，如 `15000` |
 | `template` | `pig` / `charge` / `meter` / `pixel` / `neon` / `mono` / `paper` / `term` / `ecg` / `wave` / `therm`（`skin` 同义，`random`/`daily` 特殊值） |
-| `currency` | `CNY` / `USD` / `EUR` / `JPY` / `KRW` / `HKD` / `VND` / `IDR` / `ZIM` |
+| `currency` | `CNY` / `USD` / `EUR` / `JPY` / `KRW` / `HKD` / `VND` / `IDR` / `GBP` / `SGD` / `AUD` / `ZIM` |
 | `period` | `day` / `month` |
 | `demo` | `1` 开启演示模式（数字可设倍速，如 `60`） |
 | `focus` | `salary` 打开时聚焦月薪输入 |
@@ -92,6 +92,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `rgb` | `1` 彩虹流转强调色（电竞氛围） |
 | `breath` | `1` 仪表盘呼吸灯发光 |
 | `notify` | `1` 里程碑到账时发系统通知（需授权） |
+| `bw` / `sepia` | `1` 黑白 / 怀旧棕色滤镜 |
+
+币种现在共 12 种：CNY/USD/EUR/JPY/KRW/HKD/VND/IDR/GBP/SGD/AUD + ZIM 趣味。
 
 `fx` 还可选 `matrix`（打工人字符雨）。
 
