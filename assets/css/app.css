@@ -1600,6 +1600,12 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .is-butterscotch .instrument{border-color:rgba(240,185,95,.42)}
 .is-mole{background:linear-gradient(180deg,#15130f,#211d17 50%,#2f2a20)}
 .is-mole .instrument{border-color:rgba(160,145,115,.4)}
+.is-grotto{background:linear-gradient(180deg,#0e161a,#152329 50%,#1e313a)}
+.is-grotto .instrument{border-color:rgba(110,170,190,.4)}
+.is-peacock{background:linear-gradient(180deg,#0a1818,#12292a 50%,#1a3b3d)}
+.is-peacock .instrument{border-color:rgba(80,200,190,.42)}
+.is-linen{background:linear-gradient(180deg,#1e1b16,#302a22 50%,#453c30)}
+.is-linen .instrument{border-color:rgba(225,210,180,.4)}
 .is-forest{background:linear-gradient(180deg,#0d1f14,#12291a)}
 .is-forest .instrument{border-color:rgba(74,222,128,.38)}
 .is-sand{background:linear-gradient(180deg,#241c10,#2f2614)}

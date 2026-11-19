@@ -611,6 +611,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `maroon` | `1` 褐红配色 |
 | `butterscotch` | `1` 奶油糖配色 |
 | `mole` | `1` 鼹鼠灰配色 |
+| `grotto` | `1` 岩洞配色 |
+| `peacock` | `1` 孔雀配色 |
+| `linen` | `1` 亚麻布配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 

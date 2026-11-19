@@ -3254,6 +3254,15 @@
     if (params.get('mole') === '1') {
       document.body.classList.add('is-mole');
     }
+    if (params.get('grotto') === '1') {
+      document.body.classList.add('is-grotto');
+    }
+    if (params.get('peacock') === '1') {
+      document.body.classList.add('is-peacock');
+    }
+    if (params.get('linen') === '1') {
+      document.body.classList.add('is-linen');
+    }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -4107,6 +4116,9 @@
       if (params.get('maroon') === '1') u.searchParams.set('maroon', '1');
       if (params.get('butterscotch') === '1') u.searchParams.set('butterscotch', '1');
       if (params.get('mole') === '1') u.searchParams.set('mole', '1');
+      if (params.get('grotto') === '1') u.searchParams.set('grotto', '1');
+      if (params.get('peacock') === '1') u.searchParams.set('peacock', '1');
+      if (params.get('linen') === '1') u.searchParams.set('linen', '1');
       if (params.get('tile') === '1') u.searchParams.set('tile', '1');
       if (params.get('outline') === '1') u.searchParams.set('outline', '1');
       if (params.get('stripe') === '1') u.searchParams.set('stripe', '1');
