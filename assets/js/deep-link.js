@@ -75,6 +75,16 @@
       }
     }
 
+    var goal = parseFloat(params.get('goal'));
+    if (isFinite(goal) && goal > 0) {
+      var gp = document.getElementById('goalPriceInput');
+      var gn = document.getElementById('goalNameInput');
+      var gname = params.get('goalname');
+      if (gp) gp.value = String(goal);
+      if (gn && gname) gn.value = gname.slice(0, 12);
+      if (window.SalaryApp) window.SalaryApp.openDialog('goalDialog');
+    }
+
     var accent = params.get('accent');
     if (accent && /^#?([0-9a-fA-F]{3,4}|[0-9a-fA-F]{6}|[0-9a-fA-F]{8})$/.test(accent)) {
       var v = accent[0] === '#' ? accent : '#' + accent;
@@ -135,6 +145,11 @@
     } else if (e.key === 'p' && window.SalaryApp) {
       var st = window.SalaryApp.getState();
       window.SalaryApp.setPeriod(st.preferences.period === 'day' ? 'month' : 'day');
+    } else if (e.key === 'c' && window.SalaryApp) {
+      window.SalaryApp.openDialog('calendarDialog');
+    } else if (e.key === 'o') {
+      var ob = document.getElementById('overtimeRecordButton');
+      if (ob) ob.click();
     } else if (e.key === 'g' && window.SalaryApp) {
       window.SalaryApp.openDialog('goalDialog');
     } else if (e.key === 'b') {
