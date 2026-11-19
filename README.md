@@ -103,6 +103,7 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `chime` | `1` 整点报时音（需先开 `?sound=1`） |
 | `logo` | emoji 自定义左上角图标（如 `?logo=🐷`） |
 | `grad` | `1` 缓慢流动的渐变背景 |
+| `from` | 名字，访客打开时弹「xxx 喊你一起来数钱」（分享链接会自动保留 `utm_*`/`from`） |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 

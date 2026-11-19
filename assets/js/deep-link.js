@@ -477,6 +477,11 @@
         } else if (fd) fd.textContent = String(fdays);
       }
     }
+    var fromParam = params.get('from');
+    if (fromParam) {
+      var fromName = Array.from(fromParam).slice(0, 16).join('');
+      setTimeout(function () { if (window.SalaryApp && window.SalaryApp.toast) window.SalaryApp.toast('👋 ' + fromName + ' 喊你一起来数钱'); }, 1600);
+    }
     var logoParam = params.get('logo');
     if (logoParam) {
       var bi = document.querySelector('.brand-icon');
@@ -826,6 +831,8 @@
       if (window.__chime) u.searchParams.set('chime', '1');
       var lp = params.get('logo'); if (lp) u.searchParams.set('logo', lp);
       if (document.body.dataset.grad === '1') u.searchParams.set('grad', '1');
+      var fp = params.get('from'); if (fp) u.searchParams.set('from', fp.slice(0, 16));
+      params.forEach(function (v, k) { if (k.indexOf('utm_') === 0 && v) u.searchParams.set(k, v.slice(0, 64)); });
       var text = u.toString();
       (navigator.clipboard ? navigator.clipboard.writeText(text) : Promise.reject())
         .then(function () { btn.textContent = '已复制 ✓'; setTimeout(function(){ btn.textContent='复制当前链接'; }, 1500); })
