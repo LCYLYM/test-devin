@@ -1837,6 +1837,36 @@
       window.addEventListener('focus', unboss);
       document.addEventListener('keydown', function (e) { if (e.key === 'Escape') unboss(); });
     }
+    if (params.get('bks') === '1') {
+      var bkb = document.getElementById('bksBadge'), bkv = document.getElementById('bksVal');
+      if (bkb && bkv) {
+        var STEPS = [10, 20, 50, 100, 200, 500, 1000];
+        var bkUpd = function () {
+          var st = window.SalaryApp && window.SalaryApp.getState && window.SalaryApp.getState();
+          var e = st && st.snapshot && st.snapshot.todayEarned;
+          if (e != null) {
+            var nx = STEPS.find(function (v) { return v > e; }) || STEPS[STEPS.length - 1];
+            bkv.textContent = '¥' + e.toFixed(0) + '/' + nx;
+            bkb.hidden = false;
+          }
+        };
+        bkUpd(); setInterval(bkUpd, 3000);
+      }
+    }
+    if (params.get('dice') === '1') {
+      var dcb = document.getElementById('diceBadge'), dcv = document.getElementById('diceVal'), dct = document.getElementById('diceText');
+      if (dcb && dcv && dct) {
+        var dk = new Date().getFullYear() * 372 + (new Date().getMonth() + 1) * 31 + new Date().getDate();
+        var faces = ['⚀', '⚁', '⚂', '⚃', '⚄', '⚅'];
+        var lucks = ['大凶', '小凶', '平', '小吉', '中吉', '大吉'];
+        var di = dk % 6;
+        dcv.textContent = faces[di]; dct.textContent = lucks[di];
+        dcb.hidden = false;
+      }
+    }
+    if (params.get('vhs') === '1' && !(window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches)) {
+      document.body.classList.add('is-vhs');
+    }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -2511,6 +2541,9 @@
       if (params.get('sav') === '1') u.searchParams.set('sav', '1');
       if (params.get('xp') === '1') u.searchParams.set('xp', '1');
       if (params.get('boss') === '1') u.searchParams.set('boss', '1');
+      if (params.get('bks') === '1') u.searchParams.set('bks', '1');
+      if (params.get('dice') === '1') u.searchParams.set('dice', '1');
+      if (params.get('vhs') === '1') u.searchParams.set('vhs', '1');
       if (params.get('rays') === '1') u.searchParams.set('rays', '1');
       if (params.get('flat') === '1') u.searchParams.set('flat', '1');
       var idl = params.get('idle'); if (idl) u.searchParams.set('idle', idl);
