@@ -2441,6 +2441,15 @@
     if (params.get('chalk') === '1') {
       document.body.classList.add('is-chalk');
     }
+    if (params.get('pearl') === '1') {
+      document.body.classList.add('is-pearl');
+    }
+    if (params.get('tide') === '1') {
+      document.body.classList.add('is-tide');
+    }
+    if (params.get('terra') === '1') {
+      document.body.classList.add('is-terra');
+    }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -3063,6 +3072,9 @@
       if (params.get('dream') === '1') u.searchParams.set('dream', '1');
       if (params.get('allday') === '1') u.searchParams.set('allday', '1');
       if (params.get('chalk') === '1') u.searchParams.set('chalk', '1');
+      if (params.get('pearl') === '1') u.searchParams.set('pearl', '1');
+      if (params.get('tide') === '1') u.searchParams.set('tide', '1');
+      if (params.get('terra') === '1') u.searchParams.set('terra', '1');
       if (params.get('tile') === '1') u.searchParams.set('tile', '1');
       if (params.get('outline') === '1') u.searchParams.set('outline', '1');
       if (params.get('stripe') === '1') u.searchParams.set('stripe', '1');

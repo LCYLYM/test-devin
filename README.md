@@ -380,6 +380,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `dream` | `1` 梦想进度徽章（配 goal） |
 | `allday` | `1` 本页打开以来累计 |
 | `chalk` | `1` 粉笔黑板风 |
+| `pearl` | `1` 珍珠光泽 |
+| `tide` | `1` 潮汐配色 |
+| `terra` | `1` 陶土配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 

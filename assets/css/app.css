@@ -1189,6 +1189,13 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .is-chalk{background:#1d2b26}
 .is-chalk .instrument{border:2px dashed rgba(255,255,255,.4);box-shadow:none;filter:saturate(.85)}
 .is-focus .payday.drm,.is-focus .payday.ad{display:none}
+.is-pearl{background:linear-gradient(150deg,#182233 0%,#1c2740 40%,#23304f 60%,#182233 100%);background-size:200% 200%;animation:pearlShift 14s ease-in-out infinite}
+@keyframes pearlShift{0%,100%{background-position:0% 0%}50%{background-position:100% 100%}}
+.is-tide{background:linear-gradient(180deg,#07232c,#0a3540 60%,#07232c)}
+.is-tide .instrument{border-color:rgba(45,212,191,.35)}
+.is-terra{background:linear-gradient(180deg,#241612,#2e1c14)}
+.is-terra .instrument{border-color:rgba(251,146,60,.4)}
+@media (prefers-reduced-motion:reduce){.is-pearl{animation:none}}
 @keyframes hueSpin{to{filter:hue-rotate(360deg)}}
 .is-hue .instrument{animation:hueSpin 12s linear infinite}
 @media (prefers-reduced-motion:reduce){.is-hue .instrument{animation:none}}
