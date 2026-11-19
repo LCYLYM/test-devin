@@ -824,6 +824,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `wallaroo` | `1` 岩袋鼠配色 |
 | `xerinae` | `1` 非洲地松鼠配色 |
 | `yabby` | `1` 淡水螯虾配色 |
+| `avocet` | `1` 反嘴鹬配色 |
+| `bandicoot` | `1` 袋狸配色 |
+| `cotinga` | `1` 伞鸟配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 

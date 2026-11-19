@@ -1846,6 +1846,12 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .is-xerinae .instrument{border-color:rgba(200,170,110,.4)}
 .is-yabby{background:linear-gradient(180deg,#101b17 0%,#08110e 100%)}
 .is-yabby .instrument{border-color:rgba(90,195,160,.4)}
+.is-avocet{background:linear-gradient(180deg,#14181b 0%,#0c0f11 100%)}
+.is-avocet .instrument{border-color:rgba(160,190,200,.4)}
+.is-bandicoot{background:linear-gradient(180deg,#1a140f 0%,#110c08 100%)}
+.is-bandicoot .instrument{border-color:rgba(195,145,100,.4)}
+.is-cotinga{background:linear-gradient(180deg,#0f1b1a 0%,#081110 100%)}
+.is-cotinga .instrument{border-color:rgba(90,200,180,.4)}
 .is-oatmeal{background:linear-gradient(180deg,#1d1912,#2f291e 50%,#433a2a)}
 .is-oatmeal .instrument{border-color:rgba(215,195,155,.4)}
 .is-thyme{background:linear-gradient(180deg,#121a14,#1c2a20 50%,#28392c)}
