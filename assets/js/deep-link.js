@@ -2608,6 +2608,15 @@
         dEl.classList.toggle('dbl-big');
       });
     }
+    if (params.get('forest') === '1') {
+      document.body.classList.add('is-forest');
+    }
+    if (params.get('sand') === '1') {
+      document.body.classList.add('is-sand');
+    }
+    if (params.get('ocean') === '1') {
+      document.body.classList.add('is-ocean');
+    }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -3266,6 +3275,9 @@
       if (params.get('quota') === '1') u.searchParams.set('quota', '1');
       if (params.get('haze') === '1') u.searchParams.set('haze', '1');
       if (params.get('dbl') === '1') u.searchParams.set('dbl', '1');
+      if (params.get('forest') === '1') u.searchParams.set('forest', '1');
+      if (params.get('sand') === '1') u.searchParams.set('sand', '1');
+      if (params.get('ocean') === '1') u.searchParams.set('ocean', '1');
       if (params.get('tile') === '1') u.searchParams.set('tile', '1');
       if (params.get('outline') === '1') u.searchParams.set('outline', '1');
       if (params.get('stripe') === '1') u.searchParams.set('stripe', '1');
