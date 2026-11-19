@@ -641,6 +641,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `quill` | `1` 羽笔配色 |
 | `bison` | `1` 野牛配色 |
 | `wren` | `1` 鹪鹩配色 |
+| `goose` | `1` 灰雁配色 |
+| `malachite` | `1` 孔雀石配色 |
+| `barley` | `1` 大麦配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 

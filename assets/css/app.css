@@ -1660,6 +1660,12 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .is-bison .instrument{border-color:rgba(190,140,95,.42)}
 .is-wren{background:linear-gradient(180deg,#17100f,#281b18 50%,#382722)}
 .is-wren .instrument{border-color:rgba(200,140,125,.42)}
+.is-goose{background:linear-gradient(180deg,#14151a,#20242e 50%,#2d3342)}
+.is-goose .instrument{border-color:rgba(160,170,200,.42)}
+.is-malachite{background:linear-gradient(180deg,#08180f,#0f2b1c 50%,#164029)}
+.is-malachite .instrument{border-color:rgba(80,200,150,.42)}
+.is-barley{background:linear-gradient(180deg,#191307,#2b200e 50%,#3e2f15)}
+.is-barley .instrument{border-color:rgba(215,185,110,.42)}
 .is-forest{background:linear-gradient(180deg,#0d1f14,#12291a)}
 .is-forest .instrument{border-color:rgba(74,222,128,.38)}
 .is-sand{background:linear-gradient(180deg,#241c10,#2f2614)}
