@@ -1618,6 +1618,12 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .is-lobster .instrument{border-color:rgba(240,120,105,.45)}
 .is-wisteria{background:linear-gradient(180deg,#181022,#261838 50%,#362050)}
 .is-wisteria .instrument{border-color:rgba(190,155,235,.42)}
+.is-ridge{background:linear-gradient(180deg,#141a18,#1f2c26 50%,#2c3f36)}
+.is-ridge .instrument{border-color:rgba(140,185,160,.4)}
+.is-flint{background:linear-gradient(180deg,#131416,#1d1f23 50%,#292c32)}
+.is-flint .instrument{border-color:rgba(150,160,175,.4)}
+.is-sorrel{background:linear-gradient(180deg,#1c100a,#2f1a10 50%,#452616)}
+.is-sorrel .instrument{border-color:rgba(225,140,95,.42)}
 .is-forest{background:linear-gradient(180deg,#0d1f14,#12291a)}
 .is-forest .instrument{border-color:rgba(74,222,128,.38)}
 .is-sand{background:linear-gradient(180deg,#241c10,#2f2614)}

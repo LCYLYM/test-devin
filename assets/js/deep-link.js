@@ -3281,6 +3281,15 @@
     if (params.get('wisteria') === '1') {
       document.body.classList.add('is-wisteria');
     }
+    if (params.get('ridge') === '1') {
+      document.body.classList.add('is-ridge');
+    }
+    if (params.get('flint') === '1') {
+      document.body.classList.add('is-flint');
+    }
+    if (params.get('sorrel') === '1') {
+      document.body.classList.add('is-sorrel');
+    }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -4143,6 +4152,9 @@
       if (params.get('hazelnut') === '1') u.searchParams.set('hazelnut', '1');
       if (params.get('lobster') === '1') u.searchParams.set('lobster', '1');
       if (params.get('wisteria') === '1') u.searchParams.set('wisteria', '1');
+      if (params.get('ridge') === '1') u.searchParams.set('ridge', '1');
+      if (params.get('flint') === '1') u.searchParams.set('flint', '1');
+      if (params.get('sorrel') === '1') u.searchParams.set('sorrel', '1');
       if (params.get('tile') === '1') u.searchParams.set('tile', '1');
       if (params.get('outline') === '1') u.searchParams.set('outline', '1');
       if (params.get('stripe') === '1') u.searchParams.set('stripe', '1');
