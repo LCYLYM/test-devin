@@ -362,6 +362,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `eom` | `1` 距月底天数徽章 |
 | `hue` | `1` 色相循环 |
 | `wire` | `1` 线框模式 |
+| `wkn` | `1` 本周第N个工作日徽章 |
+| `plaid` | `1` 格子纹背景 |
+| `gild` | `1` 金边仪表 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 

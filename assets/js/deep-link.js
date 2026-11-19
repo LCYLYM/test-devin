@@ -2302,6 +2302,26 @@
     if (params.get('wire') === '1') {
       document.body.classList.add('is-wire');
     }
+    if (params.get('wkn') === '1') {
+      var wkb = document.getElementById('wknBadge'), wkv = document.getElementById('wknVal');
+      if (wkb && wkv) {
+        var wUpd = function () {
+          var st = window.SalaryApp && window.SalaryApp.getState && window.SalaryApp.getState();
+          if (!st) return;
+          var d = new Date();
+          var dow = (d.getDay() + 6) % 7;
+          wkv.textContent = '本周第 ' + Math.min(dow + 1, 5) + '/5 个工作日';
+          wkb.hidden = false;
+        };
+        wUpd();
+      }
+    }
+    if (params.get('plaid') === '1') {
+      document.body.classList.add('is-plaid');
+    }
+    if (params.get('gild') === '1') {
+      document.body.classList.add('is-gild');
+    }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -2906,6 +2926,9 @@
       if (params.get('eom') === '1') u.searchParams.set('eom', '1');
       if (params.get('hue') === '1') u.searchParams.set('hue', '1');
       if (params.get('wire') === '1') u.searchParams.set('wire', '1');
+      if (params.get('wkn') === '1') u.searchParams.set('wkn', '1');
+      if (params.get('plaid') === '1') u.searchParams.set('plaid', '1');
+      if (params.get('gild') === '1') u.searchParams.set('gild', '1');
       if (params.get('tile') === '1') u.searchParams.set('tile', '1');
       if (params.get('outline') === '1') u.searchParams.set('outline', '1');
       if (params.get('stripe') === '1') u.searchParams.set('stripe', '1');

@@ -1154,6 +1154,9 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .payday.int{color:#facc15}
 .payday.rem{color:#fda4af}
 .payday.eom{color:#c7d2fe}
+.payday.wkn{color:#fdba74}
+.is-plaid{background-image:repeating-linear-gradient(0deg,rgba(148,163,184,.07) 0 2px,transparent 2px 30px),repeating-linear-gradient(90deg,rgba(148,163,184,.07) 0 2px,transparent 2px 30px)}
+.is-gild .instrument{border:2px solid rgba(250,204,21,.45);box-shadow:0 0 18px rgba(250,204,21,.12)}
 @keyframes hueSpin{to{filter:hue-rotate(360deg)}}
 .is-hue .instrument{animation:hueSpin 12s linear infinite}
 @media (prefers-reduced-motion:reduce){.is-hue .instrument{animation:none}}
