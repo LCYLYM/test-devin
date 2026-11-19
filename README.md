@@ -56,7 +56,7 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `rate` | 费率单位：`sec`/`min`/`hour`（同点按费率胶囊，记忆） |
 | `bg` | 自定义页面背景（hex 或 CSS 颜色名），`off` 清除（记忆） |
 | `emoji` | 状态角标 emoji：`?emoji=🔥` |
-| `quote` | `1` 显示打工人语录，`0` 关闭（`q` 键切换，记忆） |
+| `quote` | `1` 每日打工人语录，或自定义文本 `?quote=摸鱼万岁`（`q` 键切换，记忆） |
 | `clock` | `12` 使用 12 小时制时钟 |
 
 ## 本地跑

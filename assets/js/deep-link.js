@@ -189,14 +189,15 @@
     else if (quoteParam) { try { localStorage.setItem('salaryFlow.quote', '1'); } catch (e) {} }
     var quoteOn = quoteParam && quoteParam !== '0' && quoteParam !== 'off';
     if (!quoteOn) { try { quoteOn = localStorage.getItem('salaryFlow.quote') === '1'; } catch (e) {} }
-    if (quoteOn) showQuote();
+    if (quoteParam && !['0', '1', 'off', 'true', 'on'].includes(quoteParam)) {
+      var qc = document.getElementById('quoteLine');
+      if (qc) { qc.hidden = false; qc.textContent = quoteParam.slice(0, 40); }
+    } else if (quoteOn) showQuote();
     window.__toggleQuote = function () {
-      try {
-        var on = localStorage.getItem('salaryFlow.quote') === '1';
-        localStorage.setItem('salaryFlow.quote', on ? '0' : '1');
-        if (on) { var q2 = document.getElementById('quoteLine'); if (q2) q2.hidden = true; }
-        else showQuote();
-      } catch (e) {}
+      var q2 = document.getElementById('quoteLine'); if (!q2) return;
+      if (q2.hidden) showQuote();
+      else q2.hidden = true;
+      try { localStorage.setItem('salaryFlow.quote', q2.hidden ? '0' : '1'); } catch (e) {}
     };
 
     var emojiParam = params.get('emoji');
