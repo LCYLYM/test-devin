@@ -3879,6 +3879,9 @@
     if (params.get('jellyfish') === '1') { document.body.classList.add('is-jellyfish'); }
     if (params.get('starfish') === '1') { document.body.classList.add('is-starfish'); }
     if (params.get('seahorse') === '1') { document.body.classList.add('is-seahorse'); }
+    if (params.get('shrimp') === '1') { document.body.classList.add('is-shrimp'); }
+    if (params.get('krill') === '1') { document.body.classList.add('is-krill'); }
+    if (params.get('clam') === '1') { document.body.classList.add('is-clam'); }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -5116,6 +5119,9 @@
         if (params.get('jellyfish') === '1') u.searchParams.set('jellyfish', '1');
         if (params.get('starfish') === '1') u.searchParams.set('starfish', '1');
         if (params.get('seahorse') === '1') u.searchParams.set('seahorse', '1');
+        if (params.get('shrimp') === '1') u.searchParams.set('shrimp', '1');
+        if (params.get('krill') === '1') u.searchParams.set('krill', '1');
+        if (params.get('clam') === '1') u.searchParams.set('clam', '1');
       if (params.get('tile') === '1') u.searchParams.set('tile', '1');
       if (params.get('outline') === '1') u.searchParams.set('outline', '1');
       if (params.get('stripe') === '1') u.searchParams.set('stripe', '1');
