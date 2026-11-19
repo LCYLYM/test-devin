@@ -818,6 +818,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `nilgai` | `1` 蓝牛羚配色 |
 | `oribi` | `1` 侏羚配色 |
 | `pintail` | `1` 针尾鸭配色 |
+| `sifaka` | `1` 冕狐猴配色 |
+| `tenrec` | `1` 马岛猬配色 |
+| `vole` | `1` 田鼠配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 
