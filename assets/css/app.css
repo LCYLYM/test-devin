@@ -688,6 +688,7 @@ body.is-focus .app-header,body.is-focus .app-footer,body.is-focus .seo-faq,
 body.is-focus .utility-row,body.is-focus .demo-banner,body.is-focus .summary-strip,
 body.is-focus .overtime-disclosure,body.is-focus .bottom-row,
 body.is-focus .instrument-toolbar,body.is-focus .instrument-footer{display:none}
+body.is-focus{overflow:hidden}
 body.is-focus .page-shell{width:100%;max-width:none;padding:0}
 body.is-focus .instrument{min-height:100vh;min-height:100dvh;margin:0;border-radius:0;border-width:0;
 display:flex;flex-direction:column;align-items:center;justify-content:center;gap:28px}

@@ -34,6 +34,7 @@
     }
 
     var template = params.get('template') || params.get('skin');
+    if (template === 'random') template = ['charge','meter','pixel','pig','neon','mono','paper'][Math.floor(Math.random() * 7)];
     if (template) app.setTemplate(template);
     else {
       // First-visit default follows the OS: light mode gets the paper skin.
@@ -55,7 +56,11 @@
     if (params.get('sound') === '1') app.setPreference('sound', true);
 
     // ?accent=%234de3ff — override the theme accent color (shareable).
-    var payday = parseInt(params.get('payday'), 10);
+    var paydayParam = params.get('payday');
+    if (paydayParam === '0' || paydayParam === 'off') { try { localStorage.removeItem('salaryFlow.payday'); } catch (e) {} }
+    else if (paydayParam) { try { localStorage.setItem('salaryFlow.payday', paydayParam); } catch (e) {} }
+    var payday = parseInt(paydayParam || '', 10);
+    if (!(payday >= 1 && payday <= 31)) { try { payday = parseInt(localStorage.getItem('salaryFlow.payday') || '', 10); } catch (e) {} }
     if (payday >= 1 && payday <= 31) {
       var now = new Date(), year = now.getFullYear(), month = now.getMonth();
       var last = new Date(year, month + 1, 0).getDate();
