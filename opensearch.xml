@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/">
+  <ShortName>薪动</ShortName>
+  <Description>实时工资秒表 — 输入月薪，看着收入按秒跳动</Description>
+  <InputEncoding>UTF-8</InputEncoding>
+  <Url type="text/html" method="get" template="https://xd.syal.site/?salary={searchTerms}"/>
+  <Image width="64" height="64" type="image/svg+xml">https://xd.syal.site/assets/img/favicon.svg</Image>
+</OpenSearchDescription>
