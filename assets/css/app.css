@@ -2218,6 +2218,12 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .is-orca .instrument{border-color:rgba(170,170,200,.4)}
 .is-beluga{background:linear-gradient(180deg,#191b20 0%,#121316 100%)}
 .is-beluga .instrument{border-color:rgba(200,205,220,.4)}
+.is-sealion{background:linear-gradient(180deg,#17140f 0%,#100e0a 100%)}
+.is-sealion .instrument{border-color:rgba(200,170,110,.4)}
+.is-penguin{background:linear-gradient(180deg,#12121a 0%,#0c0c12 100%)}
+.is-penguin .instrument{border-color:rgba(160,170,210,.4)}
+.is-polarbear{background:linear-gradient(180deg,#1a1d22 0%,#131518 100%)}
+.is-polarbear .instrument{border-color:rgba(205,215,230,.4)}
 .is-oatmeal{background:linear-gradient(180deg,#1d1912,#2f291e 50%,#433a2a)}
 .is-oatmeal .instrument{border-color:rgba(215,195,155,.4)}
 .is-thyme{background:linear-gradient(180deg,#121a14,#1c2a20 50%,#28392c)}

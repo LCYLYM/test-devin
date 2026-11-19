@@ -1010,6 +1010,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `dolphin` | `1` 海豚配色 |
 | `orca` | `1` 虎鲸配色 |
 | `beluga` | `1` 白鲸配色 |
+| `sealion` | `1` 海狮配色 |
+| `penguin` | `1` 企鹅配色 |
+| `polarbear` | `1` 北极熊配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 
