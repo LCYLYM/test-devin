@@ -128,6 +128,8 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `idle` | 秒数，无操作 N 秒后自动进入专注模式，动一下恢复 |
 | `wake` | `1` 屏幕常亮（Wake Lock，挂屏展示用） |
 | `tap` | `1` 点金额蹦出金币彩蛋 |
+| `holiday` | `1` 下个法定节假日倒计时（放假中显示节名） |
+| `cny` | `1` 春节倒计时徽章（春节快乐 🧧） |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 

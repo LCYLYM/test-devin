@@ -280,7 +280,7 @@
     if (params.get('vibrate') === '1') window.__vibrate = true;
     if (params.get('season') === 'auto' && !params.get('fx')) {
       var sm = new Date().getMonth();
-      var sfx = sm === 11 || sm <= 1 ? 'snow' : sm === 2 || sm === 3 ? 'sakura' : sm >= 5 && sm <= 7 ? 'rain' : '';
+      var sfx = sm === 11 || sm <= 1 ? 'snow' : sm === 2 || sm === 3 ? 'sakura' : sm >= 5 && sm <= 7 ? 'rain' : sm >= 8 && sm <= 10 ? 'leaves' : '';
       if (sfx) params.set('fx', sfx);
     }
     var fxParam = params.get('fx');
@@ -309,7 +309,7 @@
         requestAnimationFrame(mFrame);
       })();
     }
-    if (['snow', 'sakura', 'rain', 'stars'].indexOf(fxParam) >= 0 && !(window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches)) {
+    if (['snow', 'sakura', 'rain', 'stars', 'leaves'].indexOf(fxParam) >= 0 && !(window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches)) {
       var fxc = document.createElement('canvas');
       fxc.style.cssText = 'position:fixed;inset:0;width:100%;height:100%;pointer-events:none;opacity:.65';
       document.body.prepend(fxc);
@@ -332,6 +332,7 @@
           if (q.y > innerHeight + 12) { q.y = -12; q.x = Math.random() * innerWidth; }
           if (fxParam === 'snow') { fxctx.fillStyle = 'rgba(240,246,255,.85)'; fxctx.beginPath(); fxctx.arc(q.x, q.y, q.r, 0, 6.3); fxctx.fill(); }
           else if (fxParam === 'sakura') { fxctx.save(); fxctx.translate(q.x, q.y); fxctx.rotate(q.rot); fxctx.fillStyle = 'rgba(255,183,197,.8)'; fxctx.beginPath(); fxctx.ellipse(0, 0, q.r * 1.6, q.r, 0, 0, 6.3); fxctx.fill(); fxctx.restore(); }
+          else if (fxParam === 'leaves') { fxctx.save(); fxctx.translate(q.x, q.y); fxctx.rotate(q.rot); fxctx.fillStyle = ['rgba(217,119,6,.75)', 'rgba(180,83,9,.7)', 'rgba(202,138,4,.7)'][i2 % 3]; fxctx.beginPath(); fxctx.ellipse(0, 0, q.r * 1.8, q.r * .9, 0, 0, 6.3); fxctx.fill(); fxctx.restore(); }
           else { fxctx.strokeStyle = 'rgba(140,180,220,.5)'; fxctx.lineWidth = 1; fxctx.beginPath(); fxctx.moveTo(q.x, q.y); fxctx.lineTo(q.x - 1.5, q.y + 14); fxctx.stroke(); }
         }
         requestAnimationFrame(fxFrame);
@@ -614,6 +615,49 @@
       var wakeReq = function () { navigator.wakeLock.request('screen').catch(function () {}); };
       wakeReq();
       document.addEventListener('visibilitychange', function () { if (!document.hidden) wakeReq(); });
+    }
+    if (params.get('holiday') === '1' && window.SalaryEngine) {
+      var hb = document.getElementById('holidayBadge');
+      if (hb) {
+        var hn = new Date(), hdk = window.SalaryEngine.dateKey(hn);
+        var hall = [];
+        [hn.getFullYear(), hn.getFullYear() + 1].forEach(function (hy) {
+          ((window.SalaryEngine.holidayYears[hy] || {}).ranges || []).forEach(function (r) { hall.push(r); });
+        });
+        var hIn = null, hNext = null;
+        hall.forEach(function (r) {
+          if (hdk >= r[0] && hdk <= r[1]) hIn = r;
+          else if (r[0] > hdk && (!hNext || r[0] < hNext[0])) hNext = r;
+        });
+        var hlab = document.getElementById('holidayLabel'), hd = document.getElementById('holidayDays'), hu = document.getElementById('holidayUnit');
+        hb.hidden = false;
+        if (hIn) { if (hlab) hlab.textContent = '放假中 · ' + hIn[2]; if (hd) hd.textContent = ''; if (hu) hu.textContent = '🎉'; }
+        else if (hNext) {
+          var hdd = Math.round((new Date(hNext[0]).getTime() - new Date(hdk).getTime()) / 864e5);
+          if (hlab) hlab.textContent = '距' + hNext[2]; if (hd) hd.textContent = String(hdd); if (hu) hu.textContent = '天';
+        }
+      }
+    }
+    if (params.get('cny') === '1') {
+      var cb = document.getElementById('cnyBadge');
+      if (cb) {
+        var cn = new Date(), cdk = cn.getFullYear() * 10000 + (cn.getMonth() + 1) * 100 + cn.getDate();
+        var CNY = [[20260215, 20260223], [20270206, 20270212], [20280126, 20280201], [20290213, 20290219], [20300203, 20300209], [20310123, 20310129], [20320211, 20320217], [20330201, 20330207]];
+        var cy = null;
+        ((window.SalaryEngine && window.SalaryEngine.holidayYears[cn.getFullYear()] || {}).ranges || []).forEach(function (r) {
+          if (r[2] === '春节') cy = [Number(r[0].replace(/-/g, '')), Number(r[1].replace(/-/g, ''))];
+        });
+        if (cy && cdk > cy[1]) cy = null;
+        for (var ci = 0; ci < CNY.length && !cy; ci++) if (CNY[ci][1] >= cdk) cy = CNY[ci];
+        var clab = document.getElementById('cnyLabel'), cd = document.getElementById('cnyDays'), cu = document.getElementById('cnyUnit');
+        cb.hidden = false;
+        if (cy && cdk >= cy[0] && cdk <= cy[1]) { if (clab) clab.textContent = '春节快乐'; if (cd) cd.textContent = ''; if (cu) cu.textContent = '🎊'; }
+        else if (cy) {
+          var cd0 = new Date(String(cy[0]).slice(0, 4), Number(String(cy[0]).slice(4, 6)) - 1, Number(String(cy[0]).slice(6, 8)));
+          var cdiff = Math.round((cd0.getTime() - new Date(cn.getFullYear(), cn.getMonth(), cn.getDate()).getTime()) / 864e5);
+          if (clab) clab.textContent = '距春节'; if (cd) cd.textContent = String(cdiff); if (cu) cu.textContent = '天';
+        } else { cb.hidden = true; }
+      }
     }
     if (params.get('tap') === '1') {
       var aa = document.getElementById('amountArea');
@@ -1052,6 +1096,8 @@
       var idl = params.get('idle'); if (idl) u.searchParams.set('idle', idl);
       if (params.get('wake') === '1') u.searchParams.set('wake', '1');
       if (params.get('tap') === '1') u.searchParams.set('tap', '1');
+      if (params.get('holiday') === '1') u.searchParams.set('holiday', '1');
+      if (params.get('cny') === '1') u.searchParams.set('cny', '1');
       params.forEach(function (v, k) { if (k.indexOf('utm_') === 0 && v) u.searchParams.set(k, v.slice(0, 64)); });
       var text = u.toString();
       (navigator.clipboard ? navigator.clipboard.writeText(text) : Promise.reject())
