@@ -797,6 +797,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `nyala` | `1` 林羚配色 |
 | `pika` | `1` 鼠兔配色 |
 | `quoll` | `1` 袋鼬配色 |
+| `spoonbill` | `1` 琵鹭配色 |
+| `sunfish` | `1` 翻车鱼配色 |
+| `tamarin` | `1` 绢毛猴配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 
