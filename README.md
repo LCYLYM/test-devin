@@ -674,6 +674,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `tern` | `1` 燕鸥配色 |
 | `cypress` | `1` 柏树配色 |
 | `gazelle` | `1` 瞪羚配色 |
+| `ibis` | `1` 朱鹮配色 |
+| `tamarind` | `1` 罗望子配色 |
+| `dingo` | `1` 野犬配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 

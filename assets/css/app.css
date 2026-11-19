@@ -1726,6 +1726,12 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .is-cypress .instrument{border-color:rgba(110,180,130,.42)}
 .is-gazelle{background:linear-gradient(180deg,#1a140a,#2d2210 50%,#413017)}
 .is-gazelle .instrument{border-color:rgba(215,175,105,.42)}
+.is-ibis{background:linear-gradient(180deg,#1a0f14,#2e1a24 50%,#432735)}
+.is-ibis .instrument{border-color:rgba(215,140,175,.42)}
+.is-tamarind{background:linear-gradient(180deg,#1a0f07,#2e1b0c 50%,#432812)}
+.is-tamarind .instrument{border-color:rgba(225,150,80,.42)}
+.is-dingo{background:linear-gradient(180deg,#191207,#2d210d 50%,#423214)}
+.is-dingo .instrument{border-color:rgba(220,170,90,.42)}
 .is-forest{background:linear-gradient(180deg,#0d1f14,#12291a)}
 .is-forest .instrument{border-color:rgba(74,222,128,.38)}
 .is-sand{background:linear-gradient(180deg,#241c10,#2f2614)}
