@@ -138,7 +138,7 @@
     instrument.classList.toggle('is-fun',data.fun);
     instrument.classList.toggle('is-month',data.period==='month');
     const p=clamp(data.progress);
-    if(p>=1&&lastProgress<1&&data.snapshot&&data.snapshot.todayEarned>0&&!motion.matches)confettiBurst();
+    if(p>=1&&lastProgress<1&&data.snapshot&&data.snapshot.todayEarned>0&&!motion.matches&&!window.__noConfetti)confettiBurst();
     lastProgress=p;
     setText('chargePercent',(p*100).toFixed(1)+'%');
     setText('pigPercent',(p*100).toFixed(1)+'%');
@@ -161,7 +161,8 @@
     const avg=window.__avgSalary;
     if(avg){const ab=$('avgBadge');if(ab){ab.hidden=false;const avgHour=avg/(21.75*8),myHour=(data.snapshot&&data.snapshot.hourSalary)||0;
     const diff=avgHour>0?((myHour/avgHour)-1)*100:0;setText('avgDiff',(diff>=0?'+':'')+diff.toFixed(0)+'%');
-    setText('avgRef','vs 均值 '+(data.symbol||'¥')+avgHour.toFixed(1)+'/h');}}
+    const rate=(data.currency&&data.currency.rate)||1;
+    setText('avgRef','vs 均值 '+(data.symbol||'¥')+(avgHour*rate).toFixed(1)+'/h');}}
     const overtimeHours=Number(state?.config.estimatedOvertime)||0;
     const scenario=window.SalaryEngine.overtimeScenario(state.config,data.now,overtimeHours,state.config.extraPay||0);
     setText('overtimeSummaryValue',overtimeHours?window.SalaryApp.formatMoney(scenario.actualHourly)+' / h':'展开');

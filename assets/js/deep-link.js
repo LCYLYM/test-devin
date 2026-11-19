@@ -170,6 +170,8 @@
     var cmd = params.get('cmd');
     if (cmd) { var tc = document.querySelector('.term-cmd'); if (tc) tc.textContent = cmd.slice(0, 40); }
 
+    if (params.get('confetti') === '0') window.__noConfetti = true;
+
     var petParam = params.get('pet');
     if (petParam) { var pn = document.getElementById('pigNoteText'); if (pn) pn.textContent = petParam.slice(0, 12) + '正在存钱…'; }
 
@@ -350,6 +352,9 @@
       if (/^#?([0-9a-fA-F]{3,4}|[0-9a-fA-F]{6}|[0-9a-fA-F]{8})$/.test(bgc)) u.searchParams.set('bg', bgc);
       var pd = params.get('payday') || (function () { try { return localStorage.getItem('salaryFlow.payday'); } catch (e) { return ''; } })();
       if (pd && /^[0-9]{1,2}$/.test(pd)) u.searchParams.set('payday', pd);
+      if (window.__vsItem) u.searchParams.set('vs', window.__vsItem.name + '@' + window.__vsItem.price);
+      if (window.__avgSalary) u.searchParams.set('avg', String(window.__avgSalary));
+      var petNow = params.get('pet'); if (petNow) u.searchParams.set('pet', petNow.slice(0, 12));
       var text = u.toString();
       (navigator.clipboard ? navigator.clipboard.writeText(text) : Promise.reject())
         .then(function () { btn.textContent = '已复制 ✓'; setTimeout(function(){ btn.textContent='复制当前链接'; }, 1500); })

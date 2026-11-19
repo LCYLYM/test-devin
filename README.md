@@ -51,6 +51,7 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `vs` | 等价物换算徽章：`?vs=奶茶@15` 显示「≈ N 杯奶茶」 |
 | `avg` | 时薪对比徽章：`?avg=8000` 显示你的时薪 vs 均值 |
 | `pet` | 给存钱罐小猪起名：`?pet=旺财` |
+| `confetti` | `0` 关闭达成 100% 时的撒花 |
 
 ## 本地跑
 
