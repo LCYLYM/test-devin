@@ -1136,6 +1136,13 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .payday.dice{color:#fca5a5}
 .payday.end{color:#fdba74}
 .payday.cb{color:#f0abfc}
+.wm-layer{position:fixed;inset:-10%;display:grid;grid-template-columns:repeat(4,1fr);pointer-events:none;opacity:.05;transform:rotate(-18deg);z-index:3;font-size:20px;font-weight:700;color:#fff;align-content:space-around}
+.wm-layer span{padding:40px 0;text-align:center}
+.is-focus .wm-layer{display:none}
+@keyframes flashGlow{0%{filter:brightness(1.6)}100%{filter:brightness(1)}}
+#amountArea.flash-on{animation:flashGlow .5s ease-out}
+.look-eyes{position:fixed;left:50%;top:8%;font-size:42px;pointer-events:none;transform-origin:50% 60%;opacity:.85;z-index:5}
+.is-focus .look-eyes{display:none}
 @keyframes vhsJitter{0%,92%{transform:translateX(0)}93%{transform:translateX(-2px)}96%{transform:translateX(2px)}100%{transform:translateX(0)}}
 .is-vhs .instrument{animation:vhsJitter 4s steps(1) infinite;text-shadow:1px 0 rgba(255,0,80,.4),-1px 0 rgba(0,220,255,.4)}
 @media (prefers-reduced-motion:reduce){.is-vhs .instrument{animation:none}}

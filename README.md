@@ -305,6 +305,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `vhs` | `1` 复古录像带效果（抖动+色散） |
 | `end` | `HH:MM` 自定义下班倒计时徽章 |
 | `badge` | `emoji|文字` 自定义徽章 |
+| `wm` | `文字` 平铺水印 |
+| `flash` | `1` 金额上涨时高亮闪 |
+| `look` | `1` 眼神跟随鼠标彩蛋 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 
