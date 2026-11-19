@@ -443,6 +443,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `ash` | `1` 灰烬配色 |
 | `berry` | `1` 浆果配色 |
 | `coal` | `1` 煤炭配色 |
+| `peach` | `1` 蜜桃配色 |
+| `plum` | `1` 梅子配色 |
+| `rust` | `1` 铁锈配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 

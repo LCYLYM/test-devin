@@ -2700,6 +2700,15 @@
     if (params.get('coal') === '1') {
       document.body.classList.add('is-coal');
     }
+    if (params.get('peach') === '1') {
+      document.body.classList.add('is-peach');
+    }
+    if (params.get('plum') === '1') {
+      document.body.classList.add('is-plum');
+    }
+    if (params.get('rust') === '1') {
+      document.body.classList.add('is-rust');
+    }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -3385,6 +3394,9 @@
       if (params.get('ash') === '1') u.searchParams.set('ash', '1');
       if (params.get('berry') === '1') u.searchParams.set('berry', '1');
       if (params.get('coal') === '1') u.searchParams.set('coal', '1');
+      if (params.get('peach') === '1') u.searchParams.set('peach', '1');
+      if (params.get('plum') === '1') u.searchParams.set('plum', '1');
+      if (params.get('rust') === '1') u.searchParams.set('rust', '1');
       if (params.get('tile') === '1') u.searchParams.set('tile', '1');
       if (params.get('outline') === '1') u.searchParams.set('outline', '1');
       if (params.get('stripe') === '1') u.searchParams.set('stripe', '1');

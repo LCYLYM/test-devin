@@ -1076,6 +1076,12 @@ body[data-hover] .payday:hover{transform:translateY(-3px)}
 .is-berry .instrument{border-color:rgba(232,121,249,.38)}
 .is-coal{background:linear-gradient(180deg,#0c0e10,#14171b)}
 .is-coal .instrument{border-color:rgba(120,130,140,.4)}
+.is-peach{background:linear-gradient(180deg,#261812,#301f16)}
+.is-peach .instrument{border-color:rgba(254,215,170,.4)}
+.is-plum{background:linear-gradient(180deg,#221126,#2c1632)}
+.is-plum .instrument{border-color:rgba(216,180,254,.38)}
+.is-rust{background:linear-gradient(180deg,#211310,#2c1a13)}
+.is-rust .instrument{border-color:rgba(234,120,72,.42)}
 body[data-pillar] .page-shell{border-left:1px solid rgba(var(--accent-rgb,103,228,148),.22);border-right:1px solid rgba(var(--accent-rgb,103,228,148),.22)}
 body[data-gloom]{--bg:#0a0c0b}
 body[data-gloom] .instrument{box-shadow:inset 0 0 60px rgba(0,0,0,.5)}
