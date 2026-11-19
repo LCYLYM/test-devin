@@ -1235,6 +1235,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `sensitivefern` | `1` 球子蕨配色 |
 | `cinnamonfern` | `1` 桂皮紫萁配色 |
 | `royalfern` | `1` 紫萁配色 |
+| `brake` | `1` 凤尾蕨配色 |
+| `chainfern` | `1` 狗脊配色 |
+| `adderstongue` | `1` 瓶尔小草配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 
