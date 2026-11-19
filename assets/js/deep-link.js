@@ -3630,6 +3630,9 @@
     if (params.get('caracal') === '1') { document.body.classList.add('is-caracal'); }
     if (params.get('dormouse') === '1') { document.body.classList.add('is-dormouse'); }
     if (params.get('eland') === '1') { document.body.classList.add('is-eland'); }
+    if (params.get('fossa') === '1') { document.body.classList.add('is-fossa'); }
+    if (params.get('gerenuk') === '1') { document.body.classList.add('is-gerenuk'); }
+    if (params.get('hutia') === '1') { document.body.classList.add('is-hutia'); }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -4618,6 +4621,9 @@
         if (params.get('caracal') === '1') u.searchParams.set('caracal', '1');
         if (params.get('dormouse') === '1') u.searchParams.set('dormouse', '1');
         if (params.get('eland') === '1') u.searchParams.set('eland', '1');
+        if (params.get('fossa') === '1') u.searchParams.set('fossa', '1');
+        if (params.get('gerenuk') === '1') u.searchParams.set('gerenuk', '1');
+        if (params.get('hutia') === '1') u.searchParams.set('hutia', '1');
       if (params.get('tile') === '1') u.searchParams.set('tile', '1');
       if (params.get('outline') === '1') u.searchParams.set('outline', '1');
       if (params.get('stripe') === '1') u.searchParams.set('stripe', '1');

@@ -746,6 +746,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `caracal` | `1` 狞猫配色 |
 | `dormouse` | `1` 睡鼠配色 |
 | `eland` | `1` 大羚羊配色 |
+| `fossa` | `1` 马岛獴配色 |
+| `gerenuk` | `1` 长颈羚配色 |
+| `hutia` | `1` 硬毛鼠配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 

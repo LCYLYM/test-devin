@@ -1690,6 +1690,12 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .is-dormouse .instrument{border-color:rgba(190,170,150,.4)}
 .is-eland{background:linear-gradient(180deg,#1b1610 0%,#110d08 100%)}
 .is-eland .instrument{border-color:rgba(185,160,115,.4)}
+.is-fossa{background:linear-gradient(180deg,#1c1210 0%,#110b09 100%)}
+.is-fossa .instrument{border-color:rgba(200,120,90,.4)}
+.is-gerenuk{background:linear-gradient(180deg,#1c1710 0%,#120e09 100%)}
+.is-gerenuk .instrument{border-color:rgba(200,170,110,.4)}
+.is-hutia{background:linear-gradient(180deg,#181512 0%,#0f0d0a 100%)}
+.is-hutia .instrument{border-color:rgba(175,160,140,.4)}
 .is-oatmeal{background:linear-gradient(180deg,#1d1912,#2f291e 50%,#433a2a)}
 .is-oatmeal .instrument{border-color:rgba(215,195,155,.4)}
 .is-thyme{background:linear-gradient(180deg,#121a14,#1c2a20 50%,#28392c)}
