@@ -1267,6 +1267,12 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .is-sand .instrument{border-color:rgba(253,224,171,.4)}
 .is-ocean{background:linear-gradient(180deg,#061c26,#0a2733)}
 .is-ocean .instrument{border-color:rgba(56,189,248,.4)}
+.is-lavender{background:linear-gradient(180deg,#1b1626,#251e35)}
+.is-lavender .instrument{border-color:rgba(196,181,253,.4)}
+.is-khaki{background:linear-gradient(180deg,#1e1c14,#28251a)}
+.is-khaki .instrument{border-color:rgba(214,211,154,.4)}
+.is-ruby{background:linear-gradient(180deg,#240a14,#330d1e)}
+.is-ruby .instrument{border-color:rgba(251,113,133,.45);box-shadow:0 0 24px rgba(251,113,133,.1)}
 @keyframes hueSpin{to{filter:hue-rotate(360deg)}}
 .is-hue .instrument{animation:hueSpin 12s linear infinite}
 @media (prefers-reduced-motion:reduce){.is-hue .instrument{animation:none}}

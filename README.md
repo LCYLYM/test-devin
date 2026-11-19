@@ -419,6 +419,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `forest` | `1` 森林配色 |
 | `sand` | `1` 沙漠配色 |
 | `ocean` | `1` 海洋配色 |
+| `lavender` | `1` 薰衣草配色 |
+| `khaki` | `1` 卡其配色 |
+| `ruby` | `1` 红宝石配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 

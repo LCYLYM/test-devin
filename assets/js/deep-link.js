@@ -2617,6 +2617,15 @@
     if (params.get('ocean') === '1') {
       document.body.classList.add('is-ocean');
     }
+    if (params.get('lavender') === '1') {
+      document.body.classList.add('is-lavender');
+    }
+    if (params.get('khaki') === '1') {
+      document.body.classList.add('is-khaki');
+    }
+    if (params.get('ruby') === '1') {
+      document.body.classList.add('is-ruby');
+    }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -3278,6 +3287,9 @@
       if (params.get('forest') === '1') u.searchParams.set('forest', '1');
       if (params.get('sand') === '1') u.searchParams.set('sand', '1');
       if (params.get('ocean') === '1') u.searchParams.set('ocean', '1');
+      if (params.get('lavender') === '1') u.searchParams.set('lavender', '1');
+      if (params.get('khaki') === '1') u.searchParams.set('khaki', '1');
+      if (params.get('ruby') === '1') u.searchParams.set('ruby', '1');
       if (params.get('tile') === '1') u.searchParams.set('tile', '1');
       if (params.get('outline') === '1') u.searchParams.set('outline', '1');
       if (params.get('stripe') === '1') u.searchParams.set('stripe', '1');
