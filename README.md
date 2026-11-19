@@ -244,6 +244,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `water` | `1` 喝水提醒徽章（工作时段） |
 | `stretch` | `1` 久坐提醒徽章（每小时前10分） |
 | `fortune` | `1` 每日打工金句 |
+| `xmas` | `1` 圣诞灯串装饰 |
+| `sq` | `1` 方角仪表 |
+| `compact` | `1` 紧凑模式 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 

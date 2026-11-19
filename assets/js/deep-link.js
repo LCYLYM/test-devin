@@ -1329,6 +1329,14 @@
         ftb.hidden = false;
       }
     }
+    if (params.get('xmas') === '1' && !(window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches)) {
+      var xl = document.createElement('div');
+      xl.className = 'xmas-lights';
+      for (var xli = 0; xli < 24; xli++) xl.appendChild(document.createElement('i'));
+      document.body.prepend(xl);
+    }
+    if (params.get('sq') === '1') document.body.dataset.sq = '1';
+    if (params.get('compact') === '1') document.body.dataset.compact = '1';
     if (params.get('hex') === '1') {
       var hxb = document.getElementById('hexBadge'), hxd = document.getElementById('hexDot'), hxv = document.getElementById('hexVal');
       if (hxb && hxd && hxv) {
@@ -1907,6 +1915,9 @@
       if (params.get('water') === '1') u.searchParams.set('water', '1');
       if (params.get('stretch') === '1') u.searchParams.set('stretch', '1');
       if (params.get('fortune') === '1') u.searchParams.set('fortune', '1');
+      if (params.get('xmas') === '1') u.searchParams.set('xmas', '1');
+      if (params.get('sq') === '1') u.searchParams.set('sq', '1');
+      if (params.get('compact') === '1') u.searchParams.set('compact', '1');
       if (params.get('rays') === '1') u.searchParams.set('rays', '1');
       if (params.get('flat') === '1') u.searchParams.set('flat', '1');
       var idl = params.get('idle'); if (idl) u.searchParams.set('idle', idl);
