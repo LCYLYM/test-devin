@@ -3645,6 +3645,9 @@
     if (params.get('takin') === '1') { document.body.classList.add('is-takin'); }
     if (params.get('uakari') === '1') { document.body.classList.add('is-uakari'); }
     if (params.get('vaquita') === '1') { document.body.classList.add('is-vaquita'); }
+    if (params.get('xenops') === '1') { document.body.classList.add('is-xenops'); }
+    if (params.get('yaffle') === '1') { document.body.classList.add('is-yaffle'); }
+    if (params.get('zonkey') === '1') { document.body.classList.add('is-zonkey'); }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -4648,6 +4651,9 @@
         if (params.get('takin') === '1') u.searchParams.set('takin', '1');
         if (params.get('uakari') === '1') u.searchParams.set('uakari', '1');
         if (params.get('vaquita') === '1') u.searchParams.set('vaquita', '1');
+        if (params.get('xenops') === '1') u.searchParams.set('xenops', '1');
+        if (params.get('yaffle') === '1') u.searchParams.set('yaffle', '1');
+        if (params.get('zonkey') === '1') u.searchParams.set('zonkey', '1');
       if (params.get('tile') === '1') u.searchParams.set('tile', '1');
       if (params.get('outline') === '1') u.searchParams.set('outline', '1');
       if (params.get('stripe') === '1') u.searchParams.set('stripe', '1');

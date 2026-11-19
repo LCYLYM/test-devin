@@ -761,6 +761,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `takin` | `1` 羚牛配色 |
 | `uakari` | `1` 秃猴配色 |
 | `vaquita` | `1` 小头鼠海豚配色 |
+| `xenops` | `1` 雀霸鹟配色 |
+| `yaffle` | `1` 绿啄木鸟配色 |
+| `zonkey` | `1` 斑驴配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 
