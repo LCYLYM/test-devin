@@ -274,6 +274,7 @@
       if (prefs && prefs.period && prefs.period !== 'day') u.searchParams.set('period', prefs.period);
       var ac = params.get('accent');
       if (ac && /^#?([0-9a-fA-F]{3,4}|[0-9a-fA-F]{6}|[0-9a-fA-F]{8})$/.test(ac)) u.searchParams.set('accent', ac);
+      if (document.body.classList.contains('is-focus')) u.searchParams.set('zen', '1');
       var ints = state && state.config && state.config.intervals;
       if (ints && ints.length && JSON.stringify(ints) !== '[["09:00","12:00"],["13:30","18:00"]]') {
         u.searchParams.set('work', ints.map(function (p) { return p.join('-').replace(/:/g, ''); }).join(','));

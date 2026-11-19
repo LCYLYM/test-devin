@@ -697,3 +697,12 @@ body.is-focus .value-cluster{padding-top:0}
 body.is-focus .energy-stage{margin:0 auto}
 body.is-focus::after{content:'按 z 退出专注';position:fixed;bottom:14px;right:16px;font-size:11px;
 color:var(--muted,#888);opacity:.45;pointer-events:none;letter-spacing:.5px}
+
+/* iter-139: collapsible FAQ */
+details.seo-faq{border-top:1px solid var(--line,#222)}
+details.seo-faq>summary{display:flex;align-items:center;justify-content:space-between;padding:16px 4px;cursor:pointer;list-style:none}
+details.seo-faq>summary::-webkit-details-marker{display:none}
+details.seo-faq>summary h2{margin:0;font-size:14px;color:var(--muted,#888);font-weight:500}
+details.seo-faq>summary .faq-hint{font-size:11px;color:var(--dim,#666)}
+details.seo-faq[open]>summary .faq-hint{display:none}
+details.seo-faq>details{margin:0 4px 8px}
