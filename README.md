@@ -1007,6 +1007,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `crab` | `1` 螃蟹配色 |
 | `crayfish` | `1` 小龙虾配色 |
 | `hermit` | `1` 寄居蟹配色 |
+| `dolphin` | `1` 海豚配色 |
+| `orca` | `1` 虎鲸配色 |
+| `beluga` | `1` 白鲸配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 
