@@ -1121,6 +1121,11 @@
       eql.innerHTML = '<i></i><i></i><i></i><i></i><i></i>';
       document.body.appendChild(eql);
     }
+    if (params.get('rt') === '1' && !(window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches)) {
+      document.body.dataset.rt = '1';
+    }
+    if (params.get('dual') === '1') document.body.dataset.dual = '1';
+    if (params.get('bold') === '1') document.body.dataset.bold = '1';
     if (params.get('frost') === '1') document.body.dataset.frost = '1';
     if (params.get('led') === '1') document.body.dataset.led = '1';
     if (params.get('sky') === '1') {
@@ -1648,6 +1653,9 @@
       if (params.get('weeks') === '1') u.searchParams.set('weeks', '1');
       if (params.get('flick') === '1') u.searchParams.set('flick', '1');
       if (params.get('eq') === '1') u.searchParams.set('eq', '1');
+      if (params.get('rt') === '1') u.searchParams.set('rt', '1');
+      if (params.get('dual') === '1') u.searchParams.set('dual', '1');
+      if (params.get('bold') === '1') u.searchParams.set('bold', '1');
       if (params.get('rays') === '1') u.searchParams.set('rays', '1');
       if (params.get('flat') === '1') u.searchParams.set('flat', '1');
       var idl = params.get('idle'); if (idl) u.searchParams.set('idle', idl);

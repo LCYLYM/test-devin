@@ -214,6 +214,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `weeks` | `1` 今年第几周徽章 |
 | `flick` | `1` 胶片闪烁 |
 | `eq` | `1` 左下角均衡器律动 |
+| `rt` | `1` 彩虹流动数字 |
+| `dual` | `1` 上下分色仪表 |
+| `bold` | `1` 数字加粗 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 
