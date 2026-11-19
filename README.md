@@ -803,6 +803,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `turaco` | `1` 蕉鹃配色 |
 | `urial` | `1` 赤羊配色 |
 | `wahoo` | `1` 刺鲅配色 |
+| `yellowlegs` | `1` 黄脚鹬配色 |
+| `zorilla` | `1` 非洲艾虎配色 |
+| `agouti` | `1` 刺豚鼠配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 

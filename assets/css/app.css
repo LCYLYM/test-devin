@@ -1804,6 +1804,12 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .is-urial .instrument{border-color:rgba(200,160,100,.4)}
 .is-wahoo{background:linear-gradient(180deg,#0e1a20 0%,#071014 100%)}
 .is-wahoo .instrument{border-color:rgba(90,190,220,.4)}
+.is-yellowlegs{background:linear-gradient(180deg,#1d1a0f 0%,#131008 100%)}
+.is-yellowlegs .instrument{border-color:rgba(230,210,90,.4)}
+.is-zorilla{background:linear-gradient(180deg,#161416 0%,#0d0c0e 100%)}
+.is-zorilla .instrument{border-color:rgba(180,170,190,.4)}
+.is-agouti{background:linear-gradient(180deg,#1b140f 0%,#110c08 100%)}
+.is-agouti .instrument{border-color:rgba(195,140,90,.4)}
 .is-oatmeal{background:linear-gradient(180deg,#1d1912,#2f291e 50%,#433a2a)}
 .is-oatmeal .instrument{border-color:rgba(215,195,155,.4)}
 .is-thyme{background:linear-gradient(180deg,#121a14,#1c2a20 50%,#28392c)}
