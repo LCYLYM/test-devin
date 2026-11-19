@@ -2638,6 +2638,12 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .is-feathermoss .instrument{border-color:rgba(136,172,108,.4)}
 .is-cordmoss{background:linear-gradient(180deg,#161911 0%,#10130c 100%)}
 .is-cordmoss .instrument{border-color:rgba(154,178,96,.4)}
+.is-applemoss{background:linear-gradient(180deg,#171b12 0%,#11140c 100%)}
+.is-applemoss .instrument{border-color:rgba(162,186,96,.4)}
+.is-bogmoss{background:linear-gradient(180deg,#131912 0%,#0e120d 100%)}
+.is-bogmoss .instrument{border-color:rgba(118,164,112,.4)}
+.is-coppermoss{background:linear-gradient(180deg,#1d150e 0%,#15100a 100%)}
+.is-coppermoss .instrument{border-color:rgba(196,132,70,.4)}
 .is-oatmeal{background:linear-gradient(180deg,#1d1912,#2f291e 50%,#433a2a)}
 .is-oatmeal .instrument{border-color:rgba(215,195,155,.4)}
 .is-thyme{background:linear-gradient(180deg,#121a14,#1c2a20 50%,#28392c)}

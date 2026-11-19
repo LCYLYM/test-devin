@@ -1220,6 +1220,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `silkywall` | `1` 绢藓配色 |
 | `feathermoss` | `1` 羽藓配色 |
 | `cordmoss` | `1` 绳藓配色 |
+| `applemoss` | `1` 苹果藓配色 |
+| `bogmoss` | `1` 沼藓配色 |
+| `coppermoss` | `1` 铜绿藓配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 
