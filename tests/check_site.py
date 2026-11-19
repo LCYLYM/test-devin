@@ -1,0 +1,32 @@
+"""Smoke check: every local asset referenced by index.html exists on disk,
+and required SEO/GEO files are present. Exits non-zero on failure."""
+import os, re, sys
+
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+html = open(os.path.join(ROOT, 'index.html'), encoding='utf-8').read()
+
+missing = []
+for m in re.finditer(r'(?:src|href)="(\./[^"#?]+)', html):
+    path = os.path.join(ROOT, m.group(1)[2:])
+    if not os.path.exists(path):
+        missing.append(m.group(1))
+
+required = ['robots.txt', 'sitemap.xml', 'site.webmanifest', 'sw.js',
+            'llms.txt', '404.html', 'assets/css/app.css',
+            'assets/js/app.js', 'assets/js/salary-engine.js', 'assets/js/deep-link.js']
+for rel in required:
+    if not os.path.exists(os.path.join(ROOT, rel)):
+        missing.append(rel)
+
+for snippet in ['<title>', 'canonical', 'description', 'application/ld+json']:
+    if snippet not in html:
+        missing.append('index.html missing ' + snippet)
+
+if missing:
+    print('SMOKE CHECK FAILED:')
+    for m in missing:
+        print('  -', m)
+    sys.exit(1)
+print('smoke check passed:',
+      len(re.findall(r'(?:src|href)="\./', html)), 'local refs OK,',
+      len(required), 'required files present')
