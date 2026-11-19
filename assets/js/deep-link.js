@@ -139,9 +139,26 @@
       return u.origin + u.pathname;
     } catch (e) { return null; }
   }
+  function addInstallBtn(field) {
+    var installBtn = document.createElement('button');
+    installBtn.type = 'button';
+    installBtn.className = 'small-button install-btn';
+    installBtn.textContent = '安装到桌面';
+    installBtn.addEventListener('click', function () {
+      var p = deferredInstall;
+      if (!p) return;
+      p.prompt();
+      p.userChoice.finally(function () { installBtn.remove(); deferredInstall = null; });
+    });
+    field.appendChild(installBtn);
+  }
   function wireCopyLink() {
     var field = document.getElementById('shareLinkField');
-    if (!field || field.dataset.copyWired) return;
+    if (!field) return;
+    if (field.dataset.copyWired) {
+      if (deferredInstall && !field.querySelector('.install-btn')) addInstallBtn(field);
+      return;
+    }
     field.dataset.copyWired = '1';
     var btn = document.createElement('button');
     btn.type = 'button';
@@ -216,6 +233,8 @@
     });
     field.appendChild(share);
 
+    if (deferredInstall) addInstallBtn(field);
+
     if (navigator.share) {
       var nativeBtn = document.createElement('button');
       nativeBtn.type = 'button';
@@ -244,6 +263,7 @@
   window.addEventListener('beforeinstallprompt', function (e) {
     e.preventDefault();
     deferredInstall = e;
+    wireCopyLink();
   });
   document.addEventListener('keydown', function (e) {
     if (e.key === 'i' && deferredInstall && !e.metaKey && !e.ctrlKey && !e.altKey) {
