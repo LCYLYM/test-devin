@@ -3353,6 +3353,15 @@
     if (params.get('barley') === '1') {
       document.body.classList.add('is-barley');
     }
+    if (params.get('sycamore') === '1') {
+      document.body.classList.add('is-sycamore');
+    }
+    if (params.get('kraken') === '1') {
+      document.body.classList.add('is-kraken');
+    }
+    if (params.get('pumice') === '1') {
+      document.body.classList.add('is-pumice');
+    }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -4239,6 +4248,9 @@
       if (params.get('goose') === '1') u.searchParams.set('goose', '1');
       if (params.get('malachite') === '1') u.searchParams.set('malachite', '1');
       if (params.get('barley') === '1') u.searchParams.set('barley', '1');
+      if (params.get('sycamore') === '1') u.searchParams.set('sycamore', '1');
+      if (params.get('kraken') === '1') u.searchParams.set('kraken', '1');
+      if (params.get('pumice') === '1') u.searchParams.set('pumice', '1');
       if (params.get('tile') === '1') u.searchParams.set('tile', '1');
       if (params.get('outline') === '1') u.searchParams.set('outline', '1');
       if (params.get('stripe') === '1') u.searchParams.set('stripe', '1');

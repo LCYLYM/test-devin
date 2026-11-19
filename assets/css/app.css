@@ -1666,6 +1666,12 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .is-malachite .instrument{border-color:rgba(80,200,150,.42)}
 .is-barley{background:linear-gradient(180deg,#191307,#2b200e 50%,#3e2f15)}
 .is-barley .instrument{border-color:rgba(215,185,110,.42)}
+.is-sycamore{background:linear-gradient(180deg,#131309,#24220f 50%,#353317)}
+.is-sycamore .instrument{border-color:rgba(190,185,110,.42)}
+.is-kraken{background:linear-gradient(180deg,#0a1620,#0f2433 50%,#16354a)}
+.is-kraken .instrument{border-color:rgba(90,180,220,.42)}
+.is-pumice{background:linear-gradient(180deg,#161514,#242220 50%,#33302d)}
+.is-pumice .instrument{border-color:rgba(175,170,160,.42)}
 .is-forest{background:linear-gradient(180deg,#0d1f14,#12291a)}
 .is-forest .instrument{border-color:rgba(74,222,128,.38)}
 .is-sand{background:linear-gradient(180deg,#241c10,#2f2614)}

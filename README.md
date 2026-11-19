@@ -644,6 +644,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `goose` | `1` 灰雁配色 |
 | `malachite` | `1` 孔雀石配色 |
 | `barley` | `1` 大麦配色 |
+| `sycamore` | `1` 梧桐配色 |
+| `kraken` | `1` 海怪配色 |
+| `pumice` | `1` 浮石配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 
