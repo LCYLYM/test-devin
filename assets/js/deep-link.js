@@ -81,7 +81,14 @@
     btn.textContent = '复制当前链接';
     btn.addEventListener('click', function () {
       var app = window.SalaryApp;
-      var u = new URL(location.origin + location.pathname);
+      var base = /^https?:/.test(location.origin) ? location.origin + location.pathname : '';
+      if (!base) {
+        var urlField = document.getElementById('shareUrl');
+        base = urlField && /^https?:\/\//.test(urlField.value) ? urlField.value : '';
+      }
+      if (!base) { btn.textContent = '需要部署后的网址'; setTimeout(function(){ btn.textContent='复制当前链接'; }, 1800); return; }
+      var u;
+      try { u = new URL(base); } catch (err) { btn.textContent = '链接无效'; setTimeout(function(){ btn.textContent='复制当前链接'; }, 1800); return; }
       var state = app && app.getState();
       var salary = state && state.config && state.config.salary;
       var template = state && state.preferences && state.preferences.template;
