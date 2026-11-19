@@ -2626,6 +2626,12 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .is-rockmoss .instrument{border-color:rgba(150,156,128,.4)}
 .is-junipermoss{background:linear-gradient(180deg,#131a16 0%,#0e130f 100%)}
 .is-junipermoss .instrument{border-color:rgba(116,164,126,.4)}
+.is-swanneck{background:linear-gradient(180deg,#171a13 0%,#11130d 100%)}
+.is-swanneck .instrument{border-color:rgba(164,184,102,.4)}
+.is-pincushion{background:linear-gradient(180deg,#151a12 0%,#0f140d 100%)}
+.is-pincushion .instrument{border-color:rgba(134,174,98,.4)}
+.is-watermoss{background:linear-gradient(180deg,#12191a 0%,#0d1213 100%)}
+.is-watermoss .instrument{border-color:rgba(110,162,150,.4)}
 .is-oatmeal{background:linear-gradient(180deg,#1d1912,#2f291e 50%,#433a2a)}
 .is-oatmeal .instrument{border-color:rgba(215,195,155,.4)}
 .is-thyme{background:linear-gradient(180deg,#121a14,#1c2a20 50%,#28392c)}

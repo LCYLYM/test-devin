@@ -4098,6 +4098,9 @@
     if (params.get('stairstep') === '1') { document.body.classList.add('is-stairstep'); }
     if (params.get('rockmoss') === '1') { document.body.classList.add('is-rockmoss'); }
     if (params.get('junipermoss') === '1') { document.body.classList.add('is-junipermoss'); }
+    if (params.get('swanneck') === '1') { document.body.classList.add('is-swanneck'); }
+    if (params.get('pincushion') === '1') { document.body.classList.add('is-pincushion'); }
+    if (params.get('watermoss') === '1') { document.body.classList.add('is-watermoss'); }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -5554,6 +5557,9 @@
         if (params.get('stairstep') === '1') u.searchParams.set('stairstep', '1');
         if (params.get('rockmoss') === '1') u.searchParams.set('rockmoss', '1');
         if (params.get('junipermoss') === '1') u.searchParams.set('junipermoss', '1');
+        if (params.get('swanneck') === '1') u.searchParams.set('swanneck', '1');
+        if (params.get('pincushion') === '1') u.searchParams.set('pincushion', '1');
+        if (params.get('watermoss') === '1') u.searchParams.set('watermoss', '1');
       if (params.get('tile') === '1') u.searchParams.set('tile', '1');
       if (params.get('outline') === '1') u.searchParams.set('outline', '1');
       if (params.get('stripe') === '1') u.searchParams.set('stripe', '1');
