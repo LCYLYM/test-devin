@@ -2495,6 +2495,38 @@
     if (params.get('copper') === '1') {
       document.body.classList.add('is-copper');
     }
+    if (params.get('hrs') === '1') {
+      var hB = document.getElementById('hrsBadge'), hV = document.getElementById('hrsVal');
+      if (hB && hV) {
+        var hUpd = function () {
+          var st = window.SalaryApp && window.SalaryApp.getState && window.SalaryApp.getState();
+          if (!st || !st.snapshot) return;
+          var rem = st.snapshot.remainingWorkSeconds || 0;
+          var hh = Math.floor(rem / 3600), mm = Math.floor((rem % 3600) / 60);
+          hV.textContent = hh + ' 时 ' + mm + ' 分';
+          hB.hidden = false;
+        };
+        hUpd();
+        setInterval(hUpd, 30000);
+      }
+    }
+    if (params.get('up') === '1') {
+      var uB = document.getElementById('upBadge'), uV = document.getElementById('upVal');
+      if (uB && uV) {
+        var uT0 = Date.now();
+        var uUpd = function () {
+          var sec = Math.floor((Date.now() - uT0) / 1000);
+          var mm = Math.floor(sec / 60), ss = sec % 60;
+          uV.textContent = '停留 ' + mm + ':' + String(ss).padStart(2, '0');
+          uB.hidden = false;
+        };
+        uUpd();
+        setInterval(uUpd, 1000);
+      }
+    }
+    if (params.get('sage') === '1') {
+      document.body.classList.add('is-sage');
+    }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -3132,6 +3164,9 @@
       if (params.get('quartz') === '1') u.searchParams.set('quartz', '1');
       if (params.get('velvet') === '1') u.searchParams.set('velvet', '1');
       if (params.get('copper') === '1') u.searchParams.set('copper', '1');
+      if (params.get('hrs') === '1') u.searchParams.set('hrs', '1');
+      if (params.get('up') === '1') u.searchParams.set('up', '1');
+      if (params.get('sage') === '1') u.searchParams.set('sage', '1');
       if (params.get('tile') === '1') u.searchParams.set('tile', '1');
       if (params.get('outline') === '1') u.searchParams.set('outline', '1');
       if (params.get('stripe') === '1') u.searchParams.set('stripe', '1');

@@ -1221,6 +1221,11 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .is-velvet .instrument{border-color:rgba(244,114,182,.35);box-shadow:0 8px 40px rgba(0,0,0,.5)}
 .is-copper{background:linear-gradient(180deg,#1d1512,#292018)}
 .is-copper .instrument{border-color:rgba(234,138,88,.45)}
+.payday.hrs{color:#fbbf24}
+.payday.upt{color:#6ee7b7}
+.is-sage{background:linear-gradient(180deg,#141c17,#1b251d)}
+.is-sage .instrument{border-color:rgba(134,239,172,.35)}
+.is-focus .payday.hrs,.is-focus .payday.upt{display:none}
 @keyframes hueSpin{to{filter:hue-rotate(360deg)}}
 .is-hue .instrument{animation:hueSpin 12s linear infinite}
 @media (prefers-reduced-motion:reduce){.is-hue .instrument{animation:none}}
