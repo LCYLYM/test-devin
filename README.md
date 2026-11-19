@@ -788,6 +788,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `duiker` | `1` 小羚羊配色 |
 | `elepaio` | `1` 夏威夷鹟配色 |
 | `fulmar` | `1` 管鼻藿配色 |
+| `genet` | `1` 麝猫配色 |
+| `hoolock` | `1` 白眉长臂猿配色 |
+| `jacana` | `1` 水雉配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 

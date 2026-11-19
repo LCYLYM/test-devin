@@ -1774,6 +1774,12 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .is-elepaio .instrument{border-color:rgba(110,185,140,.4)}
 .is-fulmar{background:linear-gradient(180deg,#12181d 0%,#0a0f13 100%)}
 .is-fulmar .instrument{border-color:rgba(155,185,205,.4)}
+.is-genet{background:linear-gradient(180deg,#1a150e 0%,#100d07 100%)}
+.is-genet .instrument{border-color:rgba(200,170,110,.4)}
+.is-hoolock{background:linear-gradient(180deg,#131315 0%,#0b0b0d 100%)}
+.is-hoolock .instrument{border-color:rgba(150,150,160,.4)}
+.is-jacana{background:linear-gradient(180deg,#0f1b14 0%,#08120c 100%)}
+.is-jacana .instrument{border-color:rgba(110,195,140,.4)}
 .is-oatmeal{background:linear-gradient(180deg,#1d1912,#2f291e 50%,#433a2a)}
 .is-oatmeal .instrument{border-color:rgba(215,195,155,.4)}
 .is-thyme{background:linear-gradient(180deg,#121a14,#1c2a20 50%,#28392c)}
