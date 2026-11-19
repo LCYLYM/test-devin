@@ -3675,6 +3675,9 @@
     if (params.get('genet') === '1') { document.body.classList.add('is-genet'); }
     if (params.get('hoolock') === '1') { document.body.classList.add('is-hoolock'); }
     if (params.get('jacana') === '1') { document.body.classList.add('is-jacana'); }
+    if (params.get('kiskadee') === '1') { document.body.classList.add('is-kiskadee'); }
+    if (params.get('lemming') === '1') { document.body.classList.add('is-lemming'); }
+    if (params.get('moose') === '1') { document.body.classList.add('is-moose'); }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -4708,6 +4711,9 @@
         if (params.get('genet') === '1') u.searchParams.set('genet', '1');
         if (params.get('hoolock') === '1') u.searchParams.set('hoolock', '1');
         if (params.get('jacana') === '1') u.searchParams.set('jacana', '1');
+        if (params.get('kiskadee') === '1') u.searchParams.set('kiskadee', '1');
+        if (params.get('lemming') === '1') u.searchParams.set('lemming', '1');
+        if (params.get('moose') === '1') u.searchParams.set('moose', '1');
       if (params.get('tile') === '1') u.searchParams.set('tile', '1');
       if (params.get('outline') === '1') u.searchParams.set('outline', '1');
       if (params.get('stripe') === '1') u.searchParams.set('stripe', '1');

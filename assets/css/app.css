@@ -1780,6 +1780,12 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .is-hoolock .instrument{border-color:rgba(150,150,160,.4)}
 .is-jacana{background:linear-gradient(180deg,#0f1b14 0%,#08120c 100%)}
 .is-jacana .instrument{border-color:rgba(110,195,140,.4)}
+.is-kiskadee{background:linear-gradient(180deg,#1e1a0e 0%,#131008 100%)}
+.is-kiskadee .instrument{border-color:rgba(230,200,80,.4)}
+.is-lemming{background:linear-gradient(180deg,#191512 0%,#100d0a 100%)}
+.is-lemming .instrument{border-color:rgba(180,165,140,.4)}
+.is-moose{background:linear-gradient(180deg,#1c130f 0%,#120b08 100%)}
+.is-moose .instrument{border-color:rgba(200,140,90,.4)}
 .is-oatmeal{background:linear-gradient(180deg,#1d1912,#2f291e 50%,#433a2a)}
 .is-oatmeal .instrument{border-color:rgba(215,195,155,.4)}
 .is-thyme{background:linear-gradient(180deg,#121a14,#1c2a20 50%,#28392c)}
