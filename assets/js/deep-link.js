@@ -3434,6 +3434,15 @@
     if (params.get('yak') === '1') {
       document.body.classList.add('is-yak');
     }
+    if (params.get('tern') === '1') {
+      document.body.classList.add('is-tern');
+    }
+    if (params.get('cypress') === '1') {
+      document.body.classList.add('is-cypress');
+    }
+    if (params.get('gazelle') === '1') {
+      document.body.classList.add('is-gazelle');
+    }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -4347,6 +4356,9 @@
       if (params.get('kestrel') === '1') u.searchParams.set('kestrel', '1');
       if (params.get('poppy') === '1') u.searchParams.set('poppy', '1');
       if (params.get('yak') === '1') u.searchParams.set('yak', '1');
+      if (params.get('tern') === '1') u.searchParams.set('tern', '1');
+      if (params.get('cypress') === '1') u.searchParams.set('cypress', '1');
+      if (params.get('gazelle') === '1') u.searchParams.set('gazelle', '1');
       if (params.get('tile') === '1') u.searchParams.set('tile', '1');
       if (params.get('outline') === '1') u.searchParams.set('outline', '1');
       if (params.get('stripe') === '1') u.searchParams.set('stripe', '1');

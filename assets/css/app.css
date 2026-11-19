@@ -1720,6 +1720,12 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .is-poppy .instrument{border-color:rgba(230,110,110,.42)}
 .is-yak{background:linear-gradient(180deg,#131210,#221f1b 50%,#322e28)}
 .is-yak .instrument{border-color:rgba(185,175,155,.42)}
+.is-tern{background:linear-gradient(180deg,#0f171d,#1a2832 50%,#263a48)}
+.is-tern .instrument{border-color:rgba(130,180,205,.42)}
+.is-cypress{background:linear-gradient(180deg,#0d170f,#152518 50%,#1e3622)}
+.is-cypress .instrument{border-color:rgba(110,180,130,.42)}
+.is-gazelle{background:linear-gradient(180deg,#1a140a,#2d2210 50%,#413017)}
+.is-gazelle .instrument{border-color:rgba(215,175,105,.42)}
 .is-forest{background:linear-gradient(180deg,#0d1f14,#12291a)}
 .is-forest .instrument{border-color:rgba(74,222,128,.38)}
 .is-sand{background:linear-gradient(180deg,#241c10,#2f2614)}
