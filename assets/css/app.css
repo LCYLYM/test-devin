@@ -989,3 +989,16 @@ body[data-sway] .instrument{animation:swayRot 7s ease-in-out infinite}
 @keyframes swayRot{0%,100%{transform:rotate(-.5deg)}50%{transform:rotate(.5deg)}}
 body[data-band] .amount-area{background:linear-gradient(180deg,transparent 30%,rgba(var(--accent-rgb,103,228,148),.10) 50%,transparent 70%)}
 @media(prefers-reduced-motion:reduce){body[data-sway] .instrument{animation:none}}
+.stamp-seal{position:absolute;top:18px;right:22px;width:74px;height:74px;border:3px solid rgba(240,82,82,.85);border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1px;color:rgba(240,82,82,.9);transform:rotate(-14deg);font-family:'Geist',var(--font-ui);pointer-events:none;animation:stampIn .45s cubic-bezier(.2,1.6,.4,1) .3s both;box-shadow:0 0 0 1.5px rgba(240,82,82,.35) inset}
+.stamp-seal i{font-style:normal;font-size:11px;letter-spacing:2px}
+.stamp-seal b{font-size:15px;font-weight:600}
+@keyframes stampIn{from{transform:rotate(-14deg) scale(2.4);opacity:0}to{transform:rotate(-14deg) scale(1);opacity:1}}
+.is-focus .stamp-seal{display:none}
+@media(max-width:760px){.stamp-seal{width:60px;height:60px;top:12px;right:14px}.stamp-seal i{font-size:9px}.stamp-seal b{font-size:12px}}
+body[data-tock] .amount-area{animation:tockPulse 1s ease-in-out infinite}
+@keyframes tockPulse{0%,100%{transform:scale(1)}15%{transform:scale(1.012)}}
+.gain-float{position:absolute;top:0;font-size:14px;font-weight:600;color:var(--accent,#67e494);opacity:0;pointer-events:none;animation:gainUp 2.1s ease-out both;font-variant-numeric:tabular-nums}
+@keyframes gainUp{0%{opacity:0;transform:translateY(8px)}15%{opacity:.95}100%{opacity:0;transform:translateY(-46px)}}
+.amount-area{position:relative}
+.is-focus .gain-float{display:none}
+@media(prefers-reduced-motion:reduce){body[data-tock] .amount-area,.stamp-seal{animation:none}}

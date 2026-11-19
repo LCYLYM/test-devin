@@ -990,6 +990,38 @@
       }
     }
     if (params.get('wiggle') === '1') document.body.dataset.wiggle = '1';
+    if (params.get('stamp') === '1') {
+      var inst2 = document.querySelector('.instrument');
+      if (inst2 && !document.getElementById('stampSeal')) {
+        var ssd = new Date();
+        var seal = document.createElement('div');
+        seal.className = 'stamp-seal'; seal.id = 'stampSeal'; seal.setAttribute('aria-hidden', 'true');
+        seal.innerHTML = '<i>已打卡</i><b>' + (ssd.getMonth() + 1) + '/' + ssd.getDate() + '</b>';
+        inst2.appendChild(seal);
+      }
+    }
+    if (params.get('tock') === '1' && !(window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches)) {
+      document.body.dataset.tock = '1';
+    }
+    if (params.get('gains') === '1' && !(window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches)) {
+      setInterval(function () {
+        var gst = window.SalaryApp && window.SalaryApp.getState && window.SalaryApp.getState();
+        var gsn = gst && gst.snapshot;
+        if (!gsn || !gsn.isWorkday || !gsn.daySalary) return;
+        if (!document.querySelector('.instrument.is-working')) return;
+        var area = document.getElementById('amountArea');
+        if (!area) return;
+        var perSec = gsn.daySalary / ((gsn.hoursPerDay || 8) * 3600);
+        if (!isFinite(perSec) || perSec <= 0) return;
+        var gsym = (gst.currency && gst.currency.symbol) || '¥';
+        var gf = document.createElement('span');
+        gf.className = 'gain-float';
+        gf.textContent = '+' + gsym + (perSec < 1 ? perSec.toFixed(3) : perSec.toFixed(2));
+        gf.style.left = (15 + Math.random() * 60) + '%';
+        area.appendChild(gf);
+        setTimeout(function () { gf.remove(); }, 2200);
+      }, 7000);
+    }
     if (params.get('rays') === '1' && !(window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches)) {
       document.body.dataset.rays = '1';
       var raysL = document.createElement('div');
@@ -1491,6 +1523,9 @@
       if (params.get('band') === '1') u.searchParams.set('band', '1');
       if (params.get('mood') === '1') u.searchParams.set('mood', '1');
       if (params.get('wiggle') === '1') u.searchParams.set('wiggle', '1');
+      if (params.get('stamp') === '1') u.searchParams.set('stamp', '1');
+      if (params.get('tock') === '1') u.searchParams.set('tock', '1');
+      if (params.get('gains') === '1') u.searchParams.set('gains', '1');
       if (params.get('rays') === '1') u.searchParams.set('rays', '1');
       if (params.get('flat') === '1') u.searchParams.set('flat', '1');
       var idl = params.get('idle'); if (idl) u.searchParams.set('idle', idl);

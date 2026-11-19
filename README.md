@@ -157,12 +157,54 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `grade` | `1` 时薪段位徽章（S/A/B/C/D，娱乐） |
 | `lava` | `1` 熔岩光斑背景 |
 | `fx` | `…|ember` 余烬上升特效 |
+| `preset` | 预设组合：`focus`/`kiosk`/`party` |
+| `bar` | `1` 页面顶部今日进度条 |
+| `date` | `1` 日期星期徽章 |
+| `card` | `1` 每日塔罗徽章（娱乐） |
+| `fx` | `…|firefly|dust|meteor|warp` 萤火虫/浮尘/流星/跃迁 |
+| `pulse` | `1` 金额心跳脉动 |
+| `aurora` | `1` 极光背景 |
+| `day` | `1` 白昼进度徽章 |
+| `halo` | `1` 仪表辉光边框 |
+| `fade` | `1` 入场渐显动画 |
+| `vig` | `1` 暗角滤镜 |
+| `round` | `1` 超圆角仪表 |
+| `border` | `HEX` 自定义仪表边框色 |
+| `ripple` | `1` 点击涟漪 |
+| `drift` | `1` 悬浮漂移 |
+| `wide` | `1` 超宽布局 |
+| `rb` | `1` 彩虹边框 |
+| `slim` | `1` 细体字重 |
+| `cursor` | emoji 自定义光标 |
+| `lift` | `1` 浮起深阴影 |
+| `glitch` | `1` 故障风 |
+| `shimmer` | `1` 速率流光 |
+| `fog` | `1` 雾气背景 |
+| `cinema` | `1` 电影黑边 |
+| `frame` | `1` 相框边框 |
+| `amber` | `1` 琥珀单色屏 |
+| `dots` | `1` 波点背景 |
+| `tile` | `1` 棋盘格背景 |
+| `outline` | `1` 描边数字 |
+| `rays` | `1` 光束背景 |
+| `stripe` | `1` 斜条纹背景 |
+| `disco` | `1` 色相旋转 |
+| `wiggle` | `1` 徽章摇摆 |
+| `born` | `YYYY-MM-DD` 来到地球天数徽章 |
+| `hue` | `0`–`360` 仪表色相偏移 |
+| `bezel` | `1` 浮雕边框 |
+| `sway` | `1` 仪表轻摇摆 |
+| `band` | `1` 金额高亮带 |
+| `mood` | `1` 今日打工心情徽章（娱乐） |
+| `stamp` | `1` 打卡印章 |
+| `tock` | `1` 金额每秒轻跳 |
+| `gains` | `1` 每秒收益飘字 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 
 币种现在共 12 种：CNY/USD/EUR/JPY/KRW/HKD/VND/IDR/GBP/SGD/AUD + ZIM 趣味。
 
-`fx` 可选 `snow`/`sakura`/`rain`/`matrix`（字符雨）/`stars`（闪烁星空）。
+`fx` 可选 `snow`/`sakura`/`rain`/`matrix`（字符雨）/`stars`（闪烁星空）/`leaves`/`bubble`/`ember`/`firefly`/`dust`/`meteor`/`warp`。
 
 彩蛋：页面里按 ↑↑↓↓←→←→BA 解锁暴富模式（KONAMI）。
 
