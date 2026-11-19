@@ -214,6 +214,20 @@
       document.body.style.backgroundSize = 'cover';
       document.body.style.backgroundAttachment = 'fixed';
     }
+    var earnParam = parseFloat(params.get('earn'));
+    if (isFinite(earnParam) && earnParam > 0) window.__earnTarget = earnParam;
+    if (params.get('streak') === '1') {
+      try {
+        var t0 = new Date();
+        var fmtD = function (x) { return x.getFullYear() + '-' + String(x.getMonth() + 1).padStart(2, '0') + '-' + String(x.getDate()).padStart(2, '0'); };
+        var days = JSON.parse(localStorage.getItem('salaryFlow.days') || '[]');
+        if (days.indexOf(fmtD(t0)) < 0) { days.push(fmtD(t0)); if (days.length > 400) days = days.slice(-400); localStorage.setItem('salaryFlow.days', JSON.stringify(days)); }
+        var streak = 0, dcur = t0;
+        while (days.indexOf(fmtD(dcur)) >= 0) { streak++; dcur = new Date(dcur.getTime() - 864e5); }
+        var sb = document.getElementById('streakBadge');
+        if (sb && streak > 0) { sb.hidden = false; document.getElementById('streakDays').textContent = String(streak); }
+      } catch (e) {}
+    }
     var badgeParam = params.get('badge');
     if (badgeParam) {
       var cb = document.getElementById('customBadge');
@@ -530,6 +544,22 @@
       if (window.__noConfetti) u.searchParams.set('confetti', '0');
       if (window.__milestones) u.searchParams.set('milestone', window.__milestones.length ? window.__milestones.join(',') : '0');
       if (document.body.dataset.light === '1') u.searchParams.set('light', '1');
+      var thp = params.get('theme'); if (thp) u.searchParams.set('theme', thp);
+      if (window.__dirDown) u.searchParams.set('dir', 'down');
+      var szp = params.get('size'); if (szp) u.searchParams.set('size', szp);
+      var fxp = params.get('fx'); if (fxp) u.searchParams.set('fx', fxp);
+      if (window.__noCompact) u.searchParams.set('compact', '0');
+      if (window.__vibrate) u.searchParams.set('vibrate', '1');
+      var syp = params.get('symbol'); if (syp) u.searchParams.set('symbol', syp.slice(0, 3));
+      var brp = params.get('brand'); if (brp) u.searchParams.set('brand', brp.slice(0, 12));
+      var bdp = params.get('badge'); if (bdp) u.searchParams.set('badge', bdp.slice(0, 20));
+      var cpp = params.get('caption'); if (cpp) u.searchParams.set('caption', cpp.slice(0, 40));
+      if (params.get('mirror') === '1') u.searchParams.set('mirror', '1');
+      var ssp = params.get('ss'); if (ssp) u.searchParams.set('ss', ssp);
+      if (window.__msNext) u.searchParams.set('ms', '1');
+      if (window.__luck) u.searchParams.set('luck', '1');
+      if (window.__earnTarget) u.searchParams.set('earn', String(window.__earnTarget));
+      var bgp = params.get('bgimg'); if (bgp) u.searchParams.set('bgimg', bgp);
       var text = u.toString();
       (navigator.clipboard ? navigator.clipboard.writeText(text) : Promise.reject())
         .then(function () { btn.textContent = '已复制 ✓'; setTimeout(function(){ btn.textContent='复制当前链接'; }, 1500); })

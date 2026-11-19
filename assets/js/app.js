@@ -164,6 +164,17 @@
       const earn=data.snapshot.todayEarned||0;
       for(const m of ml){if(earn>=m&&!milestonesHit.has(m)){milestonesHit.add(m);if(window.__vibrate&&navigator.vibrate)navigator.vibrate(40);if(window.SalaryApp&&window.SalaryApp.toast)window.SalaryApp.toast('已入账 '+(data.symbol||'¥')+m.toLocaleString('en-US')+(MILESTONE_MSG[m]?' · '+MILESTONE_MSG[m]:''));break;}}
     }
+    if(window.__earnTarget&&data.snapshot){
+      const eb=$('earnBadge');
+      if(eb){
+        const rem=Math.max(0,window.__earnTarget-(data.snapshot.todayEarned||0));
+        eb.hidden=false;
+        if(rem<=0||!data.secondRate){setText('earnLeft','✓');}
+        else{const secs=Math.ceil(rem/data.secondRate),hh=Math.floor(secs/3600),mm=Math.floor(secs%3600/60),ss2=secs%60;
+          setText('earnLeft',hh+':'+String(mm).padStart(2,'0')+':'+String(ss2).padStart(2,'0'));}
+        setText('earnTargetText','到手 '+(data.symbol||'¥')+window.__earnTarget);
+      }
+    }
     if(window.__msNext&&data.snapshot){
       const mb=$('msBadge');if(mb){
         const nxt=(ml.length?ml:[10,20,50,100,200,500,1000]).find(m2=>m2>(data.snapshot.todayEarned||0));
