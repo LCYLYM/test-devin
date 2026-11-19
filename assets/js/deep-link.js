@@ -2486,6 +2486,15 @@
     if (params.get('fossil') === '1') {
       document.body.classList.add('is-fossil');
     }
+    if (params.get('quartz') === '1') {
+      document.body.classList.add('is-quartz');
+    }
+    if (params.get('velvet') === '1') {
+      document.body.classList.add('is-velvet');
+    }
+    if (params.get('copper') === '1') {
+      document.body.classList.add('is-copper');
+    }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -3120,6 +3129,9 @@
       if (params.get('shimmer') === '1') u.searchParams.set('shimmer', '1');
       if (params.get('ice') === '1') u.searchParams.set('ice', '1');
       if (params.get('fossil') === '1') u.searchParams.set('fossil', '1');
+      if (params.get('quartz') === '1') u.searchParams.set('quartz', '1');
+      if (params.get('velvet') === '1') u.searchParams.set('velvet', '1');
+      if (params.get('copper') === '1') u.searchParams.set('copper', '1');
       if (params.get('tile') === '1') u.searchParams.set('tile', '1');
       if (params.get('outline') === '1') u.searchParams.set('outline', '1');
       if (params.get('stripe') === '1') u.searchParams.set('stripe', '1');

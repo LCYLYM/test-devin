@@ -392,6 +392,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `shimmer` | `1` 微光金额 |
 | `ice` | `1` 冰晶边框 |
 | `fossil` | `1` 做旧配色 |
+| `quartz` | `1` 石英配色 |
+| `velvet` | `1` 天鹅绒配色 |
+| `copper` | `1` 铜色配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 

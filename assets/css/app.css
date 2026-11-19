@@ -1215,6 +1215,12 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .is-fossil{background:linear-gradient(180deg,#211c15,#2a2419)}
 .is-fossil .instrument{border-color:rgba(214,183,132,.4);filter:sepia(.2)}
 @media (prefers-reduced-motion:reduce){.is-shimmer .amount{animation:none;-webkit-text-fill-color:currentColor}}
+.is-quartz{background:linear-gradient(160deg,#17131f,#201a2e 50%,#171320)}
+.is-quartz .instrument{border-color:rgba(196,181,253,.35)}
+.is-velvet{background:linear-gradient(180deg,#1f0f1c,#2b1428)}
+.is-velvet .instrument{border-color:rgba(244,114,182,.35);box-shadow:0 8px 40px rgba(0,0,0,.5)}
+.is-copper{background:linear-gradient(180deg,#1d1512,#292018)}
+.is-copper .instrument{border-color:rgba(234,138,88,.45)}
 @keyframes hueSpin{to{filter:hue-rotate(360deg)}}
 .is-hue .instrument{animation:hueSpin 12s linear infinite}
 @media (prefers-reduced-motion:reduce){.is-hue .instrument{animation:none}}
