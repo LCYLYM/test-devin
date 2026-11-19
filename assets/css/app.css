@@ -1690,6 +1690,12 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .is-mantis .instrument{border-color:rgba(120,210,130,.42)}
 .is-coriander{background:linear-gradient(180deg,#13190f,#212c19 50%,#2f3f24)}
 .is-coriander .instrument{border-color:rgba(165,190,120,.42)}
+.is-fennel{background:linear-gradient(180deg,#141a0d,#232f15 50%,#33451e)}
+.is-fennel .instrument{border-color:rgba(175,205,115,.42)}
+.is-gecko{background:linear-gradient(180deg,#0f1a12,#18301f 50%,#21452c)}
+.is-gecko .instrument{border-color:rgba(110,210,140,.42)}
+.is-walrus{background:linear-gradient(180deg,#171310,#281f18 50%,#392c22)}
+.is-walrus .instrument{border-color:rgba(200,165,135,.42)}
 .is-forest{background:linear-gradient(180deg,#0d1f14,#12291a)}
 .is-forest .instrument{border-color:rgba(74,222,128,.38)}
 .is-sand{background:linear-gradient(180deg,#241c10,#2f2614)}
