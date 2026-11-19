@@ -32,6 +32,11 @@
     var hasStored = false;
     try { hasStored = !!(JSON.parse(localStorage.getItem('salaryFlow.v2') || 'null') || {}).preferences; } catch (e) {}
 
+    // ?preset=focus|kiosk|party expands into individual params (explicit params win).
+    var PRESETS = { focus: { zen: '1', steady: '1' }, kiosk: { lock: '1', wake: '1', kiosk: '1', tips: '1' }, party: { fx: 'stars', rgb: '1', glow: '1' } };
+    var preset = PRESETS[(params.get('preset') || '').toLowerCase()];
+    if (preset) Object.keys(preset).forEach(function (k) { if (!params.get(k)) params.set(k, preset[k]); });
+
     var salaryRaw = (params.get('salary') || '').toLowerCase().replace(/万/g, 'w').replace(/[,_\s]/g, '');
     var salary = /^[\d.]+w$/.test(salaryRaw) ? parseFloat(salaryRaw) * 1e4 : Number(salaryRaw);
     if (isFinite(salary) && salary > 0) {
@@ -309,7 +314,7 @@
         requestAnimationFrame(mFrame);
       })();
     }
-    if (['snow', 'sakura', 'rain', 'stars', 'leaves', 'bubble', 'ember'].indexOf(fxParam) >= 0 && !(window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches)) {
+    if (['snow', 'sakura', 'rain', 'stars', 'leaves', 'bubble', 'ember', 'firefly'].indexOf(fxParam) >= 0 && !(window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches)) {
       var fxc = document.createElement('canvas');
       fxc.style.cssText = 'position:fixed;inset:0;width:100%;height:100%;pointer-events:none;opacity:.65';
       document.body.prepend(fxc);
@@ -333,6 +338,14 @@
             if (q.y < -10) { q.y = innerHeight + 10; q.x = Math.random() * innerWidth; }
             fxctx.fillStyle = 'rgba(251,' + (140 + (i2 % 3) * 40) + ',60,' + (0.3 + 0.5 * Math.abs(Math.sin(q.ph))).toFixed(2) + ')';
             fxctx.beginPath(); fxctx.arc(q.x, q.y, q.r * 0.9, 0, 6.3); fxctx.fill();
+            continue;
+          }
+          if (fxParam === 'firefly') {
+            q.x += Math.sin(q.s += 0.008) * 0.9; q.y += Math.cos(q.s * 0.8) * 0.6; q.ph += 0.04;
+            if (q.x < -10) q.x = innerWidth + 10; if (q.x > innerWidth + 10) q.x = -10;
+            if (q.y < -10) q.y = innerHeight + 10; if (q.y > innerHeight + 10) q.y = -10;
+            fxctx.fillStyle = 'rgba(190,242,100,' + (0.15 + 0.6 * Math.abs(Math.sin(q.ph))).toFixed(2) + ')';
+            fxctx.beginPath(); fxctx.arc(q.x, q.y, q.r, 0, 6.3); fxctx.fill();
             continue;
           }
           if (fxParam === 'bubble') {
@@ -881,6 +894,18 @@
       }
     }
     if (params.get('lava') === '1') document.body.dataset.lava = '1';
+    if (params.get('bar') === '1') {
+      var tp = document.createElement('div');
+      tp.className = 'top-progress'; tp.setAttribute('aria-hidden', 'true');
+      document.body.appendChild(tp);
+      var barFill = function () {
+        var bst = window.SalaryApp && window.SalaryApp.getState && window.SalaryApp.getState();
+        var bsn = bst && bst.snapshot;
+        if (!bsn || !bsn.daySalary) return;
+        document.body.style.setProperty('--bar-w', Math.min(100, bsn.todayEarned / bsn.daySalary * 100).toFixed(1));
+      };
+      barFill(); setInterval(barFill, 1000);
+    }
     if (params.get('zodiac') === '1') {
       var zb = document.getElementById('zodiacBadge');
       if (zb) {
@@ -1334,6 +1359,8 @@
       if (params.get('mins') === '1') u.searchParams.set('mins', '1');
       if (params.get('grade') === '1') u.searchParams.set('grade', '1');
       if (params.get('lava') === '1') u.searchParams.set('lava', '1');
+      var prp = params.get('preset'); if (prp) u.searchParams.set('preset', prp.slice(0, 12));
+      if (params.get('bar') === '1') u.searchParams.set('bar', '1');
       params.forEach(function (v, k) { if (k.indexOf('utm_') === 0 && v) u.searchParams.set(k, v.slice(0, 64)); });
       var text = u.toString();
       (navigator.clipboard ? navigator.clipboard.writeText(text) : Promise.reject())
