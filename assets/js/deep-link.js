@@ -2673,6 +2673,15 @@
     if (params.get('mirage') === '1') {
       document.body.classList.add('is-mirage');
     }
+    if (params.get('emerald') === '1') {
+      document.body.classList.add('is-emerald');
+    }
+    if (params.get('cream') === '1') {
+      document.body.classList.add('is-cream');
+    }
+    if (params.get('navy') === '1') {
+      document.body.classList.add('is-navy');
+    }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -3349,6 +3358,9 @@
       if (params.get('trail') === '1') u.searchParams.set('trail', '1');
       if (params.get('web') === '1') u.searchParams.set('web', '1');
       if (params.get('mirage') === '1') u.searchParams.set('mirage', '1');
+      if (params.get('emerald') === '1') u.searchParams.set('emerald', '1');
+      if (params.get('cream') === '1') u.searchParams.set('cream', '1');
+      if (params.get('navy') === '1') u.searchParams.set('navy', '1');
       if (params.get('tile') === '1') u.searchParams.set('tile', '1');
       if (params.get('outline') === '1') u.searchParams.set('outline', '1');
       if (params.get('stripe') === '1') u.searchParams.set('stripe', '1');
