@@ -3,12 +3,27 @@
   "short_name": "薪动",
   "description": "实时工资计算器：输入月薪，看着收入按秒跳动。",
   "start_url": "./",
+  "scope": "./",
   "display": "standalone",
+  "orientation": "portrait",
   "background_color": "#131415",
   "theme_color": "#131415",
   "lang": "zh-CN",
+  "categories": ["finance", "productivity", "utilities"],
   "icons": [
-    { "src": "./assets/img/favicon.svg", "sizes": "any", "type": "image/svg+xml" },
-    { "src": "./assets/img/piggy.webp", "sizes": "800x800", "type": "image/webp" }
+    { "src": "./assets/img/favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" },
+    { "src": "./assets/img/piggy.webp", "sizes": "800x800", "type": "image/webp", "purpose": "any" }
+  ],
+  "shortcuts": [
+    {
+      "name": "演示模式",
+      "url": "./?demo=1",
+      "description": "用示例工资快速体验每秒跳动的收入"
+    },
+    {
+      "name": "输入月薪",
+      "url": "./?focus=salary",
+      "description": "直接跳到月薪设置"
+    }
   ]
 }
