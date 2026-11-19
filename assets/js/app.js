@@ -176,7 +176,7 @@
         else if(!rateDisp){setText('earnLeft','—');}
         else{const secs=Math.ceil(rem/rateDisp),hh=Math.floor(secs/3600),mm=Math.floor(secs%3600/60),ss2=secs%60;
           setText('earnLeft',hh+':'+String(mm).padStart(2,'0')+':'+String(ss2).padStart(2,'0'));}
-        setText('earnTargetText','到手 '+(data.symbol||'¥')+window.__earnTarget);
+        setText('earnTargetText','到手 '+(data.symbol||'¥')+window.__earnTarget+(data.unit||''));
       }
     }
     if(window.__msNext&&data.snapshot){

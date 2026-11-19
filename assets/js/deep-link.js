@@ -295,7 +295,7 @@
     if (favParam) {
       var fav = document.querySelector('link[rel="icon"]') || document.createElement('link');
       fav.rel = 'icon';
-      fav.href = 'data:image/svg+xml,' + encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text y=".9em" font-size="90">' + favParam.slice(0, 8) + '</text></svg>');
+      fav.href = 'data:image/svg+xml,' + encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text y=".9em" font-size="90">' + Array.from(favParam).slice(0, 4).join('') + '</text></svg>');
       if (!fav.parentNode) document.head.appendChild(fav);
     }
     var kioskParam = parseInt(params.get('kiosk') || '', 10);
@@ -620,7 +620,7 @@
       if (window.__earnTarget) u.searchParams.set('earn', String(window.__earnTarget));
       var bgp = params.get('bgimg'); if (bgp) u.searchParams.set('bgimg', bgp);
       var kip = params.get('kiosk'); if (kip) u.searchParams.set('kiosk', kip);
-      var fvp = params.get('favicon'); if (fvp) u.searchParams.set('favicon', fvp.slice(0, 8));
+      var fvp = params.get('favicon'); if (fvp) u.searchParams.set('favicon', Array.from(fvp).slice(0, 4).join(''));
       if (params.get('crt') === '1') u.searchParams.set('crt', '1');
       if (params.get('invert') === '1') u.searchParams.set('invert', '1');
       var anp = params.get('anni'); if (anp) { u.searchParams.set('anni', anp); var ann = params.get('anniname'); if (ann) u.searchParams.set('anniname', ann.slice(0, 12)); }
