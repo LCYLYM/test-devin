@@ -298,7 +298,8 @@
       if (prefs && prefs.template) u.searchParams.set('template', prefs.template);
       if (prefs && prefs.currency && prefs.currency !== 'CNY') u.searchParams.set('currency', prefs.currency);
       if (prefs && prefs.period && prefs.period !== 'day') u.searchParams.set('period', prefs.period);
-      var ac = params.get('accent') || (function () { try { return localStorage.getItem('salaryFlow.accent') || ''; } catch (e) { return ''; } })();
+      var ac = document.body.style.getPropertyValue('--accent') || params.get('accent') ||
+        (function () { try { return localStorage.getItem('salaryFlow.accent') || ''; } catch (e) { return ''; } })();
       if (ac && /^#?([0-9a-fA-F]{3,4}|[0-9a-fA-F]{6}|[0-9a-fA-F]{8})$/.test(ac)) u.searchParams.set('accent', ac);
       if (document.body.classList.contains('is-focus')) u.searchParams.set('zen', '1');
       var ints = state && state.config && state.config.intervals;
