@@ -66,6 +66,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `brand` | 自定义左上角品牌名，≤12 字符 |
 | `dir` | `down` 倒计时模式：显示距离目标还差多少 |
 | `size` | `0.4–2.5` 数字区缩放（电视/投屏用） |
+| `fx` | `snow` / `sakura` / `rain` 全屏氛围特效（配专注模式绝配） |
+| `vibrate` | `1` 里程碑/达标时手机震动 |
+| `compact` | `0` 关闭 万/亿 大数缩写，始终显示完整数字 |
 
 ## 本地跑
 

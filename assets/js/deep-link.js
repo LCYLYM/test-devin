@@ -207,6 +207,31 @@
       if (vc) vc.style.zoom = String(sizeParam);
     }
     if (params.get('dir') === 'down') window.__dirDown = true;
+    if (params.get('compact') === '0') window.__noCompact = true;
+    if (params.get('vibrate') === '1') window.__vibrate = true;
+    var fxParam = params.get('fx');
+    if (['snow', 'sakura', 'rain'].indexOf(fxParam) >= 0 && !(window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches)) {
+      var fxc = document.createElement('canvas');
+      fxc.style.cssText = 'position:fixed;inset:0;width:100%;height:100%;pointer-events:none;opacity:.65';
+      document.body.prepend(fxc);
+      var fxctx = fxc.getContext('2d');
+      var parts = [], N = fxParam === 'rain' ? 90 : 45;
+      function fxResize(){ fxc.width = innerWidth; fxc.height = innerHeight; }
+      fxResize(); window.addEventListener('resize', fxResize);
+      for (var i = 0; i < N; i++) parts.push({x: Math.random() * innerWidth, y: Math.random() * innerHeight, r: 1 + Math.random() * (fxParam === 'rain' ? 1 : 3.2), v: fxParam === 'rain' ? 9 + Math.random() * 6 : 0.6 + Math.random() * 1.4, s: Math.random() * 6.28, rot: Math.random() * 6.28, vr: (Math.random() - .5) * .06});
+      (function fxFrame(){
+        fxctx.clearRect(0, 0, fxc.width, fxc.height);
+        for (var i2 = 0; i2 < parts.length; i2++) {
+          var q = parts[i2];
+          q.y += q.v; q.x += Math.sin(q.s += 0.01) * (fxParam === 'rain' ? 0.4 : 0.7); q.rot += q.vr;
+          if (q.y > innerHeight + 12) { q.y = -12; q.x = Math.random() * innerWidth; }
+          if (fxParam === 'snow') { fxctx.fillStyle = 'rgba(240,246,255,.85)'; fxctx.beginPath(); fxctx.arc(q.x, q.y, q.r, 0, 6.3); fxctx.fill(); }
+          else if (fxParam === 'sakura') { fxctx.save(); fxctx.translate(q.x, q.y); fxctx.rotate(q.rot); fxctx.fillStyle = 'rgba(255,183,197,.8)'; fxctx.beginPath(); fxctx.ellipse(0, 0, q.r * 1.6, q.r, 0, 0, 6.3); fxctx.fill(); fxctx.restore(); }
+          else { fxctx.strokeStyle = 'rgba(140,180,220,.5)'; fxctx.lineWidth = 1; fxctx.beginPath(); fxctx.moveTo(q.x, q.y); fxctx.lineTo(q.x - 1.5, q.y + 14); fxctx.stroke(); }
+        }
+        requestAnimationFrame(fxFrame);
+      })();
+    }
     var msParam = params.get('milestone');
     if (msParam !== null) {
       window.__milestones = (msParam === '0' || msParam === '') ? []

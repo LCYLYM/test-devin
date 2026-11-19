@@ -87,6 +87,7 @@
 
   function chooseCompact(amount){
     compactDivisor=1;compactUnit='';
+    if(window.__noCompact){setText('moneyUnit',latest.unit);return;}
     const raw=amount*(latest.fun?1e8:1);
     const choices=[[1e24,'亿亿亿'],[1e20,'万亿亿'],[1e16,'亿亿'],[1e12,'万亿'],[1e8,'亿'],[1e4,'万']];
     if(latest.fun && amount<1e7){compactUnit='亿';}
@@ -110,6 +111,7 @@
   }
 
   function confettiBurst(){
+    if(window.__vibrate&&navigator.vibrate)navigator.vibrate([40,50,80]);
     const host=$('energyStage')||instrument;if(!host)return;
     const cv=document.createElement('canvas');cv.className='confetti-canvas';
     const r=host.getBoundingClientRect();cv.width=Math.max(2,r.width);cv.height=Math.max(2,r.height);
@@ -159,7 +161,7 @@
       const dk=data.snapshot.dayKey;
       if(dk!==milestoneDay){milestoneDay=dk;milestonesHit=new Set();}
       const earn=data.snapshot.todayEarned||0;
-      for(const m of ml){if(earn>=m&&!milestonesHit.has(m)){milestonesHit.add(m);if(window.SalaryApp&&window.SalaryApp.toast)window.SalaryApp.toast('已入账 '+(data.symbol||'¥')+m.toLocaleString('en-US')+(MILESTONE_MSG[m]?' · '+MILESTONE_MSG[m]:''));break;}}
+      for(const m of ml){if(earn>=m&&!milestonesHit.has(m)){milestonesHit.add(m);if(window.__vibrate&&navigator.vibrate)navigator.vibrate(40);if(window.SalaryApp&&window.SalaryApp.toast)window.SalaryApp.toast('已入账 '+(data.symbol||'¥')+m.toLocaleString('en-US')+(MILESTONE_MSG[m]?' · '+MILESTONE_MSG[m]:''));break;}}
     }
     setText('chargePercent',(p*100).toFixed(1)+'%');
     setText('pigPercent',(p*100).toFixed(1)+'%');
