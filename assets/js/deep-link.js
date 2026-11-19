@@ -1202,6 +1202,32 @@
       }
     }
     if (params.get('warm') === '1') document.body.dataset.warm = '1';
+    if (params.get('uptime') === '1') {
+      var upb = document.getElementById('uptimeBadge'), upv = document.getElementById('uptimeVal');
+      if (upb && upv) {
+        var upT0 = Date.now();
+        var upUpd = function () { upv.textContent = String(Math.max(0, Math.floor((Date.now() - upT0) / 60000))); };
+        upUpd();
+        upb.hidden = false;
+        setInterval(upUpd, 30000);
+      }
+    }
+    if (params.get('tea') === '1') {
+      var teb = document.getElementById('teaBadge'), tet = document.getElementById('teaText');
+      if (teb && tet) {
+        var teUpd = function () {
+          var th = new Date().getHours();
+          if (th >= 14 && th < 16) { tet.textContent = '下午茶时间'; teb.hidden = false; }
+          else if (th >= 16 && th < 18) { tet.textContent = '再扛一会儿'; teb.hidden = false; }
+          else teb.hidden = true;
+        };
+        teUpd();
+        setInterval(teUpd, 60000);
+      }
+    }
+    if (params.get('breathe') === '1' && !(window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches)) {
+      document.body.dataset.breathe = '1';
+    }
     if (params.get('hex') === '1') {
       var hxb = document.getElementById('hexBadge'), hxd = document.getElementById('hexDot'), hxv = document.getElementById('hexVal');
       if (hxb && hxd && hxv) {
@@ -1769,6 +1795,9 @@
       if (params.get('yearday') === '1') u.searchParams.set('yearday', '1');
       if (params.get('left') === '1') u.searchParams.set('left', '1');
       if (params.get('warm') === '1') u.searchParams.set('warm', '1');
+      if (params.get('uptime') === '1') u.searchParams.set('uptime', '1');
+      if (params.get('tea') === '1') u.searchParams.set('tea', '1');
+      if (params.get('breathe') === '1') u.searchParams.set('breathe', '1');
       if (params.get('rays') === '1') u.searchParams.set('rays', '1');
       if (params.get('flat') === '1') u.searchParams.set('flat', '1');
       var idl = params.get('idle'); if (idl) u.searchParams.set('idle', idl);

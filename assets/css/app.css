@@ -1070,3 +1070,8 @@ body[data-turn] .instrument{animation:turnIn .7s cubic-bezier(.2,.9,.3,1) both;t
 .payday.yearday{color:#fde68a}
 .payday.left{color:#86efac}
 body[data-warm] .instrument{filter:sepia(.28) saturate(1.15) brightness(1.02)}
+.payday.uptime{color:#bfdbfe}
+.payday.tea{color:#fbcfe8}
+body[data-breathe] .instrument{animation:breathePulse 5s ease-in-out infinite}
+@keyframes breathePulse{0%,100%{transform:scale(1)}50%{transform:scale(1.012)}}
+@media(prefers-reduced-motion:reduce){body[data-breathe] .instrument{animation:none}}

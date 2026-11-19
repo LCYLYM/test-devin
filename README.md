@@ -232,6 +232,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `yearday` | `1` 今年第几天徽章 |
 | `left` | `1` 距今日目标还差徽章 |
 | `warm` | `1` 暖色调滤镜 |
+| `uptime` | `1` 本页停留时长徽章 |
+| `tea` | `1` 下午茶时段提醒徽章 |
+| `breathe` | `1` 仪表呼吸缩放 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 
