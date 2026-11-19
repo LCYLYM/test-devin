@@ -17,6 +17,11 @@
     var app = window.SalaryApp;
     if (!app) return;
 
+    // Read "is this a returning visitor" BEFORE any param handler can save
+    // default preferences (e.g. the salary form submit persists storage).
+    var hasStored = false;
+    try { hasStored = !!(JSON.parse(localStorage.getItem('salaryFlow.v2') || 'null') || {}).preferences; } catch (e) {}
+
     var salary = Number(params.get('salary'));
     if (isFinite(salary) && salary > 0) {
       var input = document.getElementById('salaryInput');
@@ -31,9 +36,7 @@
     if (template) app.setTemplate(template);
     else {
       // First-visit default follows the OS: light mode gets the paper skin.
-      // Skipped once the user has any saved preference or an explicit ?skin=.
-      var hasStored = false;
-      try { hasStored = !!(JSON.parse(localStorage.getItem('salaryFlow.v2') || 'null') || {}).preferences; } catch (e) {}
+      // hasStored was captured before any handler could persist defaults.
       if (!hasStored && window.matchMedia && matchMedia('(prefers-color-scheme: light)').matches)
         app.setTemplate('paper');
     }
