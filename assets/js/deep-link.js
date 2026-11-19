@@ -3398,6 +3398,15 @@
     if (params.get('walrus') === '1') {
       document.body.classList.add('is-walrus');
     }
+    if (params.get('osprey') === '1') {
+      document.body.classList.add('is-osprey');
+    }
+    if (params.get('plover') === '1') {
+      document.body.classList.add('is-plover');
+    }
+    if (params.get('sesame') === '1') {
+      document.body.classList.add('is-sesame');
+    }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -4299,6 +4308,9 @@
       if (params.get('fennel') === '1') u.searchParams.set('fennel', '1');
       if (params.get('gecko') === '1') u.searchParams.set('gecko', '1');
       if (params.get('walrus') === '1') u.searchParams.set('walrus', '1');
+      if (params.get('osprey') === '1') u.searchParams.set('osprey', '1');
+      if (params.get('plover') === '1') u.searchParams.set('plover', '1');
+      if (params.get('sesame') === '1') u.searchParams.set('sesame', '1');
       if (params.get('tile') === '1') u.searchParams.set('tile', '1');
       if (params.get('outline') === '1') u.searchParams.set('outline', '1');
       if (params.get('stripe') === '1') u.searchParams.set('stripe', '1');

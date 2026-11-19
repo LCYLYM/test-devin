@@ -659,6 +659,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `fennel` | `1` 茴香配色 |
 | `gecko` | `1` 壁虎配色 |
 | `walrus` | `1` 海象配色 |
+| `osprey` | `1` 鱼鹰配色 |
+| `plover` | `1` 千鸟配色 |
+| `sesame` | `1` 芝麻配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 

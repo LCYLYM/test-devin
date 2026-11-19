@@ -1696,6 +1696,12 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .is-gecko .instrument{border-color:rgba(110,210,140,.42)}
 .is-walrus{background:linear-gradient(180deg,#171310,#281f18 50%,#392c22)}
 .is-walrus .instrument{border-color:rgba(200,165,135,.42)}
+.is-osprey{background:linear-gradient(180deg,#10161e,#1a2530 50%,#253544)}
+.is-osprey .instrument{border-color:rgba(135,175,205,.42)}
+.is-plover{background:linear-gradient(180deg,#14140f,#24231a 50%,#343226)}
+.is-plover .instrument{border-color:rgba(185,180,140,.42)}
+.is-sesame{background:linear-gradient(180deg,#181310,#2a2017 50%,#3c2f20)}
+.is-sesame .instrument{border-color:rgba(210,180,135,.42)}
 .is-forest{background:linear-gradient(180deg,#0d1f14,#12291a)}
 .is-forest .instrument{border-color:rgba(74,222,128,.38)}
 .is-sand{background:linear-gradient(180deg,#241c10,#2f2614)}
