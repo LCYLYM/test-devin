@@ -167,10 +167,14 @@
     if(window.__earnTarget&&data.snapshot){
       const eb=$('earnBadge');
       if(eb){
-        const rem=Math.max(0,window.__earnTarget-(data.snapshot.todayEarned||0));
+        const earnRate=(data.currency&&data.currency.rate)||1;
+        const earnedDisp=(data.snapshot.todayEarned||0)*earnRate*(data.fun?1e-8:1);
+        const rem=Math.max(0,window.__earnTarget-earnedDisp);
+        const rateDisp=data.secondRate*(data.fun?1e-8:1);
         eb.hidden=false;
-        if(rem<=0||!data.secondRate){setText('earnLeft','✓');}
-        else{const secs=Math.ceil(rem/data.secondRate),hh=Math.floor(secs/3600),mm=Math.floor(secs%3600/60),ss2=secs%60;
+        if(rem<=0){setText('earnLeft','✓');}
+        else if(!rateDisp){setText('earnLeft','—');}
+        else{const secs=Math.ceil(rem/rateDisp),hh=Math.floor(secs/3600),mm=Math.floor(secs%3600/60),ss2=secs%60;
           setText('earnLeft',hh+':'+String(mm).padStart(2,'0')+':'+String(ss2).padStart(2,'0'));}
         setText('earnTargetText','到手 '+(data.symbol||'¥')+window.__earnTarget);
       }

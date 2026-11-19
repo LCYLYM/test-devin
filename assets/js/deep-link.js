@@ -223,7 +223,7 @@
         var days = JSON.parse(localStorage.getItem('salaryFlow.days') || '[]');
         if (days.indexOf(fmtD(t0)) < 0) { days.push(fmtD(t0)); if (days.length > 400) days = days.slice(-400); localStorage.setItem('salaryFlow.days', JSON.stringify(days)); }
         var streak = 0, dcur = t0;
-        while (days.indexOf(fmtD(dcur)) >= 0) { streak++; dcur = new Date(dcur.getTime() - 864e5); }
+        while (days.indexOf(fmtD(dcur)) >= 0) { streak++; dcur.setDate(dcur.getDate() - 1); }
         var sb = document.getElementById('streakBadge');
         if (sb && streak > 0) { sb.hidden = false; document.getElementById('streakDays').textContent = String(streak); }
       } catch (e) {}
@@ -291,6 +291,33 @@
         requestAnimationFrame(fxFrame);
       })();
     }
+    var favParam = params.get('favicon');
+    if (favParam) {
+      var fav = document.querySelector('link[rel="icon"]') || document.createElement('link');
+      fav.rel = 'icon';
+      fav.href = 'data:image/svg+xml,' + encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text y=".9em" font-size="90">' + favParam.slice(0, 8) + '</text></svg>');
+      if (!fav.parentNode) document.head.appendChild(fav);
+    }
+    var kioskParam = parseInt(params.get('kiosk') || '', 10);
+    if (kioskParam === 1) kioskParam = 15;
+    if (kioskParam > 0) {
+      setInterval(function () {
+        if (document.querySelector('dialog[open]')) return;
+        var btns = document.querySelectorAll('.template-switch button');
+        if (btns.length < 2) return;
+        var cur2 = -1;
+        btns.forEach(function (b, i) { if (b.classList.contains('selected')) cur2 = i; });
+        btns[(cur2 + 1) % btns.length].click();
+      }, Math.min(600, Math.max(3, kioskParam)) * 1000);
+    }
+    var amountArea = document.getElementById('amountArea');
+    if (amountArea) amountArea.addEventListener('dblclick', function () {
+      var txt = amountArea.getAttribute('aria-label') || '';
+      if (!txt) return;
+      (navigator.clipboard ? navigator.clipboard.writeText(txt) : Promise.reject())
+        .then(function () { if (window.SalaryApp && window.SalaryApp.toast) window.SalaryApp.toast('已复制 ' + txt); })
+        .catch(function () {});
+    });
     var msParam = params.get('milestone');
     if (msParam !== null) {
       window.__milestones = (msParam === '0' || msParam === '') ? []
@@ -560,6 +587,8 @@
       if (window.__luck) u.searchParams.set('luck', '1');
       if (window.__earnTarget) u.searchParams.set('earn', String(window.__earnTarget));
       var bgp = params.get('bgimg'); if (bgp) u.searchParams.set('bgimg', bgp);
+      var kip = params.get('kiosk'); if (kip) u.searchParams.set('kiosk', kip);
+      var fvp = params.get('favicon'); if (fvp) u.searchParams.set('favicon', fvp.slice(0, 8));
       var text = u.toString();
       (navigator.clipboard ? navigator.clipboard.writeText(text) : Promise.reject())
         .then(function () { btn.textContent = '已复制 ✓'; setTimeout(function(){ btn.textContent='复制当前链接'; }, 1500); })

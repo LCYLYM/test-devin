@@ -78,6 +78,10 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `mirror` | `1` 页面水平镜像（投到镜子/玻璃上用） |
 | `streak` | `1` 显示连续打卡天数徽章（🔥） |
 | `earn` | 目标金额，`?earn=100` → 倒计时「再 H:MM:SS 到手 ¥100」 |
+| `kiosk` | 秒数，每隔 N 秒自动轮换皮肤（`?kiosk=1` 默认 15s），电视/展示模式 |
+| `favicon` | 自定义标签页图标 emoji，如 `?favicon=🔥` |
+
+小技巧：双击金额数字可复制当前金额到剪贴板。
 
 ## 本地跑
 
