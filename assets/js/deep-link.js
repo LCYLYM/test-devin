@@ -818,6 +818,23 @@
         yib.hidden = false;
       }
     }
+    if (params.get('spot') === '1') {
+      document.body.dataset.spot = '1';
+      document.addEventListener('pointermove', function (e) {
+        document.body.style.setProperty('--spot-x', e.clientX + 'px');
+        document.body.style.setProperty('--spot-y', e.clientY + 'px');
+      });
+    }
+    if (params.get('tilt') === '1' && !(window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches)) {
+      var tIns = document.querySelector('.instrument');
+      document.body.dataset.tilt = '1';
+      if (tIns) document.addEventListener('pointermove', function (e) {
+        var r = tIns.getBoundingClientRect();
+        var dx = (e.clientX - r.left - r.width / 2) / r.width, dy = (e.clientY - r.top - r.height / 2) / r.height;
+        tIns.style.transform = 'perspective(900px) rotateY(' + (dx * 5).toFixed(2) + 'deg) rotateX(' + (-dy * 5).toFixed(2) + 'deg)';
+      });
+    }
+    if (params.get('gloss') === '1') document.body.dataset.gloss = '1';
     if (params.get('zodiac') === '1') {
       var zb = document.getElementById('zodiacBadge');
       if (zb) {
@@ -1263,6 +1280,9 @@
       if (params.get('tips') === '1') u.searchParams.set('tips', '1');
       if (params.get('lunar') === '1') u.searchParams.set('lunar', '1');
       if (params.get('yi') === '1') u.searchParams.set('yi', '1');
+      if (params.get('spot') === '1') u.searchParams.set('spot', '1');
+      if (params.get('tilt') === '1') u.searchParams.set('tilt', '1');
+      if (params.get('gloss') === '1') u.searchParams.set('gloss', '1');
       params.forEach(function (v, k) { if (k.indexOf('utm_') === 0 && v) u.searchParams.set(k, v.slice(0, 64)); });
       var text = u.toString();
       (navigator.clipboard ? navigator.clipboard.writeText(text) : Promise.reject())

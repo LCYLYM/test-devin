@@ -148,6 +148,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `lunar` | `1` 农历日期徽章 |
 | `yi` | `1` 今日宜忌徽章（娱乐） |
 | `fx` | `…|bubble` 泡泡上升特效 |
+| `spot` | `1` 鼠标追光聚光灯 |
+| `tilt` | `1` 仪表盘 3D 视差倾斜 |
+| `gloss` | `1` 周期玻璃高光扫过 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 
