@@ -53,6 +53,7 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `pet` | 给存钱罐小猪起名：`?pet=旺财` |
 | `confetti` | `0` 关闭达成 100% 时的撒花 |
 | `dec` | 金额小数位 `2`–`6`（配 `?demo=` 高速演示更爽） |
+| `rate` | 费率单位：`sec`/`min`/`hour`（同点按费率胶囊，记忆） |
 
 ## 本地跑
 

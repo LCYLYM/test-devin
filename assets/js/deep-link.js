@@ -174,6 +174,9 @@
 
     if (params.get('confetti') === '0') window.__noConfetti = true;
 
+    var rateParam = {sec: 0, second: 0, s: 0, min: 1, minute: 1, m: 1, hour: 2, h: 2}[params.get('rate') || ''];
+    if (rateParam !== undefined) { try { localStorage.setItem('salaryFlow.rateMode', String(rateParam)); } catch (e) {} }
+
     var decParam = parseInt(params.get('dec') || '', 10);
     if (decParam >= 2 && decParam <= 6) window.__decimals = decParam;
 
@@ -249,6 +252,12 @@
       var skinKeys = ['pig','charge','meter','pixel','neon','mono','paper','term','ecg','wave'];
       var direct = e.key === '0' ? skinKeys[9] : skinKeys[Number(e.key) - 1];
       if (direct) window.SalaryApp.setTemplate(direct);
+    } else if (e.key === 'n' && window.SalaryApp) {
+      try {
+        var rm = Math.min(2, Math.max(0, parseInt(localStorage.getItem('salaryFlow.rateMode') || '0', 10) || 0));
+        localStorage.setItem('salaryFlow.rateMode', String((rm + 1) % 3));
+        window.SalaryApp.render && window.SalaryApp.render();
+      } catch (e) {}
     } else if (e.key === 'a') {
       var pal = ['#4de3ff', '#5ae593', '#eeb58e', '#ff8a52', '#c2622f', '#e8e8e8', '#39d353'];
       var cur3 = '';
