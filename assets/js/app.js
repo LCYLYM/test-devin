@@ -141,7 +141,7 @@
     const template=state?.preferences.template||'charge';
     applyTemplate(template,Boolean(lastTemplate));
     chooseCompact(data.displayAmount);
-    if(changed){amountFrom=lastSignature?amountShown:(window.__count?0:data.displayAmount);amountTarget=data.displayAmount;tweenStart=tick;tweenDuration=motion.matches?0:(window.__count&&!lastSignature?1500:560);lastSignature=signature;}
+    if(changed){amountFrom=lastSignature?amountShown:(window.__count?0:data.displayAmount);amountTarget=data.displayAmount;tweenStart=tick;tweenDuration=(motion.matches||window.__noTween)?0:(window.__count&&!lastSignature?1500:560);lastSignature=signature;}
     else if(!tweenDuration){amountTarget=data.displayAmount;}
     const curChanged=lastCurrency!==data.currency.code;
     if(curChanged){

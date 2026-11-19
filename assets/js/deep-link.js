@@ -835,6 +835,31 @@
       });
     }
     if (params.get('gloss') === '1') document.body.dataset.gloss = '1';
+    if (params.get('orb') === '1') {
+      var oIns = document.querySelector('.instrument');
+      if (oIns) {
+        document.body.dataset.orb = '1';
+        var or = document.createElement('div');
+        or.className = 'orb-ring'; or.setAttribute('aria-hidden', 'true');
+        or.innerHTML = '<i></i>';
+        oIns.appendChild(or);
+      }
+    }
+    if (params.get('steady') === '1') window.__noTween = true;
+    if (params.get('mins') === '1') {
+      var mb = document.getElementById('minsBadge'), mv = document.getElementById('minsVal');
+      if (mb && mv) {
+        var mFill = function () {
+          var mst = window.SalaryApp && window.SalaryApp.getState && window.SalaryApp.getState();
+          var sn = mst && mst.snapshot;
+          if (!sn || !sn.daySalary) { mv.textContent = '—'; return; }
+          var perSec = sn.daySalary / ((sn.hoursPerDay || 8) * 3600);
+          var mins = perSec > 0 ? Math.floor((sn.todayEarned || 0) / perSec / 60) : 0;
+          mv.textContent = mins >= 60 ? Math.floor(mins / 60) + 'h' + (mins % 60) + 'm' : mins + 'm';
+        };
+        mb.hidden = false; mFill(); setInterval(mFill, 30000);
+      }
+    }
     if (params.get('zodiac') === '1') {
       var zb = document.getElementById('zodiacBadge');
       if (zb) {
@@ -1283,6 +1308,9 @@
       if (params.get('spot') === '1') u.searchParams.set('spot', '1');
       if (params.get('tilt') === '1') u.searchParams.set('tilt', '1');
       if (params.get('gloss') === '1') u.searchParams.set('gloss', '1');
+      if (params.get('orb') === '1') u.searchParams.set('orb', '1');
+      if (params.get('steady') === '1') u.searchParams.set('steady', '1');
+      if (params.get('mins') === '1') u.searchParams.set('mins', '1');
       params.forEach(function (v, k) { if (k.indexOf('utm_') === 0 && v) u.searchParams.set(k, v.slice(0, 64)); });
       var text = u.toString();
       (navigator.clipboard ? navigator.clipboard.writeText(text) : Promise.reject())
