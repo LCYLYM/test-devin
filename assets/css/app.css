@@ -923,3 +923,5 @@ body[data-lava]::after{width:36vmin;height:36vmin;right:-6%;bottom:-8%;backgroun
 @keyframes lavaB{to{transform:translate(-14%,-16%) scale(1.3)}}
 .top-progress{position:fixed;top:0;left:0;height:3px;width:calc(var(--bar-w,0)*1%);background:var(--accent,#67e494);z-index:120;transition:width .9s linear;box-shadow:0 0 8px var(--accent,#67e494);pointer-events:none}
 .is-focus .top-progress{display:none}
+.payday.date{color:#93c5fd}
+.payday.card{color:#c4b5fd}

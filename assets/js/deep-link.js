@@ -314,7 +314,7 @@
         requestAnimationFrame(mFrame);
       })();
     }
-    if (['snow', 'sakura', 'rain', 'stars', 'leaves', 'bubble', 'ember', 'firefly'].indexOf(fxParam) >= 0 && !(window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches)) {
+    if (['snow', 'sakura', 'rain', 'stars', 'leaves', 'bubble', 'ember', 'firefly', 'dust'].indexOf(fxParam) >= 0 && !(window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches)) {
       var fxc = document.createElement('canvas');
       fxc.style.cssText = 'position:fixed;inset:0;width:100%;height:100%;pointer-events:none;opacity:.65';
       document.body.prepend(fxc);
@@ -338,6 +338,13 @@
             if (q.y < -10) { q.y = innerHeight + 10; q.x = Math.random() * innerWidth; }
             fxctx.fillStyle = 'rgba(251,' + (140 + (i2 % 3) * 40) + ',60,' + (0.3 + 0.5 * Math.abs(Math.sin(q.ph))).toFixed(2) + ')';
             fxctx.beginPath(); fxctx.arc(q.x, q.y, q.r * 0.9, 0, 6.3); fxctx.fill();
+            continue;
+          }
+          if (fxParam === 'dust') {
+            q.y -= q.v * 0.15; q.x += Math.sin(q.s += 0.003) * 0.3; q.ph += 0.01;
+            if (q.y < -8) { q.y = innerHeight + 8; q.x = Math.random() * innerWidth; }
+            fxctx.fillStyle = 'rgba(230,235,245,' + (0.05 + 0.12 * Math.abs(Math.sin(q.ph))).toFixed(2) + ')';
+            fxctx.beginPath(); fxctx.arc(q.x, q.y, q.r * 0.6, 0, 6.3); fxctx.fill();
             continue;
           }
           if (fxParam === 'firefly') {
@@ -894,6 +901,26 @@
       }
     }
     if (params.get('lava') === '1') document.body.dataset.lava = '1';
+    if (params.get('date') === '1') {
+      var db = document.getElementById('dateBadge'), dt = document.getElementById('dateText');
+      if (db && dt) {
+        var WD = ['周日', '周一', '周二', '周三', '周四', '周五', '周六'];
+        var dFill = function () { var dn = new Date(); dt.textContent = (dn.getMonth() + 1) + '月' + dn.getDate() + '日 ' + WD[dn.getDay()]; };
+        db.hidden = false; dFill(); setInterval(dFill, 30000);
+      }
+    }
+    if (params.get('card') === '1') {
+      var cb = document.getElementById('cardBadge'), cn2 = document.getElementById('cardName');
+      if (cb && cn2) {
+        var MAJOR = [['愚者', '🃏'], ['魔术师', '🎩'], ['女祭司', '🌙'], ['女皇', '👑'], ['皇帝', '🤴'], ['教皇', '⛪'], ['恋人', '💞'], ['战车', '🏇'], ['力量', '🦁'], ['隐士', '🏮'], ['命运之轮', '🎡'], ['正义', '⚖️'], ['倒吊人', '🙃'], ['死神', '💀'], ['节制', '🏺'], ['恶魔', '😈'], ['高塔', '🗼'], ['星星', '⭐'], ['月亮', '🌙'], ['太阳', '☀️'], ['审判', '📯'], ['世界', '🌍']];
+        var csn = window.SalaryApp && window.SalaryApp.getState && window.SalaryApp.getState();
+        var cdk = (csn && csn.snapshot && csn.snapshot.dayKey) || new Date().toISOString().slice(0, 10);
+        var ch = 0; for (var ci = 0; ci < cdk.length; ci++) ch = (ch * 31 + cdk.charCodeAt(ci)) % 997;
+        var card = MAJOR[ch % 22];
+        cn2.textContent = card[1] + ' ' + card[0];
+        cb.hidden = false;
+      }
+    }
     if (params.get('bar') === '1') {
       var tp = document.createElement('div');
       tp.className = 'top-progress'; tp.setAttribute('aria-hidden', 'true');
@@ -1361,6 +1388,8 @@
       if (params.get('lava') === '1') u.searchParams.set('lava', '1');
       var prp = params.get('preset'); if (prp) u.searchParams.set('preset', prp.slice(0, 12));
       if (params.get('bar') === '1') u.searchParams.set('bar', '1');
+      if (params.get('date') === '1') u.searchParams.set('date', '1');
+      if (params.get('card') === '1') u.searchParams.set('card', '1');
       params.forEach(function (v, k) { if (k.indexOf('utm_') === 0 && v) u.searchParams.set(k, v.slice(0, 64)); });
       var text = u.toString();
       (navigator.clipboard ? navigator.clipboard.writeText(text) : Promise.reject())
