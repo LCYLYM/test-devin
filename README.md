@@ -500,6 +500,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `reef` | `1` 礁石配色 |
 | `umber` | `1` 赭土配色 |
 | `violet` | `1` 紫罗兰配色 |
+| `verdant` | `1` 翠绿配色 |
+| `dusk` | `1` 薄暮配色 |
+| `crimson` | `1` 绯红配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 
