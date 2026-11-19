@@ -239,7 +239,7 @@
     }
     if (params.get('light') === '1') document.body.dataset.light = '1';
     else if (params.get('light') === '0') delete document.body.dataset.light;
-    else { try { if (localStorage.getItem('salaryFlow.light') === '1') document.body.dataset.light = '1'; } catch (e) {} }
+    else if (!themeParam) { try { if (localStorage.getItem('salaryFlow.light') === '1') document.body.dataset.light = '1'; } catch (e) {} }
     window.__toggleLight = function () {
       var on = document.body.dataset.light !== '1';
       if (on) document.body.dataset.light = '1'; else delete document.body.dataset.light;
