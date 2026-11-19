@@ -1576,6 +1576,12 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .is-petrol .instrument{border-color:rgba(90,180,200,.42)}
 .is-sangria{background:linear-gradient(180deg,#1c0c0e,#301419 50%,#461d24)}
 .is-sangria .instrument{border-color:rgba(225,110,125,.42)}
+.is-basil{background:linear-gradient(180deg,#0e1a0c,#172b12 50%,#223d1a)}
+.is-basil .instrument{border-color:rgba(130,190,100,.4)}
+.is-falcon{background:linear-gradient(180deg,#14161d,#20242e 50%,#2d3240)}
+.is-falcon .instrument{border-color:rgba(150,165,200,.4)}
+.is-tweed{background:linear-gradient(180deg,#1a1610,#2b251a 50%,#3e3626)}
+.is-tweed .instrument{border-color:rgba(200,175,130,.4)}
 .is-forest{background:linear-gradient(180deg,#0d1f14,#12291a)}
 .is-forest .instrument{border-color:rgba(74,222,128,.38)}
 .is-sand{background:linear-gradient(180deg,#241c10,#2f2614)}

@@ -599,6 +599,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `camel` | `1` 驼色配色 |
 | `petrol` | `1` 汽油蓝配色 |
 | `sangria` | `1` 桑格利亚配色 |
+| `basil` | `1` 罗勒配色 |
+| `falcon` | `1` 猎鹰配色 |
+| `tweed` | `1` 花呢配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 
