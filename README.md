@@ -617,6 +617,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `zephyr` | `1` 和风配色 |
 | `brass` | `1` 黄铜配色 |
 | `paprika` | `1` 红椒粉配色 |
+| `hazelnut` | `1` 榛子配色 |
+| `lobster` | `1` 龙虾红配色 |
+| `wisteria` | `1` 紫藤配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 

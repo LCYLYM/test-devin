@@ -1612,6 +1612,12 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .is-brass .instrument{border-color:rgba(230,190,105,.42)}
 .is-paprika{background:linear-gradient(180deg,#1e0e08,#31170d 50%,#482113)}
 .is-paprika .instrument{border-color:rgba(235,120,80,.45)}
+.is-hazelnut{background:linear-gradient(180deg,#1a1209,#2c1e10 50%,#402b17)}
+.is-hazelnut .instrument{border-color:rgba(215,160,105,.42)}
+.is-lobster{background:linear-gradient(180deg,#1e0c08,#321410 50%,#481d17)}
+.is-lobster .instrument{border-color:rgba(240,120,105,.45)}
+.is-wisteria{background:linear-gradient(180deg,#181022,#261838 50%,#362050)}
+.is-wisteria .instrument{border-color:rgba(190,155,235,.42)}
 .is-forest{background:linear-gradient(180deg,#0d1f14,#12291a)}
 .is-forest .instrument{border-color:rgba(74,222,128,.38)}
 .is-sand{background:linear-gradient(180deg,#241c10,#2f2614)}
