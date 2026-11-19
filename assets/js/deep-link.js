@@ -40,6 +40,16 @@
       if (!app.getState().demo) app.toggleDemo();
     }
 
+    var THEME_COLORS = {pig:'#1a1716',charge:'#131415',meter:'#171715',pixel:'#151515',neon:'#0c0e18',mono:'#111111',paper:'#f2efe7'};
+    function applyThemeColor(t) {
+      var m = document.querySelector('meta[name=theme-color]');
+      if (m && THEME_COLORS[t]) m.content = THEME_COLORS[t];
+    }
+    applyThemeColor(app.getState().preferences.template);
+    window.addEventListener('salary-template', function (e) { applyThemeColor(e.detail && e.detail.template); });
+
+    if (params.get('zen') === '1') document.body.classList.add('is-focus');
+
     if (params.get('focus') === 'salary') {
       var salaryInput = document.getElementById('salaryInput');
       if (salaryInput) { salaryInput.focus(); salaryInput.select(); }

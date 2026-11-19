@@ -552,7 +552,7 @@ dialog.drawer[open] { animation: drawer-arrive 300ms cubic-bezier(.2,.75,.25,1) 
 
 /* print: poster-friendly — instrument only */
 @media print{
-  .app-header,.utility-row,.bottom-row,.app-footer,.seo-faq,.demo-banner{display:none !important}
+  .app-header,.utility-row,.bottom-row,.app-footer,.seo-faq,.demo-banner,.kbd-hint{display:none !important}
   body{background:#fff !important}
   .instrument{border:1px solid #ddd}
 }
