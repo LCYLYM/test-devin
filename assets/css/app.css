@@ -2062,6 +2062,12 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .is-needlefish .instrument{border-color:rgba(180,145,180,.4)}
 .is-flyingfish{background:linear-gradient(180deg,#101c1a 0%,#081312 100%)}
 .is-flyingfish .instrument{border-color:rgba(105,200,175,.4)}
+.is-opah{background:linear-gradient(180deg,#1e1418 0%,#140d10 100%)}
+.is-opah .instrument{border-color:rgba(220,135,160,.4)}
+.is-pomfret{background:linear-gradient(180deg,#16181d 0%,#0e1014 100%)}
+.is-pomfret .instrument{border-color:rgba(165,175,200,.4)}
+.is-croaker{background:linear-gradient(180deg,#1a1810 0%,#111009 100%)}
+.is-croaker .instrument{border-color:rgba(195,185,110,.4)}
 .is-oatmeal{background:linear-gradient(180deg,#1d1912,#2f291e 50%,#433a2a)}
 .is-oatmeal .instrument{border-color:rgba(215,195,155,.4)}
 .is-thyme{background:linear-gradient(180deg,#121a14,#1c2a20 50%,#28392c)}

@@ -3816,6 +3816,9 @@
     if (params.get('saury') === '1') { document.body.classList.add('is-saury'); }
     if (params.get('needlefish') === '1') { document.body.classList.add('is-needlefish'); }
     if (params.get('flyingfish') === '1') { document.body.classList.add('is-flyingfish'); }
+    if (params.get('opah') === '1') { document.body.classList.add('is-opah'); }
+    if (params.get('pomfret') === '1') { document.body.classList.add('is-pomfret'); }
+    if (params.get('croaker') === '1') { document.body.classList.add('is-croaker'); }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -4990,6 +4993,9 @@
         if (params.get('saury') === '1') u.searchParams.set('saury', '1');
         if (params.get('needlefish') === '1') u.searchParams.set('needlefish', '1');
         if (params.get('flyingfish') === '1') u.searchParams.set('flyingfish', '1');
+        if (params.get('opah') === '1') u.searchParams.set('opah', '1');
+        if (params.get('pomfret') === '1') u.searchParams.set('pomfret', '1');
+        if (params.get('croaker') === '1') u.searchParams.set('croaker', '1');
       if (params.get('tile') === '1') u.searchParams.set('tile', '1');
       if (params.get('outline') === '1') u.searchParams.set('outline', '1');
       if (params.get('stripe') === '1') u.searchParams.set('stripe', '1');
