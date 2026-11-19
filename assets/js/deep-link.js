@@ -3600,6 +3600,15 @@
     if (params.get('wallaby') === '1') {
       document.body.classList.add('is-wallaby');
     }
+    if (params.get('quokka') === '1') {
+      document.body.classList.add('is-quokka');
+    }
+    if (params.get('jujube') === '1') {
+      document.body.classList.add('is-jujube');
+    }
+    if (params.get('serval') === '1') {
+      document.body.classList.add('is-serval');
+    }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -4564,6 +4573,9 @@
       if (params.get('armadillo') === '1') u.searchParams.set('armadillo', '1');
       if (params.get('lychee') === '1') u.searchParams.set('lychee', '1');
       if (params.get('wallaby') === '1') u.searchParams.set('wallaby', '1');
+      if (params.get('quokka') === '1') u.searchParams.set('quokka', '1');
+      if (params.get('jujube') === '1') u.searchParams.set('jujube', '1');
+      if (params.get('serval') === '1') u.searchParams.set('serval', '1');
       if (params.get('tile') === '1') u.searchParams.set('tile', '1');
       if (params.get('outline') === '1') u.searchParams.set('outline', '1');
       if (params.get('stripe') === '1') u.searchParams.set('stripe', '1');
