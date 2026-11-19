@@ -889,3 +889,7 @@ body[data-flat] .instrument,body[data-flat] .payday,body[data-flat] .template-sw
 .payday.pace{color:#c4b5fd}
 body[data-blink] .amount-area::after{content:"▌";color:var(--accent,#7dd3fc);animation:blinkCaret 1.06s steps(1) infinite;font-size:.8em;align-self:flex-end}
 @keyframes blinkCaret{50%{opacity:0}}
+.payday.astro{color:#f0abfc}
+.payday.rank{color:#fcd34d}
+.site-banner{padding:7px 16px;text-align:center;font-size:12px;letter-spacing:.04em;background:var(--accent,#7dd3fc);color:#0b1220;font-weight:600}
+.is-focus .site-banner{display:none}

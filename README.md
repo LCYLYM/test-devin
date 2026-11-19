@@ -133,6 +133,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `yuan` | `1` 距下一个整元倒计时徽章 |
 | `pace` | `1` 实时时薪徽章 |
 | `blink` | `1` 金额末尾闪烁光标 |
+| `astro` | `MM-DD` 星座徽章（♈白羊…） |
+| `rank` | `1` 时薪打败全网百分比（娱乐） |
+| `banner` | 文字：页面顶部公告条 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 

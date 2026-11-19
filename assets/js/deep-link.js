@@ -701,6 +701,39 @@
       }
     }
     if (params.get('blink') === '1') document.body.dataset.blink = '1';
+    var astroP = params.get('astro');
+    if (astroP && /^(0?[1-9]|1[0-2])-([1-9]|[12]\d|3[01])$/.test(astroP)) {
+      var ab2 = document.getElementById('astroBadge');
+      if (ab2) {
+        var amp = astroP.split('-').map(Number), av = amp[0] * 100 + amp[1];
+        var SIGNS = [['♑', '摩羯'], ['♒', '水瓶'], ['♓', '双鱼'], ['♈', '白羊'], ['♉', '金牛'], ['♊', '双子'], ['♋', '巨蟹'], ['♌', '狮子'], ['♍', '处女'], ['♎', '天秤'], ['♏', '天蝎'], ['♐', '射手']];
+        var CUTS = [120, 219, 321, 420, 521, 622, 723, 823, 923, 1024, 1123, 1222];
+        var sidx = 0;
+        for (var si = 0; si < CUTS.length; si++) { if (av < CUTS[si]) { sidx = si; break; } }
+        ab2.hidden = false;
+        var aic = document.getElementById('astroIcon'); if (aic) aic.textContent = SIGNS[sidx][0];
+        var anm = document.getElementById('astroName'); if (anm) anm.textContent = SIGNS[sidx][1];
+      }
+    }
+    if (params.get('rank') === '1') {
+      var rb = document.getElementById('rankBadge'), rp = document.getElementById('rankPct');
+      if (rb && rp) {
+        var rFill = function () {
+          var rs = window.SalaryApp && window.SalaryApp.getState && window.SalaryApp.getState();
+          var sn = rs && rs.snapshot;
+          if (!sn || !sn.daySalary) { rp.textContent = '—'; return; }
+          var hourly = sn.daySalary / (sn.hoursPerDay || 8);
+          var p = Math.round(100 / (1 + Math.exp(-(hourly - 45) / 22)));
+          rp.textContent = Math.min(99, Math.max(1, p)) + '%';
+        };
+        rb.hidden = false; rFill(); setInterval(rFill, 60000);
+      }
+    }
+    var bannerP = params.get('banner');
+    if (bannerP) {
+      var sb = document.getElementById('siteBanner');
+      if (sb) { sb.textContent = bannerP.slice(0, 60); sb.hidden = false; document.body.dataset.banner = '1'; }
+    }
     if (params.get('zodiac') === '1') {
       var zb = document.getElementById('zodiacBadge');
       if (zb) {
@@ -1131,6 +1164,9 @@
       if (params.get('yuan') === '1') u.searchParams.set('yuan', '1');
       if (params.get('pace') === '1') u.searchParams.set('pace', '1');
       if (params.get('blink') === '1') u.searchParams.set('blink', '1');
+      if (params.get('astro')) u.searchParams.set('astro', params.get('astro'));
+      if (params.get('rank') === '1') u.searchParams.set('rank', '1');
+      if (params.get('banner')) u.searchParams.set('banner', params.get('banner'));
       params.forEach(function (v, k) { if (k.indexOf('utm_') === 0 && v) u.searchParams.set(k, v.slice(0, 64)); });
       var text = u.toString();
       (navigator.clipboard ? navigator.clipboard.writeText(text) : Promise.reject())
