@@ -2236,6 +2236,23 @@
     if (params.get('crumb') === '1') {
       document.body.classList.add('is-crumb');
     }
+    if (params.get('int') === '1') {
+      var itb = document.getElementById('intBadge'), itv = document.getElementById('intVal');
+      if (itb && itv) {
+        var itUpd = function () {
+          var st = window.SalaryApp && window.SalaryApp.getState && window.SalaryApp.getState();
+          var e = st && st.snapshot && st.snapshot.todayEarned;
+          if (e != null) { itv.textContent = window.SalaryApp.formatMoney(Math.floor(e), st.currency); itb.hidden = false; }
+        };
+        itUpd(); setInterval(itUpd, 250);
+      }
+    }
+    if (params.get('cel') === '1') {
+      document.body.classList.add('is-cel');
+    }
+    if (params.get('emb') === '1') {
+      document.body.classList.add('is-emb');
+    }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -2828,6 +2845,9 @@
       if (params.get('smp') === '1') u.searchParams.set('smp', '1');
       if (params.get('twe') === '1') u.searchParams.set('twe', '1');
       if (params.get('crumb') === '1') u.searchParams.set('crumb', '1');
+      if (params.get('int') === '1') u.searchParams.set('int', '1');
+      if (params.get('cel') === '1') u.searchParams.set('cel', '1');
+      if (params.get('emb') === '1') u.searchParams.set('emb', '1');
       if (params.get('tile') === '1') u.searchParams.set('tile', '1');
       if (params.get('outline') === '1') u.searchParams.set('outline', '1');
       if (params.get('stripe') === '1') u.searchParams.set('stripe', '1');

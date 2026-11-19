@@ -1151,6 +1151,9 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .payday.syn{color:#fda4af}
 .payday.brk{color:#7dd3fc}
 .payday.smp{color:#bef264}
+.payday.int{color:#facc15}
+.is-cel .instrument{border:3px solid rgba(226,232,240,.5)}
+.is-emb #earningsNumber{text-shadow:1px 1px 0 rgba(255,255,255,.25),-1px -1px 0 rgba(0,0,0,.45)}
 @keyframes tweShine{0%,100%{filter:drop-shadow(0 0 0 rgba(190,242,100,0))}50%{filter:drop-shadow(0 0 10px rgba(190,242,100,.4))}}
 .is-twe #amountArea{animation:tweShine 2.4s ease-in-out infinite}
 @media (prefers-reduced-motion:reduce){.is-twe #amountArea{animation:none}}

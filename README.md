@@ -350,6 +350,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `smp` | `1` 下一入账里程碑徽章 |
 | `twe` | `1` 金额周期辉光 |
 | `crumb` | `1` 虚线描边 |
+| `int` | `1` 整数入账徽章 |
+| `cel` | `1` 卡通粗描边 |
+| `emb` | `1` 浮雕数字 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 
