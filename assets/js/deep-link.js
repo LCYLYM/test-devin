@@ -549,6 +549,33 @@
         hForm.requestSubmit ? hForm.requestSubmit() : hForm.dispatchEvent(new Event('submit', { cancelable: true }));
       }
     }
+    var dailyP = Number(params.get('daily'));
+    if (isFinite(dailyP) && dailyP > 0) {
+      var dst = window.SalaryApp && window.SalaryApp.getState && window.SalaryApp.getState();
+      var dwd = (dst && dst.snapshot && dst.snapshot.workdays) || 21.75;
+      var dInput = document.getElementById('salaryInput'), dForm = document.getElementById('salaryForm');
+      if (dInput && dForm) {
+        dInput.value = String(Math.round(dailyP * dwd * 100) / 100);
+        dForm.requestSubmit ? dForm.requestSubmit() : dForm.dispatchEvent(new Event('submit', { cancelable: true }));
+      }
+    }
+    if (params.get('quarter') === '1') {
+      var qb = document.getElementById('quarterBadge'), qp = document.getElementById('quarterPct'), ql = document.getElementById('quarterLabel');
+      if (qb && qp) {
+        var qFill = function () {
+          var n = new Date(), qm = Math.floor(n.getMonth() / 3) * 3;
+          var dim = function (m) { return new Date(n.getFullYear(), m + 1, 0).getDate(); };
+          var done = n.getDate(), tot = 0;
+          for (var i = 0; i < 3; i++) { tot += dim(qm + i); if (n.getMonth() > qm + i) done += dim(qm + i); }
+          done += (n.getHours() * 60 + n.getMinutes()) / 1440;
+          qp.textContent = (done / tot * 100).toFixed(1) + '%';
+          if (ql) ql.textContent = 'Q' + (qm / 3 + 1);
+        };
+        qb.hidden = false; qFill(); setInterval(qFill, 60000);
+      }
+    }
+    var fontP = params.get('font');
+    if (fontP && ['mono', 'serif', 'round'].indexOf(fontP) >= 0) document.body.dataset.font = fontP;
     if (params.get('shake') === '1' && window.DeviceMotionEvent) {
       var lastShake = 0;
       window.addEventListener('devicemotion', function (e) {
@@ -922,6 +949,9 @@
       if (params.get('week') === '1') u.searchParams.set('week', '1');
       if (params.get('glow') === '1') u.searchParams.set('glow', '1');
       var hpp = params.get('hourly'); if (hpp) u.searchParams.set('hourly', hpp);
+      var dpp = params.get('daily'); if (dpp) u.searchParams.set('daily', dpp);
+      if (params.get('quarter') === '1') u.searchParams.set('quarter', '1');
+      var fpp = params.get('font'); if (fpp && ['mono', 'serif', 'round'].indexOf(fpp) >= 0) u.searchParams.set('font', fpp);
       params.forEach(function (v, k) { if (k.indexOf('utm_') === 0 && v) u.searchParams.set(k, v.slice(0, 64)); });
       var text = u.toString();
       (navigator.clipboard ? navigator.clipboard.writeText(text) : Promise.reject())

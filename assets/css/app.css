@@ -870,3 +870,7 @@ body[data-glow] .status-dot{animation:glowPulse 2.4s ease-in-out infinite}
 @keyframes glowPulse{0%,100%{box-shadow:0 0 6px rgba(var(--accent-rgb),.6)}50%{box-shadow:0 0 16px rgba(var(--accent-rgb),1)}}
 body[data-eink]{filter:grayscale(1)}
 body[data-eink] *{animation:none!important;transition:none!important}
+.payday.quarter{color:#a7f3d0}
+body[data-font=mono] .amount-area{font-family:ui-monospace,'Cascadia Mono',Menlo,Consolas,monospace;letter-spacing:-3px}
+body[data-font=serif] .amount-area{font-family:Georgia,'Times New Roman','Songti SC',serif;letter-spacing:-3px}
+body[data-font=round] .amount-area{font-family:ui-rounded,'SF Pro Rounded','PingFang SC','Hiragino Sans GB',sans-serif}
