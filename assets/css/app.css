@@ -902,3 +902,5 @@ body[data-grid]{background-image:linear-gradient(rgba(125,211,252,.06) 1px,trans
 .corner-pet{position:fixed;right:18px;bottom:18px;z-index:80;font-size:34px;pointer-events:none;filter:drop-shadow(0 4px 8px rgba(0,0,0,.4));animation:petBob 2.4s ease-in-out infinite}
 @keyframes petBob{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
 .is-focus .corner-pet{display:none}
+.payday.lunar{color:#c7d2fe}
+.payday.yi{color:#fbbf24}

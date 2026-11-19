@@ -145,6 +145,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `grid` | `1` 蓝图网格背景 |
 | `corner` | emoji：右下角浮动小宠物 |
 | `tips` | `1` 页脚轮换显示隐藏玩法提示 |
+| `lunar` | `1` 农历日期徽章 |
+| `yi` | `1` 今日宜忌徽章（娱乐） |
+| `fx` | `…|bubble` 泡泡上升特效 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 

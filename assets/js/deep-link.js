@@ -309,7 +309,7 @@
         requestAnimationFrame(mFrame);
       })();
     }
-    if (['snow', 'sakura', 'rain', 'stars', 'leaves'].indexOf(fxParam) >= 0 && !(window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches)) {
+    if (['snow', 'sakura', 'rain', 'stars', 'leaves', 'bubble'].indexOf(fxParam) >= 0 && !(window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches)) {
       var fxc = document.createElement('canvas');
       fxc.style.cssText = 'position:fixed;inset:0;width:100%;height:100%;pointer-events:none;opacity:.65';
       document.body.prepend(fxc);
@@ -326,6 +326,13 @@
             q.ph += 0.02;
             fxctx.fillStyle = 'rgba(240,246,255,' + (0.2 + 0.6 * Math.abs(Math.sin(q.ph))).toFixed(2) + ')';
             fxctx.beginPath(); fxctx.arc(q.x, q.y, q.r * 0.8, 0, 6.3); fxctx.fill();
+            continue;
+          }
+          if (fxParam === 'bubble') {
+            q.y -= q.v; q.x += Math.sin(q.s += 0.01) * 0.7;
+            if (q.y < -12) { q.y = innerHeight + 12; q.x = Math.random() * innerWidth; }
+            fxctx.strokeStyle = 'rgba(147,197,253,.55)'; fxctx.lineWidth = 1;
+            fxctx.beginPath(); fxctx.arc(q.x, q.y, q.r * 1.4, 0, 6.3); fxctx.stroke();
             continue;
           }
           q.y += q.v; q.x += Math.sin(q.s += 0.01) * (fxParam === 'rain' ? 0.4 : 0.7); q.rot += q.vr;
@@ -790,6 +797,27 @@
         tq.hidden = false; tFill(); setInterval(tFill, 20000);
       }
     }
+    if (params.get('lunar') === '1') {
+      var lu = document.getElementById('lunarBadge'), lt = document.getElementById('lunarText');
+      if (lu && lt && window.Intl) {
+        try {
+          lt.textContent = new Intl.DateTimeFormat('zh-CN-u-ca-chinese', { month: 'long', day: 'numeric' }).format(new Date());
+          lu.hidden = false;
+        } catch (e2) {}
+      }
+    }
+    if (params.get('yi') === '1') {
+      var yib = document.getElementById('yiBadge'), yit = document.getElementById('yiText');
+      if (yib && yit) {
+        var YI_GOOD = ['摸鱼', '涨薪', '早退', '咖啡', '摸鱼', '划水', '写周报', '提桶'];
+        var YI_BAD = ['加班', '开会', '背锅', '改需求', '团建', '述职', '周报', '年会'];
+        var ysn = window.SalaryApp && window.SalaryApp.getState && window.SalaryApp.getState();
+        var ydk = (ysn && ysn.snapshot && ysn.snapshot.dayKey) || new Date().toISOString().slice(0, 10);
+        var yh = 0; for (var yi2 = 0; yi2 < ydk.length; yi2++) yh = (yh * 31 + ydk.charCodeAt(yi2)) % 977;
+        yit.textContent = '宜' + YI_GOOD[yh % YI_GOOD.length] + ' 忌' + YI_BAD[(yh >> 3) % YI_BAD.length];
+        yib.hidden = false;
+      }
+    }
     if (params.get('zodiac') === '1') {
       var zb = document.getElementById('zodiacBadge');
       if (zb) {
@@ -1233,6 +1261,8 @@
       if (params.get('grid') === '1') u.searchParams.set('grid', '1');
       if (params.get('corner')) u.searchParams.set('corner', params.get('corner'));
       if (params.get('tips') === '1') u.searchParams.set('tips', '1');
+      if (params.get('lunar') === '1') u.searchParams.set('lunar', '1');
+      if (params.get('yi') === '1') u.searchParams.set('yi', '1');
       params.forEach(function (v, k) { if (k.indexOf('utm_') === 0 && v) u.searchParams.set(k, v.slice(0, 64)); });
       var text = u.toString();
       (navigator.clipboard ? navigator.clipboard.writeText(text) : Promise.reject())
