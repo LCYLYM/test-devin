@@ -734,6 +734,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `salmon` | `1` 鲑鱼配色 |
 | `egret` | `1` 白鹭配色 |
 | `morel` | `1` 羊肚菌配色 |
+| `hyena` | `1` 鬣狗配色 |
+| `urchin` | `1` 海胆配色 |
+| `viper` | `1` 蝰蛇配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 
