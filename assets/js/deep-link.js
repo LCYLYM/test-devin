@@ -56,7 +56,7 @@
 
     // ?accent=%234de3ff — override the theme accent color (shareable).
     var accent = params.get('accent');
-    if (accent && /^#?[0-9a-fA-F]{3,8}$/.test(accent)) {
+    if (accent && /^#?([0-9a-fA-F]{3,4}|[0-9a-fA-F]{6}|[0-9a-fA-F]{8})$/.test(accent)) {
       var v = accent[0] === '#' ? accent : '#' + accent;
       document.body.style.setProperty('--accent', v);
     }
@@ -115,6 +115,8 @@
     } else if (e.key === 'p' && window.SalaryApp) {
       var st = window.SalaryApp.getState();
       window.SalaryApp.setPeriod(st.preferences.period === 'day' ? 'month' : 'day');
+    } else if (e.key === 'g' && window.SalaryApp) {
+      window.SalaryApp.openDialog('goalDialog');
     } else if (e.key === 'b') {
       var rb = document.getElementById('richQuickButton');
       if (rb) rb.click();
@@ -190,7 +192,7 @@
       if (prefs && prefs.currency && prefs.currency !== 'CNY') u.searchParams.set('currency', prefs.currency);
       if (prefs && prefs.period && prefs.period !== 'day') u.searchParams.set('period', prefs.period);
       var ac = params.get('accent');
-      if (ac && /^#?[0-9a-fA-F]{3,8}$/.test(ac)) u.searchParams.set('accent', ac);
+      if (ac && /^#?([0-9a-fA-F]{3,4}|[0-9a-fA-F]{6}|[0-9a-fA-F]{8})$/.test(ac)) u.searchParams.set('accent', ac);
       var text = u.toString();
       (navigator.clipboard ? navigator.clipboard.writeText(text) : Promise.reject())
         .then(function () { btn.textContent = '已复制 ✓'; setTimeout(function(){ btn.textContent='复制当前链接'; }, 1500); })
