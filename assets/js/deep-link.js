@@ -1750,6 +1750,43 @@
         });
       }
     }
+    var taxParam = params.get('tax');
+    if (taxParam) {
+      var txb = document.getElementById('taxBadge'), txv = document.getElementById('taxVal');
+      var trate = parseFloat(taxParam);
+      if (!isFinite(trate) || trate <= 0 || trate >= 1) trate = 0.8;
+      if (txb && txv) {
+        var txUpd = function () {
+          var st = window.SalaryApp && window.SalaryApp.getState && window.SalaryApp.getState();
+          var e = st && st.snapshot && st.snapshot.todayEarned;
+          if (e != null) {
+            txv.textContent = window.SalaryApp.formatMoney ? window.SalaryApp.formatMoney(e * trate) : (e * trate).toFixed(2);
+            txb.hidden = false;
+          }
+        };
+        txUpd(); setInterval(txUpd, 3000);
+      }
+    }
+    var beanParam = params.get('bean');
+    if (beanParam) {
+      var bnb = document.getElementById('beanBadge'), bnv = document.getElementById('beanVal');
+      var bprice = parseFloat(beanParam);
+      if (!isFinite(bprice) || bprice <= 0) bprice = 15;
+      if (bnb && bnv) {
+        var bnUpd = function () {
+          var st = window.SalaryApp && window.SalaryApp.getState && window.SalaryApp.getState();
+          var e = st && st.snapshot && st.snapshot.todayEarned;
+          if (e != null) { bnv.textContent = (e / bprice).toFixed(1); bnb.hidden = false; }
+        };
+        bnUpd(); setInterval(bnUpd, 3000);
+      }
+    }
+    var lofiParam = params.get('lofi');
+    if (lofiParam) {
+      var lf = document.createElement('div');
+      lf.className = 'lofi-layer';
+      document.body.appendChild(lf);
+    }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -2413,6 +2450,9 @@
       if (params.get('ratio') === '1') u.searchParams.set('ratio', '1');
       if (params.get('done') === '1') u.searchParams.set('done', '1');
       if (params.get('tilt2') === '1') u.searchParams.set('tilt2', '1');
+      var txp = params.get('tax'); if (txp) u.searchParams.set('tax', txp);
+      var bnp = params.get('bean'); if (bnp) u.searchParams.set('bean', bnp);
+      if (params.get('lofi') === '1') u.searchParams.set('lofi', '1');
       if (params.get('rays') === '1') u.searchParams.set('rays', '1');
       if (params.get('flat') === '1') u.searchParams.set('flat', '1');
       var idl = params.get('idle'); if (idl) u.searchParams.set('idle', idl);

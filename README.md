@@ -289,6 +289,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `ratio` | `1` 时薪倍数徽章（对比社平 ¥30/h，娱乐） |
 | `done` | `1` 下班倒计时百分比徽章 |
 | `tilt2` | `1` 仪表跟随鼠标 3D 倾斜 |
+| `tax` | `留存率` 税后估算徽章（默认 0.8） |
+| `bean` | `单价` 咖啡杯数换算徽章（默认 ¥15） |
+| `lofi` | `1` Lo-Fi 暖色噪点叠层 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 
