@@ -1109,6 +1109,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `greenfinch` | `1` 欧金翅雀配色 |
 | `waxwing` | `1` 太平鸟配色 |
 | `snowfinch` | `1` 雪雀配色 |
+| `sandpiper` | `1` 鹬配色 |
+| `curlew` | `1` 杓鹬配色 |
+| `godwit` | `1` 塍鹬配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 

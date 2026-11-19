@@ -3993,6 +3993,9 @@
     if (params.get('greenfinch') === '1') { document.body.classList.add('is-greenfinch'); }
     if (params.get('waxwing') === '1') { document.body.classList.add('is-waxwing'); }
     if (params.get('snowfinch') === '1') { document.body.classList.add('is-snowfinch'); }
+    if (params.get('sandpiper') === '1') { document.body.classList.add('is-sandpiper'); }
+    if (params.get('curlew') === '1') { document.body.classList.add('is-curlew'); }
+    if (params.get('godwit') === '1') { document.body.classList.add('is-godwit'); }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -5344,6 +5347,9 @@
         if (params.get('greenfinch') === '1') u.searchParams.set('greenfinch', '1');
         if (params.get('waxwing') === '1') u.searchParams.set('waxwing', '1');
         if (params.get('snowfinch') === '1') u.searchParams.set('snowfinch', '1');
+        if (params.get('sandpiper') === '1') u.searchParams.set('sandpiper', '1');
+        if (params.get('curlew') === '1') u.searchParams.set('curlew', '1');
+        if (params.get('godwit') === '1') u.searchParams.set('godwit', '1');
       if (params.get('tile') === '1') u.searchParams.set('tile', '1');
       if (params.get('outline') === '1') u.searchParams.set('outline', '1');
       if (params.get('stripe') === '1') u.searchParams.set('stripe', '1');
