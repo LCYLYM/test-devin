@@ -1112,6 +1112,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `sandpiper` | `1` 鹬配色 |
 | `curlew` | `1` 杓鹬配色 |
 | `godwit` | `1` 塍鹬配色 |
+| `snipe` | `1` 沙锥配色 |
+| `dunlin` | `1` 黑腹滨鹬配色 |
+| `redshank` | `1` 红脚鹬配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 

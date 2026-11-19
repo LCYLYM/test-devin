@@ -3996,6 +3996,9 @@
     if (params.get('sandpiper') === '1') { document.body.classList.add('is-sandpiper'); }
     if (params.get('curlew') === '1') { document.body.classList.add('is-curlew'); }
     if (params.get('godwit') === '1') { document.body.classList.add('is-godwit'); }
+    if (params.get('snipe') === '1') { document.body.classList.add('is-snipe'); }
+    if (params.get('dunlin') === '1') { document.body.classList.add('is-dunlin'); }
+    if (params.get('redshank') === '1') { document.body.classList.add('is-redshank'); }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -5350,6 +5353,9 @@
         if (params.get('sandpiper') === '1') u.searchParams.set('sandpiper', '1');
         if (params.get('curlew') === '1') u.searchParams.set('curlew', '1');
         if (params.get('godwit') === '1') u.searchParams.set('godwit', '1');
+        if (params.get('snipe') === '1') u.searchParams.set('snipe', '1');
+        if (params.get('dunlin') === '1') u.searchParams.set('dunlin', '1');
+        if (params.get('redshank') === '1') u.searchParams.set('redshank', '1');
       if (params.get('tile') === '1') u.searchParams.set('tile', '1');
       if (params.get('outline') === '1') u.searchParams.set('outline', '1');
       if (params.get('stripe') === '1') u.searchParams.set('stripe', '1');
