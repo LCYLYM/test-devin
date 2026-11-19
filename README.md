@@ -794,6 +794,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `kiskadee` | `1` 食蝇霸鹟配色 |
 | `lemming` | `1` 旅鼠配色 |
 | `moose` | `1` 驼鹿配色 |
+| `nyala` | `1` 林羚配色 |
+| `pika` | `1` 鼠兔配色 |
+| `quoll` | `1` 袋鼬配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 
