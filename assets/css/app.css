@@ -895,3 +895,6 @@ body[data-blink] .amount-area::after{content:"▌";color:var(--accent,#7dd3fc);a
 .is-focus .site-banner{display:none}
 .payday.lot{color:#fda4af}
 body[data-mirror] .instrument{transform:scaleX(-1)}
+.payday.ddl{color:#93c5fd}
+.salary-form.is-locked input{opacity:.55;cursor:not-allowed}
+body[data-noise]::after{content:"";position:fixed;inset:0;z-index:90;pointer-events:none;opacity:.05;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='120' height='120' filter='url(%23n)'/%3E%3C/svg%3E")}

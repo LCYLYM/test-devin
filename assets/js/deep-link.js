@@ -747,6 +747,34 @@
         lb.hidden = false;
       }
     }
+    if (params.get('lock') === '1') {
+      var li2 = document.getElementById('salaryInput'), lf = document.getElementById('salaryForm');
+      if (li2) { li2.readOnly = true; li2.setAttribute('aria-readonly', 'true'); }
+      if (lf) lf.classList.add('is-locked');
+    }
+    var ddlP = params.get('ddl');
+    var ddlParts = ddlP ? ddlP.split('-').map(Number) : null;
+    var ddlOk = ddlParts && (ddlParts.length === 3 ? (ddlParts[1] >= 1 && ddlParts[1] <= 12 && ddlParts[2] >= 1 && ddlParts[2] <= 31) : (ddlParts.length === 2 && ddlParts[0] >= 1 && ddlParts[0] <= 12 && ddlParts[1] >= 1 && ddlParts[1] <= 31));
+    if (ddlOk) {
+      var db = document.getElementById('ddlBadge');
+      if (db) {
+        var dn2 = params.get('ddlname');
+        var dl2 = document.getElementById('ddlLabel'); if (dl2) dl2.textContent = dn2 ? '距' + dn2.slice(0, 8) : '距DDL';
+        var ddFill = function () {
+          var dn = new Date(), dParts = ddlP.split('-').map(Number);
+          var dy = dParts.length === 3 ? dParts[0] : dn.getFullYear();
+          var dm2 = dParts.length === 3 ? dParts[1] : dParts[0], dday = dParts.length === 3 ? dParts[2] : dParts[1];
+          var dt = new Date(dy, dm2 - 1, dday);
+          if (dParts.length === 2 && dt.getTime() < new Date(dn.getFullYear(), dn.getMonth(), dn.getDate()).getTime()) dt = new Date(dy + 1, dm2 - 1, dday);
+          var ddiff = Math.round((dt.getTime() - new Date(dn.getFullYear(), dn.getMonth(), dn.getDate()).getTime()) / 864e5);
+          var ddd = document.getElementById('ddlDays'), ddu = document.getElementById('ddlUnit');
+          if (ddd) ddd.textContent = ddiff === 0 ? '🎯' : String(Math.abs(ddiff));
+          if (ddu) ddu.textContent = ddiff === 0 ? '就是今天' : (ddiff < 0 ? '天前' : '天');
+        };
+        db.hidden = false; ddFill(); setInterval(ddFill, 60000);
+      }
+    }
+    if (params.get('noise') === '1') document.body.dataset.noise = '1';
     if (params.get('zodiac') === '1') {
       var zb = document.getElementById('zodiacBadge');
       if (zb) {
@@ -1183,6 +1211,10 @@
       if (params.get('zoom')) u.searchParams.set('zoom', params.get('zoom'));
       if (params.get('mirror') === '1') u.searchParams.set('mirror', '1');
       if (params.get('lot') === '1') u.searchParams.set('lot', '1');
+      if (params.get('lock') === '1') u.searchParams.set('lock', '1');
+      if (params.get('ddl')) u.searchParams.set('ddl', params.get('ddl'));
+      if (params.get('ddlname')) u.searchParams.set('ddlname', params.get('ddlname'));
+      if (params.get('noise') === '1') u.searchParams.set('noise', '1');
       params.forEach(function (v, k) { if (k.indexOf('utm_') === 0 && v) u.searchParams.set(k, v.slice(0, 64)); });
       var text = u.toString();
       (navigator.clipboard ? navigator.clipboard.writeText(text) : Promise.reject())

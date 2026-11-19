@@ -139,6 +139,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `zoom` | `50`–`200` 显示缩放（%），挂屏/大屏用 |
 | `mirror` | `1` 镜像仪表盘（彩蛋） |
 | `lot` | `1` 今日幸运数字徽章 |
+| `lock` | `1` 锁定月薪输入（挂屏/分享防改） |
+| `ddl` | `YYYY-MM-DD` 或 `MM-DD` 自定义截止倒计时（`ddlname=` 改名） |
+| `noise` | `1` 胶片颗粒滤镜 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 
