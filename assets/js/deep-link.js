@@ -3182,6 +3182,9 @@
     if (params.get('solstice') === '1') dayCountdown('solsticeBadge', 'solsticeDays', 12, 21);
     if (params.get('valentine') === '1') dayCountdown('valentineBadge', 'valentineDays', 2, 14);
     if (params.get('halloween') === '1') dayCountdown('halloweenBadge', 'halloweenDays', 10, 31);
+    if (params.get('laborday') === '1') dayCountdown('labordayBadge', 'labordayDays', 5, 1);
+    if (params.get('national') === '1') dayCountdown('nationalBadge', 'nationalDays', 10, 1);
+    if (params.get('childrens') === '1') dayCountdown('childrensBadge', 'childrensDays', 6, 1);
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -4005,6 +4008,9 @@
       if (params.get('solstice') === '1') u.searchParams.set('solstice', '1');
       if (params.get('valentine') === '1') u.searchParams.set('valentine', '1');
       if (params.get('halloween') === '1') u.searchParams.set('halloween', '1');
+      if (params.get('laborday') === '1') u.searchParams.set('laborday', '1');
+      if (params.get('national') === '1') u.searchParams.set('national', '1');
+      if (params.get('childrens') === '1') u.searchParams.set('childrens', '1');
       if (params.get('tile') === '1') u.searchParams.set('tile', '1');
       if (params.get('outline') === '1') u.searchParams.set('outline', '1');
       if (params.get('stripe') === '1') u.searchParams.set('stripe', '1');

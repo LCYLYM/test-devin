@@ -581,6 +581,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `solstice` | `1` 冬至倒计时 |
 | `valentine` | `1` 情人节倒计时 |
 | `halloween` | `1` 万圣节倒计时 |
+| `laborday` | `1` 劳动节倒计时 |
+| `national` | `1` 国庆倒计时 |
+| `childrens` | `1` 儿童节倒计时 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 

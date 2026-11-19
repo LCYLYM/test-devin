@@ -1546,6 +1546,10 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .payday.valentine{color:#fda4af}
 .payday.halloween{color:#fdba74}
 .is-focus .payday.solstice,.is-focus .payday.valentine,.is-focus .payday.halloween{display:none}
+.payday.laborday{color:#fca5a5}
+.payday.national{color:#f87171}
+.payday.childrens{color:#fbbf24}
+.is-focus .payday.laborday,.is-focus .payday.national,.is-focus .payday.childrens{display:none}
 .is-forest{background:linear-gradient(180deg,#0d1f14,#12291a)}
 .is-forest .instrument{border-color:rgba(74,222,128,.38)}
 .is-sand{background:linear-gradient(180deg,#241c10,#2f2614)}
