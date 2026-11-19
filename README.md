@@ -205,6 +205,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `sat` | `0`–`200` 仪表饱和度（%） |
 | `wotd` | `1` 今日打工词条徽章（娱乐） |
 | `half` | `1` 上下半场进度徽章 |
+| `month` | `1` 本月进度徽章 |
+| `horizon` | `1` 地平线光带 |
+| `sign` | 文字：右下角签名档 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 

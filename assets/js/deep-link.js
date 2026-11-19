@@ -1078,6 +1078,30 @@
         hfb.hidden = false; hfFill(); setInterval(hfFill, 30000);
       }
     }
+    if (params.get('month') === '1') {
+      var mbb = document.getElementById('monthBadge'), mbp = document.getElementById('monthPct');
+      if (mbb && mbp) {
+        var moFill = function () {
+          var mn = new Date();
+          var dim = new Date(mn.getFullYear(), mn.getMonth() + 1, 0).getDate();
+          mbp.textContent = Math.round(mn.getDate() / dim * 100) + '%';
+        };
+        mbb.hidden = false; moFill(); setInterval(moFill, 60000);
+      }
+    }
+    if (params.get('horizon') === '1') {
+      document.body.dataset.horizon = '1';
+      var hz = document.createElement('div');
+      hz.className = 'horizon-layer'; hz.setAttribute('aria-hidden', 'true');
+      document.body.appendChild(hz);
+    }
+    var signP = params.get('sign');
+    if (signP && signP.trim()) {
+      var sg = document.createElement('div');
+      sg.className = 'sign-line'; sg.setAttribute('aria-hidden', 'true');
+      sg.textContent = '— ' + signP.trim().slice(0, 30);
+      document.body.appendChild(sg);
+    }
     if (params.get('rays') === '1' && !(window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches)) {
       document.body.dataset.rays = '1';
       var raysL = document.createElement('div');
@@ -1587,6 +1611,9 @@
       var satX = params.get('sat'); if (satX) u.searchParams.set('sat', satX);
       if (params.get('wotd') === '1') u.searchParams.set('wotd', '1');
       if (params.get('half') === '1') u.searchParams.set('half', '1');
+      if (params.get('month') === '1') u.searchParams.set('month', '1');
+      if (params.get('horizon') === '1') u.searchParams.set('horizon', '1');
+      var sgp = params.get('sign'); if (sgp) u.searchParams.set('sign', sgp.slice(0, 30));
       if (params.get('rays') === '1') u.searchParams.set('rays', '1');
       if (params.get('flat') === '1') u.searchParams.set('flat', '1');
       var idl = params.get('idle'); if (idl) u.searchParams.set('idle', idl);

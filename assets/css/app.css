@@ -1008,3 +1008,9 @@ body[data-sat] .instrument{filter:saturate(var(--sat-pct,100%))}
 body[data-sat][data-hue] .instrument{filter:saturate(var(--sat-pct,100%)) hue-rotate(var(--hue-rot,0deg))}
 .payday.wotd{color:#a5b4fc}
 .payday.half{color:#fdba74}
+.payday.month{color:#c4b5fd}
+.horizon-layer{position:fixed;left:0;right:0;bottom:0;height:18vh;pointer-events:none;z-index:0;background:linear-gradient(180deg,transparent,rgba(var(--accent-rgb,103,228,148),.14));-webkit-mask-image:linear-gradient(180deg,transparent,#000 80%);mask-image:linear-gradient(180deg,transparent,#000 80%)}
+.horizon-layer::after{content:'';position:absolute;left:0;right:0;bottom:0;height:1px;background:linear-gradient(90deg,transparent,rgba(var(--accent-rgb,103,228,148),.5),transparent)}
+.is-focus .horizon-layer{display:none}
+.sign-line{position:fixed;right:16px;bottom:12px;font-size:12px;color:var(--muted,#878d89);opacity:.7;pointer-events:none;z-index:5;font-style:italic}
+.is-focus .sign-line{display:none}
