@@ -998,6 +998,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `shrimp` | `1` 虾配色 |
 | `krill` | `1` 磷虾配色 |
 | `clam` | `1` 蛤蜊配色 |
+| `oyster` | `1` 牡蛎配色 |
+| `mussel` | `1` 贻贝配色 |
+| `scallop` | `1` 扇贝配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 

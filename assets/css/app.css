@@ -2194,6 +2194,12 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .is-krill .instrument{border-color:rgba(160,170,220,.4)}
 .is-clam{background:linear-gradient(180deg,#191318 0%,#120d11 100%)}
 .is-clam .instrument{border-color:rgba(200,150,180,.4)}
+.is-oyster{background:linear-gradient(180deg,#16161c 0%,#101014 100%)}
+.is-oyster .instrument{border-color:rgba(170,170,205,.4)}
+.is-mussel{background:linear-gradient(180deg,#10171c 0%,#0a1014 100%)}
+.is-mussel .instrument{border-color:rgba(110,180,205,.4)}
+.is-scallop{background:linear-gradient(180deg,#1d1315 0%,#150d0f 100%)}
+.is-scallop .instrument{border-color:rgba(235,130,140,.4)}
 .is-oatmeal{background:linear-gradient(180deg,#1d1912,#2f291e 50%,#433a2a)}
 .is-oatmeal .instrument{border-color:rgba(215,195,155,.4)}
 .is-thyme{background:linear-gradient(180deg,#121a14,#1c2a20 50%,#28392c)}
