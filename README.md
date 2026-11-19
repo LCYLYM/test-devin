@@ -104,6 +104,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `logo` | emoji 自定义左上角图标（如 `?logo=🐷`） |
 | `grad` | `1` 缓慢流动的渐变背景 |
 | `from` | 名字，访客打开时弹「xxx 喊你一起来数钱」（分享链接会自动保留 `utm_*`/`from`） |
+| `moon` | `1` 月相徽章（朔望盈亏 emoji） |
+| `all` | `1` 累计入账徽章（本机逐日记录求和） |
+| `shake` | `1` 手机摇一摇彩蛋（抖出钱来） |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 

@@ -236,6 +236,18 @@
         cnEl.textContent=(data.symbol||'')+String(Math.abs(data.displayAmount).toFixed(data.decimals??2)).split('').map(ch=>ch>='0'&&ch<='9'?CN[+ch]:(ch==='.'?'点':ch)).join('');
       }else cnEl.hidden=true;
     }
+    if(window.__allTime&&data.snapshot&&(tick-(window.__allLast||0)>5000)){
+      window.__allLast=tick;
+      try{
+        const allMap=JSON.parse(localStorage.getItem('salaryFlow.all')||'{}');
+        allMap[data.snapshot.dayKey]=Math.round((data.snapshot.todayEarned||0)*100)/100;
+        const aks=Object.keys(allMap).sort();
+        while(aks.length>400)delete allMap[aks.shift()];
+        localStorage.setItem('salaryFlow.all',JSON.stringify(allMap));
+        const tot=Object.values(allMap).reduce((a,b)=>a+b,0);
+        const ab=$('allBadge');if(ab){ab.hidden=false;setText('allTotal',(data.symbol||'¥')+tot.toLocaleString('en-US',{maximumFractionDigits:0}));}
+      }catch(_){}
+    }
     if(window.__chime&&data.working&&audioReady){
       const hr=data.now.getHours();
       if(window.__lastChimeHr!==hr){window.__lastChimeHr=hr;if(data.now.getMinutes()===0)playTick(true);}

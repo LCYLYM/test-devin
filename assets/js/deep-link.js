@@ -500,6 +500,34 @@
       if (vb2) { vb2.hidden = false; var vn = document.getElementById('visitsCount'); if (vn) vn.textContent = String(vc); }
     }
     if (params.get('chime') === '1') window.__chime = true;
+    if (params.get('all') === '1') window.__allTime = true;
+    if (params.get('moon') === '1') {
+      var mb = document.getElementById('moonBadge');
+      if (mb) {
+        var SYN = 29.53059, ref = Date.UTC(2000, 0, 6, 18, 14);
+        var ph = (((Date.now() - ref) / 864e5) % SYN + SYN) % SYN;
+        var midx = Math.round(ph / SYN * 8) % 8;
+        var EM = ['🌑', '🌒', '🌓', '🌔', '🌕', '🌖', '🌗', '🌘'];
+        var NM = ['朔', '峨眉', '上弦', '盈凸', '望', '亏凸', '下弦', '残月'];
+        mb.hidden = false;
+        mb.title = '月相 · ' + NM[midx];
+        var mei = document.getElementById('moonIcon'); if (mei) mei.textContent = EM[midx];
+        var mnm = document.getElementById('moonName'); if (mnm) mnm.textContent = NM[midx];
+      }
+    }
+    if (params.get('shake') === '1' && window.DeviceMotionEvent) {
+      var lastShake = 0;
+      window.addEventListener('devicemotion', function (e) {
+        var a = e.accelerationIncludingGravity;
+        if (!a) return;
+        if (Math.abs(a.x) + Math.abs(a.y) + Math.abs(a.z) > 42 && Date.now() - lastShake > 3000) {
+          lastShake = Date.now();
+          if (window.SalaryApp && window.SalaryApp.toast) window.SalaryApp.toast('🎉 摇一摇，钱抖出来了');
+          var inst = document.querySelector('.instrument');
+          if (inst) { inst.classList.add('shake-hit'); setTimeout(function () { inst.classList.remove('shake-hit'); }, 600); }
+        }
+      });
+    }
     var bdayMatch = /^(\d{1,2})[-./](\d{1,2})$/.exec(params.get('bday') || '');
     if (bdayMatch) {
       var bm = +bdayMatch[1], bd = +bdayMatch[2];
@@ -832,6 +860,9 @@
       var lp = params.get('logo'); if (lp) u.searchParams.set('logo', lp);
       if (document.body.dataset.grad === '1') u.searchParams.set('grad', '1');
       var fp = params.get('from'); if (fp) u.searchParams.set('from', fp.slice(0, 16));
+      if (params.get('all') === '1') u.searchParams.set('all', '1');
+      if (params.get('moon') === '1') u.searchParams.set('moon', '1');
+      if (params.get('shake') === '1') u.searchParams.set('shake', '1');
       params.forEach(function (v, k) { if (k.indexOf('utm_') === 0 && v) u.searchParams.set(k, v.slice(0, 64)); });
       var text = u.toString();
       (navigator.clipboard ? navigator.clipboard.writeText(text) : Promise.reject())
