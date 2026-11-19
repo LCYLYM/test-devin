@@ -318,6 +318,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `chil` | `1` 摸鱼指数徽章 |
 | `ref` | `1` 仪表倒影 |
 | `duo` | `1` 双色分屏背景 |
+| `sky` | `1` 按时段切换天空渐变色 |
+| `bob` | `1` 徽章轮流浮起 |
+| `cam` | `1` 取景框四角标记 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 

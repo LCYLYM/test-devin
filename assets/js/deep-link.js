@@ -2017,6 +2017,22 @@
     if (params.get('duo') === '1') {
       document.body.classList.add('is-duo');
     }
+    if (params.get('sky') === '1') {
+      var hr = new Date().getHours();
+      var skyCls = hr < 6 ? 'sky-night' : hr < 9 ? 'sky-dawn' : hr < 17 ? 'sky-day' : hr < 20 ? 'sky-dusk' : 'sky-night';
+      document.body.classList.add('is-sky', skyCls);
+    }
+    if (params.get('bob') === '1' && !(window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches)) {
+      document.body.classList.add('is-bob');
+    }
+    if (params.get('cam') === '1') {
+      var cam = document.createElement('div');
+      cam.className = 'cam-layer';
+      cam.setAttribute('aria-hidden', 'true');
+      cam.innerHTML = '<i class="c1"></i><i class="c2"></i><i class="c3"></i><i class="c4"></i>';
+      var inst5 = document.querySelector('.instrument-card, .instrument');
+      (inst5 || document.body).appendChild(cam);
+    }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -2709,6 +2725,9 @@
       if (params.get('chil') === '1') u.searchParams.set('chil', '1');
       if (params.get('ref') === '1') u.searchParams.set('ref', '1');
       if (params.get('duo') === '1') u.searchParams.set('duo', '1');
+      if (params.get('sky') === '1') u.searchParams.set('sky', '1');
+      if (params.get('bob') === '1') u.searchParams.set('bob', '1');
+      if (params.get('cam') === '1') u.searchParams.set('cam', '1');
       if (params.get('rays') === '1') u.searchParams.set('rays', '1');
       if (params.get('flat') === '1') u.searchParams.set('flat', '1');
       var idl = params.get('idle'); if (idl) u.searchParams.set('idle', idl);
