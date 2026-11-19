@@ -39,7 +39,7 @@
       var dailyList = ['pig', 'charge', 'meter', 'pixel', 'neon', 'mono', 'paper', 'term', 'ecg', 'wave', 'therm'];
       template = dailyList[dayNum % dailyList.length];
     }
-    if (template === 'random') template = ['charge','meter','pixel','pig','neon','mono','paper','term','ecg','wave','therm'][Math.floor(Math.random() * 11)];
+    if (template === 'random') template = ['charge','meter','pixel','pig','neon','mono','paper','term','ecg','wave','therm','receipt'][Math.floor(Math.random() * 12)];
     if (template) app.setTemplate(template);
     else {
       // First-visit default follows the OS: light mode gets the paper skin.
@@ -171,7 +171,7 @@
       document.body.style.setProperty('--accent', accent);
     }
 
-    var THEME_COLORS = {pig:'#1a1716',charge:'#131415',meter:'#171715',pixel:'#151515',neon:'#0c0e18',mono:'#111111',paper:'#f2efe7',term:'#0d1117',ecg:'#160a0a',wave:'#0b1526',therm:'#181310'};
+    var THEME_COLORS = {pig:'#1a1716',charge:'#131415',meter:'#171715',pixel:'#151515',neon:'#0c0e18',mono:'#111111',paper:'#f2efe7',term:'#0d1117',ecg:'#160a0a',wave:'#0b1526',therm:'#181310',receipt:'#181512'};
     function applyThemeColor(t) {
       var m = document.querySelector('meta[name=theme-color]');
       if (m && THEME_COLORS[t]) m.content = THEME_COLORS[t];
@@ -477,6 +477,17 @@
         } else if (fd) fd.textContent = String(fdays);
       }
     }
+    var logoParam = params.get('logo');
+    if (logoParam) {
+      var bi = document.querySelector('.brand-icon');
+      if (bi) {
+        var bsp = document.createElement('span');
+        bsp.className = 'brand-emoji';
+        bsp.textContent = Array.from(logoParam).slice(0, 2).join('');
+        bi.replaceWith(bsp);
+      }
+    }
+    if (params.get('grad') === '1') document.body.dataset.grad = '1';
     if (params.get('visits') === '1') {
       var vc = 0;
       try { vc = (parseInt(localStorage.getItem('salaryFlow.visits'), 10) || 0) + 1; localStorage.setItem('salaryFlow.visits', String(vc)); } catch (e) { vc = 1; }
@@ -813,6 +824,8 @@
       var dimp = params.get('dim'); if (dimp) u.searchParams.set('dim', dimp);
       if (params.get('visits') === '1') u.searchParams.set('visits', '1');
       if (window.__chime) u.searchParams.set('chime', '1');
+      var lp = params.get('logo'); if (lp) u.searchParams.set('logo', lp);
+      if (document.body.dataset.grad === '1') u.searchParams.set('grad', '1');
       var text = u.toString();
       (navigator.clipboard ? navigator.clipboard.writeText(text) : Promise.reject())
         .then(function () { btn.textContent = '已复制 ✓'; setTimeout(function(){ btn.textContent='复制当前链接'; }, 1500); })

@@ -33,7 +33,7 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | 参数 | 取值 |
 | --- | --- |
 | `salary` | 月薪数字，如 `15000` |
-| `template` | `pig` / `charge` / `meter` / `pixel` / `neon` / `mono` / `paper` / `term` / `ecg` / `wave` / `therm`（`skin` 同义，`random`/`daily` 特殊值） |
+| `template` | `pig` / `charge` / `meter` / `pixel` / `neon` / `mono` / `paper` / `term` / `ecg` / `wave` / `therm` / `receipt`（`skin` 同义，`random`/`daily` 特殊值） |
 | `currency` | `CNY` / `USD` / `EUR` / `JPY` / `KRW` / `HKD` / `VND` / `IDR` / `GBP` / `SGD` / `AUD` / `ZIM` |
 | `period` | `day` / `month` |
 | `demo` | `1` 开启演示模式（数字可设倍速，如 `60`） |
@@ -101,6 +101,10 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `contrast` | `1` 高对比模式（无障碍） |
 | `visits` | `1` 累计打开次数徽章（localStorage 计数） |
 | `chime` | `1` 整点报时音（需先开 `?sound=1`） |
+| `logo` | emoji 自定义左上角图标（如 `?logo=🐷`） |
+| `grad` | `1` 缓慢流动的渐变背景 |
+
+皮肤共 12 套，新「收据」皮：`?template=receipt`。
 
 币种现在共 12 种：CNY/USD/EUR/JPY/KRW/HKD/VND/IDR/GBP/SGD/AUD + ZIM 趣味。
 

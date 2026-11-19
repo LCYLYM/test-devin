@@ -801,6 +801,25 @@ body[data-template=therm] .currency-pill{background:#201812;border-color:#443022
 body[data-template=therm] .charge-visual{display:none}
 .therm-visual{display:none;flex-direction:column;align-items:center;gap:10px}
 body[data-template=therm] .therm-visual{display:flex}
+.receipt-visual{display:none;flex-direction:column;align-items:center;gap:10px}
+body[data-template=receipt] .charge-visual{display:none}
+body[data-template=receipt] .receipt-visual{display:flex}
+.receipt-roll{width:210px;height:230px;overflow:hidden;position:relative}
+.receipt-paper{width:176px;height:0;max-height:100%;margin:0 auto;transition:height .6s ease;position:relative;background:#f6f1e7;border-left:1px dashed #b8ad97;border-right:1px dashed #b8ad97}
+.receipt-paper::before,.receipt-paper::after{content:'';position:absolute;left:0;right:0;height:8px;background:linear-gradient(135deg,transparent 50%,#f6f1e7 50%) 0 0/12px 8px repeat-x,linear-gradient(225deg,transparent 50%,#f6f1e7 50%) 6px 0/12px 8px repeat-x}
+.receipt-paper::before{top:0;transform:scaleY(-1)}
+.receipt-paper::after{bottom:0}
+.receipt-lines{position:absolute;inset:10px 14px;background:repeating-linear-gradient(transparent 0 17px,#a89d88 17px 18px);opacity:.45}
+.receipt-pct{font:600 20px ui-monospace,monospace;color:#e8dcc3}
+.receipt-caption{font-size:12px;color:var(--muted,#888)}
+body[data-template=receipt]{--bg:#181512;--surface:#211d19;--surface-2:#2a251f;--line:#38312a;--accent:#d4b483;--accent-rgb:212,180,131;--instrument:#120f0d;--muted:#a89d8c;--dim:#6f6355}
+body[data-template=receipt] .template-slider{background:#3a3125}
+body[data-template=receipt] .template-switch button.selected{color:#e8dcc3}
+body[data-template=receipt] .currency-pill{background:#201c16;border-color:#443a2c}
+body[data-grad]{background:linear-gradient(130deg,var(--bg),#1a2030 45%,var(--bg) 80%);background-size:220% 220%}
+@media(prefers-reduced-motion:no-preference){body[data-grad]{animation:gradPan 16s ease-in-out infinite alternate}}
+@keyframes gradPan{to{background-position:100% 100%}}
+.brand-emoji{font-size:19px;line-height:1}
 .therm-body{display:flex;flex-direction:column;align-items:center}
 .therm-tube{width:30px;height:190px;border-radius:15px 15px 8px 8px;background:#1c1310;border:1px solid #3a2418;position:relative;overflow:hidden}
 .therm-fill{position:absolute;bottom:0;left:0;right:0;height:0%;background:linear-gradient(180deg,#fb923c,#dc4a1e);transition:height .6s var(--motion)}

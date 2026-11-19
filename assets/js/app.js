@@ -203,6 +203,8 @@
     const wf=$('waveFill');if(wf)wf.style.height=(p*100)+'%';
     setText('thermPercent',(p*100).toFixed(1)+'%');
     const tfl=$('thermFill');if(tfl)tfl.style.height=(p*100)+'%';
+    setText('receiptPercent',(p*100).toFixed(1)+'%');
+    const rcp=$('receiptPaper');if(rcp)rcp.style.height=(p*100)+'%';
     setText('termNote',data.working?'streaming salary · '+(data.symbol||'¥')+data.secondRate.toLocaleString('en-US',{maximumFractionDigits:4})+'/s':(data.snapshot&&data.snapshot.isWorkday?'paused · off the clock':'weekend · no charge'));
     const coinRate=data.fun?data.secondRate/1e8:data.secondRate;
     setText('pigDeposit','+ '+data.symbol+coinRate.toLocaleString('en-US',{maximumFractionDigits:2,minimumFractionDigits:2})+(data.fun?' 亿':''));
@@ -521,7 +523,7 @@
       }
       const p = stored.preferences || {};
       preferences={...clone(defaultPreferences),...p};
-      if (!['charge','meter','pixel','pig','neon','mono','paper','term','ecg','wave','therm'].includes(preferences.template)) preferences.template='pig';
+      if (!['charge','meter','pixel','pig','neon','mono','paper','term','ecg','wave','therm','receipt'].includes(preferences.template)) preferences.template='pig';
       if (!['day','month'].includes(preferences.period)) preferences.period='day';
       if (!CURRENCIES[preferences.currency]) preferences.currency='CNY';
       preferences.sound=Boolean(preferences.sound);
@@ -605,7 +607,7 @@
     window.dispatchEvent(new CustomEvent('salary-update',{detail:state}));
   }
   function setTemplate(name) {
-    if (!['charge','meter','pixel','pig','neon','mono','paper','term','ecg','wave','therm'].includes(name)) return false;
+    if (!['charge','meter','pixel','pig','neon','mono','paper','term','ecg','wave','therm','receipt'].includes(name)) return false;
     preferences.template=name;
     save();
     window.dispatchEvent(new CustomEvent('salary-template',{detail:{template:name}}));
@@ -3480,10 +3482,12 @@ ctx.strokeStyle='#3a2b2b';ctx.lineWidth=3;ctx.beginPath();const ecgX=(i)=>80+i*2
 ctx.strokeStyle='#1e3a5f';ctx.lineWidth=5;ctx.beginPath();ctx.arc(540,719,130,0,Math.PI*2);ctx.stroke();ctx.save();ctx.beginPath();ctx.arc(540,719,126,0,Math.PI*2);ctx.clip();ctx.fillStyle='#0b1526';ctx.fillRect(400,579,280,280);if(p>0){ctx.fillStyle=accent;ctx.globalAlpha=.85;ctx.beginPath();const wy=859-280*p;ctx.moveTo(400,859);ctx.lineTo(400,wy);for(let x=400;x<=680;x+=10){ctx.lineTo(x,wy+Math.sin(x/28)*8);}ctx.lineTo(680,859);ctx.closePath();ctx.fill();ctx.globalAlpha=1;}ctx.restore();ctx.fillStyle='#e8f4ff';ctx.font='500 44px Geist,sans-serif';ctx.textAlign='center';ctx.fillText(fmt(p*100,1)+'%',540,737);ctx.textAlign='left';ctx.fillStyle='#7fa3c7';ctx.font='400 20px "PingFang SC",sans-serif';ctx.textAlign='center';ctx.fillText('水涨船高',540,790);ctx.textAlign='left';
 }else if(theme==='therm'){
 rounded(505,570,70,220,35,'#1c1310');ctx.strokeStyle='#3a2418';ctx.lineWidth=3;rounded(505,570,70,220,35,'transparent');ctx.stroke();ctx.beginPath();ctx.arc(540,812,55,0,Math.PI*2);ctx.fillStyle='#b83a12';ctx.fill();ctx.stroke();if(p>0){ctx.save();rounded(505,570,70,220,35,'transparent');ctx.clip();ctx.fillStyle='#dc4a1e';const fh=220*p;ctx.fillRect(505,790-fh,70,fh);ctx.restore();}ctx.fillStyle='#fdba74';ctx.font='500 40px Geist,sans-serif';ctx.textAlign='center';ctx.fillText(fmt(p*100,1)+'%',540,895);ctx.textAlign='left';ctx.fillStyle='#a87f5c';ctx.font='400 20px "PingFang SC",sans-serif';ctx.textAlign='center';ctx.fillText('干劲温度计',540,930);ctx.textAlign='left';
+}else if(theme==='receipt'){
+const rh=80+300*p;ctx.fillStyle='#f6f1e7';ctx.fillRect(315,560,450,rh);ctx.strokeStyle='#b8ad97';ctx.lineWidth=2;ctx.setLineDash([8,6]);ctx.strokeRect(315,560,450,rh);ctx.setLineDash([]);ctx.fillStyle='#4a4238';ctx.font='26px ui-monospace,monospace';ctx.textAlign='center';ctx.fillText('*** 薪动收银条 ***',540,615);ctx.fillText('进度 '+fmt(p*100,1)+'%',540,660);if(rh>150)ctx.fillText('已入账 '+money(s.todayEarned),540,705);ctx.textAlign='left';write('收银条 · 慢慢打印中',80,940,22,'#8a8378');
 }else{
 rounded(70,633,940,172,86,'#050706');rounded(132,711,816,12,6,'#303833');if(p>0){const w=816*p;ctx.save();ctx.shadowColor=accent;ctx.shadowBlur=24;rounded(132,711,Math.max(2,w),12,6,accent);ctx.restore();const head=clamp(132+w,162,912);rounded(head-35,690,70,54,27,accent);write(Math.round(p*100)+'',head-23,727,26,'#091a0e',500); }write('每一秒，都在向前。',80,866,25,'#8c9490');}
 }
-async function paint(){if(!frozen)return;const version=++renderVersion;await(document.fonts?.ready||Promise.resolve());if(frozen.preferences.template==='pig'){const image=document.getElementById('piggyImage');if(image&&!image.complete&&String(image.src).startsWith('data:image/')){try{await image.decode();}catch(_){}}}if(version!==renderVersion)return;const s=frozen.snapshot,p=clamp(finite(s.progress),0,1),theme=frozen.preferences.template||'charge',accent=theme==='charge'?'#5ae593':theme==='meter'?'#ff764c':theme==='pig'?'#eeb58e':theme==='neon'?'#4de3ff':theme==='mono'?'#e8e8e8':theme==='paper'?'#c2622f':theme==='term'?'#39d353':theme==='ecg'?'#ff5f56':theme==='wave'?'#38bdf8':theme==='therm'?'#f97316':'#ff833f',bg=theme==='charge'?'#111513':'#171718';ctx.clearRect(0,0,1080,1440);ctx.fillStyle=bg;ctx.fillRect(0,0,1080,1440);
+async function paint(){if(!frozen)return;const version=++renderVersion;await(document.fonts?.ready||Promise.resolve());if(frozen.preferences.template==='pig'){const image=document.getElementById('piggyImage');if(image&&!image.complete&&String(image.src).startsWith('data:image/')){try{await image.decode();}catch(_){}}}if(version!==renderVersion)return;const s=frozen.snapshot,p=clamp(finite(s.progress),0,1),theme=frozen.preferences.template||'charge',accent=theme==='charge'?'#5ae593':theme==='meter'?'#ff764c':theme==='pig'?'#eeb58e':theme==='neon'?'#4de3ff':theme==='mono'?'#e8e8e8':theme==='paper'?'#c2622f':theme==='term'?'#39d353':theme==='ecg'?'#ff5f56':theme==='wave'?'#38bdf8':theme==='therm'?'#f97316':theme==='receipt'?'#d4b483':'#ff833f',bg=theme==='charge'?'#111513':'#171718';ctx.clearRect(0,0,1080,1440);ctx.fillStyle=bg;ctx.fillRect(0,0,1080,1440);
 write('薪动',80,111,33,'#f0f4f1',500);write('每一秒，都算数。',188,110,22,'#818a84');write(s.dayKey.replaceAll('-',' / '),775,110,22,'#939a96');ctx.strokeStyle='#ffffff1c';ctx.lineWidth=1;ctx.beginPath();ctx.moveTo(80,153);ctx.lineTo(1000,153);ctx.stroke();
 write(caption(),80,258,53,'#f0f3f1',400,undefined,920);write('今天已赚 · '+(frozen.currency.name||frozen.currency.code),80,336,26,'#8a938d');write(money(s.todayEarned),73,495,125,'#f5f7f5',400,theme==='meter'?'"Barlow Condensed",Geist,sans-serif':undefined,927);
 const marks=badges();let bx=80;for(const text of marks){ctx.font='400 21px Geist,"PingFang SC","Microsoft YaHei",sans-serif';const width=ctx.measureText(text).width+28;rounded(bx,527,width,37,18,'#ffffff0d');write(text,bx+14,553,21,accent);bx+=width+12;}
