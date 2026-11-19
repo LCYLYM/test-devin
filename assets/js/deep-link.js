@@ -4107,6 +4107,9 @@
     if (params.get('applemoss') === '1') { document.body.classList.add('is-applemoss'); }
     if (params.get('bogmoss') === '1') { document.body.classList.add('is-bogmoss'); }
     if (params.get('coppermoss') === '1') { document.body.classList.add('is-coppermoss'); }
+    if (params.get('maidenhair') === '1') { document.body.classList.add('is-maidenhair'); }
+    if (params.get('hartstongue') === '1') { document.body.classList.add('is-hartstongue'); }
+    if (params.get('polypody') === '1') { document.body.classList.add('is-polypody'); }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -5572,6 +5575,9 @@
         if (params.get('applemoss') === '1') u.searchParams.set('applemoss', '1');
         if (params.get('bogmoss') === '1') u.searchParams.set('bogmoss', '1');
         if (params.get('coppermoss') === '1') u.searchParams.set('coppermoss', '1');
+        if (params.get('maidenhair') === '1') u.searchParams.set('maidenhair', '1');
+        if (params.get('hartstongue') === '1') u.searchParams.set('hartstongue', '1');
+        if (params.get('polypody') === '1') u.searchParams.set('polypody', '1');
       if (params.get('tile') === '1') u.searchParams.set('tile', '1');
       if (params.get('outline') === '1') u.searchParams.set('outline', '1');
       if (params.get('stripe') === '1') u.searchParams.set('stripe', '1');

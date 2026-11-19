@@ -1223,6 +1223,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `applemoss` | `1` 苹果藓配色 |
 | `bogmoss` | `1` 沼藓配色 |
 | `coppermoss` | `1` 铜绿藓配色 |
+| `maidenhair` | `1` 铁线蕨配色 |
+| `hartstongue` | `1` 对开蕨配色 |
+| `polypody` | `1` 水龙骨配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 
