@@ -1064,6 +1064,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `seagull` | `1` 海鸥配色 |
 | `oriole` | `1` 黄鹂配色 |
 | `nightingale` | `1` 夜莺配色 |
+| `kite` | `1` 鸢配色 |
+| `vulture` | `1` 秃鹫配色 |
+| `condor` | `1` 神鹰配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 
