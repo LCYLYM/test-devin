@@ -775,3 +775,6 @@ body[data-template=wave]{--bg:#0b1526}
 
 /* iter-197: 状态 emoji 角标 */
 .status-emoji{font-size:14px;line-height:1}
+
+/* iter-199: 打工人语录 */
+.quote-line{flex-basis:100%;text-align:center;font-size:11px;color:var(--dim,#666);letter-spacing:.5px;margin-top:4px}

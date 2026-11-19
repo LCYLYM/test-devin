@@ -178,11 +178,34 @@
 
     if (params.get('confetti') === '0') window.__noConfetti = true;
 
+    var QUOTES = ['打工不摸鱼，不如回家种地','今天的砖，格外烫手','薪尽自然凉','只要我够快，贫穷就追不上我','上班如上坟，下班如过年','人在工位坐，薪从秒上跳','摸鱼是打工人的浪漫','卷不动的时候，就看看余额'];
+    var showQuote = function () {
+      var q = document.getElementById('quoteLine'); if (!q) return;
+      q.hidden = false;
+      q.textContent = QUOTES[Math.floor(Date.now() / 864e5) % QUOTES.length];
+    };
+    var quoteParam = params.get('quote');
+    if (quoteParam === '0' || quoteParam === 'off') { try { localStorage.removeItem('salaryFlow.quote'); } catch (e) {} }
+    else if (quoteParam) { try { localStorage.setItem('salaryFlow.quote', '1'); } catch (e) {} }
+    var quoteOn = quoteParam && quoteParam !== '0' && quoteParam !== 'off';
+    if (!quoteOn) { try { quoteOn = localStorage.getItem('salaryFlow.quote') === '1'; } catch (e) {} }
+    if (quoteOn) showQuote();
+    window.__toggleQuote = function () {
+      try {
+        var on = localStorage.getItem('salaryFlow.quote') === '1';
+        localStorage.setItem('salaryFlow.quote', on ? '0' : '1');
+        if (on) { var q2 = document.getElementById('quoteLine'); if (q2) q2.hidden = true; }
+        else showQuote();
+      } catch (e) {}
+    };
+
     var emojiParam = params.get('emoji');
     if (emojiParam) { var es = document.getElementById('statusEmoji'); if (es) { es.textContent = emojiParam.slice(0, 4); es.hidden = false; } }
 
     var rateParam = {sec: 0, second: 0, s: 0, min: 1, minute: 1, m: 1, hour: 2, h: 2}[params.get('rate') || ''];
     if (rateParam !== undefined) { try { localStorage.setItem('salaryFlow.rateMode', String(rateParam)); } catch (e) {} }
+
+    if (params.get('clock') === '12') window.__clock12 = true;
 
     var decParam = parseInt(params.get('dec') || '', 10);
     if (decParam >= 2 && decParam <= 6) window.__decimals = decParam;
@@ -259,6 +282,8 @@
       var skinKeys = ['pig','charge','meter','pixel','neon','mono','paper','term','ecg','wave'];
       var direct = e.key === '0' ? skinKeys[9] : skinKeys[Number(e.key) - 1];
       if (direct) window.SalaryApp.setTemplate(direct);
+    } else if (e.key === 'q') {
+      if (window.__toggleQuote) window.__toggleQuote();
     } else if (e.key === 'n' && window.SalaryApp) {
       try {
         var rm = Math.min(2, Math.max(0, parseInt(localStorage.getItem('salaryFlow.rateMode') || '0', 10) || 0));

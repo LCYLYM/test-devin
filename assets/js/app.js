@@ -624,7 +624,7 @@
     const progress=monthly ? current.monthProgress : current.progress;
     const working=current.status==='working';
     text('currentDate',new Intl.DateTimeFormat('zh-CN',{year:'numeric',month:'long',day:'numeric',weekday:'long'}).format(now));
-    text('currentTime',now.toLocaleTimeString('zh-CN',{hour12:false,hour:'2-digit',minute:'2-digit',second:'2-digit'}));
+    text('currentTime',now.toLocaleTimeString('zh-CN',{hour12:Boolean(window.__clock12),hour:'2-digit',minute:'2-digit',second:'2-digit'}));
     text('workingStatus',demo ? (working?'演示中 · 正在入账':'演示中 · '+current.statusLabel) : (config.overtimeSession && !working ? '加班计时中 · 工资不变' : current.statusLabel));
     if ($('statusDot')) { $('statusDot').classList.toggle('paused',!working); $('statusDot').classList.toggle('active',working); }
     hidden('sampleBadge',Boolean(config.configured));
