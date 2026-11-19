@@ -848,6 +848,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `coati` | `1` 长鼻浣熊配色 |
 | `dhole` | `1` 豺配色 |
 | `grison` | `1` 巢鼬配色 |
+| `harrier` | `1` 鹞配色 |
+| `ibex` | `1` 羱羊配色 |
+| `jacamar` | `1` 鹟䴕配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 

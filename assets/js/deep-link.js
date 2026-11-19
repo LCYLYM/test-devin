@@ -3732,6 +3732,9 @@
     if (params.get('coati') === '1') { document.body.classList.add('is-coati'); }
     if (params.get('dhole') === '1') { document.body.classList.add('is-dhole'); }
     if (params.get('grison') === '1') { document.body.classList.add('is-grison'); }
+    if (params.get('harrier') === '1') { document.body.classList.add('is-harrier'); }
+    if (params.get('ibex') === '1') { document.body.classList.add('is-ibex'); }
+    if (params.get('jacamar') === '1') { document.body.classList.add('is-jacamar'); }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -4822,6 +4825,9 @@
         if (params.get('coati') === '1') u.searchParams.set('coati', '1');
         if (params.get('dhole') === '1') u.searchParams.set('dhole', '1');
         if (params.get('grison') === '1') u.searchParams.set('grison', '1');
+        if (params.get('harrier') === '1') u.searchParams.set('harrier', '1');
+        if (params.get('ibex') === '1') u.searchParams.set('ibex', '1');
+        if (params.get('jacamar') === '1') u.searchParams.set('jacamar', '1');
       if (params.get('tile') === '1') u.searchParams.set('tile', '1');
       if (params.get('outline') === '1') u.searchParams.set('outline', '1');
       if (params.get('stripe') === '1') u.searchParams.set('stripe', '1');
