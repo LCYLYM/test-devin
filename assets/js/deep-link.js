@@ -3663,6 +3663,9 @@
     if (params.get('potoo') === '1') { document.body.classList.add('is-potoo'); }
     if (params.get('solenodon') === '1') { document.body.classList.add('is-solenodon'); }
     if (params.get('tarsier') === '1') { document.body.classList.add('is-tarsier'); }
+    if (params.get('wolverine') === '1') { document.body.classList.add('is-wolverine'); }
+    if (params.get('xeme') === '1') { document.body.classList.add('is-xeme'); }
+    if (params.get('zokor') === '1') { document.body.classList.add('is-zokor'); }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -4684,6 +4687,9 @@
         if (params.get('potoo') === '1') u.searchParams.set('potoo', '1');
         if (params.get('solenodon') === '1') u.searchParams.set('solenodon', '1');
         if (params.get('tarsier') === '1') u.searchParams.set('tarsier', '1');
+        if (params.get('wolverine') === '1') u.searchParams.set('wolverine', '1');
+        if (params.get('xeme') === '1') u.searchParams.set('xeme', '1');
+        if (params.get('zokor') === '1') u.searchParams.set('zokor', '1');
       if (params.get('tile') === '1') u.searchParams.set('tile', '1');
       if (params.get('outline') === '1') u.searchParams.set('outline', '1');
       if (params.get('stripe') === '1') u.searchParams.set('stripe', '1');

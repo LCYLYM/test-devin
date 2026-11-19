@@ -779,6 +779,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `potoo` | `1` 林鸱配色 |
 | `solenodon` | `1` 沟齿鼩配色 |
 | `tarsier` | `1` 眼镜猴配色 |
+| `wolverine` | `1` 狼獾配色 |
+| `xeme` | `1` 叉尾鸥配色 |
+| `zokor` | `1` 鼢鼠配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 
