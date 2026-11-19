@@ -3780,6 +3780,9 @@
     if (params.get('snapper') === '1') { document.body.classList.add('is-snapper'); }
     if (params.get('bream') === '1') { document.body.classList.add('is-bream'); }
     if (params.get('pompano') === '1') { document.body.classList.add('is-pompano'); }
+    if (params.get('tilapia') === '1') { document.body.classList.add('is-tilapia'); }
+    if (params.get('catfish') === '1') { document.body.classList.add('is-catfish'); }
+    if (params.get('carp') === '1') { document.body.classList.add('is-carp'); }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -4918,6 +4921,9 @@
         if (params.get('snapper') === '1') u.searchParams.set('snapper', '1');
         if (params.get('bream') === '1') u.searchParams.set('bream', '1');
         if (params.get('pompano') === '1') u.searchParams.set('pompano', '1');
+        if (params.get('tilapia') === '1') u.searchParams.set('tilapia', '1');
+        if (params.get('catfish') === '1') u.searchParams.set('catfish', '1');
+        if (params.get('carp') === '1') u.searchParams.set('carp', '1');
       if (params.get('tile') === '1') u.searchParams.set('tile', '1');
       if (params.get('outline') === '1') u.searchParams.set('outline', '1');
       if (params.get('stripe') === '1') u.searchParams.set('stripe', '1');
