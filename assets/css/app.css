@@ -791,3 +791,22 @@ body[data-light] .salary-form input:hover{border-bottom-color:#c9c4b6}
 body[data-light] .salary-currency{color:#55595e}
 body[data-light] .icon-btn:hover{background:var(--surface-2)}
 body[data-light] .instrument{--text:#f3f4f4;--muted:#9a9da0;--dim:#666b6e;--surface:#1a1c1d;--surface-2:#232526;--line:#303234;color-scheme:dark}
+
+/* iter-218: therm skin — thermometer fill */
+body[data-template=therm]{--bg:#181310;--surface:#211a16;--surface-2:#2a211b;--line:#3a2c22;--accent:#f97316;--accent-rgb:249,115,22;--instrument:#120d0a;--muted:#a89484;--dim:#6f5a4a}
+body[data-template=therm] .instrument{border-color:#33251b}
+body[data-template=therm] .template-slider{background:#3d2a1a}
+body[data-template=therm] .template-switch button.selected{color:#fdba74}
+body[data-template=therm] .currency-pill{background:#201812;border-color:#443022}
+body[data-template=therm] .charge-visual{display:none}
+.therm-visual{display:none;flex-direction:column;align-items:center;gap:10px}
+body[data-template=therm] .therm-visual{display:flex}
+.therm-body{display:flex;flex-direction:column;align-items:center}
+.therm-tube{width:30px;height:190px;border-radius:15px 15px 8px 8px;background:#1c1310;border:1px solid #3a2418;position:relative;overflow:hidden}
+.therm-fill{position:absolute;bottom:0;left:0;right:0;height:0%;background:linear-gradient(180deg,#fb923c,#dc4a1e);transition:height .6s var(--motion)}
+.therm-bulb{width:58px;height:58px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#fb923c,#b83a12 70%);margin-top:-12px;border:1px solid #3a2418}
+.therm-pct{color:#fdba74;font-size:16px;font-variant-numeric:tabular-nums}
+.therm-caption{color:#8a6a55;font-size:11px;letter-spacing:.5px}
+@keyframes therm-glow{0%,100%{box-shadow:0 0 12px rgba(249,115,22,.25)}50%{box-shadow:0 0 26px rgba(249,115,22,.55)}}
+.instrument.is-working .therm-bulb{animation:therm-glow 1.6s ease-in-out infinite}
+@media(max-width:1120px){.template-switch button{width:76px}}

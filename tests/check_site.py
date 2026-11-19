@@ -34,10 +34,10 @@ for ic in manifest.get('icons', []):
 
 buttons = set(re.findall(r'data-template="(\w+)"', html))
 js = open(os.path.join(ROOT, 'assets/js/app.js'), encoding='utf-8').read()
-valid = re.search(r"\['charge','meter','pixel','pig','neon','mono','paper','term','ecg','wave'\]", js)
+valid = re.search(r"\['charge','meter','pixel','pig','neon','mono','paper','term','ecg','wave','therm'\]", js)
 if not valid:
     missing.append('app.js template whitelist missing a skin')
-extra = buttons - {'charge','meter','pixel','pig','neon','mono','paper','term','ecg','wave'}
+extra = buttons - {'charge','meter','pixel','pig','neon','mono','paper','term','ecg','wave','therm'}
 if extra:
     missing.append('template buttons not in JS whitelist: ' + ','.join(sorted(extra)))
 
