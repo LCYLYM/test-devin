@@ -962,6 +962,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `pleco` | `1` 清道夫配色 |
 | `corydoras` | `1` 鼠鱼配色 |
 | `flowerhorn` | `1` 罗汉鱼配色 |
+| `newt` | `1` 蝾螈配色 |
+| `salamander` | `1` 火蜥蜴配色 |
+| `treefrog` | `1` 树蛙配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 

@@ -3846,6 +3846,9 @@
     if (params.get('pleco') === '1') { document.body.classList.add('is-pleco'); }
     if (params.get('corydoras') === '1') { document.body.classList.add('is-corydoras'); }
     if (params.get('flowerhorn') === '1') { document.body.classList.add('is-flowerhorn'); }
+    if (params.get('newt') === '1') { document.body.classList.add('is-newt'); }
+    if (params.get('salamander') === '1') { document.body.classList.add('is-salamander'); }
+    if (params.get('treefrog') === '1') { document.body.classList.add('is-treefrog'); }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -5050,6 +5053,9 @@
         if (params.get('pleco') === '1') u.searchParams.set('pleco', '1');
         if (params.get('corydoras') === '1') u.searchParams.set('corydoras', '1');
         if (params.get('flowerhorn') === '1') u.searchParams.set('flowerhorn', '1');
+        if (params.get('newt') === '1') u.searchParams.set('newt', '1');
+        if (params.get('salamander') === '1') u.searchParams.set('salamander', '1');
+        if (params.get('treefrog') === '1') u.searchParams.set('treefrog', '1');
       if (params.get('tile') === '1') u.searchParams.set('tile', '1');
       if (params.get('outline') === '1') u.searchParams.set('outline', '1');
       if (params.get('stripe') === '1') u.searchParams.set('stripe', '1');
