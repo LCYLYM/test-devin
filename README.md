@@ -557,6 +557,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `vivid` | `1` 鲜艳模式 |
 | `soft` | `1` 柔和模式 |
 | `edge` | `1` 锐利模式 |
+| `bramble` | `1` 荆棘配色 |
+| `cider` | `1` 苹果酒配色 |
+| `pebble` | `1` 卵石配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 

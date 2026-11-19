@@ -3053,6 +3053,15 @@
     if (params.get('edge') === '1') {
       document.body.classList.add('is-edge');
     }
+    if (params.get('bramble') === '1') {
+      document.body.classList.add('is-bramble');
+    }
+    if (params.get('cider') === '1') {
+      document.body.classList.add('is-cider');
+    }
+    if (params.get('pebble') === '1') {
+      document.body.classList.add('is-pebble');
+    }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -3852,6 +3861,9 @@
       if (params.get('vivid') === '1') u.searchParams.set('vivid', '1');
       if (params.get('soft') === '1') u.searchParams.set('soft', '1');
       if (params.get('edge') === '1') u.searchParams.set('edge', '1');
+      if (params.get('bramble') === '1') u.searchParams.set('bramble', '1');
+      if (params.get('cider') === '1') u.searchParams.set('cider', '1');
+      if (params.get('pebble') === '1') u.searchParams.set('pebble', '1');
       if (params.get('tile') === '1') u.searchParams.set('tile', '1');
       if (params.get('outline') === '1') u.searchParams.set('outline', '1');
       if (params.get('stripe') === '1') u.searchParams.set('stripe', '1');
