@@ -1175,6 +1175,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `tremella` | `1` 银耳配色 |
 | `cordyceps` | `1` 虫草配色 |
 | `chaga` | `1` 白桦茸配色 |
+| `cauliflower` | `1` 绣球菌配色 |
+| `winecap` | `1` 大球盖菇配色 |
+| `parasol` | `1` 高伞菇配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 

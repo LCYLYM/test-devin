@@ -2548,6 +2548,12 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .is-cordyceps .instrument{border-color:rgba(202,164,84,.4)}
 .is-chaga{background:linear-gradient(180deg,#161210 0%,#100d0b 100%)}
 .is-chaga .instrument{border-color:rgba(160,116,78,.4)}
+.is-cauliflower{background:linear-gradient(180deg,#1b1916 0%,#14120f 100%)}
+.is-cauliflower .instrument{border-color:rgba(206,190,150,.4)}
+.is-winecap{background:linear-gradient(180deg,#1e1416 0%,#150f11 100%)}
+.is-winecap .instrument{border-color:rgba(178,96,108,.4)}
+.is-parasol{background:linear-gradient(180deg,#1a1812 0%,#14120c 100%)}
+.is-parasol .instrument{border-color:rgba(190,168,110,.4)}
 .is-oatmeal{background:linear-gradient(180deg,#1d1912,#2f291e 50%,#433a2a)}
 .is-oatmeal .instrument{border-color:rgba(215,195,155,.4)}
 .is-thyme{background:linear-gradient(180deg,#121a14,#1c2a20 50%,#28392c)}
