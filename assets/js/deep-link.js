@@ -975,6 +975,20 @@
       }
     }
     if (params.get('disco') === '1') document.body.dataset.disco = '1';
+    if (params.get('sway') === '1') document.body.dataset.sway = '1';
+    if (params.get('band') === '1') document.body.dataset.band = '1';
+    if (params.get('mood') === '1') {
+      var mb2 = document.getElementById('moodBadge'), mi = document.getElementById('moodIcon'), mt = document.getElementById('moodText');
+      if (mb2 && mi && mt) {
+        var MOODS = ['😤 硬撑', '💪 奥利给', '🥱 犯困', '🔥 爆肝', '😌 摸鱼', '🤯 过载', '😎 拿捏', '🥺 求放过', '⚡ 打满', '😴 梦游', '🍀 躺赢', '💸 盼发薪', '🚀 起飞', '🌊 划水', '😭 裂开', '✨ 发光', '🧱 搬砖', '🎯 输出', '🌈 回血', '💡 灵感'];
+        var msn = window.SalaryApp && window.SalaryApp.getState && window.SalaryApp.getState();
+        var mdk = (msn && msn.snapshot && msn.snapshot.dayKey) || new Date().toISOString().slice(0, 10);
+        var mh = 0; for (var mji = 0; mji < mdk.length; mji++) mh = (mh * 31 + mdk.charCodeAt(mji)) % 997;
+        var mp = MOODS[mh % MOODS.length].split(' ');
+        mi.textContent = mp[0]; mt.textContent = mp[1];
+        mb2.hidden = false;
+      }
+    }
     if (params.get('wiggle') === '1') document.body.dataset.wiggle = '1';
     if (params.get('rays') === '1' && !(window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches)) {
       document.body.dataset.rays = '1';
@@ -1473,6 +1487,9 @@
       var hup = params.get('hue'); if (hup) u.searchParams.set('hue', hup.slice(0, 5));
       var bop = params.get('born'); if (bop) u.searchParams.set('born', bop.slice(0, 10));
       if (params.get('disco') === '1') u.searchParams.set('disco', '1');
+      if (params.get('sway') === '1') u.searchParams.set('sway', '1');
+      if (params.get('band') === '1') u.searchParams.set('band', '1');
+      if (params.get('mood') === '1') u.searchParams.set('mood', '1');
       if (params.get('wiggle') === '1') u.searchParams.set('wiggle', '1');
       if (params.get('rays') === '1') u.searchParams.set('rays', '1');
       if (params.get('flat') === '1') u.searchParams.set('flat', '1');
