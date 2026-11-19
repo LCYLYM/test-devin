@@ -1134,6 +1134,8 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .payday.xp{color:#a78bfa}
 .payday.bks{color:#fcd34d}
 .payday.dice{color:#fca5a5}
+.payday.end{color:#fdba74}
+.payday.cb{color:#f0abfc}
 @keyframes vhsJitter{0%,92%{transform:translateX(0)}93%{transform:translateX(-2px)}96%{transform:translateX(2px)}100%{transform:translateX(0)}}
 .is-vhs .instrument{animation:vhsJitter 4s steps(1) infinite;text-shadow:1px 0 rgba(255,0,80,.4),-1px 0 rgba(0,220,255,.4)}
 @media (prefers-reduced-motion:reduce){.is-vhs .instrument{animation:none}}

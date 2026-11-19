@@ -303,6 +303,8 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `bks` | `1` 存钱里程碑徽章（¥当前/下一档） |
 | `dice` | `1` 每日运势骰子徽章 |
 | `vhs` | `1` 复古录像带效果（抖动+色散） |
+| `end` | `HH:MM` 自定义下班倒计时徽章 |
+| `badge` | `emoji|文字` 自定义徽章 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 
