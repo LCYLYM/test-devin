@@ -1135,6 +1135,12 @@ body[data-hover] .payday:hover{transform:translateY(-3px)}
 .is-alpine .instrument{border-color:rgba(150,200,225,.4)}
 .is-nectar{background:linear-gradient(180deg,#24160e,#38200f 55%,#4a2c14)}
 .is-nectar .instrument{border-color:rgba(240,170,80,.4)}
+.is-clay{background:linear-gradient(180deg,#201410,#30201a 55%,#402a22)}
+.is-clay .instrument{border-color:rgba(200,140,110,.4)}
+.is-aurum{background:linear-gradient(180deg,#201a08,#32290e 55%,#443615)}
+.is-aurum .instrument{border-color:rgba(235,200,90,.45)}
+.is-breeze{background:linear-gradient(180deg,#0e1c1e,#14302f 55%,#1c4240)}
+.is-breeze .instrument{border-color:rgba(130,210,200,.4)}
 .is-focus .payday.morale{display:none}
 body[data-pillar] .page-shell{border-left:1px solid rgba(var(--accent-rgb,103,228,148),.22);border-right:1px solid rgba(var(--accent-rgb,103,228,148),.22)}
 body[data-gloom]{--bg:#0a0c0b}

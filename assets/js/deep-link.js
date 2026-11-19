@@ -2801,6 +2801,15 @@
     if (params.get('nectar') === '1') {
       document.body.classList.add('is-nectar');
     }
+    if (params.get('clay') === '1') {
+      document.body.classList.add('is-clay');
+    }
+    if (params.get('aurum') === '1') {
+      document.body.classList.add('is-aurum');
+    }
+    if (params.get('breeze') === '1') {
+      document.body.classList.add('is-breeze');
+    }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -3516,6 +3525,9 @@
       if (params.get('cinnabar') === '1') u.searchParams.set('cinnabar', '1');
       if (params.get('alpine') === '1') u.searchParams.set('alpine', '1');
       if (params.get('nectar') === '1') u.searchParams.set('nectar', '1');
+      if (params.get('clay') === '1') u.searchParams.set('clay', '1');
+      if (params.get('aurum') === '1') u.searchParams.set('aurum', '1');
+      if (params.get('breeze') === '1') u.searchParams.set('breeze', '1');
       if (params.get('tile') === '1') u.searchParams.set('tile', '1');
       if (params.get('outline') === '1') u.searchParams.set('outline', '1');
       if (params.get('stripe') === '1') u.searchParams.set('stripe', '1');
