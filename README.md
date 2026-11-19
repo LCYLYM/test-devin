@@ -356,6 +356,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `rem` | `1` 剩余工时徽章 |
 | `ripple` | `1` 脉冲涟漪 |
 | `moodbg` | `1` 三色心情渐变背景 |
+| `mos` | `1` 马赛克背景 |
+| `lens` | `1` 悬停放大金额 |
+| `zig` | `1` 锯齿顶边 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 

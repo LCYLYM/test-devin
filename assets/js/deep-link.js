@@ -2274,6 +2274,19 @@
     if (params.get('moodbg') === '1') {
       document.body.classList.add('is-moodbg');
     }
+    if (params.get('mos') === '1') {
+      document.body.classList.add('is-mos');
+    }
+    if (params.get('lens') === '1' && !(window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches)) {
+      var lensEl = document.getElementById('amountArea');
+      if (lensEl) {
+        lensEl.addEventListener('mouseenter', function () { document.body.classList.add('lens-on'); });
+        lensEl.addEventListener('mouseleave', function () { document.body.classList.remove('lens-on'); });
+      }
+    }
+    if (params.get('zig') === '1') {
+      document.body.classList.add('is-zig');
+    }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -2872,6 +2885,9 @@
       if (params.get('rem') === '1') u.searchParams.set('rem', '1');
       if (params.get('ripple') === '1') u.searchParams.set('ripple', '1');
       if (params.get('moodbg') === '1') u.searchParams.set('moodbg', '1');
+      if (params.get('mos') === '1') u.searchParams.set('mos', '1');
+      if (params.get('lens') === '1') u.searchParams.set('lens', '1');
+      if (params.get('zig') === '1') u.searchParams.set('zig', '1');
       if (params.get('tile') === '1') u.searchParams.set('tile', '1');
       if (params.get('outline') === '1') u.searchParams.set('outline', '1');
       if (params.get('stripe') === '1') u.searchParams.set('stripe', '1');
