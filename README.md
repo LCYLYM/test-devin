@@ -1076,6 +1076,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `tanager` | `1` 唐纳雀配色 |
 | `starling` | `1` 椋鸟配色 |
 | `myna` | `1` 八哥配色 |
+| `warbler` | `1` 莺配色 |
+| `cardinal` | `1` 红雀配色 |
+| `canary` | `1` 金丝雀配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 

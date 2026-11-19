@@ -2350,6 +2350,12 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .is-starling .instrument{border-color:rgba(160,165,195,.4)}
 .is-myna{background:linear-gradient(180deg,#1b1a14 0%,#14130e 100%)}
 .is-myna .instrument{border-color:rgba(220,205,120,.4)}
+.is-warbler{background:linear-gradient(180deg,#161913 0%,#10130e 100%)}
+.is-warbler .instrument{border-color:rgba(160,185,110,.4)}
+.is-cardinal{background:linear-gradient(180deg,#1d1013 0%,#150b0d 100%)}
+.is-cardinal .instrument{border-color:rgba(225,85,95,.4)}
+.is-canary{background:linear-gradient(180deg,#1e1c0f 0%,#16150b 100%)}
+.is-canary .instrument{border-color:rgba(245,225,100,.4)}
 .is-oatmeal{background:linear-gradient(180deg,#1d1912,#2f291e 50%,#433a2a)}
 .is-oatmeal .instrument{border-color:rgba(215,195,155,.4)}
 .is-thyme{background:linear-gradient(180deg,#121a14,#1c2a20 50%,#28392c)}

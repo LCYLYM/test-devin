@@ -3960,6 +3960,9 @@
     if (params.get('tanager') === '1') { document.body.classList.add('is-tanager'); }
     if (params.get('starling') === '1') { document.body.classList.add('is-starling'); }
     if (params.get('myna') === '1') { document.body.classList.add('is-myna'); }
+    if (params.get('warbler') === '1') { document.body.classList.add('is-warbler'); }
+    if (params.get('cardinal') === '1') { document.body.classList.add('is-cardinal'); }
+    if (params.get('canary') === '1') { document.body.classList.add('is-canary'); }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -5278,6 +5281,9 @@
         if (params.get('tanager') === '1') u.searchParams.set('tanager', '1');
         if (params.get('starling') === '1') u.searchParams.set('starling', '1');
         if (params.get('myna') === '1') u.searchParams.set('myna', '1');
+        if (params.get('warbler') === '1') u.searchParams.set('warbler', '1');
+        if (params.get('cardinal') === '1') u.searchParams.set('cardinal', '1');
+        if (params.get('canary') === '1') u.searchParams.set('canary', '1');
       if (params.get('tile') === '1') u.searchParams.set('tile', '1');
       if (params.get('outline') === '1') u.searchParams.set('outline', '1');
       if (params.get('stripe') === '1') u.searchParams.set('stripe', '1');
