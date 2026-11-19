@@ -3741,6 +3741,9 @@
     if (params.get('nandu') === '1') { document.body.classList.add('is-nandu'); }
     if (params.get('padda') === '1') { document.body.classList.add('is-padda'); }
     if (params.get('tahr') === '1') { document.body.classList.add('is-tahr'); }
+    if (params.get('vanga') === '1') { document.body.classList.add('is-vanga'); }
+    if (params.get('wigeon') === '1') { document.body.classList.add('is-wigeon'); }
+    if (params.get('yapok') === '1') { document.body.classList.add('is-yapok'); }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -4840,6 +4843,9 @@
         if (params.get('nandu') === '1') u.searchParams.set('nandu', '1');
         if (params.get('padda') === '1') u.searchParams.set('padda', '1');
         if (params.get('tahr') === '1') u.searchParams.set('tahr', '1');
+        if (params.get('vanga') === '1') u.searchParams.set('vanga', '1');
+        if (params.get('wigeon') === '1') u.searchParams.set('wigeon', '1');
+        if (params.get('yapok') === '1') u.searchParams.set('yapok', '1');
       if (params.get('tile') === '1') u.searchParams.set('tile', '1');
       if (params.get('outline') === '1') u.searchParams.set('outline', '1');
       if (params.get('stripe') === '1') u.searchParams.set('stripe', '1');
