@@ -893,6 +893,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `dorado` | `1` 鲯鳅配色 |
 | `tarpon` | `1` 大海鲢配色 |
 | `grouper` | `1` 石斑鱼配色 |
+| `snapper` | `1` 笛鲷配色 |
+| `bream` | `1` 鲷鱼配色 |
+| `pompano` | `1` 鲳鲹配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 

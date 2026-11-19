@@ -1984,6 +1984,12 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .is-tarpon .instrument{border-color:rgba(155,180,210,.4)}
 .is-grouper{background:linear-gradient(180deg,#1c1315 0%,#130c0e 100%)}
 .is-grouper .instrument{border-color:rgba(210,130,150,.4)}
+.is-snapper{background:linear-gradient(180deg,#1f1216 0%,#150b0f 100%)}
+.is-snapper .instrument{border-color:rgba(225,115,150,.4)}
+.is-bream{background:linear-gradient(180deg,#161a13 0%,#0e120c 100%)}
+.is-bream .instrument{border-color:rgba(165,185,130,.4)}
+.is-pompano{background:linear-gradient(180deg,#1b1a10 0%,#12110a 100%)}
+.is-pompano .instrument{border-color:rgba(210,195,110,.4)}
 .is-oatmeal{background:linear-gradient(180deg,#1d1912,#2f291e 50%,#433a2a)}
 .is-oatmeal .instrument{border-color:rgba(215,195,155,.4)}
 .is-thyme{background:linear-gradient(180deg,#121a14,#1c2a20 50%,#28392c)}
