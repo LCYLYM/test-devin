@@ -96,6 +96,9 @@
       var skins = ['pig', 'charge', 'meter', 'pixel', 'neon', 'mono', 'paper'];
       var cur = window.SalaryApp.getState().preferences.template;
       window.SalaryApp.setTemplate(skins[(skins.indexOf(cur) + 1) % skins.length]);
+    } else if (e.key === 'p' && window.SalaryApp) {
+      var st = window.SalaryApp.getState();
+      window.SalaryApp.setPeriod(st.preferences.period === 'day' ? 'month' : 'day');
     } else if (e.key === 'z') {
       var fb = document.getElementById('focusButton');
       if (fb) fb.click();
