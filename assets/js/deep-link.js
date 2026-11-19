@@ -2918,6 +2918,15 @@
     if (params.get('iceberg') === '1') {
       document.body.classList.add('is-iceberg');
     }
+    if (params.get('willow') === '1') {
+      document.body.classList.add('is-willow');
+    }
+    if (params.get('volcano') === '1') {
+      document.body.classList.add('is-volcano');
+    }
+    if (params.get('glade') === '1') {
+      document.body.classList.add('is-glade');
+    }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -3672,6 +3681,9 @@
       if (params.get('rosewood') === '1') u.searchParams.set('rosewood', '1');
       if (params.get('marsh') === '1') u.searchParams.set('marsh', '1');
       if (params.get('iceberg') === '1') u.searchParams.set('iceberg', '1');
+      if (params.get('willow') === '1') u.searchParams.set('willow', '1');
+      if (params.get('volcano') === '1') u.searchParams.set('volcano', '1');
+      if (params.get('glade') === '1') u.searchParams.set('glade', '1');
       if (params.get('tile') === '1') u.searchParams.set('tile', '1');
       if (params.get('outline') === '1') u.searchParams.set('outline', '1');
       if (params.get('stripe') === '1') u.searchParams.set('stripe', '1');

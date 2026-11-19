@@ -1213,6 +1213,12 @@ body[data-hover] .payday:hover{transform:translateY(-3px)}
 .is-marsh .instrument{border-color:rgba(160,190,110,.38)}
 .is-iceberg{background:linear-gradient(180deg,#0c1c26,#142e3c 55%,#1c4050)}
 .is-iceberg .instrument{border-color:rgba(150,220,240,.45)}
+.is-willow{background:linear-gradient(180deg,#141c10,#222e1a 55%,#304024)}
+.is-willow .instrument{border-color:rgba(170,200,120,.4)}
+.is-volcano{background:linear-gradient(180deg,#1e0a06,#30120a 55%,#421a0e)}
+.is-volcano .instrument{border-color:rgba(245,100,55,.45)}
+.is-glade{background:linear-gradient(180deg,#0e1e14,#183022 55%,#224230)}
+.is-glade .instrument{border-color:rgba(130,210,160,.4)}
 .is-focus .payday.morale{display:none}
 body[data-pillar] .page-shell{border-left:1px solid rgba(var(--accent-rgb,103,228,148),.22);border-right:1px solid rgba(var(--accent-rgb,103,228,148),.22)}
 body[data-gloom]{--bg:#0a0c0b}

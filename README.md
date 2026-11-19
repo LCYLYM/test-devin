@@ -512,6 +512,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `rosewood` | `1` 紫檀配色 |
 | `marsh` | `1` 沼泽配色 |
 | `iceberg` | `1` 冰山配色 |
+| `willow` | `1` 柳树配色 |
+| `volcano` | `1` 火山配色 |
+| `glade` | `1` 林间配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 
