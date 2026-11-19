@@ -377,6 +377,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `sun` | `1` 日出光晕 |
 | `waves` | `1` 波纹底纹 |
 | `deep` | `1` 深海模式 |
+| `dream` | `1` 梦想进度徽章（配 goal） |
+| `allday` | `1` 本页打开以来累计 |
+| `chalk` | `1` 粉笔黑板风 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 

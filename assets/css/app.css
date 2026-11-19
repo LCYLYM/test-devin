@@ -1184,6 +1184,11 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .is-waves{background-image:repeating-linear-gradient(135deg,rgba(94,234,212,.05) 0 10px,transparent 10px 28px),repeating-linear-gradient(45deg,rgba(94,234,212,.04) 0 10px,transparent 10px 28px)}
 .is-deep{background:linear-gradient(180deg,#020c1b 0%,#04121f 55%,#06202e 100%)}
 .is-deep .instrument{box-shadow:0 0 40px rgba(34,211,238,.1)}
+.payday.drm{color:#f0abfc}
+.payday.ad{color:#7dd3fc}
+.is-chalk{background:#1d2b26}
+.is-chalk .instrument{border:2px dashed rgba(255,255,255,.4);box-shadow:none;filter:saturate(.85)}
+.is-focus .payday.drm,.is-focus .payday.ad{display:none}
 @keyframes hueSpin{to{filter:hue-rotate(360deg)}}
 .is-hue .instrument{animation:hueSpin 12s linear infinite}
 @media (prefers-reduced-motion:reduce){.is-hue .instrument{animation:none}}

@@ -2406,6 +2406,41 @@
     if (params.get('deep') === '1') {
       document.body.classList.add('is-deep');
     }
+    if (params.get('dream') === '1') {
+      var dB = document.getElementById('drmBadge'), dV = document.getElementById('drmVal');
+      if (dB && dV) {
+        var dUpd = function () {
+          var st = window.SalaryApp && window.SalaryApp.getState && window.SalaryApp.getState();
+          if (!st || !st.snapshot) return;
+          var g = parseFloat(params.get('goal')) || 0;
+          if (g <= 0) { dV.textContent = '设 ?goal= 金额启用'; dB.hidden = false; return; }
+          var p = Math.min(100, ((st.snapshot.monthEarned || 0) / g) * 100);
+          dV.textContent = p.toFixed(1) + '%';
+          dB.hidden = false;
+        };
+        dUpd();
+        setInterval(dUpd, 5000);
+      }
+    }
+    if (params.get('allday') === '1') {
+      var aB = document.getElementById('adBadge'), aV = document.getElementById('adVal');
+      if (aB && aV) {
+        var aT0 = Date.now();
+        var aUpd = function () {
+          var st = window.SalaryApp && window.SalaryApp.getState && window.SalaryApp.getState();
+          if (!st || !st.snapshot) return;
+          var sec = Math.floor((Date.now() - aT0) / 1000);
+          var rate = st.snapshot.secondSalary || 0;
+          aV.textContent = '本页 +' + window.SalaryApp.formatMoney(rate * sec, st.currency);
+          aB.hidden = false;
+        };
+        aUpd();
+        setInterval(aUpd, 1000);
+      }
+    }
+    if (params.get('chalk') === '1') {
+      document.body.classList.add('is-chalk');
+    }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -3025,6 +3060,9 @@
       if (params.get('sun') === '1') u.searchParams.set('sun', '1');
       if (params.get('waves') === '1') u.searchParams.set('waves', '1');
       if (params.get('deep') === '1') u.searchParams.set('deep', '1');
+      if (params.get('dream') === '1') u.searchParams.set('dream', '1');
+      if (params.get('allday') === '1') u.searchParams.set('allday', '1');
+      if (params.get('chalk') === '1') u.searchParams.set('chalk', '1');
       if (params.get('tile') === '1') u.searchParams.set('tile', '1');
       if (params.get('outline') === '1') u.searchParams.set('outline', '1');
       if (params.get('stripe') === '1') u.searchParams.set('stripe', '1');
