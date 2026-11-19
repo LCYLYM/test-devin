@@ -1576,6 +1576,12 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .is-scarab .instrument{border-color:rgba(80,200,180,.42)}
 .is-lichen{background:linear-gradient(180deg,#141a10,#222c1a 50%,#313f24)}
 .is-lichen .instrument{border-color:rgba(170,195,130,.42)}
+.is-manatee{background:linear-gradient(180deg,#101820,#1b2933 50%,#273a47)}
+.is-manatee .instrument{border-color:rgba(135,175,195,.42)}
+.is-thistle{background:linear-gradient(180deg,#181022,#281b3a 50%,#392752)}
+.is-thistle .instrument{border-color:rgba(185,145,225,.42)}
+.is-raccoon{background:linear-gradient(180deg,#151411,#27231c 50%,#383329)}
+.is-raccoon .instrument{border-color:rgba(185,170,140,.42)}
 .is-oatmeal{background:linear-gradient(180deg,#1d1912,#2f291e 50%,#433a2a)}
 .is-oatmeal .instrument{border-color:rgba(215,195,155,.4)}
 .is-thyme{background:linear-gradient(180deg,#121a14,#1c2a20 50%,#28392c)}
