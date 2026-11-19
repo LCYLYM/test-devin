@@ -5,6 +5,7 @@
 ![薪动 · 充电主题](docs/screenshot-charge.png)
 
 [![在线体验](https://img.shields.io/badge/在线体验-xd.syal.site-3ddc84)](https://xd.syal.site/)
+[![site-check](https://github.com/LCYLYM/test-devin/actions/workflows/site-check.yml/badge.svg)](https://github.com/LCYLYM/test-devin/actions/workflows/site-check.yml)
 ![零依赖](https://img.shields.io/badge/依赖-0-3ddc84)
 ![无需注册](https://img.shields.io/badge/注册-不需要-blue)
 ![数据](https://img.shields.io/badge/数据-只存本地-blue)
@@ -33,6 +34,11 @@ https://xd.syal.site/?salary=30000&template=pig
 | --- | --- |
 | `salary` | 月薪数字，如 `15000` |
 | `template` | `charge` / `meter` / `pixel` / `pig` |
+| `currency` | `CNY` / `USD` / `EUR` / `JPY` / `KRW` / `HKD` / `VND` / `IDR` / `ZIM` |
+| `period` | `day` / `month` |
+| `demo` | `1` 开启演示模式 |
+| `focus` | `salary` 打开时聚焦月薪输入 |
+| `title` | `0` 关闭标签页金额跳动 |
 
 ## 本地跑
 

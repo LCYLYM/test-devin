@@ -13,6 +13,10 @@
 - 多币种换算（Frankfurter 汇率源）+ 津巴布韦亿万富翁趣味模式
 - 分享海报生成（Canvas + 二维码）、小目标进度
 - 深链参数：?salary=金额 预填月薪，?template=charge|meter|pixel|pig 指定皮肤
+- 深链参数：?currency=CNY|USD|EUR|JPY|KRW|HKD|VND|IDR|ZIM 指定币种，?period=day|month 切换日/月视图
+- 深链参数：?demo=1 演示模式，?focus=salary 聚焦月薪输入框，?title=0 关闭标签页金额跳动
+- 快捷键：/ 聚焦月薪输入，f 全屏，? 打开计算说明，i 安装为应用（PWA 可用时）
+- PWA：可离线使用（service worker 缓存应用外壳），支持添加到主屏
 
 ## 技术
 - 纯 HTML/CSS/JS，无构建步骤；部署即静态文件
