@@ -3263,6 +3263,15 @@
     if (params.get('linen') === '1') {
       document.body.classList.add('is-linen');
     }
+    if (params.get('zephyr') === '1') {
+      document.body.classList.add('is-zephyr');
+    }
+    if (params.get('brass') === '1') {
+      document.body.classList.add('is-brass');
+    }
+    if (params.get('paprika') === '1') {
+      document.body.classList.add('is-paprika');
+    }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -4119,6 +4128,9 @@
       if (params.get('grotto') === '1') u.searchParams.set('grotto', '1');
       if (params.get('peacock') === '1') u.searchParams.set('peacock', '1');
       if (params.get('linen') === '1') u.searchParams.set('linen', '1');
+      if (params.get('zephyr') === '1') u.searchParams.set('zephyr', '1');
+      if (params.get('brass') === '1') u.searchParams.set('brass', '1');
+      if (params.get('paprika') === '1') u.searchParams.set('paprika', '1');
       if (params.get('tile') === '1') u.searchParams.set('tile', '1');
       if (params.get('outline') === '1') u.searchParams.set('outline', '1');
       if (params.get('stripe') === '1') u.searchParams.set('stripe', '1');

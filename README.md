@@ -614,6 +614,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `grotto` | `1` 岩洞配色 |
 | `peacock` | `1` 孔雀配色 |
 | `linen` | `1` 亚麻布配色 |
+| `zephyr` | `1` 和风配色 |
+| `brass` | `1` 黄铜配色 |
+| `paprika` | `1` 红椒粉配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 
