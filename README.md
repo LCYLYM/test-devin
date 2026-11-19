@@ -968,6 +968,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `iguana` | `1` 鬣蜥配色 |
 | `chameleon` | `1` 变色龙配色 |
 | `beardeddragon` | `1` 鬃狮蜥配色 |
+| `cobra` | `1` 眼镜蛇配色 |
+| `boa` | `1` 蚺蛇配色 |
+| `mamba` | `1` 曼巴蛇配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 
