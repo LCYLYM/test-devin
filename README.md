@@ -863,6 +863,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `zebrafish` | `1` 斑马鱼配色 |
 | `tetra` | `1` 脂鲤配色 |
 | `betta` | `1` 斗鱼配色 |
+| `cichlid` | `1` 慈鲷配色 |
+| `guppy` | `1` 孔雀鱼配色 |
+| `loach` | `1` 鳅配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 

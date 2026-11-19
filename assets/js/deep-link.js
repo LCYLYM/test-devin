@@ -3747,6 +3747,9 @@
     if (params.get('zebrafish') === '1') { document.body.classList.add('is-zebrafish'); }
     if (params.get('tetra') === '1') { document.body.classList.add('is-tetra'); }
     if (params.get('betta') === '1') { document.body.classList.add('is-betta'); }
+    if (params.get('cichlid') === '1') { document.body.classList.add('is-cichlid'); }
+    if (params.get('guppy') === '1') { document.body.classList.add('is-guppy'); }
+    if (params.get('loach') === '1') { document.body.classList.add('is-loach'); }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -4852,6 +4855,9 @@
         if (params.get('zebrafish') === '1') u.searchParams.set('zebrafish', '1');
         if (params.get('tetra') === '1') u.searchParams.set('tetra', '1');
         if (params.get('betta') === '1') u.searchParams.set('betta', '1');
+        if (params.get('cichlid') === '1') u.searchParams.set('cichlid', '1');
+        if (params.get('guppy') === '1') u.searchParams.set('guppy', '1');
+        if (params.get('loach') === '1') u.searchParams.set('loach', '1');
       if (params.get('tile') === '1') u.searchParams.set('tile', '1');
       if (params.get('outline') === '1') u.searchParams.set('outline', '1');
       if (params.get('stripe') === '1') u.searchParams.set('stripe', '1');

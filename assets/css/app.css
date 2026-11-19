@@ -1924,6 +1924,12 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .is-tetra .instrument{border-color:rgba(100,200,150,.4)}
 .is-betta{background:linear-gradient(180deg,#1c1018 0%,#130a10 100%)}
 .is-betta .instrument{border-color:rgba(215,110,175,.4)}
+.is-cichlid{background:linear-gradient(180deg,#10181e 0%,#0a1116 100%)}
+.is-cichlid .instrument{border-color:rgba(115,175,200,.4)}
+.is-guppy{background:linear-gradient(180deg,#181016 0%,#100a0e 100%)}
+.is-guppy .instrument{border-color:rgba(220,130,165,.4)}
+.is-loach{background:linear-gradient(180deg,#191510 0%,#100e09 100%)}
+.is-loach .instrument{border-color:rgba(185,160,110,.4)}
 .is-oatmeal{background:linear-gradient(180deg,#1d1912,#2f291e 50%,#433a2a)}
 .is-oatmeal .instrument{border-color:rgba(215,195,155,.4)}
 .is-thyme{background:linear-gradient(180deg,#121a14,#1c2a20 50%,#28392c)}
