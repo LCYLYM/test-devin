@@ -178,6 +178,8 @@
       if (prefs && prefs.template) u.searchParams.set('template', prefs.template);
       if (prefs && prefs.currency && prefs.currency !== 'CNY') u.searchParams.set('currency', prefs.currency);
       if (prefs && prefs.period && prefs.period !== 'day') u.searchParams.set('period', prefs.period);
+      var ac = params.get('accent');
+      if (ac && /^#?[0-9a-fA-F]{3,8}$/.test(ac)) u.searchParams.set('accent', ac);
       var text = u.toString();
       (navigator.clipboard ? navigator.clipboard.writeText(text) : Promise.reject())
         .then(function () { btn.textContent = '已复制 ✓'; setTimeout(function(){ btn.textContent='复制当前链接'; }, 1500); })
