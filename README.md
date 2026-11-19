@@ -506,6 +506,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `opal` | `1` 蛋白石配色 |
 | `basalt` | `1` 玄武岩配色 |
 | `tangerine` | `1` 橘色配色 |
+| `midnight` | `1` 午夜配色 |
+| `clover` | `1` 三叶草配色 |
+| `brick` | `1` 砖红配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 
