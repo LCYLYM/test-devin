@@ -277,6 +277,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `sprint` | `1` 下班冲刺徽章（最后 30 分钟出现） |
 | `ovt` | `1` 本月加班时长徽章 |
 | `clock2` | `1` 当前时间徽章 |
+| `rest` | `1` 休息日徽章（非工作日显示） |
+| `wdn` | `1` 本月第 N/共 M 个工作日徽章 |
+| `aura` | `1` 光环呼吸（仪表辉光脉动） |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 
