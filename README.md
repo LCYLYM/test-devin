@@ -1184,6 +1184,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `milkcap` | `1` 奶浆菌配色 |
 | `fieldmushroom` | `1` 四孢蘑菇配色 |
 | `blacktrumpet` | `1` 黑喇叭菌配色 |
+| `reindeermoss` | `1` 驯鹿苔配色 |
+| `oldmansbeard` | `1` 松萝配色 |
+| `britishsoldiers` | `1` 红头石蕊配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 

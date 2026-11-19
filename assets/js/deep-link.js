@@ -4068,6 +4068,9 @@
     if (params.get('milkcap') === '1') { document.body.classList.add('is-milkcap'); }
     if (params.get('fieldmushroom') === '1') { document.body.classList.add('is-fieldmushroom'); }
     if (params.get('blacktrumpet') === '1') { document.body.classList.add('is-blacktrumpet'); }
+    if (params.get('reindeermoss') === '1') { document.body.classList.add('is-reindeermoss'); }
+    if (params.get('oldmansbeard') === '1') { document.body.classList.add('is-oldmansbeard'); }
+    if (params.get('britishsoldiers') === '1') { document.body.classList.add('is-britishsoldiers'); }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -5494,6 +5497,9 @@
         if (params.get('milkcap') === '1') u.searchParams.set('milkcap', '1');
         if (params.get('fieldmushroom') === '1') u.searchParams.set('fieldmushroom', '1');
         if (params.get('blacktrumpet') === '1') u.searchParams.set('blacktrumpet', '1');
+        if (params.get('reindeermoss') === '1') u.searchParams.set('reindeermoss', '1');
+        if (params.get('oldmansbeard') === '1') u.searchParams.set('oldmansbeard', '1');
+        if (params.get('britishsoldiers') === '1') u.searchParams.set('britishsoldiers', '1');
       if (params.get('tile') === '1') u.searchParams.set('tile', '1');
       if (params.get('outline') === '1') u.searchParams.set('outline', '1');
       if (params.get('stripe') === '1') u.searchParams.set('stripe', '1');
