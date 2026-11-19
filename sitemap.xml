@@ -2,10 +2,10 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://xd.syal.site/</loc>
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://xd.syal.site/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://xd.syal.site/"/>
     <lastmod>2026-11-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://xd.syal.site/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://xd.syal.site/"/>
   </url>
 </urlset>
