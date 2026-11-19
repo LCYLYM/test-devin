@@ -1588,6 +1588,12 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .is-sable .instrument{border-color:rgba(140,130,150,.4)}
 .is-pistachio{background:linear-gradient(180deg,#131a0c,#1f2b12 50%,#2c3d19)}
 .is-pistachio .instrument{border-color:rgba(175,210,110,.4)}
+.is-apricot{background:linear-gradient(180deg,#201209,#352010 50%,#4c2f16)}
+.is-apricot .instrument{border-color:rgba(245,170,100,.42)}
+.is-dove{background:linear-gradient(180deg,#17181b,#232529 50%,#313438)}
+.is-dove .instrument{border-color:rgba(180,185,195,.4)}
+.is-juniper{background:linear-gradient(180deg,#0c1614,#152520 50%,#1f352e)}
+.is-juniper .instrument{border-color:rgba(110,175,155,.4)}
 .is-forest{background:linear-gradient(180deg,#0d1f14,#12291a)}
 .is-forest .instrument{border-color:rgba(74,222,128,.38)}
 .is-sand{background:linear-gradient(180deg,#241c10,#2f2614)}

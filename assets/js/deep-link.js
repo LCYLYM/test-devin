@@ -3236,6 +3236,15 @@
     if (params.get('pistachio') === '1') {
       document.body.classList.add('is-pistachio');
     }
+    if (params.get('apricot') === '1') {
+      document.body.classList.add('is-apricot');
+    }
+    if (params.get('dove') === '1') {
+      document.body.classList.add('is-dove');
+    }
+    if (params.get('juniper') === '1') {
+      document.body.classList.add('is-juniper');
+    }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -4083,6 +4092,9 @@
       if (params.get('caramel') === '1') u.searchParams.set('caramel', '1');
       if (params.get('sable') === '1') u.searchParams.set('sable', '1');
       if (params.get('pistachio') === '1') u.searchParams.set('pistachio', '1');
+      if (params.get('apricot') === '1') u.searchParams.set('apricot', '1');
+      if (params.get('dove') === '1') u.searchParams.set('dove', '1');
+      if (params.get('juniper') === '1') u.searchParams.set('juniper', '1');
       if (params.get('tile') === '1') u.searchParams.set('tile', '1');
       if (params.get('outline') === '1') u.searchParams.set('outline', '1');
       if (params.get('stripe') === '1') u.searchParams.set('stripe', '1');

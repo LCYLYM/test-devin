@@ -605,6 +605,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `caramel` | `1` 焦糖配色 |
 | `sable` | `1` 黑貂配色 |
 | `pistachio` | `1` 开心果配色 |
+| `apricot` | `1` 杏子配色 |
+| `dove` | `1` 鸽灰配色 |
+| `juniper` | `1` 杜松配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 
