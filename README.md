@@ -884,6 +884,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `sardine` | `1` 沙丁鱼配色 |
 | `capelin` | `1` 毛鳞鱼配色 |
 | `mullet` | `1` 鲻鱼配色 |
+| `mackerel` | `1` 鲭鱼配色 |
+| `bonito` | `1` 鲣鱼配色 |
+| `albacore` | `1` 长鳍金枪鱼配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 

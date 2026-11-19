@@ -1966,6 +1966,12 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .is-capelin .instrument{border-color:rgba(155,185,155,.4)}
 .is-mullet{background:linear-gradient(180deg,#1b1413 0%,#120d0c 100%)}
 .is-mullet .instrument{border-color:rgba(205,150,135,.4)}
+.is-mackerel{background:linear-gradient(180deg,#0f1b20 0%,#081317 100%)}
+.is-mackerel .instrument{border-color:rgba(105,185,210,.4)}
+.is-bonito{background:linear-gradient(180deg,#131622 0%,#0c0f17 100%)}
+.is-bonito .instrument{border-color:rgba(140,155,220,.4)}
+.is-albacore{background:linear-gradient(180deg,#19141c 0%,#100d13 100%)}
+.is-albacore .instrument{border-color:rgba(190,150,205,.4)}
 .is-oatmeal{background:linear-gradient(180deg,#1d1912,#2f291e 50%,#433a2a)}
 .is-oatmeal .instrument{border-color:rgba(215,195,155,.4)}
 .is-thyme{background:linear-gradient(180deg,#121a14,#1c2a20 50%,#28392c)}

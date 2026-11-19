@@ -3768,6 +3768,9 @@
     if (params.get('sardine') === '1') { document.body.classList.add('is-sardine'); }
     if (params.get('capelin') === '1') { document.body.classList.add('is-capelin'); }
     if (params.get('mullet') === '1') { document.body.classList.add('is-mullet'); }
+    if (params.get('mackerel') === '1') { document.body.classList.add('is-mackerel'); }
+    if (params.get('bonito') === '1') { document.body.classList.add('is-bonito'); }
+    if (params.get('albacore') === '1') { document.body.classList.add('is-albacore'); }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -4894,6 +4897,9 @@
         if (params.get('sardine') === '1') u.searchParams.set('sardine', '1');
         if (params.get('capelin') === '1') u.searchParams.set('capelin', '1');
         if (params.get('mullet') === '1') u.searchParams.set('mullet', '1');
+        if (params.get('mackerel') === '1') u.searchParams.set('mackerel', '1');
+        if (params.get('bonito') === '1') u.searchParams.set('bonito', '1');
+        if (params.get('albacore') === '1') u.searchParams.set('albacore', '1');
       if (params.get('tile') === '1') u.searchParams.set('tile', '1');
       if (params.get('outline') === '1') u.searchParams.set('outline', '1');
       if (params.get('stripe') === '1') u.searchParams.set('stripe', '1');
