@@ -944,6 +944,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `goby` | `1` 虾虎鱼配色 |
 | `blenny` | `1` 鳚鱼配色 |
 | `sculpin` | `1` 杜父鱼配色 |
+| `lumpsucker` | `1` 圆鳍鱼配色 |
+| `stickleback` | `1` 刺鱼配色 |
+| `shiner` | `1` 闪光鱼配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 

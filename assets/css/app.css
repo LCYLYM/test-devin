@@ -2086,6 +2086,12 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .is-blenny .instrument{border-color:rgba(195,145,175,.4)}
 .is-sculpin{background:linear-gradient(180deg,#13151c 0%,#0c0e13 100%)}
 .is-sculpin .instrument{border-color:rgba(150,160,195,.4)}
+.is-lumpsucker{background:linear-gradient(180deg,#131c18 0%,#0b1310 100%)}
+.is-lumpsucker .instrument{border-color:rgba(130,195,165,.4)}
+.is-stickleback{background:linear-gradient(180deg,#1c1610 0%,#130f09 100%)}
+.is-stickleback .instrument{border-color:rgba(205,165,110,.4)}
+.is-shiner{background:linear-gradient(180deg,#17171f 0%,#0f0f15 100%)}
+.is-shiner .instrument{border-color:rgba(175,175,215,.4)}
 .is-oatmeal{background:linear-gradient(180deg,#1d1912,#2f291e 50%,#433a2a)}
 .is-oatmeal .instrument{border-color:rgba(215,195,155,.4)}
 .is-thyme{background:linear-gradient(180deg,#121a14,#1c2a20 50%,#28392c)}

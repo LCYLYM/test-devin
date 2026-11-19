@@ -3828,6 +3828,9 @@
     if (params.get('goby') === '1') { document.body.classList.add('is-goby'); }
     if (params.get('blenny') === '1') { document.body.classList.add('is-blenny'); }
     if (params.get('sculpin') === '1') { document.body.classList.add('is-sculpin'); }
+    if (params.get('lumpsucker') === '1') { document.body.classList.add('is-lumpsucker'); }
+    if (params.get('stickleback') === '1') { document.body.classList.add('is-stickleback'); }
+    if (params.get('shiner') === '1') { document.body.classList.add('is-shiner'); }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -5014,6 +5017,9 @@
         if (params.get('goby') === '1') u.searchParams.set('goby', '1');
         if (params.get('blenny') === '1') u.searchParams.set('blenny', '1');
         if (params.get('sculpin') === '1') u.searchParams.set('sculpin', '1');
+        if (params.get('lumpsucker') === '1') u.searchParams.set('lumpsucker', '1');
+        if (params.get('stickleback') === '1') u.searchParams.set('stickleback', '1');
+        if (params.get('shiner') === '1') u.searchParams.set('shiner', '1');
       if (params.get('tile') === '1') u.searchParams.set('tile', '1');
       if (params.get('outline') === '1') u.searchParams.set('outline', '1');
       if (params.get('stripe') === '1') u.searchParams.set('stripe', '1');
