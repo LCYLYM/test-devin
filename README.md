@@ -632,6 +632,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `primrose` | `1` 樱草配色 |
 | `cinder` | `1` 煤渣配色 |
 | `sedge` | `1` 莎草配色 |
+| `crocus` | `1` 番红花配色 |
+| `magpie` | `1` 喜鹊配色 |
+| `tatami` | `1` 榻榻米配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 

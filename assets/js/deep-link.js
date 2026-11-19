@@ -3317,6 +3317,15 @@
     if (params.get('sedge') === '1') {
       document.body.classList.add('is-sedge');
     }
+    if (params.get('crocus') === '1') {
+      document.body.classList.add('is-crocus');
+    }
+    if (params.get('magpie') === '1') {
+      document.body.classList.add('is-magpie');
+    }
+    if (params.get('tatami') === '1') {
+      document.body.classList.add('is-tatami');
+    }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -4191,6 +4200,9 @@
       if (params.get('primrose') === '1') u.searchParams.set('primrose', '1');
       if (params.get('cinder') === '1') u.searchParams.set('cinder', '1');
       if (params.get('sedge') === '1') u.searchParams.set('sedge', '1');
+      if (params.get('crocus') === '1') u.searchParams.set('crocus', '1');
+      if (params.get('magpie') === '1') u.searchParams.set('magpie', '1');
+      if (params.get('tatami') === '1') u.searchParams.set('tatami', '1');
       if (params.get('tile') === '1') u.searchParams.set('tile', '1');
       if (params.get('outline') === '1') u.searchParams.set('outline', '1');
       if (params.get('stripe') === '1') u.searchParams.set('stripe', '1');
