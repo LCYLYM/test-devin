@@ -566,6 +566,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `tinsel` | `1` 金属丝配色 |
 | `marigold` | `1` 万寿菊配色 |
 | `shadow` | `1` 暗影配色 |
+| `amoled` | `1` 纯黑省电配色 |
+| `chestnut` | `1` 栗色配色 |
+| `seashell` | `1` 贝壳配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 

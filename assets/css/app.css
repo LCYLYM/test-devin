@@ -1318,6 +1318,12 @@ body[data-hover] .payday:hover{transform:translateY(-3px)}
 .is-marigold .instrument{border-color:rgba(245,190,80,.42)}
 .is-shadow{background:linear-gradient(180deg,#101014,#181a20 50%,#22252e)}
 .is-shadow .instrument{border-color:rgba(120,128,150,.38)}
+.is-amoled{background:#000}
+.is-amoled .instrument{border-color:rgba(90,95,110,.5)}
+.is-chestnut{background:linear-gradient(180deg,#1a0f0c,#2b1812 50%,#3e2418)}
+.is-chestnut .instrument{border-color:rgba(200,125,90,.42)}
+.is-seashell{background:linear-gradient(180deg,#1e1a18,#332b28 50%,#473d38)}
+.is-seashell .instrument{border-color:rgba(235,210,195,.4)}
 .is-focus .payday.morale{display:none}
 body[data-pillar] .page-shell{border-left:1px solid rgba(var(--accent-rgb,103,228,148),.22);border-right:1px solid rgba(var(--accent-rgb,103,228,148),.22)}
 body[data-gloom]{--bg:#0a0c0b}
