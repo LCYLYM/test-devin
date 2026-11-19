@@ -464,6 +464,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `wheat` | `1` 麦浪配色 |
 | `cave` | `1` 洞穴配色 |
 | `meadow` | `1` 草甸配色 |
+| `porcelain` | `1` 瓷器配色 |
+| `twilight` | `1` 暮色配色 |
+| `abyss` | `1` 深渊配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 
