@@ -2736,6 +2736,26 @@
     if (params.get('citrus') === '1') {
       document.body.classList.add('is-citrus');
     }
+    if (params.get('morale') === '1') {
+      var mB = document.getElementById('moraleBadge'), mV = document.getElementById('moraleVal');
+      if (mB && mV) {
+        var mUpd = function () {
+          var st = window.SalaryApp && window.SalaryApp.getState && window.SalaryApp.getState();
+          if (!st || !st.snapshot) return;
+          var p = Math.round(Math.max(0, Math.min(1, st.snapshot.progress || 0)) * 100);
+          mV.textContent = '今日完成 ' + p + '%';
+          mB.hidden = false;
+        };
+        mUpd();
+        setInterval(mUpd, 5000);
+      }
+    }
+    if (params.get('sunset') === '1') {
+      document.body.classList.add('is-sunset');
+    }
+    if (params.get('glacier') === '1') {
+      document.body.classList.add('is-glacier');
+    }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -3433,6 +3453,9 @@
       if (params.get('latte') === '1') u.searchParams.set('latte', '1');
       if (params.get('storm') === '1') u.searchParams.set('storm', '1');
       if (params.get('citrus') === '1') u.searchParams.set('citrus', '1');
+      if (params.get('morale') === '1') u.searchParams.set('morale', '1');
+      if (params.get('sunset') === '1') u.searchParams.set('sunset', '1');
+      if (params.get('glacier') === '1') u.searchParams.set('glacier', '1');
       if (params.get('tile') === '1') u.searchParams.set('tile', '1');
       if (params.get('outline') === '1') u.searchParams.set('outline', '1');
       if (params.get('stripe') === '1') u.searchParams.set('stripe', '1');
