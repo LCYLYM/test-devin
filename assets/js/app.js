@@ -8,7 +8,7 @@
   const instrument = $('earningsCard');
   let frame=0, latest=null, lastTime=0, lastDigitTime=0, lastPulseSecond=-1, lastPixelTime=0;
   let amountShown=0, amountFrom=0, amountTarget=0, tweenStart=0, tweenDuration=0;
-  let lastSignature='', lastFormatted='', lastTemplate='', lastCurrency='', lastPeriod='', lastProgress=0;
+  let lastSignature='', lastFormatted='', lastTemplate='', lastCurrency='', lastPeriod='', lastProgress=0, numDecimals=2;
   let digitSlots=[], numberShape='', compactDivisor=1, compactUnit='';
   let canvasWidth=0,canvasHeight=0,canvasRatio=1,chartPlan=null,planKey='';
   let audioContext=null, audioReady=false, focusMode=false, fitKey='';
@@ -27,7 +27,7 @@
   function shapeOf(text){return text.replace(/\d/g,'#');}
   function renderNumber(value,instant=false){
     const num=Math.max(0,Number.isFinite(value)?value:0)/compactDivisor;
-    const formatted=num.toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2});
+    const formatted=num.toLocaleString('en-US',{minimumFractionDigits:numDecimals,maximumFractionDigits:numDecimals});
     if(formatted===lastFormatted && !instant)return;
     const shape=shapeOf(formatted);
     if(shape!==numberShape){
@@ -62,7 +62,7 @@
     lastFormatted=formatted;
     $('earningsNumber').setAttribute('aria-label',formatted+(compactUnit||latest?.unit||''));
     $('amountArea').setAttribute('aria-label',(latest?.symbol||'¥')+' '+formatted+(compactUnit||latest?.unit||''));
-    if(latest)$('amountArea').title=latest.symbol+' '+latest.amount.toLocaleString('en-US',{maximumFractionDigits:2,minimumFractionDigits:2})+(latest.fun?' · 趣味倍率':'');
+    if(latest)$('amountArea').title=latest.symbol+' '+latest.amount.toLocaleString('en-US',{maximumFractionDigits:numDecimals,minimumFractionDigits:Math.min(2,numDecimals)})+(latest.fun?' · 趣味倍率':'');
     fitAmount();
   }
 
@@ -122,6 +122,7 @@
     const signature=data.currency.code+'|'+data.currency.rate+'|'+data.period+'|'+(data.demo?'demo':'real')+'|'+state?.config.salary+'|'+data.snapshot.workdays+'|'+data.snapshot.hoursPerDay+'|'+data.snapshot.dayKey;
     const changed=signature!==lastSignature;
     latest=data;lastTime=tick;
+    numDecimals=Math.min(6,Math.max(0,Math.round(data.decimals||2)));
     const template=state?.preferences.template||'charge';
     applyTemplate(template,Boolean(lastTemplate));
     chooseCompact(data.displayAmount);
