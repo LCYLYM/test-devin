@@ -1177,6 +1177,31 @@
     if (params.get('turn') === '1' && !(window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches)) {
       document.body.dataset.turn = '1';
     }
+    if (params.get('yearday') === '1') {
+      var ydb = document.getElementById('yeardayBadge'), ydn = document.getElementById('yeardayNum');
+      if (ydb && ydn) {
+        var ynw = new Date(), yj1 = new Date(ynw.getFullYear(), 0, 1);
+        ydn.textContent = String(Math.floor((ynw - yj1) / 864e5) + 1);
+        ydb.hidden = false;
+      }
+    }
+    if (params.get('left') === '1') {
+      var lfb = document.getElementById('leftBadge'), lfa = document.getElementById('leftAmt');
+      if (lfb && lfa) {
+        var lfUpd = function () {
+          var lfs = window.SalaryApp && window.SalaryApp.getState && window.SalaryApp.getState();
+          var sn2 = lfs && lfs.snapshot;
+          if (!sn2 || !sn2.daySalary) { lfb.hidden = true; return; }
+          var rem = sn2.daySalary - sn2.todayEarned;
+          if (rem <= 0) { lfb.hidden = true; return; }
+          lfa.textContent = window.SalaryApp.formatMoney ? window.SalaryApp.formatMoney(rem) : rem.toFixed(2);
+          lfb.hidden = false;
+        };
+        lfUpd();
+        setInterval(lfUpd, 5000);
+      }
+    }
+    if (params.get('warm') === '1') document.body.dataset.warm = '1';
     if (params.get('hex') === '1') {
       var hxb = document.getElementById('hexBadge'), hxd = document.getElementById('hexDot'), hxv = document.getElementById('hexVal');
       if (hxb && hxd && hxv) {
@@ -1741,6 +1766,9 @@
       if (params.get('owl') === '1') u.searchParams.set('owl', '1');
       if (params.get('workday') === '1') u.searchParams.set('workday', '1');
       if (params.get('turn') === '1') u.searchParams.set('turn', '1');
+      if (params.get('yearday') === '1') u.searchParams.set('yearday', '1');
+      if (params.get('left') === '1') u.searchParams.set('left', '1');
+      if (params.get('warm') === '1') u.searchParams.set('warm', '1');
       if (params.get('rays') === '1') u.searchParams.set('rays', '1');
       if (params.get('flat') === '1') u.searchParams.set('flat', '1');
       var idl = params.get('idle'); if (idl) u.searchParams.set('idle', idl);
