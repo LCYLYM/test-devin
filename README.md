@@ -1046,6 +1046,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `eagle` | `1` 老鹰配色 |
 | `sparrow` | `1` 麻雀配色 |
 | `finch` | `1` 雀配色 |
+| `robin` | `1` 知更鸟配色 |
+| `swallow` | `1` 燕子配色 |
+| `swift` | `1` 雨燕配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 

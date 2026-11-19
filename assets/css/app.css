@@ -2290,6 +2290,12 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .is-sparrow .instrument{border-color:rgba(195,165,115,.4)}
 .is-finch{background:linear-gradient(180deg,#1c1512 0%,#140f0c 100%)}
 .is-finch .instrument{border-color:rgba(220,155,110,.4)}
+.is-robin{background:linear-gradient(180deg,#1e1310 0%,#150d0a 100%)}
+.is-robin .instrument{border-color:rgba(235,130,90,.4)}
+.is-swallow{background:linear-gradient(180deg,#101820 0%,#0a1117 100%)}
+.is-swallow .instrument{border-color:rgba(120,180,215,.4)}
+.is-swift{background:linear-gradient(180deg,#15151d 0%,#0f0f15 100%)}
+.is-swift .instrument{border-color:rgba(165,165,215,.4)}
 .is-oatmeal{background:linear-gradient(180deg,#1d1912,#2f291e 50%,#433a2a)}
 .is-oatmeal .instrument{border-color:rgba(215,195,155,.4)}
 .is-thyme{background:linear-gradient(180deg,#121a14,#1c2a20 50%,#28392c)}
