@@ -1130,6 +1130,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `gallinule` | `1` 紫水鸡配色 |
 | `moorhen` | `1` 黑水鸡配色 |
 | `crake` | `1` 田鸡配色 |
+| `corncrake` | `1` 长脚秧鸡配色 |
+| `swamphen` | `1` 紫青水鸡配色 |
+| `grebe` | `1` 䴙䴘配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 

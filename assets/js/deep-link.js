@@ -4014,6 +4014,9 @@
     if (params.get('gallinule') === '1') { document.body.classList.add('is-gallinule'); }
     if (params.get('moorhen') === '1') { document.body.classList.add('is-moorhen'); }
     if (params.get('crake') === '1') { document.body.classList.add('is-crake'); }
+    if (params.get('corncrake') === '1') { document.body.classList.add('is-corncrake'); }
+    if (params.get('swamphen') === '1') { document.body.classList.add('is-swamphen'); }
+    if (params.get('grebe') === '1') { document.body.classList.add('is-grebe'); }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -5386,6 +5389,9 @@
         if (params.get('gallinule') === '1') u.searchParams.set('gallinule', '1');
         if (params.get('moorhen') === '1') u.searchParams.set('moorhen', '1');
         if (params.get('crake') === '1') u.searchParams.set('crake', '1');
+        if (params.get('corncrake') === '1') u.searchParams.set('corncrake', '1');
+        if (params.get('swamphen') === '1') u.searchParams.set('swamphen', '1');
+        if (params.get('grebe') === '1') u.searchParams.set('grebe', '1');
       if (params.get('tile') === '1') u.searchParams.set('tile', '1');
       if (params.get('outline') === '1') u.searchParams.set('outline', '1');
       if (params.get('stripe') === '1') u.searchParams.set('stripe', '1');

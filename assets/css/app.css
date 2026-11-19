@@ -2458,6 +2458,12 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .is-moorhen .instrument{border-color:rgba(140,185,100,.4)}
 .is-crake{background:linear-gradient(180deg,#181510 0%,#120f0b 100%)}
 .is-crake .instrument{border-color:rgba(200,165,110,.4)}
+.is-corncrake{background:linear-gradient(180deg,#191710 0%,#12110c 100%)}
+.is-corncrake .instrument{border-color:rgba(205,190,115,.4)}
+.is-swamphen{background:linear-gradient(180deg,#15121c 0%,#0f0d14 100%)}
+.is-swamphen .instrument{border-color:rgba(150,125,210,.4)}
+.is-grebe{background:linear-gradient(180deg,#131a19 0%,#0d1312 100%)}
+.is-grebe .instrument{border-color:rgba(120,190,175,.4)}
 .is-oatmeal{background:linear-gradient(180deg,#1d1912,#2f291e 50%,#433a2a)}
 .is-oatmeal .instrument{border-color:rgba(215,195,155,.4)}
 .is-thyme{background:linear-gradient(180deg,#121a14,#1c2a20 50%,#28392c)}
