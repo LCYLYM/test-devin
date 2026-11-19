@@ -314,12 +314,12 @@
         requestAnimationFrame(mFrame);
       })();
     }
-    if (['snow', 'sakura', 'rain', 'stars', 'leaves', 'bubble', 'ember', 'firefly', 'dust', 'meteor', 'warp'].indexOf(fxParam) >= 0 && !(window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches)) {
+    if (['snow', 'sakura', 'rain', 'stars', 'leaves', 'bubble', 'ember', 'firefly', 'dust', 'meteor', 'warp', 'cloud'].indexOf(fxParam) >= 0 && !(window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches)) {
       var fxc = document.createElement('canvas');
       fxc.style.cssText = 'position:fixed;inset:0;width:100%;height:100%;pointer-events:none;opacity:.65';
       document.body.prepend(fxc);
       var fxctx = fxc.getContext('2d');
-      var parts = [], N = fxParam === 'rain' ? 90 : fxParam === 'stars' ? 70 : fxParam === 'meteor' ? 0 : 45;
+      var parts = [], N = fxParam === 'rain' ? 90 : fxParam === 'stars' ? 70 : fxParam === 'meteor' ? 0 : fxParam === 'cloud' ? 12 : 45;
       var meteors = [];
       function fxResize(){ fxc.width = innerWidth; fxc.height = innerHeight; }
       fxResize(); window.addEventListener('resize', fxResize);
@@ -380,6 +380,14 @@
             if (q.y < -10) q.y = innerHeight + 10; if (q.y > innerHeight + 10) q.y = -10;
             fxctx.fillStyle = 'rgba(190,242,100,' + (0.15 + 0.6 * Math.abs(Math.sin(q.ph))).toFixed(2) + ')';
             fxctx.beginPath(); fxctx.arc(q.x, q.y, q.r, 0, 6.3); fxctx.fill();
+            continue;
+          }
+          if (fxParam === 'cloud') {
+            q.x += q.v * 0.22;
+            if (q.x - q.r * 12 > innerWidth) { q.x = -q.r * 12; q.y = Math.random() * innerHeight * 0.85; }
+            fxctx.fillStyle = 'rgba(220,230,240,.05)';
+            fxctx.beginPath(); fxctx.ellipse(q.x, q.y, q.r * 7, q.r * 3, 0, 0, 6.3); fxctx.fill();
+            fxctx.beginPath(); fxctx.ellipse(q.x + q.r * 4, q.y + q.r, q.r * 4.5, q.r * 2.2, 0, 0, 6.3); fxctx.fill();
             continue;
           }
           if (fxParam === 'bubble') {
@@ -1022,6 +1030,25 @@
         setTimeout(function () { gf.remove(); }, 2200);
       }, 7000);
     }
+    if (params.get('hour') === '1') {
+      var hb = document.getElementById('hourBadge'), hp = document.getElementById('hourPct');
+      if (hb && hp) {
+        var hFill = function () {
+          var hn = new Date();
+          hp.textContent = Math.round(((hn.getMinutes() * 60 + hn.getSeconds()) / 3600) * 100) + '%';
+        };
+        hb.hidden = false; hFill(); setInterval(hFill, 30000);
+      }
+    }
+    if (params.get('greet') === '1') {
+      var grb = document.getElementById('greetBadge'), gri = document.getElementById('greetIcon'), grt = document.getElementById('greetText');
+      if (grb && gri && grt) {
+        var gh = new Date().getHours();
+        var gp = gh >= 5 && gh < 11 ? ['🌅', '早上好'] : gh >= 11 && gh < 13 ? ['🍚', '中午好'] : gh >= 13 && gh < 18 ? ['☀️', '下午好'] : gh >= 18 && gh < 23 ? ['🌆', '晚上好'] : ['🌙', '夜深了'];
+        gri.textContent = gp[0]; grt.textContent = gp[1];
+        grb.hidden = false;
+      }
+    }
     if (params.get('rays') === '1' && !(window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches)) {
       document.body.dataset.rays = '1';
       var raysL = document.createElement('div');
@@ -1526,6 +1553,8 @@
       if (params.get('stamp') === '1') u.searchParams.set('stamp', '1');
       if (params.get('tock') === '1') u.searchParams.set('tock', '1');
       if (params.get('gains') === '1') u.searchParams.set('gains', '1');
+      if (params.get('hour') === '1') u.searchParams.set('hour', '1');
+      if (params.get('greet') === '1') u.searchParams.set('greet', '1');
       if (params.get('rays') === '1') u.searchParams.set('rays', '1');
       if (params.get('flat') === '1') u.searchParams.set('flat', '1');
       var idl = params.get('idle'); if (idl) u.searchParams.set('idle', idl);

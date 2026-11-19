@@ -1002,3 +1002,5 @@ body[data-tock] .amount-area{animation:tockPulse 1s ease-in-out infinite}
 .amount-area{position:relative}
 .is-focus .gain-float{display:none}
 @media(prefers-reduced-motion:reduce){body[data-tock] .amount-area,.stamp-seal{animation:none}}
+.payday.hour{color:#93c5fd}
+.payday.greet{color:#fcd34d}

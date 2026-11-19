@@ -161,7 +161,7 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `bar` | `1` 页面顶部今日进度条 |
 | `date` | `1` 日期星期徽章 |
 | `card` | `1` 每日塔罗徽章（娱乐） |
-| `fx` | `…|firefly|dust|meteor|warp` 萤火虫/浮尘/流星/跃迁 |
+| `fx` | `…|firefly|dust|meteor|warp|cloud` 萤火虫/浮尘/流星/跃迁/云朵 |
 | `pulse` | `1` 金额心跳脉动 |
 | `aurora` | `1` 极光背景 |
 | `day` | `1` 白昼进度徽章 |
@@ -199,6 +199,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `stamp` | `1` 打卡印章 |
 | `tock` | `1` 金额每秒轻跳 |
 | `gains` | `1` 每秒收益飘字 |
+| `fx` | `…|cloud` 云朵漂移 |
+| `hour` | `1` 当前小时进度徽章 |
+| `greet` | `1` 时段问候徽章 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 
