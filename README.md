@@ -725,6 +725,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `quokka` | `1` 短尾袋鼠配色 |
 | `jujube` | `1` 红枣配色 |
 | `serval` | `1` 薮猫配色 |
+| `saiga` | `1` 高鼻羚羊配色 |
+| `longan` | `1` 龙眼配色 |
+| `koala` | `1` 考拉配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 

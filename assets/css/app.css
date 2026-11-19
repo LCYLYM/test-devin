@@ -1648,6 +1648,12 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .is-jujube .instrument{border-color:rgba(215,100,100,.42)}
 .is-serval{background:linear-gradient(180deg,#1a1209,#2c1e0e 50%,#402b15)}
 .is-serval .instrument{border-color:rgba(220,160,85,.42)}
+.is-saiga{background:linear-gradient(180deg,#221a12 0%,#171008 100%)}
+.is-saiga .instrument{border-color:rgba(216,178,124,.4)}
+.is-longan{background:linear-gradient(180deg,#1c1512 0%,#120d0a 100%)}
+.is-longan .instrument{border-color:rgba(224,190,140,.4)}
+.is-koala{background:linear-gradient(180deg,#16181c 0%,#0e1013 100%)}
+.is-koala .instrument{border-color:rgba(160,168,180,.4)}
 .is-oatmeal{background:linear-gradient(180deg,#1d1912,#2f291e 50%,#433a2a)}
 .is-oatmeal .instrument{border-color:rgba(215,195,155,.4)}
 .is-thyme{background:linear-gradient(180deg,#121a14,#1c2a20 50%,#28392c)}

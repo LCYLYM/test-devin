@@ -3609,6 +3609,9 @@
     if (params.get('serval') === '1') {
       document.body.classList.add('is-serval');
     }
+    if (params.get('saiga') === '1') { document.body.classList.add('is-saiga'); }
+    if (params.get('longan') === '1') { document.body.classList.add('is-longan'); }
+    if (params.get('koala') === '1') { document.body.classList.add('is-koala'); }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -4576,6 +4579,9 @@
       if (params.get('quokka') === '1') u.searchParams.set('quokka', '1');
       if (params.get('jujube') === '1') u.searchParams.set('jujube', '1');
       if (params.get('serval') === '1') u.searchParams.set('serval', '1');
+        if (params.get('saiga') === '1') u.searchParams.set('saiga', '1');
+        if (params.get('longan') === '1') u.searchParams.set('longan', '1');
+        if (params.get('koala') === '1') u.searchParams.set('koala', '1');
       if (params.get('tile') === '1') u.searchParams.set('tile', '1');
       if (params.get('outline') === '1') u.searchParams.set('outline', '1');
       if (params.get('stripe') === '1') u.searchParams.set('stripe', '1');
