@@ -1172,6 +1172,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `nameko` | `1` 滑子菇配色 |
 | `maitake` | `1` 舞茸配色 |
 | `woodear` | `1` 木耳配色 |
+| `tremella` | `1` 银耳配色 |
+| `cordyceps` | `1` 虫草配色 |
+| `chaga` | `1` 白桦茸配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 

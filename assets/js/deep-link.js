@@ -4056,6 +4056,9 @@
     if (params.get('nameko') === '1') { document.body.classList.add('is-nameko'); }
     if (params.get('maitake') === '1') { document.body.classList.add('is-maitake'); }
     if (params.get('woodear') === '1') { document.body.classList.add('is-woodear'); }
+    if (params.get('tremella') === '1') { document.body.classList.add('is-tremella'); }
+    if (params.get('cordyceps') === '1') { document.body.classList.add('is-cordyceps'); }
+    if (params.get('chaga') === '1') { document.body.classList.add('is-chaga'); }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -5470,6 +5473,9 @@
         if (params.get('nameko') === '1') u.searchParams.set('nameko', '1');
         if (params.get('maitake') === '1') u.searchParams.set('maitake', '1');
         if (params.get('woodear') === '1') u.searchParams.set('woodear', '1');
+        if (params.get('tremella') === '1') u.searchParams.set('tremella', '1');
+        if (params.get('cordyceps') === '1') u.searchParams.set('cordyceps', '1');
+        if (params.get('chaga') === '1') u.searchParams.set('chaga', '1');
       if (params.get('tile') === '1') u.searchParams.set('tile', '1');
       if (params.get('outline') === '1') u.searchParams.set('outline', '1');
       if (params.get('stripe') === '1') u.searchParams.set('stripe', '1');
