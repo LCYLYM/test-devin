@@ -335,6 +335,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `eta` | `1` 预计下班时间徽章 |
 | `lift` | `1` 满额时金额上抬高亮 |
 | `beam` | `1` 顶部聚光 |
+| `cof` | `1` 咖啡杯数徽章（每 2h 一杯） |
+| `silk` | `1` 丝绸流光背景 |
+| `chek` | `1` 棋盘格背景 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 

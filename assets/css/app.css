@@ -1146,6 +1146,11 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .payday.born{color:#f9a8d4}
 .payday.felt{color:#fb923c}
 .payday.eta{color:#a5b4fc}
+.payday.cof{color:#d4a373}
+@keyframes silkFlow{to{background-position:300px 0}}
+.is-silk{background-image:repeating-linear-gradient(115deg,rgba(255,255,255,.03) 0 30px,rgba(148,163,184,.07) 30px 60px,transparent 60px 120px);animation:silkFlow 10s linear infinite}
+@media (prefers-reduced-motion:reduce){.is-silk{animation:none}}
+.is-chek{background-image:conic-gradient(rgba(148,163,184,.09) 25%,transparent 0 50%,rgba(148,163,184,.09) 0 75%,transparent 0);background-size:44px 44px}
 .is-lift.lift-on #amountArea{transform:translateY(-8px);transition:transform .6s}
 .beam-layer{position:fixed;top:0;left:50%;transform:translateX(-50%);width:60vw;height:60vh;pointer-events:none;z-index:3;background:radial-gradient(ellipse 50% 100% at 50% 0%,rgba(250,204,21,.10),transparent 70%)}
 .is-focus .beam-layer{display:none}

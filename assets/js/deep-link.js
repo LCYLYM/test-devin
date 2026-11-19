@@ -2148,6 +2148,23 @@
       bm.setAttribute('aria-hidden', 'true');
       document.body.appendChild(bm);
     }
+    if (params.get('cof') === '1') {
+      var cfb = document.getElementById('cofBadge'), cfv = document.getElementById('cofVal');
+      if (cfb && cfv) {
+        var cfUpd = function () {
+          var st = window.SalaryApp && window.SalaryApp.getState && window.SalaryApp.getState();
+          var w = st && st.snapshot && st.snapshot.workSecondsToday;
+          if (w != null) { cfv.textContent = (w / 7200).toFixed(1) + ' 杯'; cfb.hidden = false; }
+        };
+        cfUpd(); setInterval(cfUpd, 5000);
+      }
+    }
+    if (params.get('silk') === '1' && !(window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches)) {
+      document.body.classList.add('is-silk');
+    }
+    if (params.get('chek') === '1') {
+      document.body.classList.add('is-chek');
+    }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -2725,6 +2742,9 @@
       if (params.get('eta') === '1') u.searchParams.set('eta', '1');
       if (params.get('lift') === '1') u.searchParams.set('lift', '1');
       if (params.get('beam') === '1') u.searchParams.set('beam', '1');
+      if (params.get('cof') === '1') u.searchParams.set('cof', '1');
+      if (params.get('silk') === '1') u.searchParams.set('silk', '1');
+      if (params.get('chek') === '1') u.searchParams.set('chek', '1');
       if (params.get('tile') === '1') u.searchParams.set('tile', '1');
       if (params.get('outline') === '1') u.searchParams.set('outline', '1');
       if (params.get('stripe') === '1') u.searchParams.set('stripe', '1');
