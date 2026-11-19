@@ -3167,6 +3167,21 @@
         olUpd(); setInterval(olUpd, 3600000);
       }
     }
+    var dayCountdown = function (badgeId, valId, month, day) {
+      var b = document.getElementById(badgeId), v = document.getElementById(valId);
+      if (!b || !v) return;
+      var upd = function () {
+        var now = new Date();
+        var t = new Date(now.getFullYear(), month - 1, day);
+        if (t <= now) t = new Date(now.getFullYear() + 1, month - 1, day);
+        v.textContent = Math.max(0, Math.ceil((t - now) / 86400000));
+        b.hidden = false;
+      };
+      upd(); setInterval(upd, 3600000);
+    };
+    if (params.get('solstice') === '1') dayCountdown('solsticeBadge', 'solsticeDays', 12, 21);
+    if (params.get('valentine') === '1') dayCountdown('valentineBadge', 'valentineDays', 2, 14);
+    if (params.get('halloween') === '1') dayCountdown('halloweenBadge', 'halloweenDays', 10, 31);
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -3987,6 +4002,9 @@
       if (params.get('stardate') === '1') u.searchParams.set('stardate', '1');
       if (params.get('easter') === '1') u.searchParams.set('easter', '1');
       if (params.get('olympic') === '1') u.searchParams.set('olympic', '1');
+      if (params.get('solstice') === '1') u.searchParams.set('solstice', '1');
+      if (params.get('valentine') === '1') u.searchParams.set('valentine', '1');
+      if (params.get('halloween') === '1') u.searchParams.set('halloween', '1');
       if (params.get('tile') === '1') u.searchParams.set('tile', '1');
       if (params.get('outline') === '1') u.searchParams.set('outline', '1');
       if (params.get('stripe') === '1') u.searchParams.set('stripe', '1');

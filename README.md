@@ -578,6 +578,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `stardate` | `1` 星历徽章 |
 | `easter` | `1` 复活节倒计时 |
 | `olympic` | `1` 奥运会倒计时 |
+| `solstice` | `1` 冬至倒计时 |
+| `valentine` | `1` 情人节倒计时 |
+| `halloween` | `1` 万圣节倒计时 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 
