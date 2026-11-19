@@ -61,6 +61,7 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `keys` | `0` 禁用全部快捷键（嵌入场景） |
 | `milestone` | `25,100` 自定义破额提醒阈值；`0` 关闭（默认 10/20/50/100/200/500/1000） |
 | `light` | `1` 浅色模式（`l` 键切换，记忆本地） |
+| `symbol` | 自定义货币符号，≤3 字符，如 `?symbol=€` `?symbol=💰` |
 
 ## 本地跑
 

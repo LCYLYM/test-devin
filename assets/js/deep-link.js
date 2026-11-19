@@ -89,6 +89,16 @@
         badge.title = days === 0 ? '今天就是发薪日' : '发薪日 ' + (target.getMonth() + 1) + '月' + target.getDate() + '日';
         var dd = document.getElementById('paydayDays');
         if (dd) dd.textContent = days === 0 ? '🎉' : String(days);
+        badge.style.cursor = 'pointer';
+        badge.addEventListener('click', function () {
+          var y = target.getFullYear(), m2 = String(target.getMonth() + 1).padStart(2, '0'), dy = String(target.getDate()).padStart(2, '0');
+          var ics = 'BEGIN:VCALENDAR\r\nVERSION:2.0\r\nPRODID:-//xindong//payday//CN\r\nBEGIN:VEVENT\r\nUID:xindong-payday-'+y+m2+dy+'@xindong\r\nDTSTART;VALUE=DATE:'+y+m2+dy+'\r\nRRULE:FREQ=MONTHLY\r\nSUMMARY:发薪日 · 薪动\r\nEND:VEVENT\r\nEND:VCALENDAR\r\n';
+          var a = document.createElement('a');
+          a.href = 'data:text/calendar;charset=utf-8,' + encodeURIComponent(ics);
+          a.download = 'payday-' + y + m2 + dy + '.ics';
+          document.body.appendChild(a); a.click(); a.remove();
+          if (window.SalaryApp && window.SalaryApp.toast) window.SalaryApp.toast('已导出每月发薪提醒 .ics，导入日历即可。');
+        });
       }
     }
 
@@ -179,6 +189,8 @@
     if (params.get('confetti') === '0') window.__noConfetti = true;
 
     if (params.get('keys') === '0') window.__noKeys = true;
+    var symParam = params.get('symbol');
+    if (symParam) window.__symbol = symParam.slice(0, 3);
     var msParam = params.get('milestone');
     if (msParam !== null) {
       window.__milestones = (msParam === '0' || msParam === '') ? []
@@ -241,7 +253,7 @@
       if (vsM) { window.__vsItem = { name: vsM[1], price: parseFloat(vsM[2]) }; var vb0 = document.getElementById('vsBadge'); if (vb0) vb0.hidden = false; }
     }
 
-    var hideMap = {header:'.app-header',footer:'.app-footer',faq:'.seo-faq',utility:'.utility-row',summary:'.summary-strip',overtime:'.overtime-disclosure',bottom:'.bottom-row',toolbar:'.instrument-toolbar',foot:'.instrument-footer',badges:'.payday'};
+    var hideMap = {header:'.app-header',footer:'.app-footer',faq:'.seo-faq',utility:'.utility-row',summary:'.summary-strip',overtime:'.overtime-disclosure',bottom:'.bottom-row',toolbar:'.instrument-toolbar',foot:'.instrument-footer',badges:'.payday',clock:'.clockout',caption:'.income-caption',progress:'.progress-info',status:'.hero-status'};
     var hideList = (params.get('hide') || '').split(',').map(function (s) { return s.trim(); });
     if (params.get('embed') === '1') hideList = ['header', 'footer', 'faq'];
     var hiddenSel = hideList.map(function (k) { return hideMap[k]; }).filter(Boolean);
@@ -453,6 +465,7 @@
       var url = publicBase(location.href) || 'https://xd.syal.site/';
       var lines = ['我在看自己的工资一秒一秒往上涨 · 薪动'];
       if (snap && isFinite(snap.todayEarned)) lines.push('今天已赚 ' + app.formatMoney(snap.todayEarned));
+      if (window.__vsItem && snap && isFinite(snap.todayEarned)) lines.push('≈ ' + (snap.todayEarned / window.__vsItem.price).toFixed(1) + ' ' + window.__vsItem.name);
       var includeSalary = document.getElementById('shareIncludeSalary');
       if ((!includeSalary || includeSalary.checked) && state && state.config && state.config.salary)
         lines.push('月薪 ¥' + state.config.salary);

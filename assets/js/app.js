@@ -644,7 +644,7 @@
     hidden('funBadge',!cur.fun);
     text('currencyName',cur.name);
     text('currencyMark',cur.symbol);
-    text('moneySymbol',cur.symbol);
+    text('moneySymbol',window.__symbol||cur.symbol);
     text('moneyUnit',cur.fun?'亿':'');
     const rateModes=[{m:1,s:' / 秒'},{m:60,s:' / 分'},{m:3600,s:' / 时'}];
     if(working){const rm=rateModes[rateModeIdx()];moneyText('perSecond',current.secondSalary*rm.m,{code:cur.code,decimals:cur.fun?2:4,prefix:'+ ',suffix:rm.s});}
