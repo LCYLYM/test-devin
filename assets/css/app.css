@@ -2500,6 +2500,12 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .is-sula .instrument{border-color:rgba(225,215,110,.4)}
 .is-prion{background:linear-gradient(180deg,#13191c 0%,#0d1214 100%)}
 .is-prion .instrument{border-color:rgba(125,180,200,.4)}
+.is-chanterelle{background:linear-gradient(180deg,#1e180f 0%,#16120b 100%)}
+.is-chanterelle .instrument{border-color:rgba(240,195,95,.4)}
+.is-porcini{background:linear-gradient(180deg,#1a1410 0%,#130f0b 100%)}
+.is-porcini .instrument{border-color:rgba(200,150,105,.4)}
+.is-shiitake{background:linear-gradient(180deg,#17130f 0%,#110e0b 100%)}
+.is-shiitake .instrument{border-color:rgba(185,145,105,.4)}
 .is-oatmeal{background:linear-gradient(180deg,#1d1912,#2f291e 50%,#433a2a)}
 .is-oatmeal .instrument{border-color:rgba(215,195,155,.4)}
 .is-thyme{background:linear-gradient(180deg,#121a14,#1c2a20 50%,#28392c)}
