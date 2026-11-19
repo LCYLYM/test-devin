@@ -80,6 +80,7 @@
         badge.hidden = false;
         var lbl = document.getElementById('paydayLabel');
         if (lbl) lbl.textContent = days === 0 ? '今天发薪' : '距发薪';
+        badge.classList.toggle('is-today', days === 0);
         badge.title = days === 0 ? '今天就是发薪日' : '发薪日 ' + (target.getMonth() + 1) + '月' + target.getDate() + '日';
         var dd = document.getElementById('paydayDays');
         if (dd) dd.textContent = days === 0 ? '🎉' : String(days);
@@ -158,6 +159,9 @@
     if (motion === '0' || motion === 'reduce') app.setPreference('motion', 'reduce');
     else if (motion === '1') app.setPreference('motion', 'full');
 
+    var cmd = params.get('cmd');
+    if (cmd) { var tc = document.querySelector('.term-cmd'); if (tc) tc.textContent = cmd.slice(0, 40); }
+
     if (params.get('zen') === '1' || params.get('ui') === '0') document.body.classList.add('is-focus');
 
     // ?dialog=share|about|settings|goal|calendar|currency|overtime — open a panel directly.
@@ -173,7 +177,7 @@
 
   /* Live tab title: show the ticking amount. ?title=0 disables. */
   if (params.get('title') !== '0') {
-    var baseTitle = document.title;
+    var baseTitle = params.get('title') || document.title;
     setInterval(function () {
       if (document.hidden) return;
       var odo = document.getElementById('earningsNumber');

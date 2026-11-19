@@ -722,3 +722,7 @@ body[data-template=term] .charge-visual{display:none}
 body[data-template=term] .term-visual{display:block}
 body[data-template=term]{--bg:#010409}
 @media(max-width:520px){.term-bar{font-size:14px}.term-visual{padding:16px 14px}}
+
+/* iter-161: payday day pulse */
+.payday.is-today strong{animation:paydayPulse 1.2s ease-in-out infinite}
+@keyframes paydayPulse{50%{transform:scale(1.35)}}
