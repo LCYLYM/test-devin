@@ -2338,6 +2338,12 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .is-emu .instrument{border-color:rgba(175,145,115,.4)}
 .is-ostrich{background:linear-gradient(180deg,#1c1718 0%,#141112 100%)}
 .is-ostrich .instrument{border-color:rgba(200,170,175,.4)}
+.is-dodo{background:linear-gradient(180deg,#17161a 0%,#111014 100%)}
+.is-dodo .instrument{border-color:rgba(165,160,190,.4)}
+.is-gannet{background:linear-gradient(180deg,#121a1c 0%,#0d1314 100%)}
+.is-gannet .instrument{border-color:rgba(135,200,205,.4)}
+.is-lyrebird{background:linear-gradient(180deg,#1a1710 0%,#13100c 100%)}
+.is-lyrebird .instrument{border-color:rgba(210,175,100,.4)}
 .is-oatmeal{background:linear-gradient(180deg,#1d1912,#2f291e 50%,#433a2a)}
 .is-oatmeal .instrument{border-color:rgba(215,195,155,.4)}
 .is-thyme{background:linear-gradient(180deg,#121a14,#1c2a20 50%,#28392c)}
