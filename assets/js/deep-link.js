@@ -4092,6 +4092,9 @@
     if (params.get('haircap') === '1') { document.body.classList.add('is-haircap'); }
     if (params.get('sphagnum') === '1') { document.body.classList.add('is-sphagnum'); }
     if (params.get('cushionmoss') === '1') { document.body.classList.add('is-cushionmoss'); }
+    if (params.get('fernmoss') === '1') { document.body.classList.add('is-fernmoss'); }
+    if (params.get('spoonmoss') === '1') { document.body.classList.add('is-spoonmoss'); }
+    if (params.get('broommoss') === '1') { document.body.classList.add('is-broommoss'); }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -5542,6 +5545,9 @@
         if (params.get('haircap') === '1') u.searchParams.set('haircap', '1');
         if (params.get('sphagnum') === '1') u.searchParams.set('sphagnum', '1');
         if (params.get('cushionmoss') === '1') u.searchParams.set('cushionmoss', '1');
+        if (params.get('fernmoss') === '1') u.searchParams.set('fernmoss', '1');
+        if (params.get('spoonmoss') === '1') u.searchParams.set('spoonmoss', '1');
+        if (params.get('broommoss') === '1') u.searchParams.set('broommoss', '1');
       if (params.get('tile') === '1') u.searchParams.set('tile', '1');
       if (params.get('outline') === '1') u.searchParams.set('outline', '1');
       if (params.get('stripe') === '1') u.searchParams.set('stripe', '1');

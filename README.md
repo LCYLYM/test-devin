@@ -1208,6 +1208,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `haircap` | `1` 金发藓配色 |
 | `sphagnum` | `1` 泥炭藓配色 |
 | `cushionmoss` | `1` 垫丛藓配色 |
+| `fernmoss` | `1` 蕨藓配色 |
+| `spoonmoss` | `1` 匙叶藓配色 |
+| `broommoss` | `1` 凤尾藓配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 
