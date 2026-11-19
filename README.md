@@ -431,6 +431,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `pulse` | `1` 金额脉冲 |
 | `rgb` | `1` RGB 描边循环 |
 | `topo` | `1` 地形线纹背景 |
+| `trail` | `1` 鼠标拖尾 |
+| `web` | `1` 蛛网纹背景 |
+| `mirage` | `1` 海市蜃楼渐变 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 

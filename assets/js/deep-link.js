@@ -2653,6 +2653,26 @@
     if (params.get('topo') === '1') {
       document.body.classList.add('is-topo');
     }
+    if (params.get('trail') === '1') {
+      document.body.classList.add('is-trail');
+      var trN = 0;
+      document.addEventListener('mousemove', function (ev) {
+        if (trN > 40) return;
+        trN++;
+        var d = document.createElement('div');
+        d.className = 'trail-dot';
+        d.style.left = ev.clientX + 'px';
+        d.style.top = ev.clientY + 'px';
+        document.body.appendChild(d);
+        setTimeout(function () { d.remove(); trN--; }, 900);
+      });
+    }
+    if (params.get('web') === '1') {
+      document.body.classList.add('is-web');
+    }
+    if (params.get('mirage') === '1') {
+      document.body.classList.add('is-mirage');
+    }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -3326,6 +3346,9 @@
       if (params.get('pulse') === '1') u.searchParams.set('pulse', '1');
       if (params.get('rgb') === '1') u.searchParams.set('rgb', '1');
       if (params.get('topo') === '1') u.searchParams.set('topo', '1');
+      if (params.get('trail') === '1') u.searchParams.set('trail', '1');
+      if (params.get('web') === '1') u.searchParams.set('web', '1');
+      if (params.get('mirage') === '1') u.searchParams.set('mirage', '1');
       if (params.get('tile') === '1') u.searchParams.set('tile', '1');
       if (params.get('outline') === '1') u.searchParams.set('outline', '1');
       if (params.get('stripe') === '1') u.searchParams.set('stripe', '1');
