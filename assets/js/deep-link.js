@@ -1154,6 +1154,29 @@
     }
     if (params.get('pillar') === '1') document.body.dataset.pillar = '1';
     if (params.get('gloom') === '1') document.body.dataset.gloom = '1';
+    if (params.get('owl') === '1') {
+      var ob = document.getElementById('owlBadge'), oi = document.getElementById('owlIcon'), ot = document.getElementById('owlText');
+      if (ob && oi && ot) {
+        var oh = new Date().getHours();
+        var night = oh >= 22 || oh < 6;
+        oi.textContent = night ? '🦉' : '🐝';
+        ot.textContent = night ? '夜猫子' : '勤劳小蜜蜂';
+        ob.hidden = false;
+      }
+    }
+    if (params.get('workday') === '1') {
+      var wdb2 = document.getElementById('workdayBadge'), wdi = document.getElementById('workdayIcon'), wdt = document.getElementById('workdayText');
+      if (wdb2 && wdi && wdt) {
+        var wds = window.SalaryApp && window.SalaryApp.getState && window.SalaryApp.getState();
+        var isW = wds && wds.snapshot && wds.snapshot.isWorkday;
+        wdi.textContent = isW ? '💼' : '🏖️';
+        wdt.textContent = isW ? '工作日' : '休息日';
+        wdb2.hidden = false;
+      }
+    }
+    if (params.get('turn') === '1' && !(window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches)) {
+      document.body.dataset.turn = '1';
+    }
     if (params.get('hex') === '1') {
       var hxb = document.getElementById('hexBadge'), hxd = document.getElementById('hexDot'), hxv = document.getElementById('hexVal');
       if (hxb && hxd && hxv) {
@@ -1715,6 +1738,9 @@
       if (params.get('trail') === '1') u.searchParams.set('trail', '1');
       if (params.get('pillar') === '1') u.searchParams.set('pillar', '1');
       if (params.get('gloom') === '1') u.searchParams.set('gloom', '1');
+      if (params.get('owl') === '1') u.searchParams.set('owl', '1');
+      if (params.get('workday') === '1') u.searchParams.set('workday', '1');
+      if (params.get('turn') === '1') u.searchParams.set('turn', '1');
       if (params.get('rays') === '1') u.searchParams.set('rays', '1');
       if (params.get('flat') === '1') u.searchParams.set('flat', '1');
       var idl = params.get('idle'); if (idl) u.searchParams.set('idle', idl);

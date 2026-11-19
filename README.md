@@ -226,6 +226,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `trail` | `1` 鼠标拖尾光点 |
 | `pillar` | `1` 两侧细柱线 |
 | `gloom` | `1` 更暗氛围 |
+| `owl` | `1` 作息标签徽章（夜猫子/小蜜蜂） |
+| `workday` | `1` 工作日/休息日徽章 |
+| `turn` | `1` 仪表翻转入场 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 
