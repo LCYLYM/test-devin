@@ -2362,6 +2362,12 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .is-siskin .instrument{border-color:rgba(140,190,95,.4)}
 .is-thrush{background:linear-gradient(180deg,#191512 0%,#120f0d 100%)}
 .is-thrush .instrument{border-color:rgba(190,155,120,.4)}
+.is-lark{background:linear-gradient(180deg,#1a1810 0%,#13110c 100%)}
+.is-lark .instrument{border-color:rgba(205,190,110,.4)}
+.is-pipit{background:linear-gradient(180deg,#161713 0%,#10120e 100%)}
+.is-pipit .instrument{border-color:rgba(155,170,120,.4)}
+.is-bunting{background:linear-gradient(180deg,#141a18 0%,#0e1311 100%)}
+.is-bunting .instrument{border-color:rgba(120,195,175,.4)}
 .is-oatmeal{background:linear-gradient(180deg,#1d1912,#2f291e 50%,#433a2a)}
 .is-oatmeal .instrument{border-color:rgba(215,195,155,.4)}
 .is-thyme{background:linear-gradient(180deg,#121a14,#1c2a20 50%,#28392c)}

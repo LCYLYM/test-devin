@@ -1082,6 +1082,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `goldfinch` | `1` 金翅雀配色 |
 | `siskin` | `1` 黄雀配色 |
 | `thrush` | `1` 鸫配色 |
+| `lark` | `1` 云雀配色 |
+| `pipit` | `1` 鹨配色 |
+| `bunting` | `1` 鹀配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 
