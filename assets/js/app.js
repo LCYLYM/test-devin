@@ -62,7 +62,7 @@
     lastFormatted=formatted;
     $('earningsNumber').setAttribute('aria-label',formatted+(compactUnit||latest?.unit||''));
     $('amountArea').setAttribute('aria-label',(latest?.symbol||'¥')+' '+formatted+(compactUnit||latest?.unit||''));
-    if(latest)$('amountArea').title=latest.symbol+' '+latest.amount.toLocaleString('en-US',{maximumFractionDigits:numDecimals,minimumFractionDigits:Math.min(2,numDecimals)})+(latest.fun?' · 趣味倍率':'');
+    if(latest)$('amountArea').title=latest.symbol+' '+latest.amount.toLocaleString('en-US',{maximumFractionDigits:numDecimals,minimumFractionDigits:numDecimals})+(latest.fun?' · 趣味倍率':'');
     fitAmount();
   }
 

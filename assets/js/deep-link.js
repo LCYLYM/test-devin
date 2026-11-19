@@ -360,6 +360,7 @@
       if (window.__vsItem) u.searchParams.set('vs', window.__vsItem.name + '@' + window.__vsItem.price);
       if (window.__avgSalary) u.searchParams.set('avg', String(window.__avgSalary));
       var petNow = params.get('pet'); if (petNow) u.searchParams.set('pet', petNow.slice(0, 12));
+      if (window.__decimals && window.__decimals !== 2) u.searchParams.set('dec', String(window.__decimals));
       var text = u.toString();
       (navigator.clipboard ? navigator.clipboard.writeText(text) : Promise.reject())
         .then(function () { btn.textContent = '已复制 ✓'; setTimeout(function(){ btn.textContent='复制当前链接'; }, 1500); })
