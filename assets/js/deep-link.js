@@ -3185,6 +3185,9 @@
     if (params.get('laborday') === '1') dayCountdown('labordayBadge', 'labordayDays', 5, 1);
     if (params.get('national') === '1') dayCountdown('nationalBadge', 'nationalDays', 10, 1);
     if (params.get('childrens') === '1') dayCountdown('childrensBadge', 'childrensDays', 6, 1);
+    if (params.get('teachers') === '1') dayCountdown('teachersBadge', 'teachersDays', 9, 10);
+    if (params.get('double11') === '1') dayCountdown('double11Badge', 'double11Days', 11, 11);
+    if (params.get('womans') === '1') dayCountdown('womansBadge', 'womansDays', 3, 8);
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -4011,6 +4014,9 @@
       if (params.get('laborday') === '1') u.searchParams.set('laborday', '1');
       if (params.get('national') === '1') u.searchParams.set('national', '1');
       if (params.get('childrens') === '1') u.searchParams.set('childrens', '1');
+      if (params.get('teachers') === '1') u.searchParams.set('teachers', '1');
+      if (params.get('double11') === '1') u.searchParams.set('double11', '1');
+      if (params.get('womans') === '1') u.searchParams.set('womans', '1');
       if (params.get('tile') === '1') u.searchParams.set('tile', '1');
       if (params.get('outline') === '1') u.searchParams.set('outline', '1');
       if (params.get('stripe') === '1') u.searchParams.set('stripe', '1');

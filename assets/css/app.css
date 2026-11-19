@@ -1550,6 +1550,10 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .payday.national{color:#f87171}
 .payday.childrens{color:#fbbf24}
 .is-focus .payday.laborday,.is-focus .payday.national,.is-focus .payday.childrens{display:none}
+.payday.teachers{color:#a5b4fc}
+.payday.double11{color:#fb7185}
+.payday.womans{color:#f9a8d4}
+.is-focus .payday.teachers,.is-focus .payday.double11,.is-focus .payday.womans{display:none}
 .is-forest{background:linear-gradient(180deg,#0d1f14,#12291a)}
 .is-forest .instrument{border-color:rgba(74,222,128,.38)}
 .is-sand{background:linear-gradient(180deg,#241c10,#2f2614)}
