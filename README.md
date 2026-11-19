@@ -107,6 +107,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `moon` | `1` 月相徽章（朔望盈亏 emoji） |
 | `all` | `1` 累计入账徽章（本机逐日记录求和） |
 | `shake` | `1` 手机摇一摇彩蛋（抖出钱来） |
+| `ticker` | 文本，金额下方滚动字幕（≤80 字符） |
+| `count` | `1` 打开时数字从 0 滚动到当前金额 |
+| `bg` | 十六进制颜色，自定义背景（如 `?bg=1a2b3c`） |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 

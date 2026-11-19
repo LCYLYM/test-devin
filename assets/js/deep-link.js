@@ -420,6 +420,18 @@
       window.__spark = true;
       var scv = document.getElementById('sparkCanvas'); if (scv) scv.hidden = false;
     }
+    if (params.get('count') === '1') window.__count = true;
+    var tickr = params.get('ticker');
+    if (tickr) {
+      var tkEl = document.getElementById('ticker'), tkT = document.getElementById('tickerTrack');
+      if (tkEl && tkT) { var tkx = Array.from(tickr).slice(0, 80).join(''); tkT.textContent = tkx + '　·　' + tkx; tkEl.hidden = false; }
+    }
+    var bgP = params.get('bg');
+    if (bgP && /^#?[0-9a-fA-F]{3,8}$/.test(bgP)) {
+      var bgv = bgP[0] === '#' ? bgP : '#' + bgP;
+      document.body.style.setProperty('--bg', bgv);
+      document.body.style.setProperty('--instrument', bgv);
+    }
     var dimM = /^(\d{1,2})-(\d{1,2})$/.exec(params.get('dim') || '');
     if (dimM) {
       var dh = +dimM[1], de = +dimM[2];
@@ -853,6 +865,9 @@
       var bp = params.get('bday'); if (bp) u.searchParams.set('bday', bp);
       var seap = params.get('season'); if (seap) u.searchParams.set('season', seap);
       if (window.__spark) u.searchParams.set('spark', '1');
+      if (window.__count) u.searchParams.set('count', '1');
+      var tkp = params.get('ticker'); if (tkp) u.searchParams.set('ticker', tkp.slice(0, 80));
+      var bgq = params.get('bg'); if (bgq && /^#?[0-9a-fA-F]{3,8}$/.test(bgq)) u.searchParams.set('bg', bgq);
       if (document.body.dataset.contrast === '1') u.searchParams.set('contrast', '1');
       var dimp = params.get('dim'); if (dimp) u.searchParams.set('dim', dimp);
       if (params.get('visits') === '1') u.searchParams.set('visits', '1');
