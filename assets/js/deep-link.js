@@ -3362,6 +3362,15 @@
     if (params.get('pumice') === '1') {
       document.body.classList.add('is-pumice');
     }
+    if (params.get('marsala') === '1') {
+      document.body.classList.add('is-marsala');
+    }
+    if (params.get('lynx') === '1') {
+      document.body.classList.add('is-lynx');
+    }
+    if (params.get('polar') === '1') {
+      document.body.classList.add('is-polar');
+    }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -4251,6 +4260,9 @@
       if (params.get('sycamore') === '1') u.searchParams.set('sycamore', '1');
       if (params.get('kraken') === '1') u.searchParams.set('kraken', '1');
       if (params.get('pumice') === '1') u.searchParams.set('pumice', '1');
+      if (params.get('marsala') === '1') u.searchParams.set('marsala', '1');
+      if (params.get('lynx') === '1') u.searchParams.set('lynx', '1');
+      if (params.get('polar') === '1') u.searchParams.set('polar', '1');
       if (params.get('tile') === '1') u.searchParams.set('tile', '1');
       if (params.get('outline') === '1') u.searchParams.set('outline', '1');
       if (params.get('stripe') === '1') u.searchParams.set('stripe', '1');

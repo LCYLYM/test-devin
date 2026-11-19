@@ -1672,6 +1672,12 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .is-kraken .instrument{border-color:rgba(90,180,220,.42)}
 .is-pumice{background:linear-gradient(180deg,#161514,#242220 50%,#33302d)}
 .is-pumice .instrument{border-color:rgba(175,170,160,.42)}
+.is-marsala{background:linear-gradient(180deg,#1c0d0f,#301417 50%,#451e22)}
+.is-marsala .instrument{border-color:rgba(200,110,110,.42)}
+.is-lynx{background:linear-gradient(180deg,#14120e,#231f16 50%,#332e20)}
+.is-lynx .instrument{border-color:rgba(185,165,120,.42)}
+.is-polar{background:linear-gradient(180deg,#0f151c,#18232e 50%,#213243)}
+.is-polar .instrument{border-color:rgba(145,190,220,.42)}
 .is-forest{background:linear-gradient(180deg,#0d1f14,#12291a)}
 .is-forest .instrument{border-color:rgba(74,222,128,.38)}
 .is-sand{background:linear-gradient(180deg,#241c10,#2f2614)}
