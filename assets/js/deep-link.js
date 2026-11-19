@@ -1657,6 +1657,50 @@
     if (params.get('aura') === '1' && !(window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches)) {
       document.body.classList.add('is-aura');
     }
+    if (params.get('pct') === '1') {
+      var pcb = document.getElementById('pctBadge'), pcv = document.getElementById('pctVal');
+      if (pcb && pcv) {
+        var pcUpd = function () {
+          var st = window.SalaryApp && window.SalaryApp.getState && window.SalaryApp.getState();
+          var sn = st && st.snapshot;
+          if (sn && sn.progress != null) { pcv.textContent = Math.round(sn.progress * 100) + '%'; pcb.hidden = false; }
+        };
+        pcUpd(); setInterval(pcUpd, 5000);
+      }
+    }
+    if (params.get('qr') === '1') {
+      var qrb2 = document.getElementById('qrBadge');
+      if (qrb2 && window.qrcode) {
+        qrb2.hidden = false;
+        qrb2.style.cursor = 'pointer';
+        var qrPop = null;
+        qrb2.addEventListener('click', function () {
+          if (qrPop) { qrPop.remove(); qrPop = null; return; }
+          try {
+            var q = window.qrcode(0, 'M');
+            q.addData(location.href, 'Byte'); q.make();
+            var n = q.getModuleCount(), cell = 4, cv = document.createElement('canvas');
+            cv.width = cv.height = (n + 8) * cell;
+            var cx = cv.getContext('2d');
+            cx.fillStyle = '#fff'; cx.fillRect(0, 0, cv.width, cv.height); cx.fillStyle = '#111';
+            for (var r = 0; r < n; r++) for (var c = 0; c < n; c++) if (q.isDark(r, c)) cx.fillRect((c + 4) * cell, (r + 4) * cell, cell, cell);
+            qrPop = document.createElement('div');
+            qrPop.className = 'qr-pop';
+            qrPop.appendChild(cv);
+            qrb2.appendChild(qrPop);
+          } catch (_) { }
+        });
+      }
+    }
+    if (params.get('ver') === '1') {
+      var vrb = document.getElementById('verBadge'), vrv = document.getElementById('verVal');
+      if (vrb && vrv) {
+        var m2 = document.querySelector('script[src*="deep-link"]');
+        var mv = m2 && m2.src.match(/v=([a-z0-9]+)/i);
+        vrv.textContent = mv ? mv[1] : 'dev';
+        vrb.hidden = false;
+      }
+    }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -2311,6 +2355,9 @@
       if (params.get('rest') === '1') u.searchParams.set('rest', '1');
       if (params.get('wdn') === '1') u.searchParams.set('wdn', '1');
       if (params.get('aura') === '1') u.searchParams.set('aura', '1');
+      if (params.get('pct') === '1') u.searchParams.set('pct', '1');
+      if (params.get('qr') === '1') u.searchParams.set('qr', '1');
+      if (params.get('ver') === '1') u.searchParams.set('ver', '1');
       if (params.get('rays') === '1') u.searchParams.set('rays', '1');
       if (params.get('flat') === '1') u.searchParams.set('flat', '1');
       var idl = params.get('idle'); if (idl) u.searchParams.set('idle', idl);

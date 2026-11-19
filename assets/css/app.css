@@ -1121,6 +1121,12 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .payday.clock2{color:#f9a8d4}
 .payday.rest{color:#5eead4}
 .payday.wdn{color:#93c5fd}
+.payday.pct{color:#fde68a}
+.payday.qrb{color:#e2e8f0}
+.payday.ver{color:#cbd5e1}
+.qr-pop{position:absolute;bottom:calc(100% + 10px);left:50%;transform:translateX(-50%);background:#fff;padding:8px;border-radius:10px;box-shadow:0 8px 24px rgba(0,0,0,.45);z-index:60}
+.qr-pop canvas{display:block;width:132px;height:132px}
+.is-focus .qr-pop{display:none}
 @keyframes auraPulse{0%,100%{box-shadow:0 0 24px -6px var(--accent,#22d3ee)}50%{box-shadow:0 0 44px -2px var(--accent,#22d3ee)}}
 .is-aura .instrument{animation:auraPulse 3.2s ease-in-out infinite}
 @media (prefers-reduced-motion:reduce){.is-aura .instrument{animation:none}}
