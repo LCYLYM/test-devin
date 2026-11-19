@@ -90,6 +90,37 @@
       if (window.SalaryApp) window.SalaryApp.openDialog('goalDialog');
     }
 
+    var work = params.get('work') || params.get('intervals');
+    if (work) {
+      var workPairs = work.split(',').map(function (seg) {
+        var m = seg.trim().replace(/\./g, ':').match(/^(\d{1,2}):?(\d{2})\s*-\s*(\d{1,2}):?(\d{2})$/);
+        return m ? [m[1].padStart(2, '0') + ':' + m[2], m[3].padStart(2, '0') + ':' + m[4]] : null;
+      }).filter(Boolean).slice(0, 4);
+      if (workPairs.length) {
+        app.openDialog('settingsDialog');
+        setTimeout(function () {
+          var fields = document.getElementById('intervalFields');
+          var addBtn = document.getElementById('addInterval');
+          var sform = document.getElementById('settingsForm');
+          if (!fields || !sform) return;
+          var guard = 10;
+          while (fields.querySelectorAll('.interval-row').length < workPairs.length && addBtn && guard--) addBtn.click();
+          guard = 10;
+          while (fields.querySelectorAll('.interval-row').length > workPairs.length && guard--) {
+            var rems = fields.querySelectorAll('[data-remove-interval]:not([disabled])');
+            if (!rems.length) break;
+            rems[rems.length - 1].click();
+          }
+          workPairs.forEach(function (pair, i) {
+            var ins = fields.querySelectorAll('input[data-interval="' + i + '"]');
+            if (ins[0]) { ins[0].value = pair[0]; ins[0].dispatchEvent(new Event('input', { bubbles: true })); }
+            if (ins[1]) { ins[1].value = pair[1]; ins[1].dispatchEvent(new Event('input', { bubbles: true })); }
+          });
+          sform.requestSubmit ? sform.requestSubmit() : sform.dispatchEvent(new Event('submit', { cancelable: true }));
+        }, 60);
+      }
+    }
+
     var accent = params.get('accent');
     if (accent && /^#?([0-9a-fA-F]{3,4}|[0-9a-fA-F]{6}|[0-9a-fA-F]{8})$/.test(accent)) {
       var v = accent[0] === '#' ? accent : '#' + accent;
@@ -235,7 +266,11 @@
       if (prefs && prefs.period && prefs.period !== 'day') u.searchParams.set('period', prefs.period);
       var ac = params.get('accent');
       if (ac && /^#?([0-9a-fA-F]{3,4}|[0-9a-fA-F]{6}|[0-9a-fA-F]{8})$/.test(ac)) u.searchParams.set('accent', ac);
-      var pd = params.get('payday');
+      var ints = state && state.config && state.config.intervals;
+      if (ints && ints.length && JSON.stringify(ints) !== '[["09:00","12:00"],["13:30","18:00"]]') {
+        u.searchParams.set('work', ints.map(function (p) { return p.join('-').replace(/:/g, ''); }).join(','));
+      }
+      var pd = params.get('payday') || (function () { try { return localStorage.getItem('salaryFlow.payday'); } catch (e) { return ''; } })();
       if (pd && /^[0-9]{1,2}$/.test(pd)) u.searchParams.set('payday', pd);
       var text = u.toString();
       (navigator.clipboard ? navigator.clipboard.writeText(text) : Promise.reject())
