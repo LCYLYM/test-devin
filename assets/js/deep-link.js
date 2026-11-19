@@ -3071,6 +3071,15 @@
     if (params.get('canopy') === '1') {
       document.body.classList.add('is-canopy');
     }
+    if (params.get('tinsel') === '1') {
+      document.body.classList.add('is-tinsel');
+    }
+    if (params.get('marigold') === '1') {
+      document.body.classList.add('is-marigold');
+    }
+    if (params.get('shadow') === '1') {
+      document.body.classList.add('is-shadow');
+    }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -3876,6 +3885,9 @@
       if (params.get('suede') === '1') u.searchParams.set('suede', '1');
       if (params.get('mimosa') === '1') u.searchParams.set('mimosa', '1');
       if (params.get('canopy') === '1') u.searchParams.set('canopy', '1');
+      if (params.get('tinsel') === '1') u.searchParams.set('tinsel', '1');
+      if (params.get('marigold') === '1') u.searchParams.set('marigold', '1');
+      if (params.get('shadow') === '1') u.searchParams.set('shadow', '1');
       if (params.get('tile') === '1') u.searchParams.set('tile', '1');
       if (params.get('outline') === '1') u.searchParams.set('outline', '1');
       if (params.get('stripe') === '1') u.searchParams.set('stripe', '1');
