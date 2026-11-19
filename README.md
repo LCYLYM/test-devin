@@ -623,6 +623,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `ridge` | `1` 山脊配色 |
 | `flint` | `1` 燧石配色 |
 | `sorrel` | `1` 栗马配色 |
+| `grove` | `1` 树丛配色 |
+| `moor` | `1` 荒原配色 |
+| `ochre` | `1` 赭黄配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 

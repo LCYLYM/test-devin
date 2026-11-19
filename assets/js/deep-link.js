@@ -3039,7 +3039,7 @@
       document.body.classList.add('is-flax');
     }
     if (params.get('heather') === '1') {
-      document.body.classList.add('is-heather');
+      document.body.classList.add('is-moorer');
     }
     if (params.get('tawny') === '1') {
       document.body.classList.add('is-tawny');
@@ -3289,6 +3289,15 @@
     }
     if (params.get('sorrel') === '1') {
       document.body.classList.add('is-sorrel');
+    }
+    if (params.get('grove') === '1') {
+      document.body.classList.add('is-grove');
+    }
+    if (params.get('moor') === '1') {
+      document.body.classList.add('is-moor');
+    }
+    if (params.get('ochre') === '1') {
+      document.body.classList.add('is-ochre');
     }
     var tintParam = params.get('tint');
     if (tintParam) {
@@ -4155,6 +4164,9 @@
       if (params.get('ridge') === '1') u.searchParams.set('ridge', '1');
       if (params.get('flint') === '1') u.searchParams.set('flint', '1');
       if (params.get('sorrel') === '1') u.searchParams.set('sorrel', '1');
+      if (params.get('grove') === '1') u.searchParams.set('grove', '1');
+      if (params.get('moor') === '1') u.searchParams.set('moor', '1');
+      if (params.get('ochre') === '1') u.searchParams.set('ochre', '1');
       if (params.get('tile') === '1') u.searchParams.set('tile', '1');
       if (params.get('outline') === '1') u.searchParams.set('outline', '1');
       if (params.get('stripe') === '1') u.searchParams.set('stripe', '1');

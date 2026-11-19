@@ -1293,8 +1293,8 @@ body[data-hover] .payday:hover{transform:translateY(-3px)}
 .is-aqua .instrument{border-color:rgba(110,215,220,.42)}
 .is-flax{background:linear-gradient(180deg,#1e1a12,#322c1e 50%,#483e2a)}
 .is-flax .instrument{border-color:rgba(220,200,140,.42)}
-.is-heather{background:linear-gradient(180deg,#1a141e,#2a2034 50%,#3c2c4a)}
-.is-heather .instrument{border-color:rgba(185,155,215,.42)}
+.is-moorer{background:linear-gradient(180deg,#1a141e,#2a2034 50%,#3c2c4a)}
+.is-moorer .instrument{border-color:rgba(185,155,215,.42)}
 .is-tawny{background:linear-gradient(180deg,#1e150e,#322213 50%,#48321a)}
 .is-tawny .instrument{border-color:rgba(225,165,100,.42)}
 .is-vivid .instrument{filter:saturate(1.35) contrast(1.08)}
@@ -1624,6 +1624,12 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .is-flint .instrument{border-color:rgba(150,160,175,.4)}
 .is-sorrel{background:linear-gradient(180deg,#1c100a,#2f1a10 50%,#452616)}
 .is-sorrel .instrument{border-color:rgba(225,140,95,.42)}
+.is-grove{background:linear-gradient(180deg,#0e1810,#16281a 50%,#203926)}
+.is-grove .instrument{border-color:rgba(125,190,135,.4)}
+.is-moor{background:linear-gradient(180deg,#171220,#241b32 50%,#332645)}
+.is-moor .instrument{border-color:rgba(175,145,210,.4)}
+.is-ochre{background:linear-gradient(180deg,#1e1607,#332511 50%,#4a3518)}
+.is-ochre .instrument{border-color:rgba(235,185,90,.42)}
 .is-forest{background:linear-gradient(180deg,#0d1f14,#12291a)}
 .is-forest .instrument{border-color:rgba(74,222,128,.38)}
 .is-sand{background:linear-gradient(180deg,#241c10,#2f2614)}
