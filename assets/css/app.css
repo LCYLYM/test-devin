@@ -665,3 +665,8 @@ body[data-template=neon] .progress-info>strong{color:#7deeff}
 body[data-template=neon] .income-caption{text-shadow:0 0 14px rgba(77,227,255,.4)}
 body[data-template=mono] .instrument-footer{letter-spacing:1px}
 body[data-template=mono] .day-target{display:none}
+
+/* iter-100: reduced motion + mobile switch scroll + print for new visuals */
+@media(prefers-reduced-motion: reduce){.neon-arc,.mono-fill,.paper-ink{transition:none}.instrument.is-working .neon-arc{animation:none}}
+@media(max-width:760px){.template-switch{overflow-x:auto;scrollbar-width:none;max-width:100%}.template-switch::-webkit-scrollbar{display:none}}
+@media print{.neon-visual,.paper-visual,.mono-visual{display:none!important}}
