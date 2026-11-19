@@ -608,6 +608,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `apricot` | `1` 杏子配色 |
 | `dove` | `1` 鸽灰配色 |
 | `juniper` | `1` 杜松配色 |
+| `maroon` | `1` 褐红配色 |
+| `butterscotch` | `1` 奶油糖配色 |
+| `mole` | `1` 鼹鼠灰配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 

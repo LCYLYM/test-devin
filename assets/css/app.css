@@ -1594,6 +1594,12 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .is-dove .instrument{border-color:rgba(180,185,195,.4)}
 .is-juniper{background:linear-gradient(180deg,#0c1614,#152520 50%,#1f352e)}
 .is-juniper .instrument{border-color:rgba(110,175,155,.4)}
+.is-maroon{background:linear-gradient(180deg,#1c0c0e,#301217 50%,#451920)}
+.is-maroon .instrument{border-color:rgba(220,110,120,.42)}
+.is-butterscotch{background:linear-gradient(180deg,#1e1508,#33230f 50%,#4a3315)}
+.is-butterscotch .instrument{border-color:rgba(240,185,95,.42)}
+.is-mole{background:linear-gradient(180deg,#15130f,#211d17 50%,#2f2a20)}
+.is-mole .instrument{border-color:rgba(160,145,115,.4)}
 .is-forest{background:linear-gradient(180deg,#0d1f14,#12291a)}
 .is-forest .instrument{border-color:rgba(74,222,128,.38)}
 .is-sand{background:linear-gradient(180deg,#241c10,#2f2614)}

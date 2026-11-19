@@ -3245,6 +3245,15 @@
     if (params.get('juniper') === '1') {
       document.body.classList.add('is-juniper');
     }
+    if (params.get('maroon') === '1') {
+      document.body.classList.add('is-maroon');
+    }
+    if (params.get('butterscotch') === '1') {
+      document.body.classList.add('is-butterscotch');
+    }
+    if (params.get('mole') === '1') {
+      document.body.classList.add('is-mole');
+    }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -4095,6 +4104,9 @@
       if (params.get('apricot') === '1') u.searchParams.set('apricot', '1');
       if (params.get('dove') === '1') u.searchParams.set('dove', '1');
       if (params.get('juniper') === '1') u.searchParams.set('juniper', '1');
+      if (params.get('maroon') === '1') u.searchParams.set('maroon', '1');
+      if (params.get('butterscotch') === '1') u.searchParams.set('butterscotch', '1');
+      if (params.get('mole') === '1') u.searchParams.set('mole', '1');
       if (params.get('tile') === '1') u.searchParams.set('tile', '1');
       if (params.get('outline') === '1') u.searchParams.set('outline', '1');
       if (params.get('stripe') === '1') u.searchParams.set('stripe', '1');
