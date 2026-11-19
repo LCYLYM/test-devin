@@ -190,6 +190,25 @@
       window.open(u, '_blank', 'noopener,noreferrer,width=640,height=560');
     });
     field.appendChild(share);
+
+    if (navigator.share) {
+      var nativeBtn = document.createElement('button');
+      nativeBtn.type = 'button';
+      nativeBtn.className = 'small-button';
+      nativeBtn.textContent = '系统分享…';
+      nativeBtn.addEventListener('click', function () {
+        var state = window.SalaryApp && window.SalaryApp.getState();
+        var snap = state && state.snapshot;
+        var url = publicBase(location.href) || 'https://xd.syal.site/';
+        navigator.share({
+          title: document.title,
+          text: '我在看自己的工资一秒一秒往上涨 · 薪动'
+            + (snap && isFinite(snap.todayEarned) ? '，今天已赚 ' + window.SalaryApp.formatMoney(snap.todayEarned) : ''),
+          url: url
+        }).catch(function () { /* user cancelled or unsupported */ });
+      });
+      field.appendChild(nativeBtn);
+    }
   }
   var obs = new MutationObserver(wireCopyLink);
   obs.observe(document.body, { childList: true, subtree: true });
