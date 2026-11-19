@@ -2050,6 +2050,12 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .is-haddock .instrument{border-color:rgba(190,165,120,.4)}
 .is-whiting{background:linear-gradient(180deg,#151823 0%,#0e0f18 100%)}
 .is-whiting .instrument{border-color:rgba(155,165,220,.4)}
+.is-cod{background:linear-gradient(180deg,#15191a 0%,#0d1112 100%)}
+.is-cod .instrument{border-color:rgba(155,175,180,.4)}
+.is-hake{background:linear-gradient(180deg,#141a16 0%,#0d120f 100%)}
+.is-hake .instrument{border-color:rgba(150,185,160,.4)}
+.is-ling{background:linear-gradient(180deg,#1a151c 0%,#110e12 100%)}
+.is-ling .instrument{border-color:rgba(190,160,205,.4)}
 .is-oatmeal{background:linear-gradient(180deg,#1d1912,#2f291e 50%,#433a2a)}
 .is-oatmeal .instrument{border-color:rgba(215,195,155,.4)}
 .is-thyme{background:linear-gradient(180deg,#121a14,#1c2a20 50%,#28392c)}
