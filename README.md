@@ -338,6 +338,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `cof` | `1` 咖啡杯数徽章（每 2h 一杯） |
 | `silk` | `1` 丝绸流光背景 |
 | `chek` | `1` 棋盘格背景 |
+| `yp` | `1` 年度进度徽章 |
+| `zeb` | `1` 斑马纹背景 |
+| `vel` | `1` 天鹅绒顶光 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 

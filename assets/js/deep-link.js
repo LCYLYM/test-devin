@@ -2165,6 +2165,20 @@
     if (params.get('chek') === '1') {
       document.body.classList.add('is-chek');
     }
+    if (params.get('yp') === '1') {
+      var ypb = document.getElementById('ypBadge'), ypv = document.getElementById('ypVal');
+      if (ypb && ypv) {
+        var yd = new Date(), y0 = new Date(yd.getFullYear(), 0, 1), y1 = new Date(yd.getFullYear() + 1, 0, 1);
+        ypv.textContent = ((yd - y0) / (y1 - y0) * 100).toFixed(1) + '%';
+        ypb.hidden = false;
+      }
+    }
+    if (params.get('zeb') === '1') {
+      document.body.classList.add('is-zeb');
+    }
+    if (params.get('vel') === '1') {
+      document.body.classList.add('is-vel');
+    }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -2745,6 +2759,9 @@
       if (params.get('cof') === '1') u.searchParams.set('cof', '1');
       if (params.get('silk') === '1') u.searchParams.set('silk', '1');
       if (params.get('chek') === '1') u.searchParams.set('chek', '1');
+      if (params.get('yp') === '1') u.searchParams.set('yp', '1');
+      if (params.get('zeb') === '1') u.searchParams.set('zeb', '1');
+      if (params.get('vel') === '1') u.searchParams.set('vel', '1');
       if (params.get('tile') === '1') u.searchParams.set('tile', '1');
       if (params.get('outline') === '1') u.searchParams.set('outline', '1');
       if (params.get('stripe') === '1') u.searchParams.set('stripe', '1');
