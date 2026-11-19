@@ -923,6 +923,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `plaice` | `1` 鲽鱼配色 |
 | `dab` | `1` 黄盖鲽配色 |
 | `fluke` | `1` 鲆鱼配色 |
+| `pollock` | `1` 狭鳕配色 |
+| `haddock` | `1` 黑线鳕配色 |
+| `whiting` | `1` 牙鳕配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 

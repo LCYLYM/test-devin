@@ -3807,6 +3807,9 @@
     if (params.get('plaice') === '1') { document.body.classList.add('is-plaice'); }
     if (params.get('dab') === '1') { document.body.classList.add('is-dab'); }
     if (params.get('fluke') === '1') { document.body.classList.add('is-fluke'); }
+    if (params.get('pollock') === '1') { document.body.classList.add('is-pollock'); }
+    if (params.get('haddock') === '1') { document.body.classList.add('is-haddock'); }
+    if (params.get('whiting') === '1') { document.body.classList.add('is-whiting'); }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -4972,6 +4975,9 @@
         if (params.get('plaice') === '1') u.searchParams.set('plaice', '1');
         if (params.get('dab') === '1') u.searchParams.set('dab', '1');
         if (params.get('fluke') === '1') u.searchParams.set('fluke', '1');
+        if (params.get('pollock') === '1') u.searchParams.set('pollock', '1');
+        if (params.get('haddock') === '1') u.searchParams.set('haddock', '1');
+        if (params.get('whiting') === '1') u.searchParams.set('whiting', '1');
       if (params.get('tile') === '1') u.searchParams.set('tile', '1');
       if (params.get('outline') === '1') u.searchParams.set('outline', '1');
       if (params.get('stripe') === '1') u.searchParams.set('stripe', '1');
