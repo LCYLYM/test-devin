@@ -1482,6 +1482,44 @@
       }
     }
     if (params.get('quiet') === '1') { document.body.classList.add('is-quiet'); }
+    if (params.get('sec') === '1') {
+      var scb = document.getElementById('secBadge'), scv = document.getElementById('secVal');
+      if (scb && scv) {
+        var scUpd = function () {
+          var st = window.SalaryApp && window.SalaryApp.getState && window.SalaryApp.getState();
+          var v = st && st.snapshot && st.snapshot.secondSalary;
+          if (v) { scv.textContent = (window.SalaryApp.formatMoney ? window.SalaryApp.formatMoney(v, undefined, 4) : v.toFixed(4)) + '/秒'; scb.hidden = false; }
+        };
+        scUpd(); setInterval(scUpd, 5000);
+      }
+    }
+    var altParam = params.get('alt');
+    if (altParam) {
+      var ALTSYM = {CNY:'¥',USD:'$',EUR:'€',JPY:'JP¥',KRW:'₩',HKD:'HK$',VND:'₫',IDR:'Rp',GBP:'£',SGD:'S$',AUD:'A$',ZIM:'Z$'};
+      var acode = altParam.toUpperCase();
+      var alb = document.getElementById('altBadge'), ala = document.getElementById('altAmt');
+      if (ALTSYM[acode] && alb && ala) {
+        var alUpd = function () {
+          var st = window.SalaryApp && window.SalaryApp.getState && window.SalaryApp.getState();
+          var r = st && st.rates && st.rates.quotes && st.rates.quotes[acode];
+          var e = st && st.snapshot && st.snapshot.todayEarned;
+          if (r && e != null) { ala.textContent = ALTSYM[acode] + (e * r).toLocaleString('en-US', {maximumFractionDigits: 2}); alb.hidden = false; }
+        };
+        alUpd(); setInterval(alUpd, 3000);
+      }
+    }
+    var mottoParam = params.get('motto');
+    if (mottoParam) {
+      var mt = mottoParam.slice(0, 24);
+      if (mt) {
+        var mdiv = document.querySelector('.amount-area');
+        if (mdiv && !document.getElementById('mottoLine')) {
+          var ml = document.createElement('div');
+          ml.id = 'mottoLine'; ml.className = 'motto-line'; ml.textContent = mt;
+          mdiv.appendChild(ml);
+        }
+      }
+    }
     var opaParam = params.get('opacity');
     if (opaParam) {
       var opa = Math.min(100, Math.max(20, parseFloat(opaParam)));
@@ -2096,6 +2134,9 @@
       if (params.get('yd') === '1') u.searchParams.set('yd', '1');
       if (params.get('tapn') === '1') u.searchParams.set('tapn', '1');
       if (params.get('quiet') === '1') u.searchParams.set('quiet', '1');
+      if (params.get('sec') === '1') u.searchParams.set('sec', '1');
+      var alp = params.get('alt'); if (alp) u.searchParams.set('alt', alp);
+      var mtp = params.get('motto'); if (mtp) u.searchParams.set('motto', mtp);
       if (params.get('rays') === '1') u.searchParams.set('rays', '1');
       if (params.get('flat') === '1') u.searchParams.set('flat', '1');
       var idl = params.get('idle'); if (idl) u.searchParams.set('idle', idl);
