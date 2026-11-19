@@ -1888,6 +1888,12 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .is-weka .instrument{border-color:rgba(140,175,110,.4)}
 .is-xenopus{background:linear-gradient(180deg,#101a1a 0%,#091110 100%)}
 .is-xenopus .instrument{border-color:rgba(110,180,170,.4)}
+.is-coati{background:linear-gradient(180deg,#1c140d 0%,#120d07 100%)}
+.is-coati .instrument{border-color:rgba(205,150,90,.4)}
+.is-dhole{background:linear-gradient(180deg,#1f120e 0%,#140b08 100%)}
+.is-dhole .instrument{border-color:rgba(215,120,85,.4)}
+.is-grison{background:linear-gradient(180deg,#16151a 0%,#0f0e12 100%)}
+.is-grison .instrument{border-color:rgba(165,155,185,.4)}
 .is-oatmeal{background:linear-gradient(180deg,#1d1912,#2f291e 50%,#433a2a)}
 .is-oatmeal .instrument{border-color:rgba(215,195,155,.4)}
 .is-thyme{background:linear-gradient(180deg,#121a14,#1c2a20 50%,#28392c)}

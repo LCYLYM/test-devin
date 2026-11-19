@@ -845,6 +845,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `urutu` | `1` 乌卢图蝮配色 |
 | `weka` | `1` 威卡秧鸡配色 |
 | `xenopus` | `1` 非洲爪蟾配色 |
+| `coati` | `1` 长鼻浣熊配色 |
+| `dhole` | `1` 豺配色 |
+| `grison` | `1` 巢鼬配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 
