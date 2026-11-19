@@ -800,6 +800,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `spoonbill` | `1` 琵鹭配色 |
 | `sunfish` | `1` 翻车鱼配色 |
 | `tamarin` | `1` 绢毛猴配色 |
+| `turaco` | `1` 蕉鹃配色 |
+| `urial` | `1` 赤羊配色 |
+| `wahoo` | `1` 刺鲅配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 

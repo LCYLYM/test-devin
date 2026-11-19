@@ -3684,6 +3684,9 @@
     if (params.get('spoonbill') === '1') { document.body.classList.add('is-spoonbill'); }
     if (params.get('sunfish') === '1') { document.body.classList.add('is-sunfish'); }
     if (params.get('tamarin') === '1') { document.body.classList.add('is-tamarin'); }
+    if (params.get('turaco') === '1') { document.body.classList.add('is-turaco'); }
+    if (params.get('urial') === '1') { document.body.classList.add('is-urial'); }
+    if (params.get('wahoo') === '1') { document.body.classList.add('is-wahoo'); }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -4726,6 +4729,9 @@
         if (params.get('spoonbill') === '1') u.searchParams.set('spoonbill', '1');
         if (params.get('sunfish') === '1') u.searchParams.set('sunfish', '1');
         if (params.get('tamarin') === '1') u.searchParams.set('tamarin', '1');
+        if (params.get('turaco') === '1') u.searchParams.set('turaco', '1');
+        if (params.get('urial') === '1') u.searchParams.set('urial', '1');
+        if (params.get('wahoo') === '1') u.searchParams.set('wahoo', '1');
       if (params.get('tile') === '1') u.searchParams.set('tile', '1');
       if (params.get('outline') === '1') u.searchParams.set('outline', '1');
       if (params.get('stripe') === '1') u.searchParams.set('stripe', '1');

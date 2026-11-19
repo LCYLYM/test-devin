@@ -1798,6 +1798,12 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .is-sunfish .instrument{border-color:rgba(130,180,210,.4)}
 .is-tamarin{background:linear-gradient(180deg,#1e150d 0%,#130d07 100%)}
 .is-tamarin .instrument{border-color:rgba(220,160,70,.4)}
+.is-turaco{background:linear-gradient(180deg,#101b12 0%,#08120a 100%)}
+.is-turaco .instrument{border-color:rgba(80,190,110,.4)}
+.is-urial{background:linear-gradient(180deg,#1c160f 0%,#110d08 100%)}
+.is-urial .instrument{border-color:rgba(200,160,100,.4)}
+.is-wahoo{background:linear-gradient(180deg,#0e1a20 0%,#071014 100%)}
+.is-wahoo .instrument{border-color:rgba(90,190,220,.4)}
 .is-oatmeal{background:linear-gradient(180deg,#1d1912,#2f291e 50%,#433a2a)}
 .is-oatmeal .instrument{border-color:rgba(215,195,155,.4)}
 .is-thyme{background:linear-gradient(180deg,#121a14,#1c2a20 50%,#28392c)}
