@@ -1028,6 +1028,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `bengal` | `1` 孟加拉猫配色 |
 | `ragdoll` | `1` 布偶猫配色 |
 | `persian` | `1` 波斯猫配色 |
+| `siamese` | `1` 暹罗猫配色 |
+| `mainecoon` | `1` 缅因猫配色 |
+| `shorthair` | `1` 英短配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 

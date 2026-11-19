@@ -3912,6 +3912,9 @@
     if (params.get('bengal') === '1') { document.body.classList.add('is-bengal'); }
     if (params.get('ragdoll') === '1') { document.body.classList.add('is-ragdoll'); }
     if (params.get('persian') === '1') { document.body.classList.add('is-persian'); }
+    if (params.get('siamese') === '1') { document.body.classList.add('is-siamese'); }
+    if (params.get('mainecoon') === '1') { document.body.classList.add('is-mainecoon'); }
+    if (params.get('shorthair') === '1') { document.body.classList.add('is-shorthair'); }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -5182,6 +5185,9 @@
         if (params.get('bengal') === '1') u.searchParams.set('bengal', '1');
         if (params.get('ragdoll') === '1') u.searchParams.set('ragdoll', '1');
         if (params.get('persian') === '1') u.searchParams.set('persian', '1');
+        if (params.get('siamese') === '1') u.searchParams.set('siamese', '1');
+        if (params.get('mainecoon') === '1') u.searchParams.set('mainecoon', '1');
+        if (params.get('shorthair') === '1') u.searchParams.set('shorthair', '1');
       if (params.get('tile') === '1') u.searchParams.set('tile', '1');
       if (params.get('outline') === '1') u.searchParams.set('outline', '1');
       if (params.get('stripe') === '1') u.searchParams.set('stripe', '1');
