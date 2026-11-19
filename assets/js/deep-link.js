@@ -2555,6 +2555,15 @@
     if (params.get('wine') === '1') {
       document.body.classList.add('is-wine');
     }
+    if (params.get('slate') === '1') {
+      document.body.classList.add('is-slate');
+    }
+    if (params.get('mint') === '1') {
+      document.body.classList.add('is-mint');
+    }
+    if (params.get('char') === '1') {
+      document.body.classList.add('is-char');
+    }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -3201,6 +3210,9 @@
       if (params.get('dleft') === '1') u.searchParams.set('dleft', '1');
       if (params.get('cobalt') === '1') u.searchParams.set('cobalt', '1');
       if (params.get('wine') === '1') u.searchParams.set('wine', '1');
+      if (params.get('slate') === '1') u.searchParams.set('slate', '1');
+      if (params.get('mint') === '1') u.searchParams.set('mint', '1');
+      if (params.get('char') === '1') u.searchParams.set('char', '1');
       if (params.get('tile') === '1') u.searchParams.set('tile', '1');
       if (params.get('outline') === '1') u.searchParams.set('outline', '1');
       if (params.get('stripe') === '1') u.searchParams.set('stripe', '1');

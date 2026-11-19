@@ -404,6 +404,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `dleft` | `1` 本月剩余工作日 |
 | `cobalt` | `1` 钴蓝配色 |
 | `wine` | `1` 酒红配色 |
+| `slate` | `1` 石板配色 |
+| `mint` | `1` 薄荷配色 |
+| `char` | `1` 炭黑配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 

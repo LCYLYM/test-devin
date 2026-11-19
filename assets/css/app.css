@@ -1238,6 +1238,12 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .is-wine{background:linear-gradient(180deg,#260d16,#33101f)}
 .is-wine .instrument{border-color:rgba(251,113,133,.4)}
 .is-focus .payday.dleft{display:none}
+.is-slate{background:linear-gradient(180deg,#161e2a,#1d2838)}
+.is-slate .instrument{border-color:rgba(148,163,184,.4)}
+.is-mint{background:linear-gradient(180deg,#0f1f1b,#14292a)}
+.is-mint .instrument{border-color:rgba(110,231,183,.4)}
+.is-char{background:linear-gradient(180deg,#101010,#181818)}
+.is-char .instrument{border-color:rgba(115,115,115,.45)}
 @keyframes hueSpin{to{filter:hue-rotate(360deg)}}
 .is-hue .instrument{animation:hueSpin 12s linear infinite}
 @media (prefers-reduced-motion:reduce){.is-hue .instrument{animation:none}}
