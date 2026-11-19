@@ -3639,6 +3639,9 @@
     if (params.get('lorikeet') === '1') { document.body.classList.add('is-lorikeet'); }
     if (params.get('markhor') === '1') { document.body.classList.add('is-markhor'); }
     if (params.get('numbat') === '1') { document.body.classList.add('is-numbat'); }
+    if (params.get('puffin') === '1') { document.body.classList.add('is-puffin'); }
+    if (params.get('quetzal') === '1') { document.body.classList.add('is-quetzal'); }
+    if (params.get('springbok') === '1') { document.body.classList.add('is-springbok'); }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -4636,6 +4639,9 @@
         if (params.get('lorikeet') === '1') u.searchParams.set('lorikeet', '1');
         if (params.get('markhor') === '1') u.searchParams.set('markhor', '1');
         if (params.get('numbat') === '1') u.searchParams.set('numbat', '1');
+        if (params.get('puffin') === '1') u.searchParams.set('puffin', '1');
+        if (params.get('quetzal') === '1') u.searchParams.set('quetzal', '1');
+        if (params.get('springbok') === '1') u.searchParams.set('springbok', '1');
       if (params.get('tile') === '1') u.searchParams.set('tile', '1');
       if (params.get('outline') === '1') u.searchParams.set('outline', '1');
       if (params.get('stripe') === '1') u.searchParams.set('stripe', '1');

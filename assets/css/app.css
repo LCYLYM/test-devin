@@ -1708,6 +1708,12 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .is-markhor .instrument{border-color:rgba(190,165,115,.4)}
 .is-numbat{background:linear-gradient(180deg,#1d130e 0%,#120b08 100%)}
 .is-numbat .instrument{border-color:rgba(210,130,80,.4)}
+.is-puffin{background:linear-gradient(180deg,#141519 0%,#0c0d10 100%)}
+.is-puffin .instrument{border-color:rgba(230,140,60,.4)}
+.is-quetzal{background:linear-gradient(180deg,#0d1c16 0%,#07120d 100%)}
+.is-quetzal .instrument{border-color:rgba(60,200,140,.4)}
+.is-springbok{background:linear-gradient(180deg,#1c150f 0%,#120d08 100%)}
+.is-springbok .instrument{border-color:rgba(210,165,105,.4)}
 .is-oatmeal{background:linear-gradient(180deg,#1d1912,#2f291e 50%,#433a2a)}
 .is-oatmeal .instrument{border-color:rgba(215,195,155,.4)}
 .is-thyme{background:linear-gradient(180deg,#121a14,#1c2a20 50%,#28392c)}
