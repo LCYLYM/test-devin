@@ -241,6 +241,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `prism` | `1` 棱镜彩虹描边 |
 | `lunch` | `1` 干饭时段提醒徽章 |
 | `off` | `1` 收工状态徽章 |
+| `water` | `1` 喝水提醒徽章（工作时段） |
+| `stretch` | `1` 久坐提醒徽章（每小时前10分） |
+| `fortune` | `1` 每日打工金句 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 

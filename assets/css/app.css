@@ -1084,3 +1084,6 @@ body[data-prism] .instrument::before{content:"";position:absolute;inset:-1px;bor
 @media(prefers-reduced-motion:reduce){body[data-prism] .instrument::before{animation:none}}
 .payday.lunch{color:#fdba74}
 .payday.off{color:#94a3b8}
+.payday.water{color:#7dd3fc}
+.payday.stretch{color:#a5f3fc}
+.payday.fortune{color:#fef3c7;font-style:italic}

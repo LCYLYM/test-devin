@@ -1295,6 +1295,40 @@
         setInterval(ofUpd, 30000);
       }
     }
+    if (params.get('water') === '1') {
+      var wtb = document.getElementById('waterBadge');
+      if (wtb) {
+        var wtUpd = function () {
+          var wh = new Date().getHours();
+          wtb.hidden = !(wh >= 8 && wh < 20);
+        };
+        wtUpd();
+        setInterval(wtUpd, 60000);
+      }
+    }
+    if (params.get('stretch') === '1') {
+      var stb = document.getElementById('stretchBadge');
+      if (stb) {
+        var stUpd = function () {
+          var sd = new Date();
+          stb.hidden = !(sd.getMinutes() < 10 && sd.getHours() >= 8 && sd.getHours() < 20);
+        };
+        stUpd();
+        setInterval(stUpd, 60000);
+      }
+    }
+    if (params.get('fortune') === '1') {
+      var ftb = document.getElementById('fortuneBadge'), ftt = document.getElementById('fortuneText');
+      if (ftb && ftt) {
+        var QUOTES = ['钱不是万能的，但没钱万万不能','搬砖不狠，地位不稳','今天的砖格外烫手','摸鱼一时爽，发薪两行泪','薪资到账的声音是世界上最好听的声音','打工人打工魂，打工都是人上人','加班费是检验真爱的唯一标准','只要我够快，老板就追不上我','梦想还是要有的，万一老板先跑了呢','工资就像大姨妈，一个月来一次一周就没了'];
+        var fts = window.SalaryApp && window.SalaryApp.getState && window.SalaryApp.getState();
+        var ftk = (fts && fts.snapshot && fts.snapshot.dayKey) || new Date().toISOString().slice(0, 10);
+        var fth = 0;
+        for (var fi = 0; fi < ftk.length; fi++) fth = (fth * 31 + ftk.charCodeAt(fi)) % 997;
+        ftt.textContent = QUOTES[fth % QUOTES.length];
+        ftb.hidden = false;
+      }
+    }
     if (params.get('hex') === '1') {
       var hxb = document.getElementById('hexBadge'), hxd = document.getElementById('hexDot'), hxv = document.getElementById('hexVal');
       if (hxb && hxd && hxv) {
@@ -1870,6 +1904,9 @@
       if (params.get('prism') === '1') u.searchParams.set('prism', '1');
       if (params.get('lunch') === '1') u.searchParams.set('lunch', '1');
       if (params.get('off') === '1') u.searchParams.set('off', '1');
+      if (params.get('water') === '1') u.searchParams.set('water', '1');
+      if (params.get('stretch') === '1') u.searchParams.set('stretch', '1');
+      if (params.get('fortune') === '1') u.searchParams.set('fortune', '1');
       if (params.get('rays') === '1') u.searchParams.set('rays', '1');
       if (params.get('flat') === '1') u.searchParams.set('flat', '1');
       var idl = params.get('idle'); if (idl) u.searchParams.set('idle', idl);
