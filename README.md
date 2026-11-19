@@ -653,6 +653,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `mustard` | `1` 芥末配色 |
 | `celery` | `1` 芹菜配色 |
 | `oryx` | `1` 羚羊配色 |
+| `tortoise` | `1` 陆龟配色 |
+| `mantis` | `1` 螳螂配色 |
+| `coriander` | `1` 香菜配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 
