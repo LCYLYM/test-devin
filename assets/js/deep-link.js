@@ -3416,6 +3416,15 @@
     if (params.get('ermine') === '1') {
       document.body.classList.add('is-ermine');
     }
+    if (params.get('badger') === '1') {
+      document.body.classList.add('is-badger');
+    }
+    if (params.get('marlin') === '1') {
+      document.body.classList.add('is-marlin');
+    }
+    if (params.get('banyan') === '1') {
+      document.body.classList.add('is-banyan');
+    }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -4323,6 +4332,9 @@
       if (params.get('chamois') === '1') u.searchParams.set('chamois', '1');
       if (params.get('dill') === '1') u.searchParams.set('dill', '1');
       if (params.get('ermine') === '1') u.searchParams.set('ermine', '1');
+      if (params.get('badger') === '1') u.searchParams.set('badger', '1');
+      if (params.get('marlin') === '1') u.searchParams.set('marlin', '1');
+      if (params.get('banyan') === '1') u.searchParams.set('banyan', '1');
       if (params.get('tile') === '1') u.searchParams.set('tile', '1');
       if (params.get('outline') === '1') u.searchParams.set('outline', '1');
       if (params.get('stripe') === '1') u.searchParams.set('stripe', '1');

@@ -1708,6 +1708,12 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .is-dill .instrument{border-color:rgba(160,205,110,.42)}
 .is-ermine{background:linear-gradient(180deg,#16161a,#25252d 50%,#353540)}
 .is-ermine .instrument{border-color:rgba(180,180,200,.42)}
+.is-badger{background:linear-gradient(180deg,#141311,#24211d 50%,#343029)}
+.is-badger .instrument{border-color:rgba(190,180,160,.42)}
+.is-marlin{background:linear-gradient(180deg,#0a1420,#102438 50%,#173450)}
+.is-marlin .instrument{border-color:rgba(100,170,230,.42)}
+.is-banyan{background:linear-gradient(180deg,#0f1509,#1c2410 50%,#2a3517)}
+.is-banyan .instrument{border-color:rgba(150,185,95,.42)}
 .is-forest{background:linear-gradient(180deg,#0d1f14,#12291a)}
 .is-forest .instrument{border-color:rgba(74,222,128,.38)}
 .is-sand{background:linear-gradient(180deg,#241c10,#2f2614)}
