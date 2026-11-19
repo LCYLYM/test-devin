@@ -1013,6 +1013,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `sealion` | `1` 海狮配色 |
 | `penguin` | `1` 企鹅配色 |
 | `polarbear` | `1` 北极熊配色 |
+| `redfox` | `1` 赤狐配色 |
+| `grizzly` | `1` 灰熊配色 |
+| `puma` | `1` 美洲狮配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 

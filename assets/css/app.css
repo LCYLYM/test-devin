@@ -2224,6 +2224,12 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .is-penguin .instrument{border-color:rgba(160,170,210,.4)}
 .is-polarbear{background:linear-gradient(180deg,#1a1d22 0%,#131518 100%)}
 .is-polarbear .instrument{border-color:rgba(205,215,230,.4)}
+.is-redfox{background:linear-gradient(180deg,#1e140e 0%,#150e09 100%)}
+.is-redfox .instrument{border-color:rgba(235,145,80,.4)}
+.is-grizzly{background:linear-gradient(180deg,#181410 0%,#110e0a 100%)}
+.is-grizzly .instrument{border-color:rgba(190,155,105,.4)}
+.is-puma{background:linear-gradient(180deg,#1a1510 0%,#130f0a 100%)}
+.is-puma .instrument{border-color:rgba(215,170,105,.4)}
 .is-oatmeal{background:linear-gradient(180deg,#1d1912,#2f291e 50%,#433a2a)}
 .is-oatmeal .instrument{border-color:rgba(215,195,155,.4)}
 .is-thyme{background:linear-gradient(180deg,#121a14,#1c2a20 50%,#28392c)}
