@@ -368,6 +368,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `bonk` | `1` 点击金额弹跳 |
 | `ray` | `1` 顶部扫光 |
 | `vibe` | `1` 背景色随进度变 |
+| `blip` | `1` 入账提示点 |
+| `crisp` | `1` 高清锐化 |
+| `matte` | `1` 哑光模式 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 

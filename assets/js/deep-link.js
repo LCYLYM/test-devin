@@ -2344,6 +2344,35 @@
       vUpd();
       setInterval(vUpd, 3000);
     }
+    if (params.get('blip') === '1') {
+      var bEl = document.createElement('div');
+      bEl.className = 'blip-dot';
+      bEl.setAttribute('aria-hidden', 'true');
+      bEl.hidden = true;
+      var host2 = document.getElementById('amountArea') || document.body;
+      host2.appendChild(bEl);
+      var bLast = null;
+      var bUpd = function () {
+        var st = window.SalaryApp && window.SalaryApp.getState && window.SalaryApp.getState();
+        if (!st || !st.snapshot) return;
+        var e = st.snapshot.todayEarned || 0;
+        if (bLast !== null && e > bLast) {
+          bEl.hidden = false;
+          bEl.classList.remove('blip-pop');
+          void bEl.offsetWidth;
+          bEl.classList.add('blip-pop');
+        }
+        bLast = e;
+      };
+      setInterval(bUpd, 1000);
+      setTimeout(bUpd, 300);
+    }
+    if (params.get('crisp') === '1') {
+      document.body.classList.add('is-crisp');
+    }
+    if (params.get('matte') === '1') {
+      document.body.classList.add('is-matte');
+    }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -2954,6 +2983,9 @@
       if (params.get('bonk') === '1') u.searchParams.set('bonk', '1');
       if (params.get('ray') === '1') u.searchParams.set('ray', '1');
       if (params.get('vibe') === '1') u.searchParams.set('vibe', '1');
+      if (params.get('blip') === '1') u.searchParams.set('blip', '1');
+      if (params.get('crisp') === '1') u.searchParams.set('crisp', '1');
+      if (params.get('matte') === '1') u.searchParams.set('matte', '1');
       if (params.get('tile') === '1') u.searchParams.set('tile', '1');
       if (params.get('outline') === '1') u.searchParams.set('outline', '1');
       if (params.get('stripe') === '1') u.searchParams.set('stripe', '1');
