@@ -3909,6 +3909,9 @@
     if (params.get('snowleopard') === '1') { document.body.classList.add('is-snowleopard'); }
     if (params.get('clouded') === '1') { document.body.classList.add('is-clouded'); }
     if (params.get('sphynx') === '1') { document.body.classList.add('is-sphynx'); }
+    if (params.get('bengal') === '1') { document.body.classList.add('is-bengal'); }
+    if (params.get('ragdoll') === '1') { document.body.classList.add('is-ragdoll'); }
+    if (params.get('persian') === '1') { document.body.classList.add('is-persian'); }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -5176,6 +5179,9 @@
         if (params.get('snowleopard') === '1') u.searchParams.set('snowleopard', '1');
         if (params.get('clouded') === '1') u.searchParams.set('clouded', '1');
         if (params.get('sphynx') === '1') u.searchParams.set('sphynx', '1');
+        if (params.get('bengal') === '1') u.searchParams.set('bengal', '1');
+        if (params.get('ragdoll') === '1') u.searchParams.set('ragdoll', '1');
+        if (params.get('persian') === '1') u.searchParams.set('persian', '1');
       if (params.get('tile') === '1') u.searchParams.set('tile', '1');
       if (params.get('outline') === '1') u.searchParams.set('outline', '1');
       if (params.get('stripe') === '1') u.searchParams.set('stripe', '1');

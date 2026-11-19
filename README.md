@@ -1025,6 +1025,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `snowleopard` | `1` 雪豹配色 |
 | `clouded` | `1` 云豹配色 |
 | `sphynx` | `1` 无毛猫配色 |
+| `bengal` | `1` 孟加拉猫配色 |
+| `ragdoll` | `1` 布偶猫配色 |
+| `persian` | `1` 波斯猫配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 
