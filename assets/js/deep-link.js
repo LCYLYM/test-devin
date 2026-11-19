@@ -4020,6 +4020,9 @@
     if (params.get('dabchick') === '1') { document.body.classList.add('is-dabchick'); }
     if (params.get('loon') === '1') { document.body.classList.add('is-loon'); }
     if (params.get('auk') === '1') { document.body.classList.add('is-auk'); }
+    if (params.get('murre') === '1') { document.body.classList.add('is-murre'); }
+    if (params.get('guillemot') === '1') { document.body.classList.add('is-guillemot'); }
+    if (params.get('razorbill') === '1') { document.body.classList.add('is-razorbill'); }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -5398,6 +5401,9 @@
         if (params.get('dabchick') === '1') u.searchParams.set('dabchick', '1');
         if (params.get('loon') === '1') u.searchParams.set('loon', '1');
         if (params.get('auk') === '1') u.searchParams.set('auk', '1');
+        if (params.get('murre') === '1') u.searchParams.set('murre', '1');
+        if (params.get('guillemot') === '1') u.searchParams.set('guillemot', '1');
+        if (params.get('razorbill') === '1') u.searchParams.set('razorbill', '1');
       if (params.get('tile') === '1') u.searchParams.set('tile', '1');
       if (params.get('outline') === '1') u.searchParams.set('outline', '1');
       if (params.get('stripe') === '1') u.searchParams.set('stripe', '1');

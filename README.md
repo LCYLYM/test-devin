@@ -1136,6 +1136,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `dabchick` | `1` 小䴙䴘配色 |
 | `loon` | `1` 潜鸟配色 |
 | `auk` | `1` 海雀配色 |
+| `murre` | `1` 海鸦配色 |
+| `guillemot` | `1` 海鸽配色 |
+| `razorbill` | `1` 刀嘴海雀配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 

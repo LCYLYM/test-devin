@@ -2470,6 +2470,12 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .is-loon .instrument{border-color:rgba(115,190,210,.4)}
 .is-auk{background:linear-gradient(180deg,#13161a 0%,#0d1013 100%)}
 .is-auk .instrument{border-color:rgba(150,165,185,.4)}
+.is-murre{background:linear-gradient(180deg,#14171b 0%,#0e1114 100%)}
+.is-murre .instrument{border-color:rgba(155,170,195,.4)}
+.is-guillemot{background:linear-gradient(180deg,#13181b 0%,#0d1114 100%)}
+.is-guillemot .instrument{border-color:rgba(140,180,195,.4)}
+.is-razorbill{background:linear-gradient(180deg,#151518 0%,#0f0f12 100%)}
+.is-razorbill .instrument{border-color:rgba(165,165,180,.4)}
 .is-oatmeal{background:linear-gradient(180deg,#1d1912,#2f291e 50%,#433a2a)}
 .is-oatmeal .instrument{border-color:rgba(215,195,155,.4)}
 .is-thyme{background:linear-gradient(180deg,#121a14,#1c2a20 50%,#28392c)}
