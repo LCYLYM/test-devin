@@ -1564,6 +1564,12 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .is-rhea .instrument{border-color:rgba(200,180,140,.42)}
 .is-umbra{background:linear-gradient(180deg,#0f0e12,#1b1920 50%,#282530)}
 .is-umbra .instrument{border-color:rgba(150,145,170,.42)}
+.is-vicuna{background:linear-gradient(180deg,#1a120b,#2c1e11 50%,#402b18)}
+.is-vicuna .instrument{border-color:rgba(215,160,100,.42)}
+.is-olivine{background:linear-gradient(180deg,#131809,#222a0f 50%,#313d15)}
+.is-olivine .instrument{border-color:rgba(175,195,95,.42)}
+.is-damson{background:linear-gradient(180deg,#190e1a,#2b182e 50%,#3e2342)}
+.is-damson .instrument{border-color:rgba(195,130,200,.42)}
 .is-oatmeal{background:linear-gradient(180deg,#1d1912,#2f291e 50%,#433a2a)}
 .is-oatmeal .instrument{border-color:rgba(215,195,155,.4)}
 .is-thyme{background:linear-gradient(180deg,#121a14,#1c2a20 50%,#28392c)}

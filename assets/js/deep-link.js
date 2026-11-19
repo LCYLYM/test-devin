@@ -3483,6 +3483,15 @@
     if (params.get('umbra') === '1') {
       document.body.classList.add('is-umbra');
     }
+    if (params.get('vicuna') === '1') {
+      document.body.classList.add('is-vicuna');
+    }
+    if (params.get('olivine') === '1') {
+      document.body.classList.add('is-olivine');
+    }
+    if (params.get('damson') === '1') {
+      document.body.classList.add('is-damson');
+    }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -4408,6 +4417,9 @@
       if (params.get('eow') === '1') u.searchParams.set('eow', '1');
       if (params.get('rhea') === '1') u.searchParams.set('rhea', '1');
       if (params.get('umbra') === '1') u.searchParams.set('umbra', '1');
+      if (params.get('vicuna') === '1') u.searchParams.set('vicuna', '1');
+      if (params.get('olivine') === '1') u.searchParams.set('olivine', '1');
+      if (params.get('damson') === '1') u.searchParams.set('damson', '1');
       if (params.get('tile') === '1') u.searchParams.set('tile', '1');
       if (params.get('outline') === '1') u.searchParams.set('outline', '1');
       if (params.get('stripe') === '1') u.searchParams.set('stripe', '1');
