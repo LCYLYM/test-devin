@@ -2080,6 +2080,12 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .is-clownfish .instrument{border-color:rgba(225,150,95,.4)}
 .is-angelfish{background:linear-gradient(180deg,#1a121b 0%,#110b12 100%)}
 .is-angelfish .instrument{border-color:rgba(200,140,200,.4)}
+.is-goby{background:linear-gradient(180deg,#151a12 0%,#0d110b 100%)}
+.is-goby .instrument{border-color:rgba(155,185,130,.4)}
+.is-blenny{background:linear-gradient(180deg,#191318 0%,#100c10 100%)}
+.is-blenny .instrument{border-color:rgba(195,145,175,.4)}
+.is-sculpin{background:linear-gradient(180deg,#13151c 0%,#0c0e13 100%)}
+.is-sculpin .instrument{border-color:rgba(150,160,195,.4)}
 .is-oatmeal{background:linear-gradient(180deg,#1d1912,#2f291e 50%,#433a2a)}
 .is-oatmeal .instrument{border-color:rgba(215,195,155,.4)}
 .is-thyme{background:linear-gradient(180deg,#121a14,#1c2a20 50%,#28392c)}
