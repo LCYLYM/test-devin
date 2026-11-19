@@ -704,6 +704,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `pangolin` | `1` 穿山甲配色 |
 | `quince` | `1` 榅桲配色 |
 | `guanaco` | `1` 原驼配色 |
+| `jacaranda` | `1` 蓝花楹配色 |
+| `lemur` | `1` 狐猴配色 |
+| `fig` | `1` 无花果配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 

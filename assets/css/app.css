@@ -1606,6 +1606,12 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .is-quince .instrument{border-color:rgba(230,190,90,.42)}
 .is-guanaco{background:linear-gradient(180deg,#171008,#281a0d 50%,#3b2713)}
 .is-guanaco .instrument{border-color:rgba(210,155,90,.42)}
+.is-jacaranda{background:linear-gradient(180deg,#141024,#211a3d 50%,#2f2655)}
+.is-jacaranda .instrument{border-color:rgba(160,140,235,.42)}
+.is-lemur{background:linear-gradient(180deg,#15150f,#262418 50%,#373423)}
+.is-lemur .instrument{border-color:rgba(190,185,135,.42)}
+.is-fig{background:linear-gradient(180deg,#160f1c,#261a30 50%,#372645)}
+.is-fig .instrument{border-color:rgba(185,140,205,.42)}
 .is-oatmeal{background:linear-gradient(180deg,#1d1912,#2f291e 50%,#433a2a)}
 .is-oatmeal .instrument{border-color:rgba(215,195,155,.4)}
 .is-thyme{background:linear-gradient(180deg,#121a14,#1c2a20 50%,#28392c)}
