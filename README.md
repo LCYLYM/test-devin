@@ -72,6 +72,10 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `ms` | `1` 显示"距下个里程碑还差多少"徽章 |
 | `luck` | `1` 每日财运签徽章（按日期抽签） |
 | `bgimg` | 背景图 URL（https://），如 `?bgimg=https://…` |
+| `badge` | 自定义徽章文字，≤20 字（`?badge=老板别点`） |
+| `caption` | 自定义数字下方说明文字，≤40 字 |
+| `ss` | 秒数，无操作 N 秒后自动进入专注模式（数字相框） |
+| `mirror` | `1` 页面水平镜像（投到镜子/玻璃上用） |
 
 ## 本地跑
 

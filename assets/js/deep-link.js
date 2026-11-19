@@ -214,6 +214,30 @@
       document.body.style.backgroundSize = 'cover';
       document.body.style.backgroundAttachment = 'fixed';
     }
+    var badgeParam = params.get('badge');
+    if (badgeParam) {
+      var cb = document.getElementById('customBadge');
+      if (cb) { cb.hidden = false; document.getElementById('customBadgeText').textContent = badgeParam.slice(0, 20); }
+    }
+    var capParam = params.get('caption');
+    if (capParam) {
+      var ic = document.getElementById('incomeCaption');
+      if (ic) ic.textContent = capParam.slice(0, 40);
+    }
+    if (params.get('mirror') === '1') document.body.style.transform = 'scaleX(-1)';
+    var ssParam = parseInt(params.get('ss') || '', 10);
+    if (ssParam > 0) {
+      var ssTimer = 0;
+      var ssArm = function () {
+        clearTimeout(ssTimer);
+        document.body.classList.remove('is-focus');
+        ssTimer = setTimeout(function () {
+          if (!document.querySelector('dialog[open]')) document.body.classList.add('is-focus');
+        }, Math.min(3600, ssParam) * 1000);
+      };
+      ['mousemove', 'mousedown', 'keydown', 'touchstart', 'wheel'].forEach(function (ev) { window.addEventListener(ev, ssArm, {passive: true}); });
+      ssArm();
+    }
     var symParam = params.get('symbol');
     if (symParam) window.__symbol = symParam.slice(0, 3);
     var brandParam = params.get('brand');
