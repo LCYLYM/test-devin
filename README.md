@@ -58,3 +58,5 @@ python3 -m http.server 8000
 ## 作者
 
 [生鱼安乐](https://github.com/LCYLYM) · 更多小工具 → [tool.syal.site](https://tool.syal.site/)
+
+> 首次访问跟随系统明暗主题：浅色系统默认纸墨皮，深色默认存钱罐；之后记住你的选择。
