@@ -965,6 +965,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `newt` | `1` 蝾螈配色 |
 | `salamander` | `1` 火蜥蜴配色 |
 | `treefrog` | `1` 树蛙配色 |
+| `iguana` | `1` 鬣蜥配色 |
+| `chameleon` | `1` 变色龙配色 |
+| `beardeddragon` | `1` 鬃狮蜥配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 

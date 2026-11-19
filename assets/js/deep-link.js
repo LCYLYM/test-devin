@@ -3849,6 +3849,9 @@
     if (params.get('newt') === '1') { document.body.classList.add('is-newt'); }
     if (params.get('salamander') === '1') { document.body.classList.add('is-salamander'); }
     if (params.get('treefrog') === '1') { document.body.classList.add('is-treefrog'); }
+    if (params.get('iguana') === '1') { document.body.classList.add('is-iguana'); }
+    if (params.get('chameleon') === '1') { document.body.classList.add('is-chameleon'); }
+    if (params.get('beardeddragon') === '1') { document.body.classList.add('is-beardeddragon'); }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -5056,6 +5059,9 @@
         if (params.get('newt') === '1') u.searchParams.set('newt', '1');
         if (params.get('salamander') === '1') u.searchParams.set('salamander', '1');
         if (params.get('treefrog') === '1') u.searchParams.set('treefrog', '1');
+        if (params.get('iguana') === '1') u.searchParams.set('iguana', '1');
+        if (params.get('chameleon') === '1') u.searchParams.set('chameleon', '1');
+        if (params.get('beardeddragon') === '1') u.searchParams.set('beardeddragon', '1');
       if (params.get('tile') === '1') u.searchParams.set('tile', '1');
       if (params.get('outline') === '1') u.searchParams.set('outline', '1');
       if (params.get('stripe') === '1') u.searchParams.set('stripe', '1');
