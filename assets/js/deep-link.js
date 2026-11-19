@@ -153,7 +153,7 @@
     applyThemeColor(app.getState().preferences.template);
     window.addEventListener('salary-template', function (e) { applyThemeColor(e.detail && e.detail.template); });
 
-    if (params.get('zen') === '1') document.body.classList.add('is-focus');
+    if (params.get('zen') === '1' || params.get('ui') === '0') document.body.classList.add('is-focus');
 
     // ?dialog=share|about|settings|goal|calendar|currency|overtime — open a panel directly.
     var dlg = params.get('dialog') || params.get('share') === '1' && 'share' || '';
@@ -202,6 +202,13 @@
     } else if (/^[1-8]$/.test(e.key) && window.SalaryApp) {
       var direct = ['pig','charge','meter','pixel','neon','mono','paper','term'][Number(e.key) - 1];
       if (direct) window.SalaryApp.setTemplate(direct);
+    } else if (e.key === 'a') {
+      var pal = ['#4de3ff', '#5ae593', '#eeb58e', '#ff8a52', '#c2622f', '#e8e8e8', '#39d353'];
+      var cur3 = '';
+      try { cur3 = localStorage.getItem('salaryFlow.accent') || ''; } catch (e) {}
+      var nxt = pal[(pal.indexOf(cur3) + 1) % pal.length];
+      try { localStorage.setItem('salaryFlow.accent', nxt); } catch (e) {}
+      document.body.style.setProperty('--accent', nxt);
     } else if (e.key === 'e' && window.SalaryApp) {
       window.SalaryApp.toggleDemo();
     } else if (e.key === 'x' && window.SalaryApp) {
@@ -291,7 +298,7 @@
       if (prefs && prefs.template) u.searchParams.set('template', prefs.template);
       if (prefs && prefs.currency && prefs.currency !== 'CNY') u.searchParams.set('currency', prefs.currency);
       if (prefs && prefs.period && prefs.period !== 'day') u.searchParams.set('period', prefs.period);
-      var ac = params.get('accent');
+      var ac = params.get('accent') || (function () { try { return localStorage.getItem('salaryFlow.accent') || ''; } catch (e) { return ''; } })();
       if (ac && /^#?([0-9a-fA-F]{3,4}|[0-9a-fA-F]{6}|[0-9a-fA-F]{8})$/.test(ac)) u.searchParams.set('accent', ac);
       if (document.body.classList.contains('is-focus')) u.searchParams.set('zen', '1');
       var ints = state && state.config && state.config.intervals;
