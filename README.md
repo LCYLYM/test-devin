@@ -1067,6 +1067,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `kite` | `1` 鸢配色 |
 | `vulture` | `1` 秃鹫配色 |
 | `condor` | `1` 神鹰配色 |
+| `kiwi` | `1` 几维鸟配色 |
+| `emu` | `1` 鸸鹋配色 |
+| `ostrich` | `1` 鸵鸟配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 

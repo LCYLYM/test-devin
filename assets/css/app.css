@@ -2332,6 +2332,12 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .is-vulture .instrument{border-color:rgba(150,140,170,.4)}
 .is-condor{background:linear-gradient(180deg,#141418 0%,#0e0e12 100%)}
 .is-condor .instrument{border-color:rgba(170,170,180,.4)}
+.is-kiwi{background:linear-gradient(180deg,#191610 0%,#12100b 100%)}
+.is-kiwi .instrument{border-color:rgba(185,160,110,.4)}
+.is-emu{background:linear-gradient(180deg,#1a1512 0%,#130f0d 100%)}
+.is-emu .instrument{border-color:rgba(175,145,115,.4)}
+.is-ostrich{background:linear-gradient(180deg,#1c1718 0%,#141112 100%)}
+.is-ostrich .instrument{border-color:rgba(200,170,175,.4)}
 .is-oatmeal{background:linear-gradient(180deg,#1d1912,#2f291e 50%,#433a2a)}
 .is-oatmeal .instrument{border-color:rgba(215,195,155,.4)}
 .is-thyme{background:linear-gradient(180deg,#121a14,#1c2a20 50%,#28392c)}
