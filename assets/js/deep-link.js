@@ -3831,6 +3831,9 @@
     if (params.get('lumpsucker') === '1') { document.body.classList.add('is-lumpsucker'); }
     if (params.get('stickleback') === '1') { document.body.classList.add('is-stickleback'); }
     if (params.get('shiner') === '1') { document.body.classList.add('is-shiner'); }
+    if (params.get('killifish') === '1') { document.body.classList.add('is-killifish'); }
+    if (params.get('medaka') === '1') { document.body.classList.add('is-medaka'); }
+    if (params.get('mosquitofish') === '1') { document.body.classList.add('is-mosquitofish'); }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -5020,6 +5023,9 @@
         if (params.get('lumpsucker') === '1') u.searchParams.set('lumpsucker', '1');
         if (params.get('stickleback') === '1') u.searchParams.set('stickleback', '1');
         if (params.get('shiner') === '1') u.searchParams.set('shiner', '1');
+        if (params.get('killifish') === '1') u.searchParams.set('killifish', '1');
+        if (params.get('medaka') === '1') u.searchParams.set('medaka', '1');
+        if (params.get('mosquitofish') === '1') u.searchParams.set('mosquitofish', '1');
       if (params.get('tile') === '1') u.searchParams.set('tile', '1');
       if (params.get('outline') === '1') u.searchParams.set('outline', '1');
       if (params.get('stripe') === '1') u.searchParams.set('stripe', '1');

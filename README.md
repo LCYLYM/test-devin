@@ -947,6 +947,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `lumpsucker` | `1` 圆鳍鱼配色 |
 | `stickleback` | `1` 刺鱼配色 |
 | `shiner` | `1` 闪光鱼配色 |
+| `killifish` | `1` 鳉鱼配色 |
+| `medaka` | `1` 青鳉配色 |
+| `mosquitofish` | `1` 食蚊鱼配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 

@@ -2092,6 +2092,12 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .is-stickleback .instrument{border-color:rgba(205,165,110,.4)}
 .is-shiner{background:linear-gradient(180deg,#17171f 0%,#0f0f15 100%)}
 .is-shiner .instrument{border-color:rgba(175,175,215,.4)}
+.is-killifish{background:linear-gradient(180deg,#141b14 0%,#0c120c 100%)}
+.is-killifish .instrument{border-color:rgba(150,190,145,.4)}
+.is-medaka{background:linear-gradient(180deg,#1a1410 0%,#110d09 100%)}
+.is-medaka .instrument{border-color:rgba(200,165,115,.4)}
+.is-mosquitofish{background:linear-gradient(180deg,#151521 0%,#0e0e16 100%)}
+.is-mosquitofish .instrument{border-color:rgba(160,160,220,.4)}
 .is-oatmeal{background:linear-gradient(180deg,#1d1912,#2f291e 50%,#433a2a)}
 .is-oatmeal .instrument{border-color:rgba(215,195,155,.4)}
 .is-thyme{background:linear-gradient(180deg,#121a14,#1c2a20 50%,#28392c)}
