@@ -437,6 +437,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `emerald` | `1` 祖母绿配色 |
 | `cream` | `1` 奶油配色 |
 | `navy` | `1` 海军蓝配色 |
+| `taupe` | `1` 灰褐配色 |
+| `jet` | `1` 墨黑配色 |
+| `rose` | `1` 玫瑰配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 

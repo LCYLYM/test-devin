@@ -2682,6 +2682,15 @@
     if (params.get('navy') === '1') {
       document.body.classList.add('is-navy');
     }
+    if (params.get('taupe') === '1') {
+      document.body.classList.add('is-taupe');
+    }
+    if (params.get('jet') === '1') {
+      document.body.classList.add('is-jet');
+    }
+    if (params.get('rose') === '1') {
+      document.body.classList.add('is-rose');
+    }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -3361,6 +3370,9 @@
       if (params.get('emerald') === '1') u.searchParams.set('emerald', '1');
       if (params.get('cream') === '1') u.searchParams.set('cream', '1');
       if (params.get('navy') === '1') u.searchParams.set('navy', '1');
+      if (params.get('taupe') === '1') u.searchParams.set('taupe', '1');
+      if (params.get('jet') === '1') u.searchParams.set('jet', '1');
+      if (params.get('rose') === '1') u.searchParams.set('rose', '1');
       if (params.get('tile') === '1') u.searchParams.set('tile', '1');
       if (params.get('outline') === '1') u.searchParams.set('outline', '1');
       if (params.get('stripe') === '1') u.searchParams.set('stripe', '1');
