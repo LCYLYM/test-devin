@@ -41,6 +41,7 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `zen` | `1` 进入专注模式 |
 | `sound` | `1` 开启音效 |
 | `accent` | `#RRGGBB` 自定义强调色 |
+| `dialog` | `share\|about\|settings\|goal\|calendar\|currency\|overtime` 直接打开面板 |
 | `title` | `0` 关闭标签页金额跳动 |
 
 ## 本地跑
