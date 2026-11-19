@@ -1702,6 +1702,12 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .is-plover .instrument{border-color:rgba(185,180,140,.42)}
 .is-sesame{background:linear-gradient(180deg,#181310,#2a2017 50%,#3c2f20)}
 .is-sesame .instrument{border-color:rgba(210,180,135,.42)}
+.is-chamois{background:linear-gradient(180deg,#181307,#2b210c 50%,#3f3112)}
+.is-chamois .instrument{border-color:rgba(220,190,110,.42)}
+.is-dill{background:linear-gradient(180deg,#111a0e,#1d2e16 50%,#29431f)}
+.is-dill .instrument{border-color:rgba(160,205,110,.42)}
+.is-ermine{background:linear-gradient(180deg,#16161a,#25252d 50%,#353540)}
+.is-ermine .instrument{border-color:rgba(180,180,200,.42)}
 .is-forest{background:linear-gradient(180deg,#0d1f14,#12291a)}
 .is-forest .instrument{border-color:rgba(74,222,128,.38)}
 .is-sand{background:linear-gradient(180deg,#241c10,#2f2614)}

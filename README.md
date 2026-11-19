@@ -662,6 +662,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `osprey` | `1` 鱼鹰配色 |
 | `plover` | `1` 千鸟配色 |
 | `sesame` | `1` 芝麻配色 |
+| `chamois` | `1` 岩羚配色 |
+| `dill` | `1` 莳萝配色 |
+| `ermine` | `1` 白鼬配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 
