@@ -638,6 +638,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `heron` | `1` 苍鹭配色 |
 | `yuzu` | `1` 柚子配色 |
 | `balsam` | `1` 凤仙花配色 |
+| `quill` | `1` 羽笔配色 |
+| `bison` | `1` 野牛配色 |
+| `wren` | `1` 鹪鹩配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 

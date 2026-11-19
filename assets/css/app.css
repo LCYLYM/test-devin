@@ -1654,6 +1654,12 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .is-yuzu .instrument{border-color:rgba(230,200,90,.42)}
 .is-balsam{background:linear-gradient(180deg,#1e0f16,#331a24 50%,#472633)}
 .is-balsam .instrument{border-color:rgba(215,140,175,.42)}
+.is-quill{background:linear-gradient(180deg,#15130f,#242019 50%,#332e24)}
+.is-quill .instrument{border-color:rgba(190,175,145,.42)}
+.is-bison{background:linear-gradient(180deg,#161009,#26190d 50%,#372613)}
+.is-bison .instrument{border-color:rgba(190,140,95,.42)}
+.is-wren{background:linear-gradient(180deg,#17100f,#281b18 50%,#382722)}
+.is-wren .instrument{border-color:rgba(200,140,125,.42)}
 .is-forest{background:linear-gradient(180deg,#0d1f14,#12291a)}
 .is-forest .instrument{border-color:rgba(74,222,128,.38)}
 .is-sand{background:linear-gradient(180deg,#241c10,#2f2614)}
