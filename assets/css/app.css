@@ -1114,6 +1114,10 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .payday.dow{color:#fdba74}
 .payday.ago{color:#a5f3fc}
 .payday.tz{color:#bef264}
+.payday.wfh{color:#fda4af}
+.payday.kpi{color:#86efac}
+.veil-layer{position:fixed;inset:0;pointer-events:none;backdrop-filter:blur(1.5px) saturate(1.15);-webkit-backdrop-filter:blur(1.5px) saturate(1.15);z-index:0}
+.is-focus .veil-layer{display:none}
 .is-ghost .site-header,.is-ghost .site-footer,.is-ghost .faq,.is-ghost .summary-strip,.is-ghost .overtime-disclosure,.is-ghost .instrument-footer{opacity:.06;transition:opacity .8s}
 .is-ghost .instrument{opacity:.35;transition:opacity .8s}
 .tint-layer{position:fixed;inset:0;pointer-events:none;opacity:.12;mix-blend-mode:overlay;z-index:1}

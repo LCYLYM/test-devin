@@ -271,6 +271,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `ago` | `1` 已开工时长徽章 |
 | `tz` | `时区` 世界时钟徽章（如 Asia/Tokyo） |
 | `ghost` | `1` 幽灵模式：10 秒无操作界面淡出，动一下回显 |
+| `wfh` | `1` 居家办公徽章 |
+| `kpi` | `1` 今日 KPI 达成率徽章 |
+| `veil` | `1` 柔纱滤镜（背景轻模糊+饱和） |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 

@@ -1562,6 +1562,29 @@
       ['mousemove', 'click', 'keydown', 'touchstart'].forEach(function (ev) { document.addEventListener(ev, ghOn, {passive: true}); });
       ghOn();
     }
+    if (params.get('wfh') === '1') {
+      var wfb = document.getElementById('wfhBadge');
+      if (wfb) wfb.hidden = false;
+    }
+    if (params.get('kpi') === '1') {
+      var kpb = document.getElementById('kpiBadge'), kpv = document.getElementById('kpiVal');
+      if (kpb && kpv) {
+        var kpUpd = function () {
+          var st = window.SalaryApp && window.SalaryApp.getState && window.SalaryApp.getState();
+          var sn = st && st.snapshot;
+          if (sn && sn.daySalary > 0 && sn.todayEarned != null) {
+            kpv.textContent = Math.min(999, Math.round(sn.todayEarned / sn.daySalary * 100)) + '%';
+            kpb.hidden = false;
+          }
+        };
+        kpUpd(); setInterval(kpUpd, 5000);
+      }
+    }
+    if (params.get('veil') === '1') {
+      var vl = document.createElement('div');
+      vl.className = 'veil-layer';
+      document.body.appendChild(vl);
+    }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -2207,6 +2230,9 @@
       if (params.get('ago') === '1') u.searchParams.set('ago', '1');
       var tzp = params.get('tz'); if (tzp) u.searchParams.set('tz', tzp);
       if (params.get('ghost') === '1') u.searchParams.set('ghost', '1');
+      if (params.get('wfh') === '1') u.searchParams.set('wfh', '1');
+      if (params.get('kpi') === '1') u.searchParams.set('kpi', '1');
+      if (params.get('veil') === '1') u.searchParams.set('veil', '1');
       if (params.get('rays') === '1') u.searchParams.set('rays', '1');
       if (params.get('flat') === '1') u.searchParams.set('flat', '1');
       var idl = params.get('idle'); if (idl) u.searchParams.set('idle', idl);
