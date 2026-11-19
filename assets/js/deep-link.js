@@ -153,6 +153,8 @@
     if (accent && /^#?([0-9a-fA-F]{3,4}|[0-9a-fA-F]{6}|[0-9a-fA-F]{8})$/.test(accent)) {
       var v = accent[0] === '#' ? accent : '#' + accent;
       document.body.style.setProperty('--accent', v);
+    } else if (accent && /^[a-zA-Z]{3,20}$/.test(accent)) {
+      document.body.style.setProperty('--accent', accent);
     }
 
     var THEME_COLORS = {pig:'#1a1716',charge:'#131415',meter:'#171715',pixel:'#151515',neon:'#0c0e18',mono:'#111111',paper:'#f2efe7',term:'#0d1117',ecg:'#160a0a',wave:'#0b1526'};
@@ -184,7 +186,7 @@
       if (vsM) { window.__vsItem = { name: vsM[1], price: parseFloat(vsM[2]) }; var vb0 = document.getElementById('vsBadge'); if (vb0) vb0.hidden = false; }
     }
 
-    var hideMap = {header:'.app-header',footer:'.app-footer',faq:'.seo-faq',utility:'.utility-row',summary:'.summary-strip',overtime:'.overtime-disclosure',bottom:'.bottom-row',toolbar:'.instrument-toolbar',foot:'.instrument-footer'};
+    var hideMap = {header:'.app-header',footer:'.app-footer',faq:'.seo-faq',utility:'.utility-row',summary:'.summary-strip',overtime:'.overtime-disclosure',bottom:'.bottom-row',toolbar:'.instrument-toolbar',foot:'.instrument-footer',badges:'.payday'};
     var hideList = (params.get('hide') || '').split(',').map(function (s) { return s.trim(); });
     if (params.get('embed') === '1') hideList = ['header', 'footer', 'faq'];
     var hiddenSel = hideList.map(function (k) { return hideMap[k]; }).filter(Boolean);

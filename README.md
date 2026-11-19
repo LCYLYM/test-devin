@@ -40,13 +40,13 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `focus` | `salary` 打开时聚焦月薪输入 |
 | `zen` | `1` 进入专注模式 |
 | `sound` | `1` 开启音效 |
-| `accent` | `#RRGGBB` 自定义强调色（记忆，`off` 清除） |
+| `accent` | 自定义强调色（hex 或 CSS 颜色名），`off` 清除（记忆） |
 | `dialog` | `share\|about\|settings\|goal\|calendar\|currency\|overtime` 直接打开面板 |
 | `title` | `0` 关闭标签页金额跳动 |
 | `payday` | `1`–`31` 发薪日倒计时（记忆，`0` 清除） |
 | `work` | 工作时段，如 `0900-1200,1330-1800` |
 | `goal` | 金额，配合 `goalname` 预填小目标 |
-| `hide` | 隐藏区块：`header,footer,faq,utility,summary,overtime,bottom,toolbar,foot` |
+| `hide` | 隐藏区块：`header,footer,faq,utility,summary,overtime,bottom,toolbar,foot,badges` |
 | `embed` | `1` 隐藏页头页脚 FAQ，适合 iframe 嵌入 |
 | `vs` | 等价物换算徽章：`?vs=奶茶@15` 显示「≈ N 杯奶茶」 |
 | `avg` | 时薪对比徽章：`?avg=8000` 显示你的时薪 vs 均值 |

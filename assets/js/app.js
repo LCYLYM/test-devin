@@ -2,6 +2,7 @@
   'use strict';
   const $ = id => document.getElementById(id);
   const clamp = (n,a=0,b=1) => Math.min(b,Math.max(a,n));
+  const confettiDisabled = (function () { try { return new URLSearchParams(location.search).get('confetti') === '0'; } catch (e) { return false; } })();
   const motionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
   const motion = { get matches() { return motionQuery.matches || (typeof preferences === 'object' && preferences !== null && preferences.motion === 'reduce'); } };
   const instrument = $('earningsCard');
@@ -138,7 +139,7 @@
     instrument.classList.toggle('is-fun',data.fun);
     instrument.classList.toggle('is-month',data.period==='month');
     const p=clamp(data.progress);
-    if(p>=1&&lastProgress<1&&data.snapshot&&data.snapshot.todayEarned>0&&!motion.matches&&!window.__noConfetti)confettiBurst();
+    if(p>=1&&lastProgress<1&&data.snapshot&&data.snapshot.todayEarned>0&&!motion.matches&&!confettiDisabled&&!window.__noConfetti)confettiBurst();
     lastProgress=p;
     setText('chargePercent',(p*100).toFixed(1)+'%');
     setText('pigPercent',(p*100).toFixed(1)+'%');
