@@ -1001,6 +1001,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `oyster` | `1` 牡蛎配色 |
 | `mussel` | `1` 贻贝配色 |
 | `scallop` | `1` 扇贝配色 |
+| `abalone` | `1` 鲍鱼配色 |
+| `conch` | `1` 海螺配色 |
+| `nautilus` | `1` 鹦鹉螺配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 

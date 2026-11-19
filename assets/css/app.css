@@ -2200,6 +2200,12 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .is-mussel .instrument{border-color:rgba(110,180,205,.4)}
 .is-scallop{background:linear-gradient(180deg,#1d1315 0%,#150d0f 100%)}
 .is-scallop .instrument{border-color:rgba(235,130,140,.4)}
+.is-abalone{background:linear-gradient(180deg,#121c1a 0%,#0b1412 100%)}
+.is-abalone .instrument{border-color:rgba(120,210,190,.4)}
+.is-conch{background:linear-gradient(180deg,#1d1416 0%,#150e10 100%)}
+.is-conch .instrument{border-color:rgba(230,140,150,.4)}
+.is-nautilus{background:linear-gradient(180deg,#15151d 0%,#0f0f15 100%)}
+.is-nautilus .instrument{border-color:rgba(170,165,215,.4)}
 .is-oatmeal{background:linear-gradient(180deg,#1d1912,#2f291e 50%,#433a2a)}
 .is-oatmeal .instrument{border-color:rgba(215,195,155,.4)}
 .is-thyme{background:linear-gradient(180deg,#121a14,#1c2a20 50%,#28392c)}

@@ -3885,6 +3885,9 @@
     if (params.get('oyster') === '1') { document.body.classList.add('is-oyster'); }
     if (params.get('mussel') === '1') { document.body.classList.add('is-mussel'); }
     if (params.get('scallop') === '1') { document.body.classList.add('is-scallop'); }
+    if (params.get('abalone') === '1') { document.body.classList.add('is-abalone'); }
+    if (params.get('conch') === '1') { document.body.classList.add('is-conch'); }
+    if (params.get('nautilus') === '1') { document.body.classList.add('is-nautilus'); }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -5128,6 +5131,9 @@
         if (params.get('oyster') === '1') u.searchParams.set('oyster', '1');
         if (params.get('mussel') === '1') u.searchParams.set('mussel', '1');
         if (params.get('scallop') === '1') u.searchParams.set('scallop', '1');
+        if (params.get('abalone') === '1') u.searchParams.set('abalone', '1');
+        if (params.get('conch') === '1') u.searchParams.set('conch', '1');
+        if (params.get('nautilus') === '1') u.searchParams.set('nautilus', '1');
       if (params.get('tile') === '1') u.searchParams.set('tile', '1');
       if (params.get('outline') === '1') u.searchParams.set('outline', '1');
       if (params.get('stripe') === '1') u.searchParams.set('stripe', '1');
