@@ -312,6 +312,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `swirl` | `1` 旋涡背景 |
 | `rev` | `1` 距日薪目标还差徽章 |
 | `cap` | `文字` 自定义副标题 |
+| `mar` | `1` 工时折马拉松距离徽章 |
+| `idx` | `1` 当前参数计数徽章 |
+| `noir` | `1` 黑白电影模式 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 

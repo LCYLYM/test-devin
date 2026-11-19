@@ -1138,6 +1138,9 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .payday.cb{color:#f0abfc}
 .payday.raw{color:#94a3b8;font-variant-numeric:tabular-nums}
 .payday.rev{color:#fcd34d}
+.payday.mar{color:#86efac}
+.payday.idx{color:#93c5fd}
+.is-noir .app-shell{filter:grayscale(1) contrast(1.15)}
 @keyframes swirlBg{to{background-position:200px 200px}}
 .is-swirl{background-image:repeating-conic-gradient(rgba(255,255,255,.02) 0 12deg,transparent 12deg 24deg);animation:swirlBg 14s linear infinite}
 @media (prefers-reduced-motion:reduce){.is-swirl{animation:none}}

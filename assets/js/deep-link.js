@@ -1979,6 +1979,27 @@
         capEl.textContent = capParam2 || '·';
       }
     }
+    if (params.get('mar') === '1') {
+      var mrb = document.getElementById('marBadge'), mrv = document.getElementById('marVal');
+      if (mrb && mrv) {
+        var mrUpd = function () {
+          var st = window.SalaryApp && window.SalaryApp.getState && window.SalaryApp.getState();
+          var p = st && st.snapshot && st.snapshot.progress;
+          if (p != null) { mrv.textContent = (p * 42.195).toFixed(2) + ' / 42.195km'; mrb.hidden = false; }
+        };
+        mrUpd(); setInterval(mrUpd, 1000);
+      }
+    }
+    if (params.get('idx') === '1') {
+      var ixb = document.getElementById('idxBadge'), ixv = document.getElementById('idxVal');
+      if (ixb && ixv) {
+        ixv.textContent = String(Array.from(new URLSearchParams(location.search).keys()).length) + ' 个参数';
+        ixb.hidden = false;
+      }
+    }
+    if (params.get('noir') === '1') {
+      document.body.classList.add('is-noir');
+    }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -2665,6 +2686,9 @@
       if (params.get('swirl') === '1') u.searchParams.set('swirl', '1');
       if (params.get('rev') === '1') u.searchParams.set('rev', '1');
       if (params.get('cap') !== null) u.searchParams.set('cap', params.get('cap'));
+      if (params.get('mar') === '1') u.searchParams.set('mar', '1');
+      if (params.get('idx') === '1') u.searchParams.set('idx', '1');
+      if (params.get('noir') === '1') u.searchParams.set('noir', '1');
       if (params.get('rays') === '1') u.searchParams.set('rays', '1');
       if (params.get('flat') === '1') u.searchParams.set('flat', '1');
       var idl = params.get('idle'); if (idl) u.searchParams.set('idle', idl);
