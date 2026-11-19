@@ -1130,6 +1130,9 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .payday.tax{color:#fda4af}
 .payday.bean{color:#d4a373}
 .payday.wage{color:#f0abfc}
+.payday.sav{color:#86efac}
+.payday.xp{color:#a78bfa}
+.is-boss .instrument,.is-boss .summary-strip,.is-boss .overtime-strip{filter:blur(14px);opacity:.35;transition:filter .3s,opacity .3s}
 .is-mini .instrument{transform:scale(.86);transform-origin:top center}
 .is-mini .summary-strip,.is-mini .overtime-disclosure{display:none}
 .is-eco .fx-layer,.is-eco .tint-layer,.is-eco .veil-layer,.is-eco .lofi-layer,.is-eco .noise-layer{display:none}

@@ -297,6 +297,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `bloom` | `1` 泛光滤镜 |
 | `wage` | `1` 实时时薪徽章 |
 | `mini` | `1` 迷你模式（缩小仪表、隐藏摘要） |
+| `sav` | `1` 本月已攒徽章 |
+| `xp` | `1` 经验值徽章（已赚 ×10） |
+| `boss` | `1` 老板键：窗口失焦自动模糊内容 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 

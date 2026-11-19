@@ -1808,6 +1808,35 @@
       }
     }
     if (params.get('mini') === '1') { document.body.classList.add('is-mini'); }
+    if (params.get('sav') === '1') {
+      var svb = document.getElementById('savBadge'), svv = document.getElementById('savVal');
+      if (svb && svv) {
+        var svUpd = function () {
+          var st = window.SalaryApp && window.SalaryApp.getState && window.SalaryApp.getState();
+          var e = st && st.snapshot && st.snapshot.monthEarned;
+          if (e != null) { svv.textContent = window.SalaryApp.formatMoney ? window.SalaryApp.formatMoney(e) : e.toFixed(2); svb.hidden = false; }
+        };
+        svUpd(); setInterval(svUpd, 4000);
+      }
+    }
+    if (params.get('xp') === '1') {
+      var xpb = document.getElementById('xpBadge'), xpv = document.getElementById('xpVal');
+      if (xpb && xpv) {
+        var xpUpd = function () {
+          var st = window.SalaryApp && window.SalaryApp.getState && window.SalaryApp.getState();
+          var e = st && st.snapshot && st.snapshot.todayEarned;
+          if (e != null) { xpv.textContent = '+' + Math.floor(e * 10); xpb.hidden = false; }
+        };
+        xpUpd(); setInterval(xpUpd, 1000);
+      }
+    }
+    if (params.get('boss') === '1') {
+      var boss = function () { document.body.classList.add('is-boss'); };
+      var unboss = function () { document.body.classList.remove('is-boss'); };
+      window.addEventListener('blur', boss);
+      window.addEventListener('focus', unboss);
+      document.addEventListener('keydown', function (e) { if (e.key === 'Escape') unboss(); });
+    }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -2479,6 +2508,9 @@
       if (params.get('lofi') === '1') u.searchParams.set('lofi', '1');
       if (params.get('wage') === '1') u.searchParams.set('wage', '1');
       if (params.get('mini') === '1') u.searchParams.set('mini', '1');
+      if (params.get('sav') === '1') u.searchParams.set('sav', '1');
+      if (params.get('xp') === '1') u.searchParams.set('xp', '1');
+      if (params.get('boss') === '1') u.searchParams.set('boss', '1');
       if (params.get('rays') === '1') u.searchParams.set('rays', '1');
       if (params.get('flat') === '1') u.searchParams.set('flat', '1');
       var idl = params.get('idle'); if (idl) u.searchParams.set('idle', idl);
