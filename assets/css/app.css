@@ -531,7 +531,7 @@ dialog.drawer[open] { animation: drawer-arrive 300ms cubic-bezier(.2,.75,.25,1) 
 
 }
 /* SEO FAQ section */
-.seo-faq{max-width:720px;margin:48px auto 24px;padding:0 20px;color:#9aa39d;font-size:13px;line-height:1.7}
+.seo-faq{content-visibility:auto;contain-intrinsic-size:auto 560px;max-width:720px;margin:48px auto 24px;padding:0 20px;color:#9aa39d;font-size:13px;line-height:1.7}
 .seo-faq h2{font-size:15px;font-weight:600;color:#c8cfc9;margin:0 0 12px}
 .seo-faq details{border-top:1px solid rgba(255,255,255,.08);padding:10px 0}
 .seo-faq details:last-child{border-bottom:1px solid rgba(255,255,255,.08)}
