@@ -353,6 +353,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `int` | `1` 整数入账徽章 |
 | `cel` | `1` 卡通粗描边 |
 | `emb` | `1` 浮雕数字 |
+| `rem` | `1` 剩余工时徽章 |
+| `ripple` | `1` 脉冲涟漪 |
+| `moodbg` | `1` 三色心情渐变背景 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 

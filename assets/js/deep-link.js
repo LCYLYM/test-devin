@@ -2253,6 +2253,27 @@
     if (params.get('emb') === '1') {
       document.body.classList.add('is-emb');
     }
+    if (params.get('rem') === '1') {
+      var rmb = document.getElementById('remBadge'), rmv = document.getElementById('remVal');
+      if (rmb && rmv) {
+        var rmUpd = function () {
+          var st = window.SalaryApp && window.SalaryApp.getState && window.SalaryApp.getState();
+          var r = st && st.snapshot && st.snapshot.remainingWorkSeconds;
+          if (r != null) {
+            var h = Math.floor(r / 3600), m = Math.floor((r % 3600) / 60);
+            rmv.textContent = h + 'h' + String(m).padStart(2, '0') + 'm';
+            rmb.hidden = false;
+          }
+        };
+        rmUpd(); setInterval(rmUpd, 5000);
+      }
+    }
+    if (params.get('ripple') === '1' && !(window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches)) {
+      document.body.classList.add('is-ripple');
+    }
+    if (params.get('moodbg') === '1') {
+      document.body.classList.add('is-moodbg');
+    }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -2848,6 +2869,9 @@
       if (params.get('int') === '1') u.searchParams.set('int', '1');
       if (params.get('cel') === '1') u.searchParams.set('cel', '1');
       if (params.get('emb') === '1') u.searchParams.set('emb', '1');
+      if (params.get('rem') === '1') u.searchParams.set('rem', '1');
+      if (params.get('ripple') === '1') u.searchParams.set('ripple', '1');
+      if (params.get('moodbg') === '1') u.searchParams.set('moodbg', '1');
       if (params.get('tile') === '1') u.searchParams.set('tile', '1');
       if (params.get('outline') === '1') u.searchParams.set('outline', '1');
       if (params.get('stripe') === '1') u.searchParams.set('stripe', '1');
