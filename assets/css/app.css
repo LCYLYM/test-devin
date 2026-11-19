@@ -1822,6 +1822,12 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .is-goral .instrument{border-color:rgba(190,140,100,.4)}
 .is-hartebeest{background:linear-gradient(180deg,#1c140f 0%,#120c08 100%)}
 .is-hartebeest .instrument{border-color:rgba(210,150,95,.4)}
+.is-iora{background:linear-gradient(180deg,#1b1a0e 0%,#111008 100%)}
+.is-iora .instrument{border-color:rgba(220,210,110,.4)}
+.is-jerboa{background:linear-gradient(180deg,#1d170f 0%,#130e08 100%)}
+.is-jerboa .instrument{border-color:rgba(215,175,115,.4)}
+.is-katydid{background:linear-gradient(180deg,#101c10 0%,#081208 100%)}
+.is-katydid .instrument{border-color:rgba(100,200,100,.4)}
 .is-oatmeal{background:linear-gradient(180deg,#1d1912,#2f291e 50%,#433a2a)}
 .is-oatmeal .instrument{border-color:rgba(215,195,155,.4)}
 .is-thyme{background:linear-gradient(180deg,#121a14,#1c2a20 50%,#28392c)}

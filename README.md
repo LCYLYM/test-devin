@@ -812,6 +812,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `fugu` | `1` 河豚配色 |
 | `goral` | `1` 斑羚配色 |
 | `hartebeest` | `1` 狷羚配色 |
+| `iora` | `1` 黑翅雀鹎配色 |
+| `jerboa` | `1` 跳鼠配色 |
+| `katydid` | `1` 螽斯配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 
