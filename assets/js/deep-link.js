@@ -775,6 +775,21 @@
       }
     }
     if (params.get('noise') === '1') document.body.dataset.noise = '1';
+    if (params.get('grid') === '1') document.body.dataset.grid = '1';
+    var cornerP = params.get('corner');
+    if (cornerP) {
+      var cp = document.getElementById('cornerPet');
+      if (cp) { cp.textContent = cornerP.slice(0, 4); cp.hidden = false; }
+    }
+    if (params.get('tips') === '1') {
+      var tq = document.getElementById('quoteLine');
+      if (tq) {
+        var TIPS = ['按 t 轮换 12 套皮肤', '?zen=1 一键专注模式', '?fx=snow 飘雪特效', '?hourly=50 时薪直接换算', '?pomodoro=25,5 番茄钟', '?season=auto 季节特效', '?shift=9-18 自定义工时', '?kiosk=10 皮肤自动轮换', '?earn=500 目标倒计时', '?vs=奶茶@15 等价换算', '?lock=1 锁定输入', '?count=1 开场数字滚动'];
+        var ti = 0;
+        var tFill = function () { tq.textContent = '💡 ' + TIPS[ti++ % TIPS.length]; };
+        tq.hidden = false; tFill(); setInterval(tFill, 20000);
+      }
+    }
     if (params.get('zodiac') === '1') {
       var zb = document.getElementById('zodiacBadge');
       if (zb) {
@@ -1215,6 +1230,9 @@
       if (params.get('ddl')) u.searchParams.set('ddl', params.get('ddl'));
       if (params.get('ddlname')) u.searchParams.set('ddlname', params.get('ddlname'));
       if (params.get('noise') === '1') u.searchParams.set('noise', '1');
+      if (params.get('grid') === '1') u.searchParams.set('grid', '1');
+      if (params.get('corner')) u.searchParams.set('corner', params.get('corner'));
+      if (params.get('tips') === '1') u.searchParams.set('tips', '1');
       params.forEach(function (v, k) { if (k.indexOf('utm_') === 0 && v) u.searchParams.set(k, v.slice(0, 64)); });
       var text = u.toString();
       (navigator.clipboard ? navigator.clipboard.writeText(text) : Promise.reject())

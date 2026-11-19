@@ -142,6 +142,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `lock` | `1` 锁定月薪输入（挂屏/分享防改） |
 | `ddl` | `YYYY-MM-DD` 或 `MM-DD` 自定义截止倒计时（`ddlname=` 改名） |
 | `noise` | `1` 胶片颗粒滤镜 |
+| `grid` | `1` 蓝图网格背景 |
+| `corner` | emoji：右下角浮动小宠物 |
+| `tips` | `1` 页脚轮换显示隐藏玩法提示 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 
