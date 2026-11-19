@@ -545,6 +545,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `mystic` | `1` 神秘配色 |
 | `cascade` | `1` 瀑布配色 |
 | `sunrise` | `1` 日出配色 |
+| `sakura` | `1` 樱花配色 |
+| `granite` | `1` 花岗岩配色 |
+| `ember` | `1` 余烬配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 
