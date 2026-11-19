@@ -1745,6 +1745,7 @@
       if (inst3) {
         inst3.style.transition = 'transform .25s ease';
         document.addEventListener('mousemove', function (e) {
+          if (inst3.classList.contains('entrance')) inst3.classList.remove('entrance');
           var dx = (e.clientX / innerWidth - .5) * 6, dy = (e.clientY / innerHeight - .5) * -6;
           inst3.style.transform = 'perspective(900px) rotateY(' + dx + 'deg) rotateX(' + dy + 'deg)';
         });
