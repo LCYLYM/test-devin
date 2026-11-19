@@ -1075,3 +1075,10 @@ body[data-warm] .instrument{filter:sepia(.28) saturate(1.15) brightness(1.02)}
 body[data-breathe] .instrument{animation:breathePulse 5s ease-in-out infinite}
 @keyframes breathePulse{0%,100%{transform:scale(1)}50%{transform:scale(1.012)}}
 @media(prefers-reduced-motion:reduce){body[data-breathe] .instrument{animation:none}}
+.payday.hours{color:#fcd34d}
+.payday.charm{color:#bef264}
+body[data-prism] .instrument{position:relative}
+body[data-prism] .instrument::before{content:"";position:absolute;inset:-1px;border-radius:inherit;padding:1px;background:conic-gradient(from var(--prism-a,0deg),#f00,#ff0,#0f0,#0ff,#00f,#f0f,#f00);-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;pointer-events:none;animation:prismSpin 6s linear infinite}
+@property --prism-a{syntax:'<angle>';initial-value:0deg;inherits:false}
+@keyframes prismSpin{to{--prism-a:360deg}}
+@media(prefers-reduced-motion:reduce){body[data-prism] .instrument::before{animation:none}}

@@ -235,6 +235,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `uptime` | `1` 本页停留时长徽章 |
 | `tea` | `1` 下午茶时段提醒徽章 |
 | `breathe` | `1` 仪表呼吸缩放 |
+| `hours` | `1` 今日工时进度徽章 |
+| `charm` | `1` 每日幸运符徽章 |
+| `prism` | `1` 棱镜彩虹描边 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 

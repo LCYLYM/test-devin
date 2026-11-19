@@ -1228,6 +1228,37 @@
     if (params.get('breathe') === '1' && !(window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches)) {
       document.body.dataset.breathe = '1';
     }
+    if (params.get('hours') === '1') {
+      var hrb = document.getElementById('hoursBadge'), hrp = document.getElementById('hoursPct');
+      if (hrb && hrp) {
+        var hrUpd = function () {
+          var hrs = window.SalaryApp && window.SalaryApp.getState && window.SalaryApp.getState();
+          var sn3 = hrs && hrs.snapshot;
+          if (!sn3 || !sn3.daySalary) { hrb.hidden = true; return; }
+          hrp.textContent = Math.min(100, Math.round(sn3.todayEarned / sn3.daySalary * 100)) + '%';
+          hrb.hidden = false;
+        };
+        hrUpd();
+        setInterval(hrUpd, 30000);
+      }
+    }
+    if (params.get('charm') === '1') {
+      var chb = document.getElementById('charmBadge'), chi = document.getElementById('charmIcon'), chn = document.getElementById('charmName');
+      if (chb && chi && chn) {
+        var CHARMS = [['🍀','四叶草'],['🧧','红包'],['🪙','金币'],['🐱','招财猫'],['🔮','水晶球'],['🌟','幸运星'],['🧿','守护眼'],['🎋','许愿竹']];
+        var chs = window.SalaryApp && window.SalaryApp.getState && window.SalaryApp.getState();
+        var chk = (chs && chs.snapshot && chs.snapshot.dayKey) || new Date().toISOString().slice(0, 10);
+        var chh = 0;
+        for (var ci = 0; ci < chk.length; ci++) chh = (chh * 31 + chk.charCodeAt(ci)) % 997;
+        var pick = CHARMS[chh % CHARMS.length];
+        chi.textContent = pick[0];
+        chn.textContent = pick[1];
+        chb.hidden = false;
+      }
+    }
+    if (params.get('prism') === '1' && !(window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches)) {
+      document.body.dataset.prism = '1';
+    }
     if (params.get('hex') === '1') {
       var hxb = document.getElementById('hexBadge'), hxd = document.getElementById('hexDot'), hxv = document.getElementById('hexVal');
       if (hxb && hxd && hxv) {
@@ -1798,6 +1829,9 @@
       if (params.get('uptime') === '1') u.searchParams.set('uptime', '1');
       if (params.get('tea') === '1') u.searchParams.set('tea', '1');
       if (params.get('breathe') === '1') u.searchParams.set('breathe', '1');
+      if (params.get('hours') === '1') u.searchParams.set('hours', '1');
+      if (params.get('charm') === '1') u.searchParams.set('charm', '1');
+      if (params.get('prism') === '1') u.searchParams.set('prism', '1');
       if (params.get('rays') === '1') u.searchParams.set('rays', '1');
       if (params.get('flat') === '1') u.searchParams.set('flat', '1');
       var idl = params.get('idle'); if (idl) u.searchParams.set('idle', idl);
