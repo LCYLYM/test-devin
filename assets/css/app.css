@@ -2314,6 +2314,12 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .is-woodpecker .instrument{border-color:rgba(230,115,120,.4)}
 .is-kingfisher{background:linear-gradient(180deg,#0f1a1e 0%,#0a1215 100%)}
 .is-kingfisher .instrument{border-color:rgba(100,190,215,.4)}
+.is-macaw{background:linear-gradient(180deg,#1d1310 0%,#150d0a 100%)}
+.is-macaw .instrument{border-color:rgba(235,130,90,.4)}
+.is-cockatoo{background:linear-gradient(180deg,#1b1a12 0%,#13120c 100%)}
+.is-cockatoo .instrument{border-color:rgba(225,215,140,.4)}
+.is-albatross{background:linear-gradient(180deg,#14171c 0%,#0e1014 100%)}
+.is-albatross .instrument{border-color:rgba(160,175,190,.4)}
 .is-oatmeal{background:linear-gradient(180deg,#1d1912,#2f291e 50%,#433a2a)}
 .is-oatmeal .instrument{border-color:rgba(215,195,155,.4)}
 .is-thyme{background:linear-gradient(180deg,#121a14,#1c2a20 50%,#28392c)}
