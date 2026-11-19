@@ -66,7 +66,7 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `brand` | 自定义左上角品牌名，≤12 字符 |
 | `dir` | `down` 倒计时模式：显示距离目标还差多少 |
 | `size` | `0.4–2.5` 数字区缩放（电视/投屏用） |
-| `fx` | `snow` / `sakura` / `rain` 全屏氛围特效（配专注模式绝配） |
+| `fx` | `snow` / `sakura` / `rain` / `matrix` 全屏氛围特效（配专注模式绝配） |
 | `vibrate` | `1` 里程碑/达标时手机震动 |
 | `compact` | `0` 关闭 万/亿 大数缩写，始终显示完整数字 |
 | `ms` | `1` 显示"距下个里程碑还差多少"徽章 |
@@ -87,6 +87,10 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `speed` | 演示模式时间流速倍率 `1`–`200`（配 `?demo=`） |
 | `toast` | 打开时弹一条自定义提示，≤40 字（`?toast=欢迎老板`） |
 | `cn` | `1` 金额旁显示中文数字读法（一二三点四五） |
+| `glass` | `1` 毛玻璃面板（配 `?bgimg=` 绝配） |
+| `pomodoro` | 番茄钟 `?pomodoro=25` 或 `25,5`（搬砖/摸鱼轮换提醒） |
+
+`fx` 还可选 `matrix`（打工人字符雨）。
 
 彩蛋：页面里按 ↑↑↓↓←→←→BA 解锁暴富模式（KONAMI）。
 

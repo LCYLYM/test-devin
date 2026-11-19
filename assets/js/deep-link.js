@@ -269,6 +269,31 @@
     if (params.get('compact') === '0') window.__noCompact = true;
     if (params.get('vibrate') === '1') window.__vibrate = true;
     var fxParam = params.get('fx');
+    if (fxParam === 'matrix' && !(window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches)) {
+      var mc = document.createElement('canvas');
+      mc.style.cssText = 'position:fixed;inset:0;width:100%;height:100%;pointer-events:none;opacity:.5';
+      document.body.prepend(mc);
+      var mctx = mc.getContext('2d');
+      var GLYPHS = '薪动打工人0123456789¥$暴富';
+      var mcols = 0, mdrops = [];
+      function mResize() {
+        mc.width = innerWidth; mc.height = innerHeight;
+        mcols = Math.floor(innerWidth / 16); mdrops = [];
+        for (var i = 0; i < mcols; i++) mdrops.push(Math.random() * innerHeight / 16);
+        mctx.fillStyle = '#0d1117'; mctx.fillRect(0, 0, mc.width, mc.height);
+      }
+      mResize(); window.addEventListener('resize', mResize);
+      (function mFrame() {
+        mctx.fillStyle = 'rgba(13,17,23,.1)'; mctx.fillRect(0, 0, mc.width, mc.height);
+        mctx.font = '14px monospace'; mctx.fillStyle = '#3fb950';
+        for (var i = 0; i < mcols; i++) {
+          mctx.fillText(GLYPHS[Math.floor(Math.random() * GLYPHS.length)], i * 16, mdrops[i] * 16);
+          if (mdrops[i] * 16 > innerHeight && Math.random() > .975) mdrops[i] = 0;
+          mdrops[i]++;
+        }
+        requestAnimationFrame(mFrame);
+      })();
+    }
     if (['snow', 'sakura', 'rain'].indexOf(fxParam) >= 0 && !(window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches)) {
       var fxc = document.createElement('canvas');
       fxc.style.cssText = 'position:fixed;inset:0;width:100%;height:100%;pointer-events:none;opacity:.65';
@@ -327,6 +352,29 @@
     var toastParam = params.get('toast');
     if (toastParam) setTimeout(function () { if (window.SalaryApp && window.SalaryApp.toast) window.SalaryApp.toast(toastParam.slice(0, 40)); }, 1200);
     if (params.get('cn') === '1') window.__cnAmount = true;
+    if (params.get('glass') === '1') document.body.dataset.glass = '1';
+    var pomoMatch = /^(\d{1,3})(?:[,.\-](\d{1,2}))?$/.exec(params.get('pomodoro') || '');
+    if (pomoMatch) {
+      var pWork = Math.min(180, +pomoMatch[1]), pBreak = pomoMatch[2] ? Math.min(60, +pomoMatch[2]) : 5;
+      var pBadge = document.getElementById('pomoBadge');
+      if (pBadge && pWork > 0) {
+        pBadge.hidden = false;
+        var pPhase = 'work', pEnd = Date.now() + pWork * 60000;
+        setInterval(function () {
+          var left = Math.max(0, Math.round((pEnd - Date.now()) / 1000));
+          if (left === 0) {
+            pPhase = pPhase === 'work' ? 'break' : 'work';
+            pEnd = Date.now() + (pPhase === 'work' ? pWork : pBreak) * 60000;
+            left = Math.round((pEnd - Date.now()) / 1000);
+            if (window.SalaryApp && window.SalaryApp.toast) window.SalaryApp.toast(pPhase === 'work' ? '🍅 休息结束，继续搬砖' : '🍅 摸鱼时间到');
+            if (window.__vibrate && navigator.vibrate) navigator.vibrate(60);
+          }
+          pBadge.classList.toggle('is-break', pPhase === 'break');
+          document.getElementById('pomoLabel').textContent = pPhase === 'work' ? '搬砖' : '摸鱼';
+          document.getElementById('pomoLeft').textContent = Math.floor(left / 60) + ':' + String(left % 60).padStart(2, '0');
+        }, 1000);
+      }
+    }
     var spdParam = parseInt(params.get('speed') || '', 10);
     if (spdParam >= 1 && spdParam <= 200) window.__demoSpeed = spdParam;
     if (params.get('year') === '1') {
@@ -659,6 +707,8 @@
       var spp = params.get('speed'); if (spp) u.searchParams.set('speed', spp);
       var tsp = params.get('toast'); if (tsp) u.searchParams.set('toast', tsp.slice(0, 40));
       if (window.__cnAmount) u.searchParams.set('cn', '1');
+      if (document.body.dataset.glass === '1') u.searchParams.set('glass', '1');
+      var pop = params.get('pomodoro'); if (pop) u.searchParams.set('pomodoro', pop);
       var text = u.toString();
       (navigator.clipboard ? navigator.clipboard.writeText(text) : Promise.reject())
         .then(function () { btn.textContent = '已复制 ✓'; setTimeout(function(){ btn.textContent='复制当前链接'; }, 1500); })
