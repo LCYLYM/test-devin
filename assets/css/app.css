@@ -2320,6 +2320,12 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .is-cockatoo .instrument{border-color:rgba(225,215,140,.4)}
 .is-albatross{background:linear-gradient(180deg,#14171c 0%,#0e1014 100%)}
 .is-albatross .instrument{border-color:rgba(160,175,190,.4)}
+.is-seagull{background:linear-gradient(180deg,#151b20 0%,#0f1317 100%)}
+.is-seagull .instrument{border-color:rgba(155,195,220,.4)}
+.is-oriole{background:linear-gradient(180deg,#1e1a10 0%,#16130b 100%)}
+.is-oriole .instrument{border-color:rgba(240,200,90,.4)}
+.is-nightingale{background:linear-gradient(180deg,#181618 0%,#110f11 100%)}
+.is-nightingale .instrument{border-color:rgba(190,160,185,.4)}
 .is-oatmeal{background:linear-gradient(180deg,#1d1912,#2f291e 50%,#433a2a)}
 .is-oatmeal .instrument{border-color:rgba(215,195,155,.4)}
 .is-thyme{background:linear-gradient(180deg,#121a14,#1c2a20 50%,#28392c)}

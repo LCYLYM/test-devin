@@ -1061,6 +1061,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `macaw` | `1` 金刚鹦鹉配色 |
 | `cockatoo` | `1` 葵花鹦鹉配色 |
 | `albatross` | `1` 信天翁配色 |
+| `seagull` | `1` 海鸥配色 |
+| `oriole` | `1` 黄鹂配色 |
+| `nightingale` | `1` 夜莺配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 
