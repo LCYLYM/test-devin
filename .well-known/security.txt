@@ -1,0 +1,3 @@
+Contact: https://github.com/LCYLYM/test-devin/issues
+Preferred-Languages: zh, en
+Canonical: https://xd.syal.site/.well-known/security.txt
