@@ -73,11 +73,16 @@
   /* "Copy link" inside the share dialog: URL carrying current salary + template. */
   function privateHost(host) {
     host = String(host).toLowerCase().replace(/^\[|\]$/g, '');
-    return host === 'localhost' || host === '::1' || host === '0.0.0.0' || !host.includes('.')
-      || /\.(localhost|local|internal|test|invalid)$/.test(host)
-      || /^(127|10)\./.test(host) || /^192\.168\./.test(host)
-      || /^172\.(1[6-9]|2\d|3[01])\./.test(host) || /^169\.254\./.test(host)
-      || /^(fc|fd|fe80):/.test(host);
+    if (host.includes(':')) return host === '::1' || /^(fc|fd|fe80)/.test(host);
+    var ip = host.match(/^(\d+)\.(\d+)\.(\d+)\.(\d+)$/);
+    if (ip) {
+      var a = +ip[1], b = +ip[2];
+      return a === 0 || a === 10 || a === 127
+        || (a === 169 && b === 254) || (a === 172 && b >= 16 && b <= 31)
+        || (a === 192 && b === 168);
+    }
+    return host === 'localhost' || !host.includes('.')
+      || /\.(localhost|local|internal|test|invalid)$/.test(host);
   }
   function publicBase(raw) {
     try {
