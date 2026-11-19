@@ -809,6 +809,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `bongo` | `1` 紫羚配色 |
 | `civet` | `1` 灵猫配色 |
 | `dugong` | `1` 儒艮配色 |
+| `fugu` | `1` 河豚配色 |
+| `goral` | `1` 斑羚配色 |
+| `hartebeest` | `1` 狷羚配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 

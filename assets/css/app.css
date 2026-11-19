@@ -1816,6 +1816,12 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .is-civet .instrument{border-color:rgba(190,170,130,.4)}
 .is-dugong{background:linear-gradient(180deg,#101a1d 0%,#081113 100%)}
 .is-dugong .instrument{border-color:rgba(140,190,200,.4)}
+.is-fugu{background:linear-gradient(180deg,#181a12 0%,#0f110a 100%)}
+.is-fugu .instrument{border-color:rgba(200,210,140,.4)}
+.is-goral{background:linear-gradient(180deg,#1a1410 0%,#100c08 100%)}
+.is-goral .instrument{border-color:rgba(190,140,100,.4)}
+.is-hartebeest{background:linear-gradient(180deg,#1c140f 0%,#120c08 100%)}
+.is-hartebeest .instrument{border-color:rgba(210,150,95,.4)}
 .is-oatmeal{background:linear-gradient(180deg,#1d1912,#2f291e 50%,#433a2a)}
 .is-oatmeal .instrument{border-color:rgba(215,195,155,.4)}
 .is-thyme{background:linear-gradient(180deg,#121a14,#1c2a20 50%,#28392c)}
