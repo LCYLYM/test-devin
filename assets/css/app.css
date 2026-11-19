@@ -1714,6 +1714,12 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .is-quetzal .instrument{border-color:rgba(60,200,140,.4)}
 .is-springbok{background:linear-gradient(180deg,#1c150f 0%,#120d08 100%)}
 .is-springbok .instrument{border-color:rgba(210,165,105,.4)}
+.is-takin{background:linear-gradient(180deg,#1d160e 0%,#120e08 100%)}
+.is-takin .instrument{border-color:rgba(210,170,95,.4)}
+.is-uakari{background:linear-gradient(180deg,#1f1110 0%,#130a09 100%)}
+.is-uakari .instrument{border-color:rgba(220,100,80,.4)}
+.is-vaquita{background:linear-gradient(180deg,#11181d 0%,#0a1014 100%)}
+.is-vaquita .instrument{border-color:rgba(150,190,210,.4)}
 .is-oatmeal{background:linear-gradient(180deg,#1d1912,#2f291e 50%,#433a2a)}
 .is-oatmeal .instrument{border-color:rgba(215,195,155,.4)}
 .is-thyme{background:linear-gradient(180deg,#121a14,#1c2a20 50%,#28392c)}

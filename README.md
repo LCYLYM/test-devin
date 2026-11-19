@@ -758,6 +758,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `puffin` | `1` 海鹦配色 |
 | `quetzal` | `1` 绿咬鹃配色 |
 | `springbok` | `1` 跳羚配色 |
+| `takin` | `1` 羚牛配色 |
+| `uakari` | `1` 秃猴配色 |
+| `vaquita` | `1` 小头鼠海豚配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 
