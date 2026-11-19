@@ -1768,6 +1768,12 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .is-bulbul .instrument{border-color:rgba(150,185,95,.4)}
 .is-cuscus{background:linear-gradient(180deg,#1a140f 0%,#100c08 100%)}
 .is-cuscus .instrument{border-color:rgba(190,145,100,.4)}
+.is-duiker{background:linear-gradient(180deg,#1b1611 0%,#110d09 100%)}
+.is-duiker .instrument{border-color:rgba(190,160,120,.4)}
+.is-elepaio{background:linear-gradient(180deg,#101a14 0%,#08110c 100%)}
+.is-elepaio .instrument{border-color:rgba(110,185,140,.4)}
+.is-fulmar{background:linear-gradient(180deg,#12181d 0%,#0a0f13 100%)}
+.is-fulmar .instrument{border-color:rgba(155,185,205,.4)}
 .is-oatmeal{background:linear-gradient(180deg,#1d1912,#2f291e 50%,#433a2a)}
 .is-oatmeal .instrument{border-color:rgba(215,195,155,.4)}
 .is-thyme{background:linear-gradient(180deg,#121a14,#1c2a20 50%,#28392c)}

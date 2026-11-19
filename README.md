@@ -785,6 +785,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `addax` | `1` 旋角羚配色 |
 | `bulbul` | `1` 鹎配色 |
 | `cuscus` | `1` 袋貂配色 |
+| `duiker` | `1` 小羚羊配色 |
+| `elepaio` | `1` 夏威夷鹟配色 |
+| `fulmar` | `1` 管鼻藿配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 

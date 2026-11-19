@@ -3669,6 +3669,9 @@
     if (params.get('addax') === '1') { document.body.classList.add('is-addax'); }
     if (params.get('bulbul') === '1') { document.body.classList.add('is-bulbul'); }
     if (params.get('cuscus') === '1') { document.body.classList.add('is-cuscus'); }
+    if (params.get('duiker') === '1') { document.body.classList.add('is-duiker'); }
+    if (params.get('elepaio') === '1') { document.body.classList.add('is-elepaio'); }
+    if (params.get('fulmar') === '1') { document.body.classList.add('is-fulmar'); }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -4696,6 +4699,9 @@
         if (params.get('addax') === '1') u.searchParams.set('addax', '1');
         if (params.get('bulbul') === '1') u.searchParams.set('bulbul', '1');
         if (params.get('cuscus') === '1') u.searchParams.set('cuscus', '1');
+        if (params.get('duiker') === '1') u.searchParams.set('duiker', '1');
+        if (params.get('elepaio') === '1') u.searchParams.set('elepaio', '1');
+        if (params.get('fulmar') === '1') u.searchParams.set('fulmar', '1');
       if (params.get('tile') === '1') u.searchParams.set('tile', '1');
       if (params.get('outline') === '1') u.searchParams.set('outline', '1');
       if (params.get('stripe') === '1') u.searchParams.set('stripe', '1');
