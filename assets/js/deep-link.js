@@ -55,6 +55,26 @@
     if (params.get('sound') === '1') app.setPreference('sound', true);
 
     // ?accent=%234de3ff — override the theme accent color (shareable).
+    var payday = parseInt(params.get('payday'), 10);
+    if (payday >= 1 && payday <= 31) {
+      var now = new Date(), year = now.getFullYear(), month = now.getMonth();
+      var last = new Date(year, month + 1, 0).getDate();
+      var target = new Date(year, month, Math.min(payday, last));
+      if (now > target) {
+        var last2 = new Date(year, month + 2, 0).getDate();
+        target = new Date(year, month + 1, Math.min(payday, last2));
+      }
+      var days = Math.round((target - new Date(year, month, now.getDate())) / 864e5);
+      var badge = document.getElementById('paydayBadge');
+      if (badge) {
+        badge.hidden = false;
+        var lbl = document.getElementById('paydayLabel');
+        if (lbl) lbl.textContent = days === 0 ? '今天发薪' : '距发薪';
+        var dd = document.getElementById('paydayDays');
+        if (dd) dd.textContent = days === 0 ? '🎉' : String(days);
+      }
+    }
+
     var accent = params.get('accent');
     if (accent && /^#?([0-9a-fA-F]{3,4}|[0-9a-fA-F]{6}|[0-9a-fA-F]{8})$/.test(accent)) {
       var v = accent[0] === '#' ? accent : '#' + accent;
@@ -193,6 +213,8 @@
       if (prefs && prefs.period && prefs.period !== 'day') u.searchParams.set('period', prefs.period);
       var ac = params.get('accent');
       if (ac && /^#?([0-9a-fA-F]{3,4}|[0-9a-fA-F]{6}|[0-9a-fA-F]{8})$/.test(ac)) u.searchParams.set('accent', ac);
+      var pd = params.get('payday');
+      if (pd && /^[0-9]{1,2}$/.test(pd)) u.searchParams.set('payday', pd);
       var text = u.toString();
       (navigator.clipboard ? navigator.clipboard.writeText(text) : Promise.reject())
         .then(function () { btn.textContent = '已复制 ✓'; setTimeout(function(){ btn.textContent='复制当前链接'; }, 1500); })
