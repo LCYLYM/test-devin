@@ -1580,6 +1580,49 @@
         kpUpd(); setInterval(kpUpd, 5000);
       }
     }
+    if (params.get('sprint') === '1') {
+      var spb = document.getElementById('sprintBadge'), spl = document.getElementById('sprintLeft');
+      if (spb && spl) {
+        var spUpd = function () {
+          var st = window.SalaryApp && window.SalaryApp.getState && window.SalaryApp.getState();
+          var sn = st && st.snapshot;
+          if (sn && sn.isWorkday && sn.hoursPerDay > 0 && sn.elapsedSecondsToday != null) {
+            var left = sn.hoursPerDay * 3600 - sn.elapsedSecondsToday;
+            if (left > 0 && left <= 1800) {
+              var mm = Math.ceil(left / 60);
+              spl.textContent = mm + '分钟';
+              spb.hidden = false;
+            } else { spb.hidden = true; }
+          }
+        };
+        spUpd(); setInterval(spUpd, 15000);
+      }
+    }
+    if (params.get('ovt') === '1') {
+      var ovb2 = document.getElementById('ovtBadge'), ovv = document.getElementById('ovtVal');
+      if (ovb2 && ovv) {
+        var ovUpd = function () {
+          var st = window.SalaryApp && window.SalaryApp.getState && window.SalaryApp.getState();
+          var sn = st && st.snapshot;
+          if (sn && sn.monthOvertimeHours != null) {
+            ovv.textContent = sn.monthOvertimeHours.toFixed(1) + 'h';
+            ovb2.hidden = false;
+          }
+        };
+        ovUpd(); setInterval(ovUpd, 10000);
+      }
+    }
+    if (params.get('clock2') === '1') {
+      var c2b = document.getElementById('clock2Badge'), c2v = document.getElementById('clock2Val');
+      if (c2b && c2v) {
+        var c2Upd = function () {
+          var n = new Date();
+          c2v.textContent = String(n.getHours()).padStart(2, '0') + ':' + String(n.getMinutes()).padStart(2, '0');
+          c2b.hidden = false;
+        };
+        c2Upd(); setInterval(c2Upd, 5000);
+      }
+    }
     if (params.get('veil') === '1') {
       var vl = document.createElement('div');
       vl.className = 'veil-layer';
@@ -2233,6 +2276,9 @@
       if (params.get('wfh') === '1') u.searchParams.set('wfh', '1');
       if (params.get('kpi') === '1') u.searchParams.set('kpi', '1');
       if (params.get('veil') === '1') u.searchParams.set('veil', '1');
+      if (params.get('sprint') === '1') u.searchParams.set('sprint', '1');
+      if (params.get('ovt') === '1') u.searchParams.set('ovt', '1');
+      if (params.get('clock2') === '1') u.searchParams.set('clock2', '1');
       if (params.get('rays') === '1') u.searchParams.set('rays', '1');
       if (params.get('flat') === '1') u.searchParams.set('flat', '1');
       var idl = params.get('idle'); if (idl) u.searchParams.set('idle', idl);

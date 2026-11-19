@@ -274,6 +274,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `wfh` | `1` 居家办公徽章 |
 | `kpi` | `1` 今日 KPI 达成率徽章 |
 | `veil` | `1` 柔纱滤镜（背景轻模糊+饱和） |
+| `sprint` | `1` 下班冲刺徽章（最后 30 分钟出现） |
+| `ovt` | `1` 本月加班时长徽章 |
+| `clock2` | `1` 当前时间徽章 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 
