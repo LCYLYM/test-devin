@@ -2146,6 +2146,12 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .is-taipan .instrument{border-color:rgba(220,150,90,.4)}
 .is-krait{background:linear-gradient(180deg,#14141c 0%,#0e0e14 100%)}
 .is-krait .instrument{border-color:rgba(160,160,210,.4)}
+.is-skink{background:linear-gradient(180deg,#181410 0%,#110e0a 100%)}
+.is-skink .instrument{border-color:rgba(215,160,100,.4)}
+.is-agama{background:linear-gradient(180deg,#161320 0%,#0f0d16 100%)}
+.is-agama .instrument{border-color:rgba(170,150,220,.4)}
+.is-basilisk{background:linear-gradient(180deg,#0f1a18 0%,#0a1210 100%)}
+.is-basilisk .instrument{border-color:rgba(90,210,170,.4)}
 .is-oatmeal{background:linear-gradient(180deg,#1d1912,#2f291e 50%,#433a2a)}
 .is-oatmeal .instrument{border-color:rgba(215,195,155,.4)}
 .is-thyme{background:linear-gradient(180deg,#121a14,#1c2a20 50%,#28392c)}

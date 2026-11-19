@@ -974,6 +974,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `anaconda` | `1` 森蚺配色 |
 | `taipan` | `1` 太攀蛇配色 |
 | `krait` | `1` 环蛇配色 |
+| `skink` | `1` 石龙子配色 |
+| `agama` | `1` 飞蜥配色 |
+| `basilisk` | `1` 双冠蜥配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 
