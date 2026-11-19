@@ -1143,6 +1143,13 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .payday.chil{color:#67e8f9}
 .payday.lvl{color:#fbbf24}
 .payday.sum{color:#34d399}
+.payday.born{color:#f9a8d4}
+@keyframes radarSweep{to{transform:rotate(360deg)}}
+.radar-layer{position:absolute;inset:0;pointer-events:none;overflow:hidden;border-radius:inherit;z-index:4}
+.radar-layer::before{content:'';position:absolute;top:50%;left:50%;width:150%;height:150%;transform-origin:0 0;background:conic-gradient(from 0deg,rgba(56,189,248,.16),transparent 60deg);animation:radarSweep 4s linear infinite}
+@media (prefers-reduced-motion:reduce){.radar-layer{display:none}}
+.is-focus .radar-layer{display:none}
+.is-hatch{background-image:repeating-linear-gradient(45deg,rgba(148,163,184,.06) 0 2px,transparent 2px 12px)}
 .is-holo .instrument-card{box-shadow:-2px 0 0 rgba(248,113,113,.35),2px 0 0 rgba(56,189,248,.35)}
 .is-dots{background-image:radial-gradient(rgba(148,163,184,.18) 1px,transparent 1px);background-size:22px 22px}
 .sky-dawn{background-image:linear-gradient(180deg,rgba(251,146,60,.14),rgba(244,114,182,.1) 55%,transparent)}

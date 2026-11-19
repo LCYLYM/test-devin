@@ -2085,6 +2085,24 @@
     if (params.get('holo') === '1') {
       document.body.classList.add('is-holo');
     }
+    var bornParam = parseInt(params.get('born'), 10);
+    if (bornParam > 1950 && bornParam <= new Date().getFullYear()) {
+      var brn = document.getElementById('bornBadge'), brv = document.getElementById('bornVal');
+      if (brn && brv) {
+        brv.textContent = (new Date().getFullYear() - bornParam) + ' 年';
+        brn.hidden = false;
+      }
+    }
+    if (params.get('radar') === '1' && !(window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches)) {
+      var rdr = document.createElement('div');
+      rdr.className = 'radar-layer';
+      rdr.setAttribute('aria-hidden', 'true');
+      var inst6 = document.querySelector('.instrument-card, .instrument');
+      (inst6 || document.body).appendChild(rdr);
+    }
+    if (params.get('hatch') === '1') {
+      document.body.classList.add('is-hatch');
+    }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -2653,6 +2671,9 @@
       if (params.get('sum') === '1') u.searchParams.set('sum', '1');
       if (params.get('emo') !== null) u.searchParams.set('emo', params.get('emo'));
       if (params.get('holo') === '1') u.searchParams.set('holo', '1');
+      if (params.get('born') !== null) u.searchParams.set('born', params.get('born'));
+      if (params.get('radar') === '1') u.searchParams.set('radar', '1');
+      if (params.get('hatch') === '1') u.searchParams.set('hatch', '1');
       if (params.get('tile') === '1') u.searchParams.set('tile', '1');
       if (params.get('outline') === '1') u.searchParams.set('outline', '1');
       if (params.get('stripe') === '1') u.searchParams.set('stripe', '1');

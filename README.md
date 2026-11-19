@@ -326,6 +326,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `sum` | `1` 本月已入账徽章 |
 | `emo` | `表情` 自定义状态表情 |
 | `holo` | `1` 全息色差边框 |
+| `born` | `YYYY` 工龄徽章 |
+| `radar` | `1` 雷达扫光 |
+| `hatch` | `1` 斜纹背景 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 
