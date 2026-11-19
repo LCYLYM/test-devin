@@ -1930,6 +1930,12 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .is-guppy .instrument{border-color:rgba(220,130,165,.4)}
 .is-loach{background:linear-gradient(180deg,#191510 0%,#100e09 100%)}
 .is-loach .instrument{border-color:rgba(185,160,110,.4)}
+.is-molly{background:linear-gradient(180deg,#141420 0%,#0d0d15 100%)}
+.is-molly .instrument{border-color:rgba(150,150,215,.4)}
+.is-perch{background:linear-gradient(180deg,#131a0f 0%,#0c1209 100%)}
+.is-perch .instrument{border-color:rgba(140,190,100,.4)}
+.is-rudd{background:linear-gradient(180deg,#1e1310 0%,#140c09 100%)}
+.is-rudd .instrument{border-color:rgba(225,140,105,.4)}
 .is-oatmeal{background:linear-gradient(180deg,#1d1912,#2f291e 50%,#433a2a)}
 .is-oatmeal .instrument{border-color:rgba(215,195,155,.4)}
 .is-thyme{background:linear-gradient(180deg,#121a14,#1c2a20 50%,#28392c)}

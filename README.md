@@ -866,6 +866,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `cichlid` | `1` 慈鲷配色 |
 | `guppy` | `1` 孔雀鱼配色 |
 | `loach` | `1` 鳅配色 |
+| `molly` | `1` 玛丽鱼配色 |
+| `perch` | `1` 河鲈配色 |
+| `rudd` | `1` 红眼鱼配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 
