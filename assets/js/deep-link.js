@@ -71,6 +71,21 @@
   });
 
   /* "Copy link" inside the share dialog: URL carrying current salary + template. */
+  function privateHost(host) {
+    host = String(host).toLowerCase().replace(/^\[|\]$/g, '');
+    return host === 'localhost' || host === '::1' || host === '0.0.0.0' || !host.includes('.')
+      || /\.(localhost|local|internal|test|invalid)$/.test(host)
+      || /^(127|10)\./.test(host) || /^192\.168\./.test(host)
+      || /^172\.(1[6-9]|2\d|3[01])\./.test(host) || /^169\.254\./.test(host)
+      || /^(fc|fd|fe80):/.test(host);
+  }
+  function publicBase(raw) {
+    try {
+      var u = new URL(String(raw || '').trim());
+      if (!['https:', 'http:'].includes(u.protocol) || u.username || u.password || privateHost(u.hostname)) return null;
+      return u.origin + u.pathname;
+    } catch (e) { return null; }
+  }
   function wireCopyLink() {
     var field = document.getElementById('shareLinkField');
     if (!field || field.dataset.copyWired) return;
@@ -81,14 +96,11 @@
     btn.textContent = '复制当前链接';
     btn.addEventListener('click', function () {
       var app = window.SalaryApp;
-      var base = /^https?:/.test(location.origin) ? location.origin + location.pathname : '';
-      if (!base) {
-        var urlField = document.getElementById('shareUrl');
-        base = urlField && /^https?:\/\//.test(urlField.value) ? urlField.value : '';
-      }
-      if (!base) { btn.textContent = '需要部署后的网址'; setTimeout(function(){ btn.textContent='复制当前链接'; }, 1800); return; }
-      var u;
-      try { u = new URL(base); } catch (err) { btn.textContent = '链接无效'; setTimeout(function(){ btn.textContent='复制当前链接'; }, 1800); return; }
+      // Mirror app.js publicUrl(): public http(s), no credentials, no private hosts,
+      // and origin+pathname only so pasted share links don't leak their own params.
+      var base = publicBase(location.href) || publicBase((document.getElementById('shareUrl') || {}).value);
+      if (!base) { btn.textContent = '需要公开部署的网址'; setTimeout(function(){ btn.textContent='复制当前链接'; }, 1800); return; }
+      var u = new URL(base);
       var state = app && app.getState();
       var salary = state && state.config && state.config.salary;
       var template = state && state.preferences && state.preferences.template;
