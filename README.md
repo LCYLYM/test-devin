@@ -371,6 +371,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `blip` | `1` 入账提示点 |
 | `crisp` | `1` 高清锐化 |
 | `matte` | `1` 哑光模式 |
+| `orbit` | `1` 环绕粒子 |
+| `type` | `1` 打字机副标题 |
+| `laser` | `1` 激光底边 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 

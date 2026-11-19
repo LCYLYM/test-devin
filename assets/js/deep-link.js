@@ -2373,6 +2373,30 @@
     if (params.get('matte') === '1') {
       document.body.classList.add('is-matte');
     }
+    if (params.get('orbit') === '1') {
+      document.body.classList.add('is-orbit');
+      var oEl = document.createElement('div');
+      oEl.className = 'orbit-ring';
+      oEl.setAttribute('aria-hidden', 'true');
+      var oHost = document.querySelector('.instrument');
+      if (oHost) oHost.appendChild(oEl);
+    }
+    if (params.get('type') === '1') {
+      var tEl = document.getElementById('incomeCaption');
+      if (tEl && tEl.textContent) {
+        var tFull = tEl.textContent;
+        var tI = 0;
+        tEl.textContent = '';
+        var tTimer = setInterval(function () {
+          tI++;
+          tEl.textContent = tFull.slice(0, tI);
+          if (tI >= tFull.length) clearInterval(tTimer);
+        }, 60);
+      }
+    }
+    if (params.get('laser') === '1') {
+      document.body.classList.add('is-laser');
+    }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -2986,6 +3010,9 @@
       if (params.get('blip') === '1') u.searchParams.set('blip', '1');
       if (params.get('crisp') === '1') u.searchParams.set('crisp', '1');
       if (params.get('matte') === '1') u.searchParams.set('matte', '1');
+      if (params.get('orbit') === '1') u.searchParams.set('orbit', '1');
+      if (params.get('type') === '1') u.searchParams.set('type', '1');
+      if (params.get('laser') === '1') u.searchParams.set('laser', '1');
       if (params.get('tile') === '1') u.searchParams.set('tile', '1');
       if (params.get('outline') === '1') u.searchParams.set('outline', '1');
       if (params.get('stripe') === '1') u.searchParams.set('stripe', '1');

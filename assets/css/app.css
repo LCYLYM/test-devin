@@ -1173,6 +1173,13 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 #amountArea{position:relative}
 @media (prefers-reduced-motion:reduce){.blip-pop{animation:none}}
 .is-focus .blip-dot{display:none}
+.orbit-ring{position:absolute;top:50%;left:50%;width:70%;aspect-ratio:1;transform:translate(-50%,-50%);border-radius:50%;pointer-events:none}
+.orbit-ring::before{content:"";position:absolute;top:-3px;left:50%;width:7px;height:7px;border-radius:50%;background:var(--accent,#5eead4);box-shadow:0 0 8px var(--accent,#5eead4);animation:orbitSpin 6s linear infinite;transform-origin:0 calc(35% + 3px)}
+@keyframes orbitSpin{to{transform:rotate(360deg)}}
+.is-laser .instrument::after{content:"";position:absolute;left:8%;right:8%;bottom:6px;height:2px;background:linear-gradient(90deg,transparent,var(--accent,#5eead4),transparent);animation:laserGlow 2.4s ease-in-out infinite alternate;pointer-events:none}
+@keyframes laserGlow{from{opacity:.35}to{opacity:1}}
+@media (prefers-reduced-motion:reduce){.orbit-ring,.is-laser .instrument::after{display:none}}
+.is-focus .orbit-ring,.is-focus .is-laser .instrument::after{display:none}
 @keyframes hueSpin{to{filter:hue-rotate(360deg)}}
 .is-hue .instrument{animation:hueSpin 12s linear infinite}
 @media (prefers-reduced-motion:reduce){.is-hue .instrument{animation:none}}
