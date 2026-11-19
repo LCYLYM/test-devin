@@ -1870,6 +1870,12 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .is-limpet .instrument{border-color:rgba(165,175,185,.4)}
 .is-mudfish{background:linear-gradient(180deg,#1a1510 0%,#100d08 100%)}
 .is-mudfish .instrument{border-color:rgba(180,155,110,.4)}
+.is-potoroo{background:linear-gradient(180deg,#1c150e 0%,#120d07 100%)}
+.is-potoroo .instrument{border-color:rgba(200,160,105,.4)}
+.is-quail{background:linear-gradient(180deg,#16131a 0%,#0e0c11 100%)}
+.is-quail .instrument{border-color:rgba(170,150,185,.4)}
+.is-ratel{background:linear-gradient(180deg,#131416 0%,#0b0c0e 100%)}
+.is-ratel .instrument{border-color:rgba(190,190,195,.4)}
 .is-oatmeal{background:linear-gradient(180deg,#1d1912,#2f291e 50%,#433a2a)}
 .is-oatmeal .instrument{border-color:rgba(215,195,155,.4)}
 .is-thyme{background:linear-gradient(180deg,#121a14,#1c2a20 50%,#28392c)}

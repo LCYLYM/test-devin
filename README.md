@@ -836,6 +836,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `kakariki` | `1` 红额鹦鹉配色 |
 | `limpet` | `1` 帽贝配色 |
 | `mudfish` | `1` 泥鳅配色 |
+| `potoroo` | `1` 草原袋鼠配色 |
+| `quail` | `1` 鹌鹑配色 |
+| `ratel` | `1` 蜜獾配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 
