@@ -6,3 +6,5 @@ Location: Earth
 /* TECH */
 Stack: vanilla HTML/CSS/JS, zero dependencies, zero tracking
 Deployment: static files only
+Built: 2026-11 with Devin
+Skins: pig (default), charge, meter, pixel, neon, mono, paper

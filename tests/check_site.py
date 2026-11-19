@@ -22,6 +22,25 @@ for snippet in ['<title>', 'canonical', 'description', 'application/ld+json']:
     if snippet not in html:
         missing.append('index.html missing ' + snippet)
 
+import json
+manifest = json.load(open(os.path.join(ROOT, 'site.webmanifest'), encoding='utf-8'))
+for sc in manifest.get('shortcuts', []):
+    if 'url' not in sc or 'name' not in sc:
+        missing.append('manifest shortcut missing name/url')
+for ic in manifest.get('icons', []):
+    ipath = os.path.join(ROOT, ic['src'].lstrip('./'))
+    if not os.path.exists(ipath):
+        missing.append('manifest icon ' + ic['src'])
+
+buttons = set(re.findall(r'data-template="(\w+)"', html))
+js = open(os.path.join(ROOT, 'assets/js/app.js'), encoding='utf-8').read()
+valid = re.search(r"\['charge','meter','pixel','pig','neon','mono','paper'\]", js)
+if not valid:
+    missing.append('app.js template whitelist missing a skin')
+extra = buttons - {'charge','meter','pixel','pig','neon','mono','paper'}
+if extra:
+    missing.append('template buttons not in JS whitelist: ' + ','.join(sorted(extra)))
+
 if missing:
     print('SMOKE CHECK FAILED:')
     for m in missing:

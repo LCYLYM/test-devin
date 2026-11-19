@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.2.0] - 2026-11-19
+
+### Added
+- Skins: 霓虹 neon, 极简 mono, 纸墨 paper (light); default template is now 存钱罐 pig
+- t key cycles skins; ?skin= alias; share-intent links (X / 微博 / Telegram) in share dialog
+- SW: stale-entry pruning; segment-bars aria-label; apple-web-app-title, format-detection metas
+- check_site.py: manifest JSON + template-button/JS-whitelist consistency checks
+- FAQ: skins + PWA entries (HTML + JSON-LD)
+
 ## [1.1.0] - 2026-11-19
 
 ### Added
