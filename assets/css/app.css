@@ -1279,6 +1279,12 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .is-mauve .instrument{border-color:rgba(240,171,252,.32)}
 .is-pine{background:linear-gradient(180deg,#0e1c16,#142a1e)}
 .is-pine .instrument{border-color:rgba(52,211,153,.35)}
+.is-bronze{background:linear-gradient(180deg,#1f1810,#2a2114)}
+.is-bronze .instrument{border-color:rgba(217,155,78,.45)}
+.is-fjord{background:linear-gradient(180deg,#0d1e24,#112a34)}
+.is-fjord .instrument{border-color:rgba(103,232,249,.38)}
+.is-blush{background:linear-gradient(180deg,#251419,#301a21)}
+.is-blush .instrument{border-color:rgba(253,164,175,.4)}
 @keyframes hueSpin{to{filter:hue-rotate(360deg)}}
 .is-hue .instrument{animation:hueSpin 12s linear infinite}
 @media (prefers-reduced-motion:reduce){.is-hue .instrument{animation:none}}

@@ -425,6 +425,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `cyber` | `1` 赛博配色 |
 | `mauve` | `1` 藕荷配色 |
 | `pine` | `1` 松绿配色 |
+| `bronze` | `1` 古铜配色 |
+| `fjord` | `1` 峡湾配色 |
+| `blush` | `1` 腮红配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 

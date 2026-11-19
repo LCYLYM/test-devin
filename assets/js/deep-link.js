@@ -2635,6 +2635,15 @@
     if (params.get('pine') === '1') {
       document.body.classList.add('is-pine');
     }
+    if (params.get('bronze') === '1') {
+      document.body.classList.add('is-bronze');
+    }
+    if (params.get('fjord') === '1') {
+      document.body.classList.add('is-fjord');
+    }
+    if (params.get('blush') === '1') {
+      document.body.classList.add('is-blush');
+    }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -3302,6 +3311,9 @@
       if (params.get('cyber') === '1') u.searchParams.set('cyber', '1');
       if (params.get('mauve') === '1') u.searchParams.set('mauve', '1');
       if (params.get('pine') === '1') u.searchParams.set('pine', '1');
+      if (params.get('bronze') === '1') u.searchParams.set('bronze', '1');
+      if (params.get('fjord') === '1') u.searchParams.set('fjord', '1');
+      if (params.get('blush') === '1') u.searchParams.set('blush', '1');
       if (params.get('tile') === '1') u.searchParams.set('tile', '1');
       if (params.get('outline') === '1') u.searchParams.set('outline', '1');
       if (params.get('stripe') === '1') u.searchParams.set('stripe', '1');
