@@ -2152,6 +2152,12 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .is-agama .instrument{border-color:rgba(170,150,220,.4)}
 .is-basilisk{background:linear-gradient(180deg,#0f1a18 0%,#0a1210 100%)}
 .is-basilisk .instrument{border-color:rgba(90,210,170,.4)}
+.is-hornet{background:linear-gradient(180deg,#1d170c 0%,#151007 100%)}
+.is-hornet .instrument{border-color:rgba(240,190,70,.4)}
+.is-cicada{background:linear-gradient(180deg,#131a12 0%,#0d120c 100%)}
+.is-cicada .instrument{border-color:rgba(150,200,120,.4)}
+.is-moth{background:linear-gradient(180deg,#18161c 0%,#100f14 100%)}
+.is-moth .instrument{border-color:rgba(190,175,210,.4)}
 .is-oatmeal{background:linear-gradient(180deg,#1d1912,#2f291e 50%,#433a2a)}
 .is-oatmeal .instrument{border-color:rgba(215,195,155,.4)}
 .is-thyme{background:linear-gradient(180deg,#121a14,#1c2a20 50%,#28392c)}

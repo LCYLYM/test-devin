@@ -977,6 +977,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `skink` | `1` 石龙子配色 |
 | `agama` | `1` 飞蜥配色 |
 | `basilisk` | `1` 双冠蜥配色 |
+| `hornet` | `1` 胡蜂配色 |
+| `cicada` | `1` 蝉配色 |
+| `moth` | `1` 蛾配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 
