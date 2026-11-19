@@ -1136,6 +1136,10 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .payday.dice{color:#fca5a5}
 .payday.end{color:#fdba74}
 .payday.cb{color:#f0abfc}
+.payday.raw{color:#94a3b8;font-variant-numeric:tabular-nums}
+@keyframes swirlBg{to{background-position:200px 200px}}
+.is-swirl{background-image:repeating-conic-gradient(rgba(255,255,255,.02) 0 12deg,transparent 12deg 24deg);animation:swirlBg 14s linear infinite}
+@media (prefers-reduced-motion:reduce){.is-swirl{animation:none}}
 .wm-layer{position:fixed;inset:-10%;display:grid;grid-template-columns:repeat(4,1fr);pointer-events:none;opacity:.05;transform:rotate(-18deg);z-index:3;font-size:20px;font-weight:700;color:#fff;align-content:space-around}
 .wm-layer span{padding:40px 0;text-align:center}
 .is-focus .wm-layer{display:none}
