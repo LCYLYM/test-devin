@@ -682,3 +682,17 @@ body[data-template=mono] .day-target{display:none}
 .paper-card{max-width:min(92vw,420px);margin:0 auto}
 .mono-track{max-width:min(80vw,320px);margin:0 auto}
 @media (max-width:520px){.neon-ring{width:70vw}}
+
+/* iter-129: 真·专注模式 —— 只剩数字和图案，UI 全隐 */
+body.is-focus .app-header,body.is-focus .app-footer,body.is-focus .seo-faq,
+body.is-focus .utility-row,body.is-focus .demo-banner,body.is-focus .summary-strip,
+body.is-focus .overtime-disclosure,body.is-focus .bottom-row,
+body.is-focus .instrument-toolbar,body.is-focus .instrument-footer{display:none}
+body.is-focus .page-shell{width:100%;max-width:none;padding:0}
+body.is-focus .instrument{min-height:100vh;min-height:100dvh;margin:0;border-radius:0;border-width:0;
+display:flex;flex-direction:column;align-items:center;justify-content:center;gap:28px}
+body.is-focus .instrument-body{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:28px;width:100%}
+body.is-focus .value-cluster{padding-top:0}
+body.is-focus .energy-stage{margin:0 auto}
+body.is-focus::after{content:'按 z 退出专注';position:fixed;bottom:14px;right:16px;font-size:11px;
+color:var(--muted,#888);opacity:.45;pointer-events:none;letter-spacing:.5px}

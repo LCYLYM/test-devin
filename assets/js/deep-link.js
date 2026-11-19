@@ -157,6 +157,8 @@
       if (rb) rb.click();
     } else if (e.key === 's' && window.SalaryApp) {
       window.SalaryApp.openDialog('shareDialog');
+    } else if (e.key === 'Escape' && document.body.classList.contains('is-focus') && !document.querySelector('dialog[open]')) {
+      document.body.classList.remove('is-focus');
     } else if (e.key === 'z') {
       var fb = document.getElementById('focusButton');
       if (fb) fb.click();
