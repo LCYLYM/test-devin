@@ -250,6 +250,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `compact` | `1` 紧凑模式 |
 | `advent` | `1` 圣诞倒计时徽章（±40 天内显示） |
 | `newyear` | `1` 元旦倒计时徽章 |
+| `week7` | `1` 近7天累计入账徽章 |
+| `tabearn` | `1` 页签标题实时金额 |
+| `title` | `文字` 自定义页签标题 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 

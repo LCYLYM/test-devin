@@ -1365,6 +1365,40 @@
         nyb.hidden = false;
       }
     }
+    if (params.get('week7') === '1') {
+      window.__allTime = true;
+      var w7b = document.getElementById('week7Badge'), w7a = document.getElementById('week7Amt');
+      if (w7b && w7a) {
+        var w7Upd = function () {
+          try {
+            var map = JSON.parse(localStorage.getItem('salaryFlow.all') || '{}');
+            var ld = new Date(Date.now() - 6 * 864e5);
+            var lim = ld.getFullYear() + '-' + String(ld.getMonth() + 1).padStart(2, '0') + '-' + String(ld.getDate()).padStart(2, '0');
+            var sum = 0;
+            for (var k in map) if (k >= lim) sum += map[k];
+            var w7s = window.SalaryApp && window.SalaryApp.getState && window.SalaryApp.getState();
+            var sym3 = (w7s && w7s.currency && w7s.currency.symbol) || '¥';
+            w7a.textContent = sym3 + sum.toLocaleString('en-US', { maximumFractionDigits: 0 });
+            w7b.hidden = false;
+          } catch (_) { }
+        };
+        w7Upd();
+        setInterval(w7Upd, 8000);
+      }
+    }
+    var titleParam = params.get('title');
+    if (titleParam) window.__customTitle = titleParam.trim().slice(0, 30);
+    if (params.get('tabearn') === '1' || window.__customTitle) {
+      var baseT = window.__customTitle || '薪动';
+      document.title = baseT;
+      if (params.get('tabearn') === '1') {
+        setInterval(function () {
+          var ta = document.getElementById('amountArea');
+          var txt = ta && ta.getAttribute('aria-label');
+          document.title = txt ? txt + ' · ' + baseT : baseT;
+        }, 2000);
+      }
+    }
     if (params.get('hex') === '1') {
       var hxb = document.getElementById('hexBadge'), hxd = document.getElementById('hexDot'), hxv = document.getElementById('hexVal');
       if (hxb && hxd && hxv) {
@@ -1948,6 +1982,9 @@
       if (params.get('compact') === '1') u.searchParams.set('compact', '1');
       if (params.get('advent') === '1') u.searchParams.set('advent', '1');
       if (params.get('newyear') === '1') u.searchParams.set('newyear', '1');
+      if (params.get('week7') === '1') u.searchParams.set('week7', '1');
+      if (params.get('tabearn') === '1') u.searchParams.set('tabearn', '1');
+      var ttp = params.get('title'); if (ttp) u.searchParams.set('title', ttp);
       if (params.get('rays') === '1') u.searchParams.set('rays', '1');
       if (params.get('flat') === '1') u.searchParams.set('flat', '1');
       var idl = params.get('idle'); if (idl) u.searchParams.set('idle', idl);
