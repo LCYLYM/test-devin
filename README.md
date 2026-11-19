@@ -476,6 +476,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `clay` | `1` 黏土配色 |
 | `aurum` | `1` 金色配色 |
 | `breeze` | `1` 微风配色 |
+| `raven` | `1` 鸦青配色 |
+| `saffron` | `1` 藏红配色 |
+| `oasis` | `1` 绿洲配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 

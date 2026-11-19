@@ -1141,6 +1141,12 @@ body[data-hover] .payday:hover{transform:translateY(-3px)}
 .is-aurum .instrument{border-color:rgba(235,200,90,.45)}
 .is-breeze{background:linear-gradient(180deg,#0e1c1e,#14302f 55%,#1c4240)}
 .is-breeze .instrument{border-color:rgba(130,210,200,.4)}
+.is-raven{background:linear-gradient(180deg,#0e0f14,#161a24 55%,#1e2430)}
+.is-raven .instrument{border-color:rgba(140,150,175,.4)}
+.is-saffron{background:linear-gradient(180deg,#2a1408,#421f0c 55%,#582a10)}
+.is-saffron .instrument{border-color:rgba(244,150,60,.45)}
+.is-oasis{background:linear-gradient(180deg,#0a1e1a,#103028 55%,#164236)}
+.is-oasis .instrument{border-color:rgba(90,200,160,.4)}
 .is-focus .payday.morale{display:none}
 body[data-pillar] .page-shell{border-left:1px solid rgba(var(--accent-rgb,103,228,148),.22);border-right:1px solid rgba(var(--accent-rgb,103,228,148),.22)}
 body[data-gloom]{--bg:#0a0c0b}
