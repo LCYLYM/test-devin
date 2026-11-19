@@ -268,6 +268,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `dow` | `1` 星期徽章 |
 | `vib` | `1` 每攒 ¥10 手机震动（移动端） |
 | `tint` | `HEX` 全局叠色滤镜 |
+| `ago` | `1` 已开工时长徽章 |
+| `tz` | `时区` 世界时钟徽章（如 Asia/Tokyo） |
+| `ghost` | `1` 幽灵模式：10 秒无操作界面淡出，动一下回显 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 

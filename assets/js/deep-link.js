@@ -1526,6 +1526,42 @@
         }
       });
     }
+    if (params.get('ago') === '1') {
+      var agb = document.getElementById('agoBadge'), agv = document.getElementById('agoVal');
+      if (agb && agv) {
+        var agUpd = function () {
+          var st = window.SalaryApp && window.SalaryApp.getState && window.SalaryApp.getState();
+          var sec = st && st.snapshot && st.snapshot.elapsedSecondsToday;
+          if (sec != null) {
+            var h = Math.floor(sec / 3600), m = Math.floor(sec % 3600 / 60);
+            agv.textContent = h ? h + 'h' + m + 'm' : m + 'm';
+            agb.hidden = false;
+          }
+        };
+        agUpd(); setInterval(agUpd, 30000);
+      }
+    }
+    var tzParam = params.get('tz');
+    if (tzParam) {
+      var tzb = document.getElementById('tzBadge'), tzv = document.getElementById('tzVal');
+      if (tzb && tzv) {
+        var tzone = decodeURIComponent(tzParam).trim().slice(0, 40);
+        try {
+          new Intl.DateTimeFormat('zh-CN', {timeZone: tzone, hour: '2-digit', minute: '2-digit'});
+          var tzUpd = function () {
+            tzv.textContent = new Intl.DateTimeFormat('zh-CN', {timeZone: tzone, hour: '2-digit', minute: '2-digit'}).format(new Date());
+            tzb.hidden = false;
+          };
+          tzUpd(); setInterval(tzUpd, 10000);
+        } catch (_) { }
+      }
+    }
+    if (params.get('ghost') === '1') {
+      var ghT = null;
+      var ghOn = function () { document.body.classList.remove('is-ghost'); if (ghT) clearTimeout(ghT); ghT = setTimeout(function () { document.body.classList.add('is-ghost'); }, 10000); };
+      ['mousemove', 'click', 'keydown', 'touchstart'].forEach(function (ev) { document.addEventListener(ev, ghOn, {passive: true}); });
+      ghOn();
+    }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -2168,6 +2204,9 @@
       if (params.get('dow') === '1') u.searchParams.set('dow', '1');
       if (params.get('vib') === '1') u.searchParams.set('vib', '1');
       var tnp = params.get('tint'); if (tnp) u.searchParams.set('tint', tnp);
+      if (params.get('ago') === '1') u.searchParams.set('ago', '1');
+      var tzp = params.get('tz'); if (tzp) u.searchParams.set('tz', tzp);
+      if (params.get('ghost') === '1') u.searchParams.set('ghost', '1');
       if (params.get('rays') === '1') u.searchParams.set('rays', '1');
       if (params.get('flat') === '1') u.searchParams.set('flat', '1');
       var idl = params.get('idle'); if (idl) u.searchParams.set('idle', idl);
