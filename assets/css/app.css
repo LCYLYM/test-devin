@@ -2602,6 +2602,12 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .is-waxpaper .instrument{border-color:rgba(202,192,160,.4)}
 .is-cumberland{background:linear-gradient(180deg,#161a18 0%,#101311 100%)}
 .is-cumberland .instrument{border-color:rgba(142,172,156,.4)}
+.is-foamlichen{background:linear-gradient(180deg,#1a1c18 0%,#141512 100%)}
+.is-foamlichen .instrument{border-color:rgba(188,194,168,.4)}
+.is-pepperedrock{background:linear-gradient(180deg,#151517 0%,#101012 100%)}
+.is-pepperedrock .instrument{border-color:rgba(150,152,160,.4)}
+.is-rimlichen{background:linear-gradient(180deg,#1a1813 0%,#14120e 100%)}
+.is-rimlichen .instrument{border-color:rgba(186,166,110,.4)}
 .is-oatmeal{background:linear-gradient(180deg,#1d1912,#2f291e 50%,#433a2a)}
 .is-oatmeal .instrument{border-color:rgba(215,195,155,.4)}
 .is-thyme{background:linear-gradient(180deg,#121a14,#1c2a20 50%,#28392c)}

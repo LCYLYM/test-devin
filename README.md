@@ -1202,6 +1202,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `greenshield` | `1` 绿盾衣配色 |
 | `waxpaper` | `1` 蜡纸衣配色 |
 | `cumberland` | `1` 岩盾衣配色 |
+| `foamlichen` | `1` 泡沫衣配色 |
+| `pepperedrock` | `1` 椒石衣配色 |
+| `rimlichen` | `1` 缘衣配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 

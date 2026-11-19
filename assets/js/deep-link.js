@@ -4086,6 +4086,9 @@
     if (params.get('greenshield') === '1') { document.body.classList.add('is-greenshield'); }
     if (params.get('waxpaper') === '1') { document.body.classList.add('is-waxpaper'); }
     if (params.get('cumberland') === '1') { document.body.classList.add('is-cumberland'); }
+    if (params.get('foamlichen') === '1') { document.body.classList.add('is-foamlichen'); }
+    if (params.get('pepperedrock') === '1') { document.body.classList.add('is-pepperedrock'); }
+    if (params.get('rimlichen') === '1') { document.body.classList.add('is-rimlichen'); }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -5530,6 +5533,9 @@
         if (params.get('greenshield') === '1') u.searchParams.set('greenshield', '1');
         if (params.get('waxpaper') === '1') u.searchParams.set('waxpaper', '1');
         if (params.get('cumberland') === '1') u.searchParams.set('cumberland', '1');
+        if (params.get('foamlichen') === '1') u.searchParams.set('foamlichen', '1');
+        if (params.get('pepperedrock') === '1') u.searchParams.set('pepperedrock', '1');
+        if (params.get('rimlichen') === '1') u.searchParams.set('rimlichen', '1');
       if (params.get('tile') === '1') u.searchParams.set('tile', '1');
       if (params.get('outline') === '1') u.searchParams.set('outline', '1');
       if (params.get('stripe') === '1') u.searchParams.set('stripe', '1');
