@@ -3573,6 +3573,15 @@
     if (params.get('mongoose') === '1') {
       document.body.classList.add('is-mongoose');
     }
+    if (params.get('hornbill') === '1') {
+      document.body.classList.add('is-hornbill');
+    }
+    if (params.get('millet') === '1') {
+      document.body.classList.add('is-millet');
+    }
+    if (params.get('wombat') === '1') {
+      document.body.classList.add('is-wombat');
+    }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -4528,6 +4537,9 @@
       if (params.get('toucan') === '1') u.searchParams.set('toucan', '1');
       if (params.get('taro') === '1') u.searchParams.set('taro', '1');
       if (params.get('mongoose') === '1') u.searchParams.set('mongoose', '1');
+      if (params.get('hornbill') === '1') u.searchParams.set('hornbill', '1');
+      if (params.get('millet') === '1') u.searchParams.set('millet', '1');
+      if (params.get('wombat') === '1') u.searchParams.set('wombat', '1');
       if (params.get('tile') === '1') u.searchParams.set('tile', '1');
       if (params.get('outline') === '1') u.searchParams.set('outline', '1');
       if (params.get('stripe') === '1') u.searchParams.set('stripe', '1');

@@ -1624,6 +1624,12 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .is-taro .instrument{border-color:rgba(175,155,230,.42)}
 .is-mongoose{background:linear-gradient(180deg,#18120c,#2b1f12 50%,#3e2d1a)}
 .is-mongoose .instrument{border-color:rgba(210,165,100,.42)}
+.is-hornbill{background:linear-gradient(180deg,#1c1008,#30190e 50%,#462414)}
+.is-hornbill .instrument{border-color:rgba(230,130,70,.42)}
+.is-millet{background:linear-gradient(180deg,#1b1608,#30260e 50%,#463715)}
+.is-millet .instrument{border-color:rgba(225,195,95,.42)}
+.is-wombat{background:linear-gradient(180deg,#161310,#251f1a 50%,#352d26)}
+.is-wombat .instrument{border-color:rgba(190,170,145,.42)}
 .is-oatmeal{background:linear-gradient(180deg,#1d1912,#2f291e 50%,#433a2a)}
 .is-oatmeal .instrument{border-color:rgba(215,195,155,.4)}
 .is-thyme{background:linear-gradient(180deg,#121a14,#1c2a20 50%,#28392c)}

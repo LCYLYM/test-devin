@@ -713,6 +713,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `toucan` | `1` 巨嘴鸟配色 |
 | `taro` | `1` 芋头配色 |
 | `mongoose` | `1` 猫鼬配色 |
+| `hornbill` | `1` 犀鸟配色 |
+| `millet` | `1` 小米配色 |
+| `wombat` | `1` 袋熊配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 
