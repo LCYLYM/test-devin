@@ -164,6 +164,15 @@
       const earn=data.snapshot.todayEarned||0;
       for(const m of ml){if(earn>=m&&!milestonesHit.has(m)){milestonesHit.add(m);if(window.__vibrate&&navigator.vibrate)navigator.vibrate(40);if(window.SalaryApp&&window.SalaryApp.toast)window.SalaryApp.toast('已入账 '+(data.symbol||'¥')+m.toLocaleString('en-US')+(MILESTONE_MSG[m]?' · '+MILESTONE_MSG[m]:''));break;}}
     }
+    if(window.__msNext&&data.snapshot){
+      const mb=$('msBadge');if(mb){
+        const nxt=(ml.length?ml:[10,20,50,100,200,500,1000]).find(m2=>m2>(data.snapshot.todayEarned||0));
+        if(nxt){mb.hidden=false;const rate2=(data.currency&&data.currency.rate)||1;
+          setText('msLeft',(data.symbol||'¥')+((nxt-(data.snapshot.todayEarned||0))*rate2).toFixed(1));
+          setText('msName',MILESTONE_MSG[nxt]?' · '+MILESTONE_MSG[nxt]:'');}
+        else mb.hidden=true;
+      }
+    }
     setText('chargePercent',(p*100).toFixed(1)+'%');
     setText('pigPercent',(p*100).toFixed(1)+'%');
     setText('neonPercent',(p*100).toFixed(1)+'%');

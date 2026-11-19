@@ -193,6 +193,27 @@
     if (themeParam === 'light') document.body.dataset.light = '1';
     else if (themeParam === 'dark') delete document.body.dataset.light;
     else if (themeParam === 'auto' && window.matchMedia && matchMedia('(prefers-color-scheme: light)').matches) document.body.dataset.light = '1';
+    if (params.get('ms') === '1') window.__msNext = true;
+    if (params.get('luck') === '1') {
+      window.__luck = true;
+      var lb = document.getElementById('luckBadge');
+      if (lb) {
+        lb.hidden = false;
+        var dk = new Date().toISOString().slice(0, 10);
+        var hash = 0; for (var ci = 0; ci < dk.length; ci++) hash = (hash * 31 + dk.charCodeAt(ci)) >>> 0;
+        var grades = ['大吉', '中吉', '小吉', '半吉', '小凶'];
+        var yi = ['摸鱼', '记账', '存钱', '喝奶茶', '准点下班', '和同事唠嗑'];
+        var ji = ['加班', '立 flag', '冲动消费', '熬夜', '内卷'];
+        document.getElementById('luckText').textContent =
+          grades[hash % grades.length] + ' · 宜' + yi[hash % yi.length] + ' 忌' + ji[(hash >> 3) % ji.length];
+      }
+    }
+    var bgimg = params.get('bgimg');
+    if (bgimg && /^https?:\/\//.test(bgimg)) {
+      document.body.style.backgroundImage = 'url("' + bgimg.replace(/["'()\\]/g, '') + '")';
+      document.body.style.backgroundSize = 'cover';
+      document.body.style.backgroundAttachment = 'fixed';
+    }
     var symParam = params.get('symbol');
     if (symParam) window.__symbol = symParam.slice(0, 3);
     var brandParam = params.get('brand');

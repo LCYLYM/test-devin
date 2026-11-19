@@ -810,3 +810,6 @@ body[data-template=therm] .therm-visual{display:flex}
 @keyframes therm-glow{0%,100%{box-shadow:0 0 12px rgba(249,115,22,.25)}50%{box-shadow:0 0 26px rgba(249,115,22,.55)}}
 .instrument.is-working .therm-bulb{animation:therm-glow 1.6s ease-in-out infinite}
 @media(max-width:1120px){.template-switch button{width:76px}}
+
+.payday.ms{color:#7dd3fc}
+.payday.luck{color:#f0abfc}

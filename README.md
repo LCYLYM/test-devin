@@ -69,6 +69,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `fx` | `snow` / `sakura` / `rain` 全屏氛围特效（配专注模式绝配） |
 | `vibrate` | `1` 里程碑/达标时手机震动 |
 | `compact` | `0` 关闭 万/亿 大数缩写，始终显示完整数字 |
+| `ms` | `1` 显示"距下个里程碑还差多少"徽章 |
+| `luck` | `1` 每日财运签徽章（按日期抽签） |
+| `bgimg` | 背景图 URL（https://），如 `?bgimg=https://…` |
 
 ## 本地跑
 
