@@ -2765,6 +2765,15 @@
     if (params.get('cedar') === '1') {
       document.body.classList.add('is-cedar');
     }
+    if (params.get('wheat') === '1') {
+      document.body.classList.add('is-wheat');
+    }
+    if (params.get('cave') === '1') {
+      document.body.classList.add('is-cave');
+    }
+    if (params.get('meadow') === '1') {
+      document.body.classList.add('is-meadow');
+    }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -3468,6 +3477,9 @@
       if (params.get('honey') === '1') u.searchParams.set('honey', '1');
       if (params.get('iris') === '1') u.searchParams.set('iris', '1');
       if (params.get('cedar') === '1') u.searchParams.set('cedar', '1');
+      if (params.get('wheat') === '1') u.searchParams.set('wheat', '1');
+      if (params.get('cave') === '1') u.searchParams.set('cave', '1');
+      if (params.get('meadow') === '1') u.searchParams.set('meadow', '1');
       if (params.get('tile') === '1') u.searchParams.set('tile', '1');
       if (params.get('outline') === '1') u.searchParams.set('outline', '1');
       if (params.get('stripe') === '1') u.searchParams.set('stripe', '1');

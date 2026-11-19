@@ -1111,6 +1111,12 @@ body[data-hover] .payday:hover{transform:translateY(-3px)}
 .is-iris .instrument{border-color:rgba(167,139,250,.45)}
 .is-cedar{background:linear-gradient(180deg,#121a14,#1a2a1e 60%,#223426)}
 .is-cedar .instrument{border-color:rgba(110,168,120,.4)}
+.is-wheat{background:linear-gradient(180deg,#2a2010,#3a3018 55%,#4a3c1e)}
+.is-wheat .instrument{border-color:rgba(222,190,110,.4)}
+.is-cave{background:linear-gradient(180deg,#0c0e12,#141820 60%,#1c2230)}
+.is-cave .instrument{border-color:rgba(148,163,184,.35)}
+.is-meadow{background:linear-gradient(180deg,#0f1c12,#16301c 55%,#1f4026)}
+.is-meadow .instrument{border-color:rgba(134,197,120,.4)}
 .is-focus .payday.morale{display:none}
 body[data-pillar] .page-shell{border-left:1px solid rgba(var(--accent-rgb,103,228,148),.22);border-right:1px solid rgba(var(--accent-rgb,103,228,148),.22)}
 body[data-gloom]{--bg:#0a0c0b}
