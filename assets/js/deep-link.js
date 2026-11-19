@@ -3537,6 +3537,15 @@
     if (params.get('cassowary') === '1') {
       document.body.classList.add('is-cassowary');
     }
+    if (params.get('pangolin') === '1') {
+      document.body.classList.add('is-pangolin');
+    }
+    if (params.get('quince') === '1') {
+      document.body.classList.add('is-quince');
+    }
+    if (params.get('guanaco') === '1') {
+      document.body.classList.add('is-guanaco');
+    }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -4480,6 +4489,9 @@
       if (params.get('axolotl') === '1') u.searchParams.set('axolotl', '1');
       if (params.get('azuki') === '1') u.searchParams.set('azuki', '1');
       if (params.get('cassowary') === '1') u.searchParams.set('cassowary', '1');
+      if (params.get('pangolin') === '1') u.searchParams.set('pangolin', '1');
+      if (params.get('quince') === '1') u.searchParams.set('quince', '1');
+      if (params.get('guanaco') === '1') u.searchParams.set('guanaco', '1');
       if (params.get('tile') === '1') u.searchParams.set('tile', '1');
       if (params.get('outline') === '1') u.searchParams.set('outline', '1');
       if (params.get('stripe') === '1') u.searchParams.set('stripe', '1');

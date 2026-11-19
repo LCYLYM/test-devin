@@ -701,6 +701,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `axolotl` | `1` 六角龙配色 |
 | `azuki` | `1` 红豆配色 |
 | `cassowary` | `1` 鹤鸵配色 |
+| `pangolin` | `1` 穿山甲配色 |
+| `quince` | `1` 榅桲配色 |
+| `guanaco` | `1` 原驼配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 

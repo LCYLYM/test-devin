@@ -1600,6 +1600,12 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .is-azuki .instrument{border-color:rgba(210,105,115,.42)}
 .is-cassowary{background:linear-gradient(180deg,#0d1620,#13253a 50%,#1c3652)}
 .is-cassowary .instrument{border-color:rgba(90,160,225,.42)}
+.is-pangolin{background:linear-gradient(180deg,#181209,#2a1f0e 50%,#3d2d14)}
+.is-pangolin .instrument{border-color:rgba(205,160,85,.42)}
+.is-quince{background:linear-gradient(180deg,#1d1408,#33230e 50%,#4a3315)}
+.is-quince .instrument{border-color:rgba(230,190,90,.42)}
+.is-guanaco{background:linear-gradient(180deg,#171008,#281a0d 50%,#3b2713)}
+.is-guanaco .instrument{border-color:rgba(210,155,90,.42)}
 .is-oatmeal{background:linear-gradient(180deg,#1d1912,#2f291e 50%,#433a2a)}
 .is-oatmeal .instrument{border-color:rgba(215,195,155,.4)}
 .is-thyme{background:linear-gradient(180deg,#121a14,#1c2a20 50%,#28392c)}
