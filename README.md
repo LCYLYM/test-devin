@@ -530,6 +530,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `pastel` | `1` 粉彩配色 |
 | `mahogany` | `1` 红木配色 |
 | `lime` | `1` 青柠配色 |
+| `turquoise` | `1` 绿松石配色 |
+| `walnut` | `1` 胡桃配色 |
+| `cherry` | `1` 樱桃配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 
