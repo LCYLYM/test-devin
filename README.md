@@ -1004,6 +1004,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `abalone` | `1` 鲍鱼配色 |
 | `conch` | `1` 海螺配色 |
 | `nautilus` | `1` 鹦鹉螺配色 |
+| `crab` | `1` 螃蟹配色 |
+| `crayfish` | `1` 小龙虾配色 |
+| `hermit` | `1` 寄居蟹配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 
