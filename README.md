@@ -52,6 +52,7 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `avg` | 时薪对比徽章：`?avg=8000` 显示你的时薪 vs 均值 |
 | `pet` | 给存钱罐小猪起名：`?pet=旺财` |
 | `confetti` | `0` 关闭达成 100% 时的撒花 |
+| `dec` | 金额小数位 `2`–`6`（配 `?demo=` 高速演示更爽） |
 
 ## 本地跑
 

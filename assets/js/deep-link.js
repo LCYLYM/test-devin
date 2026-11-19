@@ -174,6 +174,9 @@
 
     if (params.get('confetti') === '0') window.__noConfetti = true;
 
+    var decParam = parseInt(params.get('dec') || '', 10);
+    if (decParam >= 2 && decParam <= 6) window.__decimals = decParam;
+
     var petParam = params.get('pet');
     if (petParam) { var pn = document.getElementById('pigNoteText'); if (pn) pn.textContent = petParam.slice(0, 12) + '正在存钱…'; }
 
@@ -344,7 +347,7 @@
       if (prefs && prefs.period && prefs.period !== 'day') u.searchParams.set('period', prefs.period);
       var ac = document.body.style.getPropertyValue('--accent') || params.get('accent') ||
         (function () { try { return localStorage.getItem('salaryFlow.accent') || ''; } catch (e) { return ''; } })();
-      if (ac && /^#?([0-9a-fA-F]{3,4}|[0-9a-fA-F]{6}|[0-9a-fA-F]{8})$/.test(ac)) u.searchParams.set('accent', ac);
+      if (ac && (/^#?([0-9a-fA-F]{3,4}|[0-9a-fA-F]{6}|[0-9a-fA-F]{8})$/.test(ac) || /^[a-zA-Z]{3,20}$/.test(ac))) u.searchParams.set('accent', ac);
       if (document.body.classList.contains('is-focus')) u.searchParams.set('zen', '1');
       var ints = state && state.config && state.config.intervals;
       if (ints && ints.length && JSON.stringify(ints) !== '[["09:00","12:00"],["13:30","18:00"]]') {

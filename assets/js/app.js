@@ -678,7 +678,7 @@
     if($('demoButton')) { $('demoButton').setAttribute('aria-pressed',String(Boolean(demo))); $('demoButton').innerHTML=icon(demo?'stop':'play')+(demo?'退出体验':'体验涨薪'); }
     const realDay=E.dateKey(new Date());
     if(realDay!==lastRealDay) { lastRealDay=realDay; if($('calendarDialog')?.open) renderCalendar(); }
-    window.SalaryVisual?.update({amount,displayAmount:cur.fun?amount/1e8:amount,decimals:2,symbol:cur.symbol,unit:cur.fun?'亿':'',secondRate:current.secondSalary*cur.rate,progress,snapshot:current,now,working,fun:cur.fun,currency:cur,period:preferences.period,demo:Boolean(demo)});
+    window.SalaryVisual?.update({amount,displayAmount:cur.fun?amount/1e8:amount,decimals:window.__decimals||2,symbol:cur.symbol,unit:cur.fun?'亿':'',secondRate:current.secondSalary*cur.rate,progress,snapshot:current,now,working,fun:cur.fun,currency:cur,period:preferences.period,demo:Boolean(demo)});
     emitUpdate();
   }
 
