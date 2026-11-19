@@ -1163,6 +1163,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `bolete` | `1` 牛肝蕈配色 |
 | `puffball` | `1` 马勃配色 |
 | `russula` | `1` 红菇配色 |
+| `lionsmane` | `1` 猴头菇配色 |
+| `woodblewit` | `1` 紫晶蘑配色 |
+| `cremini` | `1` 小褐菇配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 
