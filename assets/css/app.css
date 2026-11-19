@@ -2098,6 +2098,12 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .is-medaka .instrument{border-color:rgba(200,165,115,.4)}
 .is-mosquitofish{background:linear-gradient(180deg,#151521 0%,#0e0e16 100%)}
 .is-mosquitofish .instrument{border-color:rgba(160,160,220,.4)}
+.is-platy{background:linear-gradient(180deg,#1d1310 0%,#140d0a 100%)}
+.is-platy .instrument{border-color:rgba(230,140,100,.4)}
+.is-swordtail{background:linear-gradient(180deg,#1a1015 0%,#120a0e 100%)}
+.is-swordtail .instrument{border-color:rgba(220,110,140,.4)}
+.is-danio{background:linear-gradient(180deg,#10181d 0%,#0a1014 100%)}
+.is-danio .instrument{border-color:rgba(120,190,220,.4)}
 .is-oatmeal{background:linear-gradient(180deg,#1d1912,#2f291e 50%,#433a2a)}
 .is-oatmeal .instrument{border-color:rgba(215,195,155,.4)}
 .is-thyme{background:linear-gradient(180deg,#121a14,#1c2a20 50%,#28392c)}

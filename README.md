@@ -950,6 +950,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `killifish` | `1` 鳉鱼配色 |
 | `medaka` | `1` 青鳉配色 |
 | `mosquitofish` | `1` 食蚊鱼配色 |
+| `platy` | `1` 月光鱼配色 |
+| `swordtail` | `1` 剑尾鱼配色 |
+| `danio` | `1` 斑马鱼配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 
