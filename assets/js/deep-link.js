@@ -48,6 +48,8 @@
       if (!app.getState().demo) app.toggleDemo();
     }
 
+    if (params.get('sound') === '1') app.setPreference('sound', true);
+
     var THEME_COLORS = {pig:'#1a1716',charge:'#131415',meter:'#171715',pixel:'#151515',neon:'#0c0e18',mono:'#111111',paper:'#f2efe7'};
     function applyThemeColor(t) {
       var m = document.querySelector('meta[name=theme-color]');
