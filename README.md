@@ -422,6 +422,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `lavender` | `1` 薰衣草配色 |
 | `khaki` | `1` 卡其配色 |
 | `ruby` | `1` 红宝石配色 |
+| `cyber` | `1` 赛博配色 |
+| `mauve` | `1` 藕荷配色 |
+| `pine` | `1` 松绿配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 
