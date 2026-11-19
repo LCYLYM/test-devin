@@ -589,6 +589,44 @@
     var palP = params.get('pal');
     if (palP && ['forest', 'ocean', 'sunset', 'grape'].indexOf(palP) >= 0) document.body.dataset.pal = palP;
     if (params.get('flat') === '1') document.body.dataset.flat = '1';
+    var idleS = Math.min(3600, Math.max(5, Number(params.get('idle')) || 0));
+    if (idleS) {
+      var idleT = null, idleZen = false;
+      var idleFire = function () {
+        if (!document.body.classList.contains('is-focus')) {
+          var fb = document.getElementById('focusButton');
+          if (fb) { fb.click(); idleZen = true; }
+        }
+      };
+      var idleReset = function () {
+        if (idleZen && document.body.classList.contains('is-focus')) {
+          var fb2 = document.getElementById('focusButton');
+          if (fb2) fb2.click();
+        }
+        idleZen = false;
+        clearTimeout(idleT);
+        idleT = setTimeout(idleFire, idleS * 1000);
+      };
+      ['pointerdown', 'keydown', 'wheel', 'touchstart'].forEach(function (ev) { window.addEventListener(ev, idleReset, { passive: true }); });
+      idleT = setTimeout(idleFire, idleS * 1000);
+    }
+    if (params.get('wake') === '1' && navigator.wakeLock) {
+      var wakeReq = function () { navigator.wakeLock.request('screen').catch(function () {}); };
+      wakeReq();
+      document.addEventListener('visibilitychange', function () { if (!document.hidden) wakeReq(); });
+    }
+    if (params.get('tap') === '1') {
+      var aa = document.getElementById('amountArea');
+      if (aa) aa.addEventListener('pointerdown', function (e) {
+        var sp = document.createElement('span');
+        sp.className = 'tap-coin';
+        sp.textContent = '🪙';
+        sp.style.left = (e.clientX || 0) + 'px';
+        sp.style.top = (e.clientY || 0) + 'px';
+        document.body.appendChild(sp);
+        setTimeout(function () { sp.remove(); }, 900);
+      });
+    }
     if (params.get('zodiac') === '1') {
       var zb = document.getElementById('zodiacBadge');
       if (zb) {
@@ -1011,6 +1049,9 @@
       var dyp = params.get('days'); if (dyp) u.searchParams.set('days', dyp);
       var plp = params.get('pal'); if (plp && ['forest', 'ocean', 'sunset', 'grape'].indexOf(plp) >= 0) u.searchParams.set('pal', plp);
       if (params.get('flat') === '1') u.searchParams.set('flat', '1');
+      var idl = params.get('idle'); if (idl) u.searchParams.set('idle', idl);
+      if (params.get('wake') === '1') u.searchParams.set('wake', '1');
+      if (params.get('tap') === '1') u.searchParams.set('tap', '1');
       params.forEach(function (v, k) { if (k.indexOf('utm_') === 0 && v) u.searchParams.set(k, v.slice(0, 64)); });
       var text = u.toString();
       (navigator.clipboard ? navigator.clipboard.writeText(text) : Promise.reject())
