@@ -1701,6 +1701,22 @@
         vrb.hidden = false;
       }
     }
+    var quoteParam = params.get('quote');
+    if (quoteParam) {
+      var ql2 = document.getElementById('quoteLine');
+      var qt = quoteParam.slice(0, 60);
+      if (ql2 && qt) { ql2.textContent = qt; ql2.hidden = false; }
+    }
+    if (params.get('cheer') === '1') {
+      var chb = document.getElementById('cheerBadge'), chi = document.getElementById('cheerIcon'), cht = document.getElementById('cheerText');
+      if (chb && chi && cht) {
+        var CHEERS = [['💪', '稳住，工资在涨'], ['🔥', '摸鱼也在赚钱'], ['☕', '咖啡续命，金币续杯'], ['🚀', '余额起飞中'], ['🍀', '今日财运在线'], ['😤', '再撑一会就下班']];
+        var chI = Math.floor(Math.random() * CHEERS.length);
+        var chUpd = function () { var c2 = CHEERS[chI % CHEERS.length]; chi.textContent = c2[0]; cht.textContent = c2[1]; chb.hidden = false; chI++; };
+        chUpd(); setInterval(chUpd, 30000);
+      }
+    }
+    if (params.get('pix') === '1') { document.body.classList.add('is-pix'); }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -2358,6 +2374,9 @@
       if (params.get('pct') === '1') u.searchParams.set('pct', '1');
       if (params.get('qr') === '1') u.searchParams.set('qr', '1');
       if (params.get('ver') === '1') u.searchParams.set('ver', '1');
+      var qtp = params.get('quote'); if (qtp) u.searchParams.set('quote', qtp);
+      if (params.get('cheer') === '1') u.searchParams.set('cheer', '1');
+      if (params.get('pix') === '1') u.searchParams.set('pix', '1');
       if (params.get('rays') === '1') u.searchParams.set('rays', '1');
       if (params.get('flat') === '1') u.searchParams.set('flat', '1');
       var idl = params.get('idle'); if (idl) u.searchParams.set('idle', idl);
