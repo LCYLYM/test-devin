@@ -761,3 +761,11 @@ body[data-template=wave] .wave-visual{display:flex}
 body[data-template=wave]{--bg:#0b1526}
 @media(prefers-reduced-motion:reduce){.wave-fill::before,.wave-fill::after{animation:none}.wave-fill{transition:none}}
 @media(max-width:520px){.wave-ball{width:150px;height:150px}.wave-pct{font-size:27px}}
+
+/* iter-175: 等价物换算徽章 */
+.payday.vs{color:#ffd166}
+/* iter-176: 达成 100% 撒花 */
+#energyStage{position:relative}
+.confetti-canvas{position:absolute;inset:0;pointer-events:none;z-index:5}
+/* iter-177: 费率胶囊可点 */
+.rate-pill{cursor:pointer;user-select:none}

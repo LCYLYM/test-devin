@@ -170,6 +170,12 @@
     var cmd = params.get('cmd');
     if (cmd) { var tc = document.querySelector('.term-cmd'); if (tc) tc.textContent = cmd.slice(0, 40); }
 
+    var vsParam = params.get('vs');
+    if (vsParam) {
+      var vsM = /^([^@:]+)[@:]([0-9]+(?:\.[0-9]+)?)$/.exec(vsParam.trim());
+      if (vsM) { window.__vsItem = { name: vsM[1], price: parseFloat(vsM[2]) }; var vb0 = document.getElementById('vsBadge'); if (vb0) vb0.hidden = false; }
+    }
+
     var hideMap = {header:'.app-header',footer:'.app-footer',faq:'.seo-faq',utility:'.utility-row',summary:'.summary-strip',overtime:'.overtime-disclosure',bottom:'.bottom-row',toolbar:'.instrument-toolbar',foot:'.instrument-footer'};
     var hideList = (params.get('hide') || '').split(',').map(function (s) { return s.trim(); });
     if (params.get('embed') === '1') hideList = ['header', 'footer', 'faq'];

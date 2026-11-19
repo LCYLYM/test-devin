@@ -7,7 +7,7 @@
   const instrument = $('earningsCard');
   let frame=0, latest=null, lastTime=0, lastDigitTime=0, lastPulseSecond=-1, lastPixelTime=0;
   let amountShown=0, amountFrom=0, amountTarget=0, tweenStart=0, tweenDuration=0;
-  let lastSignature='', lastFormatted='', lastTemplate='', lastCurrency='', lastPeriod='';
+  let lastSignature='', lastFormatted='', lastTemplate='', lastCurrency='', lastPeriod='', lastProgress=0;
   let digitSlots=[], numberShape='', compactDivisor=1, compactUnit='';
   let canvasWidth=0,canvasHeight=0,canvasRatio=1,chartPlan=null,planKey='';
   let audioContext=null, audioReady=false, focusMode=false, fitKey='';
@@ -102,6 +102,20 @@
     document.querySelector('meta[name=theme-color]').setAttribute('content',getComputedStyle(document.body).getPropertyValue('--bg').trim());
   }
 
+  function confettiBurst(){
+    const host=$('energyStage')||instrument;if(!host)return;
+    const cv=document.createElement('canvas');cv.className='confetti-canvas';
+    const r=host.getBoundingClientRect();cv.width=Math.max(2,r.width);cv.height=Math.max(2,r.height);
+    host.appendChild(cv);const c2=cv.getContext('2d');if(!c2){cv.remove();return;}
+    const colors=['#5ae593','#ff8a52','#4de3ff','#eeb58e','#ffd166','#ff5f56','#38bdf8'];
+    const ps=[];for(let i=0;i<90;i++){ps.push({x:cv.width/2+(Math.random()-.5)*60,y:cv.height*.4,vx:(Math.random()-.5)*7,vy:-Math.random()*7-3,g:.16+Math.random()*.1,w:4+Math.random()*5,h:6+Math.random()*8,rot:Math.random()*Math.PI,vr:(Math.random()-.5)*.3,c:colors[i%colors.length],life:1});}
+    const start=performance.now();
+    (function frame(t){const el=(t-start)/1000;c2.clearRect(0,0,cv.width,cv.height);let alive=false;
+    for(const q of ps){q.vy+=q.g;q.x+=q.vx;q.y+=q.vy;q.rot+=q.vr;q.life=Math.max(0,1-el/2.4);
+    if(q.life>0&&q.y<cv.height+20)alive=true;c2.save();c2.globalAlpha=q.life;c2.translate(q.x,q.y);c2.rotate(q.rot);c2.fillStyle=q.c;c2.fillRect(-q.w/2,-q.h/2,q.w,q.h);c2.restore();}
+    if(alive)requestAnimationFrame(frame);else cv.remove();})(start);
+  }
+
   function update(data){
     const tick=performance.now();const state=window.SalaryApp?.getState();
     const signature=data.currency.code+'|'+data.currency.rate+'|'+data.period+'|'+(data.demo?'demo':'real')+'|'+state?.config.salary+'|'+data.snapshot.workdays+'|'+data.snapshot.hoursPerDay+'|'+data.snapshot.dayKey;
@@ -124,6 +138,8 @@
     instrument.classList.toggle('is-fun',data.fun);
     instrument.classList.toggle('is-month',data.period==='month');
     const p=clamp(data.progress);
+    if(p>=1&&lastProgress<1&&data.snapshot&&data.snapshot.todayEarned>0&&!motion.matches)confettiBurst();
+    lastProgress=p;
     setText('chargePercent',(p*100).toFixed(1)+'%');
     setText('pigPercent',(p*100).toFixed(1)+'%');
     setText('neonPercent',(p*100).toFixed(1)+'%');
@@ -140,6 +156,8 @@
     setText('termNote',data.working?'streaming salary · '+(data.symbol||'¥')+data.secondRate.toLocaleString('en-US',{maximumFractionDigits:4})+'/s':(data.snapshot&&data.snapshot.isWorkday?'paused · off the clock':'weekend · no charge'));
     const coinRate=data.fun?data.secondRate/1e8:data.secondRate;
     setText('pigDeposit','+ '+data.symbol+coinRate.toLocaleString('en-US',{maximumFractionDigits:2,minimumFractionDigits:2})+(data.fun?' 亿':''));
+    const vs=window.__vsItem;
+    if(vs){const vb=$('vsBadge');if(vb){vb.hidden=false;setText('vsCount',((data.snapshot&&data.snapshot.todayEarned||0)/vs.price).toFixed(1));setText('vsName',' '+vs.name);}}
     const overtimeHours=Number(state?.config.estimatedOvertime)||0;
     const scenario=window.SalaryEngine.overtimeScenario(state.config,data.now,overtimeHours,state.config.extraPay||0);
     setText('overtimeSummaryValue',overtimeHours?window.SalaryApp.formatMoney(scenario.actualHourly)+' / h':'展开');
@@ -294,6 +312,7 @@
     document.querySelectorAll('.template-switch button').forEach(button=>button.addEventListener('click',()=>{app.setTemplate(button.dataset.template);if(audioReady&&app.getState().preferences.sound)playTick(true);}));
     $('richQuickButton').addEventListener('click',()=>app.setCurrency(app.getState().currency.fun?'CNY':'ZIM'));
     $('monthSummaryButton').addEventListener('click',()=>app.setPeriod(app.getState().period==='month'?'day':'month'));
+    $('ratePill')?.addEventListener('click',()=>{try{localStorage.setItem('salaryFlow.rateMode',String((rateModeIdx()+1)%3));}catch(e){}render();});
     $('salaryInput').addEventListener('input',()=>{$('salaryForm').classList.toggle('is-dirty',Number($('salaryInput').value)!==app.getState().config.salary);});
     $('soundButton').addEventListener('click',()=>{
       const enabled=!app.getState().preferences.sound;
@@ -479,6 +498,7 @@
     return cur.symbol + (cur.symbol.length>1?' ':'') + format(displayed,decimals) + (unit?' '+unit:'');
   }
 
+  function rateModeIdx(){try{return Math.min(2,Math.max(0,parseInt(localStorage.getItem('salaryFlow.rateMode')||'0',10)||0));}catch(e){return 0;}}
   function moneyText(id,value,{code=preferences.currency,decimals=2,prefix='',suffix=''}={}) {
     text(id,prefix+formatMoney(value,code,decimals)+suffix);
     const node=$(id);
@@ -606,7 +626,8 @@
     text('currencyMark',cur.symbol);
     text('moneySymbol',cur.symbol);
     text('moneyUnit',cur.fun?'亿':'');
-    if(working) moneyText('perSecond',current.secondSalary,{code:cur.code,decimals:cur.fun?2:4,prefix:'+ ',suffix:' / 秒'});
+    const rateModes=[{m:1,s:' / 秒'},{m:60,s:' / 分'},{m:3600,s:' / 时'}];
+    if(working){const rm=rateModes[rateModeIdx()];moneyText('perSecond',current.secondSalary*rm.m,{code:cur.code,decimals:cur.fun?2:4,prefix:'+ ',suffix:rm.s});}
     else text('perSecond','暂停入账');
     const boundaryTime=current.nextBoundary ? new Date(current.nextBoundary).toLocaleTimeString('zh-CN',{hour12:false,hour:'2-digit',minute:'2-digit'}) : '';
     const lunch=current.status==='break' && now.getHours()>=12 && now.getHours()<14;

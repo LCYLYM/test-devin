@@ -48,6 +48,7 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `goal` | 金额，配合 `goalname` 预填小目标 |
 | `hide` | 隐藏区块：`header,footer,faq,utility,summary,overtime,bottom,toolbar,foot` |
 | `embed` | `1` 隐藏页头页脚 FAQ，适合 iframe 嵌入 |
+| `vs` | 等价物换算徽章：`?vs=奶茶@15` 显示「≈ N 杯奶茶」 |
 
 ## 本地跑
 
