@@ -2954,6 +2954,15 @@
     if (params.get('spring') === '1') {
       document.body.classList.add('is-spring');
     }
+    if (params.get('summer') === '1') {
+      document.body.classList.add('is-summer');
+    }
+    if (params.get('bamboo') === '1') {
+      document.body.classList.add('is-bamboo');
+    }
+    if (params.get('flame') === '1') {
+      document.body.classList.add('is-flame');
+    }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -3720,6 +3729,9 @@
       if (params.get('autumn') === '1') u.searchParams.set('autumn', '1');
       if (params.get('winter') === '1') u.searchParams.set('winter', '1');
       if (params.get('spring') === '1') u.searchParams.set('spring', '1');
+      if (params.get('summer') === '1') u.searchParams.set('summer', '1');
+      if (params.get('bamboo') === '1') u.searchParams.set('bamboo', '1');
+      if (params.get('flame') === '1') u.searchParams.set('flame', '1');
       if (params.get('tile') === '1') u.searchParams.set('tile', '1');
       if (params.get('outline') === '1') u.searchParams.set('outline', '1');
       if (params.get('stripe') === '1') u.searchParams.set('stripe', '1');
