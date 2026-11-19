@@ -1918,6 +1918,12 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .is-wigeon .instrument{border-color:rgba(110,175,190,.4)}
 .is-yapok{background:linear-gradient(180deg,#14171c 0%,#0d0f13 100%)}
 .is-yapok .instrument{border-color:rgba(150,165,190,.4)}
+.is-zebrafish{background:linear-gradient(180deg,#131820 0%,#0c1016 100%)}
+.is-zebrafish .instrument{border-color:rgba(140,170,210,.4)}
+.is-tetra{background:linear-gradient(180deg,#0f1b16 0%,#08130e 100%)}
+.is-tetra .instrument{border-color:rgba(100,200,150,.4)}
+.is-betta{background:linear-gradient(180deg,#1c1018 0%,#130a10 100%)}
+.is-betta .instrument{border-color:rgba(215,110,175,.4)}
 .is-oatmeal{background:linear-gradient(180deg,#1d1912,#2f291e 50%,#433a2a)}
 .is-oatmeal .instrument{border-color:rgba(215,195,155,.4)}
 .is-thyme{background:linear-gradient(180deg,#121a14,#1c2a20 50%,#28392c)}

@@ -860,6 +860,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `vanga` | `1` 钩嘴鵙配色 |
 | `wigeon` | `1` 赤颈鸭配色 |
 | `yapok` | `1` 水鼩配色 |
+| `zebrafish` | `1` 斑马鱼配色 |
+| `tetra` | `1` 脂鲤配色 |
+| `betta` | `1` 斗鱼配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 
