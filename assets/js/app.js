@@ -9,6 +9,8 @@
   let frame=0, latest=null, lastTime=0, lastDigitTime=0, lastPulseSecond=-1, lastPixelTime=0;
   let amountShown=0, amountFrom=0, amountTarget=0, tweenStart=0, tweenDuration=0;
   let lastSignature='', lastFormatted='', lastTemplate='', lastCurrency='', lastPeriod='', lastProgress=0, numDecimals=2;
+  let milestoneDay='', milestonesHit=new Set();
+  const MILESTONE_MSG={10:'一杯蜜雪冰城到手',20:'一顿早饭钱有了',50:'一顿像样的外卖',100:'一张电影票',200:'一顿火锅',500:'一双球鞋',1000:'一次周末短途'};
   let digitSlots=[], numberShape='', compactDivisor=1, compactUnit='';
   let canvasWidth=0,canvasHeight=0,canvasRatio=1,chartPlan=null,planKey='';
   let audioContext=null, audioReady=false, focusMode=false, fitKey='';
@@ -142,6 +144,13 @@
     const p=clamp(data.progress);
     if(p>=1&&lastProgress<1&&data.snapshot&&data.snapshot.todayEarned>0&&!motion.matches&&!confettiDisabled&&!window.__noConfetti)confettiBurst();
     lastProgress=p;
+    const ml=window.__milestones===undefined?[10,20,50,100,200,500,1000]:window.__milestones;
+    if(ml.length&&data.snapshot&&data.working){
+      const dk=data.snapshot.dayKey;
+      if(dk!==milestoneDay){milestoneDay=dk;milestonesHit=new Set();}
+      const earn=data.snapshot.todayEarned||0;
+      for(const m of ml){if(earn>=m&&!milestonesHit.has(m)){milestonesHit.add(m);toast('已入账 '+(data.symbol||'¥')+trimNumber(m,0)+(MILESTONE_MSG[m]?' · '+MILESTONE_MSG[m]:''));break;}}
+    }
     setText('chargePercent',(p*100).toFixed(1)+'%');
     setText('pigPercent',(p*100).toFixed(1)+'%');
     setText('neonPercent',(p*100).toFixed(1)+'%');

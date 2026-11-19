@@ -179,6 +179,22 @@
     if (params.get('confetti') === '0') window.__noConfetti = true;
 
     if (params.get('keys') === '0') window.__noKeys = true;
+    var msParam = params.get('milestone');
+    if (msParam !== null) {
+      window.__milestones = (msParam === '0' || msParam === '') ? []
+        : msParam.split(',').map(Number).filter(function (n) { return n > 0 && n < 1e12; }).slice(0, 50);
+    }
+    if (params.get('light') === '1') document.body.dataset.light = '1';
+    else if (params.get('light') === '0') delete document.body.dataset.light;
+    else { try { if (localStorage.getItem('salaryFlow.light') === '1') document.body.dataset.light = '1'; } catch (e) {} }
+    window.__toggleLight = function () {
+      var on = document.body.dataset.light !== '1';
+      if (on) document.body.dataset.light = '1'; else delete document.body.dataset.light;
+      try { localStorage.setItem('salaryFlow.light', on ? '1' : '0'); } catch (e) {}
+      var tmc = document.querySelector('meta[name=theme-color]');
+      if (tmc) tmc.setAttribute('content', getComputedStyle(document.body).getPropertyValue('--bg').trim());
+      if (window.SalaryApp && window.SalaryApp.toast) window.SalaryApp.toast(on ? '浅色模式' : '深色模式');
+    };
 
     var QUOTES = ['打工不摸鱼，不如回家种地','今天的砖，格外烫手','薪尽自然凉','只要我够快，贫穷就追不上我','上班如上坟，下班如过年','人在工位坐，薪从秒上跳','摸鱼是打工人的浪漫','卷不动的时候，就看看余额'];
     var quoteCustom = params.get('quote');
@@ -327,6 +343,8 @@
     } else if (e.key === 'm') {
       var sb = document.getElementById('soundButton');
       if (sb) sb.click();
+    } else if (e.key === 'l') {
+      if (window.__toggleLight) window.__toggleLight();
     }
   });
 
@@ -406,6 +424,14 @@
       if (window.__avgSalary) u.searchParams.set('avg', String(window.__avgSalary));
       var petNow = params.get('pet'); if (petNow) u.searchParams.set('pet', petNow.slice(0, 12));
       if (window.__decimals && window.__decimals !== 2) u.searchParams.set('dec', String(window.__decimals));
+      var em = params.get('emoji'); if (em) u.searchParams.set('emoji', em.slice(0, 4));
+      var qc = params.get('quote'); if (qc) u.searchParams.set('quote', qc.slice(0, 40));
+      var rt = params.get('rate'); if (rt) u.searchParams.set('rate', rt);
+      if (window.__clock12) u.searchParams.set('clock', '12');
+      if (window.__noKeys) u.searchParams.set('keys', '0');
+      if (window.__noConfetti) u.searchParams.set('confetti', '0');
+      if (window.__milestones) u.searchParams.set('milestone', window.__milestones.length ? window.__milestones.join(',') : '0');
+      if (document.body.dataset.light === '1') u.searchParams.set('light', '1');
       var text = u.toString();
       (navigator.clipboard ? navigator.clipboard.writeText(text) : Promise.reject())
         .then(function () { btn.textContent = '已复制 ✓'; setTimeout(function(){ btn.textContent='复制当前链接'; }, 1500); })

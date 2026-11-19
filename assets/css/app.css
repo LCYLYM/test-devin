@@ -778,3 +778,15 @@ body[data-template=wave]{--bg:#0b1526}
 
 /* iter-199: 打工人语录 */
 .quote-line{flex-basis:100%;text-align:center;font-size:11px;color:var(--dim,#666);letter-spacing:.5px;margin-top:4px}
+
+/* iter-209: light mode via ?light=1 / 'l' key */
+body[data-light]{color-scheme:light;--bg:#f4f3ef;--surface:#ffffff;--surface-2:#eceae4;--line:#d8d5cc;--text:#23262a;--muted:#64686d;--dim:#9a9ea3}
+body[data-light] .template-switch{background:#e9e7e0;border-color:#d4d1c8}
+body[data-light] .template-slider{background:#fff;box-shadow:0 1px 4px #0002}
+body[data-light] .template-switch button{color:#7b7f83}
+body[data-light] .demo-banner{background:#fdf6e4;border-color:#e5d5a8;color:#8a6a20}
+body[data-light] .demo-banner button{color:#96721f}
+body[data-light] .salary-form input:focus{background:#fff;outline-color:#c9c4b6}
+body[data-light] .salary-form input:hover{border-bottom-color:#c9c4b6}
+body[data-light] .salary-currency{color:#55595e}
+body[data-light] .icon-btn:hover{background:var(--surface-2)}
