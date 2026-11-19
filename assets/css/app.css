@@ -1149,6 +1149,9 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .payday.cof{color:#d4a373}
 .payday.yp{color:#c4b5fd}
 .payday.syn{color:#fda4af}
+.payday.brk{color:#7dd3fc}
+.is-blind{background-image:repeating-linear-gradient(180deg,rgba(15,23,42,.35) 0 18px,rgba(148,163,184,.05) 18px 36px)}
+.is-ink{background-image:radial-gradient(circle at 20% 30%,rgba(15,23,42,.4) 0 120px,transparent 200px),radial-gradient(circle at 80% 70%,rgba(15,23,42,.35) 0 100px,transparent 180px),radial-gradient(circle at 60% 15%,rgba(30,41,59,.3) 0 80px,transparent 140px)}
 .is-frost .instrument{border:2px solid rgba(186,230,253,.35);box-shadow:inset 0 0 30px rgba(186,230,253,.08)}
 .is-arg{background-image:repeating-linear-gradient(45deg,rgba(148,163,184,.07) 0 2px,transparent 2px 26px),repeating-linear-gradient(-45deg,rgba(148,163,184,.07) 0 2px,transparent 2px 26px)}
 .is-zeb{background-image:repeating-linear-gradient(-45deg,rgba(148,163,184,.08) 0 14px,transparent 14px 28px)}

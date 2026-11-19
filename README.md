@@ -344,6 +344,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `syn` | `1` 星期综合征徽章 |
 | `frost` | `1` 冰霜边框 |
 | `arg` | `1` 菱格纹背景 |
+| `brk` | `1` 连续工时休息建议徽章 |
+| `blind` | `1` 百叶窗横条 |
+| `ink` | `1` 墨迹晕染背景 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 

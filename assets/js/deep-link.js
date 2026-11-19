@@ -2193,6 +2193,27 @@
     if (params.get('arg') === '1') {
       document.body.classList.add('is-arg');
     }
+    if (params.get('brk') === '1') {
+      var brb = document.getElementById('brkBadge'), brv = document.getElementById('brkVal');
+      if (brb && brv) {
+        var brUpd = function () {
+          var st = window.SalaryApp && window.SalaryApp.getState && window.SalaryApp.getState();
+          var w = st && st.snapshot && st.snapshot.workSecondsToday;
+          if (w != null) {
+            var h = w / 3600;
+            brv.textContent = h >= 4 ? '连续 ' + h.toFixed(1) + 'h — 该休息了' : '连续 ' + h.toFixed(1) + 'h';
+            brb.hidden = false;
+          }
+        };
+        brUpd(); setInterval(brUpd, 30000);
+      }
+    }
+    if (params.get('blind') === '1') {
+      document.body.classList.add('is-blind');
+    }
+    if (params.get('ink') === '1') {
+      document.body.classList.add('is-ink');
+    }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -2779,6 +2800,9 @@
       if (params.get('syn') === '1') u.searchParams.set('syn', '1');
       if (params.get('frost') === '1') u.searchParams.set('frost', '1');
       if (params.get('arg') === '1') u.searchParams.set('arg', '1');
+      if (params.get('brk') === '1') u.searchParams.set('brk', '1');
+      if (params.get('blind') === '1') u.searchParams.set('blind', '1');
+      if (params.get('ink') === '1') u.searchParams.set('ink', '1');
       if (params.get('tile') === '1') u.searchParams.set('tile', '1');
       if (params.get('outline') === '1') u.searchParams.set('outline', '1');
       if (params.get('stripe') === '1') u.searchParams.set('stripe', '1');
