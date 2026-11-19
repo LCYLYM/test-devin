@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><link rel="stylesheet" href="./assets/css/app.css">
+  
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#131415">
+  <title>薪动 · 每一秒，都算数 — 实时工资秒表</title>
+  <meta name="description" content="薪动是一个免费的实时工资计算器：输入月薪，看着收入按秒跳动。支持中国大陆节假日、自定义排班、加班时薪、多币种换算与分享海报。数据只存本地，无需注册。">
+  <meta name="keywords" content="工资计算器,实时工资,每秒工资,月薪计算,时薪计算,加班计算器,薪动,摸鱼计算器,salary calculator,work pay tracker">
+  <meta name="author" content="生鱼安乐">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <link rel="canonical" href="https://xd.syal.site/">
+  <link rel="icon" href="./assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="./assets/img/piggy.webp">
+  <link rel="manifest" href="./site.webmanifest">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="薪动">
+  <meta property="og:title" content="薪动 · 每一秒，都算数">
+  <meta property="og:description" content="输入月薪，看着收入按秒跳动。免费、无需注册、数据只存本地。">
+  <meta property="og:url" content="https://xd.syal.site/">
+  <meta property="og:image" content="https://xd.syal.site/assets/img/og.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="zh_CN">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="薪动 · 每一秒，都算数">
+  <meta name="twitter:description" content="输入月薪，看着收入按秒跳动。免费、无需注册、数据只存本地。">
+  <meta name="twitter:image" content="https://xd.syal.site/assets/img/og.jpg">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "薪动",
+    "alternateName": "薪动 · 每一秒，都算数",
+    "url": "https://xd.syal.site/",
+    "description": "免费的实时工资计算器：按工作日分摊月薪，收入按秒跳动。支持中国大陆节假日、自定义排班、加班时薪与多币种换算。",
+    "applicationCategory": "FinanceApplication",
+    "operatingSystem": "Any",
+    "inLanguage": "zh-CN",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "CNY" },
+    "author": { "@type": "Person", "name": "生鱼安乐", "url": "https://github.com/LCYLYM" }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "薪动是什么？", "acceptedAnswer": { "@type": "Answer", "text": "薪动是一个免费的实时工资可视化工具。输入月薪后，它按你的实际工作日把收入分摊到每一秒，让你在工作时间内看着收入实时增长。" } },
+      { "@type": "Question", "name": "每秒工资是怎么算的？", "acceptedAnswer": { "@type": "Answer", "text": "日薪 = 月薪 ÷ 当月实际工作日；秒薪 = 日薪 ÷ 每天工作秒数。默认工作时段为 09:00–12:00 和 13:30–18:00，共 7.5 小时，可自定义。" } },
+      { "@type": "Question", "name": "我的工资数据会上传到服务器吗？", "acceptedAnswer": { "@type": "Answer", "text": "不会。所有数据只保存在你浏览器的本地存储中，不上传、不需要注册账号。" } },
+      { "@type": "Question", "name": "支持节假日和调休吗？", "acceptedAnswer": { "@type": "Answer", "text": "内置 2025、2026 年中国大陆法定节假日与调休补班安排，自动扣除节假日、加入补班日；也支持固定双休或自定义每周排班。" } },
+      { "@type": "Question", "name": "可以把收入换算成其他货币吗？", "acceptedAnswer": { "@type": "Answer", "text": "可以。内置多种货币的汇率换算（Frankfurter 汇率源），还有一个“津巴布韦亿万富翁”趣味模式，让每秒的收入按亿跳动。" } }
+    ]
+  }
+  </script>
+</head>
+<body data-template="charge">
+<!--
+ISC License
+
+Copyright (c) 2026 Lucide Icons and Contributors
+
+Permission to use, copy, modify, and/or distribute this software for any
+purpose with or without fee is hereby granted, provided that the above
+copyright notice and this permission notice appear in all copies.
+
+THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
+ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
+ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
+OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+
+---
+
+The following Lucide icons are derived from the Feather project:
+
+airplay, alert-circle, alert-octagon, alert-triangle, aperture, arrow-down-circle, arrow-down-left, arrow-down-right, arrow-down, arrow-left-circle, arrow-left, arrow-right-circle, arrow-right, arrow-up-circle, arrow-up-left, arrow-up-right, arrow-up, at-sign, calendar, cast, check, chevron-down, chevron-left, chevron-right, chevron-up, chevrons-down, chevrons-left, chevrons-right, chevrons-up, circle, clipboard, clock, code, columns, command, compass, corner-down-left, corner-down-right, corner-left-down, corner-left-up, corner-right-down, corner-right-up, corner-up-left, corner-up-right, crosshair, database, divide-circle, divide-square, dollar-sign, download, external-link, feather, frown, hash, headphones, help-circle, info, italic, key, layout, life-buoy, link-2, link, loader, lock, log-in, log-out, maximize, meh, minimize, minimize-2, minus-circle, minus-square, minus, monitor, moon, more-horizontal, more-vertical, move, music, navigation-2, navigation, octagon, pause-circle, percent, plus-circle, plus-square, plus, power, radio, rss, search, server, share, shopping-bag, sidebar, smartphone, smile, square, table-2, tablet, target, terminal, trash-2, trash, triangle, tv, type, upload, x-circle, x-octagon, x-square, x, zoom-in, zoom-out
+
+The MIT License (MIT) (for the icons listed above)
+
+Copyright (c) 2013-present Cole Bemis
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+-->
+<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden"><defs>
+<symbol id="icon-arrow-down-up" viewBox="0 0 24 24"><path d="m3 16 4 4 4-4"></path>
+  <path d="M7 20V4"></path>
+  <path d="m21 8-4-4-4 4"></path>
+  <path d="M17 4v16"></path>
+</symbol>
+<symbol id="icon-battery-charging" viewBox="0 0 24 24"><path d="m11 7-3 5h4l-3 5"></path>
+  <path d="M14.856 6H16a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2h-2.935"></path>
+  <path d="M22 14v-4"></path>
+  <path d="M5.14 18H4a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h2.936"></path>
+</symbol>
+<symbol id="icon-calendar-days" viewBox="0 0 24 24"><path d="M8 2v3"></path>
+  <path d="M16 2v3"></path>
+  <rect x="3" y="3" width="18" height="18" rx="2"></rect>
+  <path d="M3 9h18"></path>
+  <path d="M8 13h.01"></path>
+  <path d="M12 13h.01"></path>
+  <path d="M16 13h.01"></path>
+  <path d="M8 17h.01"></path>
+  <path d="M12 17h.01"></path>
+  <path d="M16 17h.01"></path>
+</symbol>
+<symbol id="icon-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"></path>
+</symbol>
+<symbol id="icon-chevron-down" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"></path>
+</symbol>
+<symbol id="icon-chevron-left" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"></path>
+</symbol>
+<symbol id="icon-chevron-right" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"></path>
+</symbol>
+<symbol id="icon-circle-question-mark" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle>
+  <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+  <path d="M12 17h.01"></path>
+</symbol>
+<symbol id="icon-clock-3" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle>
+  <path d="M12 6v6h4"></path>
+</symbol>
+<symbol id="icon-coins" viewBox="0 0 24 24"><path d="M13.744 17.736a6 6 0 1 1-7.48-7.48"></path>
+  <path d="M15 6h1v4"></path>
+  <path d="m6.134 14.768.866-.5 2 3.464"></path>
+  <circle cx="16" cy="8" r="6"></circle>
+</symbol>
+<symbol id="icon-eye-off" viewBox="0 0 24 24"><path d="M10.733 5.076a10.744 10.744 0 0 1 11.205 6.575 1 1 0 0 1 0 .696 10.747 10.747 0 0 1-1.444 2.49"></path>
+  <path d="M14.084 14.158a3 3 0 0 1-4.242-4.242"></path>
+  <path d="M17.479 17.499a10.75 10.75 0 0 1-15.417-5.151 1 1 0 0 1 0-.696 10.75 10.75 0 0 1 4.446-5.143"></path>
+  <path d="m2 2 20 20"></path>
+</symbol>
+<symbol id="icon-eye" viewBox="0 0 24 24"><path d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0"></path>
+  <circle cx="12" cy="12" r="3"></circle>
+</symbol>
+<symbol id="icon-maximize" viewBox="0 0 24 24"><path d="M8 3H5a2 2 0 0 0-2 2v3"></path>
+  <path d="M21 8V5a2 2 0 0 0-2-2h-3"></path>
+  <path d="M3 16v3a2 2 0 0 0 2 2h3"></path>
+  <path d="M16 21h3a2 2 0 0 0 2-2v-3"></path>
+</symbol>
+<symbol id="icon-minimize" viewBox="0 0 24 24"><path d="M8 3v3a2 2 0 0 1-2 2H3"></path>
+  <path d="M21 8h-3a2 2 0 0 1-2-2V3"></path>
+  <path d="M3 16h3a2 2 0 0 1 2 2v3"></path>
+  <path d="M16 21v-3a2 2 0 0 1 2-2h3"></path>
+</symbol>
+<symbol id="icon-minus" viewBox="0 0 24 24"><path d="M5 12h14"></path>
+</symbol>
+<symbol id="icon-pause" viewBox="0 0 24 24"><rect x="14" y="3" width="5" height="18" rx="1"></rect>
+  <rect x="5" y="3" width="5" height="18" rx="1"></rect>
+</symbol>
+<symbol id="icon-play" viewBox="0 0 24 24"><path d="M5 5a2 2 0 0 1 3.008-1.728l11.997 6.998a2 2 0 0 1 .003 3.458l-12 7A2 2 0 0 1 5 19z"></path>
+</symbol>
+<symbol id="icon-plus" viewBox="0 0 24 24"><path d="M5 12h14"></path>
+  <path d="M12 5v14"></path>
+</symbol>
+<symbol id="icon-rotate-ccw" viewBox="0 0 24 24"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"></path>
+  <path d="M3 3v5h5"></path>
+</symbol>
+<symbol id="icon-settings-2" viewBox="0 0 24 24"><path d="M14 17H5"></path>
+  <path d="M19 7h-9"></path>
+  <circle cx="17" cy="17" r="3"></circle>
+  <circle cx="7" cy="7" r="3"></circle>
+</symbol>
+<symbol id="icon-sliders-horizontal" viewBox="0 0 24 24"><path d="M10 5H3"></path>
+  <path d="M12 19H3"></path>
+  <path d="M14 3v4"></path>
+  <path d="M16 17v4"></path>
+  <path d="M21 12h-9"></path>
+  <path d="M21 19h-5"></path>
+  <path d="M21 5h-7"></path>
+  <path d="M8 10v4"></path>
+  <path d="M8 12H3"></path>
+</symbol>
+<symbol id="icon-volume-2" viewBox="0 0 24 24"><path d="M11 4.702a.705.705 0 0 0-1.203-.498L6.413 7.587A1.4 1.4 0 0 1 5.416 8H3a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h2.416a1.4 1.4 0 0 1 .997.413l3.383 3.384A.705.705 0 0 0 11 19.298z"></path>
+  <path d="M16 9a5 5 0 0 1 0 6"></path>
+  <path d="M19.364 18.364a9 9 0 0 0 0-12.728"></path>
+</symbol>
+<symbol id="icon-volume-x" viewBox="0 0 24 24"><path d="M11 4.702a.7.7 0 0 0-1.203-.498L6.413 7.587A1.4 1.4 0 0 1 5.416 8H3a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h2.416a1.4 1.4 0 0 1 .997.413l3.383 3.384A.7.7 0 0 0 11 19.298z"></path>
+  <path d="m16.5 14.5 5-5"></path>
+  <path d="m16.5 9.5 5 5"></path>
+</symbol>
+<symbol id="icon-x" viewBox="0 0 24 24"><path d="M18 6 6 18"></path>
+  <path d="m6 6 12 12"></path>
+</symbol>
+<symbol id="icon-zap" viewBox="0 0 24 24"><path d="M15.914 4a1.5 1.5 0 00-2.474-1.561l-9 9A1.5 1.5 0 005.5 14h4.002a.5.5 0 01.471.666L8.086 20a1.5 1.5 0 002.475 1.56l9-9A1.5 1.5 0 0018.5 10h-3.997a.5.5 0 01-.472-.667z"></path>
+</symbol>
+<symbol id="i-spark" viewBox="0 0 24 24"><path d="M15.914 4a1.5 1.5 0 00-2.474-1.561l-9 9A1.5 1.5 0 005.5 14h4.002a.5.5 0 01.471.666L8.086 20a1.5 1.5 0 002.475 1.56l9-9A1.5 1.5 0 0018.5 10h-3.997a.5.5 0 01-.472-.667z"></path>
+</symbol>
+<symbol id="i-arrow" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"></path>
+</symbol>
+<symbol id="i-up" viewBox="0 0 24 24"><path d="m3 16 4 4 4-4"></path>
+  <path d="M7 20V4"></path>
+  <path d="m21 8-4-4-4 4"></path>
+  <path d="M17 4v16"></path>
+</symbol>
+<symbol id="i-down" viewBox="0 0 24 24"><path d="m3 16 4 4 4-4"></path>
+  <path d="M7 20V4"></path>
+  <path d="m21 8-4-4-4 4"></path>
+  <path d="M17 4v16"></path>
+</symbol>
+<symbol id="i-chevron" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"></path>
+</symbol>
+<symbol id="i-chevrondown" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"></path>
+</symbol>
+<symbol id="i-calendar" viewBox="0 0 24 24"><path d="M8 2v3"></path>
+  <path d="M16 2v3"></path>
+  <rect x="3" y="3" width="18" height="18" rx="2"></rect>
+  <path d="M3 9h18"></path>
+  <path d="M8 13h.01"></path>
+  <path d="M12 13h.01"></path>
+  <path d="M16 13h.01"></path>
+  <path d="M8 17h.01"></path>
+  <path d="M12 17h.01"></path>
+  <path d="M16 17h.01"></path>
+</symbol>
+<symbol id="i-sliders" viewBox="0 0 24 24"><path d="M10 5H3"></path>
+  <path d="M12 19H3"></path>
+  <path d="M14 3v4"></path>
+  <path d="M16 17v4"></path>
+  <path d="M21 12h-9"></path>
+  <path d="M21 19h-5"></path>
+  <path d="M21 5h-7"></path>
+  <path d="M8 10v4"></path>
+  <path d="M8 12H3"></path>
+</symbol>
+<symbol id="i-sun" viewBox="0 0 24 24"><path d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0"></path>
+  <circle cx="12" cy="12" r="3"></circle>
+</symbol>
+<symbol id="i-moon" viewBox="0 0 24 24"><path d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0"></path>
+  <circle cx="12" cy="12" r="3"></circle>
+</symbol>
+<symbol id="i-volume" viewBox="0 0 24 24"><path d="M11 4.702a.705.705 0 0 0-1.203-.498L6.413 7.587A1.4 1.4 0 0 1 5.416 8H3a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h2.416a1.4 1.4 0 0 1 .997.413l3.383 3.384A.705.705 0 0 0 11 19.298z"></path>
+  <path d="M16 9a5 5 0 0 1 0 6"></path>
+  <path d="M19.364 18.364a9 9 0 0 0 0-12.728"></path>
+</symbol>
+<symbol id="i-mute" viewBox="0 0 24 24"><path d="M11 4.702a.7.7 0 0 0-1.203-.498L6.413 7.587A1.4 1.4 0 0 1 5.416 8H3a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h2.416a1.4 1.4 0 0 1 .997.413l3.383 3.384A.7.7 0 0 0 11 19.298z"></path>
+  <path d="m16.5 14.5 5-5"></path>
+  <path d="m16.5 9.5 5 5"></path>
+</symbol>
+<symbol id="i-expand" viewBox="0 0 24 24"><path d="M8 3H5a2 2 0 0 0-2 2v3"></path>
+  <path d="M21 8V5a2 2 0 0 0-2-2h-3"></path>
+  <path d="M3 16v3a2 2 0 0 0 2 2h3"></path>
+  <path d="M16 21h3a2 2 0 0 0 2-2v-3"></path>
+</symbol>
+<symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle>
+  <path d="M12 6v6h4"></path>
+</symbol>
+<symbol id="i-coffee" viewBox="0 0 24 24"><path d="M13.744 17.736a6 6 0 1 1-7.48-7.48"></path>
+  <path d="M15 6h1v4"></path>
+  <path d="m6.134 14.768.866-.5 2 3.464"></path>
+  <circle cx="16" cy="8" r="6"></circle>
+</symbol>
+<symbol id="i-close" viewBox="0 0 24 24"><path d="M18 6 6 18"></path>
+  <path d="m6 6 12 12"></path>
+</symbol>
+<symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"></path>
+</symbol>
+<symbol id="i-plus" viewBox="0 0 24 24"><path d="M5 12h14"></path>
+  <path d="M12 5v14"></path>
+</symbol>
+<symbol id="i-minus" viewBox="0 0 24 24"><path d="M5 12h14"></path>
+</symbol>
+<symbol id="i-refresh" viewBox="0 0 24 24"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"></path>
+  <path d="M3 3v5h5"></path>
+</symbol>
+<symbol id="i-heart" viewBox="0 0 24 24"><path d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0"></path>
+  <circle cx="12" cy="12" r="3"></circle>
+</symbol>
+<symbol id="i-play" viewBox="0 0 24 24"><path d="M5 5a2 2 0 0 1 3.008-1.728l11.997 6.998a2 2 0 0 1 .003 3.458l-12 7A2 2 0 0 1 5 19z"></path>
+</symbol>
+<symbol id="i-stop" viewBox="0 0 24 24"><rect x="14" y="3" width="5" height="18" rx="1"></rect>
+  <rect x="5" y="3" width="5" height="18" rx="1"></rect>
+</symbol>
+<symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle>
+  <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+  <path d="M12 17h.01"></path>
+</symbol>
+<symbol id="i-leaf" viewBox="0 0 24 24"><path d="m11 7-3 5h4l-3 5"></path>
+  <path d="M14.856 6H16a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2h-2.935"></path>
+  <path d="M22 14v-4"></path>
+  <path d="M5.14 18H4a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h2.936"></path>
+</symbol>
+<symbol id="i-wallet" viewBox="0 0 24 24"><path d="M13.744 17.736a6 6 0 1 1-7.48-7.48"></path>
+  <path d="M15 6h1v4"></path>
+  <path d="m6.134 14.768.866-.5 2 3.464"></path>
+  <circle cx="16" cy="8" r="6"></circle>
+</symbol>
+<symbol id="i-coin" viewBox="0 0 24 24"><path d="M13.744 17.736a6 6 0 1 1-7.48-7.48"></path>
+  <path d="M15 6h1v4"></path>
+  <path d="m6.134 14.768.866-.5 2 3.464"></path>
+  <circle cx="16" cy="8" r="6"></circle>
+</symbol></defs></svg>
+
+
+<div class="page-shell">
+  <header class="app-header">
+    <a class="brand" href="https://xd.syal.site/#" aria-label="薪动首页"><svg class="icon brand-icon"><use href="#icon-zap"></use></svg><span>薪动</span></a>
+    <div class="template-switch" role="group" aria-label="切换显示模板"><span class="template-slider" id="templateSlider" style="width: 78px; transform: translateX(0px);"></span><button data-template="charge" class="selected" aria-pressed="true">充电</button><button data-template="meter" aria-pressed="false">刻度</button><button data-template="pixel" aria-pressed="false">像素</button><button data-template="pig" aria-pressed="false">存钱罐</button></div>
+    <div class="header-tools"><button class="share-button" id="shareButton">分享战绩 <svg class="icon"><use href="#icon-chevron-right"></use></svg></button><button class="icon-btn" data-open="settingsDialog" title="工作时间与排班" aria-label="工作时间与排班"><svg class="icon"><use href="#icon-settings-2"></use></svg></button></div>
+  </header>
+
+  <main>
+    <div class="utility-row"><form id="salaryForm" class="salary-form"><label for="salaryInput">月薪</label><span class="salary-currency">¥</span><input id="salaryInput" type="number" inputmode="decimal" min="1" max="1000000000" step="0.01" value="15000" aria-describedby="salaryHint" aria-label="人民币月薪"><button type="submit" class="icon-btn apply-salary" aria-label="应用月薪" title="应用月薪"><svg class="icon"><use href="#icon-check"></use></svg></button><span id="salaryHint" class="sr-only">已保存 · 收入按你的实际工作日分摊</span></form><div class="utility-right"><button class="date-button" data-open="calendarDialog" title="查看工作日历"><svg class="icon"><use href="#icon-calendar-days"></use></svg><span id="currentDate">11月18日 · 周三</span></button><span class="utility-divider"></span><time id="currentTime">18:21:29</time><span class="time-zone" id="timezoneLabel" hidden=""></span></div></div>
+    <div class="demo-banner" id="demoBanner" hidden=""><span><svg class="icon"><use href="#icon-play"></use></svg><b>体验模式</b> · 模拟工作日 14:30，20 倍时间</span><button id="exitDemo">回到现在 <svg class="icon"><use href="#icon-x"></use></svg></button></div>
+
+    <section class="instrument entrance" id="earningsCard" aria-label="实时工资仪表">
+      <div class="instrument-toolbar"><div class="period-tabs" role="group" aria-label="收入周期"><span id="periodSlide" class="period-slide" style="transform: translateX(0px); width: 52px;"></span><button id="periodDay" class="selected" data-period="day" aria-pressed="true">今日已赚</button><button id="periodMonth" data-period="month" aria-pressed="false">本月累计</button></div><div class="currency-actions"><button class="rich-shortcut" id="richQuickButton" aria-pressed="false"><svg class="icon"><use href="#icon-zap"></use></svg><span>亿万富翁</span></button><button class="currency-pill" data-open="currencyDialog"><span id="currencyMark" class="currency-code">¥</span><span id="currencyName">人民币</span><svg class="icon"><use href="#icon-chevron-down"></use></svg></button></div></div>
+      <div class="instrument-body">
+        <div class="value-cluster"><div class="hero-status"><span id="statusDot" class="status-dot paused"></span><span id="workingStatus">今日已收工</span><span class="sample-badge" id="sampleBadge" hidden="">示例月薪</span><span class="fun-badge" id="funBadge" hidden="">趣味倍率</span></div><div class="amount-area" id="amountArea" aria-label="¥ 190.48" title="¥ 190.48"><span class="money-symbol" id="moneySymbol">¥</span><div class="odometer" id="earningsNumber" aria-label="190.48"><span class="digit-slot" aria-hidden="true"><span class="digit-inner" style="transform: translateY(-11.88em);"><span>0</span><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span><span>0</span><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span><span>0</span><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span></span></span><span class="digit-slot" aria-hidden="true"><span class="digit-inner" style="transform: translateY(-20.52em);"><span>0</span><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span><span>0</span><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span><span>0</span><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span></span></span><span class="digit-slot" aria-hidden="true"><span class="digit-inner" style="transform: translateY(-10.8em);"><span>0</span><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span><span>0</span><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span><span>0</span><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span></span></span><span class="num-mark small">.</span><span class="digit-slot small" aria-hidden="true"><span class="digit-inner" style="transform: translateY(-15.12em);"><span>0</span><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span><span>0</span><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span><span>0</span><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span></span></span><span class="digit-slot small" aria-hidden="true"><span class="digit-inner" style="transform: translateY(-19.44em);"><span>0</span><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span><span>0</span><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span><span>0</span><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span></span></span></div><span class="money-unit" id="moneyUnit"></span></div><div class="income-caption"><span class="rate-pill" id="ratePill"><svg class="icon"><use href="#icon-zap"></use></svg><span id="perSecond">暂停入账</span></span><span id="incomeCaption">今日工作时段已结束</span></div><div class="fun-conversion" id="funConversion" hidden=""></div></div>
+
+        <div class="energy-stage" id="energyStage">
+          <div class="charge-visual" aria-hidden="true"><div class="charge-capsule"><div class="charge-track"><div class="charge-fill" id="heroProgressFill" style="width: 100%;"><span class="charge-stream"></span><span class="charge-stream delayed"></span></div><div class="charge-head" id="chargeHead" style="left: 100%;"><svg class="icon"><use href="#icon-zap"></use></svg><span id="chargePercent">100.0%</span></div></div><span class="charge-terminal"></span></div></div>
+          <div class="meter-visual" aria-hidden="true"><div class="meter-ruler"><span>0</span><span>50</span><span>100</span></div><div class="segment-bars" id="segmentBars"><span class="segment-bar"><span style="height: 100%;"></span></span><span class="segment-bar"><span style="height: 100%;"></span></span><span class="segment-bar"><span style="height: 100%;"></span></span><span class="segment-bar"><span style="height: 100%;"></span></span><span class="segment-bar"><span style="height: 100%;"></span></span><span class="segment-bar"><span style="height: 100%;"></span></span><span class="segment-bar"><span style="height: 100%;"></span></span><span class="segment-bar"><span style="height: 100%;"></span></span><span class="segment-bar"><span style="height: 100%;"></span></span><span class="segment-bar"><span style="height: 100%;"></span></span><span class="segment-bar"><span style="height: 100%;"></span></span><span class="segment-bar"><span style="height: 100%;"></span></span><span class="segment-bar"><span style="height: 100%;"></span></span><span class="segment-bar"><span style="height: 100%;"></span></span><span class="segment-bar"><span style="height: 100%;"></span></span><span class="segment-bar"><span style="height: 100%;"></span></span><span class="segment-bar"><span style="height: 100%;"></span></span><span class="segment-bar"><span style="height: 100%;"></span></span><span class="segment-bar"><span style="height: 100%;"></span></span><span class="segment-bar"><span style="height: 100%;"></span></span><span class="segment-bar"><span style="height: 100%;"></span></span><span class="segment-bar"><span style="height: 100%;"></span></span><span class="segment-bar"><span style="height: 100%;"></span></span><span class="segment-bar"><span style="height: 100%;"></span></span><span class="segment-bar"><span style="height: 100%;"></span></span><span class="segment-bar"><span style="height: 100%;"></span></span><span class="segment-bar"><span style="height: 100%;"></span></span><span class="segment-bar"><span style="height: 100%;"></span></span><span class="segment-bar"><span style="height: 100%;"></span></span><span class="segment-bar"><span style="height: 100%;"></span></span><span class="segment-bar"><span style="height: 100%;"></span></span><span class="segment-bar"><span style="height: 100%;"></span></span><span class="segment-bar"><span style="height: 100%;"></span></span><span class="segment-bar"><span style="height: 100%;"></span></span><span class="segment-bar"><span style="height: 100%;"></span></span><span class="segment-bar"><span style="height: 100%;"></span></span><span class="segment-bar"><span style="height: 100%;"></span></span><span class="segment-bar"><span style="height: 100%;"></span></span><span class="segment-bar"><span style="height: 100%;"></span></span><span class="segment-bar is-active"><span style="height: 100%;"></span></span></div><div class="meter-caption"><span id="meterChargeLabel">工作时段内累计</span><span class="tiny-signal"><i></i><i></i><i></i></span></div></div>
+          <div class="pig-visual"><div class="pig-object"><img id="piggyImage" class="piggy-image" src="./assets/img/piggy.webp" alt="粉色陶瓷猪猪存钱罐"><img id="pigCoin" class="pig-coin" src="./assets/img/piggy.webp" alt="" aria-hidden="true"><div class="pig-deposit" id="pigDeposit" aria-hidden="true">+ ¥0.01</div></div><div class="pig-note"><span>一点一点，存起来。</span><b id="pigPercent">100.0%</b></div></div>
+          <div class="pixel-visual"><div class="pixel-heading"><span id="pixelTitle">今天的积累</span><span class="pixel-key"><i></i>已赚 <i></i>待完成</span></div><canvas id="pixelCanvas" width="640" height="310" aria-label="按工作时段计算的累计收入像素图"></canvas><div class="pixel-axis" id="pixelAxis"><span>09:00</span><span>12:00</span><span>13:30</span><span>18:00</span></div></div>
+        </div>
+      </div>
+      <div class="instrument-footer"><div class="progress-info" id="heroProgress" role="progressbar" aria-label="收入进度" aria-valuemin="0" aria-valuemax="100" aria-valuenow="100"><span id="progressTitle">今日进度</span><strong id="progressPercent">100.0%</strong><span class="day-target" id="dailyTarget" title="今日目标 ¥190.48 CNY">今日目标 ¥190.48</span></div><div class="clockout"><svg class="icon"><use href="#icon-clock-3"></use></svg><span id="countdownLabel">今日已下班</span><strong id="countdown">00:00:00</strong></div></div>
+    </section>
+
+    <section class="summary-strip entrance" aria-label="薪资摘要"><div class="summary-item"><span>每天值多少</span><strong id="dayRate" title="¥190.48 CNY">¥190.48</strong></div><div class="summary-item"><span>标准时薪</span><strong id="hourRate" title="¥25.40 CNY / h">¥25.40 / h</strong></div><button class="summary-item summary-month" id="monthSummaryButton" title="切换到本月收入"><span>本月已赚<span id="monthLabel" hidden="">2026 年 11 月</span></span><strong id="monthEarned" title="¥2,476.19 CNY">¥2,476.19</strong><small id="monthGoal" hidden="" title="/ ¥4,000.00 CNY">/ ¥4,000.00</small></button><button class="summary-item summary-calendar" data-open="calendarDialog"><span><svg class="icon"><use href="#icon-calendar-days"></use></svg>工作日历</span><strong id="workdaysLabel">本月 21 个工作日</strong></button></section>
+
+    <details class="overtime-disclosure" id="overtimeDisclosure"><summary><span><svg class="icon"><use href="#icon-clock-3"></use></svg>加班后，每小时还值多少？</span><span class="overtime-summary-value" id="overtimeSummaryValue">展开</span><svg class="icon disclosure-chevron"><use href="#icon-chevron-down"></use></svg></summary><section class="overtime-strip entrance" aria-label="加班时薪模拟"><div class="overtime-simulator"><div class="overtime-control-label"><label for="overtimeRange">每天多加班 <strong id="overtimeValue">0</strong> 小时</label><button class="text-btn" data-open="overtimeDialog" id="overtimeRecordButton"><span id="overtimeRecordLabel">记录加班</span><svg class="icon"><use href="#icon-chevron-right"></use></svg></button></div><input id="overtimeRange" type="range" min="0" max="8" step="0.5" value="0" aria-describedby="overtimeScenarioNote" style="--range-progress: 0%;"><div class="range-ticks"><span>准点下班</span><span>4h</span><span>8h</span></div></div><div class="overtime-result"><div><span>加班后时薪</span><div class="actual-hourly"><strong id="compareActual" title="¥25.40 CNY">¥25.40</strong><span class="loss-badge" id="lossBadge">准点下班</span></div><div class="actual-track"><i id="actualBar" style="width: 100%;"></i></div></div><div class="discount-badge"><strong id="discountNumber">10.0</strong><span>折</span></div></div><div class="overtime-extra"><button class="text-btn" id="extraPayToggle">有加班费？<svg class="icon"><use href="#icon-plus"></use></svg></button><span id="overtimeScenarioNote">拖动模拟加班后的时薪</span><div class="extra-pay-field" id="extraPayField" hidden=""><label for="extraPayInput">每天额外（元）</label><input id="extraPayInput" type="number" min="0" max="1000000" step="1" value="0" inputmode="decimal"></div></div><span id="compareStandard" hidden="" title="¥25.40 CNY">¥25.40</span><span id="overtimeImpactNote" hidden="">当前按标准工时计算</span></section></details>
+
+    <div class="bottom-row"><button class="text-btn schedule-link" data-open="settingsDialog"><svg class="icon"><use href="#icon-clock-3"></use></svg><span id="scheduleLabel">09:00–12:00 · 13:30–18:00</span><span class="schedule-hours" id="hoursLabel">每天 7.5 小时</span><svg class="icon"><use href="#icon-chevron-right"></use></svg></button><button class="demo-button" id="demoButton" aria-pressed="false"><svg class="icon" aria-hidden="true"><use href="#icon-play"></use></svg>体验涨薪</button></div>
+    <footer class="app-footer"><span class="save-state"><i></i>仅本地保存</span><div><button class="text-btn" data-open="aboutDialog">计算说明</button><span class="footer-dot">·</span><button class="icon-btn" id="soundButton" title="开启收入音效" aria-label="开启收入音效" aria-pressed="false"><svg class="icon" aria-hidden="true"><use href="#icon-volume-x"></use></svg></button><button class="icon-btn fullscreen-button" id="fullscreenButton" title="全屏沉浸" aria-label="全屏沉浸"><svg class="icon"><use href="#icon-maximize"></use></svg></button><button class="text-btn" id="focusButton"><svg class="icon"><use href="#icon-eye"></use></svg>专注模式</button></div><a class="syal-back" href="https://tool.syal.site/" aria-label="返回工具桌">← 工具桌</a><span class="syal-credit">©️ <a href="https://github.com/LCYLYM" target="_blank" rel="noopener noreferrer">生鱼安乐</a></span></footer>
+
+    <section class="seo-faq" aria-label="常见问题">
+      <h2>常见问题</h2>
+      <details><summary>薪动是什么？</summary><p>薪动是一个免费的实时工资可视化工具。输入月薪后，它按你的实际工作日把收入分摊到每一秒，让你在工作时间内看着收入实时增长。</p></details>
+      <details><summary>每秒工资是怎么算的？</summary><p>日薪 = 月薪 ÷ 当月实际工作日；秒薪 = 日薪 ÷ 每天工作秒数。默认工作时段 09:00–12:00、13:30–18:00，共 7.5 小时，可在「工作时间与排班」里自定义。</p></details>
+      <details><summary>我的工资数据会上传到服务器吗？</summary><p>不会。所有数据只保存在你浏览器的本地存储中，不上传、不需要注册账号。</p></details>
+      <details><summary>支持节假日和调休吗？</summary><p>内置 2025、2026 年中国大陆法定节假日与调休补班，自动扣除节假日、加入补班日；也支持固定双休或自定义每周排班。</p></details>
+      <details><summary>可以换算成其他货币吗？</summary><p>可以。内置多种货币汇率换算（Frankfurter 汇率源），还有「津巴布韦 · 亿万富翁」趣味模式，让每秒收入按亿跳动。</p></details>
+    </section>
+  </main>
+</div>
+<div class="controller-compatibility" hidden="" aria-hidden="true"><div id="monthChart"></div><span id="monthWorkdays">已走过 13 个工作日</span><span id="monthRemaining">还有 8 天</span><span id="goalCount"></span><span id="goalUnit"></span><span id="goalNext"></span><span id="goalFill"></span><span id="goalPrice"></span><span id="goalRemaining"></span></div>
+
+<dialog id="shareDialog" aria-labelledby="shareTitle">
+  <div class="dialog-body">
+    <div class="dialog-heading"><div><h2 id="shareTitle">把这一秒，分享出去。</h2><p class="share-intro">生成一张今天的收入海报。</p></div><button type="button" class="icon-btn close-dialog" id="shareClose" aria-label="关闭分享"><svg class="icon" aria-hidden="true"><use href="#icon-x"></use></svg></button></div>
+    <div class="share-layout">
+      <div class="share-preview-wrap"><canvas id="shareCanvas" width="1080" height="1440" aria-label="今日收入分享海报预览"></canvas><span class="share-resolution">1080 × 1440 · PNG</span></div>
+      <div class="share-options">
+        <fieldset class="share-captions"><legend>选一句今天的心情</legend><label><input type="radio" name="shareCaption" value="每秒都算数" checked=""><span>每秒都算数</span></label><label><input type="radio" name="shareCaption" value="上班，是另一种充电"><span>上班，是另一种充电</span></label><label><input type="radio" name="shareCaption" value="今天的努力，到账了"><span>今天的努力，到账了</span></label></fieldset>
+        <label class="share-check"><input type="checkbox" id="shareIncludeSalary"><span>在海报和文案中显示具体月薪</span></label>
+        <div class="share-field"><label for="shareQrMode">二维码内容</label><select id="shareQrMode"><option value="text">文字战绩 · 扫码查看收入文案</option><option value="link">网页链接 · 邀请朋友来试试</option><option value="none">不放二维码</option></select><p class="field-help" id="shareLocalNote" hidden="">本地文件没有公共网址；文字二维码可直接查看今日战绩。</p></div>
+        <div class="share-field" id="shareLinkField" hidden=""><label for="shareUrl">网页链接 <span>可选</span></label><input id="shareUrl" type="url" inputmode="url" maxlength="1000" autocomplete="off" spellcheck="false" placeholder="粘贴部署后的网页链接（可选）"><p class="field-help" id="shareLinkHint"></p><p class="form-error" id="shareUrlError" role="status"></p></div>
+        <p class="share-snapshot-note" id="shareSnapshotNote"></p>
+        <div class="share-actions"><button type="button" class="primary-button" id="savePoster">保存高清海报</button><button type="button" class="secondary-button" id="nativeSharePoster">分享图片</button><button type="button" class="secondary-button" id="copyPosterCaption">复制文案</button></div>
+        <p id="shareResult" class="field-help" role="status" aria-live="polite"></p>
+        <textarea id="shareCopyFallback" class="share-copy-fallback" aria-label="可复制的分享文案" readonly="" hidden=""></textarea>
+      </div>
+    </div>
+  </div>
+</dialog>
+
+  <dialog id="settingsDialog" class="drawer" aria-labelledby="settingsTitle"><form id="settingsForm" class="dialog-body"><div class="dialog-heading"><div><div class="eyebrow">MAKE IT YOURS</div><h2 id="settingsTitle">工作时间与排班</h2></div><button type="button" class="icon-btn close-dialog" aria-label="关闭设置"><svg class="icon"><use href="#i-close"></use></svg></button></div><p class="dialog-subtitle">设好工作日与时段，休息时间自动暂停。</p><div class="settings-section"><h3>哪些日子上班</h3><div class="choice-list"><label><input type="radio" name="calendarMode" value="cn"><span><b>中国大陆节假日</b><small>周一至周五，自动扣除节假日、加入调休补班</small></span></label><label><input type="radio" name="calendarMode" value="weekdays"><span><b>固定双休</b><small>只按周一至周五，不使用节假日安排</small></span></label><label><input type="radio" name="calendarMode" value="custom"><span><b>自定义每周排班</b><small>自由选择每周工作日，单个日期可在日历调整</small></span></label></div><div class="weekday-picker" id="weekdayPicker" hidden=""></div></div><div class="settings-section"><div class="section-heading"><h3>一天的工作时段</h3><span class="muted" id="scheduleTotal">共 7.5 小时</span></div><div id="intervalFields" class="interval-fields"></div><button type="button" class="add-interval text-btn" id="addInterval"><svg class="icon"><use href="#i-plus"></use></svg>添加一个时段</button><p class="field-help">时段之间自动视为休息，收入暂停增长。</p></div><div class="formula-note"><svg class="icon"><use href="#i-info"></use></svg><p>日薪 = 月薪 ÷ 当月实际工作日<br>秒薪 = 日薪 ÷ 每天工作秒数</p></div><p class="form-error" id="settingsError" role="alert"></p><div class="dialog-actions"><button class="secondary-button" type="button" id="restoreSchedule">恢复默认作息</button><button class="primary-button" type="submit">保存设置 <svg class="icon"><use href="#i-check"></use></svg></button></div></form></dialog>
+
+  <dialog id="calendarDialog" class="modal calendar-modal" aria-labelledby="calendarTitle"><div class="dialog-body"><div class="dialog-heading"><div><div class="eyebrow">YOUR WORKING DAYS</div><h2 id="calendarTitle">工作日历</h2></div><button class="icon-btn close-dialog" aria-label="关闭日历"><svg class="icon"><use href="#i-close"></use></svg></button></div><div class="calendar-toolbar"><button class="icon-btn" id="previousMonth" aria-label="上个月"><svg class="icon rotate180"><use href="#i-chevron"></use></svg></button><strong id="calendarMonthTitle"></strong><button class="icon-btn" id="nextMonth" aria-label="下个月"><svg class="icon"><use href="#i-chevron"></use></svg></button><button class="text-btn" id="calendarToday">本月</button></div><div class="calendar-summary" id="calendarSummary"></div><div class="calendar-weekdays"><span>一</span><span>二</span><span>三</span><span>四</span><span>五</span><span>六</span><span>日</span></div><div id="calendarGrid" class="calendar-grid"></div><div class="calendar-legend"><span><i class="legend-work"></i>工作日</span><span><i class="legend-rest"></i>休息日</span><span><i class="legend-makeup"></i>补班</span><span><i class="legend-custom"></i>手动调整</span></div><div class="date-inspector" id="dateInspector" hidden=""><div><strong id="selectedDateLabel"></strong><small id="selectedDateInfo"></small></div><div><button class="small-button" data-day-override="work">设为上班</button><button class="small-button" data-day-override="rest">设为休息</button><button class="text-btn" data-day-override="reset">还原</button></div></div><p class="calendar-hint" id="calendarHint">点击任意日期，调整你的实际安排。</p><div class="calendar-source" id="calendarSource"></div></div></dialog>
+
+  <dialog id="currencyDialog" class="modal currency-modal" aria-labelledby="currencyTitle"><div class="dialog-body"><div class="dialog-heading"><div><div class="eyebrow">SAME EFFORT. BIGGER NUMBERS.</div><h2 id="currencyTitle">换个币种，换种心情</h2></div><button class="icon-btn close-dialog" aria-label="关闭币种选择"><svg class="icon"><use href="#i-close"></use></svg></button></div><p class="dialog-subtitle">工资还是那份工资，快乐可以多一点。</p><div id="currencyGrid" class="currency-grid"></div><button class="rich-mode-option" id="richModeOption"><span class="rich-icon"><svg class="icon"><use href="#i-spark"></use></svg></span><span><b>津巴布韦 · 亿万富翁</b><small>旧币灵感的趣味倍率，让每秒几亿地涨</small></span><span class="rich-arrow"><svg class="icon"><use href="#i-arrow"></use></svg></span></button><div class="exchange-info"><div><span id="rateDescription">当前按人民币显示</span><small id="rateSource">无需汇率换算</small></div><button class="icon-btn" id="refreshRates" aria-label="更新汇率" title="更新汇率"><svg class="icon"><use href="#i-refresh"></use></svg></button></div><details class="manual-exchange"><summary>手动设置当前币种的汇率</summary><form id="exchangeForm"><label for="manualRateInput">1 CNY =</label><input type="number" id="manualRateInput" min="0.00000001" max="1000000000000000" step="any" inputmode="decimal"><span id="manualRateCode">CNY</span><button class="small-button" type="submit">应用</button></form><button class="text-btn" id="resetManualRate">恢复默认汇率</button><p class="field-help" id="manualRateHint">自定义汇率仅影响金额展示。</p></details></div></dialog>
+
+  <dialog id="overtimeDialog" class="modal overtime-modal" aria-labelledby="overtimeTitle"><div class="dialog-body"><div class="dialog-heading"><div><div class="eyebrow">KEEP TRACK OF YOUR TIME</div><h2 id="overtimeTitle">加班记录</h2></div><button class="icon-btn close-dialog" aria-label="关闭加班记录"><svg class="icon"><use href="#i-close"></use></svg></button></div><p class="dialog-subtitle">记录的是额外工作时间，用来计算真实投入后的时薪。</p><div class="overtime-live"><span class="live-dot" id="overtimeLiveDot"></span><span id="overtimeLiveStatus">还没有正在进行的加班</span><strong id="overtimeTimer">00:00:00</strong><button class="primary-button" id="overtimeTimerButton"><svg class="icon"><use href="#i-play"></use></svg>开始加班计时</button><small id="overtimeTimerHelp">正常排班时段会自动排除，关掉页面后仍可回来结算。</small></div><div class="record-summary"><div><span>本月已记录</span><strong id="recordHours">0 小时</strong></div><div><span>本月实际时薪</span><strong id="recordActualHourly">¥0.00</strong></div></div><form id="overtimeEntryForm"><h3>补记 / 修改某天</h3><div class="overtime-entry"><label>日期<input type="date" id="overtimeDate" required=""></label><label>额外工作小时<input type="number" id="overtimeHours" min="0" max="24" step="any" value="1" required=""></label><button type="submit" class="small-button">保存</button></div><p class="field-help">同一天再次保存会替换该日记录；填 0 可以清除。</p><p id="overtimeEntryError" class="form-error" role="alert"></p></form><div id="overtimeList" class="overtime-list"></div><p class="field-help">记录按无额外加班费计算。首页滑杆可模拟有加班费的情形。</p></div></dialog>
+
+  <dialog id="goalDialog" class="modal goal-modal" aria-labelledby="goalTitle"><form id="goalForm" class="dialog-body"><div class="dialog-heading"><div><div class="eyebrow">SMALL JOYS MATTER</div><h2 id="goalTitle">给努力一点小奖励</h2></div><button type="button" class="icon-btn close-dialog" aria-label="关闭小目标"><svg class="icon"><use href="#i-close"></use></svg></button></div><div class="goal-presets"><button type="button" data-goal="coffee">一杯咖啡<span>¥25</span></button><button type="button" data-goal="tea">一杯奶茶<span>¥18</span></button><button type="button" data-goal="meal">一顿好饭<span>¥45</span></button><button type="button" data-goal="game">一个游戏<span>¥198</span></button></div><label class="stacked-label">目标名称<input id="goalNameInput" maxlength="12" required="" placeholder="例如：一杯咖啡"></label><label class="stacked-label">需要多少钱 · 人民币<input id="goalPriceInput" type="number" min="0.01" max="100000000" step="0.01" required="" value="25"></label><button class="primary-button full-width" type="submit">就它了 <svg class="icon"><use href="#i-heart"></use></svg></button></form></dialog>
+
+  <dialog id="aboutDialog" class="modal about-modal" aria-labelledby="aboutTitle"><div class="dialog-body"><div class="dialog-heading"><div><div class="eyebrow">A CLEARER PICTURE</div><h2 id="aboutTitle">每一分钱，怎么算</h2></div><button class="icon-btn close-dialog" aria-label="关闭计算说明"><svg class="icon"><use href="#i-close"></use></svg></button></div><div class="about-content"><h3>工作时间内，收入随时钟增长</h3><p>月薪按当月实际工作日平均分摊。默认每天 09:00–12:00、13:30–18:00，共 7.5 小时。只有处于设定的工作时段才会增加今日收入；午休、下班后与休息日暂停。本月累计包含已经过去的工作日与今天已完成的部分。</p><div class="formula-block">日薪 = 月薪 ÷ 本月工作日<br>秒薪 = 日薪 ÷ 每天工作秒数<br>今日收入 = 秒薪 × 今天已完成的工作秒数</div><p>这是按时间分摊固定月薪的可视化，不是工资条或单位实际结薪金额。金额以人民币计算，其他币种只改变显示。</p><h3>节假日、补班与你自己的排班</h3><p>内置 2025、2026 年中国大陆节假日和调休补班。其他年份先按每周排班计算，并在日历明确提示；可点日期手动调整。你也可以选固定双休或自定义每周工作日。日期和作息跟随设备本地时区。</p><h3>加班，如何影响时薪</h3><p>首页滑杆模拟“每天固定加班”：实际时薪 =（日薪 + 每天额外加班费）÷（正常工时 + 每天加班时长）。加班记录计算“整月实际投入”：月薪 ÷（本月标准工时 + 本月已记加班工时）。计时器会排除正常工作时段，跨日按日期拆分。</p><h3>币种、汇率与亿万富翁模式</h3><p>真实币种使用 Frankfurter 汇率，并标注报价日期；可联网刷新或手动设置。断网仍能使用内置或此前缓存的汇率。“津巴布韦 · 亿万富翁”是旧币灵感的娱乐显示，默认 1 元 = 1,000 亿 Z$，不代表现行津巴布韦货币或可交易汇率。</p><h3>只属于你的浏览器</h3><p>工资、排班、加班与偏好保存在当前浏览器的本地存储中。刷新汇率只请求公开币种报价，不发送工资或记录。无账号、无统计追踪。建议固定文件位置和浏览器使用，以便持续读取设置。</p><h3>参考与数据来源</h3><ul><li><a href="https://github.com/oil-oil/dsh-oil-ui" target="_blank" rel="noopener noreferrer">Oil UI</a>：参考动效节奏和视觉主次。</li><li><a href="https://github.com/Jack-Cherish/zhuanlema" target="_blank" rel="noopener noreferrer">赚了么</a>：参考实时工资、小目标和加班时薪的交互思路。</li><li><a href="https://www.frankfurter.dev/" target="_blank" rel="noopener noreferrer">Frankfurter</a>：真实币种参考汇率。</li><li><a href="https://www.hys.gov.cn/hysrmzfw/c116484/zzzq/content/content_1856502837087371264.html" target="_blank" rel="noopener noreferrer">2025 年节假日安排</a> · <a href="https://www.beijing.gov.cn/zhengce/zhengcefagui/202511/t20251104_4258873.html" target="_blank" rel="noopener noreferrer">2026 年节假日安排</a></li></ul><p class="about-signature">薪动 · 每一秒，都算数。<br>独立编写的单文件网页，打开即用。</p></div></div></dialog>
+
+  <div class="toast-stack" id="toastStack" aria-live="polite" aria-atomic="true"></div>
+  <script src="./assets/js/salary-engine.js"></script>
+  <script src="./assets/js/app.js"></script>
+  <script src="./assets/js/deep-link.js"></script>
+</body></html>

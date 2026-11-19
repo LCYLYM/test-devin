@@ -1,0 +1,14 @@
+{
+  "name": "薪动 · 每一秒，都算数",
+  "short_name": "薪动",
+  "description": "实时工资计算器：输入月薪，看着收入按秒跳动。",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#131415",
+  "theme_color": "#131415",
+  "lang": "zh-CN",
+  "icons": [
+    { "src": "./assets/img/favicon.svg", "sizes": "any", "type": "image/svg+xml" },
+    { "src": "./assets/img/piggy.webp", "sizes": "800x800", "type": "image/webp" }
+  ]
+}
