@@ -992,6 +992,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `squid` | `1` 鱿鱼配色 |
 | `octopus` | `1` 章鱼配色 |
 | `cuttlefish` | `1` 乌贼配色 |
+| `jellyfish` | `1` 水母配色 |
+| `starfish` | `1` 海星配色 |
+| `seahorse` | `1` 海马配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 

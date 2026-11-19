@@ -2182,6 +2182,12 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .is-octopus .instrument{border-color:rgba(220,120,160,.4)}
 .is-cuttlefish{background:linear-gradient(180deg,#181419 0%,#110e12 100%)}
 .is-cuttlefish .instrument{border-color:rgba(190,160,200,.4)}
+.is-jellyfish{background:linear-gradient(180deg,#131820 0%,#0d1117 100%)}
+.is-jellyfish .instrument{border-color:rgba(150,180,230,.4)}
+.is-starfish{background:linear-gradient(180deg,#1e1510 0%,#150f0a 100%)}
+.is-starfish .instrument{border-color:rgba(240,160,90,.4)}
+.is-seahorse{background:linear-gradient(180deg,#101a17 0%,#0a1210 100%)}
+.is-seahorse .instrument{border-color:rgba(100,200,180,.4)}
 .is-oatmeal{background:linear-gradient(180deg,#1d1912,#2f291e 50%,#433a2a)}
 .is-oatmeal .instrument{border-color:rgba(215,195,155,.4)}
 .is-thyme{background:linear-gradient(180deg,#121a14,#1c2a20 50%,#28392c)}
