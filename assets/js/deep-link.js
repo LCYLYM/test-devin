@@ -3984,6 +3984,9 @@
     if (params.get('flycatcher') === '1') { document.body.classList.add('is-flycatcher'); }
     if (params.get('crossbill') === '1') { document.body.classList.add('is-crossbill'); }
     if (params.get('brambling') === '1') { document.body.classList.add('is-brambling'); }
+    if (params.get('chaffinch') === '1') { document.body.classList.add('is-chaffinch'); }
+    if (params.get('hawfinch') === '1') { document.body.classList.add('is-hawfinch'); }
+    if (params.get('serin') === '1') { document.body.classList.add('is-serin'); }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -5326,6 +5329,9 @@
         if (params.get('flycatcher') === '1') u.searchParams.set('flycatcher', '1');
         if (params.get('crossbill') === '1') u.searchParams.set('crossbill', '1');
         if (params.get('brambling') === '1') u.searchParams.set('brambling', '1');
+        if (params.get('chaffinch') === '1') u.searchParams.set('chaffinch', '1');
+        if (params.get('hawfinch') === '1') u.searchParams.set('hawfinch', '1');
+        if (params.get('serin') === '1') u.searchParams.set('serin', '1');
       if (params.get('tile') === '1') u.searchParams.set('tile', '1');
       if (params.get('outline') === '1') u.searchParams.set('outline', '1');
       if (params.get('stripe') === '1') u.searchParams.set('stripe', '1');

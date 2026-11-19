@@ -1100,6 +1100,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `flycatcher` | `1` 鹟配色 |
 | `crossbill` | `1` 交嘴雀配色 |
 | `brambling` | `1` 燕雀配色 |
+| `chaffinch` | `1` 苍头燕雀配色 |
+| `hawfinch` | `1` 锡嘴雀配色 |
+| `serin` | `1` 丝雀配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 
