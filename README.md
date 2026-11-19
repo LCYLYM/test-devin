@@ -764,6 +764,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `xenops` | `1` 雀霸鹟配色 |
 | `yaffle` | `1` 绿啄木鸟配色 |
 | `zonkey` | `1` 斑驴配色 |
+| `binturong` | `1` 熊狸配色 |
+| `caribou` | `1` 北美驯鹿配色 |
+| `dikdik` | `1` 犬羚配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 

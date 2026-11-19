@@ -1726,6 +1726,12 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .is-yaffle .instrument{border-color:rgba(120,190,90,.4)}
 .is-zonkey{background:linear-gradient(180deg,#17151a 0%,#0e0d11 100%)}
 .is-zonkey .instrument{border-color:rgba(170,165,185,.4)}
+.is-binturong{background:linear-gradient(180deg,#161310 0%,#0d0b09 100%)}
+.is-binturong .instrument{border-color:rgba(160,145,125,.4)}
+.is-caribou{background:linear-gradient(180deg,#1a150f 0%,#100d08 100%)}
+.is-caribou .instrument{border-color:rgba(195,165,115,.4)}
+.is-dikdik{background:linear-gradient(180deg,#1d1712 0%,#130e0a 100%)}
+.is-dikdik .instrument{border-color:rgba(215,175,125,.4)}
 .is-oatmeal{background:linear-gradient(180deg,#1d1912,#2f291e 50%,#433a2a)}
 .is-oatmeal .instrument{border-color:rgba(215,195,155,.4)}
 .is-thyme{background:linear-gradient(180deg,#121a14,#1c2a20 50%,#28392c)}

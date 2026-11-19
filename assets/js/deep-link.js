@@ -3648,6 +3648,9 @@
     if (params.get('xenops') === '1') { document.body.classList.add('is-xenops'); }
     if (params.get('yaffle') === '1') { document.body.classList.add('is-yaffle'); }
     if (params.get('zonkey') === '1') { document.body.classList.add('is-zonkey'); }
+    if (params.get('binturong') === '1') { document.body.classList.add('is-binturong'); }
+    if (params.get('caribou') === '1') { document.body.classList.add('is-caribou'); }
+    if (params.get('dikdik') === '1') { document.body.classList.add('is-dikdik'); }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -4654,6 +4657,9 @@
         if (params.get('xenops') === '1') u.searchParams.set('xenops', '1');
         if (params.get('yaffle') === '1') u.searchParams.set('yaffle', '1');
         if (params.get('zonkey') === '1') u.searchParams.set('zonkey', '1');
+        if (params.get('binturong') === '1') u.searchParams.set('binturong', '1');
+        if (params.get('caribou') === '1') u.searchParams.set('caribou', '1');
+        if (params.get('dikdik') === '1') u.searchParams.set('dikdik', '1');
       if (params.get('tile') === '1') u.searchParams.set('tile', '1');
       if (params.get('outline') === '1') u.searchParams.set('outline', '1');
       if (params.get('stripe') === '1') u.searchParams.set('stripe', '1');
