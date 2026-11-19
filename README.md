@@ -1187,6 +1187,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `reindeermoss` | `1` 驯鹿苔配色 |
 | `oldmansbeard` | `1` 松萝配色 |
 | `britishsoldiers` | `1` 红头石蕊配色 |
+| `pixiecups` | `1` 小精灵杯配色 |
+| `mapdust` | `1` 地图衣配色 |
+| `rosette` | `1` 莲座衣配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 

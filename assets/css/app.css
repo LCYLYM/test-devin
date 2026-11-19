@@ -2572,6 +2572,12 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .is-oldmansbeard .instrument{border-color:rgba(178,188,150,.4)}
 .is-britishsoldiers{background:linear-gradient(180deg,#1e1414 0%,#160f0f 100%)}
 .is-britishsoldiers .instrument{border-color:rgba(198,94,94,.4)}
+.is-pixiecups{background:linear-gradient(180deg,#191b15 0%,#13150f 100%)}
+.is-pixiecups .instrument{border-color:rgba(170,182,124,.4)}
+.is-mapdust{background:linear-gradient(180deg,#171915 0%,#111310 100%)}
+.is-mapdust .instrument{border-color:rgba(148,166,124,.4)}
+.is-rosette{background:linear-gradient(180deg,#1d1616 0%,#161010 100%)}
+.is-rosette .instrument{border-color:rgba(190,110,124,.4)}
 .is-oatmeal{background:linear-gradient(180deg,#1d1912,#2f291e 50%,#433a2a)}
 .is-oatmeal .instrument{border-color:rgba(215,195,155,.4)}
 .is-thyme{background:linear-gradient(180deg,#121a14,#1c2a20 50%,#28392c)}
