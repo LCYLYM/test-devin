@@ -1828,6 +1828,12 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .is-jerboa .instrument{border-color:rgba(215,175,115,.4)}
 .is-katydid{background:linear-gradient(180deg,#101c10 0%,#081208 100%)}
 .is-katydid .instrument{border-color:rgba(100,200,100,.4)}
+.is-nilgai{background:linear-gradient(180deg,#141a1c 0%,#0c1113 100%)}
+.is-nilgai .instrument{border-color:rgba(150,190,200,.4)}
+.is-oribi{background:linear-gradient(180deg,#1d1710 0%,#130e08 100%)}
+.is-oribi .instrument{border-color:rgba(215,175,110,.4)}
+.is-pintail{background:linear-gradient(180deg,#12171d 0%,#0a0e13 100%)}
+.is-pintail .instrument{border-color:rgba(145,175,200,.4)}
 .is-oatmeal{background:linear-gradient(180deg,#1d1912,#2f291e 50%,#433a2a)}
 .is-oatmeal .instrument{border-color:rgba(215,195,155,.4)}
 .is-thyme{background:linear-gradient(180deg,#121a14,#1c2a20 50%,#28392c)}

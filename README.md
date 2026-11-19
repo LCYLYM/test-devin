@@ -815,6 +815,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `iora` | `1` 黑翅雀鹎配色 |
 | `jerboa` | `1` 跳鼠配色 |
 | `katydid` | `1` 螽斯配色 |
+| `nilgai` | `1` 蓝牛羚配色 |
+| `oribi` | `1` 侏羚配色 |
+| `pintail` | `1` 针尾鸭配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 

@@ -3699,6 +3699,9 @@
     if (params.get('iora') === '1') { document.body.classList.add('is-iora'); }
     if (params.get('jerboa') === '1') { document.body.classList.add('is-jerboa'); }
     if (params.get('katydid') === '1') { document.body.classList.add('is-katydid'); }
+    if (params.get('nilgai') === '1') { document.body.classList.add('is-nilgai'); }
+    if (params.get('oribi') === '1') { document.body.classList.add('is-oribi'); }
+    if (params.get('pintail') === '1') { document.body.classList.add('is-pintail'); }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -4756,6 +4759,9 @@
         if (params.get('iora') === '1') u.searchParams.set('iora', '1');
         if (params.get('jerboa') === '1') u.searchParams.set('jerboa', '1');
         if (params.get('katydid') === '1') u.searchParams.set('katydid', '1');
+        if (params.get('nilgai') === '1') u.searchParams.set('nilgai', '1');
+        if (params.get('oribi') === '1') u.searchParams.set('oribi', '1');
+        if (params.get('pintail') === '1') u.searchParams.set('pintail', '1');
       if (params.get('tile') === '1') u.searchParams.set('tile', '1');
       if (params.get('outline') === '1') u.searchParams.set('outline', '1');
       if (params.get('stripe') === '1') u.searchParams.set('stripe', '1');
