@@ -3008,6 +3008,15 @@
     if (params.get('topaz') === '1') {
       document.body.classList.add('is-topaz');
     }
+    if (params.get('mystic') === '1') {
+      document.body.classList.add('is-mystic');
+    }
+    if (params.get('cascade') === '1') {
+      document.body.classList.add('is-cascade');
+    }
+    if (params.get('sunrise') === '1') {
+      document.body.classList.add('is-sunrise');
+    }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -3792,6 +3801,9 @@
       if (params.get('fern') === '1') u.searchParams.set('fern', '1');
       if (params.get('lapis') === '1') u.searchParams.set('lapis', '1');
       if (params.get('topaz') === '1') u.searchParams.set('topaz', '1');
+      if (params.get('mystic') === '1') u.searchParams.set('mystic', '1');
+      if (params.get('cascade') === '1') u.searchParams.set('cascade', '1');
+      if (params.get('sunrise') === '1') u.searchParams.set('sunrise', '1');
       if (params.get('tile') === '1') u.searchParams.set('tile', '1');
       if (params.get('outline') === '1') u.searchParams.set('outline', '1');
       if (params.get('stripe') === '1') u.searchParams.set('stripe', '1');

@@ -542,6 +542,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `fern` | `1` シダ配色 |
 | `lapis` | `1` ラピス配色 |
 | `topaz` | `1` トパーズ配色 |
+| `mystic` | `1` 神秘配色 |
+| `cascade` | `1` 瀑布配色 |
+| `sunrise` | `1` 日出配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 

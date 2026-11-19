@@ -1273,6 +1273,12 @@ body[data-hover] .payday:hover{transform:translateY(-3px)}
 .is-lapis .instrument{border-color:rgba(120,140,235,.42)}
 .is-topaz{background:linear-gradient(180deg,#241a06,#3a2a0c 55%,#503a12)}
 .is-topaz .instrument{border-color:rgba(245,190,70,.45)}
+.is-mystic{background:linear-gradient(180deg,#170f26,#241838 55%,#33214a)}
+.is-mystic .instrument{border-color:rgba(185,140,225,.4)}
+.is-cascade{background:linear-gradient(180deg,#0a1a1c,#122a2e 55%,#1a3a40)}
+.is-cascade .instrument{border-color:rgba(110,200,210,.4)}
+.is-sunrise{background:linear-gradient(180deg,#1e1410,#32221a 50%,#463022)}
+.is-sunrise .instrument{border-color:rgba(245,175,120,.42)}
 .is-focus .payday.morale{display:none}
 body[data-pillar] .page-shell{border-left:1px solid rgba(var(--accent-rgb,103,228,148),.22);border-right:1px solid rgba(var(--accent-rgb,103,228,148),.22)}
 body[data-gloom]{--bg:#0a0c0b}
