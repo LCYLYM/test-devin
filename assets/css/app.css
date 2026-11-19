@@ -964,3 +964,6 @@ body[data-shimmer] .rate-pill{background:linear-gradient(100deg,var(--accent) 30
 @media(prefers-reduced-motion:reduce){body[data-glitch] .amount-area{animation:none}}
 body[data-cinema]{border-top:8vh solid #000;border-bottom:8vh solid #000;box-sizing:border-box;min-height:100vh}
 body[data-frame]{border:10px solid var(--accent,#67e494);box-sizing:border-box;min-height:100vh}
+body[data-pal=vapor]{--bg:#1a1024;--surface:#241536;--surface-2:#301c46;--line:#4a2a66;--accent:#f472b6;--accent-rgb:244,114,182;--instrument:#120a1c;--muted:#b8a3d0;--dim:#6b5580}
+body[data-amber] .instrument{filter:sepia(.9) hue-rotate(-18deg) saturate(1.9) brightness(.95)}
+body[data-dots]{background-image:radial-gradient(rgba(var(--accent-rgb,103,228,148),.12) 1.5px,transparent 1.5px);background-size:26px 26px}

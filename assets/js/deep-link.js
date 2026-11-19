@@ -649,7 +649,7 @@
     var fontP = params.get('font');
     if (fontP && ['mono', 'serif', 'round'].indexOf(fontP) >= 0) document.body.dataset.font = fontP;
     var palP = params.get('pal');
-    if (palP && ['forest', 'ocean', 'sunset', 'grape'].indexOf(palP) >= 0) document.body.dataset.pal = palP;
+    if (palP && ['forest', 'ocean', 'sunset', 'grape', 'vapor'].indexOf(palP) >= 0) document.body.dataset.pal = palP;
     if (params.get('flat') === '1') document.body.dataset.flat = '1';
     var idleS = Math.min(3600, Math.max(5, Number(params.get('idle')) || 0));
     if (idleS) {
@@ -950,6 +950,8 @@
     if (params.get('glitch') === '1') document.body.dataset.glitch = '1';
     if (params.get('cinema') === '1') document.body.dataset.cinema = '1';
     if (params.get('frame') === '1') document.body.dataset.frame = '1';
+    if (params.get('amber') === '1') document.body.dataset.amber = '1';
+    if (params.get('dots') === '1') document.body.dataset.dots = '1';
     if (params.get('shimmer') === '1') document.body.dataset.shimmer = '1';
     if (params.get('fog') === '1' && !(window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches)) {
       document.body.dataset.fog = '1';
@@ -1431,7 +1433,9 @@
       if (params.get('zodiac') === '1') u.searchParams.set('zodiac', '1');
       if (params.get('jieqi') === '1') u.searchParams.set('jieqi', '1');
       var dyp = params.get('days'); if (dyp) u.searchParams.set('days', dyp);
-      var plp = params.get('pal'); if (plp && ['forest', 'ocean', 'sunset', 'grape'].indexOf(plp) >= 0) u.searchParams.set('pal', plp);
+      var plp = params.get('pal'); if (plp && ['forest', 'ocean', 'sunset', 'grape', 'vapor'].indexOf(plp) >= 0) u.searchParams.set('pal', plp);
+      if (params.get('amber') === '1') u.searchParams.set('amber', '1');
+      if (params.get('dots') === '1') u.searchParams.set('dots', '1');
       if (params.get('flat') === '1') u.searchParams.set('flat', '1');
       var idl = params.get('idle'); if (idl) u.searchParams.set('idle', idl);
       if (params.get('wake') === '1') u.searchParams.set('wake', '1');

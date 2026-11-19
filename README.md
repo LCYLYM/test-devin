@@ -122,7 +122,7 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `zodiac` | `1` 当年生肖徽章 |
 | `jieqi` | `1` 二十四节气倒计时徽章 |
 | `days` | 工作日覆盖，如 `1-5` 或 `0,1,2`（0=周日，本次会话生效） |
-| `pal` | 配色包：`forest`/`ocean`/`sunset`/`grape` |
+| `pal` | 配色包：`forest`/`ocean`/`sunset`/`grape`/`vapor` |
 | `flat` | `1` 扁平化：去圆角、去阴影 |
 | `reset` | `1` 清空本地全部数据并回到初始状态 |
 | `idle` | 秒数，无操作 N 秒后自动进入专注模式，动一下恢复 |
