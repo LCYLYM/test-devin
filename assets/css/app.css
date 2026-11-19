@@ -1900,6 +1900,12 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .is-ibex .instrument{border-color:rgba(175,175,195,.4)}
 .is-jacamar{background:linear-gradient(180deg,#0f1c18 0%,#081310 100%)}
 .is-jacamar .instrument{border-color:rgba(90,200,165,.4)}
+.is-kea{background:linear-gradient(180deg,#141c0f 0%,#0c1309 100%)}
+.is-kea .instrument{border-color:rgba(150,195,95,.4)}
+.is-langur{background:linear-gradient(180deg,#191611 0%,#100e09 100%)}
+.is-langur .instrument{border-color:rgba(190,170,130,.4)}
+.is-marmoset{background:linear-gradient(180deg,#1b1216 0%,#120c0e 100%)}
+.is-marmoset .instrument{border-color:rgba(210,135,160,.4)}
 .is-oatmeal{background:linear-gradient(180deg,#1d1912,#2f291e 50%,#433a2a)}
 .is-oatmeal .instrument{border-color:rgba(215,195,155,.4)}
 .is-thyme{background:linear-gradient(180deg,#121a14,#1c2a20 50%,#28392c)}
