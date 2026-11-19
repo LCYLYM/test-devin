@@ -497,6 +497,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `cliff` | `1` 崖壁配色 |
 | `tundra` | `1` 苔原配色 |
 | `canyon` | `1` 峡谷配色 |
+| `reef` | `1` 礁石配色 |
+| `umber` | `1` 赭土配色 |
+| `violet` | `1` 紫罗兰配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 

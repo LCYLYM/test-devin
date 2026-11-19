@@ -2873,6 +2873,15 @@
     if (params.get('canyon') === '1') {
       document.body.classList.add('is-canyon');
     }
+    if (params.get('reef') === '1') {
+      document.body.classList.add('is-reef');
+    }
+    if (params.get('umber') === '1') {
+      document.body.classList.add('is-umber');
+    }
+    if (params.get('violet') === '1') {
+      document.body.classList.add('is-violet');
+    }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -3612,6 +3621,9 @@
       if (params.get('cliff') === '1') u.searchParams.set('cliff', '1');
       if (params.get('tundra') === '1') u.searchParams.set('tundra', '1');
       if (params.get('canyon') === '1') u.searchParams.set('canyon', '1');
+      if (params.get('reef') === '1') u.searchParams.set('reef', '1');
+      if (params.get('umber') === '1') u.searchParams.set('umber', '1');
+      if (params.get('violet') === '1') u.searchParams.set('violet', '1');
       if (params.get('tile') === '1') u.searchParams.set('tile', '1');
       if (params.get('outline') === '1') u.searchParams.set('outline', '1');
       if (params.get('stripe') === '1') u.searchParams.set('stripe', '1');
