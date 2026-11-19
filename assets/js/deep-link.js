@@ -314,17 +314,31 @@
         requestAnimationFrame(mFrame);
       })();
     }
-    if (['snow', 'sakura', 'rain', 'stars', 'leaves', 'bubble', 'ember', 'firefly', 'dust'].indexOf(fxParam) >= 0 && !(window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches)) {
+    if (['snow', 'sakura', 'rain', 'stars', 'leaves', 'bubble', 'ember', 'firefly', 'dust', 'meteor'].indexOf(fxParam) >= 0 && !(window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches)) {
       var fxc = document.createElement('canvas');
       fxc.style.cssText = 'position:fixed;inset:0;width:100%;height:100%;pointer-events:none;opacity:.65';
       document.body.prepend(fxc);
       var fxctx = fxc.getContext('2d');
-      var parts = [], N = fxParam === 'rain' ? 90 : fxParam === 'stars' ? 70 : 45;
+      var parts = [], N = fxParam === 'rain' ? 90 : fxParam === 'stars' ? 70 : fxParam === 'meteor' ? 0 : 45;
+      var meteors = [];
       function fxResize(){ fxc.width = innerWidth; fxc.height = innerHeight; }
       fxResize(); window.addEventListener('resize', fxResize);
       for (var i = 0; i < N; i++) parts.push({x: Math.random() * innerWidth, y: Math.random() * innerHeight, r: 1 + Math.random() * (fxParam === 'rain' ? 1 : 3.2), v: fxParam === 'rain' ? 9 + Math.random() * 6 : 0.6 + Math.random() * 1.4, s: Math.random() * 6.28, rot: Math.random() * 6.28, vr: (Math.random() - .5) * .06, ph: Math.random() * 6.28});
       (function fxFrame(){
         fxctx.clearRect(0, 0, fxc.width, fxc.height);
+        if (fxParam === 'meteor') {
+          if (Math.random() < 0.015) meteors.push({x: Math.random() * innerWidth * 0.8 + innerWidth * 0.1, y: -20, vx: -2 - Math.random() * 3, vy: 4 + Math.random() * 4, life: 1});
+          for (var mi = meteors.length - 1; mi >= 0; mi--) {
+            var m = meteors[mi];
+            m.x += m.vx; m.y += m.vy; m.life -= 0.012;
+            if (m.life <= 0 || m.y > innerHeight + 40) { meteors.splice(mi, 1); continue; }
+            fxctx.strokeStyle = 'rgba(220,235,255,' + (m.life * 0.8).toFixed(2) + ')';
+            fxctx.lineWidth = 1.5;
+            fxctx.beginPath(); fxctx.moveTo(m.x, m.y); fxctx.lineTo(m.x - m.vx * 14, m.y - m.vy * 14); fxctx.stroke();
+          }
+          requestAnimationFrame(fxFrame);
+          return;
+        }
         for (var i2 = 0; i2 < parts.length; i2++) {
           var q = parts[i2];
           if (fxParam === 'stars') {
@@ -911,6 +925,9 @@
     }
     if (params.get('pulse') === '1') document.body.dataset.pulse = '1';
     if (params.get('aurora') === '1') document.body.dataset.aurora = '1';
+    if (params.get('halo') === '1') document.body.dataset.halo = '1';
+    if (params.get('fade') === '1') document.body.dataset.fade = '1';
+    if (params.get('vig') === '1') document.body.dataset.vig = '1';
     if (params.get('day') === '1') {
       var db2 = document.getElementById('dayBadge'), dp = document.getElementById('dayPct'), di = document.getElementById('dayIcon');
       if (db2 && dp) {
@@ -1406,6 +1423,9 @@
       if (params.get('pulse') === '1') u.searchParams.set('pulse', '1');
       if (params.get('aurora') === '1') u.searchParams.set('aurora', '1');
       if (params.get('day') === '1') u.searchParams.set('day', '1');
+      if (params.get('halo') === '1') u.searchParams.set('halo', '1');
+      if (params.get('fade') === '1') u.searchParams.set('fade', '1');
+      if (params.get('vig') === '1') u.searchParams.set('vig', '1');
       params.forEach(function (v, k) { if (k.indexOf('utm_') === 0 && v) u.searchParams.set(k, v.slice(0, 64)); });
       var text = u.toString();
       (navigator.clipboard ? navigator.clipboard.writeText(text) : Promise.reject())

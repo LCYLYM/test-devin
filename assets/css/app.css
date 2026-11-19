@@ -931,3 +931,10 @@ body[data-pulse] .amount-area{animation:pulseBeat 1.2s ease-in-out infinite}
 body[data-aurora]::before{content:"";position:fixed;inset:-20%;z-index:0;pointer-events:none;opacity:.3;background:linear-gradient(115deg,#22d3ee22,#a78bfa22,#34d39922,#f472b622,#22d3ee22);background-size:300% 300%;filter:blur(40px);animation:auroraShift 18s ease-in-out infinite}
 @keyframes auroraShift{0%,100%{background-position:0% 40%}50%{background-position:100% 60%}}
 body.is-focus[data-aurora]::before{opacity:.18}
+body[data-halo] .instrument{box-shadow:0 0 42px rgba(var(--accent-rgb,103,228,148),.22),0 0 12px rgba(var(--accent-rgb,103,228,148),.12)}
+body[data-fade] .app-header{animation:fadeDown .7s ease both}
+body[data-fade] .instrument{animation:fadeUp .8s .1s ease both}
+body[data-fade] .summary-strip,body[data-fade] .overtime-strip,body[data-fade] .app-footer{animation:fadeUp .9s .25s ease both}
+@keyframes fadeUp{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+@keyframes fadeDown{from{opacity:0;transform:translateY(-12px)}to{opacity:1;transform:none}}
+body[data-vig]{box-shadow:inset 0 0 18vmax rgba(0,0,0,.55)}
