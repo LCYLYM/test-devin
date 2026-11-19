@@ -1140,6 +1140,20 @@
       rlFill(); setInterval(rlFill, 30000);
     }
     if (params.get('hover') === '1') document.body.dataset.hover = '1';
+    if (params.get('trail') === '1' && !(window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches)) {
+      var lastT = 0;
+      document.addEventListener('pointermove', function (ev) {
+        var nt = Date.now();
+        if (nt - lastT < 40) return; lastT = nt;
+        var td = document.createElement('span');
+        td.className = 'trail-dot';
+        td.style.left = ev.clientX + 'px'; td.style.top = ev.clientY + 'px';
+        document.body.appendChild(td);
+        setTimeout(function () { td.remove(); }, 650);
+      });
+    }
+    if (params.get('pillar') === '1') document.body.dataset.pillar = '1';
+    if (params.get('gloom') === '1') document.body.dataset.gloom = '1';
     if (params.get('hex') === '1') {
       var hxb = document.getElementById('hexBadge'), hxd = document.getElementById('hexDot'), hxv = document.getElementById('hexVal');
       if (hxb && hxd && hxv) {
@@ -1698,6 +1712,9 @@
       var lumX = params.get('lum'); if (lumX) u.searchParams.set('lum', lumX);
       if (params.get('rail') === '1') u.searchParams.set('rail', '1');
       if (params.get('hover') === '1') u.searchParams.set('hover', '1');
+      if (params.get('trail') === '1') u.searchParams.set('trail', '1');
+      if (params.get('pillar') === '1') u.searchParams.set('pillar', '1');
+      if (params.get('gloom') === '1') u.searchParams.set('gloom', '1');
       if (params.get('rays') === '1') u.searchParams.set('rays', '1');
       if (params.get('flat') === '1') u.searchParams.set('flat', '1');
       var idl = params.get('idle'); if (idl) u.searchParams.set('idle', idl);

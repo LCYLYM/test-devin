@@ -223,6 +223,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `lum` | `40`–`160` 仪表亮度（%） |
 | `rail` | `1` 页面底部进度轨 |
 | `hover` | `1` 徽章悬停上浮 |
+| `trail` | `1` 鼠标拖尾光点 |
+| `pillar` | `1` 两侧细柱线 |
+| `gloom` | `1` 更暗氛围 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 
