@@ -1229,6 +1229,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `spleenwort` | `1` 铁角蕨配色 |
 | `shieldfern` | `1` 鳞毛蕨配色 |
 | `oakfern` | `1` 岩蕨配色 |
+| `ladyfern` | `1` 蹄盖蕨配色 |
+| `malefern` | `1` 雄蕨配色 |
+| `hollyfern` | `1` 贯众配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 
