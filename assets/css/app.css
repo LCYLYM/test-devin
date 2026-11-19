@@ -1612,6 +1612,12 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .is-lemur .instrument{border-color:rgba(190,185,135,.42)}
 .is-fig{background:linear-gradient(180deg,#160f1c,#261a30 50%,#372645)}
 .is-fig .instrument{border-color:rgba(185,140,205,.42)}
+.is-narwhal{background:linear-gradient(180deg,#0d1a1e,#142e35 50%,#1d434d)}
+.is-narwhal .instrument{border-color:rgba(100,195,215,.42)}
+.is-persimmon{background:linear-gradient(180deg,#1f1006,#371b0b 50%,#4f2710)}
+.is-persimmon .instrument{border-color:rgba(240,140,60,.42)}
+.is-capybara{background:linear-gradient(180deg,#171208,#281d0e 50%,#3a2a14)}
+.is-capybara .instrument{border-color:rgba(205,160,95,.42)}
 .is-oatmeal{background:linear-gradient(180deg,#1d1912,#2f291e 50%,#433a2a)}
 .is-oatmeal .instrument{border-color:rgba(215,195,155,.4)}
 .is-thyme{background:linear-gradient(180deg,#121a14,#1c2a20 50%,#28392c)}

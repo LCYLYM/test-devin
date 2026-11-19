@@ -707,6 +707,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `jacaranda` | `1` 蓝花楹配色 |
 | `lemur` | `1` 狐猴配色 |
 | `fig` | `1` 无花果配色 |
+| `narwhal` | `1` 独角鲸配色 |
+| `persimmon` | `1` 柿子配色 |
+| `capybara` | `1` 水豚配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 

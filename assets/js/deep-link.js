@@ -3555,6 +3555,15 @@
     if (params.get('fig') === '1') {
       document.body.classList.add('is-fig');
     }
+    if (params.get('narwhal') === '1') {
+      document.body.classList.add('is-narwhal');
+    }
+    if (params.get('persimmon') === '1') {
+      document.body.classList.add('is-persimmon');
+    }
+    if (params.get('capybara') === '1') {
+      document.body.classList.add('is-capybara');
+    }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -4504,6 +4513,9 @@
       if (params.get('jacaranda') === '1') u.searchParams.set('jacaranda', '1');
       if (params.get('lemur') === '1') u.searchParams.set('lemur', '1');
       if (params.get('fig') === '1') u.searchParams.set('fig', '1');
+      if (params.get('narwhal') === '1') u.searchParams.set('narwhal', '1');
+      if (params.get('persimmon') === '1') u.searchParams.set('persimmon', '1');
+      if (params.get('capybara') === '1') u.searchParams.set('capybara', '1');
       if (params.get('tile') === '1') u.searchParams.set('tile', '1');
       if (params.get('outline') === '1') u.searchParams.set('outline', '1');
       if (params.get('stripe') === '1') u.searchParams.set('stripe', '1');
