@@ -27,7 +27,7 @@
 把月薪和皮肤写进链接，发给朋友开箱即用：
 
 ```
-https://xd.syal.site/?salary=30000&template=pig
+https://xd.syal.site/?salary=30000&template=pig&demo=1
 ```
 
 | 参数 | 取值 |
