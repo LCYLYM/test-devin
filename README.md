@@ -983,6 +983,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `ladybug` | `1` 瓢虫配色 |
 | `beetle` | `1` 甲虫配色 |
 | `dragonfly` | `1` 蜻蜓配色 |
+| `butterfly` | `1` 蝴蝶配色 |
+| `scorpion` | `1` 蝎子配色 |
+| `tarantula` | `1` 狼蛛配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 
