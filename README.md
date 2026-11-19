@@ -782,6 +782,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `wolverine` | `1` 狼獾配色 |
 | `xeme` | `1` 叉尾鸥配色 |
 | `zokor` | `1` 鼢鼠配色 |
+| `addax` | `1` 旋角羚配色 |
+| `bulbul` | `1` 鹎配色 |
+| `cuscus` | `1` 袋貂配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 
