@@ -576,6 +576,47 @@
     }
     var fontP = params.get('font');
     if (fontP && ['mono', 'serif', 'round'].indexOf(fontP) >= 0) document.body.dataset.font = fontP;
+    if (params.get('zodiac') === '1') {
+      var zb = document.getElementById('zodiacBadge');
+      if (zb) {
+        var ZI = ['鼠', '牛', '虎', '兔', '龙', '蛇', '马', '羊', '猴', '鸡', '狗', '猪'];
+        var ZE = ['🐭', '🐮', '🐯', '🐰', '🐲', '🐍', '🐴', '🐑', '🐵', '🐔', '🐶', '🐷'];
+        var zidx = (new Date().getFullYear() - 4) % 12;
+        zb.hidden = false;
+        var zic = document.getElementById('zodiacIcon'); if (zic) zic.textContent = ZE[zidx];
+        var znm = document.getElementById('zodiacName'); if (znm) znm.textContent = ZI[zidx] + '年';
+      }
+    }
+    if (params.get('jieqi') === '1') {
+      var jb = document.getElementById('jieqiBadge');
+      if (jb) {
+        var JQ = [['小寒', 1, 5], ['大寒', 1, 20], ['立春', 2, 4], ['雨水', 2, 19], ['惊蛰', 3, 6], ['春分', 3, 21], ['清明', 4, 5], ['谷雨', 4, 20], ['立夏', 5, 6], ['小满', 5, 21], ['芒种', 6, 6], ['夏至', 6, 21], ['小暑', 7, 7], ['大暑', 7, 23], ['立秋', 8, 8], ['处暑', 8, 23], ['白露', 9, 8], ['秋分', 9, 23], ['寒露', 10, 8], ['霜降', 10, 23], ['立冬', 11, 7], ['小雪', 11, 22], ['大雪', 12, 7], ['冬至', 12, 22]];
+        var jn = new Date(), jy = jn.getFullYear(), today0 = new Date(jy, jn.getMonth(), jn.getDate()).getTime();
+        var best = null;
+        for (var ji = 0; ji < JQ.length + 1; ji++) {
+          var jt = JQ[ji % JQ.length], jyr = ji >= JQ.length ? jy + 1 : jy;
+          var dd = Math.round((new Date(jyr, jt[1] - 1, jt[2]).getTime() - today0) / 864e5);
+          if (dd >= 0) { best = { n: jt[0], d: dd }; break; }
+        }
+        if (best) {
+          jb.hidden = false;
+          var jlab = document.getElementById('jieqiLabel'); if (jlab) jlab.textContent = best.d === 0 ? '今日' + best.n : '距' + best.n;
+          var jdd = document.getElementById('jieqiDays'); if (jdd) { jdd.textContent = String(best.d); jdd.nextSibling.textContent = best.d === 0 ? '' : '天'; }
+        }
+      }
+    }
+    var daysP = params.get('days');
+    if (daysP) {
+      var daySet = [];
+      daysP.split(',').forEach(function (seg) {
+        var dm = /^(\d)-(\d)$/.exec(seg), dv = Number(seg);
+        if (dm) { for (var di = +dm[1]; di <= +dm[2]; di++) if (di <= 6) daySet.push(di); }
+        else if (dv >= 0 && dv <= 6 && String(dv) === seg.trim()) daySet.push(dv);
+      });
+      daySet = daySet.filter(function (v, i) { return daySet.indexOf(v) === i; });
+      var dst2 = window.SalaryApp && window.SalaryApp.getState && window.SalaryApp.getState();
+      if (daySet.length && dst2 && dst2.config) { dst2.config.weekDays = daySet; if (window.SalaryApp.render) window.SalaryApp.render(); }
+    }
     if (params.get('shake') === '1' && window.DeviceMotionEvent) {
       var lastShake = 0;
       window.addEventListener('devicemotion', function (e) {
@@ -952,6 +993,9 @@
       var dpp = params.get('daily'); if (dpp) u.searchParams.set('daily', dpp);
       if (params.get('quarter') === '1') u.searchParams.set('quarter', '1');
       var fpp = params.get('font'); if (fpp && ['mono', 'serif', 'round'].indexOf(fpp) >= 0) u.searchParams.set('font', fpp);
+      if (params.get('zodiac') === '1') u.searchParams.set('zodiac', '1');
+      if (params.get('jieqi') === '1') u.searchParams.set('jieqi', '1');
+      var dyp = params.get('days'); if (dyp) u.searchParams.set('days', dyp);
       params.forEach(function (v, k) { if (k.indexOf('utm_') === 0 && v) u.searchParams.set(k, v.slice(0, 64)); });
       var text = u.toString();
       (navigator.clipboard ? navigator.clipboard.writeText(text) : Promise.reject())

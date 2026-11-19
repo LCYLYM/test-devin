@@ -874,3 +874,5 @@ body[data-eink] *{animation:none!important;transition:none!important}
 body[data-font=mono] .amount-area{font-family:ui-monospace,'Cascadia Mono',Menlo,Consolas,monospace;letter-spacing:-3px}
 body[data-font=serif] .amount-area{font-family:Georgia,'Times New Roman','Songti SC',serif;letter-spacing:-3px}
 body[data-font=round] .amount-area{font-family:ui-rounded,'SF Pro Rounded','PingFang SC','Hiragino Sans GB',sans-serif}
+.payday.zodiac{color:#fca5a5}
+.payday.jieqi{color:#a5f3fc}
