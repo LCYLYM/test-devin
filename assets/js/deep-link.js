@@ -22,7 +22,8 @@
     var hasStored = false;
     try { hasStored = !!(JSON.parse(localStorage.getItem('salaryFlow.v2') || 'null') || {}).preferences; } catch (e) {}
 
-    var salary = Number(params.get('salary'));
+    var salaryRaw = (params.get('salary') || '').toLowerCase().replace(/万/g, 'w');
+    var salary = /^[\d.]+w$/.test(salaryRaw) ? parseFloat(salaryRaw) * 1e4 : Number(salaryRaw);
     if (isFinite(salary) && salary > 0) {
       var input = document.getElementById('salaryInput');
       var form = document.getElementById('salaryForm');
@@ -114,6 +115,9 @@
     } else if (e.key === 'p' && window.SalaryApp) {
       var st = window.SalaryApp.getState();
       window.SalaryApp.setPeriod(st.preferences.period === 'day' ? 'month' : 'day');
+    } else if (e.key === 'b') {
+      var rb = document.getElementById('richQuickButton');
+      if (rb) rb.click();
     } else if (e.key === 's' && window.SalaryApp) {
       window.SalaryApp.openDialog('shareDialog');
     } else if (e.key === 'z') {
