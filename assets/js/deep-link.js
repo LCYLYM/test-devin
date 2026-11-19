@@ -2063,6 +2063,28 @@
     if (params.get('dots') === '1') {
       document.body.classList.add('is-dots');
     }
+    if (params.get('sum') === '1') {
+      var smb = document.getElementById('sumBadge'), smv = document.getElementById('sumVal');
+      if (smb && smv) {
+        var smUpd = function () {
+          var st = window.SalaryApp && window.SalaryApp.getState && window.SalaryApp.getState();
+          var m = st && st.snapshot && st.snapshot.monthEarned;
+          if (m != null) { smv.textContent = window.SalaryApp.formatMoney(m, st.currency); smb.hidden = false; }
+        };
+        smUpd(); setInterval(smUpd, 500);
+      }
+    }
+    var emoParam = params.get('emo');
+    if (emoParam !== null) {
+      var emoEl = document.getElementById('statusEmoji');
+      if (emoEl) {
+        emoEl.textContent = emoParam.slice(0, 4) || '🙂';
+        emoEl.hidden = false;
+      }
+    }
+    if (params.get('holo') === '1') {
+      document.body.classList.add('is-holo');
+    }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -2628,6 +2650,9 @@
       var plp = params.get('pal'); if (plp && ['forest', 'ocean', 'sunset', 'grape', 'vapor'].indexOf(plp) >= 0) u.searchParams.set('pal', plp);
       if (params.get('amber') === '1') u.searchParams.set('amber', '1');
       if (params.get('dots') === '1') u.searchParams.set('dots', '1');
+      if (params.get('sum') === '1') u.searchParams.set('sum', '1');
+      if (params.get('emo') !== null) u.searchParams.set('emo', params.get('emo'));
+      if (params.get('holo') === '1') u.searchParams.set('holo', '1');
       if (params.get('tile') === '1') u.searchParams.set('tile', '1');
       if (params.get('outline') === '1') u.searchParams.set('outline', '1');
       if (params.get('stripe') === '1') u.searchParams.set('stripe', '1');
