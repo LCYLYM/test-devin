@@ -1037,3 +1037,12 @@ body[data-dual] .instrument{background:linear-gradient(180deg,var(--instrument) 
 body[data-bold] .odometer,body[data-bold] .money-symbol{font-weight:700}
 body[data-bold] .summary-item>strong{font-weight:700}
 @media(prefers-reduced-motion:reduce){body[data-rt] .odometer .digit-inner,body[data-rt] .money-symbol{animation:none}}
+.payday.hex{color:#d1d5db}
+.hex-dot{display:inline-block;width:11px;height:11px;border-radius:50%;border:1px solid rgba(255,255,255,.3)}
+body[data-spin] .payday>span:first-child{display:inline-block;animation:iconSpin 5s linear infinite}
+@keyframes iconSpin{to{transform:rotate(360deg)}}
+body[data-pop] .payday{animation:popIn .4s cubic-bezier(.2,1.6,.4,1) both}
+body[data-pop] .payday:nth-child(3n){animation-delay:.08s}
+body[data-pop] .payday:nth-child(3n+1){animation-delay:.16s}
+@keyframes popIn{from{transform:scale(.4);opacity:0}to{transform:scale(1);opacity:1}}
+@media(prefers-reduced-motion:reduce){body[data-spin] .payday>span:first-child,body[data-pop] .payday{animation:none}}

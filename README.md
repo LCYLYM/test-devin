@@ -217,6 +217,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `rt` | `1` 彩虹流动数字 |
 | `dual` | `1` 上下分色仪表 |
 | `bold` | `1` 数字加粗 |
+| `hex` | `1` 今日幸运色徽章 |
+| `spin` | `1` 徽章图标旋转 |
+| `pop` | `1` 徽章弹出入场 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 

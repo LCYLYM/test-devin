@@ -1121,6 +1121,23 @@
       eql.innerHTML = '<i></i><i></i><i></i><i></i><i></i>';
       document.body.appendChild(eql);
     }
+    if (params.get('hex') === '1') {
+      var hxb = document.getElementById('hexBadge'), hxd = document.getElementById('hexDot'), hxv = document.getElementById('hexVal');
+      if (hxb && hxd && hxv) {
+        var hxs = window.SalaryApp && window.SalaryApp.getState && window.SalaryApp.getState();
+        var hxk = (hxs && hxs.snapshot && hxs.snapshot.dayKey) || new Date().toISOString().slice(0, 10);
+        var hxh = 0; for (var hxi = 0; hxi < hxk.length; hxi++) hxh = (hxh * 31 + hxk.charCodeAt(hxi)) % 997;
+        var hexC = '#' + ('00000' + ((hxh * 2654435761) >>> 8 & 0xFFFFFF).toString(16)).slice(-6);
+        hxd.style.background = hexC; hxv.textContent = hexC;
+        hxb.hidden = false;
+      }
+    }
+    if (params.get('spin') === '1' && !(window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches)) {
+      document.body.dataset.spin = '1';
+    }
+    if (params.get('pop') === '1' && !(window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches)) {
+      document.body.dataset.pop = '1';
+    }
     if (params.get('rt') === '1' && !(window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches)) {
       document.body.dataset.rt = '1';
     }
@@ -1656,6 +1673,9 @@
       if (params.get('rt') === '1') u.searchParams.set('rt', '1');
       if (params.get('dual') === '1') u.searchParams.set('dual', '1');
       if (params.get('bold') === '1') u.searchParams.set('bold', '1');
+      if (params.get('hex') === '1') u.searchParams.set('hex', '1');
+      if (params.get('spin') === '1') u.searchParams.set('spin', '1');
+      if (params.get('pop') === '1') u.searchParams.set('pop', '1');
       if (params.get('rays') === '1') u.searchParams.set('rays', '1');
       if (params.get('flat') === '1') u.searchParams.set('flat', '1');
       var idl = params.get('idle'); if (idl) u.searchParams.set('idle', idl);
