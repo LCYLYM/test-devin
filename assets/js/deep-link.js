@@ -318,6 +318,38 @@
         .then(function () { if (window.SalaryApp && window.SalaryApp.toast) window.SalaryApp.toast('已复制 ' + txt); })
         .catch(function () {});
     });
+    if (params.get('crt') === '1') {
+      var crt = document.createElement('div');
+      crt.className = 'crt-overlay';
+      crt.setAttribute('aria-hidden', 'true');
+      document.body.appendChild(crt);
+    }
+    if (params.get('invert') === '1') document.documentElement.style.filter = 'invert(1) hue-rotate(180deg)';
+    var anniMatch = /^(\d{1,2})[-./](\d{1,2})$/.exec(params.get('anni') || '');
+    if (anniMatch) {
+      var am = +anniMatch[1], ad = +anniMatch[2];
+      var an = new Date(), ay = an.getFullYear();
+      var alast = new Date(ay, am, 0).getDate();
+      var atarget = (am >= 1 && am <= 12 && ad >= 1 && ad <= alast) ? new Date(ay, am - 1, ad) : null;
+      if (atarget) {
+        if (atarget < new Date(ay, an.getMonth(), an.getDate())) {
+          ay++;
+          atarget = new Date(ay, am - 1, Math.min(ad, new Date(ay, am, 0).getDate()));
+        }
+        var adays = Math.round((atarget - new Date(an.getFullYear(), an.getMonth(), an.getDate())) / 864e5);
+        var abadge = document.getElementById('anniBadge');
+        if (abadge) {
+          abadge.hidden = false;
+          var aname = (params.get('anniname') || '纪念日').slice(0, 12);
+          var albl = document.getElementById('anniLabel');
+          if (albl) albl.textContent = adays === 0 ? '今天' : '距' + aname;
+          abadge.classList.toggle('is-today', adays === 0);
+          abadge.title = aname + ' ' + am + '月' + ad + '日';
+          var add = document.getElementById('anniDays');
+          if (add) add.textContent = adays === 0 ? '🎉' : String(adays);
+        }
+      }
+    }
     var msParam = params.get('milestone');
     if (msParam !== null) {
       window.__milestones = (msParam === '0' || msParam === '') ? []
@@ -589,6 +621,9 @@
       var bgp = params.get('bgimg'); if (bgp) u.searchParams.set('bgimg', bgp);
       var kip = params.get('kiosk'); if (kip) u.searchParams.set('kiosk', kip);
       var fvp = params.get('favicon'); if (fvp) u.searchParams.set('favicon', fvp.slice(0, 8));
+      if (params.get('crt') === '1') u.searchParams.set('crt', '1');
+      if (params.get('invert') === '1') u.searchParams.set('invert', '1');
+      var anp = params.get('anni'); if (anp) { u.searchParams.set('anni', anp); var ann = params.get('anniname'); if (ann) u.searchParams.set('anniname', ann.slice(0, 12)); }
       var text = u.toString();
       (navigator.clipboard ? navigator.clipboard.writeText(text) : Promise.reject())
         .then(function () { btn.textContent = '已复制 ✓'; setTimeout(function(){ btn.textContent='复制当前链接'; }, 1500); })

@@ -80,6 +80,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `earn` | 目标金额，`?earn=100` → 倒计时「再 H:MM:SS 到手 ¥100」 |
 | `kiosk` | 秒数，每隔 N 秒自动轮换皮肤（`?kiosk=1` 默认 15s），电视/展示模式 |
 | `favicon` | 自定义标签页图标 emoji，如 `?favicon=🔥` |
+| `crt` | `1` CRT 扫描线滤镜（复古显示器质感） |
+| `invert` | `1` 反色滤镜（投影/特殊显示用） |
+| `anni` | 纪念日倒计时 `?anni=12-25`，配 `?anniname=名字` 自定义 |
 
 小技巧：双击金额数字可复制当前金额到剪贴板。
 
