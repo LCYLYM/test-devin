@@ -943,3 +943,9 @@ body[data-round] .charge-capsule,body[data-round] .modal{border-radius:28px}
 .click-ripple{position:fixed;width:12px;height:12px;margin:-6px 0 0 -6px;border-radius:50%;background:rgba(var(--accent-rgb,103,228,148),.5);pointer-events:none;z-index:130;animation:rippleOut .65s ease-out forwards}
 @keyframes rippleOut{to{transform:scale(9);opacity:0}}
 .is-focus .click-ripple{display:none}
+body[data-drift] .instrument{animation:driftY 6s ease-in-out infinite}
+@keyframes driftY{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
+body[data-wide] .page-shell{width:min(1400px,calc(100% - 48px))}
+body[data-rb] .instrument{animation:rbBorder 5s linear infinite}
+@keyframes rbBorder{0%{border-color:#f472b6}20%{border-color:#fb923c}40%{border-color:#facc15}60%{border-color:#4ade80}80%{border-color:#60a5fa}100%{border-color:#f472b6}}
+@media(prefers-reduced-motion:reduce){body[data-drift] .instrument,body[data-rb] .instrument{animation:none}}
