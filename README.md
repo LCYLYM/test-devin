@@ -1232,6 +1232,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `ladyfern` | `1` 蹄盖蕨配色 |
 | `malefern` | `1` 雄蕨配色 |
 | `hollyfern` | `1` 贯众配色 |
+| `sensitivefern` | `1` 球子蕨配色 |
+| `cinnamonfern` | `1` 桂皮紫萁配色 |
+| `royalfern` | `1` 紫萁配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 
