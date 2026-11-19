@@ -740,6 +740,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `wapiti` | `1` 马鹿配色 |
 | `xerus` | `1` 地松鼠配色 |
 | `yellowfin` | `1` 黄鳍金枪鱼配色 |
+| `zebu` | `1` 瘤牛配色 |
+| `anemone` | `1` 海葵配色 |
+| `bobcat` | `1` 山猫配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 
