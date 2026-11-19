@@ -3612,6 +3612,9 @@
     if (params.get('saiga') === '1') { document.body.classList.add('is-saiga'); }
     if (params.get('longan') === '1') { document.body.classList.add('is-longan'); }
     if (params.get('koala') === '1') { document.body.classList.add('is-koala'); }
+    if (params.get('okapi') === '1') { document.body.classList.add('is-okapi'); }
+    if (params.get('parrot') === '1') { document.body.classList.add('is-parrot'); }
+    if (params.get('panda') === '1') { document.body.classList.add('is-panda'); }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -4582,6 +4585,9 @@
         if (params.get('saiga') === '1') u.searchParams.set('saiga', '1');
         if (params.get('longan') === '1') u.searchParams.set('longan', '1');
         if (params.get('koala') === '1') u.searchParams.set('koala', '1');
+        if (params.get('okapi') === '1') u.searchParams.set('okapi', '1');
+        if (params.get('parrot') === '1') u.searchParams.set('parrot', '1');
+        if (params.get('panda') === '1') u.searchParams.set('panda', '1');
       if (params.get('tile') === '1') u.searchParams.set('tile', '1');
       if (params.get('outline') === '1') u.searchParams.set('outline', '1');
       if (params.get('stripe') === '1') u.searchParams.set('stripe', '1');

@@ -728,6 +728,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `saiga` | `1` 高鼻羚羊配色 |
 | `longan` | `1` 龙眼配色 |
 | `koala` | `1` 考拉配色 |
+| `okapi` | `1` 霍加狓配色 |
+| `parrot` | `1` 鹦鹉配色 |
+| `panda` | `1` 熊猫配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 
