@@ -527,6 +527,28 @@
         var mnm = document.getElementById('moonName'); if (mnm) mnm.textContent = NM[midx];
       }
     }
+    if (params.get('week') === '1') {
+      var wk = document.getElementById('weekBadge'), wp = document.getElementById('weekPct');
+      if (wk && wp) {
+        var wkFill = function () {
+          var n = new Date(), dw = (n.getDay() + 6) % 7;
+          wp.textContent = Math.round(((dw + n.getHours() / 24 + n.getMinutes() / 1440) / 7) * 100) + '%';
+        };
+        wk.hidden = false; wkFill(); setInterval(wkFill, 60000);
+      }
+    }
+    if (params.get('glow') === '1') document.body.dataset.glow = '1';
+    var hourlyP = Number(params.get('hourly'));
+    if (isFinite(hourlyP) && hourlyP > 0) {
+      var hst = window.SalaryApp && window.SalaryApp.getState && window.SalaryApp.getState();
+      var hh = (hst && hst.snapshot && hst.snapshot.hoursPerDay) || 8;
+      var hwd = (hst && hst.snapshot && hst.snapshot.workdays) || 21.75;
+      var hInput = document.getElementById('salaryInput'), hForm = document.getElementById('salaryForm');
+      if (hInput && hForm) {
+        hInput.value = String(Math.round(hourlyP * hh * hwd * 100) / 100);
+        hForm.requestSubmit ? hForm.requestSubmit() : hForm.dispatchEvent(new Event('submit', { cancelable: true }));
+      }
+    }
     if (params.get('shake') === '1' && window.DeviceMotionEvent) {
       var lastShake = 0;
       window.addEventListener('devicemotion', function (e) {
@@ -878,6 +900,9 @@
       if (params.get('all') === '1') u.searchParams.set('all', '1');
       if (params.get('moon') === '1') u.searchParams.set('moon', '1');
       if (params.get('shake') === '1') u.searchParams.set('shake', '1');
+      if (params.get('week') === '1') u.searchParams.set('week', '1');
+      if (params.get('glow') === '1') u.searchParams.set('glow', '1');
+      var hpp = params.get('hourly'); if (hpp) u.searchParams.set('hourly', hpp);
       params.forEach(function (v, k) { if (k.indexOf('utm_') === 0 && v) u.searchParams.set(k, v.slice(0, 64)); });
       var text = u.toString();
       (navigator.clipboard ? navigator.clipboard.writeText(text) : Promise.reject())

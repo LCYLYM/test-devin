@@ -110,6 +110,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `ticker` | 文本，金额下方滚动字幕（≤80 字符） |
 | `count` | `1` 打开时数字从 0 滚动到当前金额 |
 | `bg` | 十六进制颜色，自定义背景（如 `?bg=1a2b3c`） |
+| `hourly` | 时薪数字，自动换算成月薪填入（按当前工时） |
+| `week` | `1` 本周进度徽章 |
+| `glow` | `1` 金额辉光 + 状态点脉冲 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 
