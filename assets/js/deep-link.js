@@ -2287,6 +2287,21 @@
     if (params.get('zig') === '1') {
       document.body.classList.add('is-zig');
     }
+    if (params.get('eom') === '1') {
+      var emb2 = document.getElementById('eomBadge'), emv = document.getElementById('eomVal');
+      if (emb2 && emv) {
+        var now = new Date();
+        var nxt = new Date(now.getFullYear(), now.getMonth() + 1, 1);
+        emv.textContent = '距月底 ' + Math.ceil((nxt - now) / 86400000) + ' 天';
+        emb2.hidden = false;
+      }
+    }
+    if (params.get('hue') === '1' && !(window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches)) {
+      document.body.classList.add('is-hue');
+    }
+    if (params.get('wire') === '1') {
+      document.body.classList.add('is-wire');
+    }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -2888,6 +2903,9 @@
       if (params.get('mos') === '1') u.searchParams.set('mos', '1');
       if (params.get('lens') === '1') u.searchParams.set('lens', '1');
       if (params.get('zig') === '1') u.searchParams.set('zig', '1');
+      if (params.get('eom') === '1') u.searchParams.set('eom', '1');
+      if (params.get('hue') === '1') u.searchParams.set('hue', '1');
+      if (params.get('wire') === '1') u.searchParams.set('wire', '1');
       if (params.get('tile') === '1') u.searchParams.set('tile', '1');
       if (params.get('outline') === '1') u.searchParams.set('outline', '1');
       if (params.get('stripe') === '1') u.searchParams.set('stripe', '1');

@@ -359,6 +359,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `mos` | `1` 马赛克背景 |
 | `lens` | `1` 悬停放大金额 |
 | `zig` | `1` 锯齿顶边 |
+| `eom` | `1` 距月底天数徽章 |
+| `hue` | `1` 色相循环 |
+| `wire` | `1` 线框模式 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 

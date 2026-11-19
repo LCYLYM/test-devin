@@ -1153,6 +1153,11 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .payday.smp{color:#bef264}
 .payday.int{color:#facc15}
 .payday.rem{color:#fda4af}
+.payday.eom{color:#c7d2fe}
+@keyframes hueSpin{to{filter:hue-rotate(360deg)}}
+.is-hue .instrument{animation:hueSpin 12s linear infinite}
+@media (prefers-reduced-motion:reduce){.is-hue .instrument{animation:none}}
+.is-wire .instrument{background:transparent;border:1px solid rgba(148,163,184,.4);box-shadow:none}
 .is-mos{background-image:conic-gradient(rgba(148,163,184,.07) 90deg,transparent 0 180deg,rgba(148,163,184,.07) 0 270deg,transparent 0);background-size:36px 36px}
 .lens-on #amountArea{transform:scale(1.08);transition:transform .25s}
 .is-zig .instrument{clip-path:polygon(0 6px,12px 0,24px 6px,36px 0,48px 6px,60px 0,72px 6px,84px 0,96px 6px,108px 0,120px 6px,132px 0,144px 6px,156px 0,168px 6px,180px 0,192px 6px,204px 0,216px 6px,228px 0,240px 6px,252px 0,264px 6px,276px 0,288px 6px,300px 0,312px 6px,324px 0,336px 6px,348px 0,360px 6px,372px 0,384px 6px,396px 0,408px 6px,420px 0,432px 6px,444px 0,456px 6px,468px 0,480px 6px,492px 0,504px 6px,516px 0,528px 6px,540px 0,552px 6px,564px 0,576px 6px,588px 0,600px 6px,100% 0,100% 100%,0 100%)}
