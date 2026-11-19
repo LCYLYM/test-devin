@@ -1157,6 +1157,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `truffle` | `1` 松露配色 |
 | `enoki` | `1` 金针菇配色 |
 | `matsutake` | `1` 松茸配色 |
+| `amanita` | `1` 鹅膏配色 |
+| `reishi` | `1` 灵芝配色 |
+| `portobello` | `1` 褐菇配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 

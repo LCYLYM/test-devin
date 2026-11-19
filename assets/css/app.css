@@ -2512,6 +2512,12 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .is-enoki .instrument{border-color:rgba(225,210,150,.4)}
 .is-matsutake{background:linear-gradient(180deg,#1a1511 0%,#13100c 100%)}
 .is-matsutake .instrument{border-color:rgba(205,160,120,.4)}
+.is-amanita{background:linear-gradient(180deg,#1d1013 0%,#150b0d 100%)}
+.is-amanita .instrument{border-color:rgba(235,85,90,.4)}
+.is-reishi{background:linear-gradient(180deg,#1b1010 0%,#140b0b 100%)}
+.is-reishi .instrument{border-color:rgba(215,95,80,.4)}
+.is-portobello{background:linear-gradient(180deg,#171310 0%,#110e0b 100%)}
+.is-portobello .instrument{border-color:rgba(175,140,105,.4)}
 .is-oatmeal{background:linear-gradient(180deg,#1d1912,#2f291e 50%,#433a2a)}
 .is-oatmeal .instrument{border-color:rgba(215,195,155,.4)}
 .is-thyme{background:linear-gradient(180deg,#121a14,#1c2a20 50%,#28392c)}
