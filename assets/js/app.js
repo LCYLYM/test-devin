@@ -158,6 +158,10 @@
     setText('pigDeposit','+ '+data.symbol+coinRate.toLocaleString('en-US',{maximumFractionDigits:2,minimumFractionDigits:2})+(data.fun?' 亿':''));
     const vs=window.__vsItem;
     if(vs){const vb=$('vsBadge');if(vb){vb.hidden=false;setText('vsCount',((data.snapshot&&data.snapshot.todayEarned||0)/vs.price).toFixed(1));setText('vsName',' '+vs.name);}}
+    const avg=window.__avgSalary;
+    if(avg){const ab=$('avgBadge');if(ab){ab.hidden=false;const avgHour=avg/(21.75*8),myHour=(data.snapshot&&data.snapshot.hourSalary)||0;
+    const diff=avgHour>0?((myHour/avgHour)-1)*100:0;setText('avgDiff',(diff>=0?'+':'')+diff.toFixed(0)+'%');
+    setText('avgRef','vs 均值 '+(data.symbol||'¥')+avgHour.toFixed(1)+'/h');}}
     const overtimeHours=Number(state?.config.estimatedOvertime)||0;
     const scenario=window.SalaryEngine.overtimeScenario(state.config,data.now,overtimeHours,state.config.extraPay||0);
     setText('overtimeSummaryValue',overtimeHours?window.SalaryApp.formatMoney(scenario.actualHourly)+' / h':'展开');

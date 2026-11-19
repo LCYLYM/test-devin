@@ -769,3 +769,6 @@ body[data-template=wave]{--bg:#0b1526}
 .confetti-canvas{position:absolute;inset:0;pointer-events:none;z-index:5}
 /* iter-177: 费率胶囊可点 */
 .rate-pill{cursor:pointer;user-select:none}
+
+/* iter-179: 时薪对比徽章 */
+.payday.avg{color:#a78bfa}

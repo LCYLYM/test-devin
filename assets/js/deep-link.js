@@ -170,6 +170,12 @@
     var cmd = params.get('cmd');
     if (cmd) { var tc = document.querySelector('.term-cmd'); if (tc) tc.textContent = cmd.slice(0, 40); }
 
+    var petParam = params.get('pet');
+    if (petParam) { var pn = document.getElementById('pigNoteText'); if (pn) pn.textContent = petParam.slice(0, 12) + '正在存钱…'; }
+
+    var avgParam = params.get('avg');
+    if (avgParam) { var avgN = parseFloat(avgParam.replace(/,/g, '')); if (avgN > 0) { window.__avgSalary = avgN; var ab0 = document.getElementById('avgBadge'); if (ab0) ab0.hidden = false; } }
+
     var vsParam = params.get('vs');
     if (vsParam) {
       var vsM = /^([^@:]+)[@:]([0-9]+(?:\.[0-9]+)?)$/.exec(vsParam.trim());
