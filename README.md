@@ -872,6 +872,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `smelt` | `1` 胡瓜鱼配色 |
 | `tench` | `1` 丁鱥配色 |
 | `wrasse` | `1` 隆头鱼配色 |
+| `barbel` | `1` 鲃鱼配色 |
+| `dace` | `1` 鲦鱼配色 |
+| `grayling` | `1` 茴鱼配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 

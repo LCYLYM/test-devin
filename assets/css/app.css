@@ -1942,6 +1942,12 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .is-tench .instrument{border-color:rgba(160,185,105,.4)}
 .is-wrasse{background:linear-gradient(180deg,#0f1a1b 0%,#081213 100%)}
 .is-wrasse .instrument{border-color:rgba(95,190,185,.4)}
+.is-barbel{background:linear-gradient(180deg,#1a1712 0%,#110f0a 100%)}
+.is-barbel .instrument{border-color:rgba(190,170,125,.4)}
+.is-dace{background:linear-gradient(180deg,#14181d 0%,#0d1014 100%)}
+.is-dace .instrument{border-color:rgba(155,170,195,.4)}
+.is-grayling{background:linear-gradient(180deg,#171520 0%,#0f0d15 100%)}
+.is-grayling .instrument{border-color:rgba(175,160,215,.4)}
 .is-oatmeal{background:linear-gradient(180deg,#1d1912,#2f291e 50%,#433a2a)}
 .is-oatmeal .instrument{border-color:rgba(215,195,155,.4)}
 .is-thyme{background:linear-gradient(180deg,#121a14,#1c2a20 50%,#28392c)}
