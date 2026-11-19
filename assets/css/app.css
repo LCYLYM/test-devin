@@ -1594,6 +1594,12 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .is-cumin .instrument{border-color:rgba(225,160,80,.42)}
 .is-chinchilla{background:linear-gradient(180deg,#15161a,#25262e 50%,#363842)}
 .is-chinchilla .instrument{border-color:rgba(175,180,205,.42)}
+.is-axolotl{background:linear-gradient(180deg,#1c0f16,#301a28 50%,#45273a)}
+.is-axolotl .instrument{border-color:rgba(230,140,180,.42)}
+.is-azuki{background:linear-gradient(180deg,#1c0d10,#321417 50%,#491e21)}
+.is-azuki .instrument{border-color:rgba(210,105,115,.42)}
+.is-cassowary{background:linear-gradient(180deg,#0d1620,#13253a 50%,#1c3652)}
+.is-cassowary .instrument{border-color:rgba(90,160,225,.42)}
 .is-oatmeal{background:linear-gradient(180deg,#1d1912,#2f291e 50%,#433a2a)}
 .is-oatmeal .instrument{border-color:rgba(215,195,155,.4)}
 .is-thyme{background:linear-gradient(180deg,#121a14,#1c2a20 50%,#28392c)}

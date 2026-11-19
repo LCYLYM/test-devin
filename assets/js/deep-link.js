@@ -3528,6 +3528,15 @@
     if (params.get('chinchilla') === '1') {
       document.body.classList.add('is-chinchilla');
     }
+    if (params.get('axolotl') === '1') {
+      document.body.classList.add('is-axolotl');
+    }
+    if (params.get('azuki') === '1') {
+      document.body.classList.add('is-azuki');
+    }
+    if (params.get('cassowary') === '1') {
+      document.body.classList.add('is-cassowary');
+    }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -4468,6 +4477,9 @@
       if (params.get('goanna') === '1') u.searchParams.set('goanna', '1');
       if (params.get('cumin') === '1') u.searchParams.set('cumin', '1');
       if (params.get('chinchilla') === '1') u.searchParams.set('chinchilla', '1');
+      if (params.get('axolotl') === '1') u.searchParams.set('axolotl', '1');
+      if (params.get('azuki') === '1') u.searchParams.set('azuki', '1');
+      if (params.get('cassowary') === '1') u.searchParams.set('cassowary', '1');
       if (params.get('tile') === '1') u.searchParams.set('tile', '1');
       if (params.get('outline') === '1') u.searchParams.set('outline', '1');
       if (params.get('stripe') === '1') u.searchParams.set('stripe', '1');

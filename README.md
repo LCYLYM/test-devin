@@ -698,6 +698,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `goanna` | `1` 巨蜥配色 |
 | `cumin` | `1` 孜然配色 |
 | `chinchilla` | `1` 龙猫配色 |
+| `axolotl` | `1` 六角龙配色 |
+| `azuki` | `1` 红豆配色 |
+| `cassowary` | `1` 鹤鸵配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 
