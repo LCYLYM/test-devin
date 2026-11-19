@@ -1451,6 +1451,37 @@
         neUpd();
       }
     }
+    if (params.get('yd') === '1') {
+      window.__allTime = true;
+      var ydb = document.getElementById('ydBadge'), yda = document.getElementById('ydAmt');
+      if (ydb && yda) {
+        var ydUpd = function () {
+          var map = {}; try { map = JSON.parse(localStorage.getItem('salaryFlow.all') || '{}'); } catch (_) { }
+          var d = new Date(); d.setDate(d.getDate() - 1);
+          var yk = d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0');
+          var yv = map[yk];
+          yda.textContent = (yv && window.SalaryApp && window.SalaryApp.formatMoney) ? window.SalaryApp.formatMoney(yv) : (yv ? yv.toFixed(2) : '—');
+          ydb.hidden = false;
+        };
+        ydUpd();
+        setInterval(ydUpd, 8000);
+      }
+    }
+    if (params.get('tapn') === '1') {
+      var tpb = document.getElementById('tapnBadge'), tpv = document.getElementById('tapnVal');
+      if (tpb && tpv) {
+        var tapLog = [];
+        document.addEventListener('click', function () { tapLog.push(Date.now()); if (tapLog.length > 600) tapLog.shift(); });
+        setInterval(function () {
+          var cut = Date.now() - 60000;
+          tapLog = tapLog.filter(function (t) { return t > cut; });
+          tpv.textContent = tapLog.length;
+          tpb.hidden = false;
+        }, 1000);
+        tpb.hidden = false;
+      }
+    }
+    if (params.get('quiet') === '1') { document.body.classList.add('is-quiet'); }
     var opaParam = params.get('opacity');
     if (opaParam) {
       var opa = Math.min(100, Math.max(20, parseFloat(opaParam)));
@@ -2062,6 +2093,9 @@
       if (params.get('fps') === '1') u.searchParams.set('fps', '1');
       if (params.get('bat') === '1') u.searchParams.set('bat', '1');
       if (params.get('net') === '1') u.searchParams.set('net', '1');
+      if (params.get('yd') === '1') u.searchParams.set('yd', '1');
+      if (params.get('tapn') === '1') u.searchParams.set('tapn', '1');
+      if (params.get('quiet') === '1') u.searchParams.set('quiet', '1');
       if (params.get('rays') === '1') u.searchParams.set('rays', '1');
       if (params.get('flat') === '1') u.searchParams.set('flat', '1');
       var idl = params.get('idle'); if (idl) u.searchParams.set('idle', idl);
