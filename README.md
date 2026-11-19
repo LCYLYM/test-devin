@@ -485,6 +485,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `lotus` | `1` 莲花配色 |
 | `ebony` | `1` 乌木配色 |
 | `sprout` | `1` 嫩芽配色 |
+| `harbor` | `1` 港湾配色 |
+| `cosmos` | `1` 宇宙配色 |
+| `ginger` | `1` 姜黄配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 

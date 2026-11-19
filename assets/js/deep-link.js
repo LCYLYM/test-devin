@@ -2837,6 +2837,15 @@
     if (params.get('sprout') === '1') {
       document.body.classList.add('is-sprout');
     }
+    if (params.get('harbor') === '1') {
+      document.body.classList.add('is-harbor');
+    }
+    if (params.get('cosmos') === '1') {
+      document.body.classList.add('is-cosmos');
+    }
+    if (params.get('ginger') === '1') {
+      document.body.classList.add('is-ginger');
+    }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -3564,6 +3573,9 @@
       if (params.get('lotus') === '1') u.searchParams.set('lotus', '1');
       if (params.get('ebony') === '1') u.searchParams.set('ebony', '1');
       if (params.get('sprout') === '1') u.searchParams.set('sprout', '1');
+      if (params.get('harbor') === '1') u.searchParams.set('harbor', '1');
+      if (params.get('cosmos') === '1') u.searchParams.set('cosmos', '1');
+      if (params.get('ginger') === '1') u.searchParams.set('ginger', '1');
       if (params.get('tile') === '1') u.searchParams.set('tile', '1');
       if (params.get('outline') === '1') u.searchParams.set('outline', '1');
       if (params.get('stripe') === '1') u.searchParams.set('stripe', '1');
