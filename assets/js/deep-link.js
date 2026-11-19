@@ -170,6 +170,16 @@
     var cmd = params.get('cmd');
     if (cmd) { var tc = document.querySelector('.term-cmd'); if (tc) tc.textContent = cmd.slice(0, 40); }
 
+    var hideMap = {header:'.app-header',footer:'.app-footer',faq:'.seo-faq',utility:'.utility-row',summary:'.summary-strip',overtime:'.overtime-disclosure',bottom:'.bottom-row',toolbar:'.instrument-toolbar',foot:'.instrument-footer'};
+    var hideList = (params.get('hide') || '').split(',').map(function (s) { return s.trim(); });
+    if (params.get('embed') === '1') hideList = ['header', 'footer', 'faq'];
+    var hiddenSel = hideList.map(function (k) { return hideMap[k]; }).filter(Boolean);
+    if (hiddenSel.length) {
+      var st = document.createElement('style');
+      st.textContent = hiddenSel.join(',') + '{display:none!important}';
+      document.head.appendChild(st);
+    }
+
     if (params.get('zen') === '1' || params.get('ui') === '0') document.body.classList.add('is-focus');
 
     // ?dialog=share|about|settings|goal|calendar|currency|overtime — open a panel directly.
