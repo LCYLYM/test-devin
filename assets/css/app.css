@@ -1231,6 +1231,12 @@ body[data-hover] .payday:hover{transform:translateY(-3px)}
 .is-dusty .instrument{border-color:rgba(185,170,150,.35)}
 .is-marine{background:linear-gradient(180deg,#07141e,#0e2230 55%,#143040)}
 .is-marine .instrument{border-color:rgba(80,170,215,.42)}
+.is-autumn{background:linear-gradient(180deg,#26140a,#3c2010 55%,#522c16)}
+.is-autumn .instrument{border-color:rgba(230,140,60,.42)}
+.is-winter{background:linear-gradient(180deg,#0e1a26,#16293a 55%,#1e384c)}
+.is-winter .instrument{border-color:rgba(170,215,240,.42)}
+.is-spring{background:linear-gradient(180deg,#0f1e14,#1a3020 55%,#25422c)}
+.is-spring .instrument{border-color:rgba(140,220,150,.42)}
 .is-focus .payday.morale{display:none}
 body[data-pillar] .page-shell{border-left:1px solid rgba(var(--accent-rgb,103,228,148),.22);border-right:1px solid rgba(var(--accent-rgb,103,228,148),.22)}
 body[data-gloom]{--bg:#0a0c0b}

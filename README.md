@@ -521,6 +521,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `sierra` | `1` 山峦配色 |
 | `dusty` | `1` 尘色配色 |
 | `marine` | `1` 海蓝配色 |
+| `autumn` | `1` 秋色配色 |
+| `winter` | `1` 冬色配色 |
+| `spring` | `1` 春色配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 
