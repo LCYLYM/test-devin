@@ -292,6 +292,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `tax` | `留存率` 税后估算徽章（默认 0.8） |
 | `bean` | `单价` 咖啡杯数换算徽章（默认 ¥15） |
 | `lofi` | `1` Lo-Fi 暖色噪点叠层 |
+| `auto` | `1` 自动徽章包（星期+时钟+进度+KPI） |
+| `eco` | `1` 省电模式（停装饰层与动画） |
+| `bloom` | `1` 泛光滤镜 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 

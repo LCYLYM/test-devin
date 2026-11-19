@@ -610,6 +610,11 @@
       if (vb2) { vb2.hidden = false; var vn = document.getElementById('visitsCount'); if (vn) vn.textContent = String(vc); }
     }
     if (params.get('chime') === '1') window.__chime = true;
+    if (params.get('auto') === '1') {
+      ['dow', 'clock2', 'pct', 'kpi'].forEach(function (p) { if (!params.get(p)) params.set(p, '1'); });
+    }
+    if (params.get('eco') === '1') { document.body.classList.add('is-eco'); }
+    if (params.get('bloom') === '1') { document.body.classList.add('is-bloom'); }
     if (params.get('all') === '1') window.__allTime = true;
     if (params.get('moon') === '1') {
       var mb = document.getElementById('moonBadge');
@@ -2335,6 +2340,9 @@
       var lp = params.get('logo'); if (lp) u.searchParams.set('logo', lp);
       if (document.body.dataset.grad === '1') u.searchParams.set('grad', '1');
       var fp = params.get('from'); if (fp) u.searchParams.set('from', fp.slice(0, 16));
+      if (params.get('auto') === '1') u.searchParams.set('auto', '1');
+      if (params.get('eco') === '1') u.searchParams.set('eco', '1');
+      if (params.get('bloom') === '1') u.searchParams.set('bloom', '1');
       if (params.get('all') === '1') u.searchParams.set('all', '1');
       if (params.get('moon') === '1') u.searchParams.set('moon', '1');
       if (params.get('shake') === '1') u.searchParams.set('shake', '1');

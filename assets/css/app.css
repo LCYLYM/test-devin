@@ -1129,6 +1129,9 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .payday.done{color:#6ee7b7}
 .payday.tax{color:#fda4af}
 .payday.bean{color:#d4a373}
+.is-eco .fx-layer,.is-eco .tint-layer,.is-eco .veil-layer,.is-eco .lofi-layer,.is-eco .noise-layer{display:none}
+.is-eco *{animation-duration:.01ms !important;animation-iteration-count:1 !important;transition-duration:.01ms !important}
+.is-bloom .instrument{filter:brightness(1.08) saturate(1.2) drop-shadow(0 0 18px rgba(var(--accent-rgb),.35))}
 .lofi-layer{position:fixed;inset:0;pointer-events:none;background:repeating-linear-gradient(0deg,rgba(255,200,120,.028) 0 2px,transparent 2px 4px);mix-blend-mode:screen;z-index:2}
 .is-pix .instrument-visual,.is-pix canvas{image-rendering:pixelated}
 .qr-pop{position:absolute;bottom:calc(100% + 10px);left:50%;transform:translateX(-50%);background:#fff;padding:8px;border-radius:10px;box-shadow:0 8px 24px rgba(0,0,0,.45);z-index:60}
