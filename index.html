@@ -3,11 +3,18 @@
   
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
   <meta name="theme-color" content="#131415">
+  <meta name="color-scheme" content="dark">
   <title>薪动 · 每一秒，都算数 — 实时工资秒表</title>
   <meta name="description" content="薪动是一个免费的实时工资计算器：输入月薪，看着收入按秒跳动。支持中国大陆节假日、自定义排班、加班时薪、多币种换算与分享海报。数据只存本地，无需注册。">
   <meta name="keywords" content="工资计算器,实时工资,每秒工资,月薪计算,时薪计算,加班计算器,薪动,摸鱼计算器,salary calculator,work pay tracker">
   <meta name="author" content="生鱼安乐">
   <meta name="robots" content="index,follow,max-image-preview:large">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="薪动">
+  <meta name="format-detection" content="telephone=no">
   <link rel="canonical" href="https://xd.syal.site/">
   <link rel="icon" href="./assets/img/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="./assets/img/piggy.webp">
@@ -20,11 +27,13 @@
   <meta property="og:image" content="https://xd.syal.site/assets/img/og.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="薪动 — 实时工资秒表">
   <meta property="og:locale" content="zh_CN">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="薪动 · 每一秒，都算数">
   <meta name="twitter:description" content="输入月薪，看着收入按秒跳动。免费、无需注册、数据只存本地。">
   <meta name="twitter:image" content="https://xd.syal.site/assets/img/og.jpg">
+  <meta name="twitter:image:alt" content="薪动 — 实时工资秒表">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -55,6 +64,8 @@
   </script>
 </head>
 <body data-template="charge">
+<a class="skip-link" href="#earningsCard">跳到主要内容</a>
+<noscript><div style="padding:48px 24px;text-align:center;font-family:sans-serif;color:#e8ece9;background:#131415;min-height:60vh"><h1>薪动 · 每一秒，都算数</h1><p>这个小工具需要启用 JavaScript 才能运行。所有计算都在本地进行，不开脚本不会发生任何事。</p></div></noscript>
 <!--
 ISC License
 
@@ -318,7 +329,7 @@ SOFTWARE.
   </header>
 
   <main>
-    <div class="utility-row"><form id="salaryForm" class="salary-form"><label for="salaryInput">月薪</label><span class="salary-currency">¥</span><input id="salaryInput" type="number" inputmode="decimal" min="1" max="1000000000" step="0.01" value="15000" aria-describedby="salaryHint" aria-label="人民币月薪"><button type="submit" class="icon-btn apply-salary" aria-label="应用月薪" title="应用月薪"><svg class="icon"><use href="#icon-check"></use></svg></button><span id="salaryHint" class="sr-only">已保存 · 收入按你的实际工作日分摊</span></form><div class="utility-right"><button class="date-button" data-open="calendarDialog" title="查看工作日历"><svg class="icon"><use href="#icon-calendar-days"></use></svg><span id="currentDate">11月18日 · 周三</span></button><span class="utility-divider"></span><time id="currentTime">18:21:29</time><span class="time-zone" id="timezoneLabel" hidden=""></span></div></div>
+    <div class="utility-row"><form id="salaryForm" class="salary-form"><label for="salaryInput">月薪</label><span class="salary-currency">¥</span><input id="salaryInput" type="number" inputmode="decimal" min="1" max="1000000000" step="0.01" value="15000" aria-describedby="salaryHint" aria-label="人民币月薪"><button type="submit" class="icon-btn apply-salary" aria-label="应用月薪" title="应用月薪"><svg class="icon"><use href="#icon-check"></use></svg></button><span id="salaryHint" class="sr-only">已保存 · 收入按你的实际工作日分摊</span></form><div class="utility-right"><button class="date-button" data-open="calendarDialog" title="查看工作日历"><svg class="icon"><use href="#icon-calendar-days"></use></svg><span id="currentDate">11月18日 · 周三</span></button><span class="utility-divider"></span><time id="currentTime" aria-hidden="true">18:21:29</time><span class="time-zone" id="timezoneLabel" hidden=""></span></div></div>
     <div class="demo-banner" id="demoBanner" hidden=""><span><svg class="icon"><use href="#icon-play"></use></svg><b>体验模式</b> · 模拟工作日 14:30，20 倍时间</span><button id="exitDemo">回到现在 <svg class="icon"><use href="#icon-x"></use></svg></button></div>
 
     <section class="instrument entrance" id="earningsCard" aria-label="实时工资仪表">
@@ -329,7 +340,7 @@ SOFTWARE.
         <div class="energy-stage" id="energyStage">
           <div class="charge-visual" aria-hidden="true"><div class="charge-capsule"><div class="charge-track"><div class="charge-fill" id="heroProgressFill" style="width: 100%;"><span class="charge-stream"></span><span class="charge-stream delayed"></span></div><div class="charge-head" id="chargeHead" style="left: 100%;"><svg class="icon"><use href="#icon-zap"></use></svg><span id="chargePercent">100.0%</span></div></div><span class="charge-terminal"></span></div></div>
           <div class="meter-visual" aria-hidden="true"><div class="meter-ruler"><span>0</span><span>50</span><span>100</span></div><div class="segment-bars" id="segmentBars"></div><div class="meter-caption"><span id="meterChargeLabel">工作时段内累计</span><span class="tiny-signal"><i></i><i></i><i></i></span></div></div>
-          <div class="pig-visual"><div class="pig-object"><img id="piggyImage" class="piggy-image" src="./assets/img/piggy.webp" alt="粉色陶瓷猪猪存钱罐"><img id="pigCoin" class="pig-coin" src="./assets/img/piggy.webp" alt="" aria-hidden="true"><div class="pig-deposit" id="pigDeposit" aria-hidden="true">+ ¥0.01</div></div><div class="pig-note"><span>一点一点，存起来。</span><b id="pigPercent">100.0%</b></div></div>
+          <div class="pig-visual"><div class="pig-object"><img id="piggyImage" class="piggy-image" src="./assets/img/piggy.webp" width="800" height="800" fetchpriority="low" alt="粉色陶瓷猪猪存钱罐"><img id="pigCoin" class="pig-coin" src="./assets/img/piggy.webp" width="800" height="800" loading="lazy" alt="" aria-hidden="true"><div class="pig-deposit" id="pigDeposit" aria-hidden="true">+ ¥0.01</div></div><div class="pig-note"><span>一点一点，存起来。</span><b id="pigPercent">100.0%</b></div></div>
           <div class="pixel-visual"><div class="pixel-heading"><span id="pixelTitle">今天的积累</span><span class="pixel-key"><i></i>已赚 <i></i>待完成</span></div><canvas id="pixelCanvas" width="640" height="310" aria-label="按工作时段计算的累计收入像素图"></canvas><div class="pixel-axis" id="pixelAxis"><span>09:00</span><span>12:00</span><span>13:30</span><span>18:00</span></div></div>
         </div>
       </div>

@@ -540,3 +540,12 @@ dialog.drawer[open] { animation: drawer-arrive 300ms cubic-bezier(.2,.75,.25,1) 
 .seo-faq summary::after{content:"+";float:right;color:#5c6660}
 .seo-faq details[open] summary::after{content:"–"}
 .seo-faq details p{margin:8px 0 0}
+
+/* a11y: skip link */
+.skip-link{position:absolute;left:12px;top:-48px;z-index:1000;background:#3ddc84;color:#131415;padding:8px 16px;border-radius:8px;font-weight:600;text-decoration:none;transition:top .2s}
+.skip-link:focus{top:12px}
+
+/* respect reduced motion */
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{animation-duration:.01ms !important;animation-iteration-count:1 !important;transition-duration:.01ms !important;scroll-behavior:auto !important}
+}
