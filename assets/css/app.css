@@ -670,3 +670,7 @@ body[data-template=mono] .day-target{display:none}
 @media(prefers-reduced-motion: reduce){.neon-arc,.mono-fill,.paper-ink{transition:none}.instrument.is-working .neon-arc{animation:none}}
 @media(max-width:760px){.template-switch{overflow-x:auto;scrollbar-width:none;max-width:100%}.template-switch::-webkit-scrollbar{display:none}}
 @media print{.neon-visual,.paper-visual,.mono-visual{display:none!important}}
+
+/* iter-102: accent dot inside skin buttons */
+.skin-dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--dot);opacity:.85;flex:none}
+@media(max-width:760px){.skin-dot{width:6px;height:6px}}

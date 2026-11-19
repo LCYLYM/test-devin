@@ -26,6 +26,7 @@
   <link rel="apple-touch-icon" href="./assets/img/piggy.webp">
   <link rel="preconnect" href="https://api.frankfurter.dev" crossorigin>
   <link rel="manifest" href="./site.webmanifest">
+  <link rel="preload" as="image" href="./assets/img/piggy.webp" fetchpriority="low">
   <link rel="search" type="application/opensearchdescription+xml" title="薪动" href="./opensearch.xml">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="薪动">
@@ -345,7 +346,7 @@ SOFTWARE.
 <div class="page-shell">
   <header class="app-header">
     <a class="brand" href="https://xd.syal.site/#" aria-label="薪动首页"><svg class="icon brand-icon"><use href="#icon-zap"></use></svg><span>薪动</span></a>
-    <div class="template-switch" role="group" aria-label="切换显示模板"><span class="template-slider" id="templateSlider" style="width: 78px; transform: translateX(0px);"></span><button data-template="charge" title="切换到充电皮肤（按 t 轮换）" aria-pressed="false">充电</button><button data-template="meter" title="切换到刻度皮肤（按 t 轮换）" aria-pressed="false">刻度</button><button data-template="pixel" title="切换到像素皮肤（按 t 轮换）" aria-pressed="false">像素</button><button data-template="pig" title="切换到存钱罐皮肤（按 t 轮换）" class="selected" aria-pressed="true">存钱罐</button><button data-template="neon" title="切换到霓虹皮肤（按 t 轮换）" aria-pressed="false">霓虹</button><button data-template="mono" title="切换到极简皮肤（按 t 轮换）" aria-pressed="false">极简</button><button data-template="paper" title="切换到纸墨皮肤（按 t 轮换）" aria-pressed="false">纸墨</button></div>
+    <div class="template-switch" role="group" aria-label="切换显示模板"><span class="template-slider" id="templateSlider" style="width: 78px; transform: translateX(0px);"></span><button data-template="charge" title="切换到充电皮肤（按 t 轮换）" aria-pressed="false"><i class="skin-dot" style="--dot:#5ae593"></i>充电</button><button data-template="meter" title="切换到刻度皮肤（按 t 轮换）" aria-pressed="false"><i class="skin-dot" style="--dot:#ff8a52"></i>刻度</button><button data-template="pixel" title="切换到像素皮肤（按 t 轮换）" aria-pressed="false"><i class="skin-dot" style="--dot:#fe7946"></i>像素</button><button data-template="pig" title="切换到存钱罐皮肤（按 t 轮换）" class="selected" aria-pressed="true"><i class="skin-dot" style="--dot:#eeb58e"></i>存钱罐</button><button data-template="neon" title="切换到霓虹皮肤（按 t 轮换）" aria-pressed="false"><i class="skin-dot" style="--dot:#4de3ff"></i>霓虹</button><button data-template="mono" title="切换到极简皮肤（按 t 轮换）" aria-pressed="false"><i class="skin-dot" style="--dot:#e8e8e8"></i>极简</button><button data-template="paper" title="切换到纸墨皮肤（按 t 轮换）" aria-pressed="false"><i class="skin-dot" style="--dot:#c2622f"></i>纸墨</button></div>
     <div class="header-tools"><button class="share-button" id="shareButton">分享战绩 <svg class="icon"><use href="#icon-chevron-right"></use></svg></button><button class="icon-btn" data-open="settingsDialog" title="工作时间与排班" aria-label="工作时间与排班"><svg class="icon"><use href="#icon-settings-2"></use></svg></button></div>
   </header>
 
