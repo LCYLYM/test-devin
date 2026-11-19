@@ -1409,6 +1409,48 @@
         if (!document.fullscreenElement) document.documentElement.requestFullscreen?.();
       });
     }
+    if (params.get('fps') === '1') {
+      var fpb = document.getElementById('fpsBadge'), fpv = document.getElementById('fpsVal');
+      if (fpb && fpv) {
+        var fpCnt = 0, fpT0 = performance.now();
+        (function fpLoop() { fpCnt++; requestAnimationFrame(fpLoop); })();
+        setInterval(function () {
+          var el = (performance.now() - fpT0) / 1000;
+          fpv.textContent = String(Math.round(fpCnt / Math.max(0.1, el)));
+          fpCnt = 0; fpT0 = performance.now();
+        }, 2000);
+        fpb.hidden = false;
+      }
+    }
+    if (params.get('bat') === '1') {
+      var bab = document.getElementById('batBadge'), bav = document.getElementById('batVal'), bai = document.getElementById('batIcon');
+      if (bab && bav && bai && navigator.getBattery) {
+        navigator.getBattery().then(function (bt) {
+          var baUpd = function () {
+            bav.textContent = String(Math.round(bt.level * 100));
+            bai.textContent = bt.charging ? '🔌' : bt.level > 0.2 ? '🔋' : '🪫';
+          };
+          baUpd();
+          bt.addEventListener('levelchange', baUpd);
+          bt.addEventListener('chargingchange', baUpd);
+          bab.hidden = false;
+        }).catch(function () { });
+      }
+    }
+    if (params.get('net') === '1') {
+      var neb = document.getElementById('netBadge'), nei = document.getElementById('netIcon'), net2 = document.getElementById('netText');
+      if (neb && nei && net2) {
+        var neUpd = function () {
+          var on = navigator.onLine;
+          nei.textContent = on ? '🌐' : '📵';
+          net2.textContent = on ? '在线' : '离线';
+          neb.hidden = false;
+        };
+        window.addEventListener('online', neUpd);
+        window.addEventListener('offline', neUpd);
+        neUpd();
+      }
+    }
     var opaParam = params.get('opacity');
     if (opaParam) {
       var opa = Math.min(100, Math.max(20, parseFloat(opaParam)));
@@ -2017,6 +2059,9 @@
       if (params.get('over') === '1') u.searchParams.set('over', '1');
       if (params.get('fson') === '1') u.searchParams.set('fson', '1');
       var opp = params.get('opacity'); if (opp) u.searchParams.set('opacity', opp);
+      if (params.get('fps') === '1') u.searchParams.set('fps', '1');
+      if (params.get('bat') === '1') u.searchParams.set('bat', '1');
+      if (params.get('net') === '1') u.searchParams.set('net', '1');
       if (params.get('rays') === '1') u.searchParams.set('rays', '1');
       if (params.get('flat') === '1') u.searchParams.set('flat', '1');
       var idl = params.get('idle'); if (idl) u.searchParams.set('idle', idl);

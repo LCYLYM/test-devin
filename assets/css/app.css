@@ -1104,3 +1104,6 @@ body[data-compact] .payday{font-size:11px;padding:2px 8px}
 .payday.week7{color:#d8b4fe}
 .payday.over{color:#fbbf24}
 body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
+.payday.fps{color:#94a3b8;font-variant-numeric:tabular-nums}
+.payday.bat{color:#86efac}
+.payday.net{color:#7dd3fc}
