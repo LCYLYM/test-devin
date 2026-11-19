@@ -3969,6 +3969,9 @@
     if (params.get('lark') === '1') { document.body.classList.add('is-lark'); }
     if (params.get('pipit') === '1') { document.body.classList.add('is-pipit'); }
     if (params.get('bunting') === '1') { document.body.classList.add('is-bunting'); }
+    if (params.get('grosbeak') === '1') { document.body.classList.add('is-grosbeak'); }
+    if (params.get('sparrowhawk') === '1') { document.body.classList.add('is-sparrowhawk'); }
+    if (params.get('wagtail') === '1') { document.body.classList.add('is-wagtail'); }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -5296,6 +5299,9 @@
         if (params.get('lark') === '1') u.searchParams.set('lark', '1');
         if (params.get('pipit') === '1') u.searchParams.set('pipit', '1');
         if (params.get('bunting') === '1') u.searchParams.set('bunting', '1');
+        if (params.get('grosbeak') === '1') u.searchParams.set('grosbeak', '1');
+        if (params.get('sparrowhawk') === '1') u.searchParams.set('sparrowhawk', '1');
+        if (params.get('wagtail') === '1') u.searchParams.set('wagtail', '1');
       if (params.get('tile') === '1') u.searchParams.set('tile', '1');
       if (params.get('outline') === '1') u.searchParams.set('outline', '1');
       if (params.get('stripe') === '1') u.searchParams.set('stripe', '1');
