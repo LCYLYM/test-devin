@@ -2527,6 +2527,15 @@
     if (params.get('sage') === '1') {
       document.body.classList.add('is-sage');
     }
+    if (params.get('amber') === '1') {
+      document.body.classList.add('is-amber');
+    }
+    if (params.get('steel') === '1') {
+      document.body.classList.add('is-steel');
+    }
+    if (params.get('lilac') === '1') {
+      document.body.classList.add('is-lilac');
+    }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -3167,6 +3176,9 @@
       if (params.get('hrs') === '1') u.searchParams.set('hrs', '1');
       if (params.get('up') === '1') u.searchParams.set('up', '1');
       if (params.get('sage') === '1') u.searchParams.set('sage', '1');
+      if (params.get('amber') === '1') u.searchParams.set('amber', '1');
+      if (params.get('steel') === '1') u.searchParams.set('steel', '1');
+      if (params.get('lilac') === '1') u.searchParams.set('lilac', '1');
       if (params.get('tile') === '1') u.searchParams.set('tile', '1');
       if (params.get('outline') === '1') u.searchParams.set('outline', '1');
       if (params.get('stripe') === '1') u.searchParams.set('stripe', '1');

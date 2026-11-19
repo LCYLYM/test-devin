@@ -1226,6 +1226,12 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .is-sage{background:linear-gradient(180deg,#141c17,#1b251d)}
 .is-sage .instrument{border-color:rgba(134,239,172,.35)}
 .is-focus .payday.hrs,.is-focus .payday.upt{display:none}
+.is-amber{background:linear-gradient(180deg,#211708,#2b2009)}
+.is-amber .instrument{border-color:rgba(251,191,36,.45)}
+.is-steel{background:linear-gradient(180deg,#131a22,#1a2430)}
+.is-steel .instrument{border-color:rgba(148,163,184,.45)}
+.is-lilac{background:linear-gradient(180deg,#1c1728,#261f38)}
+.is-lilac .instrument{border-color:rgba(216,180,254,.4)}
 @keyframes hueSpin{to{filter:hue-rotate(360deg)}}
 .is-hue .instrument{animation:hueSpin 12s linear infinite}
 @media (prefers-reduced-motion:reduce){.is-hue .instrument{animation:none}}

@@ -398,6 +398,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `hrs` | `1` 剩余工时徽章 |
 | `up` | `1` 页面停留时长 |
 | `sage` | `1` 灰绿配色 |
+| `amber` | `1` 琥珀配色 |
+| `steel` | `1` 钢铁配色 |
+| `lilac` | `1` 丁香配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 
