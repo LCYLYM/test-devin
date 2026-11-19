@@ -842,6 +842,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `shoebill` | `1` 鲸头鹳配色 |
 | `tanuki` | `1` 狸猫配色 |
 | `zinnia` | `1` 百日菊配色 |
+| `urutu` | `1` 乌卢图蝮配色 |
+| `weka` | `1` 威卡秧鸡配色 |
+| `xenopus` | `1` 非洲爪蟾配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 
