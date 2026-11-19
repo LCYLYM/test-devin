@@ -1037,6 +1037,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `golden` | `1` 金毛配色 |
 | `poodle` | `1` 贵宾犬配色 |
 | `bulldog` | `1` 斗牛犬配色 |
+| `labrador` | `1` 拉布拉多配色 |
+| `beagle` | `1` 比格配色 |
+| `dachshund` | `1` 腊肠犬配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 

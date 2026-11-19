@@ -2272,6 +2272,12 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .is-poodle .instrument{border-color:rgba(220,140,170,.4)}
 .is-bulldog{background:linear-gradient(180deg,#181410 0%,#110e0a 100%)}
 .is-bulldog .instrument{border-color:rgba(195,165,120,.4)}
+.is-labrador{background:linear-gradient(180deg,#1b150d 0%,#130f08 100%)}
+.is-labrador .instrument{border-color:rgba(225,175,95,.4)}
+.is-beagle{background:linear-gradient(180deg,#1a1410 0%,#130e0a 100%)}
+.is-beagle .instrument{border-color:rgba(210,160,100,.4)}
+.is-dachshund{background:linear-gradient(180deg,#191210 0%,#120d0a 100%)}
+.is-dachshund .instrument{border-color:rgba(200,140,95,.4)}
 .is-oatmeal{background:linear-gradient(180deg,#1d1912,#2f291e 50%,#433a2a)}
 .is-oatmeal .instrument{border-color:rgba(215,195,155,.4)}
 .is-thyme{background:linear-gradient(180deg,#121a14,#1c2a20 50%,#28392c)}
