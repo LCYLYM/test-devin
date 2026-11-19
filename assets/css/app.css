@@ -790,4 +790,4 @@ body[data-light] .salary-form input:focus{background:#fff;outline-color:#c9c4b6}
 body[data-light] .salary-form input:hover{border-bottom-color:#c9c4b6}
 body[data-light] .salary-currency{color:#55595e}
 body[data-light] .icon-btn:hover{background:var(--surface-2)}
-body[data-light] .earnings-card{--text:#f3f4f4;--muted:#9a9da0;--dim:#666b6e;--surface:#1a1c1d;--surface-2:#232526;--line:#303234;color-scheme:dark}
+body[data-light] .instrument{--text:#f3f4f4;--muted:#9a9da0;--dim:#666b6e;--surface:#1a1c1d;--surface-2:#232526;--line:#303234;color-scheme:dark}
