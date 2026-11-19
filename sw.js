@@ -1,12 +1,12 @@
 // 薪动 service worker — cache-first for app shell, network-first for navigations.
-const CACHE = 'xindong-v1';
+const CACHE = 'xindong-v2';
 const SHELL = [
   './',
   './index.html',
-  './assets/css/app.css',
-  './assets/js/salary-engine.js',
-  './assets/js/app.js',
-  './assets/js/deep-link.js',
+  './assets/css/app.css?v=20261119',
+  './assets/js/salary-engine.js?v=20261119',
+  './assets/js/app.js?v=20261119',
+  './assets/js/deep-link.js?v=20261119',
   './assets/img/favicon.svg',
   './assets/img/piggy.webp',
   './site.webmanifest'
@@ -35,7 +35,7 @@ self.addEventListener('fetch', (e) => {
     return;
   }
   e.respondWith(
-    caches.match(e.request, { ignoreSearch: true }).then((hit) => hit || fetch(e.request).then((res) => {
+    caches.match(e.request).then((hit) => hit || fetch(e.request).then((res) => {
       if (res.ok) {
         const copy = res.clone();
         caches.open(CACHE).then((c) => c.put(e.request, copy));
