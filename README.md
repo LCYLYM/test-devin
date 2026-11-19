@@ -830,6 +830,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `dugite` | `1` 杜氏蛇配色 |
 | `firefinch` | `1` 火雀配色 |
 | `goshawk` | `1` 苍鹰配色 |
+| `hamerkop` | `1` 锤头鹳配色 |
+| `ibisbill` | `1` 鹮嘴鹬配色 |
+| `joey` | `1` 幼袋鼠配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 
