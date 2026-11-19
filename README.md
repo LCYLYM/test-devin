@@ -731,6 +731,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `okapi` | `1` 霍加狓配色 |
 | `parrot` | `1` 鹦鹉配色 |
 | `panda` | `1` 熊猫配色 |
+| `salmon` | `1` 鲑鱼配色 |
+| `egret` | `1` 白鹭配色 |
+| `morel` | `1` 羊肚菌配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 
