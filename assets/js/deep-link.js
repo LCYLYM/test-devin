@@ -27,7 +27,7 @@
       }
     }
 
-    var template = params.get('template');
+    var template = params.get('template') || params.get('skin');
     if (template) app.setTemplate(template);
 
     var currency = (params.get('currency') || '').toUpperCase();
@@ -72,6 +72,10 @@
       if (fs) fs.click();
     } else if (e.key === '?') {
       if (window.SalaryApp) window.SalaryApp.openDialog('aboutDialog');
+    } else if (e.key === 't' && window.SalaryApp) {
+      var skins = ['pig', 'charge', 'meter', 'pixel', 'neon', 'mono', 'paper'];
+      var cur = window.SalaryApp.getState().preferences.template;
+      window.SalaryApp.setTemplate(skins[(skins.indexOf(cur) + 1) % skins.length]);
     }
   });
 
