@@ -1936,6 +1936,12 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .is-perch .instrument{border-color:rgba(140,190,100,.4)}
 .is-rudd{background:linear-gradient(180deg,#1e1310 0%,#140c09 100%)}
 .is-rudd .instrument{border-color:rgba(225,140,105,.4)}
+.is-smelt{background:linear-gradient(180deg,#121a20 0%,#0b1217 100%)}
+.is-smelt .instrument{border-color:rgba(130,180,205,.4)}
+.is-tench{background:linear-gradient(180deg,#151a10 0%,#0e1209 100%)}
+.is-tench .instrument{border-color:rgba(160,185,105,.4)}
+.is-wrasse{background:linear-gradient(180deg,#0f1a1b 0%,#081213 100%)}
+.is-wrasse .instrument{border-color:rgba(95,190,185,.4)}
 .is-oatmeal{background:linear-gradient(180deg,#1d1912,#2f291e 50%,#433a2a)}
 .is-oatmeal .instrument{border-color:rgba(215,195,155,.4)}
 .is-thyme{background:linear-gradient(180deg,#121a14,#1c2a20 50%,#28392c)}
