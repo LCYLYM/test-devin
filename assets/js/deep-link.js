@@ -3915,6 +3915,9 @@
     if (params.get('siamese') === '1') { document.body.classList.add('is-siamese'); }
     if (params.get('mainecoon') === '1') { document.body.classList.add('is-mainecoon'); }
     if (params.get('shorthair') === '1') { document.body.classList.add('is-shorthair'); }
+    if (params.get('husky') === '1') { document.body.classList.add('is-husky'); }
+    if (params.get('corgi') === '1') { document.body.classList.add('is-corgi'); }
+    if (params.get('shiba') === '1') { document.body.classList.add('is-shiba'); }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -5188,6 +5191,9 @@
         if (params.get('siamese') === '1') u.searchParams.set('siamese', '1');
         if (params.get('mainecoon') === '1') u.searchParams.set('mainecoon', '1');
         if (params.get('shorthair') === '1') u.searchParams.set('shorthair', '1');
+        if (params.get('husky') === '1') u.searchParams.set('husky', '1');
+        if (params.get('corgi') === '1') u.searchParams.set('corgi', '1');
+        if (params.get('shiba') === '1') u.searchParams.set('shiba', '1');
       if (params.get('tile') === '1') u.searchParams.set('tile', '1');
       if (params.get('outline') === '1') u.searchParams.set('outline', '1');
       if (params.get('stripe') === '1') u.searchParams.set('stripe', '1');

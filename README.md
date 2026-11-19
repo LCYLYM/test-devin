@@ -1031,6 +1031,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `siamese` | `1` 暹罗猫配色 |
 | `mainecoon` | `1` 缅因猫配色 |
 | `shorthair` | `1` 英短配色 |
+| `husky` | `1` 哈士奇配色 |
+| `corgi` | `1` 柯基配色 |
+| `shiba` | `1` 柴犬配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 
