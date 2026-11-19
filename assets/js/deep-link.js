@@ -3972,6 +3972,9 @@
     if (params.get('grosbeak') === '1') { document.body.classList.add('is-grosbeak'); }
     if (params.get('sparrowhawk') === '1') { document.body.classList.add('is-sparrowhawk'); }
     if (params.get('wagtail') === '1') { document.body.classList.add('is-wagtail'); }
+    if (params.get('shrike') === '1') { document.body.classList.add('is-shrike'); }
+    if (params.get('dipper') === '1') { document.body.classList.add('is-dipper'); }
+    if (params.get('nuthatch') === '1') { document.body.classList.add('is-nuthatch'); }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -5302,6 +5305,9 @@
         if (params.get('grosbeak') === '1') u.searchParams.set('grosbeak', '1');
         if (params.get('sparrowhawk') === '1') u.searchParams.set('sparrowhawk', '1');
         if (params.get('wagtail') === '1') u.searchParams.set('wagtail', '1');
+        if (params.get('shrike') === '1') u.searchParams.set('shrike', '1');
+        if (params.get('dipper') === '1') u.searchParams.set('dipper', '1');
+        if (params.get('nuthatch') === '1') u.searchParams.set('nuthatch', '1');
       if (params.get('tile') === '1') u.searchParams.set('tile', '1');
       if (params.get('outline') === '1') u.searchParams.set('outline', '1');
       if (params.get('stripe') === '1') u.searchParams.set('stripe', '1');
