@@ -854,6 +854,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `kea` | `1` 啄羊鹦鹉配色 |
 | `langur` | `1` 叶猴配色 |
 | `marmoset` | `1` 狨猴配色 |
+| `nandu` | `1` 美洲鸵配色 |
+| `padda` | `1` 禾雀配色 |
+| `tahr` | `1` 塔尔羊配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 
