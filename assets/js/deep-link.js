@@ -3299,6 +3299,15 @@
     if (params.get('ochre') === '1') {
       document.body.classList.add('is-ochre');
     }
+    if (params.get('timber') === '1') {
+      document.body.classList.add('is-timber');
+    }
+    if (params.get('lily') === '1') {
+      document.body.classList.add('is-lily');
+    }
+    if (params.get('otter') === '1') {
+      document.body.classList.add('is-otter');
+    }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -4167,6 +4176,9 @@
       if (params.get('grove') === '1') u.searchParams.set('grove', '1');
       if (params.get('moor') === '1') u.searchParams.set('moor', '1');
       if (params.get('ochre') === '1') u.searchParams.set('ochre', '1');
+      if (params.get('timber') === '1') u.searchParams.set('timber', '1');
+      if (params.get('lily') === '1') u.searchParams.set('lily', '1');
+      if (params.get('otter') === '1') u.searchParams.set('otter', '1');
       if (params.get('tile') === '1') u.searchParams.set('tile', '1');
       if (params.get('outline') === '1') u.searchParams.set('outline', '1');
       if (params.get('stripe') === '1') u.searchParams.set('stripe', '1');

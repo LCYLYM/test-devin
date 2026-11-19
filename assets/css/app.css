@@ -1630,6 +1630,12 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .is-moor .instrument{border-color:rgba(175,145,210,.4)}
 .is-ochre{background:linear-gradient(180deg,#1e1607,#332511 50%,#4a3518)}
 .is-ochre .instrument{border-color:rgba(235,185,90,.42)}
+.is-timber{background:linear-gradient(180deg,#181209,#281c0f 50%,#3a2815)}
+.is-timber .instrument{border-color:rgba(200,155,95,.42)}
+.is-lily{background:linear-gradient(180deg,#1c141e,#2e2030 50%,#422d45)}
+.is-lily .instrument{border-color:rgba(225,190,230,.4)}
+.is-otter{background:linear-gradient(180deg,#181310,#261e18 50%,#372a21)}
+.is-otter .instrument{border-color:rgba(190,160,130,.4)}
 .is-forest{background:linear-gradient(180deg,#0d1f14,#12291a)}
 .is-forest .instrument{border-color:rgba(74,222,128,.38)}
 .is-sand{background:linear-gradient(180deg,#241c10,#2f2614)}
