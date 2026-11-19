@@ -2864,6 +2864,15 @@
     if (params.get('blossom') === '1') {
       document.body.classList.add('is-blossom');
     }
+    if (params.get('cliff') === '1') {
+      document.body.classList.add('is-cliff');
+    }
+    if (params.get('tundra') === '1') {
+      document.body.classList.add('is-tundra');
+    }
+    if (params.get('canyon') === '1') {
+      document.body.classList.add('is-canyon');
+    }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -3600,6 +3609,9 @@
       if (params.get('dawn') === '1') u.searchParams.set('dawn', '1');
       if (params.get('thicket') === '1') u.searchParams.set('thicket', '1');
       if (params.get('blossom') === '1') u.searchParams.set('blossom', '1');
+      if (params.get('cliff') === '1') u.searchParams.set('cliff', '1');
+      if (params.get('tundra') === '1') u.searchParams.set('tundra', '1');
+      if (params.get('canyon') === '1') u.searchParams.set('canyon', '1');
       if (params.get('tile') === '1') u.searchParams.set('tile', '1');
       if (params.get('outline') === '1') u.searchParams.set('outline', '1');
       if (params.get('stripe') === '1') u.searchParams.set('stripe', '1');
