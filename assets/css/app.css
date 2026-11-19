@@ -1840,6 +1840,12 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .is-tenrec .instrument{border-color:rgba(180,155,130,.4)}
 .is-vole{background:linear-gradient(180deg,#1a1512 0%,#100d0a 100%)}
 .is-vole .instrument{border-color:rgba(185,165,140,.4)}
+.is-wallaroo{background:linear-gradient(180deg,#1c150f 0%,#120d08 100%)}
+.is-wallaroo .instrument{border-color:rgba(205,160,105,.4)}
+.is-xerinae{background:linear-gradient(180deg,#1a150e 0%,#100d07 100%)}
+.is-xerinae .instrument{border-color:rgba(200,170,110,.4)}
+.is-yabby{background:linear-gradient(180deg,#101b17 0%,#08110e 100%)}
+.is-yabby .instrument{border-color:rgba(90,195,160,.4)}
 .is-oatmeal{background:linear-gradient(180deg,#1d1912,#2f291e 50%,#433a2a)}
 .is-oatmeal .instrument{border-color:rgba(215,195,155,.4)}
 .is-thyme{background:linear-gradient(180deg,#121a14,#1c2a20 50%,#28392c)}
