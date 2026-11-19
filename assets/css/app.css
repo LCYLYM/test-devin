@@ -973,3 +973,10 @@ body[data-outline] .money-symbol{color:transparent;-webkit-text-stroke:1px var(-
 .rays-layer{position:fixed;left:50%;top:50%;width:200vmax;height:200vmax;transform:translate(-50%,-50%);pointer-events:none;z-index:0;background:repeating-conic-gradient(rgba(var(--accent-rgb,103,228,148),.05) 0deg 8deg,transparent 8deg 24deg);animation:raysSpin 60s linear infinite;-webkit-mask-image:radial-gradient(circle,#000 0%,transparent 55%);mask-image:radial-gradient(circle,#000 0%,transparent 55%)}
 @keyframes raysSpin{to{transform:translate(-50%,-50%) rotate(360deg)}}
 .is-focus .rays-layer{opacity:.5}
+body[data-stripe]{background-image:repeating-linear-gradient(45deg,rgba(var(--accent-rgb,103,228,148),.05) 0 14px,transparent 14px 28px)}
+body[data-disco]{animation:discoHue 9s linear infinite}
+@keyframes discoHue{to{filter:hue-rotate(360deg)}}
+body[data-wiggle] .payday{animation:wig 2.4s ease-in-out infinite}
+body[data-wiggle] .payday:nth-child(odd){animation-delay:1.2s}
+@keyframes wig{0%,100%{transform:rotate(0)}25%{transform:rotate(-2.5deg)}75%{transform:rotate(2.5deg)}}
+@media(prefers-reduced-motion:reduce){body[data-disco],body[data-wiggle] .payday{animation:none}}

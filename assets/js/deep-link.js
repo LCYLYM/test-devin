@@ -954,6 +954,9 @@
     if (params.get('dots') === '1') document.body.dataset.dots = '1';
     if (params.get('tile') === '1') document.body.dataset.tile = '1';
     if (params.get('outline') === '1') document.body.dataset.outline = '1';
+    if (params.get('stripe') === '1') document.body.dataset.stripe = '1';
+    if (params.get('disco') === '1') document.body.dataset.disco = '1';
+    if (params.get('wiggle') === '1') document.body.dataset.wiggle = '1';
     if (params.get('rays') === '1' && !(window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches)) {
       document.body.dataset.rays = '1';
       var raysL = document.createElement('div');
@@ -1446,6 +1449,9 @@
       if (params.get('dots') === '1') u.searchParams.set('dots', '1');
       if (params.get('tile') === '1') u.searchParams.set('tile', '1');
       if (params.get('outline') === '1') u.searchParams.set('outline', '1');
+      if (params.get('stripe') === '1') u.searchParams.set('stripe', '1');
+      if (params.get('disco') === '1') u.searchParams.set('disco', '1');
+      if (params.get('wiggle') === '1') u.searchParams.set('wiggle', '1');
       if (params.get('rays') === '1') u.searchParams.set('rays', '1');
       if (params.get('flat') === '1') u.searchParams.set('flat', '1');
       var idl = params.get('idle'); if (idl) u.searchParams.set('idle', idl);
