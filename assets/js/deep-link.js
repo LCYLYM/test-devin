@@ -3026,6 +3026,15 @@
     if (params.get('ember') === '1') {
       document.body.classList.add('is-ember');
     }
+    if (params.get('mulberry') === '1') {
+      document.body.classList.add('is-mulberry');
+    }
+    if (params.get('sienna') === '1') {
+      document.body.classList.add('is-sienna');
+    }
+    if (params.get('aqua') === '1') {
+      document.body.classList.add('is-aqua');
+    }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -3816,6 +3825,9 @@
       if (params.get('sakura') === '1') u.searchParams.set('sakura', '1');
       if (params.get('granite') === '1') u.searchParams.set('granite', '1');
       if (params.get('ember') === '1') u.searchParams.set('ember', '1');
+      if (params.get('mulberry') === '1') u.searchParams.set('mulberry', '1');
+      if (params.get('sienna') === '1') u.searchParams.set('sienna', '1');
+      if (params.get('aqua') === '1') u.searchParams.set('aqua', '1');
       if (params.get('tile') === '1') u.searchParams.set('tile', '1');
       if (params.get('outline') === '1') u.searchParams.set('outline', '1');
       if (params.get('stripe') === '1') u.searchParams.set('stripe', '1');

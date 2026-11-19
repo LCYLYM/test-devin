@@ -548,6 +548,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `sakura` | `1` 樱花配色 |
 | `granite` | `1` 花岗岩配色 |
 | `ember` | `1` 余烬配色 |
+| `mulberry` | `1` 桑葚配色 |
+| `sienna` | `1` 赭石配色 |
+| `aqua` | `1` 水色配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 
