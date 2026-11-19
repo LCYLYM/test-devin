@@ -3870,6 +3870,9 @@
     if (params.get('butterfly') === '1') { document.body.classList.add('is-butterfly'); }
     if (params.get('scorpion') === '1') { document.body.classList.add('is-scorpion'); }
     if (params.get('tarantula') === '1') { document.body.classList.add('is-tarantula'); }
+    if (params.get('centipede') === '1') { document.body.classList.add('is-centipede'); }
+    if (params.get('millipede') === '1') { document.body.classList.add('is-millipede'); }
+    if (params.get('silkworm') === '1') { document.body.classList.add('is-silkworm'); }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -5098,6 +5101,9 @@
         if (params.get('butterfly') === '1') u.searchParams.set('butterfly', '1');
         if (params.get('scorpion') === '1') u.searchParams.set('scorpion', '1');
         if (params.get('tarantula') === '1') u.searchParams.set('tarantula', '1');
+        if (params.get('centipede') === '1') u.searchParams.set('centipede', '1');
+        if (params.get('millipede') === '1') u.searchParams.set('millipede', '1');
+        if (params.get('silkworm') === '1') u.searchParams.set('silkworm', '1');
       if (params.get('tile') === '1') u.searchParams.set('tile', '1');
       if (params.get('outline') === '1') u.searchParams.set('outline', '1');
       if (params.get('stripe') === '1') u.searchParams.set('stripe', '1');
