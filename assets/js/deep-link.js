@@ -3999,6 +3999,9 @@
     if (params.get('snipe') === '1') { document.body.classList.add('is-snipe'); }
     if (params.get('dunlin') === '1') { document.body.classList.add('is-dunlin'); }
     if (params.get('redshank') === '1') { document.body.classList.add('is-redshank'); }
+    if (params.get('stint') === '1') { document.body.classList.add('is-stint'); }
+    if (params.get('turnstone') === '1') { document.body.classList.add('is-turnstone'); }
+    if (params.get('greenshank') === '1') { document.body.classList.add('is-greenshank'); }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -5356,6 +5359,9 @@
         if (params.get('snipe') === '1') u.searchParams.set('snipe', '1');
         if (params.get('dunlin') === '1') u.searchParams.set('dunlin', '1');
         if (params.get('redshank') === '1') u.searchParams.set('redshank', '1');
+        if (params.get('stint') === '1') u.searchParams.set('stint', '1');
+        if (params.get('turnstone') === '1') u.searchParams.set('turnstone', '1');
+        if (params.get('greenshank') === '1') u.searchParams.set('greenshank', '1');
       if (params.get('tile') === '1') u.searchParams.set('tile', '1');
       if (params.get('outline') === '1') u.searchParams.set('outline', '1');
       if (params.get('stripe') === '1') u.searchParams.set('stripe', '1');

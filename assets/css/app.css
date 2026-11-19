@@ -2428,6 +2428,12 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .is-dunlin .instrument{border-color:rgba(165,180,190,.4)}
 .is-redshank{background:linear-gradient(180deg,#1d1211 0%,#150d0c 100%)}
 .is-redshank .instrument{border-color:rgba(235,105,90,.4)}
+.is-stint{background:linear-gradient(180deg,#151814 0%,#0f120e 100%)}
+.is-stint .instrument{border-color:rgba(150,170,120,.4)}
+.is-turnstone{background:linear-gradient(180deg,#1a1512 0%,#130f0d 100%)}
+.is-turnstone .instrument{border-color:rgba(200,150,115,.4)}
+.is-greenshank{background:linear-gradient(180deg,#121a15 0%,#0d130f 100%)}
+.is-greenshank .instrument{border-color:rgba(120,195,150,.4)}
 .is-oatmeal{background:linear-gradient(180deg,#1d1912,#2f291e 50%,#433a2a)}
 .is-oatmeal .instrument{border-color:rgba(215,195,155,.4)}
 .is-thyme{background:linear-gradient(180deg,#121a14,#1c2a20 50%,#28392c)}
