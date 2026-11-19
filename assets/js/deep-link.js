@@ -4089,6 +4089,9 @@
     if (params.get('foamlichen') === '1') { document.body.classList.add('is-foamlichen'); }
     if (params.get('pepperedrock') === '1') { document.body.classList.add('is-pepperedrock'); }
     if (params.get('rimlichen') === '1') { document.body.classList.add('is-rimlichen'); }
+    if (params.get('haircap') === '1') { document.body.classList.add('is-haircap'); }
+    if (params.get('sphagnum') === '1') { document.body.classList.add('is-sphagnum'); }
+    if (params.get('cushionmoss') === '1') { document.body.classList.add('is-cushionmoss'); }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -5536,6 +5539,9 @@
         if (params.get('foamlichen') === '1') u.searchParams.set('foamlichen', '1');
         if (params.get('pepperedrock') === '1') u.searchParams.set('pepperedrock', '1');
         if (params.get('rimlichen') === '1') u.searchParams.set('rimlichen', '1');
+        if (params.get('haircap') === '1') u.searchParams.set('haircap', '1');
+        if (params.get('sphagnum') === '1') u.searchParams.set('sphagnum', '1');
+        if (params.get('cushionmoss') === '1') u.searchParams.set('cushionmoss', '1');
       if (params.get('tile') === '1') u.searchParams.set('tile', '1');
       if (params.get('outline') === '1') u.searchParams.set('outline', '1');
       if (params.get('stripe') === '1') u.searchParams.set('stripe', '1');

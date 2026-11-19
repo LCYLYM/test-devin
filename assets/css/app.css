@@ -2608,6 +2608,12 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .is-pepperedrock .instrument{border-color:rgba(150,152,160,.4)}
 .is-rimlichen{background:linear-gradient(180deg,#1a1813 0%,#14120e 100%)}
 .is-rimlichen .instrument{border-color:rgba(186,166,110,.4)}
+.is-haircap{background:linear-gradient(180deg,#161a12 0%,#10130c 100%)}
+.is-haircap .instrument{border-color:rgba(148,176,98,.4)}
+.is-sphagnum{background:linear-gradient(180deg,#1a1a13 0%,#14140e 100%)}
+.is-sphagnum .instrument{border-color:rgba(178,184,116,.4)}
+.is-cushionmoss{background:linear-gradient(180deg,#141a14 0%,#0f130f 100%)}
+.is-cushionmoss .instrument{border-color:rgba(122,168,112,.4)}
 .is-oatmeal{background:linear-gradient(180deg,#1d1912,#2f291e 50%,#433a2a)}
 .is-oatmeal .instrument{border-color:rgba(215,195,155,.4)}
 .is-thyme{background:linear-gradient(180deg,#121a14,#1c2a20 50%,#28392c)}

@@ -1205,6 +1205,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `foamlichen` | `1` 泡沫衣配色 |
 | `pepperedrock` | `1` 椒石衣配色 |
 | `rimlichen` | `1` 缘衣配色 |
+| `haircap` | `1` 金发藓配色 |
+| `sphagnum` | `1` 泥炭藓配色 |
+| `cushionmoss` | `1` 垫丛藓配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 
