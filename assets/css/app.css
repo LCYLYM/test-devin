@@ -1297,6 +1297,9 @@ body[data-hover] .payday:hover{transform:translateY(-3px)}
 .is-heather .instrument{border-color:rgba(185,155,215,.42)}
 .is-tawny{background:linear-gradient(180deg,#1e150e,#322213 50%,#48321a)}
 .is-tawny .instrument{border-color:rgba(225,165,100,.42)}
+.is-vivid .instrument{filter:saturate(1.35) contrast(1.08)}
+.is-soft .instrument{filter:brightness(1.05) saturate(.85);border-radius:22px}
+.is-edge .instrument{filter:contrast(1.18);border-width:2px;border-radius:6px}
 .is-focus .payday.morale{display:none}
 body[data-pillar] .page-shell{border-left:1px solid rgba(var(--accent-rgb,103,228,148),.22);border-right:1px solid rgba(var(--accent-rgb,103,228,148),.22)}
 body[data-gloom]{--bg:#0a0c0b}

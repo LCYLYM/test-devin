@@ -554,6 +554,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `flax` | `1` 亚麻配色 |
 | `heather` | `1` 石楠配色 |
 | `tawny` | `1` 茶褐配色 |
+| `vivid` | `1` 鲜艳模式 |
+| `soft` | `1` 柔和模式 |
+| `edge` | `1` 锐利模式 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 
