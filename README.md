@@ -719,6 +719,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `redpanda` | `1` 小熊猫配色 |
 | `dewberry` | `1` 露莓配色 |
 | `cormorant` | `1` 鸬鹚配色 |
+| `armadillo` | `1` 犰狳配色 |
+| `lychee` | `1` 荔枝配色 |
+| `wallaby` | `1` 沙袋鼠配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 

@@ -1636,6 +1636,12 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .is-dewberry .instrument{border-color:rgba(155,140,230,.42)}
 .is-cormorant{background:linear-gradient(180deg,#0e161c,#152430 50%,#1f3544)}
 .is-cormorant .instrument{border-color:rgba(115,170,200,.42)}
+.is-armadillo{background:linear-gradient(180deg,#18110c,#2a1d13 50%,#3d2a1a)}
+.is-armadillo .instrument{border-color:rgba(200,155,105,.42)}
+.is-lychee{background:linear-gradient(180deg,#1e0d12,#33151e 50%,#4a1f2b)}
+.is-lychee .instrument{border-color:rgba(230,110,135,.42)}
+.is-wallaby{background:linear-gradient(180deg,#16130c,#27200f 50%,#392e15)}
+.is-wallaby .instrument{border-color:rgba(205,175,105,.42)}
 .is-oatmeal{background:linear-gradient(180deg,#1d1912,#2f291e 50%,#433a2a)}
 .is-oatmeal .instrument{border-color:rgba(215,195,155,.4)}
 .is-thyme{background:linear-gradient(180deg,#121a14,#1c2a20 50%,#28392c)}
