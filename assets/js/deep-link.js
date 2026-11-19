@@ -2397,6 +2397,15 @@
     if (params.get('laser') === '1') {
       document.body.classList.add('is-laser');
     }
+    if (params.get('sun') === '1') {
+      document.body.classList.add('is-sun');
+    }
+    if (params.get('waves') === '1') {
+      document.body.classList.add('is-waves');
+    }
+    if (params.get('deep') === '1') {
+      document.body.classList.add('is-deep');
+    }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -3013,6 +3022,9 @@
       if (params.get('orbit') === '1') u.searchParams.set('orbit', '1');
       if (params.get('type') === '1') u.searchParams.set('type', '1');
       if (params.get('laser') === '1') u.searchParams.set('laser', '1');
+      if (params.get('sun') === '1') u.searchParams.set('sun', '1');
+      if (params.get('waves') === '1') u.searchParams.set('waves', '1');
+      if (params.get('deep') === '1') u.searchParams.set('deep', '1');
       if (params.get('tile') === '1') u.searchParams.set('tile', '1');
       if (params.get('outline') === '1') u.searchParams.set('outline', '1');
       if (params.get('stripe') === '1') u.searchParams.set('stripe', '1');

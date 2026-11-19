@@ -374,6 +374,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `orbit` | `1` 环绕粒子 |
 | `type` | `1` 打字机副标题 |
 | `laser` | `1` 激光底边 |
+| `sun` | `1` 日出光晕 |
+| `waves` | `1` 波纹底纹 |
+| `deep` | `1` 深海模式 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 
