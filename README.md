@@ -1103,6 +1103,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `chaffinch` | `1` 苍头燕雀配色 |
 | `hawfinch` | `1` 锡嘴雀配色 |
 | `serin` | `1` 丝雀配色 |
+| `linnet` | `1` 赤胸朱顶雀配色 |
+| `redpoll` | `1` 朱顶雀配色 |
+| `bullfinch` | `1` 红腹灰雀配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 
