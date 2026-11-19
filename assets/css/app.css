@@ -2596,6 +2596,12 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .is-golddust .instrument{border-color:rgba(214,178,64,.4)}
 .is-blackeye{background:linear-gradient(180deg,#131314 0%,#0e0e0f 100%)}
 .is-blackeye .instrument{border-color:rgba(122,124,134,.4)}
+.is-greenshield{background:linear-gradient(180deg,#161b15 0%,#10140f 100%)}
+.is-greenshield .instrument{border-color:rgba(140,178,116,.4)}
+.is-waxpaper{background:linear-gradient(180deg,#1b1a16 0%,#151412 100%)}
+.is-waxpaper .instrument{border-color:rgba(202,192,160,.4)}
+.is-cumberland{background:linear-gradient(180deg,#161a18 0%,#101311 100%)}
+.is-cumberland .instrument{border-color:rgba(142,172,156,.4)}
 .is-oatmeal{background:linear-gradient(180deg,#1d1912,#2f291e 50%,#433a2a)}
 .is-oatmeal .instrument{border-color:rgba(215,195,155,.4)}
 .is-thyme{background:linear-gradient(180deg,#121a14,#1c2a20 50%,#28392c)}
