@@ -34,7 +34,7 @@
     }
 
     var template = params.get('template') || params.get('skin');
-    if (template === 'random') template = ['charge','meter','pixel','pig','neon','mono','paper','term'][Math.floor(Math.random() * 8)];
+    if (template === 'random') template = ['charge','meter','pixel','pig','neon','mono','paper','term','ecg'][Math.floor(Math.random() * 9)];
     if (template) app.setTemplate(template);
     else {
       // First-visit default follows the OS: light mode gets the paper skin.
@@ -147,7 +147,7 @@
       document.body.style.setProperty('--accent', v);
     }
 
-    var THEME_COLORS = {pig:'#1a1716',charge:'#131415',meter:'#171715',pixel:'#151515',neon:'#0c0e18',mono:'#111111',paper:'#f2efe7',term:'#0d1117'};
+    var THEME_COLORS = {pig:'#1a1716',charge:'#131415',meter:'#171715',pixel:'#151515',neon:'#0c0e18',mono:'#111111',paper:'#f2efe7',term:'#0d1117',ecg:'#160a0a'};
     function applyThemeColor(t) {
       var m = document.querySelector('meta[name=theme-color]');
       if (m && THEME_COLORS[t]) m.content = THEME_COLORS[t];
@@ -202,14 +202,14 @@
     } else if (e.key === '?') {
       if (window.SalaryApp) window.SalaryApp.openDialog('aboutDialog');
     } else if (e.key === 't' && window.SalaryApp) {
-      var skins = ['pig', 'charge', 'meter', 'pixel', 'neon', 'mono', 'paper', 'term'];
+      var skins = ['pig', 'charge', 'meter', 'pixel', 'neon', 'mono', 'paper', 'term', 'ecg'];
       var cur = window.SalaryApp.getState().preferences.template;
       window.SalaryApp.setTemplate(skins[(skins.indexOf(cur) + 1) % skins.length]);
     } else if (e.key === 'p' && window.SalaryApp) {
       var st = window.SalaryApp.getState();
       window.SalaryApp.setPeriod(st.preferences.period === 'day' ? 'month' : 'day');
-    } else if (/^[1-8]$/.test(e.key) && window.SalaryApp) {
-      var direct = ['pig','charge','meter','pixel','neon','mono','paper','term'][Number(e.key) - 1];
+    } else if (/^[1-9]$/.test(e.key) && window.SalaryApp) {
+      var direct = ['pig','charge','meter','pixel','neon','mono','paper','term','ecg'][Number(e.key) - 1];
       if (direct) window.SalaryApp.setTemplate(direct);
     } else if (e.key === 'a') {
       var pal = ['#4de3ff', '#5ae593', '#eeb58e', '#ff8a52', '#c2622f', '#e8e8e8', '#39d353'];

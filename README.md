@@ -33,7 +33,7 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | 参数 | 取值 |
 | --- | --- |
 | `salary` | 月薪数字，如 `15000` |
-| `template` | `pig` / `charge` / `meter` / `pixel` / `neon` / `mono` / `paper` / `term`（`skin` 同义） |
+| `template` | `pig` / `charge` / `meter` / `pixel` / `neon` / `mono` / `paper` / `term` / `ecg`（`skin` 同义） |
 | `currency` | `CNY` / `USD` / `EUR` / `JPY` / `KRW` / `HKD` / `VND` / `IDR` / `ZIM` |
 | `period` | `day` / `month` |
 | `demo` | `1` 开启演示模式（数字可设倍速，如 `60`） |

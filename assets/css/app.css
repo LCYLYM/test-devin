@@ -726,3 +726,16 @@ body[data-template=term]{--bg:#010409}
 /* iter-161: payday day pulse */
 .payday.is-today strong{animation:paydayPulse 1.2s ease-in-out infinite}
 @keyframes paydayPulse{50%{transform:scale(1.35)}}
+
+/* iter-162: 心电皮肤 —— ECG 波形进度 */
+.ecg-visual{display:none;margin:0 auto;max-width:640px}
+.ecg-wave{width:100%;height:110px;filter:drop-shadow(0 0 14px rgba(255,95,86,.35))}
+.ecg-track{stroke:#3a2b2b;stroke-width:2.5}
+.ecg-pulse{stroke:var(--accent,#ff5f56);stroke-width:3.5;stroke-linecap:round;stroke-linejoin:round;
+stroke-dasharray:100;stroke-dashoffset:100;transition:stroke-dashoffset .5s linear}
+.ecg-foot{display:flex;align-items:baseline;gap:14px;justify-content:center;margin-top:8px}
+.ecg-foot b{font-size:26px;color:#ffb3ab;font-variant-numeric:tabular-nums}
+.ecg-note{font-size:12px;color:#8b6f6f;letter-spacing:2px}
+body[data-template=ecg] .charge-visual{display:none}
+body[data-template=ecg] .ecg-visual{display:block}
+body[data-template=ecg]{--bg:#160a0a}
