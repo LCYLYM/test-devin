@@ -137,7 +137,9 @@
       var url = publicBase(location.href) || 'https://xd.syal.site/';
       var lines = ['我在看自己的工资一秒一秒往上涨 · 薪动'];
       if (snap && isFinite(snap.todayEarned)) lines.push('今天已赚 ' + app.formatMoney(snap.todayEarned));
-      if (state && state.config && state.config.salary) lines.push('月薪 ¥' + state.config.salary);
+      var includeSalary = document.getElementById('shareIncludeSalary');
+      if ((!includeSalary || includeSalary.checked) && state && state.config && state.config.salary)
+        lines.push('月薪 ¥' + state.config.salary);
       lines.push(url);
       var text = lines.join('\n');
       (navigator.clipboard ? navigator.clipboard.writeText(text) : Promise.reject())
