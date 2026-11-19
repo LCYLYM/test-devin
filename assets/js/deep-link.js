@@ -314,7 +314,7 @@
         requestAnimationFrame(mFrame);
       })();
     }
-    if (['snow', 'sakura', 'rain', 'stars', 'leaves', 'bubble', 'ember', 'firefly', 'dust', 'meteor', 'warp', 'cloud', 'paper'].indexOf(fxParam) >= 0 && !(window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches)) {
+    if (['snow', 'sakura', 'rain', 'stars', 'leaves', 'bubble', 'ember', 'firefly', 'dust', 'meteor', 'warp', 'cloud', 'paper', 'fireworks'].indexOf(fxParam) >= 0 && !(window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches)) {
       var fxc = document.createElement('canvas');
       fxc.style.cssText = 'position:fixed;inset:0;width:100%;height:100%;pointer-events:none;opacity:.65';
       document.body.prepend(fxc);
@@ -397,6 +397,15 @@
             fxctx.fillStyle = 'rgba(230,238,248,.7)';
             fxctx.beginPath(); fxctx.moveTo(q.r * 6, 0); fxctx.lineTo(-q.r * 3, -q.r * 2.2); fxctx.lineTo(-q.r * 1.2, 0); fxctx.lineTo(-q.r * 3, q.r * 2.2); fxctx.closePath(); fxctx.fill();
             fxctx.restore();
+            continue;
+          }
+          if (fxParam === 'fireworks') {
+            if (!q.fw) { q.fw = 1; q.rot = 0.4 + Math.random() * 0.8; q.s = Math.random() * 6.28; q.ph = Math.random() * 360 | 0; }
+            q.rot -= 0.008;
+            if (q.rot <= 0) { q.x = innerWidth * (0.15 + Math.random() * 0.7); q.y = innerHeight * (0.1 + Math.random() * 0.5); q.rot = 0.4 + Math.random() * 0.8; q.s = Math.random() * 6.28; q.v = 0.6 + Math.random() * 1.4; q.ph = Math.random() * 360 | 0; }
+            q.x += Math.cos(q.s) * q.v * 2.2; q.y += Math.sin(q.s) * q.v * 2.2 + 0.35;
+            fxctx.fillStyle = 'hsla(' + q.ph + ',90%,68%,' + Math.min(1, q.rot * 2).toFixed(2) + ')';
+            fxctx.beginPath(); fxctx.arc(q.x, q.y, q.r * 0.75, 0, 6.3); fxctx.fill();
             continue;
           }
           if (fxParam === 'bubble') {
@@ -1337,6 +1346,25 @@
     }
     if (params.get('sq') === '1') document.body.dataset.sq = '1';
     if (params.get('compact') === '1') document.body.dataset.compact = '1';
+    if (params.get('advent') === '1') {
+      var adb = document.getElementById('adventBadge'), add = document.getElementById('adventDays');
+      if (adb && add) {
+        var adn = new Date(), adv = new Date(adn.getFullYear(), 11, 25);
+        var addl = Math.ceil((adv - adn) / 864e5);
+        if (addl < -7 || addl > 40) adb.hidden = true;
+        else { add.textContent = addl === 0 ? '🎉' : String(Math.max(0, addl)); adb.hidden = false; }
+      }
+    }
+    if (params.get('newyear') === '1') {
+      var nyb = document.getElementById('newyearBadge'), nyd = document.getElementById('newyearDays'), nyl = document.getElementById('newyearLabel');
+      if (nyb && nyd && nyl) {
+        var nyn = new Date(), nyt = new Date(nyn.getFullYear() + 1, 0, 1);
+        var nydl = Math.ceil((nyt - nyn) / 864e5);
+        nyl.textContent = '距' + (nyn.getFullYear() + 1) + '年';
+        nyd.textContent = String(Math.max(0, nydl));
+        nyb.hidden = false;
+      }
+    }
     if (params.get('hex') === '1') {
       var hxb = document.getElementById('hexBadge'), hxd = document.getElementById('hexDot'), hxv = document.getElementById('hexVal');
       if (hxb && hxd && hxv) {
@@ -1918,6 +1946,8 @@
       if (params.get('xmas') === '1') u.searchParams.set('xmas', '1');
       if (params.get('sq') === '1') u.searchParams.set('sq', '1');
       if (params.get('compact') === '1') u.searchParams.set('compact', '1');
+      if (params.get('advent') === '1') u.searchParams.set('advent', '1');
+      if (params.get('newyear') === '1') u.searchParams.set('newyear', '1');
       if (params.get('rays') === '1') u.searchParams.set('rays', '1');
       if (params.get('flat') === '1') u.searchParams.set('flat', '1');
       var idl = params.get('idle'); if (idl) u.searchParams.set('idle', idl);
