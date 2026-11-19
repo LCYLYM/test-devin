@@ -1070,6 +1070,12 @@ body[data-hover] .payday:hover{transform:translateY(-3px)}
 .is-jet .instrument{border-color:rgba(148,163,184,.3)}
 .is-rose{background:linear-gradient(180deg,#251119,#301620)}
 .is-rose .instrument{border-color:rgba(251,113,133,.4)}
+.is-ash{background:linear-gradient(180deg,#1c1c1e,#242428)}
+.is-ash .instrument{border-color:rgba(161,161,170,.38)}
+.is-berry{background:linear-gradient(180deg,#220e22,#2d142e)}
+.is-berry .instrument{border-color:rgba(232,121,249,.38)}
+.is-coal{background:linear-gradient(180deg,#0c0e10,#14171b)}
+.is-coal .instrument{border-color:rgba(120,130,140,.4)}
 body[data-pillar] .page-shell{border-left:1px solid rgba(var(--accent-rgb,103,228,148),.22);border-right:1px solid rgba(var(--accent-rgb,103,228,148),.22)}
 body[data-gloom]{--bg:#0a0c0b}
 body[data-gloom] .instrument{box-shadow:inset 0 0 60px rgba(0,0,0,.5)}

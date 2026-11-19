@@ -2691,6 +2691,15 @@
     if (params.get('rose') === '1') {
       document.body.classList.add('is-rose');
     }
+    if (params.get('ash') === '1') {
+      document.body.classList.add('is-ash');
+    }
+    if (params.get('berry') === '1') {
+      document.body.classList.add('is-berry');
+    }
+    if (params.get('coal') === '1') {
+      document.body.classList.add('is-coal');
+    }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -3373,6 +3382,9 @@
       if (params.get('taupe') === '1') u.searchParams.set('taupe', '1');
       if (params.get('jet') === '1') u.searchParams.set('jet', '1');
       if (params.get('rose') === '1') u.searchParams.set('rose', '1');
+      if (params.get('ash') === '1') u.searchParams.set('ash', '1');
+      if (params.get('berry') === '1') u.searchParams.set('berry', '1');
+      if (params.get('coal') === '1') u.searchParams.set('coal', '1');
       if (params.get('tile') === '1') u.searchParams.set('tile', '1');
       if (params.get('outline') === '1') u.searchParams.set('outline', '1');
       if (params.get('stripe') === '1') u.searchParams.set('stripe', '1');

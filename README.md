@@ -440,6 +440,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `taupe` | `1` 灰褐配色 |
 | `jet` | `1` 墨黑配色 |
 | `rose` | `1` 玫瑰配色 |
+| `ash` | `1` 灰烬配色 |
+| `berry` | `1` 浆果配色 |
+| `coal` | `1` 煤炭配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 
