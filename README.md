@@ -1142,6 +1142,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `auklet` | `1` 小海雀配色 |
 | `shearwater` | `1` 鹱配色 |
 | `petrel` | `1` 海燕配色 |
+| `skua` | `1` 贼鸥配色 |
+| `jaeger` | `1` 中贼鸥配色 |
+| `tropicbird` | `1` 鹲配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 

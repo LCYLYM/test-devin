@@ -4026,6 +4026,9 @@
     if (params.get('auklet') === '1') { document.body.classList.add('is-auklet'); }
     if (params.get('shearwater') === '1') { document.body.classList.add('is-shearwater'); }
     if (params.get('petrel') === '1') { document.body.classList.add('is-petrel'); }
+    if (params.get('skua') === '1') { document.body.classList.add('is-skua'); }
+    if (params.get('jaeger') === '1') { document.body.classList.add('is-jaeger'); }
+    if (params.get('tropicbird') === '1') { document.body.classList.add('is-tropicbird'); }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -5410,6 +5413,9 @@
         if (params.get('auklet') === '1') u.searchParams.set('auklet', '1');
         if (params.get('shearwater') === '1') u.searchParams.set('shearwater', '1');
         if (params.get('petrel') === '1') u.searchParams.set('petrel', '1');
+        if (params.get('skua') === '1') u.searchParams.set('skua', '1');
+        if (params.get('jaeger') === '1') u.searchParams.set('jaeger', '1');
+        if (params.get('tropicbird') === '1') u.searchParams.set('tropicbird', '1');
       if (params.get('tile') === '1') u.searchParams.set('tile', '1');
       if (params.get('outline') === '1') u.searchParams.set('outline', '1');
       if (params.get('stripe') === '1') u.searchParams.set('stripe', '1');
