@@ -383,6 +383,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `pearl` | `1` 珍珠光泽 |
 | `tide` | `1` 潮汐配色 |
 | `terra` | `1` 陶土配色 |
+| `mocha` | `1` 摩卡配色 |
+| `arctic` | `1` 极地配色 |
+| `vapor` | `1` 蒸汽波配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 

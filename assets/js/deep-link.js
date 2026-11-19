@@ -2450,6 +2450,15 @@
     if (params.get('terra') === '1') {
       document.body.classList.add('is-terra');
     }
+    if (params.get('mocha') === '1') {
+      document.body.classList.add('is-mocha');
+    }
+    if (params.get('arctic') === '1') {
+      document.body.classList.add('is-arctic');
+    }
+    if (params.get('vapor') === '1') {
+      document.body.classList.add('is-vapor');
+    }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -3075,6 +3084,9 @@
       if (params.get('pearl') === '1') u.searchParams.set('pearl', '1');
       if (params.get('tide') === '1') u.searchParams.set('tide', '1');
       if (params.get('terra') === '1') u.searchParams.set('terra', '1');
+      if (params.get('mocha') === '1') u.searchParams.set('mocha', '1');
+      if (params.get('arctic') === '1') u.searchParams.set('arctic', '1');
+      if (params.get('vapor') === '1') u.searchParams.set('vapor', '1');
       if (params.get('tile') === '1') u.searchParams.set('tile', '1');
       if (params.get('outline') === '1') u.searchParams.set('outline', '1');
       if (params.get('stripe') === '1') u.searchParams.set('stripe', '1');

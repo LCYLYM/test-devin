@@ -1196,6 +1196,12 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .is-terra{background:linear-gradient(180deg,#241612,#2e1c14)}
 .is-terra .instrument{border-color:rgba(251,146,60,.4)}
 @media (prefers-reduced-motion:reduce){.is-pearl{animation:none}}
+.is-mocha{background:linear-gradient(180deg,#1c1310,#261b14)}
+.is-mocha .instrument{border-color:rgba(217,119,6,.4)}
+.is-arctic{background:linear-gradient(180deg,#0c1a26,#12293c)}
+.is-arctic .instrument{border-color:rgba(125,211,252,.4)}
+.is-vapor{background:linear-gradient(180deg,#1a1030,#241545 55%,#301a52)}
+.is-vapor .instrument{border-color:rgba(232,121,249,.4)}
 @keyframes hueSpin{to{filter:hue-rotate(360deg)}}
 .is-hue .instrument{animation:hueSpin 12s linear infinite}
 @media (prefers-reduced-motion:reduce){.is-hue .instrument{animation:none}}
