@@ -935,6 +935,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `opah` | `1` 月鱼配色 |
 | `pomfret` | `1` 鲳鱼配色 |
 | `croaker` | `1` 石首鱼配色 |
+| `tilefish` | `1` 方头鱼配色 |
+| `hogfish` | `1` 猪隆头鱼配色 |
+| `parrotfish` | `1` 鹦嘴鱼配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 
