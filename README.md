@@ -503,6 +503,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `verdant` | `1` 翠绿配色 |
 | `dusk` | `1` 薄暮配色 |
 | `crimson` | `1` 绯红配色 |
+| `opal` | `1` 蛋白石配色 |
+| `basalt` | `1` 玄武岩配色 |
+| `tangerine` | `1` 橘色配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 

@@ -2891,6 +2891,15 @@
     if (params.get('crimson') === '1') {
       document.body.classList.add('is-crimson');
     }
+    if (params.get('opal') === '1') {
+      document.body.classList.add('is-opal');
+    }
+    if (params.get('basalt') === '1') {
+      document.body.classList.add('is-basalt');
+    }
+    if (params.get('tangerine') === '1') {
+      document.body.classList.add('is-tangerine');
+    }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -3636,6 +3645,9 @@
       if (params.get('verdant') === '1') u.searchParams.set('verdant', '1');
       if (params.get('dusk') === '1') u.searchParams.set('dusk', '1');
       if (params.get('crimson') === '1') u.searchParams.set('crimson', '1');
+      if (params.get('opal') === '1') u.searchParams.set('opal', '1');
+      if (params.get('basalt') === '1') u.searchParams.set('basalt', '1');
+      if (params.get('tangerine') === '1') u.searchParams.set('tangerine', '1');
       if (params.get('tile') === '1') u.searchParams.set('tile', '1');
       if (params.get('outline') === '1') u.searchParams.set('outline', '1');
       if (params.get('stripe') === '1') u.searchParams.set('stripe', '1');
