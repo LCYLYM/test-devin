@@ -2756,6 +2756,15 @@
     if (params.get('glacier') === '1') {
       document.body.classList.add('is-glacier');
     }
+    if (params.get('honey') === '1') {
+      document.body.classList.add('is-honey');
+    }
+    if (params.get('iris') === '1') {
+      document.body.classList.add('is-iris');
+    }
+    if (params.get('cedar') === '1') {
+      document.body.classList.add('is-cedar');
+    }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -3456,6 +3465,9 @@
       if (params.get('morale') === '1') u.searchParams.set('morale', '1');
       if (params.get('sunset') === '1') u.searchParams.set('sunset', '1');
       if (params.get('glacier') === '1') u.searchParams.set('glacier', '1');
+      if (params.get('honey') === '1') u.searchParams.set('honey', '1');
+      if (params.get('iris') === '1') u.searchParams.set('iris', '1');
+      if (params.get('cedar') === '1') u.searchParams.set('cedar', '1');
       if (params.get('tile') === '1') u.searchParams.set('tile', '1');
       if (params.get('outline') === '1') u.searchParams.set('outline', '1');
       if (params.get('stripe') === '1') u.searchParams.set('stripe', '1');

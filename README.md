@@ -458,6 +458,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `morale` | `1` 今日完成度徽章 |
 | `sunset` | `1` 晚霞配色 |
 | `glacier` | `1` 冰川配色 |
+| `honey` | `1` 蜂蜜配色 |
+| `iris` | `1` 鸢尾配色 |
+| `cedar` | `1` 雪松配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 
