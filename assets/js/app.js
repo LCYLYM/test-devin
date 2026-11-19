@@ -162,7 +162,7 @@
       const dk=data.snapshot.dayKey;
       if(dk!==milestoneDay){milestoneDay=dk;milestonesHit=new Set();}
       const earn=data.snapshot.todayEarned||0;
-      for(const m of ml){if(earn>=m&&!milestonesHit.has(m)){milestonesHit.add(m);if(window.__vibrate&&navigator.vibrate)navigator.vibrate(40);if(window.SalaryApp&&window.SalaryApp.toast)window.SalaryApp.toast('已入账 '+(data.symbol||'¥')+m.toLocaleString('en-US')+(MILESTONE_MSG[m]?' · '+MILESTONE_MSG[m]:''));break;}}
+      for(const m of ml){if(earn>=m&&!milestonesHit.has(m)){milestonesHit.add(m);const mText='已入账 '+(data.symbol||'¥')+m.toLocaleString('en-US')+(MILESTONE_MSG[m]?' · '+MILESTONE_MSG[m]:'');if(window.__vibrate&&navigator.vibrate)navigator.vibrate(40);if(window.__notify&&window.Notification&&Notification.permission==='granted'){try{new Notification('薪动',{body:mText});}catch(e){}}if(window.SalaryApp&&window.SalaryApp.toast)window.SalaryApp.toast(mText);break;}}
     }
     if(window.__earnTarget&&data.snapshot){
       const eb=$('earnBadge');

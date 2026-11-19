@@ -89,6 +89,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `cn` | `1` 金额旁显示中文数字读法（一二三点四五） |
 | `glass` | `1` 毛玻璃面板（配 `?bgimg=` 绝配） |
 | `pomodoro` | 番茄钟 `?pomodoro=25` 或 `25,5`（搬砖/摸鱼轮换提醒） |
+| `rgb` | `1` 彩虹流转强调色（电竞氛围） |
+| `breath` | `1` 仪表盘呼吸灯发光 |
+| `notify` | `1` 里程碑到账时发系统通知（需授权） |
 
 `fx` 还可选 `matrix`（打工人字符雨）。
 

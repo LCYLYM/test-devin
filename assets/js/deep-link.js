@@ -353,6 +353,12 @@
     if (toastParam) setTimeout(function () { if (window.SalaryApp && window.SalaryApp.toast) window.SalaryApp.toast(toastParam.slice(0, 40)); }, 1200);
     if (params.get('cn') === '1') window.__cnAmount = true;
     if (params.get('glass') === '1') document.body.dataset.glass = '1';
+    if (params.get('rgb') === '1') document.body.dataset.rgb = '1';
+    if (params.get('breath') === '1') document.body.dataset.breath = '1';
+    if (params.get('notify') === '1' && window.Notification && Notification.permission === 'default') {
+      try { Notification.requestPermission(); } catch (e) {}
+    }
+    if (params.get('notify') === '1') window.__notify = true;
     var pomoMatch = /^(\d{1,3})(?:[,.\-](\d{1,2}))?$/.exec(params.get('pomodoro') || '');
     if (pomoMatch) {
       var pWork = Math.min(180, +pomoMatch[1]), pBreak = pomoMatch[2] ? Math.min(60, +pomoMatch[2]) : 5;
@@ -709,6 +715,9 @@
       if (window.__cnAmount) u.searchParams.set('cn', '1');
       if (document.body.dataset.glass === '1') u.searchParams.set('glass', '1');
       var pop = params.get('pomodoro'); if (pop) u.searchParams.set('pomodoro', pop);
+      if (document.body.dataset.rgb === '1') u.searchParams.set('rgb', '1');
+      if (document.body.dataset.breath === '1') u.searchParams.set('breath', '1');
+      if (window.__notify) u.searchParams.set('notify', '1');
       var text = u.toString();
       (navigator.clipboard ? navigator.clipboard.writeText(text) : Promise.reject())
         .then(function () { btn.textContent = '已复制 ✓'; setTimeout(function(){ btn.textContent='复制当前链接'; }, 1500); })

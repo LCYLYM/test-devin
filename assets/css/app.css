@@ -824,6 +824,11 @@ body[data-template=therm] .therm-visual{display:flex}
 .payday.pomo{color:#fca5a5}
 .payday.pomo.is-break{color:#86efac}
 body[data-glass] .instrument,body[data-glass] .summary-strip{backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);background:rgba(140,160,200,.08);border:1px solid rgba(255,255,255,.14)}
+@property --rgb-h{syntax:'<angle>';inherits:true;initial-value:190deg}
+@media(prefers-reduced-motion:no-preference){body[data-rgb]{--accent:hsl(var(--rgb-h) 90% 60%);animation:rgbSpin 6s linear infinite}}
+@keyframes rgbSpin{to{--rgb-h:550deg}}
+@media(prefers-reduced-motion:no-preference){body[data-breath] .instrument{animation:breathGlow 3.5s ease-in-out infinite}}
+@keyframes breathGlow{0%,100%{box-shadow:0 0 0 rgba(77,227,255,0)}50%{box-shadow:0 0 34px rgba(77,227,255,.22)}}
 .crt-overlay{position:fixed;inset:0;pointer-events:none;z-index:9999;background:repeating-linear-gradient(0deg,rgba(0,0,0,.16) 0 1px,transparent 1px 3px);mix-blend-mode:multiply}
 @media(prefers-reduced-motion:no-preference){.crt-overlay{animation:crtFlicker 4s steps(2) infinite}}
 @keyframes crtFlicker{0%,100%{opacity:1}50%{opacity:.86}}
