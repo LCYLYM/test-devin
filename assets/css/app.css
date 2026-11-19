@@ -1570,6 +1570,12 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .is-olivine .instrument{border-color:rgba(175,195,95,.42)}
 .is-damson{background:linear-gradient(180deg,#190e1a,#2b182e 50%,#3e2342)}
 .is-damson .instrument{border-color:rgba(195,130,200,.42)}
+.is-nutmeg{background:linear-gradient(180deg,#1c1108,#301c0e 50%,#462915)}
+.is-nutmeg .instrument{border-color:rgba(215,140,75,.42)}
+.is-scarab{background:linear-gradient(180deg,#0a1a18,#10302a 50%,#17453c)}
+.is-scarab .instrument{border-color:rgba(80,200,180,.42)}
+.is-lichen{background:linear-gradient(180deg,#141a10,#222c1a 50%,#313f24)}
+.is-lichen .instrument{border-color:rgba(170,195,130,.42)}
 .is-oatmeal{background:linear-gradient(180deg,#1d1912,#2f291e 50%,#433a2a)}
 .is-oatmeal .instrument{border-color:rgba(215,195,155,.4)}
 .is-thyme{background:linear-gradient(180deg,#121a14,#1c2a20 50%,#28392c)}

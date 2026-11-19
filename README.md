@@ -686,6 +686,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `vicuna` | `1` 骆马配色 |
 | `olivine` | `1` 橄榄石配色 |
 | `damson` | `1` 西洋李配色 |
+| `nutmeg` | `1` 肉豆蔻配色 |
+| `scarab` | `1` 圣甲虫配色 |
+| `lichen` | `1` 地衣配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 
