@@ -1217,6 +1217,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `swanneck` | `1` 天鹅颈藓配色 |
 | `pincushion` | `1` 针垫藓配色 |
 | `watermoss` | `1` 水藓配色 |
+| `silkywall` | `1` 绢藓配色 |
+| `feathermoss` | `1` 羽藓配色 |
+| `cordmoss` | `1` 绳藓配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 

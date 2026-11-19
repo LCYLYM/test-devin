@@ -4101,6 +4101,9 @@
     if (params.get('swanneck') === '1') { document.body.classList.add('is-swanneck'); }
     if (params.get('pincushion') === '1') { document.body.classList.add('is-pincushion'); }
     if (params.get('watermoss') === '1') { document.body.classList.add('is-watermoss'); }
+    if (params.get('silkywall') === '1') { document.body.classList.add('is-silkywall'); }
+    if (params.get('feathermoss') === '1') { document.body.classList.add('is-feathermoss'); }
+    if (params.get('cordmoss') === '1') { document.body.classList.add('is-cordmoss'); }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -5560,6 +5563,9 @@
         if (params.get('swanneck') === '1') u.searchParams.set('swanneck', '1');
         if (params.get('pincushion') === '1') u.searchParams.set('pincushion', '1');
         if (params.get('watermoss') === '1') u.searchParams.set('watermoss', '1');
+        if (params.get('silkywall') === '1') u.searchParams.set('silkywall', '1');
+        if (params.get('feathermoss') === '1') u.searchParams.set('feathermoss', '1');
+        if (params.get('cordmoss') === '1') u.searchParams.set('cordmoss', '1');
       if (params.get('tile') === '1') u.searchParams.set('tile', '1');
       if (params.get('outline') === '1') u.searchParams.set('outline', '1');
       if (params.get('stripe') === '1') u.searchParams.set('stripe', '1');
