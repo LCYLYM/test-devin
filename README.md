@@ -929,6 +929,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `cod` | `1` 鳕鱼配色 |
 | `hake` | `1` 狗鳕配色 |
 | `ling` | `1` 长身鳕配色 |
+| `saury` | `1` 秋刀鱼配色 |
+| `needlefish` | `1` 颌针鱼配色 |
+| `flyingfish` | `1` 飞鱼配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 

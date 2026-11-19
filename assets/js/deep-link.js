@@ -3813,6 +3813,9 @@
     if (params.get('cod') === '1') { document.body.classList.add('is-cod'); }
     if (params.get('hake') === '1') { document.body.classList.add('is-hake'); }
     if (params.get('ling') === '1') { document.body.classList.add('is-ling'); }
+    if (params.get('saury') === '1') { document.body.classList.add('is-saury'); }
+    if (params.get('needlefish') === '1') { document.body.classList.add('is-needlefish'); }
+    if (params.get('flyingfish') === '1') { document.body.classList.add('is-flyingfish'); }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -4984,6 +4987,9 @@
         if (params.get('cod') === '1') u.searchParams.set('cod', '1');
         if (params.get('hake') === '1') u.searchParams.set('hake', '1');
         if (params.get('ling') === '1') u.searchParams.set('ling', '1');
+        if (params.get('saury') === '1') u.searchParams.set('saury', '1');
+        if (params.get('needlefish') === '1') u.searchParams.set('needlefish', '1');
+        if (params.get('flyingfish') === '1') u.searchParams.set('flyingfish', '1');
       if (params.get('tile') === '1') u.searchParams.set('tile', '1');
       if (params.get('outline') === '1') u.searchParams.set('outline', '1');
       if (params.get('stripe') === '1') u.searchParams.set('stripe', '1');
