@@ -49,8 +49,12 @@
     var period = params.get('period');
     if (period === 'day' || period === 'month') app.setPeriod(period);
 
-    if (params.get('demo') === '1') {
+    var demoParam = params.get('demo');
+    if (demoParam && demoParam !== '0') {
       if (!app.getState().demo) app.toggleDemo();
+      var speed = parseFloat(demoParam);
+      var demoState = app.getState().demo;
+      if (isFinite(speed) && speed > 0 && demoState) demoState.speed = Math.min(speed, 10000);
     }
 
     if (params.get('sound') === '1') app.setPreference('sound', true);
@@ -75,6 +79,7 @@
         badge.hidden = false;
         var lbl = document.getElementById('paydayLabel');
         if (lbl) lbl.textContent = days === 0 ? '今天发薪' : '距发薪';
+        badge.title = days === 0 ? '今天就是发薪日' : '发薪日 ' + (target.getMonth() + 1) + '月' + target.getDate() + '日';
         var dd = document.getElementById('paydayDays');
         if (dd) dd.textContent = days === 0 ? '🎉' : String(days);
       }
@@ -122,6 +127,9 @@
     }
 
     var accent = params.get('accent');
+    if (accent === 'off' || accent === '0') { try { localStorage.removeItem('salaryFlow.accent'); } catch (e) {} accent = ''; }
+    else if (accent) { try { localStorage.setItem('salaryFlow.accent', accent); } catch (e) {} }
+    if (!accent) { try { accent = localStorage.getItem('salaryFlow.accent') || ''; } catch (e) { accent = ''; } }
     if (accent && /^#?([0-9a-fA-F]{3,4}|[0-9a-fA-F]{6}|[0-9a-fA-F]{8})$/.test(accent)) {
       var v = accent[0] === '#' ? accent : '#' + accent;
       document.body.style.setProperty('--accent', v);
