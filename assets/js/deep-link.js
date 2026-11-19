@@ -5,6 +5,16 @@
   'use strict';
   var params = new URLSearchParams(location.search);
 
+  if (params.get('reset') === '1') {
+    try {
+      Object.keys(localStorage).forEach(function (k) { if (k.indexOf('salaryFlow') === 0) localStorage.removeItem(k); });
+    } catch (e) {}
+    var ru = new URL(location.href);
+    ru.searchParams.delete('reset');
+    location.replace(ru.toString());
+    return;
+  }
+
   function whenReady(fn) {
     if (window.SalaryApp) return fn();
     var tries = 0;
@@ -576,6 +586,9 @@
     }
     var fontP = params.get('font');
     if (fontP && ['mono', 'serif', 'round'].indexOf(fontP) >= 0) document.body.dataset.font = fontP;
+    var palP = params.get('pal');
+    if (palP && ['forest', 'ocean', 'sunset', 'grape'].indexOf(palP) >= 0) document.body.dataset.pal = palP;
+    if (params.get('flat') === '1') document.body.dataset.flat = '1';
     if (params.get('zodiac') === '1') {
       var zb = document.getElementById('zodiacBadge');
       if (zb) {
@@ -996,6 +1009,8 @@
       if (params.get('zodiac') === '1') u.searchParams.set('zodiac', '1');
       if (params.get('jieqi') === '1') u.searchParams.set('jieqi', '1');
       var dyp = params.get('days'); if (dyp) u.searchParams.set('days', dyp);
+      var plp = params.get('pal'); if (plp && ['forest', 'ocean', 'sunset', 'grape'].indexOf(plp) >= 0) u.searchParams.set('pal', plp);
+      if (params.get('flat') === '1') u.searchParams.set('flat', '1');
       params.forEach(function (v, k) { if (k.indexOf('utm_') === 0 && v) u.searchParams.set(k, v.slice(0, 64)); });
       var text = u.toString();
       (navigator.clipboard ? navigator.clipboard.writeText(text) : Promise.reject())

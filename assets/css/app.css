@@ -876,3 +876,8 @@ body[data-font=serif] .amount-area{font-family:Georgia,'Times New Roman','Songti
 body[data-font=round] .amount-area{font-family:ui-rounded,'SF Pro Rounded','PingFang SC','Hiragino Sans GB',sans-serif}
 .payday.zodiac{color:#fca5a5}
 .payday.jieqi{color:#a5f3fc}
+body[data-pal=forest]{--bg:#0f1a13;--surface:#16241b;--surface-2:#1e2f24;--line:#2c4234;--accent:#4ade80;--accent-rgb:74,222,128;--instrument:#0a120d;--muted:#93a89a;--dim:#5b6f61}
+body[data-pal=ocean]{--bg:#0d1b26;--surface:#132636;--surface-2:#1a3346;--line:#2a475e;--accent:#38bdf8;--accent-rgb:56,189,248;--instrument:#0a141d;--muted:#8fa9bb;--dim:#577185}
+body[data-pal=sunset]{--bg:#1f1210;--surface:#2b1a15;--surface-2:#38221a;--line:#513024;--accent:#fb923c;--accent-rgb:251,146,60;--instrument:#160d0b;--muted:#b09382;--dim:#75594a}
+body[data-pal=grape]{--bg:#17121f;--surface:#201a2b;--surface-2:#2a2238;--line:#3d3152;--accent:#c084fc;--accent-rgb:192,132,252;--instrument:#100c16;--muted:#a193b8;--dim:#635475}
+body[data-flat] .instrument,body[data-flat] .payday,body[data-flat] .template-switch,body[data-flat] .currency-pill,body[data-flat] .salary-form input,body[data-flat] .demo-banner,body[data-flat] .toast,body[data-flat] .discount-badge,body[data-flat] .charge-capsule{border-radius:0!important;box-shadow:none!important}

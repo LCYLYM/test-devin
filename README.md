@@ -122,6 +122,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `zodiac` | `1` 当年生肖徽章 |
 | `jieqi` | `1` 二十四节气倒计时徽章 |
 | `days` | 工作日覆盖，如 `1-5` 或 `0,1,2`（0=周日，本次会话生效） |
+| `pal` | 配色包：`forest`/`ocean`/`sunset`/`grape` |
+| `flat` | `1` 扁平化：去圆角、去阴影 |
+| `reset` | `1` 清空本地全部数据并回到初始状态 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 
