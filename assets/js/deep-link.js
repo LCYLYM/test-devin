@@ -3906,6 +3906,9 @@
     if (params.get('lion') === '1') { document.body.classList.add('is-lion'); }
     if (params.get('cheetah') === '1') { document.body.classList.add('is-cheetah'); }
     if (params.get('panther') === '1') { document.body.classList.add('is-panther'); }
+    if (params.get('snowleopard') === '1') { document.body.classList.add('is-snowleopard'); }
+    if (params.get('clouded') === '1') { document.body.classList.add('is-clouded'); }
+    if (params.get('sphynx') === '1') { document.body.classList.add('is-sphynx'); }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -5170,6 +5173,9 @@
         if (params.get('lion') === '1') u.searchParams.set('lion', '1');
         if (params.get('cheetah') === '1') u.searchParams.set('cheetah', '1');
         if (params.get('panther') === '1') u.searchParams.set('panther', '1');
+        if (params.get('snowleopard') === '1') u.searchParams.set('snowleopard', '1');
+        if (params.get('clouded') === '1') u.searchParams.set('clouded', '1');
+        if (params.get('sphynx') === '1') u.searchParams.set('sphynx', '1');
       if (params.get('tile') === '1') u.searchParams.set('tile', '1');
       if (params.get('outline') === '1') u.searchParams.set('outline', '1');
       if (params.get('stripe') === '1') u.searchParams.set('stripe', '1');
