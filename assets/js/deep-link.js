@@ -3461,6 +3461,28 @@
     if (params.get('tapir') === '1') {
       document.body.classList.add('is-tapir');
     }
+    if (params.get('eow') === '1') {
+      var eb = document.getElementById('eowBadge');
+      if (eb) {
+        var edow = new Date().getDay();
+        var edays = (6 - edow + 7) % 7;
+        eb.hidden = false;
+        var el = document.getElementById('eowLabel');
+        var ed = document.getElementById('eowDays');
+        var eu = document.getElementById('eowUnit');
+        if (edays === 0) {
+          if (el) el.textContent = '周末啦';
+          if (ed) ed.textContent = '🎉';
+          if (eu) eu.hidden = true;
+        } else if (ed) ed.textContent = String(edays);
+      }
+    }
+    if (params.get('rhea') === '1') {
+      document.body.classList.add('is-rhea');
+    }
+    if (params.get('umbra') === '1') {
+      document.body.classList.add('is-umbra');
+    }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -4383,6 +4405,9 @@
       if (params.get('ocelot') === '1') u.searchParams.set('ocelot', '1');
       if (params.get('safflower') === '1') u.searchParams.set('safflower', '1');
       if (params.get('tapir') === '1') u.searchParams.set('tapir', '1');
+      if (params.get('eow') === '1') u.searchParams.set('eow', '1');
+      if (params.get('rhea') === '1') u.searchParams.set('rhea', '1');
+      if (params.get('umbra') === '1') u.searchParams.set('umbra', '1');
       if (params.get('tile') === '1') u.searchParams.set('tile', '1');
       if (params.get('outline') === '1') u.searchParams.set('outline', '1');
       if (params.get('stripe') === '1') u.searchParams.set('stripe', '1');

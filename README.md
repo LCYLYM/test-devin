@@ -680,6 +680,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `ocelot` | `1` 豹猫配色 |
 | `safflower` | `1` 红花配色 |
 | `tapir` | `1` 貘配色 |
+| `eow` | `1` 周末倒计时徽章 |
+| `rhea` | `1` 美洲鸵配色 |
+| `umbra` | `1` 暗影配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 

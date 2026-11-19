@@ -1558,6 +1558,12 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .payday.double12{color:#f9a8d4}
 .payday.lastday{color:#cbd5e1}
 .is-focus .payday.aprilfools,.is-focus .payday.double12,.is-focus .payday.lastday{display:none}
+.payday.eow{color:#a5b4fc}
+.is-focus .payday.eow{display:none}
+.is-rhea{background:linear-gradient(180deg,#191510,#2a231a 50%,#3b3326)}
+.is-rhea .instrument{border-color:rgba(200,180,140,.42)}
+.is-umbra{background:linear-gradient(180deg,#0f0e12,#1b1920 50%,#282530)}
+.is-umbra .instrument{border-color:rgba(150,145,170,.42)}
 .is-oatmeal{background:linear-gradient(180deg,#1d1912,#2f291e 50%,#433a2a)}
 .is-oatmeal .instrument{border-color:rgba(215,195,155,.4)}
 .is-thyme{background:linear-gradient(180deg,#121a14,#1c2a20 50%,#28392c)}
