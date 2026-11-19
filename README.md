@@ -389,6 +389,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `am` | `1` 上午/下午徽章 |
 | `olive` | `1` 橄榄配色 |
 | `plasma` | `1` 等离子背景 |
+| `shimmer` | `1` 微光金额 |
+| `ice` | `1` 冰晶边框 |
+| `fossil` | `1` 做旧配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 

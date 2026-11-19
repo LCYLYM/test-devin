@@ -1209,6 +1209,12 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 @keyframes plasmaDrift{0%,100%{background-position:0% 0%,100% 100%,0 0}50%{background-position:100% 100%,0% 0%,0 0}}
 .is-focus .payday.ampm{display:none}
 @media (prefers-reduced-motion:reduce){.is-plasma{animation:none}}
+.is-shimmer .amount{background:linear-gradient(100deg,#fff 40%,rgba(94,234,212,.9) 50%,#fff 60%);background-size:200% 100%;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;animation:shimmerMove 3s linear infinite}
+@keyframes shimmerMove{to{background-position:-200% 0}}
+.is-ice .instrument{border:1px solid rgba(165,243,252,.5);box-shadow:inset 0 0 20px rgba(165,243,252,.08),0 0 24px rgba(165,243,252,.1)}
+.is-fossil{background:linear-gradient(180deg,#211c15,#2a2419)}
+.is-fossil .instrument{border-color:rgba(214,183,132,.4);filter:sepia(.2)}
+@media (prefers-reduced-motion:reduce){.is-shimmer .amount{animation:none;-webkit-text-fill-color:currentColor}}
 @keyframes hueSpin{to{filter:hue-rotate(360deg)}}
 .is-hue .instrument{animation:hueSpin 12s linear infinite}
 @media (prefers-reduced-motion:reduce){.is-hue .instrument{animation:none}}

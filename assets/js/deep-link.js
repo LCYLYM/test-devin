@@ -2477,6 +2477,15 @@
     if (params.get('plasma') === '1') {
       document.body.classList.add('is-plasma');
     }
+    if (params.get('shimmer') === '1') {
+      document.body.classList.add('is-shimmer');
+    }
+    if (params.get('ice') === '1') {
+      document.body.classList.add('is-ice');
+    }
+    if (params.get('fossil') === '1') {
+      document.body.classList.add('is-fossil');
+    }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -3108,6 +3117,9 @@
       if (params.get('am') === '1') u.searchParams.set('am', '1');
       if (params.get('olive') === '1') u.searchParams.set('olive', '1');
       if (params.get('plasma') === '1') u.searchParams.set('plasma', '1');
+      if (params.get('shimmer') === '1') u.searchParams.set('shimmer', '1');
+      if (params.get('ice') === '1') u.searchParams.set('ice', '1');
+      if (params.get('fossil') === '1') u.searchParams.set('fossil', '1');
       if (params.get('tile') === '1') u.searchParams.set('tile', '1');
       if (params.get('outline') === '1') u.searchParams.set('outline', '1');
       if (params.get('stripe') === '1') u.searchParams.set('stripe', '1');
