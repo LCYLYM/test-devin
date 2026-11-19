@@ -629,6 +629,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `timber` | `1` 原木配色 |
 | `lily` | `1` 百合配色 |
 | `otter` | `1` 水獭配色 |
+| `primrose` | `1` 樱草配色 |
+| `cinder` | `1` 煤渣配色 |
+| `sedge` | `1` 莎草配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 
