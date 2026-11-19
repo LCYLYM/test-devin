@@ -3873,6 +3873,9 @@
     if (params.get('centipede') === '1') { document.body.classList.add('is-centipede'); }
     if (params.get('millipede') === '1') { document.body.classList.add('is-millipede'); }
     if (params.get('silkworm') === '1') { document.body.classList.add('is-silkworm'); }
+    if (params.get('squid') === '1') { document.body.classList.add('is-squid'); }
+    if (params.get('octopus') === '1') { document.body.classList.add('is-octopus'); }
+    if (params.get('cuttlefish') === '1') { document.body.classList.add('is-cuttlefish'); }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -5104,6 +5107,9 @@
         if (params.get('centipede') === '1') u.searchParams.set('centipede', '1');
         if (params.get('millipede') === '1') u.searchParams.set('millipede', '1');
         if (params.get('silkworm') === '1') u.searchParams.set('silkworm', '1');
+        if (params.get('squid') === '1') u.searchParams.set('squid', '1');
+        if (params.get('octopus') === '1') u.searchParams.set('octopus', '1');
+        if (params.get('cuttlefish') === '1') u.searchParams.set('cuttlefish', '1');
       if (params.get('tile') === '1') u.searchParams.set('tile', '1');
       if (params.get('outline') === '1') u.searchParams.set('outline', '1');
       if (params.get('stripe') === '1') u.searchParams.set('stripe', '1');

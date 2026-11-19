@@ -989,6 +989,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `centipede` | `1` 蜈蚣配色 |
 | `millipede` | `1` 千足虫配色 |
 | `silkworm` | `1` 蚕配色 |
+| `squid` | `1` 鱿鱼配色 |
+| `octopus` | `1` 章鱼配色 |
+| `cuttlefish` | `1` 乌贼配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 
