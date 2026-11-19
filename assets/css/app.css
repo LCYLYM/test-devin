@@ -706,3 +706,19 @@ details.seo-faq>summary h2{margin:0;font-size:14px;color:var(--muted,#888);font-
 details.seo-faq>summary .faq-hint{font-size:11px;color:var(--dim,#666)}
 details.seo-faq[open]>summary .faq-hint{display:none}
 details.seo-faq>details{margin:0 4px 8px}
+
+/* iter-148: 终端皮肤 —— ASCII 进度条 + 闪烁光标 */
+.term-visual{display:none;font-family:ui-monospace,'Cascadia Mono',Menlo,monospace;color:#7ee787;
+background:#0d1117;border:1px solid #2d333b;border-radius:12px;padding:22px 26px;margin:0 auto;
+max-width:640px;box-shadow:0 8px 30px rgba(0,0,0,.5)}
+.term-line{font-size:13px;margin-bottom:10px}
+.term-prompt{color:#39d353;font-weight:700}.term-colon{color:#8b949e}
+.term-cmd{color:#e6edf3}
+.term-bar{font-size:20px;letter-spacing:1px;color:#39d353;margin:14px 0 12px;white-space:nowrap}
+.term-dim{color:#8b949e;font-size:12px}
+.term-cursor{color:#39d353;animation:termBlink 1s steps(1) infinite;margin-left:4px}
+@keyframes termBlink{50%{opacity:0}}
+body[data-template=term] .charge-visual{display:none}
+body[data-template=term] .term-visual{display:block}
+body[data-template=term]{--bg:#010409}
+@media(max-width:520px){.term-bar{font-size:14px}.term-visual{padding:16px 14px}}
