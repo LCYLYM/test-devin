@@ -208,6 +208,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `month` | `1` 本月进度徽章 |
 | `horizon` | `1` 地平线光带 |
 | `sign` | 文字：右下角签名档 |
+| `frost` | `1` 霜冻玻璃仪表 |
+| `led` | `1` LED 辉光数字 |
+| `sky` | `1` 背景随时刻变化（晨/昼/暮/夜） |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 

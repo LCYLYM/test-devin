@@ -1102,6 +1102,15 @@
       sg.textContent = '— ' + signP.trim().slice(0, 30);
       document.body.appendChild(sg);
     }
+    if (params.get('frost') === '1') document.body.dataset.frost = '1';
+    if (params.get('led') === '1') document.body.dataset.led = '1';
+    if (params.get('sky') === '1') {
+      var skh = new Date().getHours();
+      document.body.dataset.sky = skh >= 5 && skh < 8 ? 'dawn' : skh >= 8 && skh < 17 ? 'day' : skh >= 17 && skh < 19 ? 'dusk' : 'night';
+      var skyl = document.createElement('div');
+      skyl.className = 'sky-layer'; skyl.setAttribute('aria-hidden', 'true');
+      document.body.prepend(skyl);
+    }
     if (params.get('rays') === '1' && !(window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches)) {
       document.body.dataset.rays = '1';
       var raysL = document.createElement('div');
@@ -1614,6 +1623,9 @@
       if (params.get('month') === '1') u.searchParams.set('month', '1');
       if (params.get('horizon') === '1') u.searchParams.set('horizon', '1');
       var sgp = params.get('sign'); if (sgp) u.searchParams.set('sign', sgp.slice(0, 30));
+      if (params.get('frost') === '1') u.searchParams.set('frost', '1');
+      if (params.get('led') === '1') u.searchParams.set('led', '1');
+      if (params.get('sky') === '1') u.searchParams.set('sky', '1');
       if (params.get('rays') === '1') u.searchParams.set('rays', '1');
       if (params.get('flat') === '1') u.searchParams.set('flat', '1');
       var idl = params.get('idle'); if (idl) u.searchParams.set('idle', idl);
