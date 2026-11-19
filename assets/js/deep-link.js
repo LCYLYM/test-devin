@@ -311,13 +311,22 @@
       }, Math.min(600, Math.max(3, kioskParam)) * 1000);
     }
     var amountArea = document.getElementById('amountArea');
-    if (amountArea) amountArea.addEventListener('dblclick', function () {
-      var txt = amountArea.getAttribute('aria-label') || '';
-      if (!txt) return;
-      (navigator.clipboard ? navigator.clipboard.writeText(txt) : Promise.reject())
-        .then(function () { if (window.SalaryApp && window.SalaryApp.toast) window.SalaryApp.toast('已复制 ' + txt); })
-        .catch(function () {});
-    });
+    if (amountArea) {
+      var copyAmount = function () {
+        var txt = amountArea.getAttribute('aria-label') || '';
+        if (!txt) return;
+        (navigator.clipboard ? navigator.clipboard.writeText(txt) : Promise.reject())
+          .then(function () { if (window.SalaryApp && window.SalaryApp.toast) window.SalaryApp.toast('已复制 ' + txt); })
+          .catch(function () {});
+      };
+      amountArea.addEventListener('dblclick', copyAmount);
+      var lpTimer = 0;
+      amountArea.addEventListener('pointerdown', function (e) { if (e.pointerType === 'touch') lpTimer = setTimeout(copyAmount, 550); });
+      ['pointerup', 'pointercancel', 'pointermove'].forEach(function (ev) { amountArea.addEventListener(ev, function () { clearTimeout(lpTimer); }, {passive: true}); });
+    }
+    var toastParam = params.get('toast');
+    if (toastParam) setTimeout(function () { if (window.SalaryApp && window.SalaryApp.toast) window.SalaryApp.toast(toastParam.slice(0, 40)); }, 1200);
+    if (params.get('cn') === '1') window.__cnAmount = true;
     var spdParam = parseInt(params.get('speed') || '', 10);
     if (spdParam >= 1 && spdParam <= 200) window.__demoSpeed = spdParam;
     if (params.get('year') === '1') {
@@ -648,6 +657,8 @@
       var anp = params.get('anni'); if (anp) { u.searchParams.set('anni', anp); var ann = params.get('anniname'); if (ann) u.searchParams.set('anniname', ann.slice(0, 12)); }
       if (params.get('year') === '1') u.searchParams.set('year', '1');
       var spp = params.get('speed'); if (spp) u.searchParams.set('speed', spp);
+      var tsp = params.get('toast'); if (tsp) u.searchParams.set('toast', tsp.slice(0, 40));
+      if (window.__cnAmount) u.searchParams.set('cn', '1');
       var text = u.toString();
       (navigator.clipboard ? navigator.clipboard.writeText(text) : Promise.reject())
         .then(function () { btn.textContent = '已复制 ✓'; setTimeout(function(){ btn.textContent='复制当前链接'; }, 1500); })

@@ -226,6 +226,14 @@
       $('funConversion').hidden=false;
       setText('funConversion','1 元 = '+(data.currency.rate/1e8).toLocaleString('en-US',{maximumFractionDigits:4})+' 亿 Z$ · 趣味倍率');
     }else $('funConversion').hidden=true;
+    const cnEl=$('cnAmount');
+    if(cnEl){
+      if(window.__cnAmount&&isFinite(data.displayAmount)){
+        cnEl.hidden=false;
+        const CN='零一二三四五六七八九';
+        cnEl.textContent=(data.symbol||'')+String(Math.abs(data.displayAmount).toFixed(data.decimals??2)).split('').map(ch=>ch>='0'&&ch<='9'?CN[+ch]:(ch==='.'?'点':ch)).join('');
+      }else cnEl.hidden=true;
+    }
     // Keep the compact date suited to both desktop and phone layouts.
     const date=data.now;
     setText('currentDate',(date.getMonth()+1)+'月'+date.getDate()+'日 · 周'+'日一二三四五六'[date.getDay()]);
