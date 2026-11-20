@@ -3100,6 +3100,12 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .is-butternut .instrument{border-color:rgba(220,160,65,.4)}
 .is-delicata{background:linear-gradient(180deg,#262315 0%,#12110a 100%)}
 .is-delicata .instrument{border-color:rgba(210,190,100,.4)}
+.is-honeydew{background:linear-gradient(180deg,#1f261a 0%,#0e120c 100%)}
+.is-honeydew .instrument{border-color:rgba(150,185,115,.4)}
+.is-cantaloupe{background:linear-gradient(180deg,#281e12 0%,#140f08 100%)}
+.is-cantaloupe .instrument{border-color:rgba(230,155,65,.4)}
+.is-galia{background:linear-gradient(180deg,#212617 0%,#0f120a 100%)}
+.is-galia .instrument{border-color:rgba(165,185,90,.4)}
 .is-fuchsia{background:linear-gradient(180deg,#2e1428 0%,#160a13 100%)}
 .is-fuchsia .instrument{border-color:rgba(230,100,200,.4)}
 .is-oleander{background:linear-gradient(180deg,#2c1720 0%,#150b0f 100%)}
