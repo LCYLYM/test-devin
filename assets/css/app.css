@@ -529,7 +529,6 @@ dialog.drawer[open] { animation: drawer-arrive 300ms cubic-bezier(.2,.75,.25,1) 
 
 .syal-credit{display:inline-flex;align-items:center;gap:4px;white-space:nowrap;font-size:11px;line-height:1.6}.syal-credit a{color:inherit;text-decoration:none}.syal-credit a:hover{text-decoration:underline}.syal-back{color:inherit;text-decoration:none;white-space:nowrap;font-size:11px;line-height:1.6;padding:2px 0}.syal-back:hover{text-decoration:underline}.syal-back:focus-visible{outline:2px solid currentColor;outline-offset:4px}.syal-credit a:focus-visible{outline:2px solid currentColor;outline-offset:4px}.app-footer{flex-wrap:wrap;gap:12px}.app-footer>.syal-credit{color:#9aa39d}@media(max-width:520px){.app-footer>.syal-credit{flex-basis:100%;justify-content:center}}
 
-}
 /* SEO FAQ section */
 .seo-faq{content-visibility:auto;contain-intrinsic-size:auto 560px;max-width:720px;margin:48px auto 24px;padding:0 20px;color:#9aa39d;font-size:13px;line-height:1.7}
 .seo-faq h2{font-size:15px;font-weight:600;color:#c8cfc9;margin:0 0 12px}
@@ -10103,3 +10102,95 @@ body[data-template=woodpile] .woodpile-visual{display:block}
 
 /* center fixed-width scenes inside block-level visuals */
 [class*="-scene"]{margin-inline:auto}
+/* iter-2148: per-skin accent sampled from each scene/dot for skins that had no palette */
+body[data-template=charge]{--accent:#5ae593;--accent-rgb:90,229,147}
+body[data-template=term]{--accent:#39d353;--accent-rgb:57,211,83}
+body[data-template=ecg]{--accent:#ff5f56;--accent-rgb:255,95,86}
+body[data-template=wave]{--accent:#38bdf8;--accent-rgb:56,189,248}
+body[data-template=typewriter]{--accent:#d8c8a8;--accent-rgb:216,200,168}
+body[data-template=aurora]{--accent:#58e8a8;--accent-rgb:88,232,168}
+body[data-template=catnap]{--accent:#e8a860;--accent-rgb:232,168,96}
+body[data-template=scope]{--accent:#b8c8e8;--accent-rgb:184,200,232}
+body[data-template=bottle]{--accent:#78c8b0;--accent-rgb:120,200,176}
+body[data-template=lotus]{--accent:#f080b0;--accent-rgb:240,128,176}
+body[data-template=ramen]{--accent:#e8b058;--accent-rgb:232,176,88}
+body[data-template=invader]{--accent:#68e878;--accent-rgb:104,232,120}
+body[data-template=mine]{--accent:#888888;--accent-rgb:136,136,136}
+body[data-template=sprout]{--accent:#78c878;--accent-rgb:120,200,120}
+body[data-template=hop]{--accent:#88b0e8;--accent-rgb:136,176,232}
+body[data-template=scale]{--accent:#e8c868;--accent-rgb:232,200,104}
+body[data-template=tearoff]{--accent:#e86858;--accent-rgb:232,104,88}
+body[data-template=grill]{--accent:#e88848;--accent-rgb:232,136,72}
+body[data-template=dock]{--accent:#6898d8;--accent-rgb:104,152,216}
+body[data-template=sub]{--accent:#58a8c8;--accent-rgb:88,168,200}
+body[data-template=icicle]{--accent:#a8d8f0;--accent-rgb:168,216,240}
+body[data-template=latte]{--accent:#c89060;--accent-rgb:200,144,96}
+body[data-template=train]{--accent:#e87858;--accent-rgb:232,120,88}
+body[data-template=forge]{--accent:#f08040;--accent-rgb:240,128,64}
+body[data-template=tanghulu]{--accent:#e84848;--accent-rgb:232,72,72}
+body[data-template=mill]{--accent:#c8b088;--accent-rgb:200,176,136}
+body[data-template=laundry]{--accent:#68b8e8;--accent-rgb:104,184,232}
+body[data-template=sushi]{--accent:#f0a0a8;--accent-rgb:240,160,168}
+body[data-template=mallow]{--accent:#f0d0a0;--accent-rgb:240,208,160}
+body[data-template=fountain]{--accent:#68c8f0;--accent-rgb:104,200,240}
+body[data-template=sled]{--accent:#b8d8f0;--accent-rgb:184,216,240}
+body[data-template=gongfu]{--accent:#c88848;--accent-rgb:200,136,72}
+body[data-template=jigsaw]{--accent:#68a8d8;--accent-rgb:104,168,216}
+body[data-template=parasol]{--accent:#e07070;--accent-rgb:224,112,112}
+body[data-template=steamer]{--accent:#d8b080;--accent-rgb:216,176,128}
+body[data-template=waterwheel]{--accent:#78a8c8;--accent-rgb:120,168,200}
+body[data-template=firecrack]{--accent:#e83838;--accent-rgb:232,56,56}
+body[data-template=tannery]{--accent:#b08858;--accent-rgb:176,136,88}
+body[data-template=charcoal]{--accent:#e08040;--accent-rgb:224,128,64}
+body[data-template=duckpond]{--accent:#e0c860;--accent-rgb:224,200,96}
+body[data-template=distillery]{--accent:#d08040;--accent-rgb:208,128,64}
+body[data-template=tent]{--accent:#c09050;--accent-rgb:192,144,80}
+body[data-template=outpost]{--accent:#8890a0;--accent-rgb:136,144,160}
+body[data-template=creamery]{--accent:#e8dcc0;--accent-rgb:232,220,192}
+body[data-template=hut]{--accent:#a08048;--accent-rgb:160,128,72}
+body[data-template=nori]{--accent:#73a676;--accent-rgb:115,166,118}
+body[data-template=apothecary]{--accent:#7a9a5a;--accent-rgb:122,154,90}
+body[data-template=grotto]{--accent:#6a7a9a;--accent-rgb:106,122,154}
+body[data-template=candleworks]{--accent:#e8b860;--accent-rgb:232,184,96}
+body[data-template=coldframe]{--accent:#7ab060;--accent-rgb:122,176,96}
+body[data-template=ciderpress]{--accent:#c08830;--accent-rgb:192,136,48}
+body[data-template=pumphouse]{--accent:#5a7a8a;--accent-rgb:90,122,138}
+body[data-template=windchime]{--accent:#8ab8c8;--accent-rgb:138,184,200}
+body[data-template=semaphore]{--accent:#d08838;--accent-rgb:208,136,56}
+body[data-template=quay]{--accent:#6e92ab;--accent-rgb:110,146,171}
+body[data-template=woodpile]{--accent:#c48d55;--accent-rgb:196,141,85}
+body[data-template=clothesline]{--accent:#c8d8e8;--accent-rgb:200,216,232}
+body[data-template=papermill]{--accent:#e8e0c8;--accent-rgb:232,224,200}
+body[data-template=pigsty]{--accent:#d8a0a8;--accent-rgb:216,160,168}
+body[data-template=herbgarden]{--accent:#6a9a4a;--accent-rgb:106,154,74}
+body[data-template=tideflat]{--accent:#8a7a5a;--accent-rgb:138,122,90}
+body[data-template=coralreef]{--accent:#e08070;--accent-rgb:224,128,112}
+body[data-template=rookery]{--accent:#6a8a5a;--accent-rgb:106,138,90}
+body[data-template=brewery]{--accent:#c08830;--accent-rgb:192,136,48}
+body[data-template=millrace]{--accent:#5a9ab0;--accent-rgb:90,154,176}
+body[data-template=hayloft]{--accent:#c8a040;--accent-rgb:200,160,64}
+body[data-template=saltmarsh]{--accent:#9ab88a;--accent-rgb:154,184,138}
+body[data-template=stonefield]{--accent:#8a8a80;--accent-rgb:138,138,128}
+body[data-template=fishpond]{--accent:#e07830;--accent-rgb:224,120,48}
+body[data-template=watchmaker]{--accent:#c8a050;--accent-rgb:200,160,80}
+body[data-template=cliffside]{--accent:#8a7a66;--accent-rgb:138,122,102}
+body[data-template=springhouse]{--accent:#6aa8b8;--accent-rgb:106,168,184}
+body[data-template=riceterrace]{--accent:#5a9a4a;--accent-rgb:90,154,74}
+body[data-template=bambooforest]{--accent:#5a9a5a;--accent-rgb:90,154,90}
+body[data-template=lavenderfield]{--accent:#9a7ac8;--accent-rgb:154,122,200}
+body[data-template=stonebridge]{--accent:#8a8a80;--accent-rgb:138,138,128}
+body[data-template=startrails]{--accent:#a8c8ff;--accent-rgb:168,200,255}
+body[data-template=mangrove]{--accent:#5aa878;--accent-rgb:90,168,120}
+body[data-template=scaffold]{--accent:#d8a850;--accent-rgb:216,168,80}
+body[data-template=glowcave]{--accent:#7ef0c8;--accent-rgb:126,240,200}
+body[data-template=murmur]{--accent:#b8a0d8;--accent-rgb:184,160,216}
+body[data-template=alpenglow]{--accent:#f0a070;--accent-rgb:240,160,112}
+body[data-template=cenote]{--accent:#4ac8b8;--accent-rgb:74,200,184}
+body[data-template=redwood]{--accent:#a05838;--accent-rgb:160,88,56}
+body[data-template=biolum]{--accent:#40c8e8;--accent-rgb:64,200,232}
+body[data-template=hoodoo]{--accent:#d88050;--accent-rgb:216,128,80}
+body[data-template=karst]{--accent:#7a9a8a;--accent-rgb:122,154,138}
+body[data-template=stonearch]{--accent:#e0a060;--accent-rgb:224,160,96}
+body[data-template=icecrack]{--accent:#a8d8f0;--accent-rgb:168,216,240}
+body[data-template=travertine]{--accent:#c8d8d0;--accent-rgb:200,216,208}
+body[data-template=moonlake]{--accent:#d0d8e8;--accent-rgb:208,216,232}
