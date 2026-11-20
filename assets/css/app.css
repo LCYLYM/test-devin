@@ -8870,3 +8870,41 @@ body[data-template=sheepfold] .sheepfold-visual{display:block}
 .sf-wool{position:absolute;bottom:18px;right:20%;width:12px;height:10px;background:#f4f0e4;border-radius:50%;opacity:0}
 .sheepfold-caption{text-align:center;font-size:11px;color:var(--dim);margin-top:10px}
 @media(prefers-reduced-motion:reduce){body[data-template=sawmill] .sm-blade{animation:none}body[data-template=canallock] .cl-water,body[data-template=canallock] .cl-boat{transition:none}}
+
+body[data-template=drydock]{--bg:#141008;--surface:#1e190e;--surface-2:#282214;--line:#443a26;--text:#efe8d4;--accent:#98886a;--accent-rgb:152,136,106;--instrument:#181309;--muted:#a89876;--dim:#665838}
+.drydock-visual{display:none;position:relative;margin-top:18px}
+body[data-template=drydock] .charge-visual{display:none}
+body[data-template=drydock] .drydock-visual{display:block}
+.dd-scene{position:relative;height:150px;border-radius:16px;overflow:hidden;background:linear-gradient(180deg,#1a150c,#0e0b06)}
+.dd-wall{position:absolute;top:26%;bottom:0;width:18%;background:linear-gradient(180deg,#3c3428,#242014)}
+.dd-l{left:0}.dd-r{right:0}
+.dd-keel{position:absolute;bottom:22px;left:30%;width:40%;height:6px;background:#5a4428;border-radius:2px}
+.dd-rib{position:absolute;bottom:26px;width:5px;height:44px;background:#8a6a3e;border-radius:3px 3px 0 0;opacity:0;transition:opacity .5s}
+#ddRib1{left:33%}#ddRib2{left:44%}#ddRib3{left:55%}#ddRib4{left:66%}
+.dd-hull{position:absolute;bottom:26px;left:28%;width:44%;height:30px;background:#6a4a2a;border-radius:0 0 40px 40px;opacity:0;transition:opacity .5s}
+.drydock-caption{text-align:center;font-size:11px;color:var(--dim);margin-top:10px}
+body[data-template=aqueduct]{--bg:#0e141c;--surface:#16202c;--surface-2:#1e2b3a;--line:#32485c;--text:#ddeef8;--accent:#78a8c8;--accent-rgb:120,168,200;--instrument:#121a26;--muted:#7fa0ba;--dim:#405a6e}
+.aqueduct-visual{display:none;position:relative;margin-top:18px}
+body[data-template=aqueduct] .charge-visual{display:none}
+body[data-template=aqueduct] .aqueduct-visual{display:block}
+.aq-scene{position:relative;height:150px;border-radius:16px;overflow:hidden;background:linear-gradient(180deg,#141e2a,#0b1218)}
+.aq-arch{position:absolute;bottom:0;width:22%;height:78%;background:#5a5a5e;border-radius:10px 10px 0 0}
+.aq-arch:after{content:'';position:absolute;bottom:0;left:22%;width:56%;height:60%;background:#0b1218;border-radius:50% 50% 0 0}
+.aq-a1{left:5%}.aq-a2{left:39%}.aq-a3{left:73%}
+.aq-channel{position:absolute;top:16%;left:5%;width:90%;height:10%;background:#5a5a5e;border-radius:4px;overflow:hidden}
+.aq-water{position:absolute;top:2px;left:0;height:60%;width:0;background:linear-gradient(90deg,#58a8d8,#7ad0e8);border-radius:2px;transition:width .5s}
+.aq-drip{position:absolute;top:30%;right:14%;width:3px;height:14px;background:linear-gradient(180deg,#7ad0e8,transparent);opacity:0}
+.aqueduct-caption{text-align:center;font-size:11px;color:var(--dim);margin-top:10px}
+body[data-template=ferry]{--bg:#0c1614;--surface:#13211c;--surface-2:#1a2d26;--line:#2e4a3e;--text:#dcf0e6;--accent:#68a890;--accent-rgb:104,168,144;--instrument:#101b16;--muted:#7aa28e;--dim:#3e5c50}
+.ferry-visual{display:none;position:relative;margin-top:18px}
+body[data-template=ferry] .charge-visual{display:none}
+body[data-template=ferry] .ferry-visual{display:block}
+.fr-scene{position:relative;height:150px;border-radius:16px;overflow:hidden;background:linear-gradient(180deg,#121e1a,#0a1210)}
+.fr-bank{position:absolute;top:0;bottom:0;width:14%;background:linear-gradient(180deg,#2c3a26,#1c2618)}
+.fr-b1{left:0}.fr-b2{right:0}
+.fr-rope{position:absolute;top:34%;left:14%;width:72%;height:2px;background:#8a7a58}
+.fr-boat{position:absolute;top:38%;left:12%;width:44px;height:14px;background:#7a5a34;border-radius:0 0 12px 12px;transition:left .6s}
+.fr-boat:before{content:'';position:absolute;top:-12px;left:10px;width:20px;height:12px;background:#5a4024;border-radius:3px 3px 0 0}
+.fr-rip{position:absolute;top:54%;left:12%;width:36px;height:6px;border:1px solid rgba(110,180,160,.5);border-radius:50%;transition:left .6s}
+.ferry-caption{text-align:center;font-size:11px;color:var(--dim);margin-top:10px}
+@media(prefers-reduced-motion:reduce){body[data-template=drydock] .dd-rib,body[data-template=aqueduct] .aq-water,body[data-template=ferry] .fr-boat{transition:none}}
