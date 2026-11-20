@@ -5723,3 +5723,37 @@ body[data-template=sugarman] .sugarman-visual{display:block}
 .sgm-tail{position:absolute;right:-14px;top:30%;width:20px;height:9px;background:radial-gradient(ellipse at 30% 50%,#f8d890,#d89538);border-radius:50%;transform:rotate(-28deg);opacity:0;transition:opacity .5s}
 .sgm-stand{position:absolute;left:44%;bottom:28%;width:40px;height:10px;background:#6a4c24;border-radius:4px}
 @media(prefers-reduced-motion:reduce){.bbl-float{transition:opacity .4s}}
+body[data-template=skylantern]{--bg:#100a08;--surface:#181210;--surface-2:#201814;--line:#3c2818;--text:#f0d8b8;--accent:#f0a040;--accent-rgb:240,160,64;--instrument:#181210;--muted:#a07048;--dim:#a07048}
+body[data-template=coin]{--bg:#140e06;--surface:#1c160c;--surface-2:#241e10;--line:#40301a;--text:#ecd8a8;--accent:#d8a838;--accent-rgb:216,168,56;--instrument:#1c160c;--muted:#907845;--dim:#907845}
+body[data-template=sandart]{--bg:#141008;--surface:#1c1810;--surface-2:#241f14;--line:#3e3420;--text:#e8d8b0;--accent:#d8b878;--accent-rgb:216,184,120;--instrument:#1c1810;--muted:#98855a;--dim:#98855a}
+.skylantern-visual,.coin-visual,.sandart-visual{display:none;position:relative;margin-top:18px}
+body[data-template=skylantern] .charge-visual,body[data-template=coin] .charge-visual,body[data-template=sandart] .charge-visual{display:none}
+body[data-template=skylantern] .skylantern-visual{display:block}
+.slt-scene{position:relative;height:180px;background:linear-gradient(#0a0608 0%,#181018 100%);overflow:hidden}
+.slt-star{position:absolute;width:3px;height:3px;background:#f0e0c0;border-radius:50%;opacity:.7}
+.slt-star.s1{left:20%;top:14%}.slt-star.s2{left:72%;top:8%}.slt-star.s3{left:48%;top:20%}
+.slt-lamp{position:absolute;left:50%;bottom:10%;width:56px;height:70px;transform:translateX(-50%);background:linear-gradient(#e88030,#b85018);clip-path:polygon(20% 0,80% 0,100% 70%,78% 100%,22% 100%,0 70%);transition:bottom .8s,transform .8s}
+.slt-glow{position:absolute;inset:-14px;background:radial-gradient(ellipse,rgba(248,160,60,.45),transparent 70%);opacity:.3;transition:opacity .6s}
+.slt-flame{position:absolute;left:50%;bottom:6px;width:12px;height:14px;margin-left:-6px;background:radial-gradient(ellipse at 50% 80%,#ffd870,#f06818);border-radius:50% 50% 30% 30%}
+.skylantern-caption,.coin-caption,.sandart-caption{text-align:center;font-size:11px;color:var(--dim);margin-top:10px}
+body[data-template=coin] .coin-visual{display:block}
+.cin-scene{position:relative;height:180px;background:radial-gradient(ellipse at 50% 45%,#241a0c,#140e06 75%);overflow:hidden}
+.cin-string{position:absolute;left:50%;top:8%;width:4px;height:66%;margin-left:-2px;background:linear-gradient(#a84830,#783020)}
+.cin-coin{position:absolute;left:50%;width:38px;height:38px;margin-left:-19px;background:radial-gradient(circle at 40% 35%,#f0c860,#a87828);border-radius:50%;opacity:.12;transition:opacity .4s}
+.cin-coin::after{content:'';position:absolute;left:50%;top:50%;width:13px;height:13px;margin:-6.5px;background:var(--bg);border-radius:2px}
+.cin-coin.c1{top:14%}
+.cin-coin.c2{top:24%}
+.cin-coin.c3{top:34%}
+.cin-coin.c4{top:44%}
+.cin-coin.c5{top:54%}
+.cin-coin.c6{top:64%}
+.cin-coin.c7{top:74%}
+.cin-coin.c8{top:84%}
+body[data-template=sandart] .sandart-visual{display:block}
+.sda-scene{position:relative;height:180px;background:radial-gradient(ellipse at 50% 80%,#2a2214,#141008 75%);overflow:hidden}
+.sda-hand{position:absolute;left:50%;top:4%;width:34px;height:26px;margin-left:-17px;background:linear-gradient(#d8b088,#a88058);border-radius:8px 8px 12px 12px}
+.sda-finger{position:absolute;left:50%;bottom:-14px;width:8px;height:18px;margin-left:-4px;background:#c8a078;border-radius:4px}
+.sda-trickle{position:absolute;left:50%;top:24%;width:3px;height:44%;margin-left:-1.5px;background:linear-gradient(rgba(220,190,130,.9),rgba(220,190,130,.4));opacity:.9}
+.sda-pile{position:absolute;left:50%;bottom:12%;width:110px;height:60px;margin-left:-55px;opacity:.3;transition:transform .7s,opacity .7s;transform-origin:bottom}
+.sda-mound{position:absolute;left:0;right:0;bottom:0;height:100%;background:radial-gradient(ellipse at 50% 100%,#c8a870,#8a6c3c);clip-path:polygon(50% 8%,62% 34%,78% 60%,100% 100%,0 100%,22% 60%,38% 34%)}
+@media(prefers-reduced-motion:reduce){.slt-lamp,.sda-pile{transition:none}}
