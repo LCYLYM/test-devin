@@ -8334,3 +8334,38 @@ body[data-template=kelp] .kelp-visual{display:block}
 .kp-fish{position:absolute;top:44px;left:75%;width:16px;height:8px;background:#e8b858;border-radius:50% 50% 50% 50%;clip-path:polygon(0 50%,70% 0,100% 50%,70% 100%)}
 .kelp-caption{text-align:center;font-size:11px;color:var(--dim);margin-top:10px}
 @media(prefers-reduced-motion:reduce){body[data-template=station] .st-train,body[data-template=kelp] .kp-blade{transition:none}}
+
+body[data-template=funicular]{--bg:#131008;--surface:#1e1a0f;--surface-2:#282214;--line:#40371e;--text:#f0e8cc;--accent:#b8a050;--accent-rgb:184,160,80;--instrument:#17130a;--muted:#b09f68;--dim:#6e6040}
+.funicular-visual{display:none;position:relative;margin-top:18px}
+body[data-template=funicular] .charge-visual{display:none}
+body[data-template=funicular] .funicular-visual{display:block}
+.fn-scene{position:relative;height:150px;border-radius:16px;overflow:hidden;background:linear-gradient(180deg,#18130a,#0e0b04)}
+.fn-slope{position:absolute;bottom:0;left:0;width:100%;height:100%;background:linear-gradient(160deg,transparent 55%,#2a2110 55.5%)}
+.fn-track{position:absolute;bottom:26px;left:8%;width:80%;height:3px;background:#5c4a22;transform:rotate(-27deg);transform-origin:left bottom}
+.fn-top{position:absolute;top:14px;right:14%;width:20px;height:16px;background:#4a3a18;border-radius:2px}
+.fn-car{position:absolute;width:24px;height:18px;background:#c86838;border-radius:4px 4px 2px 2px;transition:left .5s,top .5s}
+.funicular-caption{text-align:center;font-size:11px;color:var(--dim);margin-top:10px}
+body[data-template=marina]{--bg:#0a1218;--surface:#121e28;--surface-2:#182734;--line:#273d50;--text:#d6e8f4;--accent:#4a90b8;--accent-rgb:74,144,184;--instrument:#0d1720;--muted:#72a0bc;--dim:#3e5a6e}
+.marina-visual{display:none;position:relative;margin-top:18px}
+body[data-template=marina] .charge-visual{display:none}
+body[data-template=marina] .marina-visual{display:block}
+.mr-scene{position:relative;height:150px;border-radius:16px;overflow:hidden;background:linear-gradient(180deg,#0e1c28,#081018)}
+.mr-mast{position:absolute;bottom:56px;width:2px;background:#d8d0b8}
+.mr-mast:before{content:'';position:absolute;bottom:6px;left:-6px;border-left:7px solid transparent;border-bottom:30px solid rgba(240,235,210,.9)}
+#mrM1{left:22%;height:64px}#mrM2{left:44%;height:78px}#mrM3{left:68%;height:58px}
+.mr-dock{position:absolute;bottom:52px;width:100%;height:4px;background:#4a3c22}
+.mr-water{position:absolute;bottom:0;width:100%;height:52px;background:linear-gradient(180deg,#14282f,#0a141a)}
+.mr-glint{position:absolute;top:14px;width:100%;height:2px;background:repeating-linear-gradient(90deg,rgba(160,220,240,.5) 0 8px,transparent 8px 20px)}
+.mr-buoy{position:absolute;left:56%;top:60%;width:10px;height:12px;background:#d8543a;border-radius:4px 4px 6px 6px}
+.marina-caption{text-align:center;font-size:11px;color:var(--dim);margin-top:10px}
+body[data-template=planetarium]{--bg:#0e0a1a;--surface:#161024;--surface-2:#1d1630;--line:#2e2450;--text:#ddd6f4;--accent:#7868c8;--accent-rgb:120,104,200;--instrument:#120d20;--muted:#9084c0;--dim:#504670}
+.planetarium-visual{display:none;position:relative;margin-top:18px}
+body[data-template=planetarium] .charge-visual{display:none}
+body[data-template=planetarium] .planetarium-visual{display:block}
+.pl-scene{position:relative;height:150px;border-radius:16px;overflow:hidden;background:linear-gradient(180deg,#100c22,#0a0714)}
+.pl-dome{position:absolute;bottom:-90px;left:50%;transform:translateX(-50%);width:120%;height:200px;border-radius:50% 50% 0 0;border:1px solid #2e2450}
+.pl-star{position:absolute;width:3px;height:3px;background:#e8e4ff;border-radius:50%}
+#plS1{top:20%;left:22%}#plS2{top:14%;left:48%}#plS3{top:30%;left:66%}#plS4{top:12%;left:82%}
+.pl-orb{position:absolute;top:40%;width:16px;height:16px;background:radial-gradient(circle at 35% 35%,#c8b8ff,#5848a8);border-radius:50%;transition:left .5s}
+.planetarium-caption{text-align:center;font-size:11px;color:var(--dim);margin-top:10px}
+@media(prefers-reduced-motion:reduce){body[data-template=funicular] .fn-car,body[data-template=planetarium] .pl-orb{transition:none}}
