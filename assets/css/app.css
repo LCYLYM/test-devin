@@ -7357,3 +7357,47 @@ body[data-template=tidepool] .tidepool-visual{display:block}
 .tp-water::before{content:"";position:absolute;top:0;left:0;right:0;height:2px;background:repeating-linear-gradient(90deg,rgba(138,200,232,0.5) 0 18px,transparent 18px 36px)}
 .tidepool-caption{text-align:center;font-size:11px;color:var(--dim);margin-top:10px}
 @media(prefers-reduced-motion:reduce){body[data-template=tidepool] *{animation:none!important;transition:none!important}}
+
+/* jacuzzi 按摩浴缸 */
+body[data-template=jacuzzi]{--bg:#081418;--surface:#0e1e26;--surface-2:#142a34;--line:#28505e;--text:#d8ecf4;--accent:#5ab8d8;--accent-rgb:90,184,216;--instrument:#0e1e26;--muted:#6aa8bc;--dim:#3e6674}
+.jacuzzi-visual{display:none;position:relative;margin-top:18px}
+body[data-template=jacuzzi] .charge-visual{display:none}
+body[data-template=jacuzzi] .jacuzzi-visual{display:block}
+.jz-scene{position:relative;height:200px;max-width:320px;margin:0 auto}
+.jz-tub{position:absolute;bottom:14px;left:50%;transform:translateX(-50%);width:230px;height:130px;border-radius:40px;background:linear-gradient(180deg,#2a4656,#162c38);border:3px solid #28505e;overflow:hidden}
+.jz-tub::before{content:"";position:absolute;top:10px;left:12px;right:12px;bottom:12px;border-radius:28px;background:#0a1a22}
+.jz-water{position:absolute;left:16px;right:16px;bottom:14px;height:10%;border-radius:20px 20px 24px 24px;background:linear-gradient(180deg,rgba(90,184,216,0.5),rgba(30,90,110,0.7));transition:height .7s}
+.jz-jet{position:absolute;bottom:22px;width:8px;height:8px;border-radius:50%;background:#3a6a7e;border:1px solid #28505e}
+.jz-jet.j1{left:30%}.jz-jet.j2{left:48%}.jz-jet.j3{left:66%}
+.jz-bub{position:absolute;bottom:26px;width:9px;height:9px;border-radius:50%;background:rgba(200,236,244,0.55);opacity:0}
+#jzB1{left:29%}#jzB2{left:44%}#jzB3{left:57%}#jzB4{left:70%}
+.jacuzzi-caption{text-align:center;font-size:11px;color:var(--dim);margin-top:10px}
+@media(prefers-reduced-motion:reduce){body[data-template=jacuzzi] *{animation:none!important;transition:none!important}}
+
+/* movie 影厅 */
+body[data-template=movie]{--bg:#140a0a;--surface:#201010;--surface-2:#2c1616;--line:#4e2828;--text:#f0dcd8;--accent:#c85050;--accent-rgb:200,80,80;--instrument:#201010;--muted:#b07070;--dim:#6e4848}
+.movie-visual{display:none;position:relative;margin-top:18px}
+body[data-template=movie] .charge-visual{display:none}
+body[data-template=movie] .movie-visual{display:block}
+.mv-scene{position:relative;height:200px;max-width:320px;margin:0 auto}
+.mv-screen{position:absolute;top:12px;left:50%;transform:translateX(-50%) perspective(180px);width:230px;height:100px;border-radius:6px;background:linear-gradient(180deg,#0a0606,#181010);border:2px solid #4e2828;overflow:hidden}
+.mv-play{position:absolute;inset:0;background:radial-gradient(ellipse at 50% 40%,rgba(240,220,200,0.85),rgba(200,80,80,0.25) 60%,transparent);opacity:0;transition:opacity .8s}
+.mv-rows{position:absolute;bottom:14px;left:50%;transform:translateX(-50%);display:flex;gap:10px}
+.mv-seat{position:relative;width:30px;height:34px;border-radius:8px 8px 3px 3px;background:#241414;border:1px solid #4e2828;opacity:0.15;transition:opacity .4s}
+.mv-seat::after{content:"";position:absolute;top:6px;left:50%;width:12px;height:10px;margin-left:-6px;border-radius:50% 50% 40% 40%;background:#3a2828}
+.movie-caption{text-align:center;font-size:11px;color:var(--dim);margin-top:10px}
+@media(prefers-reduced-motion:reduce){body[data-template=movie] *{animation:none!important;transition:none!important}}
+
+/* library 书房 */
+body[data-template=library]{--bg:#120e06;--surface:#1c150a;--surface-2:#281e0e;--line:#483a24;--text:#eeddc0;--accent:#a8824a;--accent-rgb:168,130,74;--instrument:#1c150a;--muted:#a88a58;--dim:#665438}
+.library-visual{display:none;position:relative;margin-top:18px}
+body[data-template=library] .charge-visual{display:none}
+body[data-template=library] .library-visual{display:block}
+.lib-scene{position:relative;height:200px;max-width:320px;margin:0 auto}
+.lib-shelf{position:absolute;bottom:44px;left:50%;transform:translateX(-50%);width:230px;height:96px;border:2px solid #483a24;background:#160f06;display:flex;align-items:flex-end;gap:5px;padding:0 12px 8px;box-sizing:border-box}
+.lib-book{width:16px;border-radius:2px 2px 0 0;opacity:0.12;transition:opacity .35s}
+#libB1{height:74px;background:#8a4a3a}#libB2{height:64px;background:#3a6a58}#libB3{height:80px;background:#6a5a8a}#libB4{height:58px;background:#a8824a}#libB5{height:72px;background:#4a6a8a}#libB6{height:66px;background:#8a3a4a}#libB7{height:78px;background:#5a7a3a}#libB8{height:60px;background:#7a5a3a}
+.lib-board{position:absolute;bottom:36px;left:50%;transform:translateX(-50%);width:230px;height:8px;background:linear-gradient(180deg,#5a4628,#3e3018);border-radius:2px}
+.lib-lamp{position:absolute;top:10px;right:34px;width:34px;height:34px;border-radius:50%;background:radial-gradient(circle,rgba(240,200,120,0.9),rgba(240,200,120,0.12) 65%,transparent);box-shadow:0 0 30px 12px rgba(240,200,120,0.2);opacity:0;transition:opacity .5s}
+.library-caption{text-align:center;font-size:11px;color:var(--dim);margin-top:10px}
+@media(prefers-reduced-motion:reduce){body[data-template=library] *{animation:none!important;transition:none!important}}
