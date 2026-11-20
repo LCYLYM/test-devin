@@ -9464,3 +9464,40 @@ html[data-template="pumphouse"] .pumphouse-visual{display:flex;flex-direction:co
 @keyframes pph-d{0%{transform:translateY(-14px);opacity:0}30%{opacity:1}100%{transform:translateY(10px);opacity:0}}
 .pumphouse-caption{}
 @media (prefers-reduced-motion:reduce){.pph-drop{animation:none}}
+
+/* 风铃 windchime: 悬管摇曳、声纹荡开 */
+.windchime-visual{display:none;grid-area:visual}
+html[data-template="windchime"] .pig-visual{display:none}
+html[data-template="windchime"] .windchime-visual{display:flex;flex-direction:column;align-items:center;gap:10px}
+.wch-scene{position:relative;width:270px;height:180px}
+.wch-top{position:absolute;left:50%;top:8%;transform:translateX(-50%);width:70px;height:10px;background:linear-gradient(#5a6a74,#3a4a54);border-radius:6px}
+.wch-tube{position:absolute;top:15%;width:7px;height:56px;background:linear-gradient(#a8ccd8,#6a95a5);border-radius:4px;opacity:0;transform-origin:50% -10px;transition:opacity .8s,transform .3s}
+#wchT1{left:38%}#wchT2{left:48%}#wchT3{left:58%;height:44px}
+.wch-ring{position:absolute;left:50%;top:44%;width:56px;height:20px;border:2px solid #8ab8c8;border-radius:50%;opacity:0;transform:translateX(-50%);transition:opacity .6s}
+.windchime-caption,.semaphore-caption,.quay-caption{font-size:12px;color:var(--muted)}
+
+/* 旗语台 semaphore: 臂板变位、山顶传信 */
+.semaphore-visual{display:none;grid-area:visual}
+html[data-template="semaphore"] .pig-visual{display:none}
+html[data-template="semaphore"] .semaphore-visual{display:flex;flex-direction:column;align-items:center;gap:10px}
+.smh-scene{position:relative;width:270px;height:180px}
+.smh-mast{position:absolute;left:50%;bottom:8%;transform:translateX(-50%);width:12px;height:130px;background:linear-gradient(#4a3826,#2e2010);border-radius:6px 6px 0 0}
+.smh-mast::before{content:'';position:absolute;left:50%;top:-6px;transform:translateX(-50%);width:22px;height:22px;background:#3a2a18;border-radius:50%}
+.smh-arm{position:absolute;left:50%;top:14%;width:44px;height:9px;background:linear-gradient(#c89040,#8a5e20);border-radius:4px;transform-origin:0 50%;transition:transform .8s cubic-bezier(.34,1.3,.64,1)}
+#smhA1{transform-origin:0 50%;margin-left:6px}
+#smhA2{transform-origin:100% 50%;left:auto;right:50%;margin-right:6px;top:24%}
+.smh-flag{position:absolute;left:62%;top:6%;width:24px;height:15px;background:#c04030;clip-path:polygon(0 0,100% 10%,90% 50%,100% 90%,0 100%);opacity:0;transition:opacity .6s}
+.semaphore-caption{}
+
+/* 码头 quay: 吊臂装卸、货箱叠岸 */
+.quay-visual{display:none;grid-area:visual}
+html[data-template="quay"] .pig-visual{display:none}
+html[data-template="quay"] .quay-visual{display:flex;flex-direction:column;align-items:center;gap:10px}
+.quy-scene{position:relative;width:270px;height:180px}
+.quy-water{position:absolute;left:0;right:0;bottom:0;height:30%;background:linear-gradient(#16222e,#0e1822)}
+.quy-crane{position:absolute;left:56%;bottom:30%;width:10px;height:80px;background:#3a4a58}
+.quy-arm{position:absolute;left:0;top:-8px;width:90px;height:8px;background:#5a6a78;border-radius:4px;transform-origin:5px 4px;transition:transform .8s}
+.quy-arm::after{content:'';position:absolute;right:6px;top:8px;width:2px;height:26px;background:#8a9aa8}
+.quy-box{position:absolute;bottom:32%;width:26px;height:20px;background:linear-gradient(#7a5a30,#54401e);border:1px solid #3a2a12;opacity:0;transition:opacity .7s}
+#quyB1{left:14%}#quyB2{left:24%;bottom:42%}#quyB3{left:34%}
+.quay-caption{}
