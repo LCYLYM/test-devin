@@ -4290,6 +4290,9 @@
     if (params.get('quinoa') === '1') { document.body.classList.add('is-quinoa'); }
     if (params.get('amaranth') === '1') { document.body.classList.add('is-amaranth'); }
     if (params.get('spelt') === '1') { document.body.classList.add('is-spelt'); }
+    if (params.get('farro') === '1') { document.body.classList.add('is-farro'); }
+    if (params.get('teff') === '1') { document.body.classList.add('is-teff'); }
+    if (params.get('buckwheat') === '1') { document.body.classList.add('is-buckwheat'); }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -5926,6 +5929,9 @@
         if (params.get('quinoa') === '1') u.searchParams.set('quinoa', '1');
         if (params.get('amaranth') === '1') u.searchParams.set('amaranth', '1');
         if (params.get('spelt') === '1') u.searchParams.set('spelt', '1');
+        if (params.get('farro') === '1') u.searchParams.set('farro', '1');
+        if (params.get('teff') === '1') u.searchParams.set('teff', '1');
+        if (params.get('buckwheat') === '1') u.searchParams.set('buckwheat', '1');
         if (params.get('fuchsia') === '1') u.searchParams.set('fuchsia', '1');
         if (params.get('oleander') === '1') u.searchParams.set('oleander', '1');
         if (params.get('buddleia') === '1') u.searchParams.set('buddleia', '1');

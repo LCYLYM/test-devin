@@ -1394,6 +1394,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `quinoa` | `1` キヌア配色 |
 | `amaranth` | `1` アマランサス配色 |
 | `spelt` | `1` スペルト小麦配色 |
+| `farro` | `1` ファッロ配色 |
+| `teff` | `1` テフ配色 |
+| `buckwheat` | `1` ソバ配色 |
 | `fuchsia` | `1` フクシア配色 |
 | `oleander` | `1` キョウチクトウ配色 |
 | `buddleia` | `1` フサフジウツギ配色 |
