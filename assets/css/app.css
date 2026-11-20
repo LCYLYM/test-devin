@@ -2770,6 +2770,12 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .is-hornbeam .instrument{border-color:rgba(155,168,132,.4)}
 .is-linden{background:linear-gradient(180deg,#222b1e 0%,#0e140c 100%)}
 .is-linden .instrument{border-color:rgba(165,195,125,.4)}
+.is-rowan{background:linear-gradient(180deg,#30190f 0%,#140a05 100%)}
+.is-rowan .instrument{border-color:rgba(215,120,70,.4)}
+.is-hawthorn{background:linear-gradient(180deg,#2c1418 0%,#130709 100%)}
+.is-hawthorn .instrument{border-color:rgba(200,90,100,.4)}
+.is-holly{background:linear-gradient(180deg,#16241a 0%,#081009 100%)}
+.is-holly .instrument{border-color:rgba(110,170,120,.4)}
 .is-oatmeal{background:linear-gradient(180deg,#1d1912,#2f291e 50%,#433a2a)}
 .is-oatmeal .instrument{border-color:rgba(215,195,155,.4)}
 .is-thyme{background:linear-gradient(180deg,#121a14,#1c2a20 50%,#28392c)}

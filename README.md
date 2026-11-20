@@ -1286,6 +1286,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `hazel` | `1` 榛树配色 |
 | `hornbeam` | `1` 鹅耳枥配色 |
 | `linden` | `1` 椴树配色 |
+| `rowan` | `1` 花楸配色 |
+| `hawthorn` | `1` 山楂树配色 |
+| `holly` | `1` 冬青配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 
