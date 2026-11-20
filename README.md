@@ -1430,6 +1430,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `kumquat` | `1` キンカン配色 |
 | `clementine` | `1` クレメンタイン配色 |
 | `satsuma` | `1` サツマミカン配色 |
+| `gooseberry` | `1` グーズベリー配色 |
+| `cloudberry` | `1` クラウドベリー配色 |
+| `lingonberry` | `1` リンゴンベリー配色 |
 | `fuchsia` | `1` フクシア配色 |
 | `oleander` | `1` キョウチクトウ配色 |
 | `buddleia` | `1` フサフジウツギ配色 |
