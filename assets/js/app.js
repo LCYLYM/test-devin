@@ -1659,6 +1659,7 @@
     save();
     window.dispatchEvent(new CustomEvent('salary-template',{detail:{template:name}}));
     render();
+    if (demo) refreshDemoBanner();
     return true;
   }
   function setPreference(key,value) {
@@ -1708,10 +1709,16 @@
     const demoSpeed=(window.__demoSpeed>=1&&window.__demoSpeed<=200)?window.__demoSpeed:20;
     demo={anchor:chosen.getTime(),started:performance.now(),speed:demoSpeed};
     hidden('demoBanner',false);
-    const copy=$('demoBanner')?.querySelector('[data-demo-copy],span');
-    if(copy) copy.innerHTML=icon('play')+'<b>正在体验</b> · 模拟 '+escapeHTML(E.dateKey(chosen))+' '+chosen.toTimeString().slice(0,5)+'，时间以 '+demoSpeed+' 倍流动';
+    refreshDemoBanner();
     render();
     return true;
+  }
+
+  function refreshDemoBanner() {
+    const copy=$('demoBanner')?.querySelector('[data-demo-copy],span');
+    if (!copy || !demo) return;
+    const chosen=new Date(demo.anchor), label=document.querySelector('button[data-template="'+preferences.template+'"]')?.textContent.trim()||preferences.template;
+    copy.innerHTML=icon('play')+'<b>正在体验</b> · 模拟 '+escapeHTML(E.dateKey(chosen))+' '+chosen.toTimeString().slice(0,5)+'，时间以 '+demo.speed+' 倍流动 · 皮肤「'+escapeHTML(label)+'」';
   }
 
   function openDialog(id) {
