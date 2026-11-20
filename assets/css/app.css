@@ -6985,3 +6985,33 @@ body[data-template=tornado] .tornado-visual{display:block}
 .trn-debris{position:absolute;left:50%;bottom:8%;width:5px;height:5px;background:#6a5a40;border-radius:2px;opacity:0}
 .comet-caption,.nebula-caption,.tornado-caption{text-align:center;font-size:11px;color:var(--dim);margin-top:10px}
 @media(prefers-reduced-motion:reduce){.trn-debris{transition:none}}
+body[data-template=rose]{--bg:#160a10;--surface:#1e1218;--surface-2:#2a1a20;--line:#482e36;--text:#f0d8de;--accent:#e04870;--accent-rgb:224,72,112;--instrument:#1e1218;--muted:#8a5464;--dim:#8a5464}
+body[data-template=dandelion]{--bg:#0e120c;--surface:#161a14;--surface-2:#1e241a;--line:#323e2c;--text:#dfe8d8;--accent:#e0e8f0;--accent-rgb:224,232,240;--instrument:#161a14;--muted:#68786a;--dim:#68786a}
+body[data-template=chess]{--bg:#12100c;--surface:#1a1814;--surface-2:#242018;--line:#3c362a;--text:#e4dcc8;--accent:#c8b088;--accent-rgb:200,176,136;--instrument:#1a1814;--muted:#7a6e56;--dim:#7a6e56}
+.rose-visual,.dandelion-visual,.chess-visual{display:none;position:relative;margin-top:18px}
+body[data-template=rose] .charge-visual,body[data-template=dandelion] .charge-visual,body[data-template=chess] .charge-visual{display:none}
+body[data-template=rose] .rose-visual{display:block}
+.rse-scene{position:relative;height:180px;background:linear-gradient(#1c1014,#160a10);overflow:hidden}
+.rse-stem{position:absolute;left:50%;bottom:8%;width:4px;height:52%;margin-left:-2px;background:linear-gradient(#3a6628,#244a18);border-radius:2px}
+.rse-head{position:absolute;left:50%;top:16%;width:60px;height:60px;margin-left:-30px}
+.rse-petal{position:absolute;left:50%;top:50%;width:20px;height:30px;margin:-15px 0 0 -10px;background:radial-gradient(ellipse at 50% 80%,#f06088,#a02848);border-radius:50% 50% 50% 50%/60% 60% 40% 40%;transform-origin:50% 100%;opacity:0;transition:transform .4s,opacity .3s}
+.rse-core{position:absolute;left:50%;top:50%;width:12px;height:12px;margin:-6px 0 0 -6px;background:radial-gradient(circle,#f8a0b8,#c04868);border-radius:50%;opacity:0;transition:opacity .4s}
+body[data-template=dandelion] .dandelion-visual{display:block}
+.dnd-scene{position:relative;height:180px;background:linear-gradient(#141c12,#0e120c);overflow:hidden}
+.dnd-stem{position:absolute;left:50%;bottom:8%;width:3px;height:44%;margin-left:-1.5px;background:linear-gradient(#5a7a44,#3a5428);border-radius:2px}
+.dnd-head{position:absolute;left:50%;top:18%;width:60px;height:60px;margin-left:-30px}
+.dnd-core{position:absolute;left:50%;top:50%;width:10px;height:10px;margin:-5px 0 0 -5px;background:#d8cf9a;border-radius:50%}
+.dnd-fluff{position:absolute;left:50%;top:50%;width:3px;height:16px;margin:-8px 0 0 -1.5px;background:linear-gradient(#f0f4f8,#c8d0d8);border-radius:2px;transform-origin:50% 50%;transition:transform .5s,opacity .4s}
+.dnd-fluff::before{content:'';position:absolute;top:-4px;left:-3px;width:9px;height:6px;background:radial-gradient(ellipse,rgba(240,244,248,.95),transparent);border-radius:50%}
+body[data-template=chess] .chess-visual{display:block}
+.chs-scene{position:relative;height:180px;background:radial-gradient(ellipse at 50% 30%,#1e1a12,#12100c);overflow:hidden}
+.chs-board{position:absolute;left:50%;bottom:12%;width:220px;height:100px;transform:translateX(-50%);background:repeating-conic-gradient(#e0d4b8 0 25%,#7a5c3c 0 50%) 0 0/44px 44px;border:4px solid #4a3820;border-radius:4px;perspective:60px}
+.chs-pc{position:absolute;bottom:10px;font-size:22px;font-style:normal;color:#241c10;text-shadow:0 1px 0 rgba(255,255,255,.25);opacity:0;transform:translateY(16px);transition:transform .35s,opacity .3s}
+.chs-pc#chsP1{left:18px}
+.chs-pc#chsP2{left:54px}
+.chs-pc#chsP3{left:90px}
+.chs-pc#chsP4{left:126px}
+.chs-pc#chsP5{left:162px}
+.chs-king{position:absolute;right:14px;bottom:44px;font-size:20px;font-style:normal;color:#e0d4b8;opacity:0}
+.rose-caption,.dandelion-caption,.chess-caption{text-align:center;font-size:11px;color:var(--dim);margin-top:10px}
+@media(prefers-reduced-motion:reduce){.rse-petal,.rse-core,.dnd-fluff,.chs-pc{transition:none}}
