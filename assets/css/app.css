@@ -2968,6 +2968,12 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .is-fenugreek .instrument{border-color:rgba(195,175,90,.4)}
 .is-allspice{background:linear-gradient(180deg,#261c15 0%,#120d09 100%)}
 .is-allspice .instrument{border-color:rgba(195,130,90,.4)}
+.is-clove{background:linear-gradient(180deg,#241a16 0%,#110c0a 100%)}
+.is-clove .instrument{border-color:rgba(185,110,90,.4)}
+.is-vanilla{background:linear-gradient(180deg,#26241c 0%,#12110d 100%)}
+.is-vanilla .instrument{border-color:rgba(205,195,150,.4)}
+.is-galangal{background:linear-gradient(180deg,#261d1a 0%,#120d0c 100%)}
+.is-galangal .instrument{border-color:rgba(200,135,105,.4)}
 .is-fuchsia{background:linear-gradient(180deg,#2e1428 0%,#160a13 100%)}
 .is-fuchsia .instrument{border-color:rgba(230,100,200,.4)}
 .is-oleander{background:linear-gradient(180deg,#2c1720 0%,#150b0f 100%)}

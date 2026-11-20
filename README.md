@@ -1385,6 +1385,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `anise` | `1` アニス配色 |
 | `fenugreek` | `1` フェヌグリーク配色 |
 | `allspice` | `1` オールスパイス配色 |
+| `clove` | `1` クローブ配色 |
+| `vanilla` | `1` バニラ配色 |
+| `galangal` | `1` ガランガル配色 |
 | `fuchsia` | `1` フクシア配色 |
 | `oleander` | `1` キョウチクトウ配色 |
 | `buddleia` | `1` フサフジウツギ配色 |
