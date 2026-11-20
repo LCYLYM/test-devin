@@ -6822,3 +6822,31 @@ body[data-template=orchard] .orchard-visual{display:block}
 .orc-fruit.f5{left:58%;top:62%}
 .orc-fruit.f6{left:78%;top:55%}
 @media(prefers-reduced-motion:reduce){.koi-fish,.orc-fruit,.zen-line{transition:none}}
+body[data-template=constellation]{--bg:#060812;--surface:#0c101c;--surface-2:#141828;--line:#242a42;--text:#c8d4f0;--accent:#88c0e8;--accent-rgb:136,192,232;--instrument:#0c101c;--muted:#5a6890;--dim:#5a6890}
+body[data-template=solarsystem]{--bg:#05070d;--surface:#0c0f18;--surface-2:#141824;--line:#262c42;--text:#d8dcec;--accent:#e0a050;--accent-rgb:224,160,80;--instrument:#0c0f18;--muted:#68708c;--dim:#68708c}
+body[data-template=bamboo]{--bg:#0a1208;--surface:#121a10;--surface-2:#1a2414;--line:#2e3e26;--text:#d8e8cc;--accent:#58a848;--accent-rgb:88,168,72;--instrument:#121a10;--muted:#5a7a4c;--dim:#5a7a4c}
+.constellation-visual,.solarsystem-visual,.bamboo-visual{display:none;position:relative;margin-top:18px}
+body[data-template=constellation] .charge-visual,body[data-template=solarsystem] .charge-visual,body[data-template=bamboo] .charge-visual{display:none}
+body[data-template=constellation] .constellation-visual{display:block}
+.cst-scene{position:relative;height:180px;background:radial-gradient(ellipse at 50% 120%,#101838,#060812);overflow:hidden}
+.cst-sky{position:absolute;inset:0;background-image:radial-gradient(1px 1px at 20% 30%,rgba(255,255,255,.7),transparent),radial-gradient(1px 1px at 75% 15%,rgba(255,255,255,.5),transparent),radial-gradient(1.5px 1.5px at 60% 70%,rgba(255,255,255,.6),transparent),radial-gradient(1px 1px at 35% 80%,rgba(255,255,255,.4),transparent),radial-gradient(1px 1px at 90% 45%,rgba(255,255,255,.5),transparent)}
+.cst-svg{position:absolute;inset:0;width:100%;height:100%}
+.cst-line{fill:none;stroke:rgba(136,192,232,.6);stroke-width:1;stroke-dasharray:70;stroke-dashoffset:70}
+.cst-star{position:absolute;width:6px;height:6px;margin:-3px 0 0 -3px;background:#e8f0ff;border-radius:50%;box-shadow:0 0 8px 2px rgba(160,200,255,.8);opacity:0;transform:scale(.4)}
+body[data-template=solarsystem] .solarsystem-visual{display:block}
+.sol-scene{position:relative;height:180px;background:radial-gradient(ellipse at center,#0c1220,#05070d 80%);overflow:hidden}
+.sol-sun{position:absolute;left:50%;top:50%;width:26px;height:26px;margin:-13px 0 0 -13px;background:radial-gradient(circle at 35% 35%,#ffe080,#e08020);border-radius:50%;box-shadow:0 0 18px 4px rgba(255,180,60,.5)}
+.sol-planet{position:absolute;border-radius:50%;opacity:.3}
+.sol-planet.p1{width:6px;height:6px;margin:-3px 0 0 -3px;background:#9aa4b0}
+.sol-planet.p2{width:8px;height:8px;margin:-4px 0 0 -4px;background:#e0c060}
+.sol-planet.p3{width:9px;height:9px;margin:-4.5px 0 0 -4.5px;background:#58a8d8}
+.sol-planet.p4{width:7px;height:7px;margin:-3.5px 0 0 -3.5px;background:#d86848}
+.sol-planet.p5{width:11px;height:11px;margin:-5.5px 0 0 -5.5px;background:#c8a068}
+body[data-template=bamboo] .bamboo-visual{display:block}
+.bmb-scene{position:relative;height:180px;background:linear-gradient(#0a1208,#14210e);overflow:hidden}
+.bmb-ground{position:absolute;left:0;right:0;bottom:0;height:14%;background:linear-gradient(#1e2c14,#141e0c)}
+.bmb-stalk{position:absolute;left:50%;bottom:14%;width:10px;transform:translateX(-50%);display:flex;flex-direction:column-reverse}
+.bmb-seg{display:block;width:10px;height:0;border-radius:4px;background:linear-gradient(90deg,#5a9a44,#7ec860 40%,#5a9a44);border-bottom:2px solid #2c4c20;opacity:0;transition:height .4s,opacity .3s}
+.bmb-leaf{position:absolute;left:9px;bottom:100%;width:26px;height:7px;background:linear-gradient(90deg,#6ab848,#3c7828);border-radius:0 80% 0 80%;transform-origin:left center;opacity:0;transition:opacity .4s}
+.constellation-caption,.solarsystem-caption,.bamboo-caption{text-align:center;font-size:11px;color:var(--dim);margin-top:10px}
+@media(prefers-reduced-motion:reduce){.bmb-seg,.bmb-leaf,.cst-star{transition:none}}
