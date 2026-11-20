@@ -7904,3 +7904,62 @@ body[data-template=circus] .circus-visual{display:block}
 #ciBall3{left:54%;background:radial-gradient(circle at 35% 30%,#f0e0a0,#c8a030)}
 .circus-caption{text-align:center;font-size:11px;color:var(--dim);margin-top:10px}
 @media(prefers-reduced-motion:reduce){body[data-template=circus] *{animation:none!important;transition:none!important}}
+
+/* studio 画室 */
+body[data-template=studio]{--bg:#14100c;--surface:#1e1812;--surface-2:#2a221a;--line:#4a3e2e;--text:#ece0cc;--accent:#c8a878;--accent-rgb:200,168,120;--instrument:#1e1812;--muted:#a8946e;--dim:#62553e}
+.studio-visual{display:none;position:relative;margin-top:18px}
+body[data-template=studio] .charge-visual{display:none}
+body[data-template=studio] .studio-visual{display:block}
+.st-scene{position:relative;height:200px;max-width:320px;margin:0 auto}
+.st-easel{position:absolute;bottom:16px;left:50%;transform:translateX(-50%);width:150px;height:140px}
+.st-easel::before{content:"";position:absolute;bottom:-10px;left:6px;width:6px;height:30px;background:#5a4428;transform:rotate(14deg);transform-origin:top}
+.st-easel::after{content:"";position:absolute;bottom:-10px;right:6px;width:6px;height:30px;background:#5a4428;transform:rotate(-14deg);transform-origin:top}
+.st-canvas{position:absolute;inset:0;background:#e8ddc8;border:4px solid #6a5028;border-radius:3px;overflow:hidden}
+.st-stroke{position:absolute;border-radius:50%;opacity:0;transition:opacity .4s}
+#stK1{top:20%;left:16%;width:56px;height:30px;background:rgba(200,90,60,0.7);transform:rotate(-12deg)}
+#stK2{top:38%;left:30%;width:70px;height:24px;background:rgba(90,140,180,0.7);transform:rotate(6deg)}
+#stK3{top:56%;left:14%;width:50px;height:26px;background:rgba(120,160,80,0.7);transform:rotate(-4deg)}
+#stK4{top:22%;left:58%;width:34px;height:34px;background:rgba(230,180,60,0.8);border-radius:50%}
+#stK5{top:64%;left:52%;width:60px;height:18px;background:rgba(80,70,110,0.65);transform:rotate(8deg)}
+.st-brush{position:absolute;top:8px;left:20%;width:8px;height:56px;background:linear-gradient(180deg,#8a6840 60%,#d8a050 60%);border-radius:4px;transform:rotate(30deg);opacity:0;transition:left .5s,opacity .3s}
+.studio-caption{text-align:center;font-size:11px;color:var(--dim);margin-top:10px}
+@media(prefers-reduced-motion:reduce){body[data-template=studio] *{animation:none!important;transition:none!important}}
+
+/* kitchen 食堂 */
+body[data-template=kitchen]{--bg:#150e08;--surface:#21150c;--surface-2:#2e1e10;--line:#52381f;--text:#f2dfc8;--accent:#d87840;--accent-rgb:216,120,64;--instrument:#21150c;--muted:#b07e4e;--dim:#6e5638}
+.kitchen-visual{display:none;position:relative;margin-top:18px}
+body[data-template=kitchen] .charge-visual{display:none}
+body[data-template=kitchen] .kitchen-visual{display:block}
+.kt-scene{position:relative;height:200px;max-width:300px;margin:0 auto}
+.kt-pot{position:absolute;bottom:24px;left:50%;transform:translateX(-50%);width:150px;height:90px;border-radius:10px 10px 40px 40px;background:linear-gradient(180deg,#3a3a40,#1e1e24);border:3px solid #52381f;overflow:hidden}
+.kt-pot::before{content:"";position:absolute;top:6px;left:-8px;width:10px;height:14px;border-radius:4px;background:#52381f}
+.kt-pot::after{content:"";position:absolute;top:6px;right:-8px;width:10px;height:14px;border-radius:4px;background:#52381f}
+.kt-soup{position:absolute;left:6px;right:6px;bottom:6px;height:0;border-radius:6px 6px 30px 30px;background:linear-gradient(180deg,#e8a040,#b86a28);transition:height .6s}
+.kt-bub{position:absolute;bottom:20px;width:8px;height:8px;border-radius:50%;background:rgba(255,230,180,0.6);opacity:0}
+#ktB1{left:36%}#ktB2{left:50%}#ktB3{left:62%}
+.kt-stm{position:absolute;top:34px;left:42%;width:10px;height:22px;border-radius:10px;background:rgba(230,220,210,0.4);filter:blur(4px);opacity:0}
+#ktS2{left:56%}
+.kt-lamp{position:absolute;top:8px;left:50%;transform:translateX(-50%);width:26px;height:16px;border-radius:0 0 13px 13px;background:#3a2814;opacity:0.2;transition:opacity .5s}
+.kt-lamp::after{content:"";position:absolute;top:16px;left:-16px;right:-16px;height:40px;background:radial-gradient(ellipse,rgba(240,190,100,0.35),transparent 70%)}
+.kitchen-caption{text-align:center;font-size:11px;color:var(--dim);margin-top:10px}
+@media(prefers-reduced-motion:reduce){body[data-template=kitchen] *{animation:none!important;transition:none!important}}
+
+/* workshop 作坊 */
+body[data-template=workshop]{--bg:#12100c;--surface:#1c1812;--surface-2:#28221a;--line:#4a4232;--text:#e8e0cc;--accent:#a89068;--accent-rgb:168,144,104;--instrument:#1c1812;--muted:#a09478;--dim:#605843}
+.workshop-visual{display:none;position:relative;margin-top:18px}
+body[data-template=workshop] .charge-visual{display:none}
+body[data-template=workshop] .workshop-visual{display:block}
+.ws-scene{position:relative;height:200px;max-width:320px;margin:0 auto}
+.ws-bench{position:absolute;bottom:24px;left:8%;right:8%;height:14px;border-radius:3px;background:linear-gradient(180deg,#5a4428,#3e2e1a)}
+.ws-bench::before{content:"";position:absolute;top:14px;left:8%;width:8px;height:40px;background:#3e2e1a}
+.ws-bench::after{content:"";position:absolute;top:14px;right:8%;width:8px;height:40px;background:#3e2e1a}
+.ws-gear{position:absolute;border-radius:50%;background:#6a5a40;border:3px solid #4a3e28;opacity:0;transition:opacity .4s}
+.ws-gear::before{content:"";position:absolute;inset:-7px;background:repeating-conic-gradient(#6a5a40 0 16deg,transparent 16deg 30deg);border-radius:50%}
+.ws-gear::after{content:"";position:absolute;inset:30%;border-radius:50%;background:#3e2e1a}
+.ws-gear.g1{top:44px;left:24%;width:56px;height:56px}
+.ws-gear.g2{top:70px;left:46%;width:42px;height:42px}
+.ws-gear.g3{top:50px;left:64%;width:50px;height:50px}
+.ws-lamp{position:absolute;top:6px;left:50%;transform:translateX(-50%);width:30px;height:14px;border-radius:0 0 15px 15px;background:#4a3e28;opacity:0;transition:opacity .5s}
+.ws-lamp::after{content:"";position:absolute;top:14px;left:-30px;right:-30px;height:70px;background:radial-gradient(ellipse,rgba(240,210,140,0.3),transparent 70%)}
+.workshop-caption{text-align:center;font-size:11px;color:var(--dim);margin-top:10px}
+@media(prefers-reduced-motion:reduce){body[data-template=workshop] *{animation:none!important;transition:none!important}}
