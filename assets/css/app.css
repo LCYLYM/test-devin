@@ -7851,3 +7851,56 @@ body[data-template=glacier] .glacier-visual{display:block}
 .gl-shine{position:absolute;top:30px;left:0;right:0;height:60px;background:linear-gradient(105deg,transparent 40%,rgba(200,232,250,0.15) 50%,transparent 60%);opacity:0;transition:opacity .5s}
 .glacier-caption{text-align:center;font-size:11px;color:var(--dim);margin-top:10px}
 @media(prefers-reduced-motion:reduce){body[data-template=glacier] *{animation:none!important;transition:none!important}}
+
+/* fjord 峡湾 */
+body[data-template=fjord]{--bg:#0a1218;--surface:#101c24;--surface-2:#182832;--line:#2e4a58;--text:#d4e6ee;--accent:#4a7a9a;--accent-rgb:74,122,154;--instrument:#101c24;--muted:#5e8aa4;--dim:#38596b}
+.fjord-visual{display:none;position:relative;margin-top:18px}
+body[data-template=fjord] .charge-visual{display:none}
+body[data-template=fjord] .fjord-visual{display:block}
+.fj-scene{position:relative;height:200px;max-width:340px;margin:0 auto;overflow:hidden;border-radius:10px;background:linear-gradient(180deg,#16222e,#0c161e)}
+.fj-cliff{position:absolute;top:0;bottom:0;width:30%;background:linear-gradient(180deg,#3e4a44,#242e28)}
+.fj-cliff.l{left:0;clip-path:polygon(0 0,100% 0,64% 100%,0 100%)}
+.fj-cliff.r{right:0;clip-path:polygon(0 0,100% 0,100% 100%,36% 100%)}
+.fj-snow{position:absolute;top:0;left:0;right:0;height:36px;background:linear-gradient(180deg,rgba(232,240,246,0.6),transparent);clip-path:polygon(0 0,30% 0,26% 60%,0 100%,0 0,70% 0,74% 60%,100% 100%,100% 0);opacity:0;transition:opacity .8s}
+.fj-water{position:absolute;bottom:0;left:24%;right:24%;height:80px;background:linear-gradient(180deg,#1c3c4c,#0f2530)}
+.fj-ship{position:absolute;bottom:34px;left:14%;width:36px;height:20px;transition:left .4s linear}
+.fj-ship::before{content:"";position:absolute;bottom:0;left:0;width:36px;height:10px;background:#6a4a28;border-radius:0 0 18px 18px}
+.fj-ship::after{content:"";position:absolute;bottom:10px;left:10px;width:0;height:0;border-left:8px solid transparent;border-right:8px solid transparent;border-bottom:16px solid #e8e0cc}
+.fj-wake{position:absolute;bottom:26px;left:10%;width:60px;height:4px;background:repeating-linear-gradient(90deg,rgba(200,230,240,0.5) 0 8px,transparent 8px 16px);opacity:0;transition:opacity .5s}
+.fjord-caption{text-align:center;font-size:11px;color:var(--dim);margin-top:10px}
+@media(prefers-reduced-motion:reduce){body[data-template=fjord] *{animation:none!important;transition:none!important}}
+
+/* theater 剧场 */
+body[data-template=theater]{--bg:#140a10;--surface:#1e1016;--surface-2:#2a181e;--line:#4e2c38;--text:#f0dade;--accent:#c84a5a;--accent-rgb:200,74,90;--instrument:#1e1016;--muted:#a86874;--dim:#66414c}
+.theater-visual{display:none;position:relative;margin-top:18px}
+body[data-template=theater] .charge-visual{display:none}
+body[data-template=theater] .theater-visual{display:block}
+.th-scene{position:relative;height:200px;max-width:320px;margin:0 auto;overflow:hidden;border-radius:10px;background:linear-gradient(180deg,#0c060a,#160a10)}
+.th-val{position:absolute;top:0;left:0;right:0;height:16px;background:repeating-linear-gradient(90deg,#8a2436 0 22px,#6e1c2c 22px 44px);border-radius:0 0 6px 6px}
+.th-curtain{position:absolute;top:14px;bottom:0;width:52%;background:repeating-linear-gradient(90deg,#8a2436 0 14px,#5e1a26 14px 28px);transition:left .7s,right .7s}
+.th-curtain.lc{left:0;border-radius:0 0 40% 0}
+.th-curtain.rc{right:0;border-radius:0 0 0 40%}
+.th-stage{position:absolute;bottom:0;left:0;right:0;height:56px;background:linear-gradient(180deg,#3a2418,#241610)}
+.th-spot{position:absolute;top:14px;left:50%;width:90px;height:120px;margin-left:-45px;background:linear-gradient(180deg,rgba(255,220,150,0.4),transparent);clip-path:polygon(38% 0,62% 0,100% 100%,0 100%);opacity:0;transition:opacity .6s}
+.th-fig{position:absolute;bottom:46px;left:50%;width:22px;height:40px;margin-left:-11px;border-radius:10px 10px 4px 4px;background:#e8d8c8;opacity:0;transition:opacity .5s}
+.th-fig::before{content:"";position:absolute;top:-12px;left:4px;width:14px;height:14px;border-radius:50%;background:#e8d8c8}
+.theater-caption{text-align:center;font-size:11px;color:var(--dim);margin-top:10px}
+@media(prefers-reduced-motion:reduce){body[data-template=theater] *{animation:none!important;transition:none!important}}
+
+/* circus 马戏 */
+body[data-template=circus]{--bg:#160c0a;--surface:#221410;--surface-2:#2e1c14;--line:#543228;--text:#f4dcd0;--accent:#e8604a;--accent-rgb:232,96,74;--instrument:#221410;--muted:#b87a62;--dim:#6e4c3e}
+.circus-visual{display:none;position:relative;margin-top:18px}
+body[data-template=circus] .charge-visual{display:none}
+body[data-template=circus] .circus-visual{display:block}
+.ci-scene{position:relative;height:200px;max-width:300px;margin:0 auto;overflow:hidden;border-radius:10px;background:linear-gradient(180deg,#1c100c,#140c0a)}
+.ci-tent{position:absolute;bottom:30px;left:50%;transform:translateX(-50%);width:0;height:0;border-left:80px solid transparent;border-right:80px solid transparent;border-bottom:110px solid;border-bottom-color:#c8402e}
+.ci-tent::before{content:"";position:absolute;left:-80px;top:0;width:160px;height:110px;background:repeating-linear-gradient(90deg,transparent 0 20px,rgba(232,224,208,0.35) 20px 40px);clip-path:polygon(50% 0,0 100%,100% 100%)}
+.ci-flag{position:absolute;top:-124px;left:-2px;width:0;height:0;border-top:7px solid transparent;border-bottom:7px solid transparent;border-left:18px solid #f0c84a;opacity:0;transition:opacity .4s}
+.ci-flag::before{content:"";position:absolute;right:100%;top:-16px;width:2px;height:16px;background:#6a4a3a}
+.ci-ring{position:absolute;bottom:14px;left:50%;transform:translateX(-50%);width:140px;height:16px;border-radius:50%;border:3px solid #543228;background:#241612;opacity:0;transition:opacity .5s}
+.ci-ball{position:absolute;width:14px;height:14px;border-radius:50%;opacity:0;transition:top .1s,left .1s}
+#ciBall{left:34%;background:radial-gradient(circle at 35% 30%,#f0a0a0,#c83030)}
+#ciBall2{left:44%;background:radial-gradient(circle at 35% 30%,#a0d0f0,#2a6aa8)}
+#ciBall3{left:54%;background:radial-gradient(circle at 35% 30%,#f0e0a0,#c8a030)}
+.circus-caption{text-align:center;font-size:11px;color:var(--dim);margin-top:10px}
+@media(prefers-reduced-motion:reduce){body[data-template=circus] *{animation:none!important;transition:none!important}}
