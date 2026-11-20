@@ -141,6 +141,10 @@
     genFor=name;
     if(genAssist[name]&&dv){
       const ids=[...dv.querySelectorAll('[id]')];
+      if(ids.length<3){
+        const leaves=[...dv.querySelectorAll('*')].filter(e=>!e.children.length&&!e.closest('[class*="caption"]'));
+        leaves.forEach(e=>{if(!ids.includes(e))ids.push(e);});
+      }
       if(ids.length){
         if(cv)cv.style.display='none';
         if(dv.offsetHeight<4){dv.style.display='block';dv.style.minHeight='170px';}
