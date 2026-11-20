@@ -4146,3 +4146,72 @@ background:linear-gradient(180deg,#f4faff,#d8e8f4);transition:height .8s;z-index
 background:linear-gradient(180deg,#4a3018,#33200e);border-radius:6px;border:1px solid #5c3e1c}
 .globe-caption{font-size:11px;color:var(--muted);letter-spacing:.4px}
 @media(prefers-reduced-motion:reduce){.instrument.is-working .globe-flake{animation:none}.globe-snow{transition:none}}
+
+/* iter-1712: seismo skin — a needle draws the day's tremor across a paper drum */
+.seismo-visual{display:none;flex-direction:column;align-items:center;gap:12px}
+body[data-template=seismo]{--bg:#16100e;--surface:#1e1613;--surface-2:#281c18;--line:#3c2a24;--text:#f4e8e0;--accent:#e06050;--accent-rgb:224,96,80;--instrument:#120c0a;--muted:#b09890;--dim:#74605a}
+body[data-template=seismo] .charge-visual{display:none}
+body[data-template=seismo] .seismo-visual{display:flex}
+body[data-template=seismo] .energy-stage{margin:14px 0 8px}
+body[data-template=seismo] .template-slider{background:#38201c}
+body[data-template=seismo] .template-switch button.selected{color:#f08878}
+body[data-template=seismo] .currency-pill{background:#1e1613;border-color:#3c2a24}
+.seismo-svg{width:min(280px,75vw);height:auto}
+.seismo-paper{fill:#f4ead8;stroke:#c8b898;stroke-width:2}
+.seismo-trace{fill:none;stroke:#c03828;stroke-width:2;stroke-linejoin:round;stroke-linecap:round}
+.seismo-needle{fill:#802018;stroke:#f4ead8;stroke-width:1.5}
+.seismo-pct{fill:#803018;font-size:11px;font-weight:700;font-style:italic}
+.seismo-caption{font-size:11px;color:var(--muted);letter-spacing:.4px}
+
+/* iter-1713: terrace skin — water fills the rice terraces level by level */
+.terrace-visual{display:none;flex-direction:column;align-items:center;gap:12px}
+body[data-template=terrace]{--bg:#0e1610;--surface:#14201a;--surface-2:#1a281f;--line:#24382c;--text:#e0f0e4;--accent:#68b878;--accent-rgb:104,184,120;--instrument:#0a120c;--muted:#92b09a;--dim:#546e5c}
+body[data-template=terrace] .charge-visual{display:none}
+body[data-template=terrace] .terrace-visual{display:flex}
+body[data-template=terrace] .energy-stage{margin:14px 0 8px}
+body[data-template=terrace] .template-slider{background:#1e3426}
+body[data-template=terrace] .template-switch button.selected{color:#90d8a0}
+body[data-template=terrace] .currency-pill{background:#14201a;border-color:#24382c}
+.terrace-hill{display:flex;flex-direction:column;align-items:center;gap:6px;padding:16px 0}
+.terrace-step{position:relative;height:22px;border-radius:4px 4px 10px 10px;overflow:hidden;
+background:#2c2418;border:1px solid #4a3c22}
+.terrace-step:nth-child(1){width:110px}
+.terrace-step:nth-child(2){width:150px}
+.terrace-step:nth-child(3){width:190px}
+.terrace-step:nth-child(4){width:230px}
+.terrace-step:nth-child(5){width:270px}
+.terr-water{position:absolute;left:0;right:0;bottom:0;height:0;display:block;
+background:linear-gradient(180deg,rgba(140,220,190,.9),rgba(60,140,110,.95));transition:height .6s}
+.terr-water::before{content:'';position:absolute;top:-3px;left:10%;right:10%;height:3px;border-radius:3px;
+background:rgba(220,255,240,.5)}
+.terrace-caption{font-size:11px;color:var(--muted);letter-spacing:.4px}
+@media(max-width:520px){.terrace-step:nth-child(5){width:220px}.terrace-step:nth-child(4){width:190px}.terrace-step:nth-child(3){width:160px}}
+@media(prefers-reduced-motion:reduce){.terr-water{transition:none}}
+
+/* iter-1714: crane skin — the claw descends toward the plush as pay accrues */
+.crane-visual{display:none;flex-direction:column;align-items:center;gap:12px}
+body[data-template=crane]{--bg:#180e16;--surface:#221420;--surface-2:#2c1a28;--line:#442636;--text:#f8e8f0;--accent:#f078a8;--accent-rgb:240,120,168;--instrument:#140a12;--muted:#b894ac;--dim:#765c6e}
+body[data-template=crane] .charge-visual{display:none}
+body[data-template=crane] .crane-visual{display:flex}
+body[data-template=crane] .energy-stage{margin:14px 0 8px}
+body[data-template=crane] .template-slider{background:#3c1e34}
+body[data-template=crane] .template-switch button.selected{color:#f8a0c4}
+body[data-template=crane] .currency-pill{background:#221420;border-color:#442636}
+.crane-box{position:relative;width:230px;height:180px;border-radius:12px;overflow:hidden;
+background:linear-gradient(180deg,#2e1a2c,#1a0e18);border:2px solid #5a2c48}
+.crane-glass{position:absolute;inset:0;box-shadow:inset 0 0 40px rgba(240,120,168,.08)}
+.crane-arm{position:absolute;left:50%;top:8%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;
+transition:top .8s linear;z-index:2}
+.crane-cable{display:block;width:3px;height:34px;background:#8a6a80}
+.crane-claw{font-size:26px;color:#e8c0d8;line-height:.5;font-weight:900}
+.crane-shelf{position:absolute;left:0;right:0;bottom:12px;display:flex;justify-content:center;gap:22px}
+.crane-toy{font-size:30px;transition:transform .8s}
+.crane-toy.t2{opacity:.85}
+.crane-toy.t3{opacity:.85}
+.crane-toy.grabbed{transform:translateY(-46px)}
+.instrument.is-working .crane-arm{animation:crane-sway 2.8s ease-in-out infinite}
+@keyframes crane-sway{0%,100%{transform:translateX(-54%)}50%{transform:translateX(-46%)}}
+.crane-display{font-size:13px;color:#f0c8dc;font-variant-numeric:tabular-nums}
+.crane-display i{font-style:normal;font-size:10px;color:var(--dim);margin-left:8px;letter-spacing:1px}
+.crane-caption{font-size:11px;color:var(--muted);letter-spacing:.4px}
+@media(prefers-reduced-motion:reduce){.instrument.is-working .crane-arm{animation:none}.crane-arm,.crane-toy{transition:none}}

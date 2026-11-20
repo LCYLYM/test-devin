@@ -272,6 +272,12 @@
     const fcs=document.querySelectorAll('.fer-cab');fcs.forEach((c,i)=>c.classList.toggle('lit',i<Math.round(p*fcs.length)));
     const gs=$('globeSnow');if(gs)gs.style.height=(6+p*58)+'%';
     setText('globePercent',(p*100).toFixed(1)+'%');
+    const sp=document.getElementById('seismoPath');if(sp){const sl=sp.getTotalLength();sp.style.strokeDasharray=sl;sp.style.strokeDashoffset=sl*(1-p);const np=sp.getPointAtLength(sl*p);const nd=document.getElementById('seismoNeedle');if(nd){nd.setAttribute('cx',np.x);nd.setAttribute('cy',np.y);}}
+    setText('seismoPercent',(p*100).toFixed(1)+'%');
+    const tws=document.querySelectorAll('.terr-water');tws.forEach((w,i)=>{w.style.height=(clamp(p*tws.length-i,0,1)*100)+'%';});
+    const ca=$('craneArm');if(ca)ca.style.top=(8+p*52)+'%';
+    const ct=$('craneToy');if(ct)ct.classList.toggle('grabbed',p>=0.999);
+    setText('cranePercent',(p*100).toFixed(1)+'%');
     setText('termNote',data.working?'streaming salary · '+(data.symbol||'¥')+data.secondRate.toLocaleString('en-US',{maximumFractionDigits:4})+'/s':(data.snapshot&&data.snapshot.isWorkday?'paused · off the clock':'weekend · no charge'));
     const coinRate=data.fun?data.secondRate/1e8:data.secondRate;
     setText('pigDeposit','+ '+data.symbol+coinRate.toLocaleString('en-US',{maximumFractionDigits:2,minimumFractionDigits:2})+(data.fun?' 亿':''));
@@ -602,7 +608,7 @@
       }
       const p = stored.preferences || {};
       preferences={...clone(defaultPreferences),...p};
-      if (!['charge','meter','pixel','pig','neon','mono','paper','term','ecg','wave','therm','receipt','sand','dial','trail','metro','lift','eclipse','flap','vinyl','const','plant','shadow','tide','rocket','balloon','aqua','kite','falls','toast','ember','cable','hive','lantern','abacus','ferris','globe'].includes(preferences.template)) preferences.template='pig';
+      if (!['charge','meter','pixel','pig','neon','mono','paper','term','ecg','wave','therm','receipt','sand','dial','trail','metro','lift','eclipse','flap','vinyl','const','plant','shadow','tide','rocket','balloon','aqua','kite','falls','toast','ember','cable','hive','lantern','abacus','ferris','globe','seismo','terrace','crane'].includes(preferences.template)) preferences.template='pig';
       if (!['day','month'].includes(preferences.period)) preferences.period='day';
       if (!CURRENCIES[preferences.currency]) preferences.currency='CNY';
       preferences.sound=Boolean(preferences.sound);
@@ -686,7 +692,7 @@
     window.dispatchEvent(new CustomEvent('salary-update',{detail:state}));
   }
   function setTemplate(name) {
-    if (!['charge','meter','pixel','pig','neon','mono','paper','term','ecg','wave','therm','receipt','sand','dial','trail','metro','lift','eclipse','flap','vinyl','const','plant','shadow','tide','rocket','balloon','aqua','kite','falls','toast','ember','cable','hive','lantern','abacus','ferris','globe'].includes(name)) return false;
+    if (!['charge','meter','pixel','pig','neon','mono','paper','term','ecg','wave','therm','receipt','sand','dial','trail','metro','lift','eclipse','flap','vinyl','const','plant','shadow','tide','rocket','balloon','aqua','kite','falls','toast','ember','cable','hive','lantern','abacus','ferris','globe','seismo','terrace','crane'].includes(name)) return false;
     preferences.template=name;
     save();
     window.dispatchEvent(new CustomEvent('salary-template',{detail:{template:name}}));
@@ -3566,7 +3572,7 @@ const rh=80+300*p;ctx.fillStyle='#f6f1e7';ctx.fillRect(315,560,450,rh);ctx.strok
 }else{
 rounded(70,633,940,172,86,'#050706');rounded(132,711,816,12,6,'#303833');if(p>0){const w=816*p;ctx.save();ctx.shadowColor=accent;ctx.shadowBlur=24;rounded(132,711,Math.max(2,w),12,6,accent);ctx.restore();const head=clamp(132+w,162,912);rounded(head-35,690,70,54,27,accent);write(Math.round(p*100)+'',head-23,727,26,'#091a0e',500); }write('每一秒，都在向前。',80,866,25,'#8c9490');}
 }
-async function paint(){if(!frozen)return;const version=++renderVersion;await(document.fonts?.ready||Promise.resolve());if(frozen.preferences.template==='pig'){const image=document.getElementById('piggyImage');if(image&&!image.complete&&String(image.src).startsWith('data:image/')){try{await image.decode();}catch(_){}}}if(version!==renderVersion)return;const s=frozen.snapshot,p=clamp(finite(s.progress),0,1),theme=frozen.preferences.template||'charge',accent=theme==='charge'?'#5ae593':theme==='meter'?'#ff764c':theme==='pig'?'#eeb58e':theme==='neon'?'#4de3ff':theme==='mono'?'#e8e8e8':theme==='paper'?'#c2622f':theme==='term'?'#39d353':theme==='ecg'?'#ff5f56':theme==='wave'?'#38bdf8':theme==='therm'?'#f97316':theme==='receipt'?'#d4b483':theme==='sand'?'#e0b45a':theme==='dial'?'#e8b04c':theme==='trail'?'#7cc48f':theme==='metro'?'#5fb0e8':theme==='lift'?'#c9a96e':theme==='eclipse'?'#f0a24c':theme==='flap'?'#8ec3ff':theme==='vinyl'?'#d8b4fe':theme==='const'?'#a5d8ff':theme==='plant'?'#84cc7a':theme==='shadow'?'#e8a05c':theme==='tide'?'#5cc8d8':theme==='rocket'?'#f08080':theme==='balloon'?'#f0b45c':theme==='aqua'?'#64c8f0':theme==='kite'?'#f0d060':theme==='falls'?'#7ac8e8':theme==='toast'?'#e8b878':theme==='ember'?'#f09050':theme==='cable'?'#7ec8a0':theme==='hive'?'#f0c040':theme==='lantern'?'#f0a080':theme==='abacus'?'#d8a05c':theme==='ferris'?'#e86aa8':theme==='globe'?'#9ecfff':'#ff833f',bg=theme==='charge'?'#111513':'#171718';ctx.clearRect(0,0,1080,1440);ctx.fillStyle=bg;ctx.fillRect(0,0,1080,1440);
+async function paint(){if(!frozen)return;const version=++renderVersion;await(document.fonts?.ready||Promise.resolve());if(frozen.preferences.template==='pig'){const image=document.getElementById('piggyImage');if(image&&!image.complete&&String(image.src).startsWith('data:image/')){try{await image.decode();}catch(_){}}}if(version!==renderVersion)return;const s=frozen.snapshot,p=clamp(finite(s.progress),0,1),theme=frozen.preferences.template||'charge',accent=theme==='charge'?'#5ae593':theme==='meter'?'#ff764c':theme==='pig'?'#eeb58e':theme==='neon'?'#4de3ff':theme==='mono'?'#e8e8e8':theme==='paper'?'#c2622f':theme==='term'?'#39d353':theme==='ecg'?'#ff5f56':theme==='wave'?'#38bdf8':theme==='therm'?'#f97316':theme==='receipt'?'#d4b483':theme==='sand'?'#e0b45a':theme==='dial'?'#e8b04c':theme==='trail'?'#7cc48f':theme==='metro'?'#5fb0e8':theme==='lift'?'#c9a96e':theme==='eclipse'?'#f0a24c':theme==='flap'?'#8ec3ff':theme==='vinyl'?'#d8b4fe':theme==='const'?'#a5d8ff':theme==='plant'?'#84cc7a':theme==='shadow'?'#e8a05c':theme==='tide'?'#5cc8d8':theme==='rocket'?'#f08080':theme==='balloon'?'#f0b45c':theme==='aqua'?'#64c8f0':theme==='kite'?'#f0d060':theme==='falls'?'#7ac8e8':theme==='toast'?'#e8b878':theme==='ember'?'#f09050':theme==='cable'?'#7ec8a0':theme==='hive'?'#f0c040':theme==='lantern'?'#f0a080':theme==='abacus'?'#d8a05c':theme==='ferris'?'#e86aa8':theme==='globe'?'#9ecfff':theme==='seismo'?'#e06050':theme==='terrace'?'#68b878':theme==='crane'?'#f078a8':'#ff833f',bg=theme==='charge'?'#111513':'#171718';ctx.clearRect(0,0,1080,1440);ctx.fillStyle=bg;ctx.fillRect(0,0,1080,1440);
 write('薪动',80,111,33,'#f0f4f1',500);write('每一秒，都算数。',188,110,22,'#818a84');write(s.dayKey.replaceAll('-',' / '),775,110,22,'#939a96');ctx.strokeStyle='#ffffff1c';ctx.lineWidth=1;ctx.beginPath();ctx.moveTo(80,153);ctx.lineTo(1000,153);ctx.stroke();
 write(caption(),80,258,53,'#f0f3f1',400,undefined,920);write('今天已赚 · '+(frozen.currency.name||frozen.currency.code),80,336,26,'#8a938d');write(money(s.todayEarned),73,495,125,'#f5f7f5',400,theme==='meter'?'"Barlow Condensed",Geist,sans-serif':undefined,927);
 const marks=badges();let bx=80;for(const text of marks){ctx.font='400 21px Geist,"PingFang SC","Microsoft YaHei",sans-serif';const width=ctx.measureText(text).width+28;rounded(bx,527,width,37,18,'#ffffff0d');write(text,bx+14,553,21,accent);bx+=width+12;}
