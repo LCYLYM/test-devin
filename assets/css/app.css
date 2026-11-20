@@ -2848,6 +2848,12 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .is-musclewood .instrument{border-color:rgba(140,155,175,.4)}
 .is-yellowwood{background:linear-gradient(180deg,#2a2416 0%,#141006 100%)}
 .is-yellowwood .instrument{border-color:rgba(205,180,95,.4)}
+.is-silverbell{background:linear-gradient(180deg,#25261f 0%,#11120d 100%)}
+.is-silverbell .instrument{border-color:rgba(205,208,165,.4)}
+.is-snowbell{background:linear-gradient(180deg,#232623 0%,#10120f 100%)}
+.is-snowbell .instrument{border-color:rgba(180,200,180,.4)}
+.is-persianironwood{background:linear-gradient(180deg,#2a1e1a 0%,#140d0b 100%)}
+.is-persianironwood .instrument{border-color:rgba(210,130,90,.4)}
 .is-oatmeal{background:linear-gradient(180deg,#1d1912,#2f291e 50%,#433a2a)}
 .is-oatmeal .instrument{border-color:rgba(215,195,155,.4)}
 .is-thyme{background:linear-gradient(180deg,#121a14,#1c2a20 50%,#28392c)}

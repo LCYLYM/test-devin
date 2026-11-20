@@ -4209,6 +4209,9 @@
     if (params.get('hophornbeam') === '1') { document.body.classList.add('is-hophornbeam'); }
     if (params.get('musclewood') === '1') { document.body.classList.add('is-musclewood'); }
     if (params.get('yellowwood') === '1') { document.body.classList.add('is-yellowwood'); }
+    if (params.get('silverbell') === '1') { document.body.classList.add('is-silverbell'); }
+    if (params.get('snowbell') === '1') { document.body.classList.add('is-snowbell'); }
+    if (params.get('persianironwood') === '1') { document.body.classList.add('is-persianironwood'); }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -5776,6 +5779,9 @@
         if (params.get('hophornbeam') === '1') u.searchParams.set('hophornbeam', '1');
         if (params.get('musclewood') === '1') u.searchParams.set('musclewood', '1');
         if (params.get('yellowwood') === '1') u.searchParams.set('yellowwood', '1');
+        if (params.get('silverbell') === '1') u.searchParams.set('silverbell', '1');
+        if (params.get('snowbell') === '1') u.searchParams.set('snowbell', '1');
+        if (params.get('persianironwood') === '1') u.searchParams.set('persianironwood', '1');
       if (params.get('tile') === '1') u.searchParams.set('tile', '1');
       if (params.get('outline') === '1') u.searchParams.set('outline', '1');
       if (params.get('stripe') === '1') u.searchParams.set('stripe', '1');
