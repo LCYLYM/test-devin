@@ -3774,3 +3774,78 @@ box-shadow:0 0 0 6px rgba(227,138,168,.18);transition:transform .8s cubic-bezier
 .plant-pct{font-size:14px;color:#cbe3bd;font-variant-numeric:tabular-nums}
 .plant-caption{font-size:11px;color:var(--muted);letter-spacing:.4px}
 @media(prefers-reduced-motion:reduce){.plant-stem,.plant-bloom{transition:none}}
+
+/* iter-1696: shadow skin — shadow-puppet theater, puppet + sun cross the screen */
+.shadow-visual{display:none;flex-direction:column;align-items:center;gap:12px}
+body[data-template=shadow]{--bg:#1c140c;--surface:#281c10;--surface-2:#332413;--line:#46351e;--text:#f6e8d2;--accent:#e8a05c;--accent-rgb:232,160,92;--instrument:#140e08;--muted:#b09878;--dim:#776349}
+body[data-template=shadow] .charge-visual{display:none}
+body[data-template=shadow] .shadow-visual{display:flex}
+body[data-template=shadow] .energy-stage{margin:14px 0 8px}
+body[data-template=shadow] .template-slider{background:#3c2c14}
+body[data-template=shadow] .template-switch button.selected{color:#f2bd85}
+body[data-template=shadow] .currency-pill{background:#241a0e;border-color:#46351e}
+.shadow-stage{position:relative;width:min(300px,80vw)}
+.shadow-screen{position:relative;height:180px;overflow:hidden;border-radius:4px;
+background:linear-gradient(180deg,#f6e2b8,#e8c888);box-shadow:inset 0 0 30px rgba(120,80,30,.35)}
+.shadow-frame{position:absolute;inset:-8px;border:10px solid #4a2f14;border-radius:8px;pointer-events:none;
+box-shadow:0 10px 30px rgba(0,0,0,.5)}
+.shadow-puppet{position:absolute;bottom:18px;left:0;width:36px;height:58px;transition:left .8s linear;
+background:#3a2410;clip-path:polygon(35% 0,65% 0,70% 18%,95% 32%,90% 40%,70% 34%,72% 55%,88% 100%,60% 100%,55% 68%,45% 68%,40% 100%,14% 100%,28% 55%,30% 34%,8% 40%,4% 30%,30% 18%)}
+.instrument.is-working .shadow-puppet{animation:shadow-step .55s ease-in-out infinite alternate}
+@keyframes shadow-step{from{transform:translateY(0) rotate(-2deg)}to{transform:translateY(-5px) rotate(2deg)}}
+.shadow-sun{position:absolute;top:16px;width:28px;height:28px;border-radius:50%;
+background:radial-gradient(circle,#fff4d8,#f0b04c 75%);box-shadow:0 0 18px rgba(240,176,76,.7);transition:left .8s linear}
+.shadow-pct{font-size:14px;color:#e8cfa8;font-variant-numeric:tabular-nums}
+.shadow-caption{font-size:11px;color:var(--muted);letter-spacing:.4px}
+@media(prefers-reduced-motion:reduce){.instrument.is-working .shadow-puppet{animation:none}.shadow-puppet,.shadow-sun{transition:none}}
+
+/* iter-1697: tide skin — sea level rises over pier posts until you reach shore */
+.tide-visual{display:none;flex-direction:column;align-items:center;gap:12px}
+body[data-template=tide]{--bg:#0a161c;--surface:#101f28;--surface-2:#152734;--line:#1f3a48;--text:#dff0f6;--accent:#5cc8d8;--accent-rgb:92,200,216;--instrument:#081219;--muted:#8aa8b5;--dim:#4e6672}
+body[data-template=tide] .charge-visual{display:none}
+body[data-template=tide] .tide-visual{display:flex}
+body[data-template=tide] .energy-stage{margin:14px 0 8px}
+body[data-template=tide] .template-slider{background:#17303d}
+body[data-template=tide] .template-switch button.selected{color:#8ddce8}
+body[data-template=tide] .currency-pill{background:#0f1e27;border-color:#1f3a48}
+.tide-sea{position:relative;width:min(280px,75vw);height:180px;border-radius:10px;overflow:hidden;
+background:linear-gradient(180deg,#12232e 0%,#0a161c 60%);border:1px solid #1f3a48}
+.tide-water{position:absolute;left:0;right:0;bottom:0;height:8%;
+background:linear-gradient(180deg,rgba(92,200,216,.75),rgba(30,110,130,.9));
+transition:height .8s linear}
+.tide-water::before{content:'';position:absolute;top:-6px;left:0;right:0;height:12px;
+background:radial-gradient(circle at 10px -4px,transparent 10px,rgba(92,200,216,.75) 11px);background-size:22px 12px}
+.tide-post{position:absolute;left:12%;bottom:0;width:10px;height:100%;display:flex;flex-direction:column;justify-content:flex-end;gap:18px;padding-bottom:8px}
+.tide-post::before{content:'';position:absolute;inset:0;width:10px;background:#2c231a;border-radius:3px 3px 0 0;z-index:0}
+.tide-post i{position:relative;z-index:1;display:block;width:10px;height:3px;background:#4a3b28;border-radius:2px;opacity:.8}
+.tide-pct{font-size:14px;color:#a5dde8;font-variant-numeric:tabular-nums}
+.tide-caption{font-size:11px;color:var(--muted);letter-spacing:.4px}
+@media(prefers-reduced-motion:reduce){.tide-water{transition:none}}
+
+/* iter-1698: rocket skin — rocket climbs the pad, flame lit while working */
+.rocket-visual{display:none;flex-direction:column;align-items:center;gap:12px}
+body[data-template=rocket]{--bg:#120f14;--surface:#191420;--surface-2:#201a2b;--line:#2e2740;--text:#f0e9f6;--accent:#f08080;--accent-rgb:240,128,128;--instrument:#0d0b10;--muted:#a08fb0;--dim:#655a75}
+body[data-template=rocket] .charge-visual{display:none}
+body[data-template=rocket] .rocket-visual{display:flex}
+body[data-template=rocket] .energy-stage{margin:14px 0 8px}
+body[data-template=rocket] .template-slider{background:#2a2138}
+body[data-template=rocket] .template-switch button.selected{color:#f5a5a5}
+body[data-template=rocket] .currency-pill{background:#181220;border-color:#342a4c}
+.rocket-pad{position:relative;width:150px;height:210px;border-bottom:4px solid #2e2740}
+.rocket-body{position:absolute;left:50%;bottom:0;width:44px;height:120px;transform:translateX(-50%);
+background:linear-gradient(90deg,#4a4258,#6e6485 45%,#4a4258);border-radius:22px 22px 6px 6px;transition:bottom .8s linear}
+.rocket-body::before{content:'';position:absolute;top:-16px;left:50%;transform:translateX(-50%);width:0;height:0;
+border-left:16px solid transparent;border-right:16px solid transparent;border-bottom:22px solid #f08080}
+.rocket-window{position:absolute;top:30px;left:50%;transform:translateX(-50%);width:16px;height:16px;border-radius:50%;
+background:radial-gradient(circle at 35% 30%,#bfe0f8,#3a5a80);border:2px solid #2e2840}
+.rocket-fin{position:absolute;bottom:-6px;width:14px;height:26px;background:#f08080}
+.rocket-fin.l{left:-10px;border-radius:70% 20% 0 20%;transform:rotate(14deg)}
+.rocket-fin.r{right:-10px;border-radius:20% 70% 20% 0;transform:rotate(-14deg)}
+.rocket-flame{position:absolute;bottom:-30px;left:50%;transform:translateX(-50%);width:20px;height:34px;
+background:linear-gradient(180deg,#ffd08a,#f08080 60%,transparent);border-radius:50% 50% 60% 60%;
+filter:blur(1px);transition:opacity .4s}
+.instrument.is-working .rocket-flame{animation:rocket-flick .18s ease-in-out infinite alternate}
+@keyframes rocket-flick{from{transform:translateX(-50%) scaleY(.9)}to{transform:translateX(-50%) scaleY(1.12)}}
+.rocket-pct{font-size:14px;color:#f0b8b8;font-variant-numeric:tabular-nums}
+.rocket-caption{font-size:11px;color:var(--muted);letter-spacing:.4px}
+@media(prefers-reduced-motion:reduce){.instrument.is-working .rocket-flame{animation:none}.rocket-body,.rocket-flame{transition:none}}
