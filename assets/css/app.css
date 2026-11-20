@@ -4434,3 +4434,86 @@ transform:translateX(-50%) translateY(-50%) rotate(0)}
 .ori-creases i:nth-child(3){transform:translateX(-50%) translateY(-50%) rotate(-60deg)}
 .origami-caption{font-size:11px;color:var(--muted);letter-spacing:.4px}
 @media(prefers-reduced-motion:reduce){.ori-paper{transition:none}}
+
+/* iter-1727: prayer skin — a brass prayer wheel spins as pay accrues */
+.prayer-visual{display:none;flex-direction:column;align-items:center;gap:12px}
+body[data-template=prayer]{--bg:#180e04;--surface:#221608;--surface-2:#2c1e0c;--line:#48341a;--text:#f4e8d0;--accent:#d8a848;--accent-rgb:216,168,72;--instrument:#120c06;--muted:#b89e78;--dim:#78644a}
+body[data-template=prayer] .charge-visual{display:none}
+body[data-template=prayer] .prayer-visual{display:flex}
+body[data-template=prayer] .energy-stage{margin:14px 0 8px}
+body[data-template=prayer] .template-slider{background:#3a2c12}
+body[data-template=prayer] .template-switch button.selected{color:#e8be6a}
+body[data-template=prayer] .currency-pill{background:#221608;border-color:#48341a}
+.pr-scene{position:relative;width:130px;height:170px;display:flex;flex-direction:column;align-items:center;justify-content:flex-end}
+.pr-drum{position:relative;width:86px;height:86px;border-radius:50%;
+background:conic-gradient(#c89840,#8a6420,#c89840,#8a6420,#c89840);
+border:3px solid #6a4c18;box-shadow:0 4px 14px rgba(0,0,0,.5);transition:transform .8s linear}
+.pr-mark{position:absolute;left:50%;top:50%;width:10px;height:10px;border-radius:50%;background:#f4d888}
+.pr-mark.m1{transform:translate(-50%,-30px)}
+.pr-mark.m2{transform:translate(-50%,-50%) translateX(26px)}
+.pr-mark.m3{transform:translate(-50%,-50%) translateX(-26px)}
+.pr-cap{width:40px;height:14px;background:#5a3e16;border-radius:6px 6px 0 0;margin-top:-96px;z-index:2;position:relative}
+.pr-handle{width:10px;height:60px;background:linear-gradient(180deg,#7a5a24,#4a3414);border-radius:5px;position:relative}
+.prayer-caption{font-size:11px;color:var(--muted);letter-spacing:.4px}
+@media(prefers-reduced-motion:reduce){.pr-drum{transition:none}}
+
+/* iter-1728: piano skin — keys strike in sequence like an ascending scale */
+.piano-visual{display:none;flex-direction:column;align-items:center;gap:12px}
+body[data-template=piano]{--bg:#0e0e14;--surface:#16141e;--surface-2:#1c1a26;--line:#2e2c40;--text:#eceaf6;--accent:#e8e8f0;--accent-rgb:232,232,240;--instrument:#0c0a12;--muted:#9e9cba;--dim:#645e80}
+body[data-template=piano] .charge-visual{display:none}
+body[data-template=piano] .piano-visual{display:flex}
+body[data-template=piano] .energy-stage{margin:14px 0 8px}
+body[data-template=piano] .template-slider{background:#28263c}
+body[data-template=piano] .template-switch button.selected{color:#e8e8f0}
+body[data-template=piano] .currency-pill{background:#16141e;border-color:#2e2c40}
+.piano-board{position:relative;display:flex;gap:3px;padding:14px 14px 10px;background:#1a1220;
+border-radius:10px 10px 4px 4px;border:2px solid #3c2a30}
+.pi-key{display:block;position:relative}
+.pi-key.w{width:26px;height:76px;background:linear-gradient(180deg,#f8f4ea,#e0d8c4);border-radius:0 0 4px 4px;
+border:1px solid #b0a890;transition:background .3s,transform .15s}
+.pi-key.b{position:absolute;width:16px;height:46px;background:#1a1418;border-radius:0 0 3px 3px;z-index:2;
+transition:background .3s,transform .15s}
+.pi-key.b.k1{left:36px}
+.pi-key.b.k2{left:65px}
+.pi-key.b.k4{left:123px}
+.pi-key.b.k5{left:152px}
+.pi-key.b.k6{left:181px}
+.pi-key.w.hit{background:#f0d060;transform:translateY(3px)}
+.pi-key.b.hit{background:#8a6a20;transform:translateY(3px)}
+.instrument.is-working .pi-key.hit{box-shadow:0 0 10px rgba(240,208,96,.4)}
+.piano-caption{font-size:11px;color:var(--muted);letter-spacing:.4px}
+@media(max-width:520px){.pi-key.w{width:20px;height:64px}.pi-key.b{width:13px;height:40px}
+.pi-key.b.k1{left:30px}.pi-key.b.k2{left:54px}.pi-key.b.k4{left:102px}.pi-key.b.k5{left:126px}.pi-key.b.k6{left:150px}}
+@media(prefers-reduced-motion:reduce){.pi-key{transition:none}}
+
+/* iter-1729: firejar skin — fireflies drift into a glass jar as the day earns */
+.firejar-visual{display:none;flex-direction:column;align-items:center;gap:12px}
+body[data-template=firejar]{--bg:#10160a;--surface:#181f10;--surface-2:#202814;--line:#34421e;--text:#eaf2d8;--accent:#c8e858;--accent-rgb:200,232,88;--instrument:#0c1206;--muted:#a4b888;--dim:#687a50}
+body[data-template=firejar] .charge-visual{display:none}
+body[data-template=firejar] .firejar-visual{display:flex}
+body[data-template=firejar] .energy-stage{margin:14px 0 8px}
+body[data-template=firejar] .template-slider{background:#2a3816}
+body[data-template=firejar] .template-switch button.selected{color:#d8f080}
+body[data-template=firejar] .currency-pill{background:#181f10;border-color:#34421e}
+.fj-jar{position:relative;width:120px;height:150px;border-radius:14px 14px 20px 20px;overflow:hidden;
+background:linear-gradient(180deg,rgba(180,210,220,.12),rgba(140,170,180,.08));
+border:2px solid #4a5a50;box-shadow:inset 0 0 24px rgba(200,232,88,.06)}
+.fj-lid{position:absolute;top:0;left:10%;right:10%;height:10px;background:#6a5a3a;border-radius:0 0 6px 6px;z-index:3}
+.fj-fly{position:absolute;width:6px;height:6px;border-radius:50%;background:#c8e858;opacity:0;
+box-shadow:0 0 8px 2px rgba(200,232,88,.5);transition:opacity .5s}
+.fj-fly:nth-child(2){left:25%;top:55%}
+.fj-fly:nth-child(3){left:60%;top:70%}
+.fj-fly:nth-child(4){left:40%;top:80%}
+.fj-fly:nth-child(5){left:70%;top:50%}
+.fj-fly:nth-child(6){left:15%;top:75%}
+.fj-fly:nth-child(7){left:55%;top:38%}
+.fj-fly:nth-child(8){left:35%;top:64%}
+.fj-fly:nth-child(9){left:75%;top:72%}
+.fj-fly.in{opacity:1;animation:fj-float 3s ease-in-out infinite alternate}
+.fj-fly:nth-child(3).in{animation-delay:.5s}
+.fj-fly:nth-child(5).in{animation-delay:1s}
+.fj-fly:nth-child(7).in{animation-delay:1.4s}
+.fj-fly:nth-child(9).in{animation-delay:.8s}
+@keyframes fj-float{from{transform:translate(0,0)}to{transform:translate(4px,-6px)}}
+.firejar-caption{font-size:11px;color:var(--muted);letter-spacing:.4px}
+@media(prefers-reduced-motion:reduce){.fj-fly.in{animation:none}.fj-fly{transition:none}}
