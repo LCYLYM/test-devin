@@ -4941,3 +4941,50 @@ body[data-template=bottle] .bottle-visual{display:block}
 .instrument.is-working .btl-bottle{animation:btlBob 3s ease-in-out infinite}
 @keyframes btlBob{0%,100%{margin-top:0}50%{margin-top:-8px}}
 @media(prefers-reduced-motion:reduce){.instrument.is-working .srf-surfer,.instrument.is-working .scp-lens,.instrument.is-working .btl-bottle,.btl-wave1,.btl-wave2{animation:none}}
+body[data-template=pinball]{--bg:#161008;--surface:#1e1608;--surface-2:#261c0a;--line:#483a18;--text:#f8ecc8;--accent:#f0c858;--accent-rgb:240,200,88;--instrument:#1e1608;--muted:#c0a860;--dim:#c0a860}
+.pinball-visual,.lotus-visual,.ramen-visual{display:none;position:relative;margin-top:18px}
+body[data-template=pinball] .charge-visual,body[data-template=lotus] .charge-visual,body[data-template=ramen] .charge-visual{display:none}
+body[data-template=pinball] .pinball-visual{display:block}
+.pnb-scene{position:relative;height:180px;margin:0 10%;background:linear-gradient(#201808,#161008);border-left:3px solid #483a18;border-right:3px solid #483a18;border-bottom:3px solid #483a18;border-radius:0 0 40px 40px;overflow:hidden}
+.pnb-peg{position:absolute;width:9px;height:9px;border-radius:50%;background:#f0c858;box-shadow:0 0 6px rgba(240,200,88,.6)}
+.pnb-ball{position:absolute;top:4%;left:46%;width:14px;height:14px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#fff,#a8b8d8 60%,#586880);transition:top .5s}
+.pnb-flip{position:absolute;bottom:6px;width:56px;height:8px;background:#e84858;border-radius:4px;transform-origin:left center}
+.pnb-flip.l{left:18%;transform:rotate(18deg)}
+.pnb-flip.r{right:18%;transform-origin:right center;transform:rotate(-18deg)}
+.instrument.is-working .pnb-flip.l{animation:pnbL 2.2s ease-in-out infinite}
+.instrument.is-working .pnb-flip.r{animation:pnbR 2.2s ease-in-out infinite}
+@keyframes pnbL{0%,88%,100%{transform:rotate(18deg)}94%{transform:rotate(-30deg)}}
+@keyframes pnbR{0%,88%,100%{transform:rotate(-18deg)}94%{transform:rotate(30deg)}}
+.pinball-caption,.lotus-caption,.ramen-caption{text-align:center;font-size:11px;color:var(--dim);margin-top:10px}
+body[data-template=lotus] .lotus-visual{display:block}
+.lts-scene{position:relative;height:170px;background:linear-gradient(#140e14 0%,#14201c 60%,#0e1814 100%);overflow:hidden}
+.lts-water{position:absolute;left:0;right:0;bottom:0;height:34%;background:linear-gradient(transparent,#163830)}
+.lts-leaf{position:absolute;width:44px;height:16px;background:radial-gradient(ellipse at 50% 0%,#3a7858,#24503c);border-radius:50%}
+.lts-leaf.l1{left:18%;bottom:22%}
+.lts-leaf.l2{right:20%;bottom:18%;transform:scale(0.8)}
+.lts-leaf.l3{left:55%;bottom:26%;transform:scale(0.6)}
+.lts-stem{position:absolute;left:50%;bottom:26%;width:5px;height:8%;transform:translateX(-50%);background:#3a7858;transition:height .6s}
+.lts-flower{position:absolute;left:50%;bottom:8%;width:70px;height:56px;transform:translateX(-50%);transition:bottom .6s}
+.lts-petal{position:absolute;left:50%;bottom:12px;width:16px;height:34px;margin-left:-8px;background:linear-gradient(#f8b8d0,#e06098);border-radius:50% 50% 0 0;transform-origin:bottom center;opacity:.4;transition:transform .6s,opacity .6s}
+.lts-core{position:absolute;left:50%;bottom:14px;width:16px;height:12px;margin-left:-8px;background:#f0d858;border-radius:50%}
+.instrument.is-working .lts-leaf{animation:ltsBob 4s ease-in-out infinite}
+.lts-leaf.l2{animation-delay:-1.3s}.lts-leaf.l3{animation-delay:-2.4s}
+@keyframes ltsBob{0%,100%{margin-bottom:0}50%{margin-bottom:4px}}
+body[data-template=ramen] .ramen-visual{display:block}
+.rmn-scene{position:relative;height:170px;background:#181008;overflow:hidden}
+.rmn-cup{position:absolute;left:50%;bottom:14%;width:120px;height:110px;transform:translateX(-50%);background:linear-gradient(#f8e8d0,#e8c8a0);border-radius:8px 8px 24px 24px;overflow:hidden;box-shadow:inset 0 6px 0 #d85848}
+.rmn-broth{position:absolute;left:0;right:0;bottom:0;height:10%;background:linear-gradient(#c88438,#a86428);transition:height .6s}
+.rmn-noodles{position:absolute;left:8%;right:8%;bottom:18%;height:46%;opacity:0;transition:opacity .6s}
+.rmn-noodles i{position:absolute;left:0;right:0;height:7px;border-radius:4px;background:repeating-linear-gradient(90deg,#f0d070 0 10px,#e0b858 10px 20px)}
+.rmn-noodles i:nth-child(1){top:0;transform:rotate(2deg)}
+.rmn-noodles i:nth-child(2){top:12px;transform:rotate(-2deg)}
+.rmn-noodles i:nth-child(3){top:24px;transform:rotate(1deg)}
+.rmn-noodles i:nth-child(4){top:36px;transform:rotate(-1deg)}
+.rmn-egg{position:absolute;right:14%;top:18%;width:26px;height:20px;background:radial-gradient(circle at 50% 60%,#f0b028 0 5px,#f8f0e0 6px);border-radius:50%;opacity:0;transition:opacity .6s}
+.rmn-steam{position:absolute;left:50%;bottom:64%;width:60px;height:50px;transform:translateX(-50%);opacity:0;transition:opacity .6s}
+.rmn-steam i{position:absolute;bottom:0;width:6px;height:30px;border-radius:50%;background:linear-gradient(transparent,rgba(255,255,255,.5));animation:rmnUp 2.4s ease-in-out infinite}
+.rmn-steam i:nth-child(1){left:8px}
+.rmn-steam i:nth-child(2){left:26px;animation-delay:-.8s}
+.rmn-steam i:nth-child(3){left:44px;animation-delay:-1.6s}
+@keyframes rmnUp{0%{transform:translateY(8px);opacity:0}30%{opacity:.7}100%{transform:translateY(-14px);opacity:0}}
+@media(prefers-reduced-motion:reduce){.instrument.is-working .pnb-flip.l,.instrument.is-working .pnb-flip.r,.instrument.is-working .lts-leaf,.rmn-steam i{animation:none}}
