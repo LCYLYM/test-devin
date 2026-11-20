@@ -1418,6 +1418,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `almond` | `1` アーモンド配色 |
 | `cashew` | `1` カシュー配色 |
 | `pecan` | `1` ピーカン配色 |
+| `macadamia` | `1` マカダミア配色 |
+| `brazilnut` | `1` ブラジルナッツ配色 |
+| `pinenut` | `1` 松の実配色 |
 | `fuchsia` | `1` フクシア配色 |
 | `oleander` | `1` キョウチクトウ配色 |
 | `buddleia` | `1` フサフジウツギ配色 |

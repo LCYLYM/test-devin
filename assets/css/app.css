@@ -3034,6 +3034,12 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .is-cashew .instrument{border-color:rgba(205,175,105,.4)}
 .is-pecan{background:linear-gradient(180deg,#261b14 0%,#120d09 100%)}
 .is-pecan .instrument{border-color:rgba(195,125,85,.4)}
+.is-macadamia{background:linear-gradient(180deg,#26231b 0%,#12110d 100%)}
+.is-macadamia .instrument{border-color:rgba(205,190,140,.4)}
+.is-brazilnut{background:linear-gradient(180deg,#221c14 0%,#100d09 100%)}
+.is-brazilnut .instrument{border-color:rgba(170,130,90,.4)}
+.is-pinenut{background:linear-gradient(180deg,#242218 0%,#11100b 100%)}
+.is-pinenut .instrument{border-color:rgba(200,185,120,.4)}
 .is-fuchsia{background:linear-gradient(180deg,#2e1428 0%,#160a13 100%)}
 .is-fuchsia .instrument{border-color:rgba(230,100,200,.4)}
 .is-oleander{background:linear-gradient(180deg,#2c1720 0%,#150b0f 100%)}
