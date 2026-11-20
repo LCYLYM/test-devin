@@ -10001,3 +10001,39 @@ html[data-template="stonebridge"] .stonebridge-visual{display:flex;flex-directio
 #blmW3{bottom:10%;width:120%;left:-10%}
 .blm-sand{position:absolute;left:0;bottom:0;width:100%;height:12%;background:linear-gradient(180deg,#0a1410,#060a08)}
 .biolum-caption{margin-top:10px;font-size:12px;letter-spacing:2px;opacity:.55;text-align:center}
+
+/* hoodoo skin */
+[data-template="hoodoo"] .hoodoo-visual{display:block}
+.hoodoo-visual{display:none}
+.hdo-scene{position:relative;height:190px;border-radius:18px;overflow:hidden;background:linear-gradient(180deg,#241410 0%,#18100c 55%,#120c08 100%)}
+.hdo-sun{position:absolute;right:12%;top:10%;width:30px;height:30px;border-radius:50%;background:radial-gradient(circle,#f0c088,#d88050);box-shadow:0 0 18px 6px rgba(240,170,100,.4);opacity:0;transition:opacity .8s}
+.hdo-spire{position:absolute;bottom:0;width:26px;border-radius:8px 8px 0 0;background:repeating-linear-gradient(0deg,#8a4a2e 0 14px,#b06840 14px 22px,#6a3622 22px 30px);opacity:0;transition:opacity .7s}
+.hdo-spire::before{content:"";position:absolute;top:-8px;left:-3px;width:32px;height:10px;border-radius:6px;background:#4a2818}
+#hdoS1{left:16%;height:52%}
+#hdoS2{left:34%;height:74%}
+#hdoS3{left:56%;height:60%;width:20px}
+#hdoS4{left:76%;height:40%;width:16px}
+.hoodoo-caption{margin-top:10px;font-size:12px;letter-spacing:2px;opacity:.55;text-align:center}
+
+/* karst skin */
+[data-template="karst"] .karst-visual{display:block}
+.karst-visual{display:none}
+.krs-scene{position:relative;height:190px;border-radius:18px;overflow:hidden;background:linear-gradient(180deg,#16241c 0%,#0c1410 60%,#0a1210 100%)}
+.krs-back{position:absolute;left:0;top:0;width:100%;height:70%;background:radial-gradient(ellipse at 12% 100%,#1e3628 34%,transparent 36%),radial-gradient(ellipse at 44% 100%,#24402e 40%,transparent 42%),radial-gradient(ellipse at 80% 100%,#1c3426 36%,transparent 38%);opacity:.7}
+.krs-mid{position:absolute;left:0;top:14%;width:100%;height:70%;background:radial-gradient(ellipse at 26% 100%,#2c4a36 38%,transparent 40%),radial-gradient(ellipse at 64% 100%,#2a4834 44%,transparent 46%);opacity:.85}
+.krs-front{position:absolute;left:0;top:30%;width:100%;height:70%;background:radial-gradient(ellipse at 10% 100%,#1a2e22 36%,transparent 38%),radial-gradient(ellipse at 52% 100%,#203a2a 42%,transparent 44%),radial-gradient(ellipse at 92% 100%,#1a2e22 38%,transparent 40%)}
+.krs-mist{position:absolute;left:0;top:44%;width:100%;height:26%;background:linear-gradient(180deg,transparent,rgba(190,215,195,.16),transparent);opacity:.5}
+.krs-river{position:absolute;left:0;bottom:0;width:100%;height:14%;background:linear-gradient(180deg,rgba(90,150,140,.35),rgba(30,60,50,.5));opacity:.3}
+.karst-caption{margin-top:10px;font-size:12px;letter-spacing:2px;opacity:.55;text-align:center}
+
+/* stonearch skin */
+[data-template="stonearch"] .stonearch-visual{display:block}
+.stonearch-visual{display:none}
+.sah-scene{position:relative;height:190px;border-radius:18px;overflow:hidden;background:linear-gradient(180deg,#241410 0%,#181008 55%,#100a06 100%)}
+.sah-glow{position:absolute;left:0;top:0;width:100%;height:100%;background:radial-gradient(ellipse at 62% 34%,rgba(240,170,90,.5),transparent 55%);opacity:0;transition:opacity .8s}
+.sah-floor{position:absolute;left:0;bottom:0;width:100%;height:16%;background:linear-gradient(180deg,#1c1208,#120c06)}
+.sah-arch{position:absolute;left:50%;bottom:8%;width:130px;height:120px;margin-left:-65px;background:#4a2e1c;border-radius:60px 60px 0 0}
+.sah-arch::before{content:"";position:absolute;left:22px;bottom:0;width:86px;height:78px;background:radial-gradient(ellipse at 50% 100%,#e0a060,#8a5028 80%);border-radius:44px 44px 0 0}
+.sah-arch::after{content:"";position:absolute;left:-18px;top:8px;width:166px;height:18px;border-radius:9px;background:#3a2414}
+.sah-beam{position:absolute;left:50%;top:26%;width:10px;height:120px;margin-left:-5px;background:linear-gradient(180deg,rgba(255,215,150,.75),transparent);transform-origin:top center;opacity:0;transition:opacity .6s}
+.stonearch-caption{margin-top:10px;font-size:12px;letter-spacing:2px;opacity:.55;text-align:center}
