@@ -1457,6 +1457,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `poblano` | `1` ポブラノ配色 |
 | `jalapeno` | `1` ハラペーニョ配色 |
 | `habanero` | `1` ハバネロ配色 |
+| `serrano` | `1` セラーノ配色 |
+| `shishito` | `1` シシトウ配色 |
+| `scotchbonnet` | `1` スコッチボネット配色 |
 | `fuchsia` | `1` フクシア配色 |
 | `oleander` | `1` キョウチクトウ配色 |
 | `buddleia` | `1` フサフジウツギ配色 |

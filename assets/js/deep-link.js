@@ -4353,6 +4353,9 @@
     if (params.get('poblano') === '1') { document.body.classList.add('is-poblano'); }
     if (params.get('jalapeno') === '1') { document.body.classList.add('is-jalapeno'); }
     if (params.get('habanero') === '1') { document.body.classList.add('is-habanero'); }
+    if (params.get('serrano') === '1') { document.body.classList.add('is-serrano'); }
+    if (params.get('shishito') === '1') { document.body.classList.add('is-shishito'); }
+    if (params.get('scotchbonnet') === '1') { document.body.classList.add('is-scotchbonnet'); }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -6052,6 +6055,9 @@
         if (params.get('poblano') === '1') u.searchParams.set('poblano', '1');
         if (params.get('jalapeno') === '1') u.searchParams.set('jalapeno', '1');
         if (params.get('habanero') === '1') u.searchParams.set('habanero', '1');
+        if (params.get('serrano') === '1') u.searchParams.set('serrano', '1');
+        if (params.get('shishito') === '1') u.searchParams.set('shishito', '1');
+        if (params.get('scotchbonnet') === '1') u.searchParams.set('scotchbonnet', '1');
         if (params.get('fuchsia') === '1') u.searchParams.set('fuchsia', '1');
         if (params.get('oleander') === '1') u.searchParams.set('oleander', '1');
         if (params.get('buddleia') === '1') u.searchParams.set('buddleia', '1');

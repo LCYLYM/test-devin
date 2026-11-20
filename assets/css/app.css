@@ -3112,6 +3112,12 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .is-jalapeno .instrument{border-color:rgba(100,185,105,.4)}
 .is-habanero{background:linear-gradient(180deg,#2a1c0d 0%,#150d05 100%)}
 .is-habanero .instrument{border-color:rgba(245,115,30,.4)}
+.is-serrano{background:linear-gradient(180deg,#192419 0%,#0b110c 100%)}
+.is-serrano .instrument{border-color:rgba(110,185,100,.4)}
+.is-shishito{background:linear-gradient(180deg,#1c241a 0%,#0d110c 100%)}
+.is-shishito .instrument{border-color:rgba(135,180,110,.4)}
+.is-scotchbonnet{background:linear-gradient(180deg,#29140f 0%,#140907 100%)}
+.is-scotchbonnet .instrument{border-color:rgba(230,70,45,.4)}
 .is-fuchsia{background:linear-gradient(180deg,#2e1428 0%,#160a13 100%)}
 .is-fuchsia .instrument{border-color:rgba(230,100,200,.4)}
 .is-oleander{background:linear-gradient(180deg,#2c1720 0%,#150b0f 100%)}
