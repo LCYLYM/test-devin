@@ -8598,3 +8598,39 @@ body[data-template=igloo] .igloo-visual{display:block}
 #igB1{bottom:36px}#igB2{bottom:56px}#igB3{bottom:74px}
 .igloo-caption{text-align:center;font-size:11px;color:var(--dim);margin-top:10px}
 @media(prefers-reduced-motion:reduce){body[data-template=camp] .cm-flame,body[data-template=boathouse] .bh-door2{transition:none}}
+
+body[data-template=monastery]{--bg:#121008;--surface:#1c1810;--surface-2:#262014;--line:#3d3422;--text:#eee4ce;--accent:#98887a;--accent-rgb:152,136,122;--instrument:#17130c;--muted:#ab9c84;--dim:#6a5f48}
+.monastery-visual{display:none;position:relative;margin-top:18px}
+body[data-template=monastery] .charge-visual{display:none}
+body[data-template=monastery] .monastery-visual{display:block}
+.mo-scene{position:relative;height:150px;border-radius:16px;overflow:hidden;background:linear-gradient(180deg,#1a150c,#0f0c05)}
+.mo-cloister{position:absolute;bottom:22px;left:14%;width:50%;height:66px}
+.mo-arch{position:absolute;bottom:0;width:26px;height:52px;border:3px solid #584a34;border-bottom:none;border-radius:13px 13px 0 0}
+#moA1{left:0}#moA2{left:36px}#moA3{left:72px}
+.mo-tower{position:absolute;top:14px;right:16%;width:30px;height:100px;background:#584a34;border-radius:3px 3px 0 0}
+.mo-tower:before{content:'';position:absolute;top:-14px;left:-4px;width:38px;height:16px;background:#453a26;clip-path:polygon(50% 0,100% 100%,0 100%)}
+.mo-bell{position:absolute;top:12px;left:50%;transform:translateX(-50%);width:12px;height:10px;background:#c8a840;border-radius:5px 5px 2px 2px;transform-origin:top center}
+.mo-court{position:absolute;bottom:0;width:100%;height:22px;background:#241d0f}
+.monastery-caption{text-align:center;font-size:11px;color:var(--dim);margin-top:10px}
+body[data-template=yurt]{--bg:#141006;--surface:#201a0c;--surface-2:#2a2210;--line:#433820;--text:#f4e8cc;--accent:#c8a060;--accent-rgb:200,160,96;--instrument:#1a1408;--muted:#b59a66;--dim:#6f5c3a}
+.yurt-visual{display:none;position:relative;margin-top:18px}
+body[data-template=yurt] .charge-visual{display:none}
+body[data-template=yurt] .yurt-visual{display:block}
+.yu-scene{position:relative;height:150px;border-radius:16px;overflow:hidden;background:linear-gradient(180deg,#1c140a,#0f0b04)}
+.yu-steppe{position:absolute;bottom:0;width:100%;height:36px;background:linear-gradient(180deg,#2c2410,#1a1408)}
+.yu-dome{position:absolute;bottom:30px;left:50%;transform:translateX(-50%);width:100px;height:60px;background:#c8b088;border-radius:50px 50px 6px 6px}
+.yu-crown{position:absolute;bottom:88px;left:50%;transform:translateX(-50%);width:20px;height:10px;background:#8a6a38;border-radius:4px}
+.yu-smoke{position:absolute;bottom:100px;left:50%;width:4px;height:26px;background:linear-gradient(0deg,rgba(230,225,210,.6),transparent);border-radius:2px}
+.yu-door{position:absolute;bottom:30px;left:50%;transform:translateX(-50%);width:18px;height:30px;background:#6a4a24;border-radius:8px 8px 0 0;transform-origin:left bottom}
+.yurt-caption{text-align:center;font-size:11px;color:var(--dim);margin-top:10px}
+body[data-template=paddy]{--bg:#0e140a;--surface:#161f12;--surface-2:#1e2a17;--line:#2e4222;--text:#e2f0d2;--accent:#78b858;--accent-rgb:120,184,88;--instrument:#12180c;--muted:#8cae6c;--dim:#4c633a}
+.paddy-visual{display:none;position:relative;margin-top:18px}
+body[data-template=paddy] .charge-visual{display:none}
+body[data-template=paddy] .paddy-visual{display:block}
+.pd-scene{position:relative;height:150px;border-radius:16px;overflow:hidden;background:linear-gradient(180deg,#16200f,#0c1207)}
+.pd-sun3{position:absolute;top:10px;right:16%;width:22px;height:22px;background:radial-gradient(circle,#ffe8a0,#e0a040);border-radius:50%}
+.pd-tier{position:absolute;left:0;width:100%;border-top:2px solid #3c5c28;background:linear-gradient(180deg,rgba(120,180,140,.5),rgba(60,110,70,.6))}
+#pdT1{bottom:64px;height:26px}#pdT2{bottom:36px;height:26px;left:6%;width:94%}#pdT3{bottom:8px;height:26px;left:12%;width:88%}
+.pd-egret{position:absolute;top:24%;width:14px;height:8px;background:#f0f0e8;border-radius:6px 6px 2px 2px}
+.paddy-caption{text-align:center;font-size:11px;color:var(--dim);margin-top:10px}
+@media(prefers-reduced-motion:reduce){body[data-template=monastery] .mo-bell,body[data-template=yurt] .yu-door{transition:none}}
