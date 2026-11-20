@@ -1319,6 +1319,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `fringetree` | `1` 流苏树配色 |
 | `katsura` | `1` 连香树配色 |
 | `styrax` | `1` 安息香配色 |
+| `ironwood` | `1` 铁木配色 |
+| `serviceberry` | `1` 唐棣配色 |
+| `pawpaw` | `1` 泡泡树配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 
