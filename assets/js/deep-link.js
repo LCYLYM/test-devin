@@ -4311,6 +4311,9 @@
     if (params.get('fava') === '1') { document.body.classList.add('is-fava'); }
     if (params.get('edamame') === '1') { document.body.classList.add('is-edamame'); }
     if (params.get('cannellini') === '1') { document.body.classList.add('is-cannellini'); }
+    if (params.get('almond') === '1') { document.body.classList.add('is-almond'); }
+    if (params.get('cashew') === '1') { document.body.classList.add('is-cashew'); }
+    if (params.get('pecan') === '1') { document.body.classList.add('is-pecan'); }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -5968,6 +5971,9 @@
         if (params.get('fava') === '1') u.searchParams.set('fava', '1');
         if (params.get('edamame') === '1') u.searchParams.set('edamame', '1');
         if (params.get('cannellini') === '1') u.searchParams.set('cannellini', '1');
+        if (params.get('almond') === '1') u.searchParams.set('almond', '1');
+        if (params.get('cashew') === '1') u.searchParams.set('cashew', '1');
+        if (params.get('pecan') === '1') u.searchParams.set('pecan', '1');
         if (params.get('fuchsia') === '1') u.searchParams.set('fuchsia', '1');
         if (params.get('oleander') === '1') u.searchParams.set('oleander', '1');
         if (params.get('buddleia') === '1') u.searchParams.set('buddleia', '1');

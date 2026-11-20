@@ -1415,6 +1415,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `fava` | `1` ソラマメ配色 |
 | `edamame` | `1` エダマメ配色 |
 | `cannellini` | `1` カネリーニ配色 |
+| `almond` | `1` アーモンド配色 |
+| `cashew` | `1` カシュー配色 |
+| `pecan` | `1` ピーカン配色 |
 | `fuchsia` | `1` フクシア配色 |
 | `oleander` | `1` キョウチクトウ配色 |
 | `buddleia` | `1` フサフジウツギ配色 |
