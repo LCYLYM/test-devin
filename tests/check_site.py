@@ -43,6 +43,13 @@ if extra:
 
 # iter-111: ?dialog targets must be real dialog ids
 dl = open(os.path.join(ROOT, 'assets/js/deep-link.js'), encoding='utf-8').read()
+# iter-2161: skin lists must not carry duplicates — a repeat entry makes the
+# t-cycle jump back (indexOf finds the first) and weights ?skin=random
+for _m in re.finditer(r"\[('[^\[\]]+')\]", dl):
+    _items = re.findall(r"'([^']+)'", _m.group(1))
+    if len(_items) > 100 and len(_items) != len(set(_items)):
+        missing.append('deep-link.js skin list has duplicates: ' + ','.join(sorted({x for x in _items if _items.count(x) > 1})))
+
 dialogs = set(re.findall(r'id="(\w+Dialog)"', html))
 for t in ['shareDialog','aboutDialog','settingsDialog','goalDialog','calendarDialog','currencyDialog','overtimeDialog']:
     if t not in dialogs:
