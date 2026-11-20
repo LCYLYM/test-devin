@@ -1433,6 +1433,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `gooseberry` | `1` グーズベリー配色 |
 | `cloudberry` | `1` クラウドベリー配色 |
 | `lingonberry` | `1` リンゴンベリー配色 |
+| `elderberry` | `1` エルダーベリー配色 |
+| `acerola` | `1` アセロラ配色 |
+| `seabuckthorn` | `1` シーバックソーン配色 |
 | `fuchsia` | `1` フクシア配色 |
 | `oleander` | `1` キョウチクトウ配色 |
 | `buddleia` | `1` フサフジウツギ配色 |
