@@ -1256,6 +1256,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `whiskfern` | `1` 松叶蕨配色 |
 | `quillwort` | `1` 水韭配色 |
 | `clubmoss` | `1` 石松配色 |
+| `horsetail` | `1` 问荆配色 |
+| `scouringrush` | `1` 木贼配色 |
+| `spikemoss` | `1` 卷柏配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 

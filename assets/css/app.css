@@ -2710,6 +2710,12 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .is-quillwort .instrument{border-color:rgba(112,164,142,.4)}
 .is-clubmoss{background:linear-gradient(180deg,#151a12 0%,#0f130d 100%)}
 .is-clubmoss .instrument{border-color:rgba(136,170,104,.4)}
+.is-horsetail{background:linear-gradient(180deg,#141a14 0%,#0f130f 100%)}
+.is-horsetail .instrument{border-color:rgba(130,168,116,.4)}
+.is-scouringrush{background:linear-gradient(180deg,#151a15 0%,#101310 100%)}
+.is-scouringrush .instrument{border-color:rgba(140,168,126,.4)}
+.is-spikemoss{background:linear-gradient(180deg,#161a13 0%,#11130d 100%)}
+.is-spikemoss .instrument{border-color:rgba(148,170,108,.4)}
 .is-oatmeal{background:linear-gradient(180deg,#1d1912,#2f291e 50%,#433a2a)}
 .is-oatmeal .instrument{border-color:rgba(215,195,155,.4)}
 .is-thyme{background:linear-gradient(180deg,#121a14,#1c2a20 50%,#28392c)}

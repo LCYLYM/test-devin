@@ -4140,6 +4140,9 @@
     if (params.get('whiskfern') === '1') { document.body.classList.add('is-whiskfern'); }
     if (params.get('quillwort') === '1') { document.body.classList.add('is-quillwort'); }
     if (params.get('clubmoss') === '1') { document.body.classList.add('is-clubmoss'); }
+    if (params.get('horsetail') === '1') { document.body.classList.add('is-horsetail'); }
+    if (params.get('scouringrush') === '1') { document.body.classList.add('is-scouringrush'); }
+    if (params.get('spikemoss') === '1') { document.body.classList.add('is-spikemoss'); }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -5638,6 +5641,9 @@
         if (params.get('whiskfern') === '1') u.searchParams.set('whiskfern', '1');
         if (params.get('quillwort') === '1') u.searchParams.set('quillwort', '1');
         if (params.get('clubmoss') === '1') u.searchParams.set('clubmoss', '1');
+        if (params.get('horsetail') === '1') u.searchParams.set('horsetail', '1');
+        if (params.get('scouringrush') === '1') u.searchParams.set('scouringrush', '1');
+        if (params.get('spikemoss') === '1') u.searchParams.set('spikemoss', '1');
       if (params.get('tile') === '1') u.searchParams.set('tile', '1');
       if (params.get('outline') === '1') u.searchParams.set('outline', '1');
       if (params.get('stripe') === '1') u.searchParams.set('stripe', '1');
