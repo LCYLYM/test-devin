@@ -8705,3 +8705,41 @@ body[data-template=crater] .crater-visual{display:block}
 #crS1{top:18%;left:28%}#crS2{top:30%;left:64%}
 .crater-caption{text-align:center;font-size:11px;color:var(--dim);margin-top:10px}
 @media(prefers-reduced-motion:reduce){body[data-template=mesa] .ms-sun4,body[data-template=crater] .cr-meteor{transition:none}}
+
+body[data-template=quarry]{--bg:#101010;--surface:#1a1a18;--surface-2:#222220;--line:#383832;--text:#e8e8de;--accent:#8a8a80;--accent-rgb:138,138,128;--instrument:#141412;--muted:#9a9a8e;--dim:#585850}
+.quarry-visual{display:none;position:relative;margin-top:18px}
+body[data-template=quarry] .charge-visual{display:none}
+body[data-template=quarry] .quarry-visual{display:block}
+.qr-scene{position:relative;height:150px;border-radius:16px;overflow:hidden;background:linear-gradient(180deg,#1c1c1a,#101010)}
+.qr-face{position:absolute;top:0;right:0;width:44%;height:110px;background:linear-gradient(200deg,#3c3c36,#242422);clip-path:polygon(30% 0,100% 0,100% 100%,0 100%)}
+.qr-face2{position:absolute;bottom:0;right:0;width:30%;height:44px;background:#2e2e2a;clip-path:polygon(20% 0,100% 0,100% 100%,0 100%)}
+.qr-crane{position:absolute;top:14px;left:14%;width:4px;height:60px;background:#6a6a58}
+.qr-crane:before{content:'';position:absolute;top:0;left:0;width:56px;height:4px;background:#6a6a58}
+.qr-crane:after{content:'';position:absolute;top:4px;left:52px;width:1px;height:24px;background:#6a6a58}
+.qr-block{position:absolute;top:44%;left:24%;width:18px;height:14px;background:#8a8a7a;border:1px solid #5c5c50;transition:left .5s,top .5s}
+.qr-pile{position:absolute;bottom:10px;left:18%;width:20px;height:12px;background:#55554c;clip-path:polygon(50% 0,100% 100%,0 100%);transition:width .5s}
+.quarry-caption{text-align:center;font-size:11px;color:var(--dim);margin-top:10px}
+body[data-template=foundry]{--bg:#150c05;--surface:#211309;--surface-2:#2c190c;--line:#472b14;--text:#f8e0c8;--accent:#d86830;--accent-rgb:216,104,48;--instrument:#1b0e07;--muted:#c0814e;--dim:#754c2a}
+.foundry-visual{display:none;position:relative;margin-top:18px}
+body[data-template=foundry] .charge-visual{display:none}
+body[data-template=foundry] .foundry-visual{display:block}
+.fd-scene{position:relative;height:150px;border-radius:16px;overflow:hidden;background:linear-gradient(180deg,#1e0f06,#0e0703)}
+.fd-ladle{position:absolute;top:16px;left:40%;width:34px;height:22px;background:#3a3a42;border-radius:0 0 10px 10px;transform-origin:top right;transition:transform .5s}
+.fd-ladle:before{content:'';position:absolute;bottom:4px;left:4px;width:26px;height:10px;background:radial-gradient(ellipse,#ff9830,#d84008)}
+.fd-pour{position:absolute;top:38px;left:52%;width:4px;height:34px;background:linear-gradient(180deg,#ffb040,#e05810);border-radius:2px}
+.fd-mold{position:absolute;bottom:14px;left:44%;width:46px;height:18px;background:#3a2c1c;border:2px solid #281c0e}
+.fd-mold:before{content:'';position:absolute;top:3px;left:8px;width:30px;height:8px;background:radial-gradient(ellipse,#ff9830,#a83008)}
+.fd-ember{position:absolute;left:52%;width:3px;height:3px;background:#ffcf60;border-radius:50%}
+.foundry-caption{text-align:center;font-size:11px;color:var(--dim);margin-top:10px}
+body[data-template=mint]{--bg:#141005;--surface:#201a0b;--surface-2:#2a2310;--line:#453c1c;--text:#f6ecc6;--accent:#d8b838;--accent-rgb:216,184,56;--instrument:#1a1508;--muted:#bfa658;--dim:#715f2d}
+.mint-visual{display:none;position:relative;margin-top:18px}
+body[data-template=mint] .charge-visual{display:none}
+body[data-template=mint] .mint-visual{display:block}
+.mt-scene{position:relative;height:150px;border-radius:16px;overflow:hidden;background:linear-gradient(180deg,#1c1608,#0e0b04)}
+.mt-press{position:absolute;top:14px;left:50%;transform:translateX(-50%);width:44px;height:26px;background:#4a4a52;border-radius:4px;transition:top .3s}
+.mt-press:before{content:'';position:absolute;bottom:-6px;left:50%;transform:translateX(-50%);width:20px;height:6px;background:#3a3a42}
+.mt-bed{position:absolute;bottom:20px;left:50%;transform:translateX(-50%);width:110px;height:8px;background:#3a3a42;border-radius:2px}
+.mt-coin{position:absolute;bottom:28px;width:14px;height:14px;background:radial-gradient(circle at 35% 35%,#ffe890,#c89818);border-radius:50%;border:1px solid #8a6c10}
+#mtC1{left:38%}#mtC2{left:48%}#mtC3{left:58%}
+.mint-caption{text-align:center;font-size:11px;color:var(--dim);margin-top:10px}
+@media(prefers-reduced-motion:reduce){body[data-template=quarry] .qr-block,body[data-template=mint] .mt-press{transition:none}}
