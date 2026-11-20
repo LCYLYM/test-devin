@@ -8484,3 +8484,44 @@ body[data-template=brook] .brook-visual{display:block}
 #bkS1{left:22%;width:20px;height:14px}#bkS2{left:48%;width:26px;height:18px}#bkS3{left:72%;width:16px;height:12px}
 .brook-caption{text-align:center;font-size:11px;color:var(--dim);margin-top:10px}
 @media(prefers-reduced-motion:reduce){body[data-template=coop] .co-hen,body[data-template=summit] .sm-climber,body[data-template=brook] .bk-leaf{transition:none}}
+
+body[data-template=teahouse]{--bg:#101206;--surface:#181e0c;--surface-2:#202811;--line:#32401e;--text:#e8f0d0;--accent:#7a9a58;--accent-rgb:122,154,88;--instrument:#13170a;--muted:#8ea46c;--dim:#4e6038}
+.teahouse-visual{display:none;position:relative;margin-top:18px}
+body[data-template=teahouse] .charge-visual{display:none}
+body[data-template=teahouse] .teahouse-visual{display:block}
+.th-scene{position:relative;height:150px;border-radius:16px;overflow:hidden;background:linear-gradient(180deg,#161c0c,#0d1106)}
+.th-roof{position:absolute;top:10px;left:12%;width:76%;height:16px;background:#3c3018;clip-path:polygon(4% 100%,50% 0,96% 100%)}
+.th-shoji{position:absolute;top:30px;left:22%;width:120px;height:70px;background:#e8e0cc;border:3px solid #3c3018;background-image:repeating-linear-gradient(90deg,#3c3018 0 2px,transparent 2px 28px),repeating-linear-gradient(0deg,#3c3018 0 2px,transparent 2px 21px);transition:transform .6s}
+.th-tatami{position:absolute;bottom:0;width:100%;height:34px;background:repeating-linear-gradient(90deg,#a89858 0 40px,#98a050 40px 80px);opacity:.7}
+.th-pot{position:absolute;bottom:38px;left:62%;width:22px;height:14px;background:#3a3a3a;border-radius:4px 4px 8px 8px}
+.th-steam{position:absolute;top:-16px;left:8px;width:3px;height:14px;background:linear-gradient(0deg,rgba(255,255,255,.6),transparent);border-radius:2px}
+.teahouse-caption{text-align:center;font-size:11px;color:var(--dim);margin-top:10px}
+body[data-template=smithy]{--bg:#140c06;--surface:#20130a;--surface-2:#2a180d;--line:#452b16;--text:#f6e2cc;--accent:#c86838;--accent-rgb:200,104,56;--instrument:#1a0f07;--muted:#c08558;--dim:#74502f}
+.smithy-visual{display:none;position:relative;margin-top:18px}
+body[data-template=smithy] .charge-visual{display:none}
+body[data-template=smithy] .smithy-visual{display:block}
+.sy-scene{position:relative;height:150px;border-radius:16px;overflow:hidden;background:linear-gradient(180deg,#1c0f06,#0e0804)}
+.sy-anvil{position:absolute;bottom:18px;left:30%;width:34px;height:14px;background:#484850;border-radius:4px}
+.sy-anvil:before{content:'';position:absolute;bottom:14px;left:12px;width:10px;height:14px;background:#484850}
+.sy-forge{position:absolute;bottom:18px;right:18%;width:44px;height:40px;background:#3c2414;border-radius:4px;border:2px solid #28180a}
+.sy-flame{position:absolute;bottom:4px;left:50%;transform:translateX(-50%);width:22px;height:8px;background:radial-gradient(ellipse at 50% 100%,#ffb030,#d84008);border-radius:50% 50% 30% 30%;transition:height .4s}
+.sy-spark{position:absolute;width:3px;height:3px;background:#ffcf60;border-radius:50%}
+.sy-hammer{position:absolute;bottom:44px;left:38%;width:22px;height:5px;background:#7a5830;transform-origin:left center}
+.sy-hammer:before{content:'';position:absolute;right:-6px;top:-4px;width:9px;height:13px;background:#484850;border-radius:2px}
+.smithy-caption{text-align:center;font-size:11px;color:var(--dim);margin-top:10px}
+body[data-template=kennel]{--bg:#130e08;--surface:#1e150c;--surface-2:#281c11;--line:#3e2c1c;--text:#f0e2cc;--accent:#b8845a;--accent-rgb:184,132,90;--instrument:#171009;--muted:#b08c64;--dim:#66513a}
+.kennel-visual{display:none;position:relative;margin-top:18px}
+body[data-template=kennel] .charge-visual{display:none}
+body[data-template=kennel] .kennel-visual{display:block}
+.kn-scene{position:relative;height:150px;border-radius:16px;overflow:hidden;background:linear-gradient(180deg,#181008,#0e0904)}
+.kn-house{position:absolute;bottom:20px;left:14%;width:64px;height:56px;background:#6a4420;border-radius:4px}
+.kn-house:before{content:'';position:absolute;top:-20px;left:-8px;width:80px;height:22px;background:#4a2c12;clip-path:polygon(0 100%,50% 0,100% 100%)}
+.kn-house:after{content:'';position:absolute;bottom:0;left:50%;transform:translateX(-50%);width:26px;height:30px;background:#241408;border-radius:13px 13px 0 0}
+.kn-dog{position:absolute;bottom:26px;left:58%;width:22px;height:18px;background:#8a5c2c;border-radius:8px 8px 5px 5px;transition:left .5s}
+.kn-dog:before{content:'';position:absolute;top:-7px;right:0;width:10px;height:10px;background:#8a5c2c;border-radius:5px}
+.kn-dog:after{content:'';position:absolute;top:-4px;right:1px;width:3px;height:3px;background:#2c1c0c;border-radius:50%}
+.kn-bowl{position:absolute;bottom:12px;left:64%;width:24px;height:10px;background:#c84a3a;border-radius:0 0 12px 12px;overflow:hidden}
+.kn-bowl i{position:absolute;bottom:0;left:0;width:100%;height:0;background:#e8c880}
+.kn-bone{position:absolute;bottom:16px;left:46%;width:16px;height:6px;background:#e8e0d0;border-radius:3px}
+.kennel-caption{text-align:center;font-size:11px;color:var(--dim);margin-top:10px}
+@media(prefers-reduced-motion:reduce){body[data-template=teahouse] .th-shoji,body[data-template=smithy] .sy-hammer,body[data-template=kennel] .kn-dog{transition:none}}
