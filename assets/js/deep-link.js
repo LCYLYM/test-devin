@@ -4785,6 +4785,8 @@
       if (ob) ob.click();
     } else if (e.key === 'g' && window.SalaryApp) {
       window.SalaryApp.openDialog('goalDialog');
+    } else if (e.key === 'k') {
+      window.open('./skins.html', '_blank', 'noopener');
     } else if (e.key === 'b') {
       var rb = document.getElementById('richQuickButton');
       if (rb) rb.click();
