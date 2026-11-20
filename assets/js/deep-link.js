@@ -4149,6 +4149,9 @@
     if (params.get('sequoia') === '1') { document.body.classList.add('is-sequoia'); }
     if (params.get('redwood') === '1') { document.body.classList.add('is-redwood'); }
     if (params.get('bristlecone') === '1') { document.body.classList.add('is-bristlecone'); }
+    if (params.get('dawnredwood') === '1') { document.body.classList.add('is-dawnredwood'); }
+    if (params.get('hemlock') === '1') { document.body.classList.add('is-hemlock'); }
+    if (params.get('larch') === '1') { document.body.classList.add('is-larch'); }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -5656,6 +5659,9 @@
         if (params.get('sequoia') === '1') u.searchParams.set('sequoia', '1');
         if (params.get('redwood') === '1') u.searchParams.set('redwood', '1');
         if (params.get('bristlecone') === '1') u.searchParams.set('bristlecone', '1');
+        if (params.get('dawnredwood') === '1') u.searchParams.set('dawnredwood', '1');
+        if (params.get('hemlock') === '1') u.searchParams.set('hemlock', '1');
+        if (params.get('larch') === '1') u.searchParams.set('larch', '1');
       if (params.get('tile') === '1') u.searchParams.set('tile', '1');
       if (params.get('outline') === '1') u.searchParams.set('outline', '1');
       if (params.get('stripe') === '1') u.searchParams.set('stripe', '1');

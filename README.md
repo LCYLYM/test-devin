@@ -1265,6 +1265,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `sequoia` | `1` 巨杉配色 |
 | `redwood` | `1` 北美红杉配色 |
 | `bristlecone` | `1` 狐尾松配色 |
+| `dawnredwood` | `1` 水杉配色 |
+| `hemlock` | `1` 铁杉配色 |
+| `larch` | `1` 落叶松配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 
