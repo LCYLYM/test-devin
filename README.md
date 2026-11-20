@@ -1292,6 +1292,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `magnolia` | `1` 玉兰配色 |
 | `dogwood` | `1` 山茱萸配色 |
 | `redbud` | `1` 紫荆配色 |
+| `catalpa` | `1` 梓树配色 |
+| `sweetgum` | `1` 枫香配色 |
+| `hackberry` | `1` 朴树配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 

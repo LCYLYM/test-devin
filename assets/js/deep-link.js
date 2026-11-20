@@ -4176,6 +4176,9 @@
     if (params.get('magnolia') === '1') { document.body.classList.add('is-magnolia'); }
     if (params.get('dogwood') === '1') { document.body.classList.add('is-dogwood'); }
     if (params.get('redbud') === '1') { document.body.classList.add('is-redbud'); }
+    if (params.get('catalpa') === '1') { document.body.classList.add('is-catalpa'); }
+    if (params.get('sweetgum') === '1') { document.body.classList.add('is-sweetgum'); }
+    if (params.get('hackberry') === '1') { document.body.classList.add('is-hackberry'); }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -5710,6 +5713,9 @@
         if (params.get('magnolia') === '1') u.searchParams.set('magnolia', '1');
         if (params.get('dogwood') === '1') u.searchParams.set('dogwood', '1');
         if (params.get('redbud') === '1') u.searchParams.set('redbud', '1');
+        if (params.get('catalpa') === '1') u.searchParams.set('catalpa', '1');
+        if (params.get('sweetgum') === '1') u.searchParams.set('sweetgum', '1');
+        if (params.get('hackberry') === '1') u.searchParams.set('hackberry', '1');
       if (params.get('tile') === '1') u.searchParams.set('tile', '1');
       if (params.get('outline') === '1') u.searchParams.set('outline', '1');
       if (params.get('stripe') === '1') u.searchParams.set('stripe', '1');
