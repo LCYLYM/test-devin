@@ -8224,3 +8224,42 @@ body[data-template=cellar] .cellar-visual{display:block}
 .cl-torch{position:absolute;top:34px;right:12%;width:8px;height:20px;background:radial-gradient(circle at 50% 30%,#ffb848,rgba(255,140,50,0) 80%),#5c3c20;background-size:100% 12px,100% 100%;background-repeat:no-repeat;border-radius:2px}
 .cellar-caption{text-align:center;font-size:11px;color:var(--dim);margin-top:10px}
 @media(prefers-reduced-motion:reduce){body[data-template=tram] .tr-tram,body[data-template=temple] .tp-lantern{transition:none}}
+
+body[data-template=gondola]{--bg:#0a1412;--surface:#12201c;--surface-2:#182a24;--line:#264038;--text:#d8ece4;--accent:#5a9a8a;--accent-rgb:90,154,138;--instrument:#0e1814;--muted:#70a090;--dim:#406058}
+.gondola-visual{display:none;position:relative;margin-top:18px}
+body[data-template=gondola] .charge-visual{display:none}
+body[data-template=gondola] .gondola-visual{display:block}
+.gn-scene{position:relative;height:150px;border-radius:16px;overflow:hidden;background:linear-gradient(180deg,#0e1c18,#0a1210)}
+.gn-arch{position:absolute;top:0;left:50%;transform:translateX(-50%);width:70px;height:56px;border:8px solid #2c3a30;border-bottom:none;border-radius:36px 36px 0 0}
+.gn-water{position:absolute;bottom:0;width:100%;height:54px;background:linear-gradient(180deg,#16302a,#0c1c18)}
+.gn-ripple{position:absolute;top:6px;width:100%;height:2px;background:repeating-linear-gradient(90deg,rgba(120,180,160,.4) 0 12px,transparent 12px 24px)}
+.gn-boat{position:absolute;bottom:30px;left:78%;width:56px;height:10px;background:#1a1208;border-radius:50% 50% 40% 40%;transition:left .5s}
+.gn-prow{position:absolute;right:-8px;top:-10px;width:4px;height:14px;background:#1a1208;transform:rotate(20deg);border-radius:2px}
+.gn-lamp{position:absolute;top:30px;left:16%;width:8px;height:12px;background:radial-gradient(circle at 50% 40%,#ffe088,rgba(255,200,90,.2));border-radius:3px}
+.gondola-caption{text-align:center;font-size:11px;color:var(--dim);margin-top:10px}
+body[data-template=rooftop]{--bg:#140e10;--surface:#20161a;--surface-2:#2a1c22;--line:#402e34;--text:#f0dde0;--accent:#b87a7a;--accent-rgb:184,122,122;--instrument:#1a1214;--muted:#b08088;--dim:#6e4c54}
+.rooftop-visual{display:none;position:relative;margin-top:18px}
+body[data-template=rooftop] .charge-visual{display:none}
+body[data-template=rooftop] .rooftop-visual{display:block}
+.rt-scene{position:relative;height:150px;border-radius:16px;overflow:hidden;background:linear-gradient(180deg,#1c1218,#120a0e)}
+.rt-skyline{position:absolute;bottom:34px;width:100%;height:46px;background:repeating-linear-gradient(90deg,#241820 0 26px,#2c1e28 26px 40px,#241820 40px 60px);clip-path:polygon(0 100%,0 40%,8% 40%,8% 20%,16% 20%,16% 50%,26% 50%,26% 10%,36% 10%,36% 45%,48% 45%,48% 25%,58% 25%,58% 55%,68% 55%,68% 15%,80% 15%,80% 40%,92% 40%,92% 30%,100% 30%,100% 100%)}
+.rt-line{position:absolute;top:20px;left:10%;width:80%;height:1px;background:#4a3a40}
+.rt-cloth{position:absolute;top:1px;width:14px;height:18px;transform-origin:top center}
+#rtC1{left:15%;background:#c8d8e8}
+#rtC2{left:45%;background:#e8c8b0}
+#rtC3{left:70%;background:#b8d8a8}
+.rt-rail{position:absolute;bottom:26px;width:100%;height:3px;background:#3a2c32}
+.rt-bird{position:absolute;bottom:29px;left:52%;width:10px;height:8px;background:#8a7a80;border-radius:5px 5px 2px 2px}
+.rooftop-caption{text-align:center;font-size:11px;color:var(--dim);margin-top:10px}
+body[data-template=boardwalk]{--bg:#0e120a;--surface:#181e12;--surface-2:#202818;--line:#324022;--text:#e4ecd0;--accent:#8a9a70;--accent-rgb:138,154,112;--instrument:#12160c;--muted:#94a478;--dim:#566438}
+.boardwalk-visual{display:none;position:relative;margin-top:18px}
+body[data-template=boardwalk] .charge-visual{display:none}
+body[data-template=boardwalk] .boardwalk-visual{display:block}
+.bw-scene{position:relative;height:150px;border-radius:16px;overflow:hidden;background:linear-gradient(180deg,#141c10,#0c1008)}
+.bw-sea{position:absolute;bottom:0;width:100%;height:60px;background:linear-gradient(180deg,#1e3028,#101c14)}
+.bw-wave{position:absolute;bottom:0;width:100%;height:10px;background:linear-gradient(180deg,rgba(180,220,200,.5),transparent);transition:height .5s}
+.bw-planks{position:absolute;bottom:44px;width:100%;height:14px;background:repeating-linear-gradient(90deg,#5c4a30 0 22px,#4a3a24 22px 24px)}
+.bw-post{position:absolute;bottom:44px;left:76%;width:6px;height:40px;background:#4a3a24}
+.bw-gull{position:absolute;top:16px;width:12px;height:5px;border-top:2px solid #d0d8c0;border-radius:50%}
+.boardwalk-caption{text-align:center;font-size:11px;color:var(--dim);margin-top:10px}
+@media(prefers-reduced-motion:reduce){body[data-template=gondola] .gn-boat,body[data-template=rooftop] .rt-cloth,body[data-template=boardwalk] .bw-gull{transition:none}}
