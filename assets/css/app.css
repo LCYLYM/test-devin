@@ -2842,6 +2842,12 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .is-serviceberry .instrument{border-color:rgba(180,160,210,.4)}
 .is-pawpaw{background:linear-gradient(180deg,#232a18 0%,#0f140a 100%)}
 .is-pawpaw .instrument{border-color:rgba(180,200,100,.4)}
+.is-hophornbeam{background:linear-gradient(180deg,#222720 0%,#0f120e 100%)}
+.is-hophornbeam .instrument{border-color:rgba(160,178,130,.4)}
+.is-musclewood{background:linear-gradient(180deg,#212528 0%,#0e1113 100%)}
+.is-musclewood .instrument{border-color:rgba(140,155,175,.4)}
+.is-yellowwood{background:linear-gradient(180deg,#2a2416 0%,#141006 100%)}
+.is-yellowwood .instrument{border-color:rgba(205,180,95,.4)}
 .is-oatmeal{background:linear-gradient(180deg,#1d1912,#2f291e 50%,#433a2a)}
 .is-oatmeal .instrument{border-color:rgba(215,195,155,.4)}
 .is-thyme{background:linear-gradient(180deg,#121a14,#1c2a20 50%,#28392c)}

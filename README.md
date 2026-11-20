@@ -1322,6 +1322,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `ironwood` | `1` 铁木配色 |
 | `serviceberry` | `1` 唐棣配色 |
 | `pawpaw` | `1` 泡泡树配色 |
+| `hophornbeam` | `1` クマシデ配色 |
+| `musclewood` | `1` アメリカシデ配色 |
+| `yellowwood` | `1` イエローウッド配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 
