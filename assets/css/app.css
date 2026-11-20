@@ -9223,8 +9223,6 @@ body[data-template=fishweir] .fishweir-visual{display:block}
 
 /* 皮坊 tannery: 鞣槽浸皮、皮张晾架 */
 .tannery-visual{display:none;grid-area:visual}
-html[data-template="tannery"] .pig-visual{display:none}
-html[data-template="tannery"] .tannery-visual{display:flex;flex-direction:column;align-items:center;gap:10px}
 .tny-scene{position:relative;width:270px;height:180px}
 .tny-vat{position:absolute;left:50%;bottom:8%;transform:translateX(-50%);width:70px;height:34px;background:#241810;border-radius:0 0 10px 10px;border:2px solid #3a2818;border-top-color:#4a3420;box-shadow:inset 0 -8px 12px rgba(0,0,0,.5)}
 .tny-vat::after{content:'';position:absolute;left:4px;right:4px;top:4px;height:8px;border-radius:50%;background:#5a4020;opacity:.8}
@@ -9237,8 +9235,6 @@ html[data-template="tannery"] .tannery-visual{display:flex;flex-direction:column
 
 /* 炭窑 charcoal: 土窑焖烧、青烟出窑 */
 .charcoal-visual{display:none;grid-area:visual}
-html[data-template="charcoal"] .pig-visual{display:none}
-html[data-template="charcoal"] .charcoal-visual{display:flex;flex-direction:column;align-items:center;gap:10px}
 .chc-scene{position:relative;width:270px;height:180px}
 .chc-mound{position:absolute;left:50%;bottom:8%;transform:translateX(-50%);width:130px;height:64px;background:radial-gradient(ellipse at 50% 90%,#3a2818,#201408 70%);border-radius:65px 65px 18px 18px;border-bottom:3px solid #100a04}
 .chc-mound::after{content:'';position:absolute;left:50%;top:34%;transform:translateX(-50%);width:18px;height:14px;background:#160e06;border-radius:6px 6px 3px 3px}
@@ -9249,8 +9245,6 @@ html[data-template="charcoal"] .charcoal-visual{display:flex;flex-direction:colu
 
 /* 鸭塘 duckpond: 鸭群绕塘、涟漪 */
 .duckpond-visual{display:none;grid-area:visual}
-html[data-template="duckpond"] .pig-visual{display:none}
-html[data-template="duckpond"] .duckpond-visual{display:flex;flex-direction:column;align-items:center;gap:10px}
 .dkp-scene{position:relative;width:270px;height:180px}
 .dkp-water{position:absolute;left:8%;right:8%;bottom:10%;height:56%;background:linear-gradient(#203038,#162228);border-radius:50%/18%;border:2px solid #2a3a44}
 .dkp-rip{position:absolute;bottom:34%;left:50%;width:40px;height:12px;border:2px solid #3a5a68;border-radius:50%;opacity:0;transform:translateX(-50%);transition:opacity .8s}
@@ -9265,8 +9259,6 @@ html[data-template="duckpond"] .duckpond-visual{display:flex;flex-direction:colu
 
 /* 蒸馏坊 distillery: 铜釜蒸馏、气泡升腾 */
 .distillery-visual{display:none;grid-area:visual}
-html[data-template="distillery"] .pig-visual{display:none}
-html[data-template="distillery"] .distillery-visual{display:flex;flex-direction:column;align-items:center;gap:10px}
 .dst-scene{position:relative;width:270px;height:180px}
 .dst-still{position:absolute;left:32%;bottom:10%;width:64px;height:64px;background:radial-gradient(circle at 40% 35%,#b06828,#6a3810 75%);border-radius:50% 50% 30% 30%;border-bottom:3px solid #3a1e08}
 .dst-still::after{content:'';position:absolute;left:50%;top:-18px;transform:translateX(-50%);width:10px;height:20px;background:#8a4a18;border-radius:4px}
@@ -9279,8 +9271,6 @@ html[data-template="distillery"] .distillery-visual{display:flex;flex-direction:
 
 /* 毡帐 tent: 帐门开启、炉火渐旺 */
 .tent-visual{display:none;grid-area:visual}
-html[data-template="tent"] .pig-visual{display:none}
-html[data-template="tent"] .tent-visual{display:flex;flex-direction:column;align-items:center;gap:10px}
 .tnt-scene{position:relative;width:270px;height:180px}
 .tnt-body{position:absolute;left:50%;bottom:10%;transform:translateX(-50%);width:0;height:0;border-left:75px solid transparent;border-right:75px solid transparent;border-bottom:110px solid #5a4428;filter:drop-shadow(0 4px 6px rgba(0,0,0,.4))}
 .tnt-flap{position:absolute;left:50%;bottom:10%;transform-origin:50% 0;width:0;height:0;border-left:26px solid transparent;border-right:26px solid transparent;border-bottom:44px solid #3a2a14;transition:transform 1.2s cubic-bezier(.34,1.4,.64,1)}
@@ -9291,8 +9281,6 @@ html[data-template="tent"] .tent-visual{display:flex;flex-direction:column;align
 
 /* 哨站 outpost: 塔灯巡夜、旗动风起 */
 .outpost-visual{display:none;grid-area:visual}
-html[data-template="outpost"] .pig-visual{display:none}
-html[data-template="outpost"] .outpost-visual{display:flex;flex-direction:column;align-items:center;gap:10px}
 .otp-scene{position:relative;width:270px;height:180px}
 .otp-tower{position:absolute;left:50%;bottom:10%;transform:translateX(-50%);width:34px;height:90px;background:linear-gradient(#2e3a48,#1a2430);clip-path:polygon(20% 0,80% 0,100% 100%,0 100%)}
 .otp-tower::after{content:'';position:absolute;left:50%;top:-14px;transform:translateX(-50%);width:44px;height:14px;background:#3a4a5a;border-radius:4px 4px 0 0}
@@ -9306,8 +9294,6 @@ html[data-template="outpost"] .outpost-visual{display:flex;flex-direction:column
 
 /* 乳坊 creamery: 搅乳桶起伏、黄油成块 */
 .creamery-visual{display:none;grid-area:visual}
-html[data-template="creamery"] .pig-visual{display:none}
-html[data-template="creamery"] .creamery-visual{display:flex;flex-direction:column;align-items:center;gap:10px}
 .crm-scene{position:relative;width:270px;height:180px}
 .crm-churn{position:absolute;left:26%;bottom:10%;width:52px;height:80px;background:linear-gradient(#6a4a28,#3a2810);border-radius:8px 8px 12px 12px;border:2px solid #2a1c08}
 .crm-churn::before,.crm-churn::after{content:'';position:absolute;left:-4px;right:-4px;height:6px;background:#8a6a40;border-radius:3px}
@@ -9320,8 +9306,6 @@ html[data-template="creamery"] .creamery-visual{display:flex;flex-direction:colu
 
 /* 茅屋 hut: 炊烟、窗光 */
 .hut-visual{display:none;grid-area:visual}
-html[data-template="hut"] .pig-visual{display:none}
-html[data-template="hut"] .hut-visual{display:flex;flex-direction:column;align-items:center;gap:10px}
 .hut-scene{position:relative;width:270px;height:180px}
 .hut-body{position:absolute;left:50%;bottom:10%;transform:translateX(-50%);width:110px;height:56px;background:linear-gradient(#4a3820,#2e2010);border-radius:4px}
 .hut-roof{position:absolute;left:50%;bottom:38%;transform:translateX(-50%);width:0;height:0;border-left:70px solid transparent;border-right:70px solid transparent;border-bottom:40px solid #6a5428}
@@ -9333,8 +9317,6 @@ html[data-template="hut"] .hut-visual{display:flex;flex-direction:column;align-i
 
 /* 海苔架 nori: 潮间竹架、海苔晾开 */
 .nori-visual{display:none;grid-area:visual}
-html[data-template="nori"] .pig-visual{display:none}
-html[data-template="nori"] .nori-visual{display:flex;flex-direction:column;align-items:center;gap:10px}
 .nor-scene{position:relative;width:270px;height:180px}
 .nor-sea{position:absolute;left:0;right:0;bottom:0;height:34%;background:linear-gradient(#1a2e3a,#101e28);border-radius:0 0 14px 14px}
 .nor-sea::after{content:'';position:absolute;left:10%;right:10%;top:6px;height:2px;background:#3a5a6a44;border-radius:2px}
@@ -9348,8 +9330,6 @@ html[data-template="nori"] .nori-visual{display:flex;flex-direction:column;align
 
 /* 药铺 apothecary: 悬草阴干、石臼捣药 */
 .apothecary-visual{display:none;grid-area:visual}
-html[data-template="apothecary"] .pig-visual{display:none}
-html[data-template="apothecary"] .apothecary-visual{display:flex;flex-direction:column;align-items:center;gap:10px}
 .apo-scene{position:relative;width:270px;height:180px}
 .apo-shelf{position:absolute;left:10%;right:10%;top:14%;height:4px;background:#5a4428;border-radius:2px}
 .apo-herb{position:absolute;top:18%;width:14px;height:34px;background:linear-gradient(#6a8a4a,#3e5a2a);clip-path:polygon(50% 0,100% 25%,70% 100%,30% 100%,0 25%);opacity:0;transition:opacity .8s;transform-origin:50% 0}
@@ -9360,8 +9340,6 @@ html[data-template="apothecary"] .apothecary-visual{display:flex;flex-direction:
 
 /* 潮池 tidepool: 潮水漫池、海葵绽放 */
 .tidepool-visual{display:none;grid-area:visual}
-html[data-template="tidepool"] .pig-visual{display:none}
-html[data-template="tidepool"] .tidepool-visual{display:flex;flex-direction:column;align-items:center;gap:10px}
 .tdp-scene{position:relative;width:270px;height:180px}
 .tdp-rock{position:absolute;left:12%;right:12%;bottom:8%;height:62%;background:radial-gradient(ellipse at 50% 100%,#3a3630,#241f18 75%);border-radius:50% 50% 20% 20%/60% 60% 16% 16%}
 .tdp-water{position:absolute;left:22%;right:22%;bottom:16%;height:44%;background:radial-gradient(ellipse at 50% 60%,#3a7a8a99,#1a4a55cc);border-radius:50% 50% 24% 24%/70% 70% 20% 20%;opacity:.3;transition:opacity 1s}
@@ -9373,8 +9351,6 @@ html[data-template="tidepool"] .tidepool-visual{display:flex;flex-direction:colu
 
 /* 石窟 grotto: 天光入穴、暗池生光 */
 .grotto-visual{display:none;grid-area:visual}
-html[data-template="grotto"] .pig-visual{display:none}
-html[data-template="grotto"] .grotto-visual{display:flex;flex-direction:column;align-items:center;gap:10px}
 .grt-scene{position:relative;width:270px;height:180px;background:radial-gradient(ellipse at 50% 120%,#1a2030,#0a0d16 80%);border-radius:14px;overflow:hidden}
 .grt-stal{position:absolute;top:0;width:14px;background:linear-gradient(#3a4254,#242a3a);clip-path:polygon(0 0,100% 0,50% 100%);opacity:0;transition:opacity .8s}
 #grtS1{left:28%;height:46px}#grtS2{left:48%;height:64px}#grtS3{left:66%;height:38px}
@@ -9384,8 +9360,6 @@ html[data-template="grotto"] .grotto-visual{display:flex;flex-direction:column;a
 
 /* 蜡坊 candleworks: 吊杆蘸蜡、烛火点亮 */
 .candleworks-visual{display:none;grid-area:visual}
-html[data-template="candleworks"] .pig-visual{display:none}
-html[data-template="candleworks"] .candleworks-visual{display:flex;flex-direction:column;align-items:center;gap:10px}
 .cdw-scene{position:relative;width:270px;height:180px}
 .cdw-bar{position:absolute;left:16%;right:16%;top:18%;height:5px;background:#5a4428;border-radius:3px}
 .cdw-bar::before,.cdw-bar::after{content:'';position:absolute;top:0;width:6px;height:110px;background:#4a3820}
@@ -9413,8 +9387,6 @@ body[data-template=potterywheel] .potterywheel-visual{display:flex;flex-directio
 
 /* 冷床 coldframe: 斜玻冷床、嫩芽破土 */
 .coldframe-visual{display:none;grid-area:visual}
-html[data-template="coldframe"] .pig-visual{display:none}
-html[data-template="coldframe"] .coldframe-visual{display:flex;flex-direction:column;align-items:center;gap:10px}
 .cfd-scene{position:relative;width:270px;height:180px}
 .cfd-box{position:absolute;left:50%;bottom:10%;transform:translateX(-50%) skewX(-8deg);width:150px;height:64px;background:linear-gradient(#4a3a22,#2e2210);border-radius:6px;border:2px solid #3a2c14}
 .cfd-glass{position:absolute;left:50%;bottom:38%;transform:translateX(-50%) skewX(-8deg);width:152px;height:14px;background:linear-gradient(rgba(180,220,240,.35),rgba(120,160,190,.15));border-radius:3px;border:1px solid #6a8a9a55;opacity:.4;transition:opacity 1s}
@@ -9427,8 +9399,6 @@ html[data-template="coldframe"] .coldframe-visual{display:flex;flex-direction:co
 
 /* 盆景 bonsai: 盆中蟠干、叶团渐丰 */
 .bonsai-visual{display:none;grid-area:visual}
-html[data-template="bonsai"] .pig-visual{display:none}
-html[data-template="bonsai"] .bonsai-visual{display:flex;flex-direction:column;align-items:center;gap:10px}
 .bns-scene{position:relative;width:270px;height:180px}
 .bns-pot{position:absolute;left:50%;bottom:10%;transform:translateX(-50%);width:90px;height:34px;background:linear-gradient(#5a4630,#3a2a18);border-radius:6px 6px 14px 14px;border-top:4px solid #6a5638}
 .bns-trunk{position:absolute;left:50%;bottom:26%;width:10px;height:56px;background:#4a3820;border-radius:5px;transform:translateX(-50%) rotate(-8deg);transform-origin:50% 100%}
@@ -9439,8 +9409,6 @@ html[data-template="bonsai"] .bonsai-visual{display:flex;flex-direction:column;a
 
 /* 榨坊 ciderpress: 螺杆下压、果汁入槽 */
 .ciderpress-visual{display:none;grid-area:visual}
-html[data-template="ciderpress"] .pig-visual{display:none}
-html[data-template="ciderpress"] .ciderpress-visual{display:flex;flex-direction:column;align-items:center;gap:10px}
 .cdp-scene{position:relative;width:270px;height:180px}
 .cdp-frame{position:absolute;left:50%;bottom:10%;transform:translateX(-50%);width:120px;height:110px;border:6px solid #4a3620;border-top-width:8px;border-bottom-width:6px;background:transparent;border-radius:4px}
 .cdp-screw{position:absolute;left:50%;top:8%;width:10px;height:52px;background:repeating-linear-gradient(#8a6a40 0 4px,#6a4e28 4px 8px);border-radius:5px;transition:transform .5s}
@@ -9453,8 +9421,6 @@ html[data-template="ciderpress"] .ciderpress-visual{display:flex;flex-direction:
 
 /* 泵房 pumphouse: 水箱渐满、表针攀顶 */
 .pumphouse-visual{display:none;grid-area:visual}
-html[data-template="pumphouse"] .pig-visual{display:none}
-html[data-template="pumphouse"] .pumphouse-visual{display:flex;flex-direction:column;align-items:center;gap:10px}
 .pph-scene{position:relative;width:270px;height:180px}
 .pph-tank{position:absolute;left:24%;bottom:10%;width:56px;height:96px;background:linear-gradient(#3a4a56,#222e38);border-radius:10px 10px 6px 6px;border:2px solid #4a5a68;overflow:hidden;--lvl:0}
 .pph-tank::after{content:'';position:absolute;left:0;right:0;bottom:0;height:calc(var(--lvl)*100%);background:linear-gradient(#5a9ac0,#3a6a8a);transition:height .6s}
@@ -9470,8 +9436,6 @@ html[data-template="pumphouse"] .pumphouse-visual{display:flex;flex-direction:co
 
 /* 风铃 windchime: 悬管摇曳、声纹荡开 */
 .windchime-visual{display:none;grid-area:visual}
-html[data-template="windchime"] .pig-visual{display:none}
-html[data-template="windchime"] .windchime-visual{display:flex;flex-direction:column;align-items:center;gap:10px}
 .wch-scene{position:relative;width:270px;height:180px}
 .wch-top{position:absolute;left:50%;top:8%;transform:translateX(-50%);width:70px;height:10px;background:linear-gradient(#5a6a74,#3a4a54);border-radius:6px}
 .wch-tube{position:absolute;top:15%;width:7px;height:56px;background:linear-gradient(#a8ccd8,#6a95a5);border-radius:4px;opacity:0;transform-origin:50% -10px;transition:opacity .8s,transform .3s}
@@ -9481,8 +9445,6 @@ html[data-template="windchime"] .windchime-visual{display:flex;flex-direction:co
 
 /* 旗语台 semaphore: 臂板变位、山顶传信 */
 .semaphore-visual{display:none;grid-area:visual}
-html[data-template="semaphore"] .pig-visual{display:none}
-html[data-template="semaphore"] .semaphore-visual{display:flex;flex-direction:column;align-items:center;gap:10px}
 .smh-scene{position:relative;width:270px;height:180px}
 .smh-mast{position:absolute;left:50%;bottom:8%;transform:translateX(-50%);width:12px;height:130px;background:linear-gradient(#4a3826,#2e2010);border-radius:6px 6px 0 0}
 .smh-mast::before{content:'';position:absolute;left:50%;top:-6px;transform:translateX(-50%);width:22px;height:22px;background:#3a2a18;border-radius:50%}
@@ -9494,8 +9456,6 @@ html[data-template="semaphore"] .semaphore-visual{display:flex;flex-direction:co
 
 /* 码头 quay: 吊臂装卸、货箱叠岸 */
 .quay-visual{display:none;grid-area:visual}
-html[data-template="quay"] .pig-visual{display:none}
-html[data-template="quay"] .quay-visual{display:flex;flex-direction:column;align-items:center;gap:10px}
 .quy-scene{position:relative;width:270px;height:180px}
 .quy-water{position:absolute;left:0;right:0;bottom:0;height:30%;background:linear-gradient(#16222e,#0e1822)}
 .quy-crane{position:absolute;left:56%;bottom:30%;width:10px;height:80px;background:#3a4a58}
@@ -9507,8 +9467,6 @@ html[data-template="quay"] .quay-visual{display:flex;flex-direction:column;align
 
 /* 喷泉 fountain: 三股水柱拔高 */
 .fountain-visual{display:none;grid-area:visual}
-html[data-template="fountain"] .pig-visual{display:none}
-html[data-template="fountain"] .fountain-visual{display:flex;flex-direction:column;align-items:center;gap:10px}
 .fnt-scene{position:relative;width:270px;height:180px}
 .fnt-basin{position:absolute;left:50%;bottom:10%;transform:translateX(-50%);width:150px;height:34px;background:linear-gradient(#4a5a68,#2e3a44);border-radius:10px 10px 14px 14px;border-top:4px solid #5a6a78}
 .fnt-jet{position:absolute;bottom:36%;width:6px;background:linear-gradient(transparent,#8ac8e8,#b8e0f0);border-radius:3px 3px 0 0;height:0;transition:height .9s;transform-origin:50% 100%}
@@ -9519,8 +9477,6 @@ html[data-template="fountain"] .fountain-visual{display:flex;flex-direction:colu
 
 /* 柴垛 woodpile: 圆木逐根上垛 */
 .woodpile-visual{display:none;grid-area:visual}
-html[data-template="woodpile"] .pig-visual{display:none}
-html[data-template="woodpile"] .woodpile-visual{display:flex;flex-direction:column;align-items:center;gap:10px}
 .wdp-scene{position:relative;width:270px;height:180px}
 .wdp-log{position:absolute;width:70px;height:16px;background:linear-gradient(#8a5e30,#5e3c18);border-radius:8px;opacity:0;transition:opacity .7s}
 .wdp-log::before{content:'';position:absolute;left:0;top:0;width:16px;height:16px;background:radial-gradient(#c89858,#8a5e30);border-radius:50%;border:1px solid #4a2e10}
@@ -9531,8 +9487,6 @@ html[data-template="woodpile"] .woodpile-visual{display:flex;flex-direction:colu
 
 /* 晾衣绳 clothesline: 衣衫上绳、随风摆 */
 .clothesline-visual{display:none;grid-area:visual}
-html[data-template="clothesline"] .pig-visual{display:none}
-html[data-template="clothesline"] .clothesline-visual{display:flex;flex-direction:column;align-items:center;gap:10px}
 .cln-scene{position:relative;width:270px;height:180px}
 .cln-line{position:absolute;left:6%;right:6%;top:22%;height:2px;background:#9aa8b4;transform:rotate(-2deg)}
 .cln-line::before,.cln-line::after{content:'';position:absolute;top:-4px;width:6px;height:90px;background:#5a6a74}
@@ -9547,8 +9501,6 @@ html[data-template="clothesline"] .clothesline-visual{display:flex;flex-directio
 
 /* 纸坊 papermill: 抄纸帘起、湿纸上墙 */
 .papermill-visual{display:none;grid-area:visual}
-html[data-template="papermill"] .pig-visual{display:none}
-html[data-template="papermill"] .papermill-visual{display:flex;flex-direction:column;align-items:center;gap:10px}
 .pml-scene{position:relative;width:270px;height:180px}
 .pml-vat{position:absolute;left:22%;bottom:10%;width:96px;height:40px;background:linear-gradient(#4a3c24,#2e2412);border-radius:6px;border-top:4px solid #5e4e30}
 .pml-vat::after{content:'';position:absolute;left:6px;right:6px;top:4px;height:8px;background:#8a7a55;border-radius:4px;opacity:.7}
@@ -9559,8 +9511,6 @@ html[data-template="papermill"] .papermill-visual{display:flex;flex-direction:co
 
 /* 温泉 onsen: 汤池腾汽 */
 .onsen-visual{display:none;grid-area:visual}
-html[data-template="onsen"] .pig-visual{display:none}
-html[data-template="onsen"] .onsen-visual{display:flex;flex-direction:column;align-items:center;gap:10px}
 .ons-scene{position:relative;width:270px;height:180px}
 .ons-rocks{position:absolute;left:14%;right:14%;bottom:8%;height:56%;background:radial-gradient(ellipse at 50% 100%,#4a4640,#2a2620 80%);border-radius:50% 50% 24% 24%/70% 70% 20% 20%}
 .ons-rocks::before{content:'';position:absolute;left:-14px;top:24%;width:34px;height:26px;background:#3a3630;border-radius:50%}
@@ -9571,8 +9521,6 @@ html[data-template="onsen"] .onsen-visual{display:flex;flex-direction:column;ali
 
 /* 猪圈 pigsty: 泥坑打滚、小猪甩尾 */
 .pigsty-visual{display:none;grid-area:visual}
-html[data-template="pigsty"] .pig-visual{display:none}
-html[data-template="pigsty"] .pigsty-visual{display:flex;flex-direction:column;align-items:center;gap:10px}
 .sty-scene{position:relative;width:270px;height:180px}
 .sty-fence{position:absolute;left:8%;right:8%;bottom:8%;height:44%;border:4px solid #5a4428;border-top-width:0;border-radius:0 0 8px 8px}
 .sty-fence::before{content:'';position:absolute;left:0;right:0;top:18%;height:5px;background:#5a4428}
@@ -9588,8 +9536,6 @@ html[data-template="pigsty"] .pigsty-visual{display:flex;flex-direction:column;a
 
 /* 蜂场 apiary: 蜂箱列置、群蜂归巢 */
 .apiary-visual{display:none;grid-area:visual}
-html[data-template="apiary"] .pig-visual{display:none}
-html[data-template="apiary"] .apiary-visual{display:flex;flex-direction:column;align-items:center;gap:10px}
 .api-scene{position:relative;width:270px;height:180px}
 .api-hive{position:absolute;left:26%;bottom:10%;width:52px;height:56px;background:linear-gradient(#a87820,#6a4c10);border-radius:10px 10px 6px 6px}
 .api-hive::before,.api-hive::after{content:'';position:absolute;left:-3px;right:-3px;height:5px;background:#c09030;border-radius:3px}
@@ -9604,8 +9550,6 @@ html[data-template="apiary"] .apiary-visual{display:flex;flex-direction:column;a
 
 /* 药圃 herbgarden: 畦垄抽苗 */
 .herbgarden-visual{display:none;grid-area:visual}
-html[data-template="herbgarden"] .pig-visual{display:none}
-html[data-template="herbgarden"] .herbgarden-visual{display:flex;flex-direction:column;align-items:center;gap:10px}
 .hbg-scene{position:relative;width:270px;height:180px}
 .hbg-bed{position:absolute;left:12%;right:12%;bottom:10%;height:52%;background:linear-gradient(#3a2c18,#241a0c);border-radius:8px;border:2px solid #4a3a20}
 .hbg-bed::before,.hbg-bed::after{content:'';position:absolute;left:6%;right:6%;height:5px;background:#2e2210;border-radius:3px}
@@ -9621,8 +9565,6 @@ html[data-template="herbgarden"] .herbgarden-visual{display:flex;flex-direction:
 
 /* 滩涂 tideflat: 潮退蟹行 */
 .tideflat-visual{display:none;grid-area:visual}
-html[data-template="tideflat"] .pig-visual{display:none}
-html[data-template="tideflat"] .tideflat-visual{display:flex;flex-direction:column;align-items:center;gap:10px}
 .tfl-scene{position:relative;width:270px;height:180px}
 .tfl-mud{position:absolute;left:0;right:0;bottom:0;height:46%;background:linear-gradient(#4a3e2a,#2e2616);border-radius:60% 40% 0 0/30% 30% 0 0}
 .tfl-mud::after{content:'';position:absolute;left:20%;top:30%;width:60%;height:3px;background:#6a5a3a44;border-radius:2px}
@@ -9637,8 +9579,6 @@ html[data-template="tideflat"] .tideflat-visual{display:flex;flex-direction:colu
 
 /* 珊瑚礁 coralreef: 珊瑚抽枝、游鱼穿梭 */
 .coralreef-visual{display:none;grid-area:visual}
-html[data-template="coralreef"] .pig-visual{display:none}
-html[data-template="coralreef"] .coralreef-visual{display:flex;flex-direction:column;align-items:center;gap:10px}
 .crl-scene{position:relative;width:270px;height:180px;background:linear-gradient(#0e2230,#08141e);border-radius:14px;overflow:hidden}
 .crl-sea{position:absolute;left:0;right:0;bottom:0;height:22%;background:#0a1a26}
 .crl-cor{position:absolute;bottom:12%;background:#e08070;opacity:0;transform-origin:50% 100%;transition:opacity .8s,transform .8s;clip-path:polygon(50% 0,58% 30%,72% 22%,62% 48%,80% 44%,60% 70%,64% 100%,36% 100%,40% 70%,20% 44%,38% 48%,28% 22%,42% 30%)}
@@ -9652,8 +9592,6 @@ html[data-template="coralreef"] .coralreef-visual{display:flex;flex-direction:co
 
 /* 栖林 rookery: 群鸟栖枝 */
 .rookery-visual{display:none;grid-area:visual}
-html[data-template="rookery"] .pig-visual{display:none}
-html[data-template="rookery"] .rookery-visual{display:flex;flex-direction:column;align-items:center;gap:10px}
 .rky-scene{position:relative;width:270px;height:180px}
 .rky-tree{position:absolute;left:30%;bottom:8%;width:9px;height:110px;background:#3a2c18;border-radius:5px}
 .rky-tree::before,.rky-tree::after{content:'';position:absolute;background:#3a2c18;border-radius:4px}
@@ -9668,8 +9606,6 @@ html[data-template="rookery"] .rookery-visual{display:flex;flex-direction:column
 
 /* 酒坊 brewery: 醪液翻沫、酒桶渐满 */
 .brewery-visual{display:none;grid-area:visual}
-html[data-template="brewery"] .pig-visual{display:none}
-html[data-template="brewery"] .brewery-visual{display:flex;flex-direction:column;align-items:center;gap:10px}
 .brw-scene{position:relative;width:270px;height:180px}
 .brw-vat{position:absolute;left:24%;bottom:12%;width:70px;height:78px;background:linear-gradient(#5a4020,#38260e);border-radius:8px 8px 12px 12px;border:2px solid #2a1c08}
 .brw-vat::before{content:'';position:absolute;left:-4px;right:-4px;top:30%;height:6px;background:#7a5a2c;border-radius:3px}
@@ -9683,8 +9619,6 @@ html[data-template="brewery"] .brewery-visual{display:flex;flex-direction:column
 
 /* 花草甸 meadow: 野花次第开放 */
 .meadow-visual{display:none;grid-area:visual}
-html[data-template="meadow"] .pig-visual{display:none}
-html[data-template="meadow"] .meadow-visual{display:flex;flex-direction:column;align-items:center;gap:10px}
 .mdw-scene{position:relative;width:270px;height:180px;background:linear-gradient(#1a2a16,#101a0e 70%);border-radius:14px}
 .mdw-scene::after{content:'';position:absolute;left:0;right:0;bottom:0;height:34%;background:linear-gradient(#2a3e1e,#1c2a12);border-radius:60% 40% 14px 14px/40% 40% 0 0}
 .mdw-f{position:absolute;bottom:14%;width:6px;height:22px;background:#4a7a30;border-radius:3px;opacity:0;transform:scale(.4);transform-origin:50% 100%;transition:opacity .8s,transform .8s}
@@ -9705,8 +9639,6 @@ html[data-template="meadow"] .meadow-visual{display:flex;flex-direction:column;a
 
 /* 水渠 millrace: 渠水流动、落叶逐流 */
 .millrace-visual{display:none;grid-area:visual}
-html[data-template="millrace"] .pig-visual{display:none}
-html[data-template="millrace"] .millrace-visual{display:flex;flex-direction:column;align-items:center;gap:10px}
 .mlr-scene{position:relative;width:270px;height:180px}
 .mlr-channel{position:absolute;left:6%;right:6%;bottom:16%;height:44%;background:linear-gradient(#3a3226,#28201a);border-radius:10px;border:3px solid #4a4030;border-top-width:5px}
 .mlr-flow{position:absolute;left:10%;right:10%;bottom:22%;height:30%;background:linear-gradient(#4a86a0,#2e5a70);border-radius:8px;opacity:.25;transition:opacity 1s;overflow:hidden}
@@ -9719,8 +9651,6 @@ html[data-template="millrace"] .millrace-visual{display:flex;flex-direction:colu
 
 /* 草棚 hayloft: 干草上垛 */
 .hayloft-visual{display:none;grid-area:visual}
-html[data-template="hayloft"] .pig-visual{display:none}
-html[data-template="hayloft"] .hayloft-visual{display:flex;flex-direction:column;align-items:center;gap:10px}
 .hyl-scene{position:relative;width:270px;height:180px}
 .hyl-frame{position:absolute;left:16%;right:16%;bottom:8%;height:70%;border:6px solid #4a3a22;border-bottom-width:0;border-radius:6px 6px 0 0}
 .hyl-frame::before{content:'';position:absolute;left:-10px;right:-10px;top:-20px;height:16px;background:linear-gradient(#6a5428,#4a3820);clip-path:polygon(0 100%,50% 0,100% 100%)}
@@ -9733,8 +9663,6 @@ html[data-template="hayloft"] .hayloft-visual{display:flex;flex-direction:column
 
 /* 盐沼 saltmarsh: 水草连绵、白鹭独立 */
 .saltmarsh-visual{display:none;grid-area:visual}
-html[data-template="saltmarsh"] .pig-visual{display:none}
-html[data-template="saltmarsh"] .saltmarsh-visual{display:flex;flex-direction:column;align-items:center;gap:10px}
 .smr-scene{position:relative;width:270px;height:180px}
 .smr-pool{position:absolute;left:8%;right:8%;bottom:8%;height:40%;background:linear-gradient(#2e4438,#1c2c22);border-radius:50%/30%;opacity:.3;transition:opacity 1s}
 .smr-grass{position:absolute;bottom:16%;width:7px;background:linear-gradient(#8ab878,#4a7a3e);clip-path:polygon(30% 0,70% 0,100% 100%,0 100%);opacity:0;height:8px;transition:opacity .8s,height .8s}
@@ -9746,8 +9674,6 @@ html[data-template="saltmarsh"] .saltmarsh-visual{display:flex;flex-direction:co
 
 /* 石滩 stonefield: 卵石成滩、苔衣渐染 */
 .stonefield-visual{display:none;grid-area:visual}
-html[data-template="stonefield"] .pig-visual{display:none}
-html[data-template="stonefield"] .stonefield-visual{display:flex;flex-direction:column;align-items:center;gap:10px}
 .stf-scene{position:relative;width:270px;height:180px;background:linear-gradient(#1c1c18,#121210 70%);border-radius:14px}
 .stf-scene::after{content:'';position:absolute;left:0;right:0;bottom:0;height:40%;background:linear-gradient(#2c2c26,#1c1c16);border-radius:50% 50% 14px 14px/60% 60% 0 0}
 .stf-stone{position:absolute;border-radius:50%;opacity:0;transition:opacity .7s}
@@ -9761,8 +9687,6 @@ html[data-template="stonefield"] .stonefield-visual{display:flex;flex-direction:
 
 /* 鱼塘 fishpond: 锦鲤回游、涟漪推莲 */
 .fishpond-visual{display:none;grid-area:visual}
-html[data-template="fishpond"] .pig-visual{display:none}
-html[data-template="fishpond"] .fishpond-visual{display:flex;flex-direction:column;align-items:center;gap:10px}
 .fsp-scene{position:relative;width:270px;height:180px}
 .fsp-water{position:absolute;left:8%;right:8%;bottom:8%;height:64%;background:radial-gradient(ellipse at 50% 40%,#2e5650,#16302c);border-radius:50%/34%;border:3px solid #3a4a34}
 .fsp-koi{position:absolute;bottom:30%;width:22px;height:11px;border-radius:60% 40% 40% 60%;opacity:0;transition:left 2.4s linear,opacity .8s}
@@ -9778,8 +9702,6 @@ html[data-template="fishpond"] .fishpond-visual{display:flex;flex-direction:colu
 
 /* 生态瓶 terrarium: 玻璃球内草木生长 */
 .terrarium-visual{display:none;grid-area:visual}
-html[data-template="terrarium"] .pig-visual{display:none}
-html[data-template="terrarium"] .terrarium-visual{display:flex;flex-direction:column;align-items:center;gap:10px}
 .trr-scene{position:relative;width:270px;height:180px}
 .trr-jar{position:absolute;left:50%;bottom:10%;transform:translateX(-50%);width:120px;height:120px;border:3px solid #7a9a8a55;border-radius:50% 50% 30% 30%/60% 60% 20% 20%;background:linear-gradient(rgba(90,140,120,.08),rgba(60,100,85,.15));overflow:hidden}
 .trr-soil{position:absolute;left:0;right:0;bottom:0;height:26%;background:linear-gradient(#3a2e1e,#241a10);border-radius:50%/30%}
@@ -9791,8 +9713,6 @@ html[data-template="terrarium"] .terrarium-visual{display:flex;flex-direction:co
 
 /* 钟表铺 watchmaker: 齿轮转动、指针归位 */
 .watchmaker-visual{display:none;grid-area:visual}
-html[data-template="watchmaker"] .pig-visual{display:none}
-html[data-template="watchmaker"] .watchmaker-visual{display:flex;flex-direction:column;align-items:center;gap:10px}
 .wmk-scene{position:relative;width:270px;height:180px}
 .wmk-case{position:absolute;left:30%;bottom:14%;width:90px;height:90px;border:5px solid #8a6a30;border-radius:50%;background:radial-gradient(#2a2418,#14100a)}
 .wmk-gear{position:absolute;left:50%;bottom:38%;width:34px;height:34px;background:conic-gradient(#c8a050 0 10%,#6a5220 10% 20%,#c8a050 20% 30%,#6a5220 30% 40%,#c8a050 40% 50%,#6a5220 50% 60%,#c8a050 60% 70%,#6a5220 70% 80%,#c8a050 80% 90%,#6a5220 90%);border-radius:50%;transform:translateX(-50%)}
@@ -9804,8 +9724,6 @@ html[data-template="watchmaker"] .watchmaker-visual{display:flex;flex-direction:
 
 /* 桑拿房 sauna: 炉石发热、蒸汽弥漫 */
 .sauna-visual{display:none;grid-area:visual}
-html[data-template="sauna"] .pig-visual{display:none}
-html[data-template="sauna"] .sauna-visual{display:flex;flex-direction:column;align-items:center;gap:10px}
 .sau-scene{position:relative;width:270px;height:180px;background:linear-gradient(#3a2c1c,#241a10);border-radius:14px}
 .sau-bench{position:absolute;left:12%;right:12%;bottom:24%;height:12px;background:repeating-linear-gradient(90deg,#7a5c34 0 22px,#5a4224 22px 26px);border-radius:3px}
 .sau-bench::before,.sau-bench::after{content:'';position:absolute;top:12px;width:8px;height:36px;background:#4a3620}
@@ -9820,8 +9738,6 @@ html[data-template="sauna"] .sauna-visual{display:flex;flex-direction:column;ali
 
 /* 崖居 cliffside: 凿壁成屋、窗光渐亮 */
 .cliffside-visual{display:none;grid-area:visual}
-html[data-template="cliffside"] .pig-visual{display:none}
-html[data-template="cliffside"] .cliffside-visual{display:flex;flex-direction:column;align-items:center;gap:10px}
 .clf-scene{position:relative;width:270px;height:180px}
 .clf-rock{position:absolute;left:14%;bottom:0;width:56%;height:88%;background:linear-gradient(#5a5044,#382f26 70%);clip-path:polygon(0 100%,0 30%,15% 8%,45% 0,75% 5%,95% 22%,100% 55%,100% 100%);border-radius:0 24px 0 0}
 .clf-dwelling{position:absolute;left:26%;bottom:38%;width:60px;height:46px;background:#241c14;border-radius:8px 8px 2px 2px;border-top:5px solid #6a5a42}
@@ -9833,8 +9749,6 @@ html[data-template="cliffside"] .cliffside-visual{display:flex;flex-direction:co
 
 /* 泉屋 springhouse: 泉眼涌水、檐下滴落 */
 .springhouse-visual{display:none;grid-area:visual}
-html[data-template="springhouse"] .pig-visual{display:none}
-html[data-template="springhouse"] .springhouse-visual{display:flex;flex-direction:column;align-items:center;gap:10px}
 .sph-scene{position:relative;width:270px;height:180px}
 .sph-hut{position:absolute;left:56%;bottom:30%;width:74px;height:56px;background:linear-gradient(#4a3c26,#2e2414);border-radius:4px}
 .sph-hut::before{content:'';position:absolute;left:-8px;right:-8px;top:-16px;height:14px;background:#6a5636;clip-path:polygon(0 100%,50% 0,100% 100%)}
@@ -9847,8 +9761,6 @@ html[data-template="springhouse"] .springhouse-visual{display:flex;flex-directio
 
 /* 梯田 riceterrace: 层层灌田、水镜映天 */
 .riceterrace-visual{display:none;grid-area:visual}
-html[data-template="riceterrace"] .pig-visual{display:none}
-html[data-template="riceterrace"] .riceterrace-visual{display:flex;flex-direction:column;align-items:center;gap:10px}
 .rt-scene{position:relative;width:270px;height:180px}
 .rt-t1,.rt-t2,.rt-t3{position:absolute;left:50%;transform:translateX(-50%);border-radius:0 0 50% 50%/0 0 100% 100%;opacity:0;transition:opacity .9s;border:2px solid #4a6a3a;border-top:3px solid #6a8a4a}
 .rt-t1{bottom:52%;width:120px;height:26px;background:linear-gradient(#4a7a8a,#2e565e)}
@@ -9861,8 +9773,6 @@ html[data-template="riceterrace"] .riceterrace-visual{display:flex;flex-directio
 
 /* 竹林 bambooforest: 新篁拔节、叶落随风 */
 .bambooforest-visual{display:none;grid-area:visual}
-html[data-template="bambooforest"] .pig-visual{display:none}
-html[data-template="bambooforest"] .bambooforest-visual{display:flex;flex-direction:column;align-items:center;gap:10px}
 .bmb-scene{position:relative;width:270px;height:180px;background:linear-gradient(#14240f,#0c1608 75%);border-radius:14px;overflow:hidden}
 .bmb-stalk{position:absolute;bottom:0;width:9px;background:repeating-linear-gradient(#6aa858 0 26px,#4a7a3c 26px 29px);border-radius:5px 5px 0 0;opacity:0;height:30px;transform-origin:50% 100%;transition:opacity .8s,height .9s}
 .bmb-stalk::before{content:'';position:absolute;top:6px;left:-8px;width:14px;height:5px;background:#5a9a48;border-radius:60% 0 60% 0;transform:rotate(-20deg)}
@@ -9874,8 +9784,6 @@ html[data-template="bambooforest"] .bambooforest-visual{display:flex;flex-direct
 
 /* 薰衣田 lavenderfield: 紫浪成垄 */
 .lavenderfield-visual{display:none;grid-area:visual}
-html[data-template="lavenderfield"] .pig-visual{display:none}
-html[data-template="lavenderfield"] .lavenderfield-visual{display:flex;flex-direction:column;align-items:center;gap:10px}
 .lvf-scene{position:relative;width:270px;height:180px;background:linear-gradient(#1a1424,#120e1a 60%);border-radius:14px;overflow:hidden}
 .lvf-row{position:absolute;left:-4%;right:-4%;height:26px;background:repeating-linear-gradient(90deg,#7a5aa8 0 14px,#5e4086 14px 22px);border-radius:50%/100%;opacity:0;transform:skewY(-4deg) scaleY(.3);transform-origin:50% 100%;transition:opacity .9s,transform .9s}
 #lvfR1{bottom:44%}#lvfR2{bottom:26%}#lvfR3{bottom:8%;height:32px}
@@ -9886,8 +9794,6 @@ html[data-template="lavenderfield"] .lavenderfield-visual{display:flex;flex-dire
 
 /* 石桥 stonebridge: 拱影跨溪、苔痕上石 */
 .stonebridge-visual{display:none;grid-area:visual}
-html[data-template="stonebridge"] .pig-visual{display:none}
-html[data-template="stonebridge"] .stonebridge-visual{display:flex;flex-direction:column;align-items:center;gap:10px}
 .stb-scene{position:relative;width:270px;height:180px}
 .stb-arch{position:absolute;left:50%;bottom:30%;transform:translateX(-50%);width:150px;height:56px;background:#6a6a60;border-radius:75px 75px 0 0}
 .stb-arch::after{content:'';position:absolute;left:22px;right:22px;bottom:0;height:40px;background:transparent;border-radius:55px 55px 0 0;box-shadow:inset 0 0 0 60px #1a1a16}
