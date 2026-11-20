@@ -6601,3 +6601,54 @@ body[data-template=pendulum] .pendulum-visual{display:block}
 .pdl-face{position:absolute;inset:0;background:radial-gradient(circle at 40% 35%,#f0e0b0,#a88840);border:4px solid #7a6230;border-radius:50%;box-shadow:0 4px 14px rgba(0,0,0,.5)}
 .pdl-face::before{content:'';position:absolute;left:50%;top:50%;width:3px;height:14px;margin-left:-1px;background:#4a3a1a;transform-origin:top center;transform:rotate(40deg)}
 @media(prefers-reduced-motion:reduce){.arc-arrow,.bkb-ball,.pdl-watch{transition:none}}
+body[data-template=zipline]{--bg:#0a140c;--surface:#121c14;--surface-2:#1a241a;--line:#2c3c2c;--text:#d0e4cc;--accent:#78b868;--accent-rgb:120,184,104;--instrument:#121c14;--muted:#4e7a4a;--dim:#4e7a4a}
+body[data-template=carousel]{--bg:#140a10;--surface:#1c1218;--surface-2:#241920;--line:#3e2732;--text:#ecd0da;--accent:#e05878;--accent-rgb:224,88,120;--instrument:#1c1218;--muted:#8a4658;--dim:#8a4658}
+body[data-template=ski]{--bg:#0a1218;--surface:#121a22;--surface-2:#1a242e;--line:#2a3a48;--text:#d0e2ec;--accent:#88c8e8;--accent-rgb:136,200,232;--instrument:#121a22;--muted:#52748a;--dim:#52748a}
+.zipline-visual,.carousel-visual,.ski-visual{display:none;position:relative;margin-top:18px}
+body[data-template=zipline] .charge-visual,body[data-template=carousel] .charge-visual,body[data-template=ski] .charge-visual{display:none}
+body[data-template=zipline] .zipline-visual{display:block}
+.zpl-scene{position:relative;height:180px;background:linear-gradient(#0a140c 0%,#1c3420 100%);overflow:hidden}
+.zpl-line{position:absolute;left:8%;right:8%;top:18%;height:3px;background:#8a9a80;transform:rotate(9deg);transform-origin:left center}
+.zpl-tree{position:absolute;bottom:0;width:30px;height:56px;background:linear-gradient(#2c4a24,#1c3216);clip-path:polygon(50% 0,100% 78%,76% 78%,88% 100%,12% 100%,24% 78%,0 78%)}
+.zpl-tree.t1{left:12%}
+.zpl-tree.t2{left:60%;height:44px}
+.zpl-tree.t3{left:82%;height:64px}
+.zpl-rider{position:absolute;left:12%;top:14%;width:26px;height:40px;transition:left .4s,top .4s}
+.zpl-wheel{position:absolute;left:50%;top:-4px;width:10px;height:10px;margin-left:-5px;border:3px solid #c8d8bc;border-radius:50%}
+.zpl-body{position:absolute;left:50%;top:8px;width:16px;height:24px;margin-left:-8px;background:linear-gradient(#d86838,#a03818);border-radius:7px}
+.zpl-head{position:absolute;left:50%;top:-2px;width:13px;height:13px;margin-left:-6px;background:#e8c098;border-radius:50%}
+.zpl-platform{position:absolute;right:6%;top:44%;width:36px;height:8px;background:#5a4a2c;border-radius:3px}
+.zipline-caption,.carousel-caption,.ski-caption{text-align:center;font-size:11px;color:var(--dim);margin-top:10px}
+body[data-template=carousel] .carousel-visual{display:block}
+.crs-scene{position:relative;height:180px;background:radial-gradient(ellipse at 50% 20%,#2c1420,#140a10 75%);overflow:hidden}
+.crs-roof{position:absolute;left:50%;top:8%;width:170px;height:34px;transform:translateX(-50%);background:linear-gradient(#d04058,#8a2038);clip-path:polygon(50% 0,100% 100%,0 100%)}
+.crs-roof::after{content:'';position:absolute;left:50%;top:-8px;width:10px;height:10px;margin-left:-5px;background:#f0d070;border-radius:50%}
+.crs-light{position:absolute;top:34%;width:8px;height:8px;background:#f0d070;border-radius:50%;box-shadow:0 0 8px rgba(240,208,112,.8);transition:opacity .3s}
+.crs-light.l1{left:28%}
+.crs-light.l2{left:50%}
+.crs-light.l3{left:72%}
+.crs-stage{position:absolute;left:50%;bottom:14%;width:75%;height:70px;transform:translateX(-50%);border-bottom:5px solid #6a2a38}
+.crs-pole{position:absolute;top:0;width:4px;height:100%;background:#c8a060}
+.crs-pole.p1{left:24%}
+.crs-pole.p2{left:50%}
+.crs-pole.p3{left:76%}
+.crs-horse{position:absolute;top:44%;width:30px;height:22px;background:linear-gradient(#e8e0d0,#b0a090);border-radius:50% 40% 40% 50%;transition:left 1s,top .3s}
+.crs-horse::before{content:'';position:absolute;right:-6px;top:-8px;width:12px;height:12px;background:#e8e0d0;border-radius:60% 50% 50% 50%}
+.crs-horse.h1{background:linear-gradient(#e8e0d0,#b0a090)}
+.crs-horse.h2{background:linear-gradient(#d8a0b0,#a06070)}
+.crs-horse.h3{background:linear-gradient(#a0c0d8,#6080a0)}
+body[data-template=ski] .ski-visual{display:block}
+.ski-scene{position:relative;height:180px;background:linear-gradient(#0a1218 0%,#1c3040 100%);overflow:hidden}
+.ski-slope{position:absolute;inset:0;background:linear-gradient(105deg,transparent 30%,rgba(230,240,250,.12) 60%,rgba(230,240,250,.2))}
+.ski-gate{position:absolute;width:6px;height:30px;transition:opacity .4s}
+.ski-gate::after{content:'';position:absolute;left:0;top:0;width:18px;height:10px}
+.ski-gate.g1{left:40%;top:30%}.ski-gate.g1::after{background:#e04040}
+.ski-gate.g2{left:62%;top:44%}.ski-gate.g2::after{background:#3878d8}
+.ski-gate.g3{left:36%;top:58%}.ski-gate.g3::after{background:#e04040}
+.ski-gate.g4{left:60%;top:74%}.ski-gate.g4::after{background:#3878d8}
+.ski-gate{background:#c8d8e8}
+.ski-rider{position:absolute;left:50%;top:16%;width:20px;height:34px;transition:left .5s,top .4s}
+.ski-head{position:absolute;left:50%;top:0;width:12px;height:12px;margin-left:-6px;background:#e8c098;border-radius:50%}
+.ski-torso{position:absolute;left:50%;top:12px;width:14px;height:20px;margin-left:-7px;background:linear-gradient(#3878d8,#1c4888);border-radius:6px}
+.ski-torso::after{content:'';position:absolute;left:-6px;bottom:-6px;width:26px;height:4px;background:#d8e4f0;border-radius:2px}
+@media(prefers-reduced-motion:reduce){.zpl-rider,.crs-horse,.ski-rider{transition:none}}
