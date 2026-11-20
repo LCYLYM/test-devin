@@ -3703,3 +3703,74 @@ position:relative;text-shadow:0 1px 0 #000}
 .flap-pct{font-size:0}
 .flap-caption{font-size:11px;color:var(--muted);letter-spacing:.4px}
 @media(max-width:520px){.flap-tile{width:36px;height:50px;font-size:30px}}
+
+/* iter-1693: vinyl skin — record spins while working, tonearm tracks progress */
+.vinyl-visual{display:none;flex-direction:column;align-items:center;gap:12px}
+body[data-template=vinyl]{--bg:#150e1c;--surface:#1d1428;--surface-2:#251a33;--line:#362a48;--text:#efe6fa;--accent:#d8b4fe;--accent-rgb:216,180,254;--instrument:#0e0a14;--muted:#a394b8;--dim:#665a78}
+body[data-template=vinyl] .charge-visual{display:none}
+body[data-template=vinyl] .vinyl-visual{display:flex}
+body[data-template=vinyl] .energy-stage{margin:14px 0 8px}
+body[data-template=vinyl] .template-slider{background:#2c1f40}
+body[data-template=vinyl] .template-switch button.selected{color:#e3c8ff}
+body[data-template=vinyl] .currency-pill{background:#1c1229;border-color:#3c2c58}
+.vinyl-turntable{position:relative;width:230px;height:170px}
+.vinyl-disc{position:absolute;left:8px;top:0;width:170px;height:170px;border-radius:50%;
+background:repeating-radial-gradient(circle,#141118 0 2px,#1e1a24 2px 4px);
+box-shadow:0 10px 30px rgba(0,0,0,.55),inset 0 0 0 1px #2c2438}
+.vinyl-disc.spin{animation:vinyl-rot 2.4s linear infinite}
+@keyframes vinyl-rot{to{transform:rotate(360deg)}}
+.vinyl-label{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:56px;height:56px;border-radius:50%;
+background:radial-gradient(circle,#d8b4fe,#8b5cc9);display:flex;align-items:center;justify-content:center;
+color:#1c1228;font-size:11px;font-weight:700}
+.vinyl-arm{position:absolute;right:6px;top:8px;width:6px;height:105px;transform-origin:50% 10px;
+background:linear-gradient(#8a7fa0,#5c5470);border-radius:3px;transform:rotate(-18deg);transition:transform .8s}
+.vinyl-arm::before{content:'';position:absolute;top:0;left:50%;transform:translateX(-50%);width:16px;height:16px;border-radius:50%;background:#3c3350}
+.vinyl-arm::after{content:'';position:absolute;bottom:-6px;left:50%;transform:translateX(-50%);width:9px;height:14px;background:#d8b4fe;border-radius:2px}
+.vinyl-pct{font-size:14px;color:#d8c8f0;font-variant-numeric:tabular-nums}
+.vinyl-caption{font-size:11px;color:var(--muted);letter-spacing:.4px}
+@media(prefers-reduced-motion:reduce){.vinyl-disc.spin{animation:none}.vinyl-arm{transition:none}}
+
+/* iter-1694: constellation skin — stars ignite one by one, lines connect into a sign */
+.const-visual{display:none;flex-direction:column;align-items:center;gap:12px}
+body[data-template=const]{--bg:#0a1020;--surface:#101830;--surface-2:#152040;--line:#243258;--text:#e6efff;--accent:#a5d8ff;--accent-rgb:165,216,255;--instrument:#070c18;--muted:#8fa4cc;--dim:#4c5f88}
+body[data-template=const] .charge-visual{display:none}
+body[data-template=const] .const-visual{display:flex}
+body[data-template=const] .energy-stage{margin:14px 0 8px;width:100%}
+body[data-template=const] .template-slider{background:#1e2c50}
+body[data-template=const] .template-switch button.selected{color:#c2e2ff}
+body[data-template=const] .currency-pill{background:#101a30;border-color:#283a64}
+.const-sky{position:relative;width:min(300px,80vw);height:190px;border-radius:10px;overflow:hidden;
+background:radial-gradient(circle at 50% 110%,#16224a,#070c18 72%);border:1px solid #1c2a50}
+.const-star{position:absolute;left:var(--sx);top:var(--sy);width:5px;height:5px;border-radius:50%;
+background:#2c3a5f;transform:translate(-50%,-50%);transition:background .5s,box-shadow .5s}
+.const-star.lit{background:#dceaff;box-shadow:0 0 10px rgba(165,216,255,.95),0 0 3px #fff}
+.const-lines{position:absolute;inset:0;width:100%;height:100%}
+.const-lines path{stroke:rgba(165,216,255,.5);stroke-width:.6;stroke-dasharray:0;stroke-dashoffset:0}
+.const-pct{font-size:14px;color:#bcd6f5;font-variant-numeric:tabular-nums}
+.const-caption{font-size:11px;color:var(--muted);letter-spacing:.4px}
+
+/* iter-1695: plant skin — a salary-fed sprout that blooms near the end of day */
+.plant-visual{display:none;flex-direction:column;align-items:center;gap:10px}
+body[data-template=plant]{--bg:#0f180c;--surface:#16220f;--surface-2:#1c2b14;--line:#2b3f1f;--text:#edf5de;--accent:#84cc7a;--accent-rgb:132,204,122;--instrument:#0b1208;--muted:#9ab38c;--dim:#5c7050}
+body[data-template=plant] .charge-visual{display:none}
+body[data-template=plant] .plant-visual{display:flex}
+body[data-template=plant] .energy-stage{margin:12px 0 6px}
+body[data-template=plant] .template-slider{background:#243616}
+body[data-template=plant] .template-switch button.selected{color:#abe0a2}
+body[data-template=plant] .currency-pill{background:#14200e;border-color:#30441e}
+.plant-scene{position:relative;width:160px;height:200px;display:flex;flex-direction:column;align-items:center;justify-content:flex-end}
+.plant-pot{width:110px;height:60px;background:linear-gradient(180deg,#7a4b28,#5a3520);
+clip-path:polygon(0 0,100% 0,88% 100%,12% 100%);border-radius:4px;position:relative;z-index:2}
+.plant-pot::before{content:'';position:absolute;top:-8px;left:-6px;right:-6px;height:16px;background:#8d5a30;border-radius:5px}
+.plant-stem{position:absolute;bottom:56px;left:50%;width:4px;height:0;transform:translateX(-50%);
+background:linear-gradient(180deg,#84cc7a,#4e8a44);border-radius:3px;transition:height .8s;z-index:1}
+.plant-leaf{position:absolute;bottom:35%;width:22px;height:11px;background:#6fb463;border-radius:0 80% 0 80%}
+.plant-leaf.l1{left:-24px;transform:rotate(-18deg)}
+.plant-leaf.l2{right:-24px;bottom:58%;transform:rotate(18deg) scaleX(-1)}
+.plant-bloom{position:absolute;top:-16px;left:50%;width:24px;height:24px;transform:translateX(-50%) scale(0);
+background:radial-gradient(circle,#f2c9d8 30%,#e38aa8 75%);border-radius:50%;
+box-shadow:0 0 0 6px rgba(227,138,168,.18);transition:transform .8s cubic-bezier(.34,1.56,.64,1)}
+.plant-bloom.open{transform:translateX(-50%) scale(1)}
+.plant-pct{font-size:14px;color:#cbe3bd;font-variant-numeric:tabular-nums}
+.plant-caption{font-size:11px;color:var(--muted);letter-spacing:.4px}
+@media(prefers-reduced-motion:reduce){.plant-stem,.plant-bloom{transition:none}}

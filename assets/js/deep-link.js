@@ -51,10 +51,10 @@
     var template = params.get('template') || params.get('skin');
     if (template === 'daily') {
       var dayNum = Math.floor(Date.now() / 864e5);
-      var dailyList = ['pig', 'charge', 'meter', 'pixel', 'neon', 'mono', 'paper', 'term', 'ecg', 'wave', 'therm', 'receipt', 'sand', 'dial', 'trail', 'metro', 'lift', 'eclipse', 'flap'];
+      var dailyList = ['pig', 'charge', 'meter', 'pixel', 'neon', 'mono', 'paper', 'term', 'ecg', 'wave', 'therm', 'receipt', 'sand', 'dial', 'trail', 'metro', 'lift', 'eclipse', 'flap', 'vinyl', 'const', 'plant'];
       template = dailyList[dayNum % dailyList.length];
     }
-    if (template === 'random') template = ['charge','meter','pixel','pig','neon','mono','paper','term','ecg','wave','therm','receipt','sand','dial','trail','metro','lift','eclipse','flap'][Math.floor(Math.random() * 19)];
+    if (template === 'random') template = ['charge','meter','pixel','pig','neon','mono','paper','term','ecg','wave','therm','receipt','sand','dial','trail','metro','lift','eclipse','flap'][Math.floor(Math.random() * 22)];
     if (template) app.setTemplate(template);
     else {
       // First-visit default follows the OS: light mode gets the paper skin.
@@ -186,7 +186,7 @@
       document.body.style.setProperty('--accent', accent);
     }
 
-    var THEME_COLORS = {pig:'#1a1716',charge:'#131415',meter:'#171715',pixel:'#151515',neon:'#0c0e18',mono:'#111111',paper:'#f2efe7',term:'#0d1117',ecg:'#160a0a',wave:'#0b1526',therm:'#181310',receipt:'#181512',sand:'#221a0e',dial:'#1e1710',trail:'#121a13',metro:'#0e1620',lift:'#16140f',eclipse:'#0b0d12',flap:'#101216'};
+    var THEME_COLORS = {pig:'#1a1716',charge:'#131415',meter:'#171715',pixel:'#151515',neon:'#0c0e18',mono:'#111111',paper:'#f2efe7',term:'#0d1117',ecg:'#160a0a',wave:'#0b1526',therm:'#181310',receipt:'#181512',sand:'#221a0e',dial:'#1e1710',trail:'#121a13',metro:'#0e1620',lift:'#16140f',eclipse:'#0b0d12',flap:'#101216',vinyl:'#150e1c',const:'#0a1020',plant:'#0f180c'};
     function applyThemeColor(t) {
       var m = document.querySelector('meta[name=theme-color]');
       if (m && THEME_COLORS[t]) m.content = THEME_COLORS[t];
@@ -4745,7 +4745,7 @@
     } else if (e.key === '?') {
       if (window.SalaryApp) window.SalaryApp.openDialog('aboutDialog');
     } else if (e.key === 't' && window.SalaryApp) {
-      var skins = ['pig', 'charge', 'meter', 'pixel', 'neon', 'mono', 'paper', 'term', 'ecg', 'wave', 'therm', 'receipt', 'sand', 'dial', 'trail', 'metro', 'lift', 'eclipse', 'flap'];
+      var skins = ['pig', 'charge', 'meter', 'pixel', 'neon', 'mono', 'paper', 'term', 'ecg', 'wave', 'therm', 'receipt', 'sand', 'dial', 'trail', 'metro', 'lift', 'eclipse', 'flap', 'vinyl', 'const', 'plant'];
       var cur = window.SalaryApp.getState().preferences.template;
       window.SalaryApp.setTemplate(skins[(skins.indexOf(cur) + 1) % skins.length]);
     } else if (e.key === 'p' && window.SalaryApp) {
