@@ -1370,6 +1370,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `skimmia` | `1` ミヤマシキミ配色 |
 | `hebe` | `1` ヘーベ配色 |
 | `escallonia` | `1` エスカロニア配色 |
+| `rosemary` | `1` ローズマリー配色 |
+| `oregano` | `1` オレガノ配色 |
+| `tarragon` | `1` タラゴン配色 |
 | `fuchsia` | `1` フクシア配色 |
 | `oleander` | `1` キョウチクトウ配色 |
 | `buddleia` | `1` フサフジウツギ配色 |

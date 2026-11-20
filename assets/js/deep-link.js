@@ -4266,6 +4266,9 @@
     if (params.get('kalmia') === '1') { document.body.classList.add('is-kalmia'); }
     if (params.get('leucothoe') === '1') { document.body.classList.add('is-leucothoe'); }
     if (params.get('andromeda') === '1') { document.body.classList.add('is-andromeda'); }
+    if (params.get('rosemary') === '1') { document.body.classList.add('is-rosemary'); }
+    if (params.get('oregano') === '1') { document.body.classList.add('is-oregano'); }
+    if (params.get('tarragon') === '1') { document.body.classList.add('is-tarragon'); }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -5878,6 +5881,9 @@
         if (params.get('kalmia') === '1') u.searchParams.set('kalmia', '1');
         if (params.get('leucothoe') === '1') u.searchParams.set('leucothoe', '1');
         if (params.get('andromeda') === '1') u.searchParams.set('andromeda', '1');
+        if (params.get('rosemary') === '1') u.searchParams.set('rosemary', '1');
+        if (params.get('oregano') === '1') u.searchParams.set('oregano', '1');
+        if (params.get('tarragon') === '1') u.searchParams.set('tarragon', '1');
         if (params.get('fuchsia') === '1') u.searchParams.set('fuchsia', '1');
         if (params.get('oleander') === '1') u.searchParams.set('oleander', '1');
         if (params.get('buddleia') === '1') u.searchParams.set('buddleia', '1');
