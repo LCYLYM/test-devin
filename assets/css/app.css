@@ -8671,3 +8671,37 @@ body[data-template=courtyard] .courtyard-visual{display:block}
 .cy-stone2{position:absolute;bottom:10px;left:20%;width:60px;height:8px;background:repeating-linear-gradient(90deg,#4a3c26 0 12px,#3c301e 12px 14px);border-radius:4px}
 .courtyard-caption{text-align:center;font-size:11px;color:var(--dim);margin-top:10px}
 @media(prefers-reduced-motion:reduce){body[data-template=silo] .si-fill,body[data-template=courtyard] .cy-gate2{transition:none}}
+
+body[data-template=oasis]{--bg:#0a1410;--surface:#12201a;--surface-2:#182b22;--line:#274434;--text:#daf0e4;--accent:#58b8a0;--accent-rgb:88,184,160;--instrument:#0d1713;--muted:#6fae98;--dim:#3f6456}
+.oasis-visual{display:none;position:relative;margin-top:18px}
+body[data-template=oasis] .charge-visual{display:none}
+body[data-template=oasis] .oasis-visual{display:block}
+.oa-scene{position:relative;height:150px;border-radius:16px;overflow:hidden;background:linear-gradient(180deg,#c8a050 0%,#a8802f 40%,#5c6a40 40.5%,#2c3c30 100%)}
+.oa-pool{position:absolute;bottom:14px;left:50%;transform:translateX(-50%);width:90px;height:22px;background:radial-gradient(ellipse,#58b8d8,#2c7a90);border-radius:50%}
+.oa-palm{position:absolute;bottom:30px;width:6px;height:46px;background:#5a4020;border-radius:3px}
+.oa-palm:before{content:'';position:absolute;top:-8px;left:-9px;width:24px;height:12px;background:#3c7a3c;border-radius:50% 50% 0 0;clip-path:polygon(0 100%,50% 0,100% 100%)}
+#oaP1{left:32%;transform:rotate(-6deg)}#oaP2{left:62%;transform:rotate(5deg)}
+.oa-mirage{position:absolute;top:34%;left:60%;width:60px;height:14px;background:radial-gradient(ellipse,rgba(220,240,255,.5),transparent 70%)}
+.oasis-caption{text-align:center;font-size:11px;color:var(--dim);margin-top:10px}
+body[data-template=mesa]{--bg:#150e08;--surface:#21150c;--surface-2:#2b1c10;--line:#462e1a;--text:#f4e4cc;--accent:#c88a58;--accent-rgb:200,138,88;--instrument:#1b1109;--muted:#c09162;--dim:#745639}
+.mesa-visual{display:none;position:relative;margin-top:18px}
+body[data-template=mesa] .charge-visual{display:none}
+body[data-template=mesa] .mesa-visual{display:block}
+.ms-scene{position:relative;height:150px;border-radius:16px;overflow:hidden;background:linear-gradient(180deg,#2a1a0c,#140c05)}
+.ms-sun4{position:absolute;top:50%;left:18%;width:28px;height:28px;background:radial-gradient(circle,#ffb060,#d86018);border-radius:50%;transition:top .6s}
+.ms-mesa{position:absolute;bottom:0;left:34%;width:34%;height:96px;background:linear-gradient(180deg,#7a4020,#4a240e);clip-path:polygon(8% 0,92% 0,100% 100%,0 100%)}
+.ms-top{position:absolute;bottom:96px;left:36.5%;width:27%;height:8px;background:#8a4c26}
+.ms-hawk{position:absolute;top:26%;left:40%;width:14px;height:6px;border-top:2px solid #e0c8a0;border-radius:50%}
+.mesa-caption{text-align:center;font-size:11px;color:var(--dim);margin-top:10px}
+body[data-template=crater]{--bg:#0e0c16;--surface:#161222;--surface-2:#1e1830;--line:#2e2650;--text:#e0daf4;--accent:#9a8ab8;--accent-rgb:154,138,184;--instrument:#120e1c;--muted:#948ab4;--dim:#504774}
+.crater-visual{display:none;position:relative;margin-top:18px}
+body[data-template=crater] .charge-visual{display:none}
+body[data-template=crater] .crater-visual{display:block}
+.cr-scene{position:relative;height:150px;border-radius:16px;overflow:hidden;background:linear-gradient(180deg,#120e22,#0a0812)}
+.cr-rim{position:absolute;bottom:0;width:100%;height:70px;background:radial-gradient(ellipse at 50% 100%,#2e2444 40%,#1a1430 70%)}
+.cr-lake{position:absolute;bottom:10px;left:50%;transform:translateX(-50%);width:70px;height:18px;background:radial-gradient(ellipse,#6a5aa8,#38305c);border-radius:50%}
+.cr-meteor{position:absolute;width:20px;height:2px;background:linear-gradient(90deg,transparent,#f0e8ff);transform:rotate(28deg)}
+.cr-star2{position:absolute;width:3px;height:3px;background:#d8d0f0;border-radius:50%}
+#crS1{top:18%;left:28%}#crS2{top:30%;left:64%}
+.crater-caption{text-align:center;font-size:11px;color:var(--dim);margin-top:10px}
+@media(prefers-reduced-motion:reduce){body[data-template=mesa] .ms-sun4,body[data-template=crater] .cr-meteor{transition:none}}
