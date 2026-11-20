@@ -7157,3 +7157,33 @@ body[data-template=iceskate] .iceskate-visual{display:block}
 .isk-skater::after{content:'';position:absolute;bottom:-3px;left:0;right:0;height:2px;background:#d8e0e8;border-radius:1px}
 .fireplace-caption,.onsen-caption,.iceskate-caption{text-align:center;font-size:11px;color:var(--dim);margin-top:10px}
 @media(prefers-reduced-motion:reduce){.fpl-flame,.ons-pool{transition:none}}
+body[data-template=jukebox]{--bg:#140c06;--surface:#1c140c;--surface-2:#281c10;--line:#44301c;--text:#ecdcc2;--accent:#f0b040;--accent-rgb:240,176,64;--instrument:#1c140c;--muted:#8a6a44;--dim:#8a6a44}
+body[data-template=musicbox]{--bg:#140e18;--surface:#1c1622;--surface-2:#261e2e;--line:#403252;--text:#e0d6ec;--accent:#d8b8e0;--accent-rgb:216,184,224;--instrument:#1c1622;--muted:#745e8a;--dim:#745e8a}
+body[data-template=bath]{--bg:#0a141a;--surface:#121c22;--surface-2:#1a262c;--line:#2c3e46;--text:#d0e2e6;--accent:#78c0d8;--accent-rgb:120,192,216;--instrument:#121c22;--muted:#587682;--dim:#587682}
+.jukebox-visual,.musicbox-visual,.bath-visual{display:none;position:relative;margin-top:18px}
+body[data-template=jukebox] .charge-visual,body[data-template=musicbox] .charge-visual,body[data-template=bath] .charge-visual{display:none}
+body[data-template=jukebox] .jukebox-visual{display:block}
+.jkb-scene{position:relative;height:180px;background:#140c06;overflow:hidden}
+.jkb-cab{position:absolute;left:50%;bottom:8%;width:110px;height:120px;margin-left:-55px;background:linear-gradient(#5c3018,#3a1e0e);border-radius:50px 50px 8px 8px;border:4px solid #2c1608}
+.jkb-arch{position:absolute;left:8px;right:8px;top:8px;height:40px;border:4px solid rgba(240,176,64,.9);border-bottom:none;border-radius:40px 40px 0 0;opacity:.25;transition:opacity .5s;box-shadow:0 0 10px rgba(240,176,64,.4)}
+.jkb-disc{position:absolute;left:50%;top:30px;width:36px;height:36px;margin-left:-18px;background:repeating-radial-gradient(circle,#181818 0 2px,#3a3a3a 2px 3px);border-radius:50%;border:2px solid #888;opacity:.25;transition:opacity .4s}
+.jkb-tube{position:absolute;bottom:22px;width:7px;height:24px;background:linear-gradient(#f0d060,#c07818);border-radius:4px;box-shadow:0 0 8px rgba(240,190,60,.7);opacity:0;transition:opacity .4s}
+.jkb-tube.t1{left:24px}
+.jkb-tube.t2{left:50%;margin-left:-3.5px}
+.jkb-tube.t3{right:24px}
+.jkb-base{position:absolute;left:0;right:0;bottom:0;height:16px;background:linear-gradient(#7a4a20,#4a2810);border-radius:0 0 6px 6px}
+body[data-template=musicbox] .musicbox-visual{display:block}
+.msx-scene{position:relative;height:180px;background:radial-gradient(ellipse at 50% 80%,#1c1424,#140e18);overflow:hidden}
+.msx-box{position:absolute;left:50%;bottom:14%;width:100px;height:70px;margin-left:-50px;perspective:300px}
+.msx-lid{position:absolute;left:0;right:0;top:-6px;height:40px;background:linear-gradient(#8a5c78,#5c3c4e);border-radius:6px;transform-origin:top center;transition:transform .6s}
+.msx-base{position:absolute;left:0;right:0;bottom:0;height:46px;background:linear-gradient(#7a5068,#4a3040);border-radius:6px;border:2px solid #d8b868}
+.msx-dancer{position:absolute;left:50%;bottom:38px;width:14px;height:30px;margin-left:-7px;background:linear-gradient(#f0d8f0,#b088c0);border-radius:50% 50% 40% 40%;opacity:0;transition:opacity .4s}
+.msx-dancer::before{content:'';position:absolute;top:-8px;left:50%;width:8px;height:8px;margin-left:-4px;background:#f0d0c0;border-radius:50%}
+.msx-dancer::after{content:'';position:absolute;bottom:-4px;left:50%;width:16px;height:6px;margin-left:-8px;background:#c898d8;border-radius:50% 50% 20% 20%}
+body[data-template=bath] .bath-visual{display:block}
+.bth-scene{position:relative;height:180px;background:linear-gradient(#121c22,#0a141a);overflow:hidden}
+.bth-tub{position:absolute;left:50%;bottom:14%;width:160px;height:80px;margin-left:-80px;background:linear-gradient(#e8e4dc,#b8b0a0);border-radius:12px 12px 16px 16px;border:3px solid #8a8274;overflow:hidden}
+.bth-water{position:absolute;left:0;right:0;bottom:0;height:0;background:linear-gradient(rgba(150,210,230,.9),#5a98b8)}
+.bth-bubble{position:absolute;bottom:20px;left:50%;width:6px;height:6px;background:rgba(255,255,255,.85);border-radius:50%;opacity:0}
+.jukebox-caption,.musicbox-caption,.bath-caption{text-align:center;font-size:11px;color:var(--dim);margin-top:10px}
+@media(prefers-reduced-motion:reduce){.msx-lid,.msx-dancer,.jkb-arch,.jkb-tube{transition:none}}
