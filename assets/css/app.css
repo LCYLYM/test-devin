@@ -2992,6 +2992,12 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .is-teff .instrument{border-color:rgba(170,115,85,.4)}
 .is-buckwheat{background:linear-gradient(180deg,#241d17 0%,#110e0a 100%)}
 .is-buckwheat .instrument{border-color:rgba(180,140,100,.4)}
+.is-sorghum{background:linear-gradient(180deg,#261c16 0%,#120d0a 100%)}
+.is-sorghum .instrument{border-color:rgba(200,120,85,.4)}
+.is-einkorn{background:linear-gradient(180deg,#262215 0%,#121009 100%)}
+.is-einkorn .instrument{border-color:rgba(205,180,100,.4)}
+.is-kamut{background:linear-gradient(180deg,#272213 0%,#131008 100%)}
+.is-kamut .instrument{border-color:rgba(210,180,80,.4)}
 .is-fuchsia{background:linear-gradient(180deg,#2e1428 0%,#160a13 100%)}
 .is-fuchsia .instrument{border-color:rgba(230,100,200,.4)}
 .is-oleander{background:linear-gradient(180deg,#2c1720 0%,#150b0f 100%)}

@@ -1397,6 +1397,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `farro` | `1` ファッロ配色 |
 | `teff` | `1` テフ配色 |
 | `buckwheat` | `1` ソバ配色 |
+| `sorghum` | `1` ソルガム配色 |
+| `einkorn` | `1` アインコーン配色 |
+| `kamut` | `1` カムート配色 |
 | `fuchsia` | `1` フクシア配色 |
 | `oleander` | `1` キョウチクトウ配色 |
 | `buddleia` | `1` フサフジウツギ配色 |
