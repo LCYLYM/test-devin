@@ -1412,6 +1412,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `navybean` | `1` ネイビービーン配色 |
 | `pinto` | `1` ピントマメ配色 |
 | `limabean` | `1` ライマメ配色 |
+| `fava` | `1` ソラマメ配色 |
+| `edamame` | `1` エダマメ配色 |
+| `cannellini` | `1` カネリーニ配色 |
 | `fuchsia` | `1` フクシア配色 |
 | `oleander` | `1` キョウチクトウ配色 |
 | `buddleia` | `1` フサフジウツギ配色 |
