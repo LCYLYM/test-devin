@@ -4669,3 +4669,81 @@ background:linear-gradient(180deg,#f0d040,#c09820);border-radius:4px;opacity:0;
 transition:top .6s ease-in,opacity .5s;z-index:2}
 .vending-caption{font-size:11px;color:var(--muted);letter-spacing:.4px}
 @media(prefers-reduced-motion:reduce){.vend-item,.vend-drop{transition:none}}
+
+/* iter-1736: lighthouse skin — beam sweeps and fog clears to reveal the coast */
+.lighthouse-visual{display:none;flex-direction:column;align-items:center;gap:12px}
+body[data-template=lighthouse]{--bg:#0e1018;--surface:#141826;--surface-2:#1a2030;--line:#2c3448;--text:#e8ecf6;--accent:#f8e078;--accent-rgb:248,224,120;--instrument:#0a0c14;--muted:#94a0ba;--dim:#5a6478}
+body[data-template=lighthouse] .charge-visual{display:none}
+body[data-template=lighthouse] .lighthouse-visual{display:flex}
+body[data-template=lighthouse] .energy-stage{margin:14px 0 8px}
+body[data-template=lighthouse] .template-slider{background:#263048}
+body[data-template=lighthouse] .template-switch button.selected{color:#f8e8a0}
+body[data-template=lighthouse] .currency-pill{background:#141826;border-color:#2c3448}
+.lh-scene{position:relative;width:220px;height:165px;border-radius:10px;overflow:hidden;
+background:linear-gradient(180deg,#141c30 55%,#0c1220)}
+.lh-sea{position:absolute;left:0;right:0;bottom:0;height:36px;
+background:linear-gradient(180deg,#1c3050,#101e34)}
+.lh-rock{position:absolute;bottom:26px;left:50%;transform:translateX(-50%);width:80px;height:18px;
+background:#3a3a48;border-radius:50% 50% 0 0}
+.lh-tower{position:absolute;bottom:38px;left:50%;transform:translateX(-50%);width:26px;height:80px;
+background:#e8e4d8;border-radius:4px 4px 0 0;overflow:hidden}
+.lh-stripe{position:absolute;left:0;right:0;height:12px;background:#c84848}
+.lh-stripe.s1{top:14px}
+.lh-stripe.s2{top:40px}
+.lh-stripe.s3{top:66px}
+.lh-lamp{position:absolute;top:-14px;left:50%;transform:translateX(-50%);width:16px;height:14px;
+background:#f8e078;border-radius:50% 50% 0 0;box-shadow:0 0 14px rgba(248,224,120,.8)}
+.lh-beam{position:absolute;top:16px;left:50%;width:160px;height:14px;transform-origin:left center;
+background:linear-gradient(90deg,rgba(248,224,120,.7),transparent);pointer-events:none;
+transition:transform .8s linear;opacity:.7;z-index:2}
+.lh-fog{position:absolute;inset:0;background:rgba(200,210,225,.55);transition:opacity 1s;z-index:3;pointer-events:none}
+.lighthouse-caption{font-size:11px;color:var(--muted);letter-spacing:.4px}
+@media(prefers-reduced-motion:reduce){.lh-beam,.lh-fog{transition:none}}
+
+/* iter-1737: treadmill skin — belt scrolls and the odometer climbs */
+.treadmill-visual{display:none;flex-direction:column;align-items:center;gap:12px}
+body[data-template=treadmill]{--bg:#0e1610;--surface:#14201a;--surface-2:#1a281f;--line:#263c30;--text:#e0f2e8;--accent:#68d8a8;--accent-rgb:104,216,168;--instrument:#0a120c;--muted:#8eb4a2;--dim:#54705f}
+body[data-template=treadmill] .charge-visual{display:none}
+body[data-template=treadmill] .treadmill-visual{display:flex}
+body[data-template=treadmill] .energy-stage{margin:14px 0 8px}
+body[data-template=treadmill] .template-slider{background:#20382c}
+body[data-template=treadmill] .template-switch button.selected{color:#8ce0ba}
+body[data-template=treadmill] .currency-pill{background:#14201a;border-color:#263c30}
+.tm-machine{position:relative;width:230px;height:130px}
+.tm-belt{position:absolute;left:0;right:0;bottom:24px;height:14px;border-radius:7px;
+background:#1a2620 repeating-linear-gradient(90deg,#2c4234 0 14px,#1a2620 14px 20px);
+background-size:20px 100%;transition:background-position .3s linear;border:2px solid #3c5a48}
+.tm-belt i{display:none}
+.tm-console{position:absolute;top:8px;left:50%;transform:translateX(-50%);padding:6px 18px;
+background:#0c1611;border:2px solid #3c5a48;border-radius:8px;font-size:20px;font-weight:700;
+color:#8ce0ba;font-variant-numeric:tabular-nums}
+.tm-console i{font-style:normal;font-size:10px;color:var(--dim);margin-left:4px}
+.tm-runner{position:absolute;bottom:40px;left:50%;transform:translateX(-50%);font-size:34px;
+filter:drop-shadow(0 2px 3px rgba(0,0,0,.4))}
+.instrument.is-working .tm-runner{animation:tm-bounce .7s ease-in-out infinite}
+@keyframes tm-bounce{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(-4px)}}
+.treadmill-caption{font-size:11px;color:var(--muted);letter-spacing:.4px}
+@media(prefers-reduced-motion:reduce){.instrument.is-working .tm-runner{animation:none}.tm-belt{transition:none}}
+
+/* iter-1738: oven skin — dough rises and browns behind the glass */
+.oven-visual{display:none;flex-direction:column;align-items:center;gap:12px}
+body[data-template=oven]{--bg:#160e08;--surface:#1f1410;--surface-2:#281a12;--line:#422a1a;--text:#f6e8d4;--accent:#e89a58;--accent-rgb:232,154,88;--instrument:#120a06;--muted:#b59680;--dim:#78604c}
+body[data-template=oven] .charge-visual{display:none}
+body[data-template=oven] .oven-visual{display:flex}
+body[data-template=oven] .energy-stage{margin:14px 0 8px}
+body[data-template=oven] .template-slider{background:#3a2414}
+body[data-template=oven] .template-switch button.selected{color:#f0b078}
+body[data-template=oven] .currency-pill{background:#1f1410;border-color:#422a1a}
+.oven-box{position:relative;width:190px;height:140px;background:linear-gradient(180deg,#3c3430,#241e1a);
+border-radius:12px;border:2px solid #54483e;padding:0}
+.oven-glass{position:absolute;left:20px;right:20px;top:30px;bottom:26px;border-radius:8px;overflow:hidden;
+background:linear-gradient(180deg,#1a1410,#241c14);border:2px solid #54483e;display:flex;align-items:flex-end;justify-content:center}
+.oven-dough{width:60px;height:34px;border-radius:50% 50% 20% 20%;margin-bottom:12px;
+background:hsl(38,60%,72%);transition:transform .8s,background .8s;box-shadow:0 3px 8px rgba(0,0,0,.4)}
+.oven-knob{position:absolute;top:10px;width:14px;height:14px;border-radius:50%;background:#6a5c50;border:2px solid #54483e}
+.oven-knob.k1{right:46px}
+.oven-knob.k2{right:24px}
+.oven-light{position:absolute;top:12px;left:24px;width:10px;height:10px;border-radius:50%;
+background:#f8b040;box-shadow:0 0 10px rgba(248,176,64,.8);transition:opacity .6s}
+.oven-caption{font-size:11px;color:var(--muted);letter-spacing:.4px}
+@media(prefers-reduced-motion:reduce){.oven-dough,.oven-light{transition:none}}
