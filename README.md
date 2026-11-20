@@ -1250,6 +1250,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `buttonfern` | `1` 纽扣蕨配色 |
 | `cliffbrake` | `1` 碎米蕨配色 |
 | `lacefern` | `1` 蕾丝蕨配色 |
+| `silverfern` | `1` 银蕨配色 |
+| `treefern` | `1` 桫椤配色 |
+| `filmyfern` | `1` 膜蕨配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 

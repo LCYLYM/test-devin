@@ -4134,6 +4134,9 @@
     if (params.get('buttonfern') === '1') { document.body.classList.add('is-buttonfern'); }
     if (params.get('cliffbrake') === '1') { document.body.classList.add('is-cliffbrake'); }
     if (params.get('lacefern') === '1') { document.body.classList.add('is-lacefern'); }
+    if (params.get('silverfern') === '1') { document.body.classList.add('is-silverfern'); }
+    if (params.get('treefern') === '1') { document.body.classList.add('is-treefern'); }
+    if (params.get('filmyfern') === '1') { document.body.classList.add('is-filmyfern'); }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -5626,6 +5629,9 @@
         if (params.get('buttonfern') === '1') u.searchParams.set('buttonfern', '1');
         if (params.get('cliffbrake') === '1') u.searchParams.set('cliffbrake', '1');
         if (params.get('lacefern') === '1') u.searchParams.set('lacefern', '1');
+        if (params.get('silverfern') === '1') u.searchParams.set('silverfern', '1');
+        if (params.get('treefern') === '1') u.searchParams.set('treefern', '1');
+        if (params.get('filmyfern') === '1') u.searchParams.set('filmyfern', '1');
       if (params.get('tile') === '1') u.searchParams.set('tile', '1');
       if (params.get('outline') === '1') u.searchParams.set('outline', '1');
       if (params.get('stripe') === '1') u.searchParams.set('stripe', '1');

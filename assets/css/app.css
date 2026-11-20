@@ -2698,6 +2698,12 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .is-cliffbrake .instrument{border-color:rgba(152,160,122,.4)}
 .is-lacefern{background:linear-gradient(180deg,#161b15 0%,#111410 100%)}
 .is-lacefern .instrument{border-color:rgba(146,176,128,.4)}
+.is-silverfern{background:linear-gradient(180deg,#181b19 0%,#121412 100%)}
+.is-silverfern .instrument{border-color:rgba(172,182,174,.4)}
+.is-treefern{background:linear-gradient(180deg,#141a13 0%,#0e130d 100%)}
+.is-treefern .instrument{border-color:rgba(128,166,104,.4)}
+.is-filmyfern{background:linear-gradient(180deg,#131a17 0%,#0e1310 100%)}
+.is-filmyfern .instrument{border-color:rgba(124,170,146,.4)}
 .is-oatmeal{background:linear-gradient(180deg,#1d1912,#2f291e 50%,#433a2a)}
 .is-oatmeal .instrument{border-color:rgba(215,195,155,.4)}
 .is-thyme{background:linear-gradient(180deg,#121a14,#1c2a20 50%,#28392c)}
