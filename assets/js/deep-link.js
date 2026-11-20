@@ -12,6 +12,10 @@
     var b = st && [].slice.call(document.querySelectorAll('button[data-template]')).find(function (x) { return x.dataset.template === st; });
     return b ? b.textContent.trim() + ' \u00b7 ' : '';
   }
+  function brandTitlePart() { var b = params.get('brand'); return b ? b.slice(0, 12) + ' \u00b7 ' : ''; }
+  // one place computes the non-amount part of the tab title so every
+  // writer (init, ?brand, ?tabearn, the 5s ticker) stays consistent
+  function titleBase() { return brandTitlePart() + skinTitlePart() + titleOrigin; }
 
   if (params.get('reset') === '1') {
     try {
@@ -73,7 +77,7 @@
     // reflect the active skin in the tab title ("樱花 · 薪动…") so shared
     // ?skin= links and tabs identify the scene — set once here so the
     // live title features (?tabearn, ?title) keep building on top of it
-    if (!params.get('title')) document.title = skinTitlePart() + titleOrigin;
+    if (!params.get('title')) document.title = titleBase();
 
     var currency = (params.get('currency') || '').toUpperCase();
     if (currency) app.setCurrency(currency);
@@ -285,7 +289,7 @@
     if (brandParam) {
       var bs = document.querySelector('.brand span');
       if (bs) bs.textContent = brandParam.slice(0, 12);
-      if (!params.get('title')) document.title = brandParam.slice(0, 12) + ' · ' + document.title.split('·').slice(-1)[0].trim();
+      if (!params.get('title')) document.title = titleBase();
     }
     var sizeParam = parseFloat(params.get('size'));
     if (isFinite(sizeParam) && sizeParam > 0.4 && sizeParam <= 2.5) {
@@ -4429,12 +4433,12 @@
     var titleParam = params.get('title');
     if (titleParam) window.__customTitle = titleParam.trim().slice(0, 30);
     if (params.get('tabearn') === '1' || window.__customTitle) {
-      document.title = window.__customTitle || (skinTitlePart() + titleOrigin);
+      document.title = window.__customTitle || titleBase();
       if (params.get('tabearn') === '1') {
         setInterval(function () {
           var ta = document.getElementById('amountArea');
           var txt = ta && ta.getAttribute('aria-label');
-          var bt = window.__customTitle || (skinTitlePart() + titleOrigin);
+          var bt = window.__customTitle || titleBase();
           document.title = txt ? txt + ' \u00b7 ' + bt : bt;
         }, 2000);
       }
@@ -4729,7 +4733,7 @@
       var odo = document.getElementById('earningsNumber');
       var sym = document.getElementById('moneySymbol');
       var val = odo && odo.getAttribute('aria-label');
-      if (val) document.title = (sym ? sym.textContent : '') + val + ' \u00b7 ' + (params.get('title') ? baseTitle : skinTitlePart() + titleOrigin);
+      if (val) document.title = (sym ? sym.textContent : '') + val + ' \u00b7 ' + (params.get('title') ? baseTitle : titleBase());
     }, 5000);
   }
 
