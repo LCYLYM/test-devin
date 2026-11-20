@@ -1442,6 +1442,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `parsnip` | `1` パースニップ配色 |
 | `celeriac` | `1` セロリアック配色 |
 | `jicama` | `1` ヒカマ配色 |
+| `arugula` | `1` ルッコラ配色 |
+| `radicchio` | `1` ラディッキオ配色 |
+| `mizuna` | `1` ミズナ配色 |
 | `fuchsia` | `1` フクシア配色 |
 | `oleander` | `1` キョウチクトウ配色 |
 | `buddleia` | `1` フサフジウツギ配色 |
