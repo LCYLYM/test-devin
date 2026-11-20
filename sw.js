@@ -1,5 +1,5 @@
 // 薪动 service worker — cache-first for app shell, network-first for navigations.
-const CACHE = 'xindong-v551';
+const CACHE = 'xindong-v552';
 const SHELL = [
   './',
   './index.html',
