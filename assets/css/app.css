@@ -8561,3 +8561,40 @@ body[data-template=jetty] .jetty-visual{display:block}
 .jy-bird{position:absolute;top:20%;width:12px;height:5px;border-top:2px solid #c0d0dc;border-radius:50%}
 .jetty-caption{text-align:center;font-size:11px;color:var(--dim);margin-top:10px}
 @media(prefers-reduced-motion:reduce){body[data-template=lilypad] .lp-frog,body[data-template=jetty] .jy-foam{transition:none}}
+
+body[data-template=camp]{--bg:#140c06;--surface:#20140a;--surface-2:#2a1a0d;--line:#452c17;--text:#f8e4c8;--accent:#e08848;--accent-rgb:224,136,72;--instrument:#1a0f07;--muted:#c89460;--dim:#74593a}
+.camp-visual{display:none;position:relative;margin-top:18px}
+body[data-template=camp] .charge-visual{display:none}
+body[data-template=camp] .camp-visual{display:block}
+.cm-scene{position:relative;height:150px;border-radius:16px;overflow:hidden;background:linear-gradient(180deg,#1c1208,#0e0804)}
+.cm-star{position:absolute;width:3px;height:3px;background:#ffe8b0;border-radius:50%}
+#cmS1{top:14%;left:20%}#cmS2{top:10%;left:56%}#cmS3{top:22%;left:78%}
+.cm-tent{position:absolute;bottom:16px;left:16%;width:56px;height:44px;background:#b85830;clip-path:polygon(50% 0,100% 100%,0 100%)}
+.cm-tent:after{content:'';position:absolute;bottom:0;left:50%;transform:translateX(-50%);width:16px;height:20px;background:#3c2008;clip-path:polygon(50% 0,100% 100%,0 100%)}
+.cm-fire{position:absolute;bottom:16px;left:58%;width:26px}
+.cm-flame{position:absolute;bottom:6px;left:50%;transform:translateX(-50%);width:16px;height:6px;background:radial-gradient(ellipse at 50% 100%,#ffb830,#d84008);border-radius:50% 50% 30% 30%;transition:height .4s}
+.cm-smoke{position:absolute;bottom:48px;left:60%;width:4px;height:22px;background:linear-gradient(0deg,rgba(220,220,200,.5),transparent);border-radius:2px}
+.camp-caption{text-align:center;font-size:11px;color:var(--dim);margin-top:10px}
+body[data-template=boathouse]{--bg:#0d1318;--surface:#151e28;--surface-2:#1c2835;--line:#2a3d50;--text:#d8e6f0;--accent:#6a8aa0;--accent-rgb:106,138,160;--instrument:#101820;--muted:#7c9ab0;--dim:#44596a}
+.boathouse-visual{display:none;position:relative;margin-top:18px}
+body[data-template=boathouse] .charge-visual{display:none}
+body[data-template=boathouse] .boathouse-visual{display:block}
+.bh-scene{position:relative;height:150px;border-radius:16px;overflow:hidden;background:linear-gradient(180deg,#12202c,#0a1216)}
+.bh-hut{position:absolute;top:16px;left:14%;width:90px;height:80px;background:#3a4a58;border-radius:4px;border:2px solid #28333e}
+.bh-hut:before{content:'';position:absolute;top:-16px;left:-10px;width:108px;height:18px;background:#28333e;clip-path:polygon(0 100%,50% 0,100% 100%)}
+.bh-door2{position:absolute;bottom:0;left:50%;transform:translateX(-50%);width:44px;height:56px;background:#1c2733;border:2px solid #28333e;transition:transform .5s}
+.bh-water3{position:absolute;bottom:0;width:100%;height:42px;background:linear-gradient(180deg,#1c3240,#0e1a22)}
+.bh-row{position:absolute;bottom:14px;left:50%;width:34px;height:10px;background:#7a5a34;border-radius:50% 50% 40% 40%;transition:left .5s}
+.boathouse-caption{text-align:center;font-size:11px;color:var(--dim);margin-top:10px}
+body[data-template=igloo]{--bg:#0c1418;--surface:#141f26;--surface-2:#1a2932;--line:#2a3d48;--text:#e0f0f6;--accent:#a8d8e8;--accent-rgb:168,216,232;--instrument:#0f1a20;--muted:#8ab8c8;--dim:#48646e}
+.igloo-visual{display:none;position:relative;margin-top:18px}
+body[data-template=igloo] .charge-visual{display:none}
+body[data-template=igloo] .igloo-visual{display:block}
+.ig-scene{position:relative;height:150px;border-radius:16px;overflow:hidden;background:linear-gradient(180deg,#101c24,#0a1216)}
+.ig-aur{position:absolute;top:0;left:10%;width:80%;height:36px;background:linear-gradient(90deg,transparent,rgba(120,230,170,.4),rgba(140,180,255,.3),transparent);transform-origin:top center}
+.ig-dome{position:absolute;bottom:14px;left:30%;width:40%;height:74px;background:linear-gradient(180deg,#cfe4ec,#9abcc8);border-radius:80px 80px 8px 8px}
+.ig-door3{position:absolute;bottom:14px;left:50%;transform:translateX(-50%);width:22px;height:26px;background:#3c5a68;border-radius:11px 11px 0 0}
+.ig-block{position:absolute;left:30%;width:40%;height:1px;background:rgba(60,90,104,.5)}
+#igB1{bottom:36px}#igB2{bottom:56px}#igB3{bottom:74px}
+.igloo-caption{text-align:center;font-size:11px;color:var(--dim);margin-top:10px}
+@media(prefers-reduced-motion:reduce){body[data-template=camp] .cm-flame,body[data-template=boathouse] .bh-door2{transition:none}}
