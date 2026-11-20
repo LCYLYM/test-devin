@@ -8831,3 +8831,42 @@ body[data-template=smokehouse] .smokehouse-visual{display:block}
 .smk-puff{position:absolute;bottom:44px;left:62%;width:9px;height:9px;background:rgba(200,200,190,.5);border-radius:50%}
 .smokehouse-caption{text-align:center;font-size:11px;color:var(--dim);margin-top:10px}
 @media(prefers-reduced-motion:reduce){body[data-template=granary] .gn-fill,body[data-template=heron] .hr-neck{transition:none}}
+
+body[data-template=sawmill]{--bg:#150e06;--surface:#20150a;--surface-2:#2b1d0e;--line:#483418;--text:#f2e6d0;--accent:#c8863a;--accent-rgb:200,134,58;--instrument:#191007;--muted:#b08a54;--dim:#6e5230}
+.sawmill-visual{display:none;position:relative;margin-top:18px}
+body[data-template=sawmill] .charge-visual{display:none}
+body[data-template=sawmill] .sawmill-visual{display:block}
+.sm-scene{position:relative;height:150px;border-radius:16px;overflow:hidden;background:linear-gradient(180deg,#1c1308,#0f0a04)}
+.sm-bed{position:absolute;bottom:26px;left:10%;width:80%;height:10px;background:#4a3820;border-radius:3px}
+.sm-blade{position:absolute;bottom:36px;left:52%;width:34px;height:34px;background:conic-gradient(#8a8a8a 0 10deg,#5c5c5c 10deg 20deg,#8a8a8a 20deg 30deg,#5c5c5c 30deg 40deg,#8a8a8a 40deg 50deg,#5c5c5c 50deg 60deg,#8a8a8a 60deg 70deg,#5c5c5c 70deg 80deg,#8a8a8a 80deg 90deg,#5c5c5c 90deg 100deg,#8a8a8a 100deg 110deg,#5c5c5c 110deg 120deg,#8a8a8a 120deg 130deg,#5c5c5c 130deg 140deg,#8a8a8a 140deg 150deg,#5c5c5c 150deg 160deg,#8a8a8a 160deg 170deg,#5c5c5c 170deg 180deg,#8a8a8a 180deg 190deg,#5c5c5c 190deg 200deg,#8a8a8a 200deg 210deg,#5c5c5c 210deg 220deg,#8a8a8a 220deg 230deg,#5c5c5c 230deg 240deg,#8a8a8a 240deg 250deg,#5c5c5c 250deg 260deg,#8a8a8a 260deg 270deg,#5c5c5c 270deg 280deg,#8a8a8a 280deg 290deg,#5c5c5c 290deg 300deg,#8a8a8a 300deg 310deg,#5c5c5c 310deg 320deg,#8a8a8a 320deg 330deg,#5c5c5c 330deg 340deg,#8a8a8a 340deg 350deg,#5c5c5c 350deg 360deg);border-radius:50%;border:2px solid #3a3a3a}
+.sm-log{position:absolute;bottom:38px;left:14%;width:52px;height:16px;background:#8a6238;border-radius:8px;border-left:6px solid #6a4826;transition:left .5s}
+.sm-plank{position:absolute;bottom:14px;width:26px;height:5px;background:#b08858;border:1px solid #7a5a34}
+#smPlank1{right:14%}#smPlank2{right:14%;bottom:20px}#smPlank3{right:14%;bottom:26px}
+.sawmill-caption{text-align:center;font-size:11px;color:var(--dim);margin-top:10px}
+body[data-template=canallock]{--bg:#0c1418;--surface:#141f27;--surface-2:#1c2a34;--line:#304552;--text:#dcecF4;--accent:#6a98b0;--accent-rgb:106,152,176;--instrument:#101a21;--muted:#7a9caa;--dim:#3e5a66}
+.canallock-visual{display:none;position:relative;margin-top:18px}
+body[data-template=canallock] .charge-visual{display:none}
+body[data-template=canallock] .canallock-visual{display:block}
+.cl-scene{position:relative;height:150px;border-radius:16px;overflow:hidden;background:linear-gradient(180deg,#101c24,#0a1216)}
+.cl-wall{position:absolute;top:20%;bottom:0;width:16%;background:linear-gradient(180deg,#4a4a4e,#303034)}
+.cl-wl{left:6%}.cl-wr{right:6%}
+.cl-water{position:absolute;bottom:0;left:22%;width:56%;height:18%;background:linear-gradient(180deg,#4a90b0,#285a74);transition:height .6s}
+.cl-boat{position:absolute;bottom:20%;left:40%;width:24px;height:10px;background:#8a5a30;border-radius:0 0 8px 8px;transition:bottom .6s}
+.cl-boat:before{content:'';position:absolute;top:-8px;left:8px;width:8px;height:8px;background:#6a4424}
+.cl-gate{position:absolute;bottom:0;width:8%;height:74%;background:#5a4632;border:1px solid #3a2c1c;transition:transform .8s}
+.cl-g1{left:22%;transform-origin:left bottom}
+.cl-g2{right:22%;transform-origin:right bottom}
+.canallock-caption{text-align:center;font-size:11px;color:var(--dim);margin-top:10px}
+body[data-template=sheepfold]{--bg:#12160c;--surface:#1a2112;--surface-2:#242d18;--line:#3c4c28;--text:#eef0dc;--accent:#d8ccb0;--accent-rgb:216,204,176;--instrument:#161b0e;--muted:#a8b088;--dim:#5e6c44}
+.sheepfold-visual{display:none;position:relative;margin-top:18px}
+body[data-template=sheepfold] .charge-visual{display:none}
+body[data-template=sheepfold] .sheepfold-visual{display:block}
+.sf-scene{position:relative;height:150px;border-radius:16px;overflow:hidden;background:linear-gradient(180deg,#171e10,#0c1108)}
+.sf-fence{position:absolute;bottom:30px;left:8%;width:84%;height:8px;background:repeating-linear-gradient(90deg,#6a5232 0 12px,transparent 12px 26px);border-bottom:3px solid #54401f}
+.sf-f2{bottom:44px}
+.sf-sheep{position:absolute;bottom:34px;width:26px;height:18px;background:#e8e4d8;border-radius:50% 50% 40% 40%;opacity:0;transition:opacity .5s}
+.sf-sheep:before{content:'';position:absolute;top:-5px;right:-2px;width:10px;height:9px;background:#4a4038;border-radius:50%}
+#sfS1{left:26%}#sfS2{left:46%}#sfS3{left:64%}
+.sf-wool{position:absolute;bottom:18px;right:20%;width:12px;height:10px;background:#f4f0e4;border-radius:50%;opacity:0}
+.sheepfold-caption{text-align:center;font-size:11px;color:var(--dim);margin-top:10px}
+@media(prefers-reduced-motion:reduce){body[data-template=sawmill] .sm-blade{animation:none}body[data-template=canallock] .cl-water,body[data-template=canallock] .cl-boat{transition:none}}
