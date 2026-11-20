@@ -8442,3 +8442,45 @@ body[data-template=dune] .dune-visual{display:block}
 .du-dust{position:absolute;bottom:40px;left:10%;width:60%;height:16px;background:radial-gradient(ellipse,rgba(216,176,112,.3),transparent 70%)}
 .dune-caption{text-align:center;font-size:11px;color:var(--dim);margin-top:10px}
 @media(prefers-reduced-motion:reduce){body[data-template=elevator] .ev-cab,body[data-template=dune] .du-camel{transition:none}}
+
+body[data-template=coop]{--bg:#161008;--surface:#20180e;--surface-2:#2a2013;--line:#44341e;--text:#f6e8cc;--accent:#d8a040;--accent-rgb:216,160,64;--instrument:#1b1309;--muted:#b89258;--dim:#705c36}
+.coop-visual{display:none;position:relative;margin-top:18px}
+body[data-template=coop] .charge-visual{display:none}
+body[data-template=coop] .coop-visual{display:block}
+.co-scene{position:relative;height:150px;border-radius:16px;overflow:hidden;background:linear-gradient(180deg,#1c1408,#100b04)}
+.co-hut{position:absolute;top:24px;left:56%;width:74px;height:60px;background:#5c3a1c;border-radius:6px;border:2px solid #42280f}
+.co-hut:before{content:'';position:absolute;top:-14px;left:-8px;width:88px;height:16px;background:#3c2810;clip-path:polygon(0 100%,50% 0,100% 100%)}
+.co-hut:after{content:'';position:absolute;top:26px;left:50%;transform:translateX(-50%);width:16px;height:16px;background:#20140a;border-radius:50%}
+.co-nest{position:absolute;bottom:16px;left:58%;width:50px;height:14px;background:repeating-linear-gradient(90deg,#8a6a30 0 6px,#6e5224 6px 10px);border-radius:7px}
+.co-egg{position:absolute;top:-8px;width:8px;height:10px;background:#f0e6d0;border-radius:50% 50% 40% 40%}
+#coE1{left:10px}#coE2{left:26px}
+.co-hen{position:absolute;left:16%;top:62%;width:20px;height:16px;background:#e8d8b8;border-radius:8px 8px 4px 4px;transition:left .5s,top .5s}
+.co-hen:before{content:'';position:absolute;top:-6px;right:0;width:8px;height:8px;background:#e8d8b8;border-radius:4px}
+.co-hen:after{content:'';position:absolute;top:-4px;right:-3px;width:4px;height:3px;background:#d87828}
+.co-ramp{position:absolute;bottom:8px;left:52%;width:30px;height:3px;background:#4a3018;transform:rotate(24deg)}
+.coop-caption{text-align:center;font-size:11px;color:var(--dim);margin-top:10px}
+body[data-template=summit]{--bg:#0c1218;--surface:#141c26;--surface-2:#1a2430;--line:#2c3c50;--text:#dde8f6;--accent:#98b8d8;--accent-rgb:152,184,216;--instrument:#10161e;--muted:#88a0bc;--dim:#4c5e74}
+.summit-visual{display:none;position:relative;margin-top:18px}
+body[data-template=summit] .charge-visual{display:none}
+body[data-template=summit] .summit-visual{display:block}
+.sm-scene{position:relative;height:150px;border-radius:16px;overflow:hidden;background:linear-gradient(180deg,#141e2c,#0c1018)}
+.sm-sun2{position:absolute;top:12px;right:14%;width:24px;height:24px;background:radial-gradient(circle,#fff0c8,#e8b050);border-radius:50%}
+.sm-peak{position:absolute;bottom:0;left:6%;width:64%;height:110px;background:linear-gradient(160deg,#3a4a5e,#1c2634);clip-path:polygon(0 100%,50% 8%,100% 100%)}
+.sm-peak2{position:absolute;bottom:0;right:0;width:44%;height:80px;background:linear-gradient(200deg,#2c3a4c,#161e2a);clip-path:polygon(0 100%,60% 0,100% 100%)}
+.sm-peak:before{content:'';position:absolute;top:14px;left:42%;width:22px;height:16px;background:#e8eef4;clip-path:polygon(50% 0,100% 100%,0 100%)}
+.sm-climber{position:absolute;left:30%;top:78%;width:8px;height:12px;background:#e05a38;border-radius:3px;transition:left .5s,top .5s}
+.sm-flag{position:absolute;top:16px;left:43%;width:16px;height:11px;background:#d84028;transform-origin:left bottom}
+.sm-flag:before{content:'';position:absolute;left:-1px;top:-2px;width:2px;height:24px;background:#4a3c20}
+.summit-caption{text-align:center;font-size:11px;color:var(--dim);margin-top:10px}
+body[data-template=brook]{--bg:#0a1410;--surface:#111e18;--surface-2:#17281f;--line:#25402f;--text:#d8ecdf;--accent:#68b8a8;--accent-rgb:104,184,168;--instrument:#0d1712;--muted:#76a894;--dim:#40614f}
+.brook-visual{display:none;position:relative;margin-top:18px}
+body[data-template=brook] .charge-visual{display:none}
+body[data-template=brook] .brook-visual{display:block}
+.bk-scene{position:relative;height:150px;border-radius:16px;overflow:hidden;background:linear-gradient(180deg,#0e1a14,#08100b)}
+.bk-bank{position:absolute;top:0;width:100%;height:50px;background:linear-gradient(180deg,#14241a,transparent)}
+.bk-water{position:absolute;bottom:0;width:100%;height:96px;background:linear-gradient(180deg,#1c3a30,#0f2019)}
+.bk-leaf{position:absolute;top:56%;left:8%;width:12px;height:8px;background:#8ab858;border-radius:70% 10% 70% 10%;transition:left .5s}
+.bk-stone{position:absolute;bottom:12px;border-radius:50%;background:#5a6a5e}
+#bkS1{left:22%;width:20px;height:14px}#bkS2{left:48%;width:26px;height:18px}#bkS3{left:72%;width:16px;height:12px}
+.brook-caption{text-align:center;font-size:11px;color:var(--dim);margin-top:10px}
+@media(prefers-reduced-motion:reduce){body[data-template=coop] .co-hen,body[data-template=summit] .sm-climber,body[data-template=brook] .bk-leaf{transition:none}}
