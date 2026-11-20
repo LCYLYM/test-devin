@@ -21,7 +21,11 @@ footer{max-width:960px;margin:40px auto 0;color:var(--dim);font-size:13px}
 <h1>薪动皮肤图鉴</h1>
 <p>共 446 种皮肤，每种都是不同的呈现形式——不只是换配色。点任意一个直接以该皮肤打开 <a class="home" href="./">薪动</a>；在主页按 <code>t</code> 轮换、按 <code>r</code> 随机摇一个。</p>
 </header>
-<input id="q" type="search" placeholder="筛选皮肤（中文或英文 id）…" aria-label="筛选皮肤" style="display:block;max-width:960px;width:100%;margin:0 auto 18px;padding:10px 14px;border-radius:10px;border:1px solid #ffffff20;background:#181c26;color:#e8eaf0;font-size:14px">
+<input id="q" type="search" placeholder="筛选皮肤（中文或英文 id）…" aria-label="筛选皮肤" style="display:block;max-width:960px;width:100%;margin:0 auto 10px;padding:10px 14px;border-radius:10px;border:1px solid #ffffff20;background:#181c26;color:#e8eaf0;font-size:14px">
+<div id="ctl" style="max-width:960px;margin:0 auto 18px;display:flex;justify-content:space-between;align-items:center;font-size:13px;color:#9aa3b5">
+  <span id="count">446 / 446</span>
+  <button id="lucky" type="button" style="background:#181c26;border:1px solid #ffffff20;color:#e8eaf0;border-radius:10px;padding:8px 14px;font-size:13px;cursor:pointer">🎲 随机来一个</button>
+</div>
 <div class="grid">
       <a class="card" href="./?demo=1&skin=pig" title="使用存钱罐皮肤"><i style="--dot:#eeb58e"></i><b>存钱罐</b><span>pig</span></a>
       <a class="card" href="./?demo=1&skin=charge" title="使用充电皮肤"><i style="--dot:#5ae593"></i><b>充电</b><span>charge</span></a>
@@ -472,7 +476,10 @@ footer{max-width:960px;margin:40px auto 0;color:var(--dim);font-size:13px}
 </div>
 <footer><a class="home" href="./">← 返回薪动</a> · 全部皮肤离线可用，数据仅存本机</footer>
 <script>
-var q=document.getElementById('q'),cards=document.querySelectorAll('.card');
-q.addEventListener('input',function(){var v=q.value.trim().toLowerCase();cards.forEach(function(c){c.style.display=!v||c.textContent.toLowerCase().indexOf(v)>-1?'':'none';});});
+var q=document.getElementById('q'),cards=document.querySelectorAll('.card'),count=document.getElementById('count'),lucky=document.getElementById('lucky');
+function vis(){return [].slice.call(cards).filter(function(c){return c.style.display!=='none';});}
+q.addEventListener('input',function(){var v=q.value.trim().toLowerCase();cards.forEach(function(c){c.style.display=!v||c.textContent.toLowerCase().indexOf(v)>-1?'':'none';});count.textContent=vis().length+' / '+cards.length;});
+q.addEventListener('keydown',function(e){if(e.key==='Enter'){var f=vis()[0];if(f)location.href=f.href;}});
+lucky.addEventListener('click',function(){var v=vis();if(v.length)location.href=v[Math.floor(Math.random()*v.length)].href;});
 </script>
 </body></html>
