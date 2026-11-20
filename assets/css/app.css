@@ -2674,6 +2674,12 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .is-chainfern .instrument{border-color:rgba(148,172,110,.4)}
 .is-adderstongue{background:linear-gradient(180deg,#141b16 0%,#0e1410 100%)}
 .is-adderstongue .instrument{border-color:rgba(124,174,128,.4)}
+.is-moonwort{background:linear-gradient(180deg,#151a16 0%,#101310 100%)}
+.is-moonwort .instrument{border-color:rgba(146,170,140,.4)}
+.is-grapefern{background:linear-gradient(180deg,#171512 0%,#12100d 100%)}
+.is-grapefern .instrument{border-color:rgba(166,148,110,.4)}
+.is-rattlesnake{background:linear-gradient(180deg,#141a12 0%,#0f130d 100%)}
+.is-rattlesnake .instrument{border-color:rgba(132,170,102,.4)}
 .is-oatmeal{background:linear-gradient(180deg,#1d1912,#2f291e 50%,#433a2a)}
 .is-oatmeal .instrument{border-color:rgba(215,195,155,.4)}
 .is-thyme{background:linear-gradient(180deg,#121a14,#1c2a20 50%,#28392c)}
