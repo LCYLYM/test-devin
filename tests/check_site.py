@@ -34,10 +34,10 @@ for ic in manifest.get('icons', []):
 
 buttons = set(re.findall(r'data-template="(\w+)"', html))
 js = open(os.path.join(ROOT, 'assets/js/app.js'), encoding='utf-8').read()
-valid = re.search(r"\['charge','meter','pixel','pig','neon','mono','paper','term','ecg','wave','therm','receipt','sand','dial','trail','metro','lift','eclipse','flap','vinyl','const','plant','shadow','tide','rocket','balloon','aqua','kite','falls','toast','ember','cable','hive','lantern','abacus','ferris','globe','seismo','terrace','crane','slots','domino','match','popcorn','tetris','fishing','pottery','sparkler','origami','typewriter','aurora','catnap','prayer','piano','firejar','lava','knit','juice','rainbow','bonsai','vending','lighthouse','treadmill','oven','wishing','sandcastle','inkwash','candle','swing','gacha','surf','scope','bottle','pinball','lotus','ramen','gear','invader','mine','puppet','sprout','hop','mahjong','scale','tearoff','windmill','grill','dock','compass','sub','icicle','snowman','latte','train','ivy','forge','tanghulu','dragonboat','mill','laundry','muyu','sushi','mallow','top','fountain','sled','kaleido','gongfu','jigsaw','scroll','parasol','steamer','hotpot','waterwheel','firecrack','sugarart','sling','bigdrum','faceoff','liondance','chestnut','icesculpt','zoetrope','stoneskip','polaroid','seesaw','neontube','bubble','pizza','sugarman','skylantern','coin','sandart','rattle','ringtoss','inkjet','gaiwan','diabolo','stitch','tangram','knot','rubbing','loom','mosaic','seal','gong','bianzhong','zither','grind','copter','papercut','hula','rubik','nesting','curling','juggle','yoyo','pinwheel','marble','omikuji','darts','pinata','kendama','vaultbox','stilts','jumprope','plate','tightrope','shateki','fukuwarai','kagami','hagoita','shogi','karuta','suika','sumo','goldfish','noren','volcano','abyss','chrysalis','oyster','antfarm','sunflower','metronome','spiral','circuit','drawbridge','weathervane','bigben','telescope','aquarium','terrarium','nest','sourdough','ferment','archery','basketball','pendulum','zipline','carousel','ski','firefly','moonphase','teapot','spiderweb','snail','hummingbird','cicada','dam','potofgold','koipond','zengarden','orchard','constellation','solarsystem','bamboo','geode','mandala','catapult','sakura','incense','pagoda','radar','rover','iceberg','comet','nebula','tornado','rose','dandelion','chess','sunrise','moonrise','billiards','golf','bowling','meadow','geyser','vineyard','reef','fireplace','onsen','iceskate','jukebox','musicbox','bath','dive','observatory','darkroom','projector','trek','harbor','staircase','bakery','castle','voyage','sauna','tidepool','jacuzzi','movie','library','maze','greenhouse','carnival','beach','waterfall','desert','rain','cave','garden','lake','bridge','market','storm','river','canyon','dawn','cabin','origamicrane','jellyfish','shrine','snowy','dusk','harvest','pier','valley','marsh','glacier','fjord','theater','circus','studio','kitchen','workshop','bay','gate','dojo','aviary','apiary','lagoon','glade','cove','plaza','ranch','barn','prairie','tavern','arcade','chapel','tram','temple','cellar','gondola','rooftop','boardwalk','diner','barber','gallery','museum','station','kelp','funicular','marina','planetarium','depot','atrium','stable','elevator','beacon','dune','coop','summit','brook','teahouse','smithy','kennel','lilypad','grove','jetty','camp','boathouse','igloo','monastery','yurt','paddy','silo','dovecote','courtyard','oasis','mesa','crater','quarry','foundry','mint','well','bonfire','spring','granary','heron','smokehouse','sawmill','canallock','sheepfold','drydock','aqueduct','ferry','windpump','winery','tundra','grange','dairy','brickkiln','saltpan','sugarshack','dyeworks','cannery','hatchery','delta','mushroomfarm','glassworks','lumbercamp','silkworm','cranberry','bog'\]", js)
+valid = re.search(r"\['charge','meter','pixel','pig','neon','mono','paper','term','ecg','wave','therm','receipt','sand','dial','trail','metro','lift','eclipse','flap','vinyl','const','plant','shadow','tide','rocket','balloon','aqua','kite','falls','toast','ember','cable','hive','lantern','abacus','ferris','globe','seismo','terrace','crane','slots','domino','match','popcorn','tetris','fishing','pottery','sparkler','origami','typewriter','aurora','catnap','prayer','piano','firejar','lava','knit','juice','rainbow','bonsai','vending','lighthouse','treadmill','oven','wishing','sandcastle','inkwash','candle','swing','gacha','surf','scope','bottle','pinball','lotus','ramen','gear','invader','mine','puppet','sprout','hop','mahjong','scale','tearoff','windmill','grill','dock','compass','sub','icicle','snowman','latte','train','ivy','forge','tanghulu','dragonboat','mill','laundry','muyu','sushi','mallow','top','fountain','sled','kaleido','gongfu','jigsaw','scroll','parasol','steamer','hotpot','waterwheel','firecrack','sugarart','sling','bigdrum','faceoff','liondance','chestnut','icesculpt','zoetrope','stoneskip','polaroid','seesaw','neontube','bubble','pizza','sugarman','skylantern','coin','sandart','rattle','ringtoss','inkjet','gaiwan','diabolo','stitch','tangram','knot','rubbing','loom','mosaic','seal','gong','bianzhong','zither','grind','copter','papercut','hula','rubik','nesting','curling','juggle','yoyo','pinwheel','marble','omikuji','darts','pinata','kendama','vaultbox','stilts','jumprope','plate','tightrope','shateki','fukuwarai','kagami','hagoita','shogi','karuta','suika','sumo','goldfish','noren','volcano','abyss','chrysalis','oyster','antfarm','sunflower','metronome','spiral','circuit','drawbridge','weathervane','bigben','telescope','aquarium','terrarium','nest','sourdough','ferment','archery','basketball','pendulum','zipline','carousel','ski','firefly','moonphase','teapot','spiderweb','snail','hummingbird','cicada','dam','potofgold','koipond','zengarden','orchard','constellation','solarsystem','bamboo','geode','mandala','catapult','sakura','incense','pagoda','radar','rover','iceberg','comet','nebula','tornado','rose','dandelion','chess','sunrise','moonrise','billiards','golf','bowling','meadow','geyser','vineyard','reef','fireplace','onsen','iceskate','jukebox','musicbox','bath','dive','observatory','darkroom','projector','trek','harbor','staircase','bakery','castle','voyage','sauna','tidepool','jacuzzi','movie','library','maze','greenhouse','carnival','beach','waterfall','desert','rain','cave','garden','lake','bridge','market','storm','river','canyon','dawn','cabin','origamicrane','jellyfish','shrine','snowy','dusk','harvest','pier','valley','marsh','glacier','fjord','theater','circus','studio','kitchen','workshop','bay','gate','dojo','aviary','apiary','lagoon','glade','cove','plaza','ranch','barn','prairie','tavern','arcade','chapel','tram','temple','cellar','gondola','rooftop','boardwalk','diner','barber','gallery','museum','station','kelp','funicular','marina','planetarium','depot','atrium','stable','elevator','beacon','dune','coop','summit','brook','teahouse','smithy','kennel','lilypad','grove','jetty','camp','boathouse','igloo','monastery','yurt','paddy','silo','dovecote','courtyard','oasis','mesa','crater','quarry','foundry','mint','well','bonfire','spring','granary','heron','smokehouse','sawmill','canallock','sheepfold','drydock','aqueduct','ferry','windpump','winery','tundra','grange','dairy','brickkiln','saltpan','sugarshack','dyeworks','cannery','hatchery','delta','mushroomfarm','glassworks','lumbercamp','silkworm','cranberry','bog','weatherstation','peatbog','icehouse'\]", js)
 if not valid:
     missing.append('app.js template whitelist missing a skin')
-extra = buttons - {'charge','meter','pixel','pig','neon','mono','paper','term','ecg','wave','therm','receipt','sand','dial','trail','metro','lift','eclipse','flap','vinyl','const','plant','shadow','tide','rocket','balloon','aqua','kite','falls','toast','ember','cable','hive','lantern','abacus','ferris','globe','seismo','terrace','crane','slots','domino','match','popcorn','tetris','fishing','pottery','sparkler','origami','typewriter','aurora','catnap','prayer','piano','firejar','lava','knit','juice','rainbow','bonsai','vending','lighthouse','treadmill','oven','wishing','sandcastle','inkwash','candle','swing','gacha','surf','scope','bottle','pinball','lotus','ramen','gear','invader','mine','puppet','sprout','hop','mahjong','scale','tearoff','windmill','grill','dock','compass','sub','icicle','snowman','latte','train','ivy','forge','tanghulu','dragonboat','mill','laundry','muyu','sushi','mallow','top','fountain','sled','kaleido','gongfu','jigsaw','scroll','parasol','steamer','hotpot','waterwheel','firecrack','sugarart','sling','bigdrum','faceoff','liondance','chestnut','icesculpt','zoetrope','stoneskip','polaroid','seesaw','neontube','bubble','pizza','sugarman','skylantern','coin','sandart','rattle','ringtoss','inkjet','gaiwan','diabolo','stitch','tangram','knot','rubbing','loom','mosaic','seal','gong','bianzhong','zither','grind','copter','papercut','hula','rubik','nesting','curling','juggle','yoyo','pinwheel','marble','omikuji','darts','pinata','kendama','vaultbox','stilts','jumprope','plate','tightrope','shateki','fukuwarai','kagami','hagoita','shogi','karuta','suika','sumo','goldfish','noren','volcano','abyss','chrysalis','oyster','antfarm','sunflower','metronome','spiral','circuit','drawbridge','weathervane','bigben','telescope','aquarium','terrarium','nest','sourdough','ferment','archery','basketball','pendulum','zipline','carousel','ski','firefly','moonphase','teapot','spiderweb','snail','hummingbird','cicada','dam','potofgold','koipond','zengarden','orchard','constellation','solarsystem','bamboo','geode','mandala','catapult','sakura','incense','pagoda','radar','rover','iceberg','comet','nebula','tornado','rose','dandelion','chess','sunrise','moonrise','billiards','golf','bowling','meadow','geyser','vineyard','reef','fireplace','onsen','iceskate','jukebox','musicbox','bath','dive','observatory','darkroom','projector','trek','harbor','staircase','bakery','castle','voyage','sauna','tidepool','jacuzzi','movie','library','maze','greenhouse','carnival','beach','waterfall','desert','rain','cave','garden','lake','bridge','market','storm','river','canyon','dawn','cabin','origamicrane','jellyfish','shrine','snowy','dusk','harvest','pier','valley','marsh','glacier','fjord','theater','circus','studio','kitchen','workshop','bay','gate','dojo','aviary','apiary','lagoon','glade','cove','plaza','ranch','barn','prairie','tavern','arcade','chapel','tram','temple','cellar','gondola','rooftop','boardwalk','diner','barber','gallery','museum','station','kelp','funicular','marina','planetarium','depot','atrium','stable','elevator','beacon','dune','coop','summit','brook','teahouse','smithy','kennel','lilypad','grove','jetty','camp','boathouse','igloo','monastery','yurt','paddy','silo','dovecote','courtyard','oasis','mesa','crater','quarry','foundry','mint','well','bonfire','spring','granary','heron','smokehouse','sawmill','canallock','sheepfold','drydock','aqueduct','ferry','windpump','winery','tundra','grange','dairy','brickkiln','saltpan','sugarshack','dyeworks','cannery','hatchery','delta','mushroomfarm','glassworks','lumbercamp','silkworm','cranberry','bog'}
+extra = buttons - {'charge','meter','pixel','pig','neon','mono','paper','term','ecg','wave','therm','receipt','sand','dial','trail','metro','lift','eclipse','flap','vinyl','const','plant','shadow','tide','rocket','balloon','aqua','kite','falls','toast','ember','cable','hive','lantern','abacus','ferris','globe','seismo','terrace','crane','slots','domino','match','popcorn','tetris','fishing','pottery','sparkler','origami','typewriter','aurora','catnap','prayer','piano','firejar','lava','knit','juice','rainbow','bonsai','vending','lighthouse','treadmill','oven','wishing','sandcastle','inkwash','candle','swing','gacha','surf','scope','bottle','pinball','lotus','ramen','gear','invader','mine','puppet','sprout','hop','mahjong','scale','tearoff','windmill','grill','dock','compass','sub','icicle','snowman','latte','train','ivy','forge','tanghulu','dragonboat','mill','laundry','muyu','sushi','mallow','top','fountain','sled','kaleido','gongfu','jigsaw','scroll','parasol','steamer','hotpot','waterwheel','firecrack','sugarart','sling','bigdrum','faceoff','liondance','chestnut','icesculpt','zoetrope','stoneskip','polaroid','seesaw','neontube','bubble','pizza','sugarman','skylantern','coin','sandart','rattle','ringtoss','inkjet','gaiwan','diabolo','stitch','tangram','knot','rubbing','loom','mosaic','seal','gong','bianzhong','zither','grind','copter','papercut','hula','rubik','nesting','curling','juggle','yoyo','pinwheel','marble','omikuji','darts','pinata','kendama','vaultbox','stilts','jumprope','plate','tightrope','shateki','fukuwarai','kagami','hagoita','shogi','karuta','suika','sumo','goldfish','noren','volcano','abyss','chrysalis','oyster','antfarm','sunflower','metronome','spiral','circuit','drawbridge','weathervane','bigben','telescope','aquarium','terrarium','nest','sourdough','ferment','archery','basketball','pendulum','zipline','carousel','ski','firefly','moonphase','teapot','spiderweb','snail','hummingbird','cicada','dam','potofgold','koipond','zengarden','orchard','constellation','solarsystem','bamboo','geode','mandala','catapult','sakura','incense','pagoda','radar','rover','iceberg','comet','nebula','tornado','rose','dandelion','chess','sunrise','moonrise','billiards','golf','bowling','meadow','geyser','vineyard','reef','fireplace','onsen','iceskate','jukebox','musicbox','bath','dive','observatory','darkroom','projector','trek','harbor','staircase','bakery','castle','voyage','sauna','tidepool','jacuzzi','movie','library','maze','greenhouse','carnival','beach','waterfall','desert','rain','cave','garden','lake','bridge','market','storm','river','canyon','dawn','cabin','origamicrane','jellyfish','shrine','snowy','dusk','harvest','pier','valley','marsh','glacier','fjord','theater','circus','studio','kitchen','workshop','bay','gate','dojo','aviary','apiary','lagoon','glade','cove','plaza','ranch','barn','prairie','tavern','arcade','chapel','tram','temple','cellar','gondola','rooftop','boardwalk','diner','barber','gallery','museum','station','kelp','funicular','marina','planetarium','depot','atrium','stable','elevator','beacon','dune','coop','summit','brook','teahouse','smithy','kennel','lilypad','grove','jetty','camp','boathouse','igloo','monastery','yurt','paddy','silo','dovecote','courtyard','oasis','mesa','crater','quarry','foundry','mint','well','bonfire','spring','granary','heron','smokehouse','sawmill','canallock','sheepfold','drydock','aqueduct','ferry','windpump','winery','tundra','grange','dairy','brickkiln','saltpan','sugarshack','dyeworks','cannery','hatchery','delta','mushroomfarm','glassworks','lumbercamp','silkworm','cranberry','bog','weatherstation','peatbog','icehouse'}
 if extra:
     missing.append('template buttons not in JS whitelist: ' + ','.join(sorted(extra)))
 
@@ -59,6 +59,48 @@ for needle in ['navigator.share', "e.key === 'z'", "e.key === 'm'", "e.key === '
     if needle not in dl:
         missing.append('deep-link.js missing ' + needle)
 
+
+# iter-1724/iter-2060: JS must actually parse — prefer node --check, fall back to
+# a per-block const/let scan inside each top-level function.
+import shutil, subprocess
+_node = shutil.which('node') or shutil.which('nodejs')
+_jsfiles = ['assets/js/app.js', 'assets/js/deep-link.js', 'assets/js/salary-engine.js', 'sw.js']
+if _node:
+    for _jf in _jsfiles:
+        _r = subprocess.run([_node, '--check', os.path.join(ROOT, _jf)], capture_output=True, text=True)
+        if _r.returncode != 0:
+            missing.append('JS syntax error in ' + _jf + ': ' + _r.stderr.strip().split('\n')[-1])
+else:
+    lines = js.split('\n')
+    func_ranges = []
+    i = 0
+    while i < len(lines):
+        if re.match(r'\s*(?:async\s+)?function\s+\w+\s*\(', lines[i]):
+            depth = 0
+            fstart = i
+            while True:
+                depth += lines[i].count('{') - lines[i].count('}')
+                i += 1
+                if depth <= 0 or i >= len(lines):
+                    break
+            func_ranges.append((fstart, i))
+        else:
+            i += 1
+    dup_err = []
+    for a, b in func_ranges:
+        blocks = {}
+        depth = 0
+        for j in range(a, b):
+            depth += lines[j].count('{') - lines[j].count('}')
+            for d in list(blocks):
+                if d > depth: del blocks[d]
+            m2 = re.match(r'\s*(?:const|let)\s+([A-Za-z_$][\w$]*)', lines[j])
+            if m2:
+                blk = blocks.setdefault(depth, {})
+                if m2.group(1) in blk: dup_err.append((m2.group(1), j+1))
+                blk[m2.group(1)] = j+1
+    assert not dup_err, f"duplicate same-block const in function: {dup_err}"
+
 if missing:
     print('SMOKE CHECK FAILED:')
     for m in missing:
@@ -67,29 +109,3 @@ if missing:
 print('smoke check passed:',
       len(re.findall(r'(?:src|href)="\./', html)), 'local refs OK,',
       len(required), 'required files present')
-
-# iter-1724: guard against duplicate top-level const/let in functions (parse-fatal)
-lines = js.split('\n')
-func_ranges = []
-i = 0
-while i < len(lines):
-    if re.match(r'\s*(?:async\s+)?function\s+\w+\s*\(', lines[i]):
-        depth = 0
-        start = i
-        while True:
-            depth += lines[i].count('{') - lines[i].count('}')
-            i += 1
-            if depth <= 0 or i >= len(lines):
-                break
-        func_ranges.append((start+1, i))
-    else:
-        i += 1
-dup_err = []
-for a, b in func_ranges:
-    seen = {}
-    for j in range(a-1, b):
-        m2 = re.match(r'    (?:const|let) (\w+)\s*=', lines[j])
-        if m2:
-            if m2.group(1) in seen: dup_err.append((m2.group(1), j+1))
-            seen[m2.group(1)] = j+1
-assert not dup_err, f"duplicate top-level const in function: {dup_err}"
