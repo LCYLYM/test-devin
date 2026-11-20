@@ -5114,3 +5114,58 @@ body[data-template=tearoff] .tearoff-visual{display:block}
 .trf-page#trfP3{z-index:2}
 .trf-page.cur{z-index:1}
 @media(prefers-reduced-motion:reduce){.instrument.is-working .mj-tile,.instrument.is-working .scl-beam{animation:none}}
+body[data-template=windmill]{--bg:#0c1618;--surface:#101e22;--surface-2:#14262c;--line:#26444e;--text:#d8f0f4;--accent:#88d8e8;--accent-rgb:136,216,232;--instrument:#101e22;--muted:#70a8b8;--dim:#70a8b8}
+.windmill-visual,.grill-visual,.dock-visual{display:none;position:relative;margin-top:18px}
+body[data-template=windmill] .charge-visual,body[data-template=grill] .charge-visual,body[data-template=dock] .charge-visual{display:none}
+body[data-template=windmill] .windmill-visual{display:block}
+.wml-scene{position:relative;height:180px;background:linear-gradient(#0c1618 0%,#163038 70%,#0c1618 100%);overflow:hidden}
+.wml-hill{position:absolute;left:-10%;right:-10%;bottom:0;height:34%;background:linear-gradient(#1e4a38,#143428);border-radius:50% 50% 0 0}
+.wml-tower{position:absolute;left:50%;bottom:20%;width:18px;height:52%;margin-left:-9px;background:linear-gradient(#c8b088,#8a7858);clip-path:polygon(30% 0,70% 0,100% 100%,0 100%)}
+.wml-blades{position:absolute;left:50%;top:14%;width:14px;height:14px;margin:-7px}
+.wml-blades i{position:absolute;left:50%;top:50%;width:9px;height:58px;margin:-58px -4.5px 0;background:linear-gradient(#f0e8d0,#c8b088);border-radius:4px 4px 0 0;transform-origin:50% 100%}
+.wml-blades i:nth-child(1){transform:rotate(0deg)}
+.wml-blades i:nth-child(2){transform:rotate(90deg)}
+.wml-blades i:nth-child(3){transform:rotate(180deg)}
+.wml-blades i:nth-child(4){transform:rotate(270deg)}
+.wml-cloud{position:absolute;width:56px;height:18px;background:rgba(200,230,240,.12);border-radius:10px}
+.wml-cloud.c1{left:14%;top:18%;animation:wmlDrift 9s linear infinite}
+.wml-cloud.c2{right:16%;top:34%;transform:scale(.7);animation:wmlDrift 12s linear infinite reverse}
+@keyframes wmlDrift{0%{translate:-14px 0}50%{translate:14px 0}100%{translate:-14px 0}}
+.windmill-caption,.grill-caption,.dock-caption{text-align:center;font-size:11px;color:var(--dim);margin-top:10px}
+body[data-template=grill] .grill-visual{display:block}
+.grl-scene{position:relative;height:170px;background:radial-gradient(ellipse at 50% 100%,#3a1a08,#180e08 70%);overflow:hidden;perspective:500px}
+.grl-rack{position:absolute;left:12%;right:12%;bottom:26%;height:4px;background:repeating-linear-gradient(90deg,#4a4a52 0 4px,transparent 4px 14px)}
+.grl-skewer{position:absolute;left:50%;bottom:34%;width:130px;height:34px;margin-left:-65px;transform-style:preserve-3d;transition:transform .7s,filter .7s}
+.grl-skewer::before{content:'';position:absolute;left:-14px;right:-14px;top:15px;height:4px;background:#b8a888;border-radius:2px}
+.grl-meat{position:absolute;top:2px;width:34px;height:30px;background:linear-gradient(#c86438,#a04820);border-radius:8px;border:2px solid #7a3418}
+.grl-meat.m1{left:10px}
+.grl-meat.m2{left:48px}
+.grl-meat.m3{left:86px}
+.grl-fire{position:absolute;left:20%;right:20%;bottom:4%;height:22%}
+.grl-fire i{position:absolute;bottom:0;width:20px;height:34px;background:radial-gradient(ellipse at 50% 100%,#f8a028,#e84818 70%,transparent);border-radius:50% 50% 20% 20%;opacity:.8}
+.grl-fire i:nth-child(1){left:10%;animation:grlFlick .7s ease-in-out infinite}
+.grl-fire i:nth-child(2){left:45%;animation:grlFlick .9s ease-in-out infinite -.3s}
+.grl-fire i:nth-child(3){left:75%;animation:grlFlick .8s ease-in-out infinite -.5s}
+@keyframes grlFlick{0%,100%{transform:scaleY(1)}50%{transform:scaleY(1.25)}}
+.grl-sesame{position:absolute;left:50%;bottom:50%;width:140px;height:40px;margin-left:-70px;opacity:0;transition:opacity .5s}
+.grl-sesame i{position:absolute;width:4px;height:7px;background:#f8e8b8;border-radius:50%}
+.grl-sesame i:nth-child(1){left:18%;top:20%}
+.grl-sesame i:nth-child(2){left:36%;top:60%}
+.grl-sesame i:nth-child(3){left:50%;top:10%}
+.grl-sesame i:nth-child(4){left:64%;top:50%}
+.grl-sesame i:nth-child(5){left:80%;top:25%}
+body[data-template=dock] .dock-visual{display:block}
+.dck-scene{position:relative;height:180px;background:linear-gradient(#0a1018 0%,#10203a 55%,#0a1018 100%);overflow:hidden}
+.dck-sky{position:absolute;inset:0 0 45% 0}
+.dck-star{position:absolute;width:3px;height:3px;background:#a8c8f0;border-radius:50%;top:20%;left:20%}
+.dck-star.s2{top:40%;left:60%}
+.dck-star.s3{top:15%;left:80%}
+.dck-sea{position:absolute;left:0;right:0;bottom:0;height:45%;background:linear-gradient(#163048,#0a1a2a)}
+.dck-pier{position:absolute;left:0;bottom:40%;width:34%;height:10px;background:#4a3828;box-shadow:0 4px 0 #30241a}
+.dck-ship{position:absolute;bottom:32%;left:58%;width:90px;height:70px;transition:left .8s}
+.dck-sail{position:absolute;left:38px;bottom:26px;width:0;height:0;border-left:22px solid transparent;border-bottom:40px solid #d8dcd8}
+.dck-hull{position:absolute;left:6px;bottom:8px;width:78px;height:20px;background:linear-gradient(#684430,#482a1c);border-radius:0 0 16px 16px}
+.dck-light{position:absolute;right:8px;bottom:26px;width:8px;height:8px;border-radius:50%;background:#f8d858;box-shadow:0 0 12px #f8d858;opacity:.15;transition:opacity .5s}
+.instrument.is-working .dck-ship{animation:dckBob 3.2s ease-in-out infinite}
+@keyframes dckBob{0%,100%{transform:translateY(0) rotate(-1.5deg)}50%{transform:translateY(-5px) rotate(1.5deg)}}
+@media(prefers-reduced-motion:reduce){.wml-cloud,.instrument.is-working .dck-ship,.grl-fire i{animation:none}}
