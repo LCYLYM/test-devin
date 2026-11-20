@@ -1454,6 +1454,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `honeydew` | `1` ハニーデュー配色 |
 | `cantaloupe` | `1` カンタロープ配色 |
 | `galia` | `1` ガリアメロン配色 |
+| `poblano` | `1` ポブラノ配色 |
+| `jalapeno` | `1` ハラペーニョ配色 |
+| `habanero` | `1` ハバネロ配色 |
 | `fuchsia` | `1` フクシア配色 |
 | `oleander` | `1` キョウチクトウ配色 |
 | `buddleia` | `1` フサフジウツギ配色 |

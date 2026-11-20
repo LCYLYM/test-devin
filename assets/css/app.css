@@ -3106,6 +3106,12 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .is-cantaloupe .instrument{border-color:rgba(230,155,65,.4)}
 .is-galia{background:linear-gradient(180deg,#212617 0%,#0f120a 100%)}
 .is-galia .instrument{border-color:rgba(165,185,90,.4)}
+.is-poblano{background:linear-gradient(180deg,#1a2417 0%,#0c110a 100%)}
+.is-poblano .instrument{border-color:rgba(115,180,85,.4)}
+.is-jalapeno{background:linear-gradient(180deg,#18241a 0%,#0b110c 100%)}
+.is-jalapeno .instrument{border-color:rgba(100,185,105,.4)}
+.is-habanero{background:linear-gradient(180deg,#2a1c0d 0%,#150d05 100%)}
+.is-habanero .instrument{border-color:rgba(245,115,30,.4)}
 .is-fuchsia{background:linear-gradient(180deg,#2e1428 0%,#160a13 100%)}
 .is-fuchsia .instrument{border-color:rgba(230,100,200,.4)}
 .is-oleander{background:linear-gradient(180deg,#2c1720 0%,#150b0f 100%)}
