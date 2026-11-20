@@ -1424,6 +1424,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `guava` | `1` グアバ配色 |
 | `papaya` | `1` パパイヤ配色 |
 | `dragonfruit` | `1` ドラゴンフルーツ配色 |
+| `mangosteen` | `1` マンゴスチン配色 |
+| `rambutan` | `1` ランブータン配色 |
+| `durian` | `1` ドリアン配色 |
 | `fuchsia` | `1` フクシア配色 |
 | `oleander` | `1` キョウチクトウ配色 |
 | `buddleia` | `1` フサフジウツギ配色 |

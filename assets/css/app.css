@@ -3046,6 +3046,12 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .is-papaya .instrument{border-color:rgba(230,140,60,.4)}
 .is-dragonfruit{background:linear-gradient(180deg,#2a1524 0%,#150a12 100%)}
 .is-dragonfruit .instrument{border-color:rgba(225,90,180,.4)}
+.is-mangosteen{background:linear-gradient(180deg,#241521 0%,#120a10 100%)}
+.is-mangosteen .instrument{border-color:rgba(190,90,170,.4)}
+.is-rambutan{background:linear-gradient(180deg,#291614 0%,#150a09 100%)}
+.is-rambutan .instrument{border-color:rgba(220,80,70,.4)}
+.is-durian{background:linear-gradient(180deg,#212415 0%,#0f1209 100%)}
+.is-durian .instrument{border-color:rgba(160,180,80,.4)}
 .is-fuchsia{background:linear-gradient(180deg,#2e1428 0%,#160a13 100%)}
 .is-fuchsia .instrument{border-color:rgba(230,100,200,.4)}
 .is-oleander{background:linear-gradient(180deg,#2c1720 0%,#150b0f 100%)}
