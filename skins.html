@@ -479,7 +479,7 @@ footer{max-width:960px;margin:40px auto 0;color:var(--dim);font-size:13px}
 var q=document.getElementById('q'),cards=document.querySelectorAll('.card'),count=document.getElementById('count'),lucky=document.getElementById('lucky');
 function vis(){return [].slice.call(cards).filter(function(c){return c.style.display!=='none';});}
 q.addEventListener('input',function(){var v=q.value.trim().toLowerCase();cards.forEach(function(c){c.style.display=!v||c.textContent.toLowerCase().indexOf(v)>-1?'':'none';});count.textContent=vis().length+' / '+cards.length;});
-q.addEventListener('keydown',function(e){if(e.key==='Enter'){var f=vis()[0];if(f)location.href=f.href;}});
+q.addEventListener('keydown',function(e){if(e.key==='Enter'&&!e.isComposing){var f=vis()[0];if(f)location.href=f.href;}});
 lucky.addEventListener('click',function(){var v=vis();if(v.length)location.href=v[Math.floor(Math.random()*v.length)].href;});
 </script>
 </body></html>
