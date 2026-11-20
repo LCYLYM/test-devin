@@ -9017,3 +9017,42 @@ body[data-template=dyeworks] .dyeworks-visual{display:block}
 .dw-dye{position:absolute;top:0;left:0;width:0;height:100%;background:linear-gradient(180deg,#3a58b0,#24387a);transition:width .6s}
 .dyeworks-caption{text-align:center;font-size:11px;color:var(--dim);margin-top:10px}
 @media(prefers-reduced-motion:reduce){body[data-template=saltpan] .sp-crust,body[data-template=dyeworks] .dw-dye{transition:none}}
+
+body[data-template=cannery]{--bg:#141412;--surface:#1e1e1a;--surface-2:#282824;--line:#44443c;--text:#f0f0e6;--accent:#b8b8b0;--accent-rgb:184,184,176;--instrument:#181816;--muted:#a0a09a;--dim:#60605a}
+.cannery-visual{display:none;position:relative;margin-top:18px}
+body[data-template=cannery] .charge-visual{display:none}
+body[data-template=cannery] .cannery-visual{display:block}
+.cn-scene{position:relative;height:150px;border-radius:16px;overflow:hidden;background:linear-gradient(180deg,#1b1b18,#0e0e0c)}
+.cn-belt{position:absolute;bottom:34px;left:6%;width:88%;height:12px;background:repeating-linear-gradient(90deg,#3a3a38 0 14px,#2c2c2a 14px 28px);border-radius:3px}
+.cn-can{position:absolute;bottom:46px;left:8%;width:18px;height:24px;background:linear-gradient(90deg,#9a9a94,#c8c8c0 40%,#8a8a84);border-radius:2px;opacity:0;transition:left .5s,opacity .5s}
+.cn-can:before{content:'';position:absolute;top:-3px;left:0;width:18px;height:4px;background:#d8d8d0;border-radius:50%}
+.cn-lid{position:absolute;top:20%;left:56%;width:20px;height:12px;background:#6a6a64;border-radius:0 0 4px 4px;transition:top .4s}
+.cannery-caption{text-align:center;font-size:11px;color:var(--dim);margin-top:10px}
+body[data-template=hatchery]{--bg:#161204;--surface:#211c0a;--surface-2:#2c2612;--line:#4a3f1e;--text:#f8f0d2;--accent:#e8c860;--accent-rgb:232,200,96;--instrument:#1a1508;--muted:#c0a868;--dim:#74622f}
+.hatchery-visual{display:none;position:relative;margin-top:18px}
+body[data-template=hatchery] .charge-visual{display:none}
+body[data-template=hatchery] .hatchery-visual{display:block}
+.hc-scene{position:relative;height:150px;border-radius:16px;overflow:hidden;background:radial-gradient(ellipse at 50% 10%,#2a2410,#0e0b04)}
+.hc-lamp{position:absolute;top:10px;left:50%;transform:translateX(-50%);width:34px;height:16px;background:#d8b040;border-radius:0 0 17px 17px;box-shadow:0 14px 40px 14px rgba(240,200,80,.35);opacity:.3;transition:opacity .5s}
+.hc-nest{position:absolute;bottom:24px;left:50%;transform:translateX(-50%);width:70px;height:16px;background:repeating-linear-gradient(20deg,#7a5c34 0 8px,#5a4226 8px 16px);border-radius:50%}
+.hc-egg{position:absolute;bottom:34px;left:50%;margin-left:-13px;width:26px;height:34px;background:#f0ead8;border-radius:50%/60% 60% 40% 40%;overflow:hidden}
+.hc-crack{position:absolute;bottom:0;left:50%;width:3px;height:0;background:#5a4a34;transform:translateX(-50%) rotate(12deg);transition:height .4s}
+.hc-chick{position:absolute;bottom:40px;left:56%;width:18px;height:16px;background:#f0d040;border-radius:50%;opacity:0;transition:opacity .4s}
+.hc-chick:before{content:'';position:absolute;top:4px;right:-4px;width:7px;height:4px;background:#e08030;border-radius:2px}
+.hatchery-caption{text-align:center;font-size:11px;color:var(--dim);margin-top:10px}
+body[data-template=delta]{--bg:#0c1814;--surface:#12221b;--surface-2:#182e23;--line:#284838;--text:#dcf0e4;--accent:#58a888;--accent-rgb:88,168,136;--instrument:#0f1c16;--muted:#74a088;--dim:#3c5c4c}
+.delta-visual{display:none;position:relative;margin-top:18px}
+body[data-template=delta] .charge-visual{display:none}
+body[data-template=delta] .delta-visual{display:block}
+.dt-scene{position:relative;height:150px;border-radius:16px;overflow:hidden;background:linear-gradient(180deg,#101e18,#081210)}
+.dt-river{position:absolute;top:0;left:14%;width:12%;height:56%;background:#3a7a8a;clip-path:polygon(0 0,100% 0,80% 100%,20% 100%)}
+.dt-chan{position:absolute;top:52%;height:7%;width:0;background:#3a7a8a;transition:width .6s}
+#dtCh1{left:20%;transform:rotate(8deg)}
+#dtCh2{left:20%;top:62%}
+#dtCh3{left:20%;top:72%;transform:rotate(-9deg)}
+.dt-sea{position:absolute;top:44%;right:0;width:38%;height:60%;background:linear-gradient(180deg,#1e3e4c,#142e3a);border-radius:40% 0 0 0}
+.dt-bar{position:absolute;width:20px;height:8px;background:#b8a060;border-radius:50%;opacity:0;transition:opacity .5s}
+#dtBar1{top:58%;left:58%}
+#dtBar2{top:72%;left:66%}
+.delta-caption{text-align:center;font-size:11px;color:var(--dim);margin-top:10px}
+@media(prefers-reduced-motion:reduce){body[data-template=cannery] .cn-can,body[data-template=delta] .dt-chan{transition:none}}
