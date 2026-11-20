@@ -1355,6 +1355,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `abelia` | `1` アベリア配色 |
 | `nandina` | `1` 南天配色 |
 | `pieris` | `1` アセビ配色 |
+| `beautyberry` | `1` ムラサキシキブ配色 |
+| `snowberry` | `1` スノーベリー配色 |
+| `winterberry` | `1` ウインターベリー配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 
