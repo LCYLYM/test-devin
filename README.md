@@ -1400,6 +1400,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `sorghum` | `1` ソルガム配色 |
 | `einkorn` | `1` アインコーン配色 |
 | `kamut` | `1` カムート配色 |
+| `freekeh` | `1` フリーカ配色 |
+| `bulgur` | `1` ブルグル配色 |
+| `couscous` | `1` クスクス配色 |
 | `fuchsia` | `1` フクシア配色 |
 | `oleander` | `1` キョウチクトウ配色 |
 | `buddleia` | `1` フサフジウツギ配色 |
