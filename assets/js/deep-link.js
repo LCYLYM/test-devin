@@ -4191,6 +4191,9 @@
     if (params.get('baobab') === '1') { document.body.classList.add('is-baobab'); }
     if (params.get('kapok') === '1') { document.body.classList.add('is-kapok'); }
     if (params.get('paulownia') === '1') { document.body.classList.add('is-paulownia'); }
+    if (params.get('ailanthus') === '1') { document.body.classList.add('is-ailanthus'); }
+    if (params.get('toon') === '1') { document.body.classList.add('is-toon'); }
+    if (params.get('chinaberry') === '1') { document.body.classList.add('is-chinaberry'); }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -5740,6 +5743,9 @@
         if (params.get('baobab') === '1') u.searchParams.set('baobab', '1');
         if (params.get('kapok') === '1') u.searchParams.set('kapok', '1');
         if (params.get('paulownia') === '1') u.searchParams.set('paulownia', '1');
+        if (params.get('ailanthus') === '1') u.searchParams.set('ailanthus', '1');
+        if (params.get('toon') === '1') u.searchParams.set('toon', '1');
+        if (params.get('chinaberry') === '1') u.searchParams.set('chinaberry', '1');
       if (params.get('tile') === '1') u.searchParams.set('tile', '1');
       if (params.get('outline') === '1') u.searchParams.set('outline', '1');
       if (params.get('stripe') === '1') u.searchParams.set('stripe', '1');

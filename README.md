@@ -1307,6 +1307,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `baobab` | `1` 猴面包树配色 |
 | `kapok` | `1` 木棉配色 |
 | `paulownia` | `1` 泡桐配色 |
+| `ailanthus` | `1` 臭椿配色 |
+| `toon` | `1` 香椿配色 |
+| `chinaberry` | `1` 楝树配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 
