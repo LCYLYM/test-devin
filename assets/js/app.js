@@ -138,13 +138,17 @@
     if(alive&&!genAssist[name]){gs.hidden=true;genFor=name;genKind=-1;genEls=[];return;}
     if(genFor===name)return;
     genFor=name;
-    if(genAssist[name]&&alive){
-      if(cv)cv.style.display='none';
-      genKind=-2;genEls=[...dv.querySelectorAll('[id]')];gs.hidden=true;return;
+    if(genAssist[name]&&dv){
+      const ids=[...dv.querySelectorAll('[id]')];
+      if(ids.length){
+        if(cv)cv.style.display='none';
+        if(dv.offsetHeight<4){dv.style.display='block';dv.style.minHeight='170px';}
+        genKind=-2;genEls=ids;gs.hidden=true;return;
+      }
     }
     genKind=genHash(name)%8;gs.classList.toggle('gen-grid',genKind===7);
     if(cv)cv.style.display='none';
-    if(dv&&dedicated)dv.style.display='none';
+    if(dv)dv.style.display='none';
     const accent=getComputedStyle(document.body).getPropertyValue('--accent').trim()||'#ff833f';
     gs.style.setProperty('--gc',accent);
     let html='';
