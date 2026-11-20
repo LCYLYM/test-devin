@@ -9056,3 +9056,43 @@ body[data-template=delta] .delta-visual{display:block}
 #dtBar2{top:72%;left:66%}
 .delta-caption{text-align:center;font-size:11px;color:var(--dim);margin-top:10px}
 @media(prefers-reduced-motion:reduce){body[data-template=cannery] .cn-can,body[data-template=delta] .dt-chan{transition:none}}
+
+body[data-template=mushroomfarm]{--bg:#120e0c;--surface:#1c1614;--surface-2:#261f1b;--line:#40342c;--text:#f0e4da;--accent:#c8a088;--accent-rgb:200,160,136;--instrument:#161110;--muted:#a88c7c;--dim:#5c4c44}
+.mushroomfarm-visual{display:none;position:relative;margin-top:18px}
+body[data-template=mushroomfarm] .charge-visual{display:none}
+body[data-template=mushroomfarm] .mushroomfarm-visual{display:block}
+.mu-scene{position:relative;height:150px;border-radius:16px;overflow:hidden;background:linear-gradient(180deg,#171210,#0b0807)}
+.mu-shelf{position:absolute;bottom:36px;left:16%;width:68%;height:10px;background:#3e3026;border-radius:3px}
+.mu-s2{bottom:66px;left:24%;width:52%}
+.mu-shroom{position:absolute;width:18px;height:16px;transform-origin:bottom;opacity:0;transition:opacity .5s,transform .5s}
+.mu-shroom:before{content:'';position:absolute;bottom:7px;left:6px;width:6px;height:9px;background:#d8ccb8;border-radius:2px}
+.mu-shroom:after{content:'';position:absolute;top:0;left:0;width:18px;height:10px;background:radial-gradient(ellipse at 50% 100%,#c07850,#8a4c2e);border-radius:50% 50% 0 0}
+#muM1{bottom:44px;left:30%}#muM2{bottom:44px;left:52%}#muM3{bottom:74px;left:44%}
+.mu-spore{position:absolute;left:58%;width:4px;height:4px;background:#e8d8b8;border-radius:50%;opacity:0;transition:top .4s}
+.mushroomfarm-caption{text-align:center;font-size:11px;color:var(--dim);margin-top:10px}
+body[data-template=glassworks]{--bg:#0a1418;--surface:#12202a;--surface-2:#1a2c38;--line:#2c485c;--text:#dcf0f8;--accent:#88c8d8;--accent-rgb:136,200,216;--instrument:#0e1a22;--muted:#78a6b6;--dim:#3c5e6c}
+.glassworks-visual{display:none;position:relative;margin-top:18px}
+body[data-template=glassworks] .charge-visual{display:none}
+body[data-template=glassworks] .glassworks-visual{display:block}
+.gl-scene{position:relative;height:150px;border-radius:16px;overflow:hidden;background:linear-gradient(180deg,#0f1b24,#081118)}
+.gl-pipe{position:absolute;top:38%;left:8%;width:56%;height:4px;background:#6a7a84;border-radius:2px}
+.gl-blob{position:absolute;top:33%;left:60%;width:30px;height:30px;background:radial-gradient(circle at 40% 40%,#ffc060,#e04810);border-radius:50%;transform:scale(.4);transform-origin:left center;transition:transform .5s,filter .5s}
+.gl-rack{position:absolute;bottom:24px;right:12%;width:26%;height:8px;background:#4a4234}
+.gl-rack:before{content:'';position:absolute;bottom:8px;left:0;width:100%;height:2px;background:#4a4234}
+.gl-vase{position:absolute;bottom:34px;width:14px;height:22px;background:linear-gradient(160deg,rgba(160,220,235,.8),rgba(90,150,170,.7));border-radius:40% 40% 50% 50%;opacity:0;transition:opacity .5s}
+#glV1{right:16%}#glV2{right:24%}
+.glassworks-caption{text-align:center;font-size:11px;color:var(--dim);margin-top:10px}
+body[data-template=lumbercamp]{--bg:#140f08;--surface:#1e170e;--surface-2:#282012;--line:#463820;--text:#f0e6d2;--accent:#b08858;--accent-rgb:176,136,88;--instrument:#18130a;--muted:#a89068;--dim:#665430}
+.lumbercamp-visual{display:none;position:relative;margin-top:18px}
+body[data-template=lumbercamp] .charge-visual{display:none}
+body[data-template=lumbercamp] .lumbercamp-visual{display:block}
+.lb-scene{position:relative;height:150px;border-radius:16px;overflow:hidden;background:linear-gradient(180deg,#1a1409,#0d0a05)}
+.lb-stump{position:absolute;bottom:24px;left:36%;width:34px;height:50px;background:#6a4c2a;border-radius:4px}
+.lb-stump:before{content:'';position:absolute;top:-4px;left:0;width:34px;height:10px;background:#8a6638;border-radius:50%}
+.lb-top{position:absolute;top:-26px;left:0;width:34px;height:28px;background:#7a5832;border-radius:4px;transform-origin:bottom right;transition:transform .6s}
+.lb-axe{position:absolute;bottom:66px;left:44%;width:4px;height:34px;background:#5a4530;transform-origin:bottom center;transition:transform .3s}
+.lb-axe:before{content:'';position:absolute;top:-6px;left:-8px;width:14px;height:12px;background:#8a9298;border-radius:4px 8px 4px 4px}
+.lb-log{position:absolute;bottom:16px;width:38px;height:12px;background:#7a5832;border-radius:6px;border-left:5px solid #5c4024;opacity:0;transition:opacity .5s}
+#lbLog1{right:22%}#lbLog2{right:22%;bottom:28px}
+.lumbercamp-caption{text-align:center;font-size:11px;color:var(--dim);margin-top:10px}
+@media(prefers-reduced-motion:reduce){body[data-template=mushroomfarm] .mu-shroom,body[data-template=glassworks] .gl-blob,body[data-template=lumbercamp] .lb-top{transition:none}}
