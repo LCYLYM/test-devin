@@ -140,6 +140,18 @@ else:
                 blk[m2.group(1)] = j+1
     assert not dup_err, f"duplicate same-block const in function: {dup_err}"
 
+# dead scene-CSS guard: scene/visual/stage class selectors must have markup or JS refs
+_css = open('assets/css/app.css', encoding='utf-8').read()
+_js_all = open('assets/js/app.js', encoding='utf-8').read() + open('assets/js/deep-link.js', encoding='utf-8').read()
+_scene_cls = set(re.findall(r'\.((?:[a-z0-9]+-)?(?:scene|visual|stage|layer|caption)[a-z0-9-]*)', _css))
+_used_cls = set()
+for _m in re.finditer(r'class="([^"]+)"', html):
+    _used_cls.update(_m.group(1).split())
+_dead = [c for c in _scene_cls - _used_cls
+         if not re.search(r'(?<![\w-])' + re.escape(c) + r'(?![\w-])', _js_all)]
+if _dead:
+    missing.append(f"dead scene CSS classes (no markup/JS ref): {sorted(_dead)[:15]}")
+
 if missing:
     print('SMOKE CHECK FAILED:')
     for m in missing:
