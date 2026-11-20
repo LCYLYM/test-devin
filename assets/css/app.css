@@ -4284,3 +4284,78 @@ transform-origin:bottom center;transition:transform .3s}
 @keyframes mt-flick{from{transform:translateX(-50%) scale(1) rotate(-3deg)}to{transform:translateX(-50%) scale(1.12) rotate(3deg)}}
 .match-caption{font-size:11px;color:var(--muted);letter-spacing:.4px}
 @media(prefers-reduced-motion:reduce){.mt-flame,.mt-stick{transition:none}.mt-stick.lit .mt-flame{animation:none}}
+
+/* iter-1718: popcorn skin — kernels pop into fluffy puffs filling the bucket */
+.popcorn-visual{display:none;flex-direction:column;align-items:center;gap:12px}
+body[data-template=popcorn]{--bg:#181404;--surface:#221c08;--surface-2:#2c2410;--line:#483c18;--text:#f8f0d0;--accent:#f0d860;--accent-rgb:240,216,96;--instrument:#140e04;--muted:#baaa78;--dim:#7a7044}
+body[data-template=popcorn] .charge-visual{display:none}
+body[data-template=popcorn] .popcorn-visual{display:flex}
+body[data-template=popcorn] .energy-stage{margin:14px 0 8px}
+body[data-template=popcorn] .template-slider{background:#3c3410}
+body[data-template=popcorn] .template-switch button.selected{color:#f5e08a}
+body[data-template=popcorn] .currency-pill{background:#221c08;border-color:#483c18}
+.pop-bucket{position:relative;width:150px;height:150px;overflow:hidden;
+background:linear-gradient(90deg,#d83838 0 18%,#f4ead8 18% 36%,#d83838 36% 54%,#f4ead8 54% 72%,#d83838 72%);
+clip-path:polygon(4% 0,96% 0,86% 100%,14% 100%);border-radius:6px}
+.pop-stripes{position:absolute;left:0;right:0;top:0;height:12px;background:#3c2828}
+.pop-kernel{position:absolute;bottom:8px;width:16px;height:14px;border-radius:50% 50% 40% 40%;
+background:#c89830;transition:all .4s cubic-bezier(.2,1.4,.4,1)}
+.pop-kernel:nth-child(1){left:18%}
+.pop-kernel:nth-child(2){left:32%;bottom:6px}
+.pop-kernel:nth-child(3){left:46%}
+.pop-kernel:nth-child(4){left:60%;bottom:6px}
+.pop-kernel:nth-child(5){left:72%}
+.pop-kernel:nth-child(6){left:25%;bottom:20px}
+.pop-kernel:nth-child(7){left:40%;bottom:22px}
+.pop-kernel:nth-child(8){left:55%;bottom:20px}
+.pop-kernel:nth-child(9){left:33%;bottom:36px}
+.pop-kernel:nth-child(10){left:52%;bottom:38px}
+.pop-kernel.popped{width:26px;height:24px;background:radial-gradient(circle at 40% 30%,#fff8e0,#f0d890);
+border-radius:60% 50% 55% 45%;transform:rotate(-8deg);box-shadow:0 2px 4px rgba(0,0,0,.2)}
+.popcorn-caption{font-size:11px;color:var(--muted);letter-spacing:.4px}
+@media(prefers-reduced-motion:reduce){.pop-kernel{transition:none}}
+
+/* iter-1719: tetris skin — blocks stack into the well as pay accrues */
+.tetris-visual{display:none;flex-direction:column;align-items:center;gap:12px}
+body[data-template=tetris]{--bg:#0c1418;--surface:#121c24;--surface-2:#18242e;--line:#263646;--text:#e0edf6;--accent:#68c8d8;--accent-rgb:104,200,216;--instrument:#0a1016;--muted:#8aa8b8;--dim:#546878}
+body[data-template=tetris] .charge-visual{display:none}
+body[data-template=tetris] .tetris-visual{display:flex}
+body[data-template=tetris] .energy-stage{margin:14px 0 8px}
+body[data-template=tetris] .template-slider{background:#1e3038}
+body[data-template=tetris] .template-switch button.selected{color:#90d8e8}
+body[data-template=tetris] .currency-pill{background:#121c24;border-color:#263646}
+.tetris-well{position:relative;width:140px;height:180px;background:#0a1218;
+border:2px solid #3c5468;border-radius:4px;overflow:hidden;display:flex;align-items:flex-end}
+.tetris-stack{display:grid;grid-template-columns:repeat(6,1fr);grid-auto-rows:28px;width:100%}
+.tb{display:block;margin:1px;border-radius:2px;background:transparent}
+.tb.on{background:linear-gradient(180deg,#58b8d8,#3898b8);box-shadow:inset 0 0 0 1px rgba(255,255,255,.2)}
+.tb.on:nth-child(6n+2){background:linear-gradient(180deg,#f0c040,#c89030)}
+.tb.on:nth-child(6n+4){background:linear-gradient(180deg,#a878d8,#8858b8)}
+.tetris-piece{position:absolute;left:50%;transform:translateX(-50%);width:18px;height:18px;top:8%;
+background:#f06060;border-radius:2px;transition:top .4s linear}
+.instrument.is-working .tetris-piece{animation:tetris-wob 1.4s ease-in-out infinite}
+@keyframes tetris-wob{0%,100%{transform:translateX(-50%) rotate(0)}50%{transform:translateX(-50%) rotate(90deg)}}
+.tetris-caption{font-size:11px;color:var(--muted);letter-spacing:.4px}
+@media(prefers-reduced-motion:reduce){.instrument.is-working .tetris-piece{animation:none}.tetris-piece{transition:none}}
+
+/* iter-1720: fishing skin — bobber sinks and the fish rises as wages land */
+.fishing-visual{display:none;flex-direction:column;align-items:center;gap:12px}
+body[data-template=fishing]{--bg:#0c1614;--surface:#12201c;--surface-2:#182822;--line:#244034;--text:#e0f0ea;--accent:#58b8a0;--accent-rgb:88,184,160;--instrument:#0a1210;--muted:#8eb4a6;--dim:#567064}
+body[data-template=fishing] .charge-visual{display:none}
+body[data-template=fishing] .fishing-visual{display:flex}
+body[data-template=fishing] .energy-stage{margin:14px 0 8px}
+body[data-template=fishing] .template-slider{background:#1e322a}
+body[data-template=fishing] .template-switch button.selected{color:#82d0ba}
+body[data-template=fishing] .currency-pill{background:#12201c;border-color:#244034}
+.fish-scene{position:relative;width:240px;height:160px;border-radius:10px;overflow:hidden}
+.fish-sky{position:absolute;left:0;right:0;top:0;height:44%;background:linear-gradient(180deg,#f0b880,#e89060)}
+.fish-water{position:absolute;left:0;right:0;bottom:0;height:58%;background:linear-gradient(180deg,#3c8898,#1c4a5c)}
+.fish-rod{position:absolute;top:6px;left:30px;width:3px;height:60px;background:#6a4828;transform:rotate(32deg);transform-origin:top;z-index:3}
+.fish-line{position:absolute;top:20px;left:64px;width:1px;height:14%;background:rgba(240,240,220,.7);z-index:2;transition:height .6s}
+.fish-bobber{position:absolute;left:61px;top:30%;width:8px;height:12px;border-radius:50%;
+background:linear-gradient(180deg,#f04030 55%,#f4ead8 55%);transition:top .6s;z-index:2}
+.instrument.is-working .fish-bobber{animation:fish-dip 2.4s ease-in-out infinite}
+@keyframes fish-dip{0%,100%{margin-top:0}50%{margin-top:5px}}
+.fish-fish{position:absolute;left:56%;font-size:22px;opacity:0;transition:bottom .8s,opacity .6s;z-index:1}
+.fishing-caption{font-size:11px;color:var(--muted);letter-spacing:.4px}
+@media(prefers-reduced-motion:reduce){.instrument.is-working .fish-bobber{animation:none}.fish-bobber,.fish-line,.fish-fish{transition:none}}
