@@ -4152,6 +4152,9 @@
     if (params.get('dawnredwood') === '1') { document.body.classList.add('is-dawnredwood'); }
     if (params.get('hemlock') === '1') { document.body.classList.add('is-hemlock'); }
     if (params.get('larch') === '1') { document.body.classList.add('is-larch'); }
+    if (params.get('douglasfir') === '1') { document.body.classList.add('is-douglasfir'); }
+    if (params.get('ponderosa') === '1') { document.body.classList.add('is-ponderosa'); }
+    if (params.get('yewtree') === '1') { document.body.classList.add('is-yewtree'); }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -5662,6 +5665,9 @@
         if (params.get('dawnredwood') === '1') u.searchParams.set('dawnredwood', '1');
         if (params.get('hemlock') === '1') u.searchParams.set('hemlock', '1');
         if (params.get('larch') === '1') u.searchParams.set('larch', '1');
+        if (params.get('douglasfir') === '1') u.searchParams.set('douglasfir', '1');
+        if (params.get('ponderosa') === '1') u.searchParams.set('ponderosa', '1');
+        if (params.get('yewtree') === '1') u.searchParams.set('yewtree', '1');
       if (params.get('tile') === '1') u.searchParams.set('tile', '1');
       if (params.get('outline') === '1') u.searchParams.set('outline', '1');
       if (params.get('stripe') === '1') u.searchParams.set('stripe', '1');

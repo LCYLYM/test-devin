@@ -1268,6 +1268,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `dawnredwood` | `1` 水杉配色 |
 | `hemlock` | `1` 铁杉配色 |
 | `larch` | `1` 落叶松配色 |
+| `douglasfir` | `1` 花旗松配色 |
+| `ponderosa` | `1` 西黄松配色 |
+| `yewtree` | `1` 红豆杉配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 
