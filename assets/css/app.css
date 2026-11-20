@@ -7803,3 +7803,51 @@ body[data-template=pier] .pier-visual{display:block}
 .pi-rope{position:absolute;top:60px;left:50%;width:60px;height:20px;border-bottom:3px solid #8a7a5a;border-radius:0 0 50% 50%;opacity:0;transition:opacity .5s;transform:rotate(24deg);transform-origin:left top}
 .pier-caption{text-align:center;font-size:11px;color:var(--dim);margin-top:10px}
 @media(prefers-reduced-motion:reduce){body[data-template=pier] *{animation:none!important;transition:none!important}}
+
+/* valley 山谷 */
+body[data-template=valley]{--bg:#0c120e;--surface:#121c14;--surface-2:#1a281c;--line:#304e38;--text:#d8ecdc;--accent:#6aa87a;--accent-rgb:106,168,122;--instrument:#121c14;--muted:#6a9a76;--dim:#3e5e46}
+.valley-visual{display:none;position:relative;margin-top:18px}
+body[data-template=valley] .charge-visual{display:none}
+body[data-template=valley] .valley-visual{display:block}
+.vl-scene{position:relative;height:200px;max-width:340px;margin:0 auto;overflow:hidden;border-radius:10px;background:linear-gradient(180deg,#1a2a1e,#0e1a12)}
+.vl-mist{position:absolute;inset:0;background:linear-gradient(180deg,rgba(200,220,210,0.35),rgba(180,200,190,0.2));transition:opacity 1s;z-index:2}
+.vl-ridge{position:absolute;border-radius:50% 50% 0 0}
+.vl-ridge.r1{left:-8%;bottom:50px;width:58%;height:90px;background:linear-gradient(180deg,#2c4432,#1a2c20)}
+.vl-ridge.r2{right:-6%;bottom:56px;width:52%;height:106px;background:linear-gradient(180deg,#243a2a,#16261c)}
+.vl-ridge.r3{left:28%;bottom:40px;width:50%;height:64px;background:linear-gradient(180deg,#1e3024,#121e16);opacity:0;transition:opacity .8s}
+.vl-river{position:absolute;bottom:8px;left:50%;width:14%;height:48px;margin-left:-7%;background:linear-gradient(180deg,rgba(90,168,200,0.7),rgba(40,90,120,0.8));border-radius:50% 50% 0 0;opacity:0;transition:opacity .7s}
+.valley-caption{text-align:center;font-size:11px;color:var(--dim);margin-top:10px}
+@media(prefers-reduced-motion:reduce){body[data-template=valley] *{animation:none!important;transition:none!important}}
+
+/* marsh 湿地 */
+body[data-template=marsh]{--bg:#0e140c;--surface:#161e14;--surface-2:#1e2a1a;--line:#3a4e30;--text:#dce8d0;--accent:#7a9a5a;--accent-rgb:122,154,90;--instrument:#161e14;--muted:#8a9e6a;--dim:#4e5e40}
+.marsh-visual{display:none;position:relative;margin-top:18px}
+body[data-template=marsh] .charge-visual{display:none}
+body[data-template=marsh] .marsh-visual{display:block}
+.mr-scene{position:relative;height:190px;max-width:320px;margin:0 auto;overflow:hidden;border-radius:10px;background:linear-gradient(180deg,#141e12,#0e160e)}
+.mr-water{position:absolute;bottom:0;left:0;right:0;height:56px;background:linear-gradient(180deg,#1e3226,#12211a)}
+.mr-reed{position:absolute;bottom:40px;width:5px;height:56px;background:linear-gradient(180deg,#5a7a3a,#3a5426);border-radius:3px;opacity:0.15;transition:opacity .5s,transform .4s}
+.mr-reed::before{content:"";position:absolute;top:-14px;left:-2px;width:9px;height:16px;border-radius:4px;background:#6a4a26}
+#mrR1{left:14%}#mrR2{left:34%;height:66px}#mrR3{left:58%;height:48px}#mrR4{left:80%;height:60px}
+.mr-fly{position:absolute;width:8px;height:8px;border-radius:50%;background:radial-gradient(circle,#e8f0a0,#a8b840);box-shadow:0 0 10px rgba(232,240,160,0.7);opacity:0}
+.mr-frog{position:absolute;bottom:44px;right:18%;width:26px;height:18px;border-radius:50% 50% 30% 30%;background:#4a7a3a;opacity:0;transition:opacity .4s}
+.mr-frog::before{content:"";position:absolute;top:-6px;left:4px;width:7px;height:7px;border-radius:50%;background:#5a8a4a}
+.mr-frog::after{content:"";position:absolute;top:-6px;right:4px;width:7px;height:7px;border-radius:50%;background:#5a8a4a}
+.marsh-caption{text-align:center;font-size:11px;color:var(--dim);margin-top:10px}
+@media(prefers-reduced-motion:reduce){body[data-template=marsh] *{animation:none!important;transition:none!important}}
+
+/* glacier 冰川 */
+body[data-template=glacier]{--bg:#0a141e;--surface:#101e2a;--surface-2:#162a38;--line:#2e4e62;--text:#dcecf6;--accent:#8ac8e8;--accent-rgb:138,200,232;--instrument:#101e2a;--muted:#6ea4c0;--dim:#40667a}
+.glacier-visual{display:none;position:relative;margin-top:18px}
+body[data-template=glacier] .charge-visual{display:none}
+body[data-template=glacier] .glacier-visual{display:block}
+.gl-scene{position:relative;height:200px;max-width:340px;margin:0 auto;overflow:hidden;border-radius:10px;background:linear-gradient(180deg,#16242f,#0c1824)}
+.gl-sky{position:absolute;inset:0}
+.gl-berg{position:absolute;background:linear-gradient(180deg,#e8f2fa,#9cc4dc);opacity:0;transition:opacity .6s}
+.gl-berg.b1{left:10%;bottom:56px;width:70px;height:56px;clip-path:polygon(0 100%,14% 30%,40% 0,64% 24%,86% 44%,100% 100%)}
+.gl-berg.b2{left:44%;bottom:56px;width:90px;height:72px;clip-path:polygon(0 100%,10% 40%,30% 0,58% 30%,80% 10%,100% 100%)}
+.gl-berg.b3{right:6%;bottom:56px;width:56px;height:44px;clip-path:polygon(0 100%,20% 20%,50% 0,78% 30%,100% 100%)}
+.gl-sea{position:absolute;bottom:0;left:0;right:0;height:56px;background:linear-gradient(180deg,#1c3a4e,#0e2434)}
+.gl-shine{position:absolute;top:30px;left:0;right:0;height:60px;background:linear-gradient(105deg,transparent 40%,rgba(200,232,250,0.15) 50%,transparent 60%);opacity:0;transition:opacity .5s}
+.glacier-caption{text-align:center;font-size:11px;color:var(--dim);margin-top:10px}
+@media(prefers-reduced-motion:reduce){body[data-template=glacier] *{animation:none!important;transition:none!important}}
