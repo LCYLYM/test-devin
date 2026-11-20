@@ -182,10 +182,13 @@
       return;
     }
     if(genKind<0)return;
-    const sw=Math.sin(tick/1400);
+    // under reduced motion the scene still responds to progress, but the
+    // autonomous drift/twinkle terms freeze so nothing animates on its own
+    const tk=motion.matches?0:tick;
+    const sw=Math.sin(tk/1400);
     if(genKind===0)genEls.forEach((e,i)=>{e.style.opacity=.15+clamp(p*6-i*.9,0,1)*.75;e.style.transform='translate(-50%,-50%) scale('+(1+p*.3+i*.02)+')';});
     else if(genKind===1)genEls.forEach((e,i)=>{e.style.transform='translateY('+(100-clamp(p*4-i*.7,0,1)*100)+'%)';e.style.opacity=.15+clamp(p*4-i*.7,0,.7);});
-    else if(genKind===2)genEls.forEach((e,i)=>{e.style.opacity=.12+clamp(p*14-i*.8,0,1)*(.5+.35*Math.sin(tick/700+i));});
+    else if(genKind===2)genEls.forEach((e,i)=>{e.style.opacity=.12+clamp(p*14-i*.8,0,1)*(.5+.35*Math.sin(tk/700+i));});
     else if(genKind===3)genEls.forEach((e,i)=>{e.style.opacity=.15+clamp(p*11-i*.7,0,.8);e.style.transform='scaleY('+(0.35+clamp(p*11-i*.7,0,1)*.65)+')';});
     else if(genKind===4)genEls.forEach((e,i)=>{e.style.opacity=.15+clamp(p*9-i*.8,0,.72);e.style.transform='translateY('+(-p*46-((i*13)%20)+sw*4)+'px)';});
     else if(genKind===5)genEls.forEach((e,i)=>{e.style.opacity=.12+clamp(p*13-i*.8,0,.68);e.style.transform='translateY('+(p*44+((i*19)%26)-30)+'px)';});
