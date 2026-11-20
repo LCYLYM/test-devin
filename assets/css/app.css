@@ -9303,3 +9303,45 @@ html[data-template="outpost"] .outpost-visual{display:flex;flex-direction:column
 #otpS1{left:20%;top:14%}#otpS2{left:78%;top:22%}
 .outpost-caption{}
 @media (prefers-reduced-motion:reduce){.dst-drip,.tnt-fire,.otp-flag{animation:none}}
+
+/* 乳坊 creamery: 搅乳桶起伏、黄油成块 */
+.creamery-visual{display:none;grid-area:visual}
+html[data-template="creamery"] .pig-visual{display:none}
+html[data-template="creamery"] .creamery-visual{display:flex;flex-direction:column;align-items:center;gap:10px}
+.crm-scene{position:relative;width:270px;height:180px}
+.crm-churn{position:absolute;left:26%;bottom:10%;width:52px;height:80px;background:linear-gradient(#6a4a28,#3a2810);border-radius:8px 8px 12px 12px;border:2px solid #2a1c08}
+.crm-churn::before,.crm-churn::after{content:'';position:absolute;left:-4px;right:-4px;height:6px;background:#8a6a40;border-radius:3px}
+.crm-churn::before{top:16%}.crm-churn::after{top:68%}
+.crm-dash{position:absolute;left:50%;top:-30px;transform:translateX(-50%);width:8px;height:40px;background:#a08050;border-radius:4px}
+.crm-dash::after{content:'';position:absolute;left:-12px;top:-8px;width:32px;height:10px;background:#8a6840;border-radius:5px}
+.crm-pat{position:absolute;bottom:14%;width:26px;height:14px;background:linear-gradient(#f0e0a8,#d8bc78);border-radius:4px;opacity:0;transition:opacity .8s;box-shadow:0 2px 4px rgba(0,0,0,.4)}
+#crmB1{left:56%}#crmB2{left:70%;bottom:22%}#crmB3{left:62%;bottom:14%;transform:rotate(-8deg)}
+.creamery-caption,.hut-caption,.nori-caption{font-size:12px;color:var(--muted)}
+
+/* 茅屋 hut: 炊烟、窗光 */
+.hut-visual{display:none;grid-area:visual}
+html[data-template="hut"] .pig-visual{display:none}
+html[data-template="hut"] .hut-visual{display:flex;flex-direction:column;align-items:center;gap:10px}
+.hut-scene{position:relative;width:270px;height:180px}
+.hut-body{position:absolute;left:50%;bottom:10%;transform:translateX(-50%);width:110px;height:56px;background:linear-gradient(#4a3820,#2e2010);border-radius:4px}
+.hut-roof{position:absolute;left:50%;bottom:38%;transform:translateX(-50%);width:0;height:0;border-left:70px solid transparent;border-right:70px solid transparent;border-bottom:40px solid #6a5428}
+.hut-roof::after{content:'';position:absolute;right:-20px;top:-6px;width:12px;height:24px;background:#3a2c14}
+.hut-win{position:absolute;left:50%;bottom:18%;transform:translateX(-50%);width:18px;height:16px;background:radial-gradient(#f0c860,#a07820);border-radius:2px;opacity:0;transition:opacity 1s;box-shadow:0 0 14px #f0c86088}
+.hut-smoke{position:absolute;left:58%;width:9px;height:18px;background:radial-gradient(#9a9488,#585044);border-radius:50%;opacity:0;filter:blur(3px);transition:opacity .8s}
+#hutS1{margin-left:-6px}#hutS2{margin-left:8px}
+.hut-caption{}
+
+/* 海苔架 nori: 潮间竹架、海苔晾开 */
+.nori-visual{display:none;grid-area:visual}
+html[data-template="nori"] .pig-visual{display:none}
+html[data-template="nori"] .nori-visual{display:flex;flex-direction:column;align-items:center;gap:10px}
+.nor-scene{position:relative;width:270px;height:180px}
+.nor-sea{position:absolute;left:0;right:0;bottom:0;height:34%;background:linear-gradient(#1a2e3a,#101e28);border-radius:0 0 14px 14px}
+.nor-sea::after{content:'';position:absolute;left:10%;right:10%;top:6px;height:2px;background:#3a5a6a44;border-radius:2px}
+.nor-rack{position:absolute;left:12%;right:12%;bottom:36%;height:4px;background:#6a5638;border-radius:2px}
+.nor-rack::before,.nor-rack::after{content:'';position:absolute;width:5px;height:60px;background:#5a4628;top:0}
+.nor-rack::before{left:8%}.nor-rack::after{right:8%}
+.nor-sheet{position:absolute;bottom:30%;width:30px;height:38px;background:linear-gradient(#2e4a34,#1c3222);border-radius:3px;opacity:0;transition:opacity .8s;transform-origin:50% 0}
+#norSh1{left:22%}#norSh2{left:44%}#norSh3{left:66%}
+.nori-caption{}
+@media (prefers-reduced-motion:reduce){.nor-sheet{transition:opacity .8s}}
