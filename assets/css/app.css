@@ -2944,6 +2944,12 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .is-oregano .instrument{border-color:rgba(155,175,105,.4)}
 .is-tarragon{background:linear-gradient(180deg,#1d261e 0%,#0d110d 100%)}
 .is-tarragon .instrument{border-color:rgba(130,185,130,.4)}
+.is-chervil{background:linear-gradient(180deg,#20261c 0%,#0f120d 100%)}
+.is-chervil .instrument{border-color:rgba(150,180,120,.4)}
+.is-lovage{background:linear-gradient(180deg,#1c261e 0%,#0d120e 100%)}
+.is-lovage .instrument{border-color:rgba(115,175,125,.4)}
+.is-marjoram{background:linear-gradient(180deg,#24201c 0%,#110f0d 100%)}
+.is-marjoram .instrument{border-color:rgba(190,160,120,.4)}
 .is-fuchsia{background:linear-gradient(180deg,#2e1428 0%,#160a13 100%)}
 .is-fuchsia .instrument{border-color:rgba(230,100,200,.4)}
 .is-oleander{background:linear-gradient(180deg,#2c1720 0%,#150b0f 100%)}

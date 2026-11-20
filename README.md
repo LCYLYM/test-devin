@@ -1373,6 +1373,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `rosemary` | `1` ローズマリー配色 |
 | `oregano` | `1` オレガノ配色 |
 | `tarragon` | `1` タラゴン配色 |
+| `chervil` | `1` チャービル配色 |
+| `lovage` | `1` ラベッジ配色 |
+| `marjoram` | `1` マジョラム配色 |
 | `fuchsia` | `1` フクシア配色 |
 | `oleander` | `1` キョウチクトウ配色 |
 | `buddleia` | `1` フサフジウツギ配色 |
