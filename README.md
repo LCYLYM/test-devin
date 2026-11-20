@@ -1301,6 +1301,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `tupelo` | `1` 蓝果树配色 |
 | `locust` | `1` 刺槐配色 |
 | `smoketree` | `1` 黄栌配色 |
+| `euonymus` | `1` 卫矛配色 |
+| `figtree` | `1` 无花果树配色 |
+| `plane` | `1` 悬铃木配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 

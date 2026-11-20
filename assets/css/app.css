@@ -2800,6 +2800,12 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .is-locust .instrument{border-color:rgba(170,185,120,.4)}
 .is-smoketree{background:linear-gradient(180deg,#2b1f20 0%,#140e0f 100%)}
 .is-smoketree .instrument{border-color:rgba(200,140,150,.4)}
+.is-euonymus{background:linear-gradient(180deg,#2a1a20 0%,#140c10 100%)}
+.is-euonymus .instrument{border-color:rgba(205,110,140,.4)}
+.is-figtree{background:linear-gradient(180deg,#20281e 0%,#0e130d 100%)}
+.is-figtree .instrument{border-color:rgba(140,185,125,.4)}
+.is-plane{background:linear-gradient(180deg,#26261e 0%,#11110c 100%)}
+.is-plane .instrument{border-color:rgba(185,180,125,.4)}
 .is-oatmeal{background:linear-gradient(180deg,#1d1912,#2f291e 50%,#433a2a)}
 .is-oatmeal .instrument{border-color:rgba(215,195,155,.4)}
 .is-thyme{background:linear-gradient(180deg,#121a14,#1c2a20 50%,#28392c)}

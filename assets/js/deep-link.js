@@ -4185,6 +4185,9 @@
     if (params.get('tupelo') === '1') { document.body.classList.add('is-tupelo'); }
     if (params.get('locust') === '1') { document.body.classList.add('is-locust'); }
     if (params.get('smoketree') === '1') { document.body.classList.add('is-smoketree'); }
+    if (params.get('euonymus') === '1') { document.body.classList.add('is-euonymus'); }
+    if (params.get('figtree') === '1') { document.body.classList.add('is-figtree'); }
+    if (params.get('plane') === '1') { document.body.classList.add('is-plane'); }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -5728,6 +5731,9 @@
         if (params.get('tupelo') === '1') u.searchParams.set('tupelo', '1');
         if (params.get('locust') === '1') u.searchParams.set('locust', '1');
         if (params.get('smoketree') === '1') u.searchParams.set('smoketree', '1');
+        if (params.get('euonymus') === '1') u.searchParams.set('euonymus', '1');
+        if (params.get('figtree') === '1') u.searchParams.set('figtree', '1');
+        if (params.get('plane') === '1') u.searchParams.set('plane', '1');
       if (params.get('tile') === '1') u.searchParams.set('tile', '1');
       if (params.get('outline') === '1') u.searchParams.set('outline', '1');
       if (params.get('stripe') === '1') u.searchParams.set('stripe', '1');
