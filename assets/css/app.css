@@ -9965,3 +9965,39 @@ html[data-template="stonebridge"] .stonebridge-visual{display:flex;flex-directio
 .alg-peak{position:absolute;left:50%;bottom:-6%;width:0;height:0;margin-left:-46%;border-left:46vw solid transparent;border-right:46vw solid transparent;border-bottom:150px solid #2a2434;filter:drop-shadow(0 -2px 0 rgba(255,255,255,.06))}
 .alg-glow{position:absolute;left:0;bottom:0;width:100%;height:100%;background:linear-gradient(180deg,#f0b070 0%,#e07858 55%,#7a4a58 100%);clip-path:polygon(50% 38%,0 100%,100% 100%);transition:clip-path .5s;mix-blend-mode:screen;opacity:.9}
 .alpenglow-caption{margin-top:10px;font-size:12px;letter-spacing:2px;opacity:.55;text-align:center}
+
+/* cenote skin */
+[data-template="cenote"] .cenote-visual{display:block}
+.cenote-visual{display:none}
+.cnt-scene{position:relative;height:190px;border-radius:18px;overflow:hidden;background:radial-gradient(ellipse at 50% 110%,#14685e 0%,#0a2e2a 45%,#071a16 100%)}
+.cnt-rim{position:absolute;left:-4%;top:0;width:108%;height:26%;background:radial-gradient(ellipse at 30% 0%,#2a2418 60%,transparent 65%),radial-gradient(ellipse at 75% 0%,#332a1c 55%,transparent 62%)}
+.cnt-vine{position:absolute;top:6%;width:3px;background:linear-gradient(180deg,#3a6a3a,#2a4a2a);border-radius:2px;transition:height .6s}
+.cnt-vine::after{content:"";position:absolute;bottom:-4px;left:-2px;width:7px;height:7px;border-radius:50%;background:#3a6a3a}
+#cntV1{left:24%}
+#cntV2{left:52%}
+#cntV3{left:78%}
+.cnt-shaft{position:absolute;left:38%;top:8%;width:24%;height:80%;background:linear-gradient(180deg,rgba(220,240,220,.5),rgba(180,220,200,.08));clip-path:polygon(38% 0,62% 0,100% 100%,0 100%);opacity:.05;transition:opacity .8s}
+.cnt-water{position:absolute;left:8%;bottom:4%;width:84%;height:30%;border-radius:50%;background:radial-gradient(ellipse at 50% 40%,rgba(80,220,200,.55),rgba(20,90,80,.4) 70%);opacity:.6}
+.cenote-caption{margin-top:10px;font-size:12px;letter-spacing:2px;opacity:.55;text-align:center}
+
+/* redwood skin */
+[data-template="redwood"] .redwood-visual{display:block}
+.redwood-visual{display:none}
+.rdw-scene{position:relative;height:190px;border-radius:18px;overflow:hidden;background:linear-gradient(180deg,#14100c 0%,#0e0b08 100%)}
+.rdw-trunks{position:absolute;left:0;top:0;width:100%;height:100%;background:repeating-linear-gradient(90deg,transparent 0 34px,#3a2418 34px 46px,#2a1a10 46px 50px),repeating-linear-gradient(0deg,transparent 0 60px,rgba(0,0,0,.25) 60px 64px)}
+.rdw-shaft{position:absolute;left:30%;top:0;width:30%;height:100%;background:linear-gradient(105deg,transparent,rgba(230,200,140,.28) 45%,rgba(230,200,140,.1) 60%,transparent);opacity:.08;transition:opacity .8s}
+.rdw-fog{position:absolute;left:-10%;top:30%;width:120%;height:50%;background:linear-gradient(180deg,transparent,rgba(180,180,170,.14),rgba(180,180,170,.2),transparent);opacity:.4}
+.rdw-spark{position:absolute;left:55%;top:44%;width:4px;height:4px;border-radius:50%;background:#f0d8a0;box-shadow:0 0 8px 3px rgba(240,216,160,.6);opacity:0}
+.redwood-caption{margin-top:10px;font-size:12px;letter-spacing:2px;opacity:.55;text-align:center}
+
+/* biolum skin */
+[data-template="biolum"] .biolum-visual{display:block}
+.biolum-visual{display:none}
+.blm-scene{position:relative;height:190px;border-radius:18px;overflow:hidden;background:linear-gradient(180deg,#040c14 0%,#071828 55%,#0a1c20 100%)}
+.blm-sky{position:absolute;left:0;top:0;width:100%;height:34%;background:radial-gradient(circle at 20% 30%,rgba(200,220,255,.5) 1px,transparent 2px),radial-gradient(circle at 60% 20%,rgba(200,220,255,.4) 1px,transparent 2px),radial-gradient(circle at 85% 35%,rgba(200,220,255,.45) 1px,transparent 2px)}
+.blm-wave{position:absolute;left:-5%;width:110%;height:16px;border-radius:50%;background:linear-gradient(90deg,transparent,rgba(64,200,232,.55),rgba(120,240,255,.7),rgba(64,200,232,.55),transparent);filter:blur(1px);opacity:0;transition:opacity .6s}
+#blmW1{bottom:38%}
+#blmW2{bottom:24%}
+#blmW3{bottom:10%;width:120%;left:-10%}
+.blm-sand{position:absolute;left:0;bottom:0;width:100%;height:12%;background:linear-gradient(180deg,#0a1410,#060a08)}
+.biolum-caption{margin-top:10px;font-size:12px;letter-spacing:2px;opacity:.55;text-align:center}
