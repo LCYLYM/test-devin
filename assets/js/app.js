@@ -750,15 +750,12 @@
     const gB=$('glfBall'),gA=$('glfArc');if(gB){gB.style.left='calc(18% + '+p*66+'%)';gB.style.opacity=p>=1?0:1;}if(gA){gA.style.strokeDasharray='90';gA.style.strokeDashoffset=90*(1-p);gA.style.opacity=p>0&&p<1?1:0;}
     const wB=$('bwlBall');if(wB){wB.style.left='calc(8% + '+clamp(p/0.7,0,1)*72+'%)';wB.style.opacity=p<0.75?1:0;}
     for(let wp=1;wp<=6;wp++){const pn=$('bwlP'+wp);if(pn){const on14=clamp(p*6-wp-0.4,0,1);pn.style.transform='rotate('+(on14*(wp%2?70:-70))+'deg) translateY('+(on14*8)+'px)';pn.style.opacity=1-on14*0.8;}}
-    for(let mg=1;mg<=4;mg++){const gr=$('mdwG'+mg);if(gr){const on15=clamp(p*4-mg+1,0,1);gr.style.height=(on15*34)+'px';gr.style.transform='rotate('+(Math.sin(tick/(600+mg*120)+mg)*5)+'deg)';}}
-    for(let mf=1;mf<=2;mf++){const fw=$('mdwFl'+mf);if(fw){const on16=clamp(p*2-mf*0.6-0.35,0,1);fw.style.opacity=on16;fw.style.transform='scale('+(0.3+on16*0.7)+')';}}
     const gJ=$('gysJet');const jet=p>0.55?(p-0.55)/0.45:0;if(gJ){gJ.style.height=(jet*110)+'px';gJ.style.opacity=jet>0?1:0;}for(let gd=1;gd<=2;gd++){const dr2=$('gysD'+gd);if(dr2){const drp=(tick/(500+gd*300))%1;dr2.style.opacity=jet>0.5?1-drp:0;dr2.style.transform='translate('+((gd?14:-16)*(1+drp))+'px,'+(drp*40)+'px)';}}
     for(let vg=1;vg<=3;vg++){const gp=$('vnyG'+vg);if(gp){const st5=clamp(p*3-vg+1,0,1);gp.style.background=st5>=1?'radial-gradient(circle at 35% 30%,#b070e0,#6838a0)':st5>0?'radial-gradient(circle at 35% 30%,#a89850,#786828)':'radial-gradient(circle at 35% 30%,#6a9848,#486c2c)';gp.style.transform='scale('+(0.4+st5*0.6)+')';}}
     for(let rc=1;rc<=3;rc++){const cr=$('refC'+rc);if(cr){const on17=clamp(p*3-rc+1,0,1);cr.style.height=(on17*(26+rc*10))+'px';}}
     const rF=$('refFish');if(rF){rF.style.left=(20+(tick/120)%55)+'%';rF.style.opacity=p>0.6?1:0;}
     for(let ff=1;ff<=3;ff++){const fm=$('fplF'+ff);if(fm){const on18=clamp(p*3-ff+1,0,1);fm.style.opacity=on18;fm.style.transform='scaleY('+(0.3+on18*(0.7+Math.sin(tick/(140+ff*60))*0.12))+')';}}
     for(let fs=1;fs<=2;fs++){const sp4=$('fplS'+fs);if(sp4){const fsr=(tick/(400+fs*250))%1;sp4.style.opacity=p>0.7?Math.sin(fsr*Math.PI):0;sp4.style.transform='translate('+((fs?14:-10)*fsr)+'px,'+(-fsr*50)+'px)';}}
-    const oP=$('onsPool');if(oP){oP.style.opacity=0.4+p*0.6;oP.style.transform='scaleX('+(0.6+p*0.4)+')';}
     for(let os=1;os<=3;os++){const st6=$('onsS'+os);if(st6){const stp=(tick/(1400+os*400)+os*0.33)%1;st6.style.opacity=p>0.3?Math.sin(stp*Math.PI)*0.5:0;st6.style.transform='translate('+((os-2)*24)+'px,'+(-stp*55)+'px)';}}
     const iT=$('iskTrace'),iK=$('iskSkater');if(iT){iT.style.strokeDasharray='600';iT.style.strokeDashoffset=600*(1-p);}if(iK){const fig=p*Math.PI*2;iK.style.left='calc(50% + '+(Math.sin(fig)*40)+'%)';iK.style.top='calc(50% + '+(Math.sin(fig*2)*18)+'%)';iK.style.opacity=p>0.02?1:0;}
     for(let jt=1;jt<=3;jt++){const tb2=$('jkbT'+jt);if(tb2)tb2.style.opacity=clamp(p*3-jt+1,0,1);}
@@ -784,8 +781,6 @@
     const cFb=$('cst2F'),cF2=$('cst2F2');if(cFb)cFb.style.opacity=p>0.7?1:0;if(cF2)cF2.style.opacity=p>0.92?1:0;
     const vB=$('vygBoat'),vL=$('vygLand'),vSl=$('vygSail');if(vB)vB.style.left=(-12+p*82)+'%';if(vL)vL.style.opacity=p>0.55?1:0;if(vSl)vSl.style.transform='rotate('+Math.sin(tick/1200)*4+'deg)';
     const sSt=$('sunSteam'),sM=$('sunMerc');if(sSt)sSt.style.opacity=clamp(p*1.3,0,1)*0.7;if(sM)sM.style.height=(clamp(p*1.1,0,1)*62)+'px';
-    const tW=$('tpWater');if(tW)tW.style.height=(8+clamp(p*1.15,0,1)*52)+'%';
-    for(let tc=1;tc<=3;tc++){const cr=$('tpC'+tc);if(cr){cr.style.opacity=clamp(p*3-tc+1,0,1);cr.style.transform='translateY('+Math.sin(tick/900+tc)*3+'px)';}}
     const jW=$('jzWater');if(jW)jW.style.height=(10+clamp(p*1.2,0,1)*58)+'%';
     for(let jb=1;jb<=4;jb++){const bb2=$('jzB'+jb);if(bb2){const jbp=(tick/(600+jb*150)+jb*0.37)%1;bb2.style.opacity=p>0.35?Math.sin(jbp*Math.PI)*0.8:0;bb2.style.transform='translateY('+(-jbp*40)+'px)';}}
     for(let ms=1;ms<=6;ms++){const st10=$('mvS'+ms);if(st10)st10.style.opacity=clamp(p*6-ms+1,0,1);}
@@ -1121,7 +1116,6 @@
       const ptwSp=$('ptwS');if(ptwSp)ptwSp.style.opacity=clamp(p*1.6-0.6,0,0.6);
       const cfdGl=$('cfdG');if(cfdGl)cfdGl.style.opacity=clamp(p*1.5,0.4,1);
       for(let cf4=1;cf4<=3;cf4++){const sp4=$('cfdS'+cf4);if(sp4){sp4.style.opacity=clamp(p*3-cf4+0.7,0,1);sp4.style.height=(clamp(p*3-cf4+0.7,0,1)*22+4)+'px';}}
-      for(let bl=1;bl<=3;bl++){const lf=$('bnsL'+bl);if(lf){const lv=clamp(p*3-bl+0.7,0,1);lf.style.opacity=lv;lf.style.transform='scale('+(0.4+0.6*lv)+')';}}
       const cdpSc=$('cdpS');if(cdpSc)cdpSc.style.transform='translateX(-50%) rotate('+(p*540)+'deg)';
       const cdpPl=$('cdpP');if(cdpPl)cdpPl.style.transform='translateX(-50%) translateY('+(clamp(p*1.3,0,1)*26)+'px)';
       const cdpJc=$('cdpJ');if(cdpJc)cdpJc.style.opacity=clamp(p*2-0.8,0,0.9);
@@ -1136,8 +1130,6 @@
       const smhFg=$('smhF');if(smhFg)smhFg.style.opacity=clamp(p*2-0.6,0,1);
       const quyAr=$('quyArm');if(quyAr)quyAr.style.transform='rotate('+(-20+clamp(p*1.4,0,1)*40)+'deg)';
       for(let qb=1;qb<=3;qb++){const bx=$('quyB'+qb);if(bx)bx.style.opacity=clamp(p*3-qb+0.6,0,1);}
-      for(let fj=1;fj<=3;fj++){const jt=$('fntJ'+fj);if(jt)jt.style.height=(clamp(p*3-fj+0.6,0,1)*(30+fj*14))+'px';}
-      const fntPl=$('fntP');if(fntPl)fntPl.style.opacity=clamp(p*1.5,0.3,0.9);
       for(let wl=1;wl<=5;wl++){const lg3=$('wdpL'+wl);if(lg3)lg3.style.opacity=clamp(p*5-wl+0.6,0,1);}
       const wdpAx2=$('wdpAx');if(wdpAx2){wdpAx2.style.opacity=clamp(p*2-0.6,0,1);wdpAx2.style.transform='rotate('+(-24+clamp(p,0,1)*24)+'deg)';}
       for(let cc=1;cc<=3;cc++){const cl=$('clnC'+cc);if(cl){cl.style.opacity=clamp(p*3-cc+0.6,0,1);cl.style.transform='skewY('+(Math.sin(tick/35+cc*2)*3*clamp(p*1.5,0,1))+'deg)';}const pn=$('clnP'+cc);if(pn)pn.style.opacity=clamp(p*3-cc+0.4,0,1);}
@@ -1149,8 +1141,6 @@
       const styTl=$('styT');if(styTl)styTl.style.transform='rotate('+(Math.sin(tick/8)*30*clamp(p*1.5,0,1))+'deg)';
       const styMd=$('styM');if(styMd)styMd.style.opacity=clamp(p*1.5,0.4,1);
       const stySp2=$('stySp');if(stySp2)stySp2.style.opacity=clamp(p*2-0.8,0,0.8);
-      for(let ab=1;ab<=3;ab++){const be=$('apiB'+ab);if(be){be.style.opacity=clamp(p*3-ab+0.6,0,1);be.style.transform='translate('+(Math.sin(tick/16+ab*2)*14)+'px,'+(Math.cos(tick/20+ab)*9)+'px)';}}
-      const apiGl=$('apiG');if(apiGl)apiGl.style.opacity=clamp(p*1.5-0.5,0,0.7);
       for(let hp=1;hp<=4;hp++){const pl2=$('hbgP'+hp);if(pl2){pl2.style.opacity=clamp(p*4-hp+0.7,0,1);pl2.style.height=(6+clamp(p*4-hp+0.7,0,1)*26)+'px';}}
       const hbgCn=$('hbgC');if(hbgCn)hbgCn.style.opacity=clamp(p*2-0.8,0,1);
       const tflWt=$('tflW');if(tflWt){tflWt.style.opacity=clamp(1-p*1.6,0,0.8);tflWt.style.right=(0+p*40)+'%';}
@@ -1179,14 +1169,10 @@
       const fspRg=$('fspR');if(fspRg)fspRg.style.opacity=clamp(p*2-0.5,0,0.6)*(0.5+0.5*Math.sin(tick/50));
       const fspLy=$('fspL');if(fspLy)fspLy.style.opacity=clamp(p*2.4-1,0,1);
       for(let tp=1;tp<=2;tp++){const tp2=$('trrP'+tp);if(tp2){const tv=clamp(p*2-tp+0.7,0,1);tp2.style.opacity=tv;tp2.style.height=(8+tv*34)+'px';}}
-      const trrDr=$('trrD');if(trrDr){trrDr.style.opacity=clamp(p*2-0.6,0,0.9);trrDr.style.top=(20+(tick/90)%30)+'%';}
       const wmk1=$('wmkG1');if(wmk1)wmk1.style.transform='translateX(-50%) rotate('+(tick*clamp(p*1.5,0.4,1))+'deg)';
       const wmk2=$('wmkG2');if(wmk2)wmk2.style.transform='rotate('+(-tick*1.4*clamp(p*1.5,0.4,1))+'deg)';
       const wmkHd=$('wmkH');if(wmkHd)wmkHd.style.transform='translateX(-50%) rotate('+(-120+clamp(p,0,1)*300)+'deg)';
       const wmkTk=$('wmkT');if(wmkTk)wmkTk.style.opacity=clamp(p*2-0.8,0,1);
-      const sauSt=$('sauS');if(sauSt)sauSt.style.opacity=clamp(p*1.6-0.4,0,1);
-      for(let st5=1;st5<=2;st5++){const sv=$('sauT'+st5);if(sv){sv.style.opacity=clamp(p*2-st5+0.7,0,0.7);sv.style.bottom=(40+(tick/60+st5*12)%28)+'%';}}
-      const sauLd=$('sauL');if(sauLd)sauLd.style.opacity=clamp(p*2.4-1.4,0,1);
       const clfWn=$('clfW');if(clfWn)clfWn.style.opacity=clamp(p*1.6-0.5,0,1);
       const clfLd=$('clfL');if(clfLd)clfLd.style.opacity=clamp(p*2-0.4,0,1);
       const clfBd=$('clfB');if(clfBd){clfBd.style.opacity=clamp(p*2.4-1.2,0,1);clfBd.style.left=(20+((tick/80)%60))+'%';}
