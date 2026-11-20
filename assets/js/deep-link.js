@@ -4332,6 +4332,9 @@
     if (params.get('elderberry') === '1') { document.body.classList.add('is-elderberry'); }
     if (params.get('acerola') === '1') { document.body.classList.add('is-acerola'); }
     if (params.get('seabuckthorn') === '1') { document.body.classList.add('is-seabuckthorn'); }
+    if (params.get('artichoke') === '1') { document.body.classList.add('is-artichoke'); }
+    if (params.get('kohlrabi') === '1') { document.body.classList.add('is-kohlrabi'); }
+    if (params.get('rutabaga') === '1') { document.body.classList.add('is-rutabaga'); }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -6010,6 +6013,9 @@
         if (params.get('elderberry') === '1') u.searchParams.set('elderberry', '1');
         if (params.get('acerola') === '1') u.searchParams.set('acerola', '1');
         if (params.get('seabuckthorn') === '1') u.searchParams.set('seabuckthorn', '1');
+        if (params.get('artichoke') === '1') u.searchParams.set('artichoke', '1');
+        if (params.get('kohlrabi') === '1') u.searchParams.set('kohlrabi', '1');
+        if (params.get('rutabaga') === '1') u.searchParams.set('rutabaga', '1');
         if (params.get('fuchsia') === '1') u.searchParams.set('fuchsia', '1');
         if (params.get('oleander') === '1') u.searchParams.set('oleander', '1');
         if (params.get('buddleia') === '1') u.searchParams.set('buddleia', '1');

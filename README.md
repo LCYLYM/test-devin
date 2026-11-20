@@ -1436,6 +1436,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `elderberry` | `1` エルダーベリー配色 |
 | `acerola` | `1` アセロラ配色 |
 | `seabuckthorn` | `1` シーバックソーン配色 |
+| `artichoke` | `1` アーティチョーク配色 |
+| `kohlrabi` | `1` コールラビ配色 |
+| `rutabaga` | `1` ルタバガ配色 |
 | `fuchsia` | `1` フクシア配色 |
 | `oleander` | `1` キョウチクトウ配色 |
 | `buddleia` | `1` フサフジウツギ配色 |
