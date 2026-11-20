@@ -1244,6 +1244,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `staghorn` | `1` 鹿角蕨配色 |
 | `elkhorn` | `1` 麋角蕨配色 |
 | `birdsnest` | `1` 鸟巢蕨配色 |
+| `swordfern` | `1` 剑蕨配色 |
+| `bostonfern` | `1` 波士顿蕨配色 |
+| `rabbitfoot` | `1` 兔脚蕨配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 
