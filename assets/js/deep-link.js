@@ -51,10 +51,10 @@
     var template = params.get('template') || params.get('skin');
     if (template === 'daily') {
       var dayNum = Math.floor(Date.now() / 864e5);
-      var dailyList = ['pig', 'charge', 'meter', 'pixel', 'neon', 'mono', 'paper', 'term', 'ecg', 'wave', 'therm', 'receipt', 'sand', 'dial', 'trail', 'metro', 'lift', 'eclipse', 'flap', 'vinyl', 'const', 'plant', 'shadow', 'tide', 'rocket', 'balloon', 'aqua', 'kite'];
+      var dailyList = ['pig', 'charge', 'meter', 'pixel', 'neon', 'mono', 'paper', 'term', 'ecg', 'wave', 'therm', 'receipt', 'sand', 'dial', 'trail', 'metro', 'lift', 'eclipse', 'flap', 'vinyl', 'const', 'plant', 'shadow', 'tide', 'rocket', 'balloon', 'aqua', 'kite', 'falls', 'toast', 'ember'];
       template = dailyList[dayNum % dailyList.length];
     }
-    if (template === 'random') template = ['charge','meter','pixel','pig','neon','mono','paper','term','ecg','wave','therm','receipt','sand','dial','trail','metro','lift','eclipse','flap'][Math.floor(Math.random() * 28)];
+    if (template === 'random') template = ['charge','meter','pixel','pig','neon','mono','paper','term','ecg','wave','therm','receipt','sand','dial','trail','metro','lift','eclipse','flap'][Math.floor(Math.random() * 31)];
     if (template) app.setTemplate(template);
     else {
       // First-visit default follows the OS: light mode gets the paper skin.
@@ -186,7 +186,7 @@
       document.body.style.setProperty('--accent', accent);
     }
 
-    var THEME_COLORS = {pig:'#1a1716',charge:'#131415',meter:'#171715',pixel:'#151515',neon:'#0c0e18',mono:'#111111',paper:'#f2efe7',term:'#0d1117',ecg:'#160a0a',wave:'#0b1526',therm:'#181310',receipt:'#181512',sand:'#221a0e',dial:'#1e1710',trail:'#121a13',metro:'#0e1620',lift:'#16140f',eclipse:'#0b0d12',flap:'#101216',vinyl:'#150e1c',const:'#0a1020',plant:'#0f180c',shadow:'#1c140c',tide:'#0a161c',rocket:'#120f14',balloon:'#181208',aqua:'#081418',kite:'#161508'};
+    var THEME_COLORS = {pig:'#1a1716',charge:'#131415',meter:'#171715',pixel:'#151515',neon:'#0c0e18',mono:'#111111',paper:'#f2efe7',term:'#0d1117',ecg:'#160a0a',wave:'#0b1526',therm:'#181310',receipt:'#181512',sand:'#221a0e',dial:'#1e1710',trail:'#121a13',metro:'#0e1620',lift:'#16140f',eclipse:'#0b0d12',flap:'#101216',vinyl:'#150e1c',const:'#0a1020',plant:'#0f180c',shadow:'#1c140c',tide:'#0a161c',rocket:'#120f14',balloon:'#181208',aqua:'#081418',kite:'#161508',falls:'#0a141c',toast:'#181008',ember:'#140c08'};
     function applyThemeColor(t) {
       var m = document.querySelector('meta[name=theme-color]');
       if (m && THEME_COLORS[t]) m.content = THEME_COLORS[t];
@@ -4745,7 +4745,7 @@
     } else if (e.key === '?') {
       if (window.SalaryApp) window.SalaryApp.openDialog('aboutDialog');
     } else if (e.key === 't' && window.SalaryApp) {
-      var skins = ['pig', 'charge', 'meter', 'pixel', 'neon', 'mono', 'paper', 'term', 'ecg', 'wave', 'therm', 'receipt', 'sand', 'dial', 'trail', 'metro', 'lift', 'eclipse', 'flap', 'vinyl', 'const', 'plant', 'shadow', 'tide', 'rocket', 'balloon', 'aqua', 'kite'];
+      var skins = ['pig', 'charge', 'meter', 'pixel', 'neon', 'mono', 'paper', 'term', 'ecg', 'wave', 'therm', 'receipt', 'sand', 'dial', 'trail', 'metro', 'lift', 'eclipse', 'flap', 'vinyl', 'const', 'plant', 'shadow', 'tide', 'rocket', 'balloon', 'aqua', 'kite', 'falls', 'toast', 'ember'];
       var cur = window.SalaryApp.getState().preferences.template;
       window.SalaryApp.setTemplate(skins[(skins.indexOf(cur) + 1) % skins.length]);
     } else if (e.key === 'p' && window.SalaryApp) {
@@ -6417,3 +6417,19 @@
     }
   });
 })();
+
+    // iter-1705: coin dig easter egg — dblclick the visual to dig out a +¥ coin
+    document.addEventListener('dblclick', function (e) {
+      var stage = e.target && e.target.closest ? e.target.closest('.energy-stage') : null;
+      if (!stage) return;
+      var sym = '¥';
+      try { sym = (window.SalaryApp.getState().symbol) || '¥'; } catch (err) {}
+      var coin = document.createElement('span');
+      coin.className = 'dig-coin';
+      coin.textContent = '+' + sym + '1';
+      var r = stage.getBoundingClientRect();
+      coin.style.left = (e.clientX - r.left) + 'px';
+      coin.style.top = (e.clientY - r.top) + 'px';
+      stage.appendChild(coin);
+      setTimeout(function () { coin.remove(); }, 1600);
+    });

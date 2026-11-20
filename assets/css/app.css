@@ -3924,3 +3924,83 @@ repeating-linear-gradient(180deg,#e86a6a 0 6px,transparent 6px 12px);transform:t
 .kite-pct{font-size:14px;color:#efe0a0;font-variant-numeric:tabular-nums}
 .kite-caption{font-size:11px;color:var(--muted);letter-spacing:.4px}
 @media(prefers-reduced-motion:reduce){.instrument.is-working .kite-craft{animation:none}.kite-craft{transition:none}}
+
+/* iter-1702: falls skin — waterfall column grows into the pool below */
+.falls-visual{display:none;flex-direction:column;align-items:center;gap:12px}
+body[data-template=falls]{--bg:#0a141c;--surface:#0f1e28;--surface-2:#142736;--line:#1f3a4a;--text:#dff0f8;--accent:#7ac8e8;--accent-rgb:122,200,232;--instrument:#071019;--muted:#8aacbd;--dim:#4e6675}
+body[data-template=falls] .charge-visual{display:none}
+body[data-template=falls] .falls-visual{display:flex}
+body[data-template=falls] .energy-stage{margin:14px 0 8px}
+body[data-template=falls] .template-slider{background:#173040}
+body[data-template=falls] .template-switch button.selected{color:#a2d8f0}
+body[data-template=falls] .currency-pill{background:#0f1c26;border-color:#1f3a4a}
+.falls-cliff{position:relative;width:200px;height:210px;border-radius:8px;overflow:hidden;
+background:linear-gradient(90deg,#1c2830 0 30%,#141d24 30% 70%,#1c2830 70%);border:1px solid #1f3a4a}
+.falls-cliff::before{content:'';position:absolute;top:0;left:0;right:0;height:26px;background:linear-gradient(180deg,#26343e,#1c2830);z-index:2}
+.falls-drop{position:absolute;left:50%;top:0;width:56px;height:0;transform:translateX(-50%);
+background:linear-gradient(180deg,rgba(160,220,245,.55),rgba(122,200,232,.85));overflow:hidden;transition:height .8s linear}
+.falls-drop i{position:absolute;top:0;bottom:0;width:2px;background:rgba(230,248,255,.5)}
+.falls-drop i:nth-child(1){left:18%}.falls-drop i:nth-child(2){left:50%}.falls-drop i:nth-child(3){left:80%}
+.instrument.is-working .falls-drop i{animation:falls-flow .7s linear infinite}
+@keyframes falls-flow{from{transform:translateY(-12px)}to{transform:translateY(12px)}}
+.falls-pool{position:absolute;left:0;right:0;bottom:0;height:4%;
+background:linear-gradient(180deg,rgba(122,200,232,.7),rgba(30,80,110,.9));transition:height .8s linear}
+.falls-pct{font-size:14px;color:#a8d8ec;font-variant-numeric:tabular-nums}
+.falls-caption{font-size:11px;color:var(--muted);letter-spacing:.4px}
+@media(prefers-reduced-motion:reduce){.instrument.is-working .falls-drop i{animation:none}.falls-drop,.falls-pool{transition:none}}
+
+/* iter-1703: toast skin — lever sinks all day, toast pops at 100% */
+.toast-visual{display:none;flex-direction:column;align-items:center;gap:12px}
+body[data-template=toast]{--bg:#181008;--surface:#22180e;--surface-2:#2c2012;--line:#40301a;--text:#f6e8d2;--accent:#e8b878;--accent-rgb:232,184,120;--instrument:#100c07;--muted:#b5a07e;--dim:#75634a}
+body[data-template=toast] .charge-visual{display:none}
+body[data-template=toast] .toast-visual{display:flex}
+body[data-template=toast] .energy-stage{margin:14px 0 8px}
+body[data-template=toast] .template-slider{background:#3a2c14}
+body[data-template=toast] .template-switch button.selected{color:#f2cf97}
+body[data-template=toast] .currency-pill{background:#211810;border-color:#40301a}
+.toast-machine{position:relative;width:170px;height:150px}
+.toast-slot{position:absolute;top:64px;left:50%;transform:translateX(-50%);width:120px;height:8px;border-radius:6px;background:#0a0806;border:1px solid #4a3a20;z-index:3}
+.toast-machine::before{content:'';position:absolute;bottom:0;left:50%;transform:translateX(-50%);width:150px;height:80px;
+background:linear-gradient(180deg,#6a6a72,#3c3c44);border-radius:14px 14px 8px 8px;border:1px solid #26262c}
+.toast-bread{position:absolute;left:50%;bottom:14%;transform:translateX(-50%);width:84px;height:70px;
+background:linear-gradient(180deg,#e8b878,#c89048);border-radius:12px 12px 6px 6px;
+border:3px solid #8a5c28;transition:bottom .5s cubic-bezier(.34,1.6,.64,1);z-index:2}
+.toast-face{position:absolute;inset:8px;border-radius:8px;background:repeating-linear-gradient(45deg,transparent 0 6px,rgba(120,70,20,.15) 6px 8px)}
+.toast-lever{position:absolute;right:8px;top:30%;width:12px;height:30px;border-radius:5px;background:#2c2c34;border:1px solid #4a4a55;transition:top .8s linear;z-index:3}
+.toast-pct{font-size:14px;color:#e8cf9e;font-variant-numeric:tabular-nums}
+.toast-caption{font-size:11px;color:var(--muted);letter-spacing:.4px}
+@media(prefers-reduced-motion:reduce){.toast-bread,.toast-lever{transition:none}}
+
+/* iter-1704: ember skin — campfire grows from spark to blaze */
+.ember-visual{display:none;flex-direction:column;align-items:center;gap:12px}
+body[data-template=ember]{--bg:#140c08;--surface:#1e140e;--surface-2:#281a10;--line:#3c281a;--text:#f6e4d2;--accent:#f09050;--accent-rgb:240,144,80;--instrument:#0e0806;--muted:#b59878;--dim:#75604a}
+body[data-template=ember] .charge-visual{display:none}
+body[data-template=ember] .ember-visual{display:flex}
+body[data-template=ember] .energy-stage{margin:14px 0 8px}
+body[data-template=ember] .template-slider{background:#38240f}
+body[data-template=ember] .template-switch button.selected{color:#f5b582}
+body[data-template=ember] .currency-pill{background:#1e140a;border-color:#3c281a}
+.ember-scene{position:relative;width:180px;height:170px;display:flex;align-items:flex-end;justify-content:center}
+.ember-fire{position:relative;width:90px;height:110px;transform-origin:50% 100%;transform:scale(.3);transition:transform .8s}
+.ember-flame{position:absolute;bottom:0;left:50%;border-radius:50% 50% 50% 50%/60% 60% 40% 40%}
+.ember-flame.f1{width:80px;height:100px;margin-left:-40px;background:radial-gradient(circle at 50% 80%,#f8b050,#e86030 60%,transparent 80%)}
+.ember-flame.f2{width:52px;height:72px;margin-left:-26px;background:radial-gradient(circle at 50% 80%,#ffe08a,#f09050 65%,transparent 85%)}
+.ember-flame.f3{width:26px;height:44px;margin-left:-13px;background:radial-gradient(circle at 50% 85%,#fff4c8,#f8c050 70%,transparent 90%)}
+.instrument.is-working .ember-flame{animation:ember-flick .5s ease-in-out infinite alternate}
+.instrument.is-working .ember-flame.f2{animation-delay:.15s}
+.instrument.is-working .ember-flame.f3{animation-delay:.3s}
+@keyframes ember-flick{from{transform:scaleY(.94) skewX(-2deg)}to{transform:scaleY(1.05) skewX(2deg)}}
+.ember-logs{position:absolute;bottom:-4px;left:50%;transform:translateX(-50%);width:110px;height:16px;z-index:2}
+.ember-logs i{position:absolute;width:104px;height:12px;background:linear-gradient(180deg,#6a4526,#4a2c16);border-radius:6px}
+.ember-logs i:nth-child(1){transform:rotate(8deg)}
+.ember-logs i:nth-child(2){transform:rotate(-8deg)}
+.ember-pct{font-size:14px;color:#f0c098;font-variant-numeric:tabular-nums}
+.ember-caption{font-size:11px;color:var(--muted);letter-spacing:.4px}
+@media(prefers-reduced-motion:reduce){.instrument.is-working .ember-flame{animation:none}.ember-fire{transition:none}}
+
+/* iter-1705: coin dig easter egg — dblclick the visual digs out a +¥ coin */
+.dig-coin{position:absolute;z-index:9;transform:translate(-50%,-50%);pointer-events:none;
+font:650 15px 'Geist',sans-serif;color:#ffd88a;text-shadow:0 1px 6px rgba(0,0,0,.6);
+animation:dig-pop 1.5s ease-out forwards}
+@keyframes dig-pop{0%{opacity:0;transform:translate(-50%,-50%) scale(.4)}18%{opacity:1;transform:translate(-50%,-60%) scale(1.15)}100%{opacity:0;transform:translate(-50%,-170%) scale(.9)}}
+@media(prefers-reduced-motion:reduce){.dig-coin{animation:none;opacity:0}}
