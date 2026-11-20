@@ -178,7 +178,7 @@
     const t=document.body.dataset.template||'charge';
     if(t!==genFor)buildGen(t);
     if(genKind===-2){
-      genEls.forEach((e,i)=>{e.style.opacity=/percent|pct|rate|count|num|val|readout/i.test(e.id)?.9:.3+clamp(p*(genEls.length+2)-i*1.1,0,.65);});
+      genEls.forEach((e,i)=>{e.style.opacity=/percent|pct|rate|count|num|val|readout/i.test(e.id)?.9:.38+clamp(p*(genEls.length+2)*1.15-i*1.1,0,.62);});
       return;
     }
     if(genKind<0)return;
