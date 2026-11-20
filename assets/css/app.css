@@ -7689,3 +7689,63 @@ body[data-template=origamicrane] .origamicrane-visual{display:block}
 .oc-wing.wr{left:32px;clip-path:polygon(50% 100%,100% 0,0 30%)}
 .origamicrane-caption{text-align:center;font-size:11px;color:var(--dim);margin-top:10px}
 @media(prefers-reduced-motion:reduce){body[data-template=origamicrane] *{animation:none!important;transition:none!important}}
+
+/* jellyfish 水母 */
+body[data-template=jellyfish]{--bg:#0a0c18;--surface:#101426;--surface-2:#181c34;--line:#2e3560;--text:#dcd8f0;--accent:#8a6ac8;--accent-rgb:138,106,200;--instrument:#101426;--muted:#8078b4;--dim:#4c4a74}
+.jellyfish-visual{display:none;position:relative;margin-top:18px}
+body[data-template=jellyfish] .charge-visual{display:none}
+body[data-template=jellyfish] .jellyfish-visual{display:block}
+.jf-scene{position:relative;height:200px;max-width:320px;margin:0 auto;overflow:hidden;border-radius:12px;background:linear-gradient(180deg,#0c1024,#060814)}
+.jf-light{position:absolute;top:-20px;left:30%;right:30%;height:80px;background:radial-gradient(ellipse,rgba(138,106,200,0.18),transparent 70%)}
+.jf-jelly{position:absolute;width:34px;height:46px;opacity:0;transition:top .5s,opacity .5s}
+.jf-jelly b{display:block;position:absolute;top:0;left:0;width:34px;height:22px;border-radius:50% 50% 30% 30%;background:radial-gradient(ellipse at 40% 30%,#b8a0e8,#7a58b8);box-shadow:0 0 12px rgba(138,106,200,0.5)}
+.jf-jelly em{position:absolute;top:22px;width:3px;height:20px;border-radius:3px;background:linear-gradient(180deg,rgba(168,140,232,0.7),transparent)}
+.jf-jelly em:nth-of-type(1){left:8px}
+.jf-jelly em:nth-of-type(2){left:16px;height:24px}
+.jf-jelly em:nth-of-type(3){left:24px}
+#jfJ1{left:20%;top:64%}#jfJ2{left:50%;top:64%;transform:scale(0.75)}#jfJ3{left:76%;top:64%;transform:scale(0.6)}
+.jellyfish-caption{text-align:center;font-size:11px;color:var(--dim);margin-top:10px}
+@media(prefers-reduced-motion:reduce){body[data-template=jellyfish] *{animation:none!important;transition:none!important}}
+
+/* shrine 神社 */
+body[data-template=shrine]{--bg:#120c0a;--surface:#1c1210;--surface-2:#281a16;--line:#4e2e26;--text:#f0dcd4;--accent:#c8452a;--accent-rgb:200,69,42;--instrument:#1c1210;--muted:#b0705e;--dim:#6e4c44}
+.shrine-visual{display:none;position:relative;margin-top:18px}
+body[data-template=shrine] .charge-visual{display:none}
+body[data-template=shrine] .shrine-visual{display:block}
+.shr-scene{position:relative;height:200px;max-width:300px;margin:0 auto}
+.shr-gate{position:absolute;top:14px;left:50%;transform:translateX(-50%);width:170px;height:120px}
+.shr-top{position:absolute;top:0;left:-8px;right:-8px;height:10px;background:#c8452a;border-radius:4px 4px 0 0}
+.shr-beam{position:absolute;top:22px;left:8px;right:8px;height:7px;background:#a03822}
+.shr-pil{position:absolute;top:10px;width:10px;background:linear-gradient(180deg,#c8452a,#8a2e1a);border-radius:2px}
+.shr-pil.lp{left:22px;bottom:0}
+.shr-pil.rp{right:22px;bottom:0}
+.shr-path{position:absolute;bottom:12px;left:50%;transform:translateX(-50%);width:120px;height:56px}
+.shr-stone{position:absolute;width:34px;height:10px;border-radius:50%;background:radial-gradient(ellipse at 40% 30%,#5a5048,#362e28);opacity:0.15;transition:opacity .4s}
+#shrS1{left:50%;margin-left:-17px;bottom:0}
+#shrS2{left:50%;margin-left:-17px;bottom:16px}
+#shrS3{left:50%;margin-left:-17px;bottom:32px}
+#shrS4{left:50%;margin-left:-17px;bottom:46px}
+.shr-lantern{position:absolute;bottom:56px;width:14px;height:20px;border-radius:4px;background:#3a3028;opacity:0.15;transition:opacity .5s}
+.shr-lantern::before{content:"";position:absolute;top:3px;left:3px;right:3px;bottom:3px;border-radius:2px;background:#f0c860;box-shadow:0 0 10px rgba(240,200,96,0.5)}
+.shr-lantern::after{content:"";position:absolute;top:-5px;left:1px;right:1px;height:5px;background:#3a3028;border-radius:3px 3px 0 0}
+#shrL{left:18%}#shrL2{right:18%}
+.shrine-caption{text-align:center;font-size:11px;color:var(--dim);margin-top:10px}
+@media(prefers-reduced-motion:reduce){body[data-template=shrine] *{animation:none!important;transition:none!important}}
+
+/* snowy 雪原 */
+body[data-template=snowy]{--bg:#0e141c;--surface:#161e28;--surface-2:#1e2a38;--line:#36506a;--text:#e4edf6;--accent:#a8c8e8;--accent-rgb:168,200,232;--instrument:#161e28;--muted:#88a8c8;--dim:#4c6478}
+.snowy-visual{display:none;position:relative;margin-top:18px}
+body[data-template=snowy] .charge-visual{display:none}
+body[data-template=snowy] .snowy-visual{display:block}
+.snw-scene{position:relative;height:200px;max-width:320px;margin:0 auto;overflow:hidden;border-radius:10px;background:linear-gradient(180deg,#18243a,#101a2a)}
+.snw-sky{position:absolute;inset:0}
+.snw-flake{position:absolute;top:0;width:5px;height:5px;border-radius:50%;background:#e8f0f8;opacity:0.4}
+.snw-ground{position:absolute;bottom:0;left:0;right:0;height:44px;background:linear-gradient(180deg,#dce8f4,#b8ccdf);border-radius:50% 50% 0 0/16px 16px 0 0}
+.snw-man{position:absolute;bottom:34px;left:50%;width:70px;height:90px;margin-left:-35px;transform:scale(0);transform-origin:bottom center;opacity:0;transition:transform .6s,opacity .6s}
+.snw-base{position:absolute;bottom:0;left:8px;width:54px;height:40px;border-radius:50%;background:radial-gradient(circle at 40% 30%,#f4f8fc,#c8d8e8)}
+.snw-body{position:absolute;bottom:30px;left:15px;width:40px;height:32px;border-radius:50%;background:radial-gradient(circle at 40% 30%,#f4f8fc,#ccdcec)}
+.snw-head{position:absolute;bottom:56px;left:21px;width:28px;height:24px;border-radius:50%;background:radial-gradient(circle at 40% 30%,#f4f8fc,#d0e0f0)}
+.snw-head::before{content:"";position:absolute;top:8px;left:18px;width:10px;height:0;border-top:3px solid #e88030;transform:rotate(10deg)}
+.snw-head::after{content:"";position:absolute;top:6px;left:6px;width:4px;height:4px;border-radius:50%;background:#2a3040;box-shadow:10px 0 0 #2a3040}
+.snowy-caption{text-align:center;font-size:11px;color:var(--dim);margin-top:10px}
+@media(prefers-reduced-motion:reduce){body[data-template=snowy] *{animation:none!important;transition:none!important}}
