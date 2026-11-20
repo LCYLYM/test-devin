@@ -4197,6 +4197,9 @@
     if (params.get('neem') === '1') { document.body.classList.add('is-neem'); }
     if (params.get('camphor') === '1') { document.body.classList.add('is-camphor'); }
     if (params.get('goldenrain') === '1') { document.body.classList.add('is-goldenrain'); }
+    if (params.get('tallowtree') === '1') { document.body.classList.add('is-tallowtree'); }
+    if (params.get('osage') === '1') { document.body.classList.add('is-osage'); }
+    if (params.get('soapberry') === '1') { document.body.classList.add('is-soapberry'); }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -5752,6 +5755,9 @@
         if (params.get('neem') === '1') u.searchParams.set('neem', '1');
         if (params.get('camphor') === '1') u.searchParams.set('camphor', '1');
         if (params.get('goldenrain') === '1') u.searchParams.set('goldenrain', '1');
+        if (params.get('tallowtree') === '1') u.searchParams.set('tallowtree', '1');
+        if (params.get('osage') === '1') u.searchParams.set('osage', '1');
+        if (params.get('soapberry') === '1') u.searchParams.set('soapberry', '1');
       if (params.get('tile') === '1') u.searchParams.set('tile', '1');
       if (params.get('outline') === '1') u.searchParams.set('outline', '1');
       if (params.get('stripe') === '1') u.searchParams.set('stripe', '1');

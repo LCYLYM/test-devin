@@ -1313,6 +1313,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `neem` | `1` 印楝配色 |
 | `camphor` | `1` 樟树配色 |
 | `goldenrain` | `1` 栾树配色 |
+| `tallowtree` | `1` 乌桕配色 |
+| `osage` | `1` 橙桑配色 |
+| `soapberry` | `1` 无患子配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 

@@ -2824,6 +2824,12 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .is-camphor .instrument{border-color:rgba(110,175,135,.4)}
 .is-goldenrain{background:linear-gradient(180deg,#2b2415 0%,#141107 100%)}
 .is-goldenrain .instrument{border-color:rgba(215,185,90,.4)}
+.is-tallowtree{background:linear-gradient(180deg,#25201a 0%,#110e08 100%)}
+.is-tallowtree .instrument{border-color:rgba(195,160,105,.4)}
+.is-osage{background:linear-gradient(180deg,#27220f 0%,#120f06 100%)}
+.is-osage .instrument{border-color:rgba(210,175,80,.4)}
+.is-soapberry{background:linear-gradient(180deg,#292113 0%,#130e07 100%)}
+.is-soapberry .instrument{border-color:rgba(210,165,80,.4)}
 .is-oatmeal{background:linear-gradient(180deg,#1d1912,#2f291e 50%,#433a2a)}
 .is-oatmeal .instrument{border-color:rgba(215,195,155,.4)}
 .is-thyme{background:linear-gradient(180deg,#121a14,#1c2a20 50%,#28392c)}
