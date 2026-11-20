@@ -8406,3 +8406,39 @@ body[data-template=stable] .stable-visual{display:block}
 .sb-lantern{position:absolute;top:30px;left:50%;transform:translateX(-50%);width:10px;height:14px;background:radial-gradient(circle at 50% 60%,#ffcf78,#c07818);border-radius:3px}
 .stable-caption{text-align:center;font-size:11px;color:var(--dim);margin-top:10px}
 @media(prefers-reduced-motion:reduce){body[data-template=depot] .dp-door,body[data-template=stable] .sb-head{transition:none}}
+
+body[data-template=elevator]{--bg:#0c0e14;--surface:#141824;--surface-2:#1a2030;--line:#28304a;--text:#d8e0f0;--accent:#8898b0;--accent-rgb:136,152,176;--instrument:#101420;--muted:#8494b0;--dim:#48536a}
+.elevator-visual{display:none;position:relative;margin-top:18px}
+body[data-template=elevator] .charge-visual{display:none}
+body[data-template=elevator] .elevator-visual{display:block}
+.ev-scene{position:relative;height:150px;border-radius:16px;overflow:hidden;background:linear-gradient(180deg,#121624,#0a0d16)}
+.ev-shaft{position:absolute;top:12px;bottom:14px;left:50%;transform:translateX(-50%);width:70px;background:#181e30;border:1px solid #28304a}
+.ev-cab{position:absolute;bottom:16px;left:50%;transform:translateX(-50%);width:54px;height:40px;background:#2c3650;border-radius:3px;transition:bottom .5s;display:flex}
+.ev-door{flex:1;background:#3a4668;border:1px solid #28304a;transition:transform .4s}
+.ev-floor{position:absolute;right:-14px;width:8px;height:8px;border-radius:50%;background:#28304a}
+#evFl1{bottom:20px}#evFl2{bottom:56px}#evFl3{bottom:92px}
+.ev-num{position:absolute;top:16px;left:50%;transform:translateX(-50%);font:700 12px/1 monospace;color:var(--accent)}
+.elevator-caption{text-align:center;font-size:11px;color:var(--dim);margin-top:10px}
+body[data-template=beacon]{--bg:#140c06;--surface:#201408;--surface-2:#2a1a0c;--line:#452c16;--text:#f6e4c8;--accent:#e08038;--accent-rgb:224,128,56;--instrument:#1a0f06;--muted:#c09058;--dim:#745c34}
+.beacon-visual{display:none;position:relative;margin-top:18px}
+body[data-template=beacon] .charge-visual{display:none}
+body[data-template=beacon] .beacon-visual{display:block}
+.bc-scene{position:relative;height:150px;border-radius:16px;overflow:hidden;background:linear-gradient(180deg,#1a1006,#0e0804)}
+.bc-ridge{position:absolute;bottom:0;width:100%;height:40px;background:linear-gradient(180deg,#241708,#140c04);clip-path:polygon(0 60%,15% 30%,30% 55%,45% 25%,60% 50%,75% 20%,90% 50%,100% 35%,100% 100%,0 100%)}
+.bc-tower{position:absolute;bottom:34px;left:44%;width:38px;height:70px;background:#3a2814;clip-path:polygon(10% 0,90% 0,100% 100%,0 100%);border-top:4px solid #4a3418}
+.bc-fire{position:absolute;bottom:108px;left:50%;transform:translateX(-50%);width:20px;height:8px;background:radial-gradient(ellipse at 50% 100%,#ffb030,#d84810);border-radius:50% 50% 40% 40%;transition:height .4s}
+.bc-spark{position:absolute;left:50%;width:3px;height:3px;background:#ffcf60;border-radius:50%}
+.beacon-caption{text-align:center;font-size:11px;color:var(--dim);margin-top:10px}
+body[data-template=dune]{--bg:#141008;--surface:#1f180e;--surface-2:#292012;--line:#443620;--text:#f4e8ce;--accent:#d8b070;--accent-rgb:216,176,112;--instrument:#18120a;--muted:#b89a68;--dim:#6e5c3c}
+.dune-visual{display:none;position:relative;margin-top:18px}
+body[data-template=dune] .charge-visual{display:none}
+body[data-template=dune] .dune-visual{display:block}
+.du-scene{position:relative;height:150px;border-radius:16px;overflow:hidden;background:linear-gradient(180deg,#201508,#120c04)}
+.du-sun{position:absolute;top:20%;right:22%;width:30px;height:30px;background:radial-gradient(circle,#ffd890,#d88028);border-radius:50%;transition:top .6s}
+.du-dune{position:absolute;bottom:0;width:70%;height:74px;background:linear-gradient(160deg,#3a2a14,#241806);border-radius:0 100% 0 0}
+.du-dune2{position:absolute;bottom:0;right:0;width:60%;height:56px;background:linear-gradient(200deg,#2e2210,#1a1206);border-radius:100% 0 0 0}
+.du-camel{position:absolute;bottom:50px;left:12%;width:22px;height:14px;background:#2c1e0c;border-radius:8px 10px 4px 4px;transition:left .5s}
+.du-camel:before{content:'';position:absolute;top:-7px;right:2px;width:6px;height:9px;background:#2c1e0c;border-radius:3px}
+.du-dust{position:absolute;bottom:40px;left:10%;width:60%;height:16px;background:radial-gradient(ellipse,rgba(216,176,112,.3),transparent 70%)}
+.dune-caption{text-align:center;font-size:11px;color:var(--dim);margin-top:10px}
+@media(prefers-reduced-motion:reduce){body[data-template=elevator] .ev-cab,body[data-template=dune] .du-camel{transition:none}}
