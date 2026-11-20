@@ -34,10 +34,10 @@ for ic in manifest.get('icons', []):
 
 buttons = set(re.findall(r'data-template="(\w+)"', html))
 js = open(os.path.join(ROOT, 'assets/js/app.js'), encoding='utf-8').read()
-valid = re.search(r"\['charge','meter','pixel','pig','neon','mono','paper','term','ecg','wave','therm','receipt','sand','dial','trail','metro','lift','eclipse','flap','vinyl','const','plant','shadow','tide','rocket'\]", js)
+valid = re.search(r"\['charge','meter','pixel','pig','neon','mono','paper','term','ecg','wave','therm','receipt','sand','dial','trail','metro','lift','eclipse','flap','vinyl','const','plant','shadow','tide','rocket','balloon','aqua','kite'\]", js)
 if not valid:
     missing.append('app.js template whitelist missing a skin')
-extra = buttons - {'charge','meter','pixel','pig','neon','mono','paper','term','ecg','wave','therm','receipt','sand','dial','trail','metro','lift','eclipse','flap','vinyl','const','plant','shadow','tide','rocket'}
+extra = buttons - {'charge','meter','pixel','pig','neon','mono','paper','term','ecg','wave','therm','receipt','sand','dial','trail','metro','lift','eclipse','flap','vinyl','const','plant','shadow','tide','rocket','balloon','aqua','kite'}
 if extra:
     missing.append('template buttons not in JS whitelist: ' + ','.join(sorted(extra)))
 

@@ -20,7 +20,7 @@
 | 加班 | 加班计时器 + 按天补记，算出真实时薪 |
 | 多币种 | Frankfurter 实时汇率换算，含「津巴布韦 · 亿万富翁」趣味模式 |
 | 分享海报 | 一键生成 1080×1440 收入海报 + 二维码 |
-| 二十四种皮肤 | 存钱罐（默认）/ 充电 / 刻度 / 像素 / 霓虹 / 极简 / 纸墨 / 终端 / 心电 / 水球 / 温度 / 收据 / 沙漏 / 日晷 / 登径 / 地铁 / 电梯 / 日食 / 翻牌 / 唱片 / 星图 / 盆栽 / 皮影 / 潮汐 / 火箭 |
+| 二十七种皮肤 | 存钱罐（默认）/ 充电 / 刻度 / 像素 / 霓虹 / 极简 / 纸墨 / 终端 / 心电 / 水球 / 温度 / 收据 / 沙漏 / 日晷 / 登径 / 地铁 / 电梯 / 日食 / 翻牌 / 唱片 / 星图 / 盆栽 / 皮影 / 潮汐 / 火箭 / 气球 / 鱼缸 / 风筝 |
 
 ## 深链分享
 
@@ -33,7 +33,7 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | 参数 | 取值 |
 | --- | --- |
 | `salary` | 月薪数字，如 `15000` |
-| `template` | `pig` / `charge` / `meter` / `pixel` / `neon` / `mono` / `paper` / `term` / `ecg` / `wave` / `therm` / `receipt` / `sand` / `dial` / `trail` / `metro` / `lift` / `eclipse` / `flap` / `vinyl` / `const` / `plant` / `shadow` / `tide` / `rocket`（`skin` 同义，`random`/`daily` 特殊值） |
+| `template` | `pig` / `charge` / `meter` / `pixel` / `neon` / `mono` / `paper` / `term` / `ecg` / `wave` / `therm` / `receipt` / `sand` / `dial` / `trail` / `metro` / `lift` / `eclipse` / `flap` / `vinyl` / `const` / `plant` / `shadow` / `tide` / `rocket` / `balloon` / `aqua` / `kite`（`skin` 同义，`random`/`daily` 特殊值） |
 | `currency` | `CNY` / `USD` / `EUR` / `JPY` / `KRW` / `HKD` / `VND` / `IDR` / `GBP` / `SGD` / `AUD` / `ZIM` |
 | `period` | `day` / `month` |
 | `demo` | `1` 开启演示模式（数字可设倍速，如 `60`） |

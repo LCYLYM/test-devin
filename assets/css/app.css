@@ -3849,3 +3849,78 @@ filter:blur(1px);transition:opacity .4s}
 .rocket-pct{font-size:14px;color:#f0b8b8;font-variant-numeric:tabular-nums}
 .rocket-caption{font-size:11px;color:var(--muted);letter-spacing:.4px}
 @media(prefers-reduced-motion:reduce){.instrument.is-working .rocket-flame{animation:none}.rocket-body,.rocket-flame{transition:none}}
+
+/* iter-1699: balloon skin — hot-air balloon climbs to the clouds */
+.balloon-visual{display:none;flex-direction:column;align-items:center;gap:12px}
+body[data-template=balloon]{--bg:#181208;--surface:#221a0e;--surface-2:#2c2212;--line:#40311a;--text:#f6ead2;--accent:#f0b45c;--accent-rgb:240,180,92;--instrument:#100c06;--muted:#b5a07a;--dim:#75634a}
+body[data-template=balloon] .charge-visual{display:none}
+body[data-template=balloon] .balloon-visual{display:flex}
+body[data-template=balloon] .energy-stage{margin:14px 0 8px}
+body[data-template=balloon] .template-slider{background:#3a2c14}
+body[data-template=balloon] .template-switch button.selected{color:#f5cf8e}
+body[data-template=balloon] .currency-pill{background:#211a0c;border-color:#40311a}
+.balloon-sky{position:relative;width:min(260px,75vw);height:210px;border-radius:10px;overflow:hidden;
+background:linear-gradient(180deg,#2c3e58 0%,#4a5a78 55%,#8a94a8 100%);border:1px solid #40311a}
+.balloon-craft{position:absolute;left:50%;bottom:24px;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;transition:bottom .8s linear}
+.balloon-envelope{position:relative;width:84px;height:92px;border-radius:50% 50% 46% 46%;
+background:repeating-linear-gradient(90deg,#c2503a 0 14px,#e8b45c 14px 28px);
+box-shadow:inset -8px -10px 24px rgba(0,0,0,.28)}
+.balloon-burner{position:absolute;bottom:-9px;left:50%;transform:translateX(-50%);width:14px;height:9px;
+background:radial-gradient(circle,#ffd89a,#f08c3c);border-radius:50%;filter:blur(1px);transition:opacity .4s}
+.balloon-basket{width:30px;height:22px;background:linear-gradient(180deg,#8a5a30,#5f3a1e);border-radius:4px;margin-top:6px;
+display:flex;align-items:center;justify-content:center}
+.balloon-pct{font-size:10px;font-weight:650;color:#ffe6c0}
+.balloon-cloud{position:absolute;width:70px;height:20px;border-radius:12px;background:rgba(255,255,255,.35);filter:blur(2px)}
+.balloon-cloud.c1{top:26px;left:14px}
+.balloon-cloud.c2{top:64px;right:10px;width:52px;height:15px;opacity:.7}
+.instrument.is-working .balloon-craft{animation:balloon-sway 3.4s ease-in-out infinite}
+@keyframes balloon-sway{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(-6px)}}
+.balloon-caption{font-size:11px;color:var(--muted);letter-spacing:.4px}
+@media(prefers-reduced-motion:reduce){.instrument.is-working .balloon-craft{animation:none}.balloon-craft,.balloon-burner{transition:none}}
+
+/* iter-1700: aqua skin — fish tank water level rises, fish swims while working */
+.aqua-visual{display:none;flex-direction:column;align-items:center;gap:12px}
+body[data-template=aqua]{--bg:#081418;--surface:#0d1e24;--surface-2:#122830;--line:#1e3d4a;--text:#ddf2f8;--accent:#64c8f0;--accent-rgb:100,200,240;--instrument:#060f13;--muted:#8fb3c0;--dim:#4e6a75}
+body[data-template=aqua] .charge-visual{display:none}
+body[data-template=aqua] .aqua-visual{display:flex}
+body[data-template=aqua] .energy-stage{margin:14px 0 8px}
+body[data-template=aqua] .template-slider{background:#14303c}
+body[data-template=aqua] .template-switch button.selected{color:#93d8f5}
+body[data-template=aqua] .currency-pill{background:#0d1c22;border-color:#1e3d4a}
+.aqua-bowl{position:relative;width:190px;height:190px;border-radius:50%;overflow:hidden;
+border:3px solid #1e3d4a;background:linear-gradient(180deg,#122a34,#0a1a20);
+box-shadow:0 12px 30px rgba(0,0,0,.5),inset 0 0 40px rgba(100,200,240,.08)}
+.aqua-water{position:absolute;left:0;right:0;bottom:0;height:14%;
+background:linear-gradient(180deg,rgba(100,200,240,.6),rgba(20,90,120,.85));transition:height .8s linear}
+.aqua-water::before{content:'';position:absolute;top:-5px;left:0;right:0;height:10px;
+background:radial-gradient(circle at 9px -3px,transparent 8px,rgba(100,200,240,.6) 9px);background-size:20px 10px}
+.aqua-fish{position:absolute;left:20%;top:30%;font-size:26px;transition:left 4s ease-in-out}
+.instrument.is-working .aqua-fish{animation:aqua-swim 5s ease-in-out infinite alternate}
+@keyframes aqua-swim{from{left:12%;transform:scaleX(1)}to{left:62%;transform:scaleX(-1)}}
+.aqua-sand{position:absolute;bottom:0;left:0;right:0;height:16px;background:linear-gradient(180deg,#8a7a55,#5c4f38)}
+.aqua-pct{font-size:14px;color:#a5d8ec;font-variant-numeric:tabular-nums}
+.aqua-caption{font-size:11px;color:var(--muted);letter-spacing:.4px}
+@media(prefers-reduced-motion:reduce){.instrument.is-working .aqua-fish{animation:none}.aqua-water{transition:none}}
+
+/* iter-1701: kite skin — kite climbs the sky on a string as you earn */
+.kite-visual{display:none;flex-direction:column;align-items:center;gap:12px}
+body[data-template=kite]{--bg:#161508;--surface:#201d0e;--surface-2:#2a2612;--line:#3d381a;--text:#f6f0d0;--accent:#f0d060;--accent-rgb:240,208,96;--instrument:#0f0e06;--muted:#b5a97a;--dim:#756c4a}
+body[data-template=kite] .charge-visual{display:none}
+body[data-template=kite] .kite-visual{display:flex}
+body[data-template=kite] .energy-stage{margin:14px 0 8px}
+body[data-template=kite] .template-slider{background:#383014}
+body[data-template=kite] .template-switch button.selected{color:#f5df8e}
+body[data-template=kite] .currency-pill{background:#211d0c;border-color:#3d381a}
+.kite-sky{position:relative;width:200px;height:180px;border-radius:10px;overflow:hidden;
+background:linear-gradient(180deg,#3a5a8a,#7a9cc8 70%,#b8cfe8);border:1px solid #3d381a}
+.kite-craft{position:absolute;right:18%;bottom:14%;transition:right .8s linear,bottom .8s linear;z-index:2}
+.kite-diamond{display:block;width:34px;height:42px;background:linear-gradient(135deg,#f0d060 50%,#e8984c 50%);
+clip-path:polygon(50% 0,100% 30%,50% 100%,0 30%);box-shadow:0 4px 12px rgba(0,0,0,.3)}
+.kite-tail{position:absolute;top:38px;left:50%;width:2px;height:40px;background:
+repeating-linear-gradient(180deg,#e86a6a 0 6px,transparent 6px 12px);transform:translateX(-50%)}
+.instrument.is-working .kite-craft{animation:kite-drift 2.6s ease-in-out infinite alternate}
+@keyframes kite-drift{from{transform:translate(0,0) rotate(-4deg)}to{transform:translate(-8px,-5px) rotate(5deg)}}
+.kite-line-svg{position:absolute;inset:0;width:100%;height:100%;z-index:1}
+.kite-pct{font-size:14px;color:#efe0a0;font-variant-numeric:tabular-nums}
+.kite-caption{font-size:11px;color:var(--muted);letter-spacing:.4px}
+@media(prefers-reduced-motion:reduce){.instrument.is-working .kite-craft{animation:none}.kite-craft{transition:none}}
