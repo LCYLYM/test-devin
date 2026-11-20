@@ -1259,6 +1259,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `horsetail` | `1` 问荆配色 |
 | `scouringrush` | `1` 木贼配色 |
 | `spikemoss` | `1` 卷柏配色 |
+| `ginkgo` | `1` 银杏配色 |
+| `cycad` | `1` 苏铁配色 |
+| `monkeypuzzle` | `1` 猴谜树配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 

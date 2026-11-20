@@ -4143,6 +4143,9 @@
     if (params.get('horsetail') === '1') { document.body.classList.add('is-horsetail'); }
     if (params.get('scouringrush') === '1') { document.body.classList.add('is-scouringrush'); }
     if (params.get('spikemoss') === '1') { document.body.classList.add('is-spikemoss'); }
+    if (params.get('ginkgo') === '1') { document.body.classList.add('is-ginkgo'); }
+    if (params.get('cycad') === '1') { document.body.classList.add('is-cycad'); }
+    if (params.get('monkeypuzzle') === '1') { document.body.classList.add('is-monkeypuzzle'); }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -5644,6 +5647,9 @@
         if (params.get('horsetail') === '1') u.searchParams.set('horsetail', '1');
         if (params.get('scouringrush') === '1') u.searchParams.set('scouringrush', '1');
         if (params.get('spikemoss') === '1') u.searchParams.set('spikemoss', '1');
+        if (params.get('ginkgo') === '1') u.searchParams.set('ginkgo', '1');
+        if (params.get('cycad') === '1') u.searchParams.set('cycad', '1');
+        if (params.get('monkeypuzzle') === '1') u.searchParams.set('monkeypuzzle', '1');
       if (params.get('tile') === '1') u.searchParams.set('tile', '1');
       if (params.get('outline') === '1') u.searchParams.set('outline', '1');
       if (params.get('stripe') === '1') u.searchParams.set('stripe', '1');

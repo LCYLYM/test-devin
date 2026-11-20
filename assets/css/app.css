@@ -2716,6 +2716,12 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .is-scouringrush .instrument{border-color:rgba(140,168,126,.4)}
 .is-spikemoss{background:linear-gradient(180deg,#161a13 0%,#11130d 100%)}
 .is-spikemoss .instrument{border-color:rgba(148,170,108,.4)}
+.is-ginkgo{background:linear-gradient(180deg,#1d1a0e 0%,#161307 100%)}
+.is-ginkgo .instrument{border-color:rgba(212,178,58,.4)}
+.is-cycad{background:linear-gradient(180deg,#141a13 0%,#0f130e 100%)}
+.is-cycad .instrument{border-color:rgba(132,168,106,.4)}
+.is-monkeypuzzle{background:linear-gradient(180deg,#121a14 0%,#0d130e 100%)}
+.is-monkeypuzzle .instrument{border-color:rgba(114,162,110,.4)}
 .is-oatmeal{background:linear-gradient(180deg,#1d1912,#2f291e 50%,#433a2a)}
 .is-oatmeal .instrument{border-color:rgba(215,195,155,.4)}
 .is-thyme{background:linear-gradient(180deg,#121a14,#1c2a20 50%,#28392c)}
