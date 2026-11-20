@@ -2932,6 +2932,12 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .is-broom .instrument{border-color:rgba(235,180,65,.4)}
 .is-lantana{background:linear-gradient(180deg,#2e1719 0%,#170a0c 100%)}
 .is-lantana .instrument{border-color:rgba(235,110,90,.4)}
+.is-hypericum{background:linear-gradient(180deg,#2b2310 0%,#151006 100%)}
+.is-hypericum .instrument{border-color:rgba(235,195,60,.4)}
+.is-daphne{background:linear-gradient(180deg,#2a1a1e 0%,#150c0e 100%)}
+.is-daphne .instrument{border-color:rgba(215,140,160,.4)}
+.is-potentilla{background:linear-gradient(180deg,#25230f 0%,#121105 100%)}
+.is-potentilla .instrument{border-color:rgba(215,195,80,.4)}
 .is-oatmeal{background:linear-gradient(180deg,#1d1912,#2f291e 50%,#433a2a)}
 .is-oatmeal .instrument{border-color:rgba(215,195,155,.4)}
 .is-thyme{background:linear-gradient(180deg,#121a14,#1c2a20 50%,#28392c)}
