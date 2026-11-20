@@ -62,6 +62,14 @@
       if (!hasStored && window.matchMedia && matchMedia('(prefers-color-scheme: light)').matches)
         app.setTemplate('paper');
     }
+    // reflect the active skin in the tab title ("樱花 · 薪动…") so shared
+    // ?skin= links and tabs identify the scene — set once here so the
+    // live title features (?tabearn, ?title) keep building on top of it
+    if (!params.get('title')) {
+      var st = document.body.dataset.template;
+      var sb = st && [].slice.call(document.querySelectorAll('button[data-template]')).find(function (x) { return x.dataset.template === st; });
+      if (sb) document.title = sb.textContent.trim() + ' · ' + document.title;
+    }
 
     var currency = (params.get('currency') || '').toUpperCase();
     if (currency) app.setCurrency(currency);
