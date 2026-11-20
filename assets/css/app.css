@@ -5079,3 +5079,38 @@ body[data-template=hop] .hop-visual{display:block}
 .instrument.is-working .trl-token{animation:trlHop .8s ease-in-out infinite}
 @keyframes trlHop{0%,100%{margin-top:0}50%{margin-top:-6px}}
 @media(prefers-reduced-motion:reduce){.instrument.is-working .shw-figure,.instrument.is-working .shw-leg.l1,.instrument.is-working .shw-leg.l2,.instrument.is-working .spr-drop,.instrument.is-working .trl-token{animation:none}}
+body[data-template=mahjong]{--bg:#0c160e;--surface:#101e12;--surface-2:#142618;--line:#284a30;--text:#d8f0dc;--accent:#58b878;--accent-rgb:88,184,120;--instrument:#101e12;--muted:#78b088;--dim:#78b088}
+.mahjong-visual,.scale-visual,.tearoff-visual{display:none;position:relative;margin-top:18px}
+body[data-template=mahjong] .charge-visual,body[data-template=scale] .charge-visual,body[data-template=tearoff] .charge-visual{display:none}
+body[data-template=mahjong] .mahjong-visual{display:block}
+.mj-scene{position:relative;height:170px;background:radial-gradient(ellipse at 50% 80%,#14301c,#0c160e 75%);overflow:hidden;perspective:600px}
+.mj-tile{position:absolute;left:50%;top:50%;width:70px;height:96px;margin:-48px -35px;transform-style:preserve-3d;transition:transform .5s}
+.mj-back{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:40px;background:linear-gradient(#2a6a40,#1a4a28);border-radius:8px;border:3px solid #0e2e18;backface-visibility:hidden}
+.mj-front{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:52px;font-weight:700;color:#c02020;background:linear-gradient(#f8f4e8,#e8e0c8);border-radius:8px;border:3px solid #c8b890;transform:rotateY(180deg);backface-visibility:hidden;opacity:0;transition:opacity .3s}
+.mj-shadow{position:absolute;left:50%;top:78%;width:80px;height:14px;margin-left:-40px;background:radial-gradient(ellipse,rgba(0,0,0,.5),transparent 70%)}
+.instrument.is-working .mj-tile{animation:mjFloat 3s ease-in-out infinite}
+@keyframes mjFloat{0%,100%{margin-top:-48px}50%{margin-top:-54px}}
+.mahjong-caption,.scale-caption,.tearoff-caption{text-align:center;font-size:11px;color:var(--dim);margin-top:10px}
+body[data-template=scale] .scale-visual{display:block}
+.scl-scene{position:relative;height:180px;background:linear-gradient(#181408 0%,#100c04 100%);overflow:hidden}
+.scl-post{position:absolute;left:50%;top:22%;width:8px;height:62%;margin-left:-4px;background:linear-gradient(#8a7038,#5a4820)}
+.scl-base{position:absolute;left:50%;bottom:8%;width:110px;height:14px;margin-left:-55px;background:#5a4820;border-radius:7px}
+.scl-beam{position:absolute;left:50%;top:22%;width:240px;height:6px;margin-left:-120px;background:linear-gradient(#c8a860,#8a7038);border-radius:3px;transform:rotate(-14deg);transform-origin:center;transition:transform .6s}
+.scl-pan{position:absolute;top:6px;width:70px;height:56px;display:flex;align-items:flex-end;justify-content:center;gap:2px;padding-bottom:8px}
+.scl-pan.l{left:-8px;border-bottom:3px solid #a88848;border-radius:0 0 50% 50%}
+.scl-pan.r{right:-8px;border-bottom:3px solid #a88848;border-radius:0 0 50% 50%;font-size:26px}
+.scl-coin{font-size:18px;opacity:0;transition:opacity .5s;font-style:normal}
+.instrument.is-working .scl-beam{animation:sclSway 4s ease-in-out infinite}
+@keyframes sclSway{0%,100%{margin-top:0}50%{margin-top:2px}}
+body[data-template=tearoff] .tearoff-visual{display:block}
+.trf-scene{position:relative;height:180px;background:#181008;overflow:hidden}
+.trf-cal{position:absolute;left:50%;top:14%;width:110px;height:130px;margin-left:-55px;background:#f8f0e0;border-radius:6px;box-shadow:0 8px 20px rgba(0,0,0,.5)}
+.trf-binding{position:absolute;left:0;right:0;top:0;height:16px;background:repeating-linear-gradient(90deg,#c03828 0 8px,#a02818 8px 16px);border-radius:6px 6px 0 0}
+.trf-page{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:#f8f0e0;border-radius:6px;padding-top:16px;transition:transform .6s}
+.trf-page b{font-size:44px;color:#383028}
+.trf-page.cur b{font-size:30px;color:#c03828}
+.trf-page#trfP1{z-index:4}
+.trf-page#trfP2{z-index:3}
+.trf-page#trfP3{z-index:2}
+.trf-page.cur{z-index:1}
+@media(prefers-reduced-motion:reduce){.instrument.is-working .mj-tile,.instrument.is-working .scl-beam{animation:none}}
