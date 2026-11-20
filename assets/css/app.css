@@ -9893,3 +9893,40 @@ html[data-template="stonebridge"] .stonebridge-visual{display:flex;flex-directio
 #stbS1{left:14%}#stbS2{left:70%}#stbS3{left:44%;bottom:12%}
 .stb-rip{position:absolute;left:30%;bottom:14%;width:44px;height:12px;border:2px solid #6a9ab066;border-radius:50%;opacity:0;transition:opacity .8s}
 .stonebridge-caption{}
+
+/* startrails skin */
+[data-template="startrails"] .startrails-visual{display:block}
+.startrails-visual{display:none}
+.str-scene{position:relative;height:190px;border-radius:18px;overflow:hidden;background:radial-gradient(ellipse at 50% 60%,#0d1430 0%,#060a14 70%)}
+.str-pole{position:absolute;left:50%;top:56%;width:6px;height:6px;margin:-3px;border-radius:50%;background:#eaf2ff;box-shadow:0 0 10px 3px rgba(190,215,255,.85)}
+.str-arc{position:absolute;left:50%;top:56%;border-radius:50%;background:conic-gradient(from -90deg,rgba(190,220,255,.85) 0 var(--sw,0deg),transparent var(--sw,0deg));-webkit-mask:radial-gradient(closest-side,transparent 64%,#000 66%);mask:radial-gradient(closest-side,transparent 64%,#000 66%)}
+.str-arc:nth-of-type(1){width:60px;height:60px;margin:-30px}
+.str-arc:nth-of-type(2){width:110px;height:110px;margin:-55px;opacity:.7}
+.str-arc:nth-of-type(3){width:160px;height:160px;margin:-80px;opacity:.5}
+.str-shoot{position:absolute;left:20%;top:22%;width:2px;height:26px;background:linear-gradient(#fff,transparent);transform:rotate(45deg);border-radius:2px;opacity:0}
+.startrails-caption{margin-top:10px;font-size:12px;letter-spacing:2px;opacity:.55;text-align:center}
+
+/* mangrove skin */
+[data-template="mangrove"] .mangrove-visual{display:block}
+.mangrove-visual{display:none}
+.mgr-scene{position:relative;height:190px;border-radius:18px;overflow:hidden;background:linear-gradient(180deg,#12281e 0%,#0a1410 100%)}
+.mgr-canopy{position:absolute;left:-8%;top:-12%;width:116%;height:52%;background:radial-gradient(ellipse at 30% 80%,#1e4a32 30%,transparent 70%),radial-gradient(ellipse at 70% 75%,#255a3a 35%,transparent 72%)}
+.mgr-roots{position:absolute;left:0;bottom:0;width:100%;height:56%;background:repeating-linear-gradient(84deg,transparent 0 16px,rgba(70,48,28,.9) 16px 19px,transparent 19px 34px),repeating-linear-gradient(96deg,transparent 0 20px,rgba(56,38,22,.8) 20px 23px,transparent 23px 40px);opacity:.85}
+.mgr-water{position:absolute;left:0;bottom:0;width:100%;height:8%;background:linear-gradient(180deg,rgba(58,140,120,.35),rgba(30,90,80,.75));transition:height .4s}
+.mgr-water::before{content:"";position:absolute;top:-5px;left:0;width:100%;height:6px;background:radial-gradient(circle at 10px -2px,transparent 8px,rgba(58,140,120,.35) 9px);background-size:20px 8px}
+.mgr-crab{position:absolute;bottom:10%;width:8px;height:5px;border-radius:50%;background:#e07840;box-shadow:-4px -1px 0 -2px #e07840,4px -1px 0 -2px #e07840;opacity:0;transition:opacity .5s}
+.mgr-mist{position:absolute;left:0;top:30%;width:100%;height:40%;background:linear-gradient(180deg,transparent,rgba(160,200,180,.12),transparent);opacity:0}
+.mangrove-caption{margin-top:10px;font-size:12px;letter-spacing:2px;opacity:.55;text-align:center}
+
+/* scaffold skin */
+[data-template="scaffold"] .scaffold-visual{display:block}
+.scaffold-visual{display:none}
+.scf-scene{position:relative;height:190px;border-radius:18px;overflow:hidden;background:linear-gradient(180deg,#1a1610 0%,#14100a 100%)}
+.scf-frame{position:absolute;left:8%;bottom:0;width:84%;height:96%;background:repeating-linear-gradient(0deg,transparent 0 26px,rgba(200,160,80,.55) 26px 29px),repeating-linear-gradient(90deg,transparent 0 30px,rgba(180,140,70,.5) 30px 33px);opacity:.15}
+.scf-floor{position:absolute;left:8%;width:84%;height:26%;background:repeating-linear-gradient(90deg,transparent 0 30px,rgba(220,175,95,.7) 30px 33px),linear-gradient(180deg,rgba(220,175,95,.35),transparent 30%);border-top:3px solid rgba(230,185,100,.8);opacity:0;transition:opacity .6s}
+.scf-floor:nth-of-type(2){bottom:0}
+.scf-floor:nth-of-type(3){bottom:24%}
+.scf-floor:nth-of-type(4){bottom:48%}
+.scf-floor:nth-of-type(5){bottom:72%}
+.scf-tarp{position:absolute;left:12%;top:4%;width:60%;height:14%;background:linear-gradient(135deg,rgba(60,140,90,.85),rgba(40,110,70,.85));border-radius:4px 4px 0 0;transform-origin:top left;opacity:0;transition:opacity .6s}
+.scaffold-caption{margin-top:10px;font-size:12px;letter-spacing:2px;opacity:.55;text-align:center}
