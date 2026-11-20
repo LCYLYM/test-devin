@@ -7088,3 +7088,38 @@ body[data-template=meadow] .meadow-visual{display:block}
 .mdw-flower#mdwFl2{left:60%}
 .golf-caption,.bowling-caption,.meadow-caption{text-align:center;font-size:11px;color:var(--dim);margin-top:10px}
 @media(prefers-reduced-motion:reduce){.bwl-pin,.bwl-ball,.mdw-flower,.glf-ball{transition:none}}
+body[data-template=geyser]{--bg:#081418;--surface:#101e24;--surface-2:#16282e;--line:#263e46;--text:#c8e0e6;--accent:#68c8e0;--accent-rgb:104,200,224;--instrument:#101e24;--muted:#4e7884;--dim:#4e7884}
+body[data-template=vineyard]{--bg:#100c14;--surface:#181420;--surface-2:#201c28;--line:#362e48;--text:#dcd4ec;--accent:#8858b8;--accent-rgb:136,88,184;--instrument:#181420;--muted:#665488;--dim:#665488}
+body[data-template=reef]{--bg:#081418;--surface:#102028;--surface-2:#162a32;--line:#26404a;--text:#c8e2e8;--accent:#f07858;--accent-rgb:240,120,88;--instrument:#102028;--muted:#527684;--dim:#527684}
+.geyser-visual,.vineyard-visual,.reef-visual{display:none;position:relative;margin-top:18px}
+body[data-template=geyser] .charge-visual,body[data-template=vineyard] .charge-visual,body[data-template=reef] .charge-visual{display:none}
+body[data-template=geyser] .geyser-visual{display:block}
+.gys-scene{position:relative;height:180px;background:linear-gradient(#142028,#081418);overflow:hidden}
+.gys-rock{position:absolute;left:50%;bottom:0;width:130px;height:44px;margin-left:-65px;background:radial-gradient(ellipse at 50% 20%,#5a564e,#38342c);border-radius:50% 50% 0 0/100% 100% 0 0}
+.gys-vent{position:absolute;left:50%;bottom:38px;width:18px;height:10px;margin-left:-9px;background:#181410;border-radius:50%}
+.gys-jet{position:absolute;left:50%;bottom:42px;width:10px;margin-left:-5px;height:0;background:linear-gradient(transparent,rgba(150,215,235,.85) 20%,rgba(200,240,250,.9));border-radius:6px;filter:blur(1px)}
+.gys-drop{position:absolute;left:50%;bottom:130px;width:5px;height:5px;background:#b8e4f0;border-radius:50%;opacity:0}
+body[data-template=vineyard] .vineyard-visual{display:block}
+.vny-scene{position:relative;height:180px;background:linear-gradient(#1c1620,#100c14);overflow:hidden}
+.vny-post{position:absolute;left:50%;bottom:8%;width:5px;height:70%;margin-left:-2.5px;background:linear-gradient(#5a4028,#3a2818);border-radius:2px}
+.vny-wire{position:absolute;left:18%;right:18%;top:38%;height:2px;background:#4a4038}
+.vny-vine{position:absolute;left:24%;right:24%;top:38%;height:8px}
+.vny-leaf{position:absolute;left:10%;top:-8px;width:22px;height:14px;background:radial-gradient(ellipse at 40% 60%,#4a7828,#2c5018);border-radius:70% 30% 70% 30%}
+.vny-leaf.l2{left:auto;right:14%;top:-4px}
+.vny-grape{position:absolute;top:8px;width:18px;height:24px;background:radial-gradient(circle at 35% 30%,#6a9848,#486c2c);border-radius:50% 50% 60% 60%;transform:scale(.4);transition:transform .4s,background .4s}
+.vny-grape::before{content:'';position:absolute;inset:0;background-image:radial-gradient(circle at 30% 30%,rgba(255,255,255,.15) 2px,transparent 3px),radial-gradient(circle at 60% 45%,rgba(255,255,255,.15) 2px,transparent 3px),radial-gradient(circle at 40% 62%,rgba(255,255,255,.15) 2px,transparent 3px)}
+.vny-grape#vnyG1{left:28%}
+.vny-grape#vnyG2{left:47%}
+.vny-grape#vnyG3{left:66%}
+body[data-template=reef] .reef-visual{display:block}
+.ref-scene{position:relative;height:180px;background:linear-gradient(#0e2c38,#081418 70%);overflow:hidden}
+.ref-water{position:absolute;inset:0;background:radial-gradient(ellipse at 30% 20%,rgba(120,200,230,.15),transparent 60%)}
+.ref-sand{position:absolute;left:0;right:0;bottom:0;height:16%;background:linear-gradient(#3a4a40,#242e26)}
+.ref-coral{position:absolute;bottom:16%;width:8px;height:0;border-radius:4px 4px 0 0;transform-origin:bottom}
+.ref-coral#refC1{left:30%;background:linear-gradient(#f07858,#b04028)}
+.ref-coral#refC2{left:44%;background:linear-gradient(#f0a058,#b06028)}
+.ref-coral#refC3{left:60%;background:linear-gradient(#d85888,#98284e)}
+.ref-fish{position:absolute;top:30%;width:16px;height:9px;background:radial-gradient(ellipse at 30% 40%,#f8d060,#d8a020);border-radius:50% 60% 60% 50%;opacity:0;transition:left .3s linear,opacity .4s}
+.ref-fish::after{content:'';position:absolute;right:-5px;top:1px;border-top:3.5px solid transparent;border-bottom:3.5px solid transparent;border-left:6px solid #d8a020}
+.geyser-caption,.vineyard-caption,.reef-caption{text-align:center;font-size:11px;color:var(--dim);margin-top:10px}
+@media(prefers-reduced-motion:reduce){.ref-fish,.vny-grape{transition:none}}
