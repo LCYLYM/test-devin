@@ -5385,3 +5385,38 @@ body[data-template=mallow] .mallow-visual{display:block}
 .mlw-smoke::before{content:'';position:absolute;left:8px;bottom:0;width:5px;height:30px;background:linear-gradient(transparent,rgba(200,200,200,.4));border-radius:50%;animation:mlwUp 2.8s ease-in infinite}
 @keyframes mlwUp{0%{transform:translateY(10px);opacity:0}30%{opacity:.8}100%{transform:translateY(-14px);opacity:0}}
 @media(prefers-reduced-motion:reduce){.ssh-belt,.mlw-fire i,.mlw-smoke::before{animation:none}}
+body[data-template=top]{--bg:#160e14;--surface:#1e1418;--surface-2:#261a20;--line:#4a3040;--text:#f0dce8;--accent:#e86a8a;--accent-rgb:232,106,138;--instrument:#1e1418;--muted:#b07a90;--dim:#b07a90}
+.top-visual,.fountain-visual,.sled-visual{display:none;position:relative;margin-top:18px}
+body[data-template=top] .charge-visual,body[data-template=fountain] .charge-visual,body[data-template=sled] .charge-visual{display:none}
+body[data-template=top] .top-visual{display:block}
+.tps-scene{position:relative;height:180px;background:radial-gradient(ellipse at 50% 85%,#2a1a24,#160e14 75%);overflow:hidden}
+.tps-floor{position:absolute;left:10%;right:10%;bottom:16%;height:4px;background:#4a3040;border-radius:2px}
+.tps-top{position:absolute;left:50%;bottom:calc(16% + 4px);width:70px;height:110px;margin-left:-35px;transform-origin:50% 96%;transition:transform .1s}
+.tps-body{position:absolute;left:50%;bottom:18px;width:60px;height:60px;margin-left:-30px;background:conic-gradient(#e86a8a 0 25%,#f0c0d0 25% 50%,#e86a8a 50% 75%,#f0c0d0 75% 100%);border-radius:50%;clip-path:polygon(50% 0,90% 35%,70% 100%,30% 100%,10% 35%)}
+.tps-tip{position:absolute;left:50%;bottom:0;width:8px;height:22px;margin-left:-4px;background:#c8b8c0;clip-path:polygon(20% 0,80% 0,50% 100%);z-index:2}
+.tps-stem{position:absolute;left:50%;top:0;width:8px;height:26px;margin-left:-4px;background:#c8b8c0;border-radius:3px}
+.tps-blur{position:absolute;left:50%;bottom:calc(16% + 22px);width:64px;height:64px;margin-left:-32px;border-radius:50%;background:conic-gradient(transparent 0 40%,rgba(232,106,138,.4) 50%,transparent 60%);opacity:.2;animation:tpsSpin .5s linear infinite;clip-path:polygon(50% 0,90% 35%,70% 100%,30% 100%,10% 35%)}
+@keyframes tpsSpin{0%{transform:rotate(0)}100%{transform:rotate(360deg)}}
+.top-caption,.fountain-caption,.sled-caption{text-align:center;font-size:11px;color:var(--dim);margin-top:10px}
+body[data-template=fountain] .fountain-visual{display:block}
+.ftn-scene{position:relative;height:180px;background:linear-gradient(#0a141c 0%,#12304a 100%);overflow:hidden}
+.ftn-pool{position:absolute;left:12%;right:12%;bottom:10%;height:26px;background:linear-gradient(#2a5a7a,#1a3a55);border-radius:50%}
+.ftn-basin{position:absolute;left:50%;bottom:calc(10% + 14px);width:70px;height:12px;margin-left:-35px;background:#3a5a70;border-radius:6px}
+.ftn-jet{position:absolute;bottom:calc(10% + 26px);width:8px;background:linear-gradient(transparent,#a8dcf8 30%,#68c8f0);border-radius:4px;transition:height .6s}
+.ftn-jet.j1{left:50%;margin-left:-4px;height:14px}
+.ftn-jet.j2{left:40%;height:10px;transform:rotate(-14deg);transform-origin:bottom}
+.ftn-jet.j3{left:60%;height:10px;transform:rotate(14deg);transform-origin:bottom}
+.ftn-mist{position:absolute;left:50%;bottom:calc(10% + 20px);width:110px;height:30px;margin-left:-55px;background:radial-gradient(ellipse,rgba(168,220,248,.4),transparent 70%);opacity:0;transition:opacity .6s}
+body[data-template=sled] .sled-visual{display:block}
+.sld-scene{position:relative;height:180px;background:linear-gradient(#0e1620 0%,#1e3248 100%);overflow:hidden}
+.sld-slope{position:absolute;left:-10%;right:-10%;bottom:0;height:60%;background:linear-gradient(160deg,transparent 30%,#dcecf8 31%,#b8d0e8);clip-path:polygon(0 60%,100% 0,100% 100%,0 100%)}
+.sld-sled{position:absolute;left:8%;bottom:34%;width:90px;height:44px;transition:left .7s,transform .7s}
+.sld-seat{position:absolute;left:6px;bottom:14px;width:74px;height:16px;background:linear-gradient(#c86438,#98401c);border-radius:6px}
+.sld-runner{position:absolute;bottom:0;width:80px;height:4px;background:#a88050;border-radius:2px}
+.sld-runner.r1{left:2px}
+.sld-runner.r2{left:2px;bottom:6px}
+.sld-spray{position:absolute;left:2%;bottom:30%;width:80px;height:40px;background:radial-gradient(ellipse at 0% 100%,rgba(240,248,255,.5),transparent 65%);opacity:0;transition:opacity .5s}
+.sld-flag{position:absolute;right:10%;top:16%;font-size:24px;opacity:.25;transition:opacity .5s}
+.instrument.is-working .sld-sled{animation:sldBump .9s ease-in-out infinite}
+@keyframes sldBump{0%,100%{margin-bottom:0}50%{margin-bottom:3px}}
+@media(prefers-reduced-motion:reduce){.tps-blur,.instrument.is-working .sld-sled{animation:none}}
