@@ -4215,6 +4215,9 @@
     if (params.get('hydrangea') === '1') { document.body.classList.add('is-hydrangea'); }
     if (params.get('rhododendron') === '1') { document.body.classList.add('is-rhododendron'); }
     if (params.get('azalea') === '1') { document.body.classList.add('is-azalea'); }
+    if (params.get('camellia') === '1') { document.body.classList.add('is-camellia'); }
+    if (params.get('gardenia') === '1') { document.body.classList.add('is-gardenia'); }
+    if (params.get('hibiscus') === '1') { document.body.classList.add('is-hibiscus'); }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -5788,6 +5791,9 @@
         if (params.get('hydrangea') === '1') u.searchParams.set('hydrangea', '1');
         if (params.get('rhododendron') === '1') u.searchParams.set('rhododendron', '1');
         if (params.get('azalea') === '1') u.searchParams.set('azalea', '1');
+        if (params.get('camellia') === '1') u.searchParams.set('camellia', '1');
+        if (params.get('gardenia') === '1') u.searchParams.set('gardenia', '1');
+        if (params.get('hibiscus') === '1') u.searchParams.set('hibiscus', '1');
       if (params.get('tile') === '1') u.searchParams.set('tile', '1');
       if (params.get('outline') === '1') u.searchParams.set('outline', '1');
       if (params.get('stripe') === '1') u.searchParams.set('stripe', '1');

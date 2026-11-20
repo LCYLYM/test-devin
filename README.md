@@ -1331,6 +1331,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `hydrangea` | `1` 紫陽花配色 |
 | `rhododendron` | `1` シャクナゲ配色 |
 | `azalea` | `1` ツツジ配色 |
+| `camellia` | `1` 椿配色 |
+| `gardenia` | `1` クチナシ配色 |
+| `hibiscus` | `1` ハイビスカス配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 
