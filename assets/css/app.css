@@ -3130,6 +3130,12 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .is-gouda .instrument{border-color:rgba(220,165,70,.4)}
 .is-brie{background:linear-gradient(180deg,#25231f 0%,#12110e 100%)}
 .is-brie .instrument{border-color:rgba(205,195,175,.4)}
+.is-gruyere{background:linear-gradient(180deg,#262016 0%,#120f0a 100%)}
+.is-gruyere .instrument{border-color:rgba(210,160,95,.4)}
+.is-manchego{background:linear-gradient(180deg,#261f17 0%,#120e0a 100%)}
+.is-manchego .instrument{border-color:rgba(200,150,100,.4)}
+.is-camembert{background:linear-gradient(180deg,#252219 0%,#12100c 100%)}
+.is-camembert .instrument{border-color:rgba(210,190,130,.4)}
 .is-fuchsia{background:linear-gradient(180deg,#2e1428 0%,#160a13 100%)}
 .is-fuchsia .instrument{border-color:rgba(230,100,200,.4)}
 .is-oleander{background:linear-gradient(180deg,#2c1720 0%,#150b0f 100%)}

@@ -4362,6 +4362,9 @@
     if (params.get('pecorino') === '1') { document.body.classList.add('is-pecorino'); }
     if (params.get('gouda') === '1') { document.body.classList.add('is-gouda'); }
     if (params.get('brie') === '1') { document.body.classList.add('is-brie'); }
+    if (params.get('gruyere') === '1') { document.body.classList.add('is-gruyere'); }
+    if (params.get('manchego') === '1') { document.body.classList.add('is-manchego'); }
+    if (params.get('camembert') === '1') { document.body.classList.add('is-camembert'); }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -6070,6 +6073,9 @@
         if (params.get('pecorino') === '1') u.searchParams.set('pecorino', '1');
         if (params.get('gouda') === '1') u.searchParams.set('gouda', '1');
         if (params.get('brie') === '1') u.searchParams.set('brie', '1');
+        if (params.get('gruyere') === '1') u.searchParams.set('gruyere', '1');
+        if (params.get('manchego') === '1') u.searchParams.set('manchego', '1');
+        if (params.get('camembert') === '1') u.searchParams.set('camembert', '1');
         if (params.get('fuchsia') === '1') u.searchParams.set('fuchsia', '1');
         if (params.get('oleander') === '1') u.searchParams.set('oleander', '1');
         if (params.get('buddleia') === '1') u.searchParams.set('buddleia', '1');

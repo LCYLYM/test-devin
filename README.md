@@ -1466,6 +1466,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `pecorino` | `1` ペコリーノ配色 |
 | `gouda` | `1` ゴーダ配色 |
 | `brie` | `1` ブリー配色 |
+| `gruyere` | `1` グリュイエール配色 |
+| `manchego` | `1` マンチェゴ配色 |
+| `camembert` | `1` カマンベール配色 |
 | `fuchsia` | `1` フクシア配色 |
 | `oleander` | `1` キョウチクトウ配色 |
 | `buddleia` | `1` フサフジウツギ配色 |
