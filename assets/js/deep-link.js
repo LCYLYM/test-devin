@@ -4167,6 +4167,9 @@
     if (params.get('alder') === '1') { document.body.classList.add('is-alder'); }
     if (params.get('aspen') === '1') { document.body.classList.add('is-aspen'); }
     if (params.get('poplar') === '1') { document.body.classList.add('is-poplar'); }
+    if (params.get('hazel') === '1') { document.body.classList.add('is-hazel'); }
+    if (params.get('hornbeam') === '1') { document.body.classList.add('is-hornbeam'); }
+    if (params.get('linden') === '1') { document.body.classList.add('is-linden'); }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -5692,6 +5695,9 @@
         if (params.get('alder') === '1') u.searchParams.set('alder', '1');
         if (params.get('aspen') === '1') u.searchParams.set('aspen', '1');
         if (params.get('poplar') === '1') u.searchParams.set('poplar', '1');
+        if (params.get('hazel') === '1') u.searchParams.set('hazel', '1');
+        if (params.get('hornbeam') === '1') u.searchParams.set('hornbeam', '1');
+        if (params.get('linden') === '1') u.searchParams.set('linden', '1');
       if (params.get('tile') === '1') u.searchParams.set('tile', '1');
       if (params.get('outline') === '1') u.searchParams.set('outline', '1');
       if (params.get('stripe') === '1') u.searchParams.set('stripe', '1');

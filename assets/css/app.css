@@ -2764,6 +2764,12 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .is-aspen .instrument{border-color:rgba(178,190,140,.4)}
 .is-poplar{background:linear-gradient(180deg,#1f2b24 0%,#0d1510 100%)}
 .is-poplar .instrument{border-color:rgba(130,190,160,.4)}
+.is-hazel{background:linear-gradient(180deg,#2b2013 0%,#120c06 100%)}
+.is-hazel .instrument{border-color:rgba(192,152,100,.4)}
+.is-hornbeam{background:linear-gradient(180deg,#22271f 0%,#0f120d 100%)}
+.is-hornbeam .instrument{border-color:rgba(155,168,132,.4)}
+.is-linden{background:linear-gradient(180deg,#222b1e 0%,#0e140c 100%)}
+.is-linden .instrument{border-color:rgba(165,195,125,.4)}
 .is-oatmeal{background:linear-gradient(180deg,#1d1912,#2f291e 50%,#433a2a)}
 .is-oatmeal .instrument{border-color:rgba(215,195,155,.4)}
 .is-thyme{background:linear-gradient(180deg,#121a14,#1c2a20 50%,#28392c)}
