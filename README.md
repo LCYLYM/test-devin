@@ -1460,6 +1460,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `serrano` | `1` セラーノ配色 |
 | `shishito` | `1` シシトウ配色 |
 | `scotchbonnet` | `1` スコッチボネット配色 |
+| `shallot` | `1` エシャロット配色 |
+| `chive` | `1` チャイブ配色 |
+| `ramp` | `1` 行者ニンニク配色 |
 | `fuchsia` | `1` フクシア配色 |
 | `oleander` | `1` キョウチクトウ配色 |
 | `buddleia` | `1` フサフジウツギ配色 |

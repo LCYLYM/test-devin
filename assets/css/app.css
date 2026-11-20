@@ -3118,6 +3118,12 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .is-shishito .instrument{border-color:rgba(135,180,110,.4)}
 .is-scotchbonnet{background:linear-gradient(180deg,#29140f 0%,#140907 100%)}
 .is-scotchbonnet .instrument{border-color:rgba(230,70,45,.4)}
+.is-shallot{background:linear-gradient(180deg,#241d26 0%,#110e12 100%)}
+.is-shallot .instrument{border-color:rgba(185,140,195,.4)}
+.is-chive{background:linear-gradient(180deg,#1a2417 0%,#0c110a 100%)}
+.is-chive .instrument{border-color:rgba(120,185,85,.4)}
+.is-ramp{background:linear-gradient(180deg,#1d2518 0%,#0e120b 100%)}
+.is-ramp .instrument{border-color:rgba(145,180,100,.4)}
 .is-fuchsia{background:linear-gradient(180deg,#2e1428 0%,#160a13 100%)}
 .is-fuchsia .instrument{border-color:rgba(230,100,200,.4)}
 .is-oleander{background:linear-gradient(180deg,#2c1720 0%,#150b0f 100%)}
