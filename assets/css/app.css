@@ -6742,3 +6742,40 @@ body[data-template=hummingbird] .hummingbird-visual{display:block}
 .hmb-wing.w1{left:0;transform:rotate(-20deg)}
 .hmb-wing.w2{left:4px;transform:rotate(20deg)}
 @media(prefers-reduced-motion:reduce){.spw-spider,.snl-body,.hmb-bird{transition:none}}
+body[data-template=cicada]{--bg:#101008;--surface:#181812;--surface-2:#201f16;--line:#36341e;--text:#e4e0c2;--accent:#a8b848;--accent-rgb:168,184,72;--instrument:#181812;--muted:#7a7c46;--dim:#7a7c46}
+body[data-template=dam]{--bg:#0a1216;--surface:#121a20;--surface-2:#1a242c;--line:#2a3a46;--text:#d0e0ea;--accent:#5898c8;--accent-rgb:88,152,200;--instrument:#121a20;--muted:#4e6a7e;--dim:#4e6a7e}
+body[data-template=potofgold]{--bg:#120c04;--surface:#1a140a;--surface-2:#221c10;--line:#3a2e18;--text:#ecdcc0;--accent:#e8b830;--accent-rgb:232,184,48;--instrument:#1a140a;--muted:#8a6e38;--dim:#8a6e38}
+.cicada-visual,.dam-visual,.potofgold-visual{display:none;position:relative;margin-top:18px}
+body[data-template=cicada] .charge-visual,body[data-template=dam] .charge-visual,body[data-template=potofgold] .charge-visual{display:none}
+body[data-template=cicada] .cicada-visual{display:block}
+.ccd-scene{position:relative;height:180px;background:linear-gradient(#101008 0%,#1e240e 100%);overflow:hidden}
+.ccd-branch{position:absolute;left:12%;top:0;width:8px;height:100%;background:#4a3a20;border-radius:4px;transform:rotate(6deg)}
+.ccd-shell{position:absolute;left:16%;top:44%;width:18px;height:34px;background:linear-gradient(#8a7648,#5c4c28);border-radius:50% 50% 60% 60%;transition:opacity .5s}
+.ccd-shell::before{content:'';position:absolute;left:50%;top:0;width:3px;height:100%;margin-left:-1px;background:rgba(20,16,4,.5)}
+.ccd-bug{position:absolute;left:15%;top:46%;width:34px;height:44px;opacity:0;transition:opacity .5s,top .6s}
+.ccd-abdomen{position:absolute;left:50%;top:30%;width:14px;height:30px;margin-left:-7px;background:linear-gradient(#7a9a38,#4a6820);border-radius:50% 50% 40% 40%}
+.ccd-abdomen::before{content:'';position:absolute;left:50%;top:-12px;width:12px;height:12px;margin-left:-6px;background:#6a8a30;border-radius:50%}
+.ccd-wing{position:absolute;top:6%;width:22px;height:38px;background:linear-gradient(rgba(200,225,150,.55),rgba(160,200,110,.3));border:1px solid rgba(190,220,140,.7);transition:transform .6s}
+.ccd-wing.l{left:-4px;transform-origin:top right;border-radius:80% 20% 60% 40%}
+.ccd-wing.r{right:-4px;transform-origin:top left;border-radius:20% 80% 40% 60%}
+.cicada-caption,.dam-caption,.potofgold-caption{text-align:center;font-size:11px;color:var(--dim);margin-top:10px}
+body[data-template=dam] .dam-visual{display:block}
+.dam-scene{position:relative;height:180px;background:linear-gradient(#0e1c28 0%,#0a1216 100%);overflow:hidden}
+.dam-water{position:absolute;left:0;bottom:0;width:52%;height:0;background:linear-gradient(#3a78a8,#1c4868);transition:height .5s}
+.dam-water::after{content:'';position:absolute;left:0;right:0;top:0;height:3px;background:rgba(180,220,240,.6)}
+.dam-wall{position:absolute;right:20%;top:0;bottom:0;width:16%;background:linear-gradient(#6a6e74,#4a4e54);border-left:3px solid #585c62}
+.dam-wall::after{content:'';position:absolute;left:0;right:0;top:0;height:8px;background:#7a7e84}
+.dam-gate{position:absolute;bottom:0;width:38%;height:0;background:#0c1620;border-radius:4px 4px 0 0;transition:height .5s}
+.dam-gate.g1{left:8%}
+.dam-gate.g2{right:8%}
+.dam-spill{position:absolute;right:20%;bottom:0;width:16%;height:44%;background:linear-gradient(rgba(160,210,240,.85),rgba(90,150,190,.4));opacity:0;transition:opacity .5s}
+.dam-spill::after{content:'';position:absolute;left:0;right:0;bottom:-6px;height:10px;background:radial-gradient(rgba(200,230,250,.6),transparent 70%)}
+.dam-mark{position:absolute;left:6%;bottom:10px;font-size:12px;color:#8ab8d8;font-variant-numeric:tabular-nums}
+body[data-template=potofgold] .potofgold-visual{display:block}
+.pog-scene{position:relative;height:180px;background:linear-gradient(#120c04 0%,#1c1408 100%);overflow:hidden}
+.pog-rainbow{position:absolute;left:50%;top:10%;width:200px;height:90px;transform:translateX(-50%);opacity:.85}
+.pog-pot{position:absolute;left:50%;bottom:14%;width:90px;height:62px;transform:translateX(-50%);background:linear-gradient(#4a3c24,#2c2210);border-radius:8px 8px 40px 40px;overflow:hidden}
+.pog-pot::before{content:'';position:absolute;left:-6px;right:-6px;top:0;height:10px;background:#3c2f1a;border-radius:6px}
+.pog-coins{position:absolute;left:0;right:0;bottom:0;height:0;background:repeating-linear-gradient(#e8b830 0 6px,#c89820 6px 8px);transition:height .5s}
+.pog-spark{position:absolute;left:50%;top:-14px;width:30px;height:16px;margin-left:-15px;background:radial-gradient(rgba(255,230,150,.9),transparent 70%);opacity:0;transition:opacity .4s}
+@media(prefers-reduced-motion:reduce){.ccd-bug,.dam-water,.pog-coins{transition:none}}
