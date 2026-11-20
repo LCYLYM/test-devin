@@ -2872,6 +2872,12 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .is-bougainvillea .instrument{border-color:rgba(240,90,180,.4)}
 .is-clematis{background:linear-gradient(180deg,#1d1c2e 0%,#0d0c16 100%)}
 .is-clematis .instrument{border-color:rgba(130,120,225,.4)}
+.is-ivy{background:linear-gradient(180deg,#1b2619 0%,#0b1209 100%)}
+.is-ivy .instrument{border-color:rgba(110,175,105,.4)}
+.is-honeysuckle{background:linear-gradient(180deg,#2a2617 0%,#141108 100%)}
+.is-honeysuckle .instrument{border-color:rgba(220,200,110,.4)}
+.is-osmanthus{background:linear-gradient(180deg,#2c1d10 0%,#150d06 100%)}
+.is-osmanthus .instrument{border-color:rgba(230,150,60,.4)}
 .is-oatmeal{background:linear-gradient(180deg,#1d1912,#2f291e 50%,#433a2a)}
 .is-oatmeal .instrument{border-color:rgba(215,195,155,.4)}
 .is-thyme{background:linear-gradient(180deg,#121a14,#1c2a20 50%,#28392c)}

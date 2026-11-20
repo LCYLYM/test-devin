@@ -1337,6 +1337,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `jasmine` | `1` ジャスミン配色 |
 | `bougainvillea` | `1` ブーゲンビリア配色 |
 | `clematis` | `1` クレマチス配色 |
+| `ivy` | `1` 蔦配色 |
+| `honeysuckle` | `1` スイカズラ配色 |
+| `osmanthus` | `1` 金木犀配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 
