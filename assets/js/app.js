@@ -218,6 +218,7 @@
     const p=clamp(data.progress);
     if(p>=1&&lastProgress<1&&data.snapshot&&data.snapshot.todayEarned>0&&!motion.matches&&!confettiDisabled&&!window.__noConfetti)confettiBurst();
     lastProgress=p;
+    animGen(p,tick);
     const ml=window.__milestones===undefined?defaultMilestones:window.__milestones;
     if(ml.length&&data.snapshot&&data.working){
       const dk=data.snapshot.dayKey;
@@ -1208,7 +1209,6 @@
       const crkL1=$('crkL1');if(crkL1)crkL1.style.width=clamp(p*3.2,0,1)*120+'px';const crkL2=$('crkL2');if(crkL2)crkL2.style.width=clamp(p*3.2-0.8,0,1)*100+'px';const crkL3=$('crkL3');if(crkL3)crkL3.style.height=clamp(p*3.2-1.5,0,1)*80+'px';const crkL4=$('crkL4');if(crkL4)crkL4.style.width=clamp(p*3.2-2.2,0,1)*90+'px';const crkS=$('crkS');if(crkS)crkS.style.opacity=clamp(p*1.2,0.1,0.6);
       const trvS=$('trvS');if(trvS)trvS.style.opacity=clamp(p*1.6,0.15,0.8);const trvP1=$('trvP1');if(trvP1)trvP1.style.opacity=clamp(p*3.6,0.25,1);const trvP2=$('trvP2');if(trvP2)trvP2.style.opacity=clamp(p*3.6-0.7,0.2,1);const trvP3=$('trvP3');if(trvP3)trvP3.style.opacity=clamp(p*3.6-1.4,0.2,1);const trvP4=$('trvP4');if(trvP4)trvP4.style.opacity=clamp(p*3.6-2.1,0.2,1);
       const mnlP=$('mnlP');if(mnlP){mnlP.style.width=(30+p*70)+'px';mnlP.style.opacity=clamp(p*1.4,0.15,0.85);}const mnlR1=$('mnlR1');if(mnlR1)mnlR1.style.opacity=clamp(p*2,0,0.8)*(0.5+0.5*Math.sin(tick/30));const mnlR2=$('mnlR2');if(mnlR2)mnlR2.style.opacity=clamp(p*2-0.8,0,0.7)*(0.5+0.5*Math.sin(tick/42+2));
-    animGen(p,tick);
     for(let ki2=1;ki2<=4;ki2++){const kf=$('koiF'+ki2);if(kf){const near=clamp(p*1.2-(ki2-1)*0.2,0,1);const cx=50+(1-near)*(ki2%2?30:-30)+Math.sin(tick/(500+ki2*90))*6*(1-near);const cy=50+(1-near)*(ki2<3?22:-22)+Math.cos(tick/(600+ki2*70))*5*(1-near);kf.style.left=cx+'%';kf.style.top=cy+'%';kf.style.opacity=p>(ki2-1)*0.18?1:0;}}
     for(let zi=1;zi<=4;zi++){const zl=$('zenL'+zi);if(zl)zl.style.opacity=p*4>=zi?1:0.12;}
     for(let zs=1;zs<=3;zs++){const st=$('zenS'+zs);if(st)st.style.opacity=p*3>=zs?1:0;}
