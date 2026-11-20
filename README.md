@@ -1487,6 +1487,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `baijiu` | `1` バイジウ配色 |
 | `awamori` | `1` アワモリ配色 |
 | `shochu` | `1` ショウチュウ配色 |
+| `whiskey` | `1` ウイスキー配色 |
+| `brandy` | `1` ブランデー配色 |
+| `rum` | `1` ラム配色 |
 | `fuchsia` | `1` フクシア配色 |
 | `oleander` | `1` キョウチクトウ配色 |
 | `buddleia` | `1` フサフジウツギ配色 |

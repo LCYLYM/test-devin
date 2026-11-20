@@ -3172,6 +3172,12 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .is-awamori .instrument{border-color:rgba(100,140,220,.4)}
 .is-shochu{background:linear-gradient(180deg,#231f18 0%,#121008 100%)}
 .is-shochu .instrument{border-color:rgba(190,160,100,.4)}
+.is-whiskey{background:linear-gradient(180deg,#26180e 0%,#140d07 100%)}
+.is-whiskey .instrument{border-color:rgba(210,140,50,.4)}
+.is-brandy{background:linear-gradient(180deg,#251712 0%,#120b08 100%)}
+.is-brandy .instrument{border-color:rgba(200,110,60,.4)}
+.is-rum{background:linear-gradient(180deg,#241a10 0%,#120e08 100%)}
+.is-rum .instrument{border-color:rgba(195,130,60,.4)}
 .is-fuchsia{background:linear-gradient(180deg,#2e1428 0%,#160a13 100%)}
 .is-fuchsia .instrument{border-color:rgba(230,100,200,.4)}
 .is-oleander{background:linear-gradient(180deg,#2c1720 0%,#150b0f 100%)}
