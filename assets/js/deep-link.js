@@ -4224,6 +4224,9 @@
     if (params.get('ivy') === '1') { document.body.classList.add('is-ivy'); }
     if (params.get('honeysuckle') === '1') { document.body.classList.add('is-honeysuckle'); }
     if (params.get('osmanthus') === '1') { document.body.classList.add('is-osmanthus'); }
+    if (params.get('peony') === '1') { document.body.classList.add('is-peony'); }
+    if (params.get('dahlia') === '1') { document.body.classList.add('is-dahlia'); }
+    if (params.get('kerria') === '1') { document.body.classList.add('is-kerria'); }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -5806,6 +5809,9 @@
         if (params.get('ivy') === '1') u.searchParams.set('ivy', '1');
         if (params.get('honeysuckle') === '1') u.searchParams.set('honeysuckle', '1');
         if (params.get('osmanthus') === '1') u.searchParams.set('osmanthus', '1');
+        if (params.get('peony') === '1') u.searchParams.set('peony', '1');
+        if (params.get('dahlia') === '1') u.searchParams.set('dahlia', '1');
+        if (params.get('kerria') === '1') u.searchParams.set('kerria', '1');
       if (params.get('tile') === '1') u.searchParams.set('tile', '1');
       if (params.get('outline') === '1') u.searchParams.set('outline', '1');
       if (params.get('stripe') === '1') u.searchParams.set('stripe', '1');

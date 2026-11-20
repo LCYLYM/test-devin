@@ -1340,6 +1340,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `ivy` | `1` 蔦配色 |
 | `honeysuckle` | `1` スイカズラ配色 |
 | `osmanthus` | `1` 金木犀配色 |
+| `peony` | `1` 牡丹配色 |
+| `dahlia` | `1` ダリア配色 |
+| `kerria` | `1` 山吹配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 
