@@ -103,8 +103,7 @@
     if(lastTemplate===name)return;
     lastTemplate=name;document.body.dataset.template=name;
     document.querySelectorAll('[data-template]').forEach(button=>{if(button.tagName!=='BUTTON')return;const on=button.dataset.template===name;button.classList.toggle('selected',on);button.setAttribute('aria-pressed',String(on));});
-    const buttons=[...document.querySelectorAll('.template-switch button')];const selected=buttons.find(b=>b.dataset.template===name);
-    if(selected){const base=buttons[0].offsetLeft;$('templateSlider').style.width=selected.offsetWidth+'px';$('templateSlider').style.transform='translateX('+(selected.offsetLeft-base)+'px)';}
+    applySlider();
     if(animate && !motion.matches){instrument.classList.remove('template-changing');void instrument.offsetWidth;instrument.classList.add('template-changing');setTimeout(()=>instrument.classList.remove('template-changing'),330);}
     fitKey='';planKey='';
     requestAnimationFrame(()=>{resizeCanvas();fitAmount();if(latest)drawPixel(performance.now());});
@@ -1425,7 +1424,7 @@
     const skinBar=document.querySelector('.template-switch'),skinSlots=$('skinSlots'),skinPool=$('skinPool'),skinRollBtn=$('skinRoll');
     const REPS=['charge','meter','pixel','neon','mono','paper','term','ecg','wave'];
     const poolBtns=skinPool?[...skinPool.querySelectorAll('button[data-template]')]:[];
-    function fillSlots(list){if(!skinSlots)return;skinSlots.innerHTML='';list.forEach(id=>{const b=poolBtns.find(x=>x.dataset.template===id);if(b)skinSlots.appendChild(b.cloneNode(true));});}
+    function fillSlots(list){if(!skinSlots)return;skinSlots.innerHTML='';list.forEach(id=>{const b=poolBtns.find(x=>x.dataset.template===id);if(b)skinSlots.appendChild(b.cloneNode(true));});applySlider();}
     fillSlots(REPS);
     if(skinRollBtn&&poolBtns.length){skinRollBtn.addEventListener('click',()=>{const pool=poolBtns.filter(b=>b.dataset.template!=='pig');const pickBtn=pool[Math.floor(Math.random()*pool.length)],pick=pickBtn.dataset.template,pickName=pickBtn.textContent.trim();const settle=()=>{const sample=[pick];while(sample.length<9){const c=pool[Math.floor(Math.random()*pool.length)].dataset.template;if(!sample.includes(c))sample.push(c);}fillSlots(sample);skinSlots.classList.remove('is-rolling');void skinSlots.offsetWidth;skinSlots.classList.add('is-rolling');app.setTemplate(pick);if(audioReady&&app.getState().preferences.sound)playTick(true);app.toast('摇到了「'+pickName+'」皮肤');};if(motion.matches){settle();return;}let spins=0;const spin=setInterval(()=>{const s=[];while(s.length<9)s.push(pool[Math.floor(Math.random()*pool.length)].dataset.template);fillSlots(s);if(++spins>=7){clearInterval(spin);settle();}},90);});}
     if(skinBar)skinBar.addEventListener('click',e=>{const b=e.target.closest('button[data-template]');if(!b)return;app.setTemplate(b.dataset.template);if(audioReady&&app.getState().preferences.sound)playTick(true);});
@@ -1467,8 +1466,9 @@
     app.render();
   }
   function applySlider(){
-    const buttons=[...document.querySelectorAll('.template-switch > button, .skin-slots button')],selected=buttons.find(b=>b.dataset.template===lastTemplate);
-    if(selected){$('templateSlider').style.width=selected.offsetWidth+'px';$('templateSlider').style.transform='translateX('+(selected.offsetLeft-buttons[0].offsetLeft)+'px)';$('templateSlider').style.opacity='1';}else{$('templateSlider').style.width='0';}
+    const buttons=[...document.querySelectorAll('.template-switch > button, .skin-slots button')],selected=buttons.find(b=>b.dataset.template===lastTemplate&&b.offsetWidth>0);
+    const s=$('templateSlider');
+    if(selected){s.style.width=selected.offsetWidth+'px';s.style.height=selected.offsetHeight+'px';s.style.transform='translate('+(selected.offsetLeft-buttons[0].offsetLeft)+'px,'+(selected.offsetTop-buttons[0].offsetTop)+'px)';s.style.opacity='1';}else{s.style.width='0';}
   }
   window.SalaryVisual={update,resize:()=>{resizeCanvas();fitKey='';fitAmount();}};
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',bind,{once:true});else queueMicrotask(bind);
