@@ -6200,3 +6200,38 @@ body[data-template=shateki] .shateki-visual{display:block}
 .shk-gun::after{content:'';position:absolute;right:-8px;top:3px;width:10px;height:6px;background:#8a7a5a;border-radius:3px}
 .shk-cork{position:absolute;left:20%;bottom:18%;width:8px;height:8px;background:#e8d8a8;border-radius:50%;opacity:0;transition:left .3s,opacity .3s}
 @media(prefers-reduced-motion:reduce){.trp-walker,.shk-cork{transition:none}}
+body[data-template=fukuwarai]{--bg:#160e0c;--surface:#1e1614;--surface-2:#261e1a;--line:#3e2e28;--text:#ecd8cc;--accent:#e0a890;--accent-rgb:224,168,144;--instrument:#1e1614;--muted:#8a5c4c;--dim:#8a5c4c}
+body[data-template=kagami]{--bg:#121010;--surface:#1a1816;--surface-2:#222018;--line:#38342c;--text:#e8e0d0;--accent:#f0e8d8;--accent-rgb:240,232,216;--instrument:#1a1816;--muted:#7a7466;--dim:#7a7466}
+body[data-template=hagoita]{--bg:#160a0c;--surface:#1e1014;--surface-2:#261418;--line:#3e2028;--text:#ecccd0;--accent:#d04858;--accent-rgb:208,72,88;--instrument:#1e1014;--muted:#8a4048;--dim:#8a4048}
+.fukuwarai-visual,.kagami-visual,.hagoita-visual{display:none;position:relative;margin-top:18px}
+body[data-template=fukuwarai] .charge-visual,body[data-template=kagami] .charge-visual,body[data-template=hagoita] .charge-visual{display:none}
+body[data-template=fukuwarai] .fukuwarai-visual{display:block}
+.fkw-scene{position:relative;height:180px;background:radial-gradient(ellipse at 50% 40%,#2a1a14,#160e0c 75%);overflow:hidden}
+.fkw-face{position:absolute;left:50%;top:50%;width:120px;height:120px;transform:translate(-50%,-50%);background:radial-gradient(#f0d8c0,#d8b090);border-radius:50%;box-shadow:0 6px 20px rgba(0,0,0,.4)}
+.fkw-eye{position:absolute;top:38%;width:14px;height:6px;background:#2a1a14;border-radius:3px;opacity:0;transition:opacity .4s,transform .4s}
+.fkw-eye.l{left:26%}
+.fkw-eye.r{right:26%}
+.fkw-brow{position:absolute;top:28%;width:18px;height:4px;background:#3a2418;border-radius:2px;opacity:0;transition:opacity .4s,transform .4s}
+.fkw-brow.l{left:22%;transform:rotate(-8deg)}
+.fkw-brow.r{right:22%;transform:rotate(8deg)}
+.fkw-nose{position:absolute;left:50%;top:48%;width:0;height:0;margin-left:-6px;border-left:6px solid transparent;border-right:6px solid transparent;border-top:12px solid #c89878;opacity:0;transition:opacity .4s,transform .4s}
+.fkw-mouth{position:absolute;left:50%;top:70%;width:28px;height:12px;margin-left:-14px;border-bottom:5px solid #b03030;border-radius:0 0 28px 28px;opacity:0;transition:opacity .4s,transform .4s}
+.fkw-cheek{position:absolute;top:60%;width:14px;height:10px;background:#e89080;border-radius:50%;opacity:0;transition:opacity .4s,transform .4s}
+.fkw-cheek.l{left:16%}
+.fkw-cheek.r{right:16%}
+.fukuwarai-caption,.kagami-caption,.hagoita-caption{text-align:center;font-size:11px;color:var(--dim);margin-top:10px}
+body[data-template=kagami] .kagami-visual{display:block}
+.kgm-scene{position:relative;height:180px;background:linear-gradient(#121010 0%,#241c14 100%);overflow:hidden}
+.kgm-base{position:absolute;left:50%;bottom:14%;width:120px;height:8px;transform:translateX(-50%);background:#5a3020;border-radius:4px}
+.kgm-mochi{position:absolute;left:50%;transform:translateX(-50%);background:radial-gradient(#fff8ec,#e0d0b8);border-radius:50%;box-shadow:0 3px 8px rgba(0,0,0,.35);opacity:0;transition:opacity .6s}
+.kgm-mochi.big{bottom:20%;width:96px;height:52px}
+.kgm-mochi.small{bottom:42%;width:68px;height:38px}
+.kgm-leaf{position:absolute;left:calc(50% + 14px);bottom:60%;width:18px;height:10px;background:#58984a;border-radius:50% 0;transform:rotate(30deg)}
+.kgm-orange{position:absolute;left:50%;bottom:58%;width:34px;height:32px;background:radial-gradient(circle at 35% 30%,#f8a848,#d07018);border-radius:50%;opacity:0;transition:opacity .5s,transform .5s}
+body[data-template=hagoita] .hagoita-visual{display:block}
+.hgt-scene{position:relative;height:180px;background:radial-gradient(ellipse at 50% 80%,#2c1016,#160a0c 75%);overflow:hidden}
+.hgt-racket{position:absolute;left:14%;bottom:16%;width:34px;height:70px;background:linear-gradient(#a85838,#6a3420);border-radius:16px 16px 4px 4px;transform-origin:bottom center;transform:rotate(8deg);transition:transform .2s}
+.hgt-racket::before{content:'';position:absolute;left:50%;top:8px;width:20px;height:34px;margin-left:-10px;background:linear-gradient(#d04858,#8a2838);border-radius:50%}
+.hgt-shuttle{position:absolute;left:55%;bottom:30%;width:14px;height:14px;background:#f0e0a8;border-radius:50% 50% 50% 0;transition:bottom .12s}
+.hgt-shuttle::after{content:'';position:absolute;left:50%;top:-8px;width:8px;height:8px;margin-left:-4px;background:#d04858;border-radius:50%}
+@media(prefers-reduced-motion:reduce){.hgt-racket,.hgt-shuttle{transition:none}}
