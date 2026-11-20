@@ -9865,6 +9865,7 @@ html[data-template="bambooforest"] .bambooforest-visual{display:flex;flex-direct
 .bmb-stalk::before{content:'';position:absolute;top:6px;left:-8px;width:14px;height:5px;background:#5a9a48;border-radius:60% 0 60% 0;transform:rotate(-20deg)}
 .bmb-stalk::after{content:'';position:absolute;top:18px;right:-9px;width:15px;height:5px;background:#5a9a48;border-radius:60% 0 60% 0;transform:rotate(16deg)}
 #bmbS1{left:18%}#bmbS2{left:36%}#bmbS3{left:56%}#bmbS4{left:74%}
+#bmfS1{left:18%}#bmfS2{left:36%}#bmfS3{left:56%}#bmfS4{left:74%}
 .bmb-leaf{position:absolute;left:50%;width:11px;height:6px;background:#7ab868;border-radius:60% 0 60% 0;opacity:0;transition:opacity .8s}
 .bambooforest-caption,.lavenderfield-caption,.stonebridge-caption{font-size:12px;color:var(--muted)}
 

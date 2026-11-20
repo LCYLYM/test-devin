@@ -2087,7 +2087,7 @@
     }
     var bornParam = parseInt(params.get('born'), 10);
     if (bornParam > 1950 && bornParam <= new Date().getFullYear()) {
-      var brn = document.getElementById('bornBadge'), brv = document.getElementById('bornVal');
+      var brn = document.getElementById('workyearsBadge'), brv = document.getElementById('bornVal');
       if (brn && brv) {
         brv.textContent = (new Date().getFullYear() - bornParam) + ' 年';
         brn.hidden = false;

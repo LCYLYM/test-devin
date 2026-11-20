@@ -1181,8 +1181,8 @@
       for(let rt=1;rt<=3;rt++){const tr=$('rtT'+rt);if(tr)tr.style.opacity=clamp(p*3-rt+0.6,0,1);}
       const rtShn=$('rtSh');if(rtShn)rtShn.style.opacity=clamp(p*2-0.8,0,0.7)*(0.6+0.4*Math.sin(tick/50));
       const rtBd=$('rtB');if(rtBd)rtBd.style.opacity=clamp(p*2.6-1.6,0,1);
-      for(let bs=1;bs<=4;bs++){const st4=$('bmbS'+bs);if(st4){st4.style.opacity=clamp(p*4-bs+0.7,0,1);st4.style.height=(30+clamp(p*4-bs+0.7,0,1)*80)+'px';st4.style.transform='rotate('+(Math.sin(tick/45+bs)*1.6)+'deg)';}}
-      const bmbLf=$('bmbL');if(bmbLf){bmbLf.style.opacity=clamp(p*2-1,0,0.9);bmbLf.style.top=(16+(tick/80)%40)+'%';}
+      for(let bs=1;bs<=4;bs++){const st4=$('bmfS'+bs);if(st4){st4.style.opacity=clamp(p*4-bs+0.7,0,1);st4.style.height=(30+clamp(p*4-bs+0.7,0,1)*80)+'px';st4.style.transform='rotate('+(Math.sin(tick/45+bs)*1.6)+'deg)';}}
+      const bmbLf=$('bmfL');if(bmbLf){bmbLf.style.opacity=clamp(p*2-1,0,0.9);bmbLf.style.top=(16+(tick/80)%40)+'%';}
       for(let lr=1;lr<=3;lr++){const rw3=$('lvfR'+lr);if(rw3){const rv=clamp(p*3-lr+0.6,0,1);rw3.style.opacity=rv;rw3.style.transform='skewY(-4deg) scaleY('+(0.3+0.7*rv)+')';}}
       const lvfBe=$('lvfB');if(lvfBe){lvfBe.style.opacity=clamp(p*2-1,0,1);lvfBe.style.transform='translate('+(Math.sin(tick/18)*20)+'px,'+(Math.cos(tick/24)*10)+'px)';}
       const lvfHz=$('lvfH');if(lvfHz)lvfHz.style.opacity=clamp(p*1.8-0.8,0,0.5);
