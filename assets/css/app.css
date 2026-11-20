@@ -8369,3 +8369,40 @@ body[data-template=planetarium] .planetarium-visual{display:block}
 .pl-orb{position:absolute;top:40%;width:16px;height:16px;background:radial-gradient(circle at 35% 35%,#c8b8ff,#5848a8);border-radius:50%;transition:left .5s}
 .planetarium-caption{text-align:center;font-size:11px;color:var(--dim);margin-top:10px}
 @media(prefers-reduced-motion:reduce){body[data-template=funicular] .fn-car,body[data-template=planetarium] .pl-orb{transition:none}}
+
+body[data-template=depot]{--bg:#140c0a;--surface:#201310;--surface-2:#2a1814;--line:#422620;--text:#f0dad4;--accent:#c85848;--accent-rgb:200,88,72;--instrument:#1a0e0c;--muted:#b87868;--dim:#6e443c}
+.depot-visual{display:none;position:relative;margin-top:18px}
+body[data-template=depot] .charge-visual{display:none}
+body[data-template=depot] .depot-visual{display:block}
+.dp-scene{position:relative;height:150px;border-radius:16px;overflow:hidden;background:linear-gradient(180deg,#1a100c,#0e0806)}
+.dp-door{position:absolute;top:20px;left:50%;transform:translateX(-50%);width:110px;height:64px;background:repeating-linear-gradient(0deg,#4a3830 0 10px,#3c2c24 10px 12px);border:2px solid #2c1e18;border-radius:6px 6px 0 0;transition:height .6s}
+.dp-car{position:absolute;bottom:18px;left:50%;transform:translateX(-50%);width:70px;height:24px;background:#2c3844;border-radius:8px 8px 4px 4px}
+.dp-light{position:absolute;bottom:6px;width:8px;height:6px;background:radial-gradient(circle,#ff5040,#a01810);border-radius:2px}
+.dp-light.l{left:4px}.dp-light.r{right:4px}
+.dp-floor2{position:absolute;bottom:0;width:100%;height:14px;background:#1c1410}
+.depot-caption{text-align:center;font-size:11px;color:var(--dim);margin-top:10px}
+body[data-template=atrium]{--bg:#0c120a;--surface:#161e12;--surface-2:#1e2817;--line:#2e4024;--text:#e0ecd4;--accent:#6aa878;--accent-rgb:106,168,120;--instrument:#11160c;--muted:#84a87e;--dim:#486040}
+.atrium-visual{display:none;position:relative;margin-top:18px}
+body[data-template=atrium] .charge-visual{display:none}
+body[data-template=atrium] .atrium-visual{display:block}
+.at-scene{position:relative;height:150px;border-radius:16px;overflow:hidden;background:linear-gradient(180deg,#141c10,#0c1108)}
+.at-skylight{position:absolute;top:0;left:30%;width:40%;height:14px;background:linear-gradient(180deg,#3a5030,#2a3c22);clip-path:polygon(8% 0,92% 0,100% 100%,0 100%)}
+.at-beam{position:absolute;top:14px;left:36%;width:28%;height:110px;background:linear-gradient(180deg,rgba(240,255,220,.4),transparent);clip-path:polygon(30% 0,70% 0,100% 100%,0 100%)}
+.at-plant{position:absolute;bottom:22px;width:14px;height:8px;background:radial-gradient(ellipse at 50% 100%,#58a858,#2a6828);border-radius:50% 50% 0 0;transition:height .5s}
+#atP1{left:22%}#atP2{left:46%}#atP3{left:70%}
+.at-pond{position:absolute;bottom:10px;left:50%;transform:translateX(-50%);width:56px;height:10px;background:radial-gradient(ellipse,#3a6a78,#1e3c44);border-radius:50%}
+.atrium-caption{text-align:center;font-size:11px;color:var(--dim);margin-top:10px}
+body[data-template=stable]{--bg:#130e08;--surface:#1e150c;--surface-2:#281c10;--line:#3e2c1a;--text:#f0e2cc;--accent:#a07850;--accent-rgb:160,120,80;--instrument:#17110a;--muted:#a48860;--dim:#625036}
+.stable-visual{display:none;position:relative;margin-top:18px}
+body[data-template=stable] .charge-visual{display:none}
+body[data-template=stable] .stable-visual{display:block}
+.sb-scene{position:relative;height:150px;border-radius:16px;overflow:hidden;background:linear-gradient(180deg,#181008,#0e0904)}
+.sb-roof{position:absolute;top:10px;left:10%;width:80%;height:14px;background:#4a3018;clip-path:polygon(0 100%,50% 0,100% 100%)}
+.sb-stall{position:absolute;top:34px;left:22%;width:64px;height:88px;border:4px solid #3c2814;background:#1c120a}
+.sb-stall.r{left:56%}
+.sb-stall:after{content:'';position:absolute;bottom:20px;left:-4px;width:calc(100% + 8px);height:14px;background:#3c2814}
+.sb-head{position:absolute;top:30px;left:50%;transform:translateX(-50%);width:18px;height:26px;background:#7a5228;border-radius:8px 8px 10px 10px;transition:top .4s}
+.sb-head:before{content:'';position:absolute;top:-4px;left:2px;width:14px;height:8px;background:#3c2814;border-radius:4px}
+.sb-lantern{position:absolute;top:30px;left:50%;transform:translateX(-50%);width:10px;height:14px;background:radial-gradient(circle at 50% 60%,#ffcf78,#c07818);border-radius:3px}
+.stable-caption{text-align:center;font-size:11px;color:var(--dim);margin-top:10px}
+@media(prefers-reduced-motion:reduce){body[data-template=depot] .dp-door,body[data-template=stable] .sb-head{transition:none}}
