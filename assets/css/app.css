@@ -7501,3 +7501,50 @@ body[data-template=desert] .desert-visual{display:block}
 .dst-oasis::before{content:"";position:absolute;top:-14px;left:8px;width:4px;height:14px;background:#3a6a3a}
 .desert-caption{text-align:center;font-size:11px;color:var(--dim);margin-top:10px}
 @media(prefers-reduced-motion:reduce){body[data-template=desert] *{animation:none!important;transition:none!important}}
+
+/* rain 雨窗 */
+body[data-template=rain]{--bg:#0c141c;--surface:#121e28;--surface-2:#1a2a38;--line:#2e4e62;--text:#d8e8f4;--accent:#6a90b8;--accent-rgb:106,144,184;--instrument:#121e28;--muted:#6e94b4;--dim:#425e74}
+.rain-visual{display:none;position:relative;margin-top:18px}
+body[data-template=rain] .charge-visual{display:none}
+body[data-template=rain] .rain-visual{display:block}
+.rn-scene{position:relative;height:200px;max-width:280px;margin:0 auto}
+.rn-glass{position:absolute;inset:0;border-radius:14px;border:3px solid #2e4e62;background:linear-gradient(180deg,#182838 0%,#0e1c26 100%);overflow:hidden}
+.rn-glass::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 50% 0%,rgba(106,144,184,0.15),transparent 60%)}
+.rn-drop{position:absolute;top:0;width:4px;height:14px;border-radius:4px;background:linear-gradient(180deg,transparent,#8ab8dc);opacity:0}
+#rnD1{left:18%}#rnD2{left:36%}#rnD3{left:52%}#rnD4{left:66%}#rnD5{left:82%}
+.rn-pool{position:absolute;bottom:0;left:50%;transform:translateX(-50%);width:10%;height:12px;border-radius:10px 10px 0 0;background:linear-gradient(180deg,rgba(106,144,184,0.7),rgba(50,80,110,0.85));transition:width .7s}
+.rain-caption{text-align:center;font-size:11px;color:var(--dim);margin-top:10px}
+@media(prefers-reduced-motion:reduce){body[data-template=rain] *{animation:none!important;transition:none!important}}
+
+/* cave 洞穴 */
+body[data-template=cave]{--bg:#0e0a14;--surface:#161020;--surface-2:#1e182c;--line:#3a2e50;--text:#dcd4ec;--accent:#9a7ab8;--accent-rgb:154,122,184;--instrument:#161020;--muted:#8a74a8;--dim:#54486a}
+.cave-visual{display:none;position:relative;margin-top:18px}
+body[data-template=cave] .charge-visual{display:none}
+body[data-template=cave] .cave-visual{display:block}
+.cv-scene{position:relative;height:200px;max-width:320px;margin:0 auto;overflow:hidden;border-radius:12px;background:radial-gradient(ellipse at 50% 110%,#1c1428,#0a0710)}
+.cv-light{position:absolute;left:14%;bottom:30px;width:180px;height:140px;background:radial-gradient(ellipse at 20% 80%,rgba(255,170,80,0.4),transparent 65%);opacity:0;transition:opacity .7s}
+.cv-torch{position:absolute;left:12%;bottom:32px;width:8px;height:34px;background:#4a3420;border-radius:2px;opacity:0.4;transition:opacity .5s}
+.cv-torch::before{content:"";position:absolute;top:-14px;left:-3px;width:14px;height:16px;border-radius:50% 50% 40% 40%;background:radial-gradient(ellipse at 50% 30%,#ffd888,#e86818);filter:blur(1px)}
+.cv-stal{position:absolute;top:0;width:0;height:0;border-left:9px solid transparent;border-right:9px solid transparent;border-top:34px solid #2c2238;opacity:0.1;transition:opacity .6s}
+#cvS1{left:34%}#cvS2{left:58%;border-top-width:26px}#cvS3{left:76%;border-top-width:40px}
+.cv-gem{position:absolute;bottom:20px;width:12px;height:16px;background:linear-gradient(135deg,#b8a8e8,#6a4aa8);clip-path:polygon(50% 0,100% 40%,80% 100%,20% 100%,0 40%);opacity:0;transition:opacity .5s}
+#cvG1{left:40%}#cvG2{left:56%;background:linear-gradient(135deg,#8ad8c8,#2a8a78)}#cvG3{left:70%;background:linear-gradient(135deg,#e8a8b8,#a83a5a)}
+.cave-caption{text-align:center;font-size:11px;color:var(--dim);margin-top:10px}
+@media(prefers-reduced-motion:reduce){body[data-template=cave] *{animation:none!important;transition:none!important}}
+
+/* garden 花园 */
+body[data-template=garden]{--bg:#140a10;--surface:#1e1216;--surface-2:#2a1a1e;--line:#4e3038;--text:#f4dce4;--accent:#e87a9a;--accent-rgb:232,122,154;--instrument:#1e1216;--muted:#b87a92;--dim:#6e4a56}
+.garden-visual{display:none;position:relative;margin-top:18px}
+body[data-template=garden] .charge-visual{display:none}
+body[data-template=garden] .garden-visual{display:block}
+.grd-scene{position:relative;height:200px;max-width:320px;margin:0 auto}
+.grd-bed{position:absolute;bottom:20px;left:50%;transform:translateX(-50%);width:250px;height:40px;border-radius:20px 20px 8px 8px;background:linear-gradient(180deg,#3a2618,#241710);border:2px solid #4e3038}
+.grd-bud{position:absolute;bottom:52px;width:18px;height:24px;transform:scale(0.3);transform-origin:bottom center;opacity:0;transition:transform .5s,opacity .5s}
+.grd-bud::before{content:"";position:absolute;bottom:-18px;left:50%;width:3px;height:18px;margin-left:-1.5px;background:#3a6a3a}
+.grd-bud::after{content:"";position:absolute;top:0;left:0;right:0;bottom:6px;border-radius:50% 50% 45% 45%;background:radial-gradient(circle at 40% 30%,#f0a8bc,#c8526e)}
+#grdB1{left:14%}#grdB2{left:32%}#grdB3{left:50%}#grdB4{left:66%}#grdB5{left:82%}
+.grd-bee{position:absolute;width:12px;height:10px;border-radius:50%;background:repeating-linear-gradient(90deg,#e8c83a 0 4px,#2a2010 4px 7px);opacity:0;transition:opacity .4s,left .5s,top .5s}
+.grd-bee::before{content:"";position:absolute;top:-5px;left:1px;width:5px;height:5px;border-radius:50%;background:rgba(220,236,250,0.7)}
+.grd-bee::after{content:"";position:absolute;top:-5px;right:1px;width:5px;height:5px;border-radius:50%;background:rgba(220,236,250,0.7)}
+.garden-caption{text-align:center;font-size:11px;color:var(--dim);margin-top:10px}
+@media(prefers-reduced-motion:reduce){body[data-template=garden] *{animation:none!important;transition:none!important}}
