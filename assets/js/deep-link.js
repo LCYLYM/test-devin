@@ -4227,6 +4227,9 @@
     if (params.get('peony') === '1') { document.body.classList.add('is-peony'); }
     if (params.get('dahlia') === '1') { document.body.classList.add('is-dahlia'); }
     if (params.get('kerria') === '1') { document.body.classList.add('is-kerria'); }
+    if (params.get('forsythia') === '1') { document.body.classList.add('is-forsythia'); }
+    if (params.get('spiraea') === '1') { document.body.classList.add('is-spiraea'); }
+    if (params.get('weigela') === '1') { document.body.classList.add('is-weigela'); }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -5812,6 +5815,9 @@
         if (params.get('peony') === '1') u.searchParams.set('peony', '1');
         if (params.get('dahlia') === '1') u.searchParams.set('dahlia', '1');
         if (params.get('kerria') === '1') u.searchParams.set('kerria', '1');
+        if (params.get('forsythia') === '1') u.searchParams.set('forsythia', '1');
+        if (params.get('spiraea') === '1') u.searchParams.set('spiraea', '1');
+        if (params.get('weigela') === '1') u.searchParams.set('weigela', '1');
       if (params.get('tile') === '1') u.searchParams.set('tile', '1');
       if (params.get('outline') === '1') u.searchParams.set('outline', '1');
       if (params.get('stripe') === '1') u.searchParams.set('stripe', '1');

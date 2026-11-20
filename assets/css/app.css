@@ -2884,6 +2884,12 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .is-dahlia .instrument{border-color:rgba(230,115,70,.4)}
 .is-kerria{background:linear-gradient(180deg,#2b2210 0%,#150f05 100%)}
 .is-kerria .instrument{border-color:rgba(235,190,60,.4)}
+.is-forsythia{background:linear-gradient(180deg,#2b2410 0%,#151005 100%)}
+.is-forsythia .instrument{border-color:rgba(240,200,60,.4)}
+.is-spiraea{background:linear-gradient(180deg,#29201f 0%,#130f0e 100%)}
+.is-spiraea .instrument{border-color:rgba(215,185,175,.4)}
+.is-weigela{background:linear-gradient(180deg,#2e1520 0%,#160a0f 100%)}
+.is-weigela .instrument{border-color:rgba(225,100,140,.4)}
 .is-oatmeal{background:linear-gradient(180deg,#1d1912,#2f291e 50%,#433a2a)}
 .is-oatmeal .instrument{border-color:rgba(215,195,155,.4)}
 .is-thyme{background:linear-gradient(180deg,#121a14,#1c2a20 50%,#28392c)}

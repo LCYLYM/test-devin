@@ -1343,6 +1343,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `peony` | `1` 牡丹配色 |
 | `dahlia` | `1` ダリア配色 |
 | `kerria` | `1` 山吹配色 |
+| `forsythia` | `1` レンギョウ配色 |
+| `spiraea` | `1` シモツケ配色 |
+| `weigela` | `1` ハコネウツギ配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 
