@@ -7548,3 +7548,50 @@ body[data-template=garden] .garden-visual{display:block}
 .grd-bee::after{content:"";position:absolute;top:-5px;right:1px;width:5px;height:5px;border-radius:50%;background:rgba(220,236,250,0.7)}
 .garden-caption{text-align:center;font-size:11px;color:var(--dim);margin-top:10px}
 @media(prefers-reduced-motion:reduce){body[data-template=garden] *{animation:none!important;transition:none!important}}
+
+/* lake 夜湖 */
+body[data-template=lake]{--bg:#080e18;--surface:#0e1622;--surface-2:#142030;--line:#28405a;--text:#d4e4f4;--accent:#5a8ac8;--accent-rgb:90,138,200;--instrument:#0e1622;--muted:#6088b8;--dim:#385472}
+.lake-visual{display:none;position:relative;margin-top:18px}
+body[data-template=lake] .charge-visual{display:none}
+body[data-template=lake] .lake-visual{display:block}
+.lk-scene{position:relative;height:200px;max-width:340px;margin:0 auto;overflow:hidden;border-radius:10px;background:linear-gradient(180deg,#0c1424,#101c30 60%,#0e1e32)}
+.lk-moon{position:absolute;top:30px;left:50%;width:42px;height:42px;margin-left:-21px;border-radius:50%;background:radial-gradient(circle at 40% 35%,#fff4dc,#d8c890);box-shadow:0 0 30px rgba(255,244,220,0.4);transition:top .6s}
+.lk-hill{position:absolute;border-radius:50% 50% 0 0;background:linear-gradient(180deg,#18262e,#0e1a20)}
+.lk-hill.h1{left:-10%;bottom:56px;width:52%;height:64px}
+.lk-hill.h2{right:-8%;bottom:56px;width:46%;height:80px}
+.lk-water{position:absolute;bottom:0;left:0;right:0;height:56px;background:linear-gradient(180deg,#142c44,#0a1a2c);overflow:hidden}
+.lk-refl{position:absolute;top:6px;left:50%;width:30px;height:34px;margin-left:-15px;background:linear-gradient(180deg,rgba(255,244,220,0.5),transparent);border-radius:40%;filter:blur(2px);opacity:0;transition:opacity .7s}
+.lk-ripple{position:absolute;top:14px;left:50%;transform:translateX(-50%);height:8px;border:1.5px solid rgba(140,180,220,0.5);border-radius:50%;opacity:0}
+.lake-caption{text-align:center;font-size:11px;color:var(--dim);margin-top:10px}
+@media(prefers-reduced-motion:reduce){body[data-template=lake] *{animation:none!important;transition:none!important}}
+
+/* bridge 虹桥 */
+body[data-template=bridge]{--bg:#120e0e;--surface:#1c1616;--surface-2:#281e1e;--line:#4a3838;--text:#ecdcd8;--accent:#c87878;--accent-rgb:200,120,120;--instrument:#1c1616;--muted:#a87878;--dim:#644c4c}
+.bridge-visual{display:none;position:relative;margin-top:18px}
+body[data-template=bridge] .charge-visual{display:none}
+body[data-template=bridge] .bridge-visual{display:block}
+.br-scene{position:relative;height:190px;max-width:340px;margin:0 auto;overflow:hidden;border-radius:10px;background:linear-gradient(180deg,#1c1a22,#141220)}
+.br-bank{position:absolute;bottom:0;width:14%;height:64px;background:linear-gradient(180deg,#2a2418,#1a160e)}
+.br-bank.l{left:0}.br-bank.r{right:0}
+.br-river{position:absolute;bottom:0;left:14%;right:14%;height:34px;background:linear-gradient(180deg,#1c2c40,#101c2a)}
+.br-span{position:absolute;bottom:40px;left:14%;width:0;height:12px;border-radius:8px 8px 0 0;background:linear-gradient(180deg,#8a5050,#5e3636);transition:width .5s}
+.br-post{position:absolute;bottom:52px;width:4px;height:14px;background:#5e3636;opacity:0;transition:opacity .4s}
+#brP1{left:22%}#brP2{left:40%}#brP3{left:58%}#brP4{left:76%}
+.bridge-caption{text-align:center;font-size:11px;color:var(--dim);margin-top:10px}
+@media(prefers-reduced-motion:reduce){body[data-template=bridge] *{animation:none!important;transition:none!important}}
+
+/* market 夜市 */
+body[data-template=market]{--bg:#160e08;--surface:#20140c;--surface-2:#2c1c10;--line:#523e28;--text:#f4e0c4;--accent:#e8983a;--accent-rgb:232,152,58;--instrument:#20140c;--muted:#b88848;--dim:#6e5a3a}
+.market-visual{display:none;position:relative;margin-top:18px}
+body[data-template=market] .charge-visual{display:none}
+body[data-template=market] .market-visual{display:block}
+.mk-scene{position:relative;height:200px;max-width:340px;margin:0 auto;overflow:hidden;border-radius:10px;background:linear-gradient(180deg,#140c14,#1c1210)}
+.mk-string{position:absolute;top:26px;left:4%;right:4%;height:20px;border-bottom:2px solid #523e28;border-radius:0 0 50% 50%}
+.mk-lnt{position:absolute;width:14px;height:18px;border-radius:50% 50% 45% 45%;background:radial-gradient(circle at 40% 30%,#f0b858,#c85030);box-shadow:0 0 10px rgba(240,180,80,0.4);opacity:0.12;transition:opacity .4s}
+.mk-lnt::before{content:"";position:absolute;top:-5px;left:50%;width:2px;height:5px;margin-left:-1px;background:#523e28}
+#mkL1{left:12%;top:36px}#mkL2{left:32%;top:44px}#mkL3{left:50%;top:46px}#mkL4{left:68%;top:44px}#mkL5{left:86%;top:36px}
+.mk-stall{position:absolute;bottom:14px;width:64px;height:46px;border-radius:6px 6px 0 0;background:linear-gradient(180deg,#3a2418,#261810);border:2px solid #523e28;opacity:0.15;transition:opacity .5s}
+.mk-stall::before{content:"";position:absolute;top:-12px;left:-4px;right:-4px;height:12px;border-radius:4px;background:repeating-linear-gradient(90deg,#c85030 0 10px,#e8dcc0 10px 20px)}
+.mk-stall.s1{left:10%}.mk-stall.s2{left:40%}.mk-stall.s3{left:70%}
+.market-caption{text-align:center;font-size:11px;color:var(--dim);margin-top:10px}
+@media(prefers-reduced-motion:reduce){body[data-template=market] *{animation:none!important;transition:none!important}}
