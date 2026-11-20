@@ -1274,6 +1274,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `fir` | `1` 冷杉配色 |
 | `blackpine` | `1` 黑松配色 |
 | `scotspine` | `1` 樟子松配色 |
+| `whitepine` | `1` 白松配色 |
+| `stonepine` | `1` 意大利石松配色 |
+| `pinon` | `1` 矮松配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 

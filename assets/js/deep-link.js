@@ -4158,6 +4158,9 @@
     if (params.get('fir') === '1') { document.body.classList.add('is-fir'); }
     if (params.get('blackpine') === '1') { document.body.classList.add('is-blackpine'); }
     if (params.get('scotspine') === '1') { document.body.classList.add('is-scotspine'); }
+    if (params.get('whitepine') === '1') { document.body.classList.add('is-whitepine'); }
+    if (params.get('stonepine') === '1') { document.body.classList.add('is-stonepine'); }
+    if (params.get('pinon') === '1') { document.body.classList.add('is-pinon'); }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -5674,6 +5677,9 @@
         if (params.get('fir') === '1') u.searchParams.set('fir', '1');
         if (params.get('blackpine') === '1') u.searchParams.set('blackpine', '1');
         if (params.get('scotspine') === '1') u.searchParams.set('scotspine', '1');
+        if (params.get('whitepine') === '1') u.searchParams.set('whitepine', '1');
+        if (params.get('stonepine') === '1') u.searchParams.set('stonepine', '1');
+        if (params.get('pinon') === '1') u.searchParams.set('pinon', '1');
       if (params.get('tile') === '1') u.searchParams.set('tile', '1');
       if (params.get('outline') === '1') u.searchParams.set('outline', '1');
       if (params.get('stripe') === '1') u.searchParams.set('stripe', '1');
