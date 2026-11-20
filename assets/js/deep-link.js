@@ -4371,6 +4371,9 @@
     if (params.get('sourdough') === '1') { document.body.classList.add('is-sourdough'); }
     if (params.get('pretzel') === '1') { document.body.classList.add('is-pretzel'); }
     if (params.get('baguette') === '1') { document.body.classList.add('is-baguette'); }
+    if (params.get('uni') === '1') { document.body.classList.add('is-uni'); }
+    if (params.get('ikura') === '1') { document.body.classList.add('is-ikura'); }
+    if (params.get('tobiko') === '1') { document.body.classList.add('is-tobiko'); }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -6088,6 +6091,9 @@
         if (params.get('sourdough') === '1') u.searchParams.set('sourdough', '1');
         if (params.get('pretzel') === '1') u.searchParams.set('pretzel', '1');
         if (params.get('baguette') === '1') u.searchParams.set('baguette', '1');
+        if (params.get('uni') === '1') u.searchParams.set('uni', '1');
+        if (params.get('ikura') === '1') u.searchParams.set('ikura', '1');
+        if (params.get('tobiko') === '1') u.searchParams.set('tobiko', '1');
         if (params.get('fuchsia') === '1') u.searchParams.set('fuchsia', '1');
         if (params.get('oleander') === '1') u.searchParams.set('oleander', '1');
         if (params.get('buddleia') === '1') u.searchParams.set('buddleia', '1');

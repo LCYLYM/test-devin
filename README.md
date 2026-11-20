@@ -1475,6 +1475,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `sourdough` | `1` サワードウ配色 |
 | `pretzel` | `1` プレッツェル配色 |
 | `baguette` | `1` バゲット配色 |
+| `uni` | `1` ウニ配色 |
+| `ikura` | `1` イクラ配色 |
+| `tobiko` | `1` トビコ配色 |
 | `fuchsia` | `1` フクシア配色 |
 | `oleander` | `1` キョウチクトウ配色 |
 | `buddleia` | `1` フサフジウツギ配色 |

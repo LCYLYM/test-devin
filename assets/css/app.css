@@ -3148,6 +3148,12 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .is-pretzel .instrument{border-color:rgba(200,115,60,.4)}
 .is-baguette{background:linear-gradient(180deg,#262115 0%,#12100a 100%)}
 .is-baguette .instrument{border-color:rgba(215,180,105,.4)}
+.is-uni{background:linear-gradient(180deg,#27190f 0%,#130c06 100%)}
+.is-uni .instrument{border-color:rgba(225,120,50,.4)}
+.is-ikura{background:linear-gradient(180deg,#2a150d 0%,#150a06 100%)}
+.is-ikura .instrument{border-color:rgba(240,95,40,.4)}
+.is-tobiko{background:linear-gradient(180deg,#291508 0%,#140a04 100%)}
+.is-tobiko .instrument{border-color:rgba(245,125,30,.4)}
 .is-fuchsia{background:linear-gradient(180deg,#2e1428 0%,#160a13 100%)}
 .is-fuchsia .instrument{border-color:rgba(230,100,200,.4)}
 .is-oleander{background:linear-gradient(180deg,#2c1720 0%,#150b0f 100%)}
