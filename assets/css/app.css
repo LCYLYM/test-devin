@@ -9855,3 +9855,41 @@ html[data-template="riceterrace"] .riceterrace-visual{display:flex;flex-directio
 .rt-bird{position:absolute;left:70%;top:16%;width:13px;height:7px;border-left:6px solid #d8d8cc;border-right:6px solid #d8d8cc;border-radius:50%;opacity:0;transition:opacity 1s}
 .riceterrace-caption{}
 @media (prefers-reduced-motion:reduce){.sph-drip{animation:none}}
+
+/* 竹林 bambooforest: 新篁拔节、叶落随风 */
+.bambooforest-visual{display:none;grid-area:visual}
+html[data-template="bambooforest"] .pig-visual{display:none}
+html[data-template="bambooforest"] .bambooforest-visual{display:flex;flex-direction:column;align-items:center;gap:10px}
+.bmb-scene{position:relative;width:270px;height:180px;background:linear-gradient(#14240f,#0c1608 75%);border-radius:14px;overflow:hidden}
+.bmb-stalk{position:absolute;bottom:0;width:9px;background:repeating-linear-gradient(#6aa858 0 26px,#4a7a3c 26px 29px);border-radius:5px 5px 0 0;opacity:0;height:30px;transform-origin:50% 100%;transition:opacity .8s,height .9s}
+.bmb-stalk::before{content:'';position:absolute;top:6px;left:-8px;width:14px;height:5px;background:#5a9a48;border-radius:60% 0 60% 0;transform:rotate(-20deg)}
+.bmb-stalk::after{content:'';position:absolute;top:18px;right:-9px;width:15px;height:5px;background:#5a9a48;border-radius:60% 0 60% 0;transform:rotate(16deg)}
+#bmbS1{left:18%}#bmbS2{left:36%}#bmbS3{left:56%}#bmbS4{left:74%}
+.bmb-leaf{position:absolute;left:50%;width:11px;height:6px;background:#7ab868;border-radius:60% 0 60% 0;opacity:0;transition:opacity .8s}
+.bambooforest-caption,.lavenderfield-caption,.stonebridge-caption{font-size:12px;color:var(--muted)}
+
+/* 薰衣田 lavenderfield: 紫浪成垄 */
+.lavenderfield-visual{display:none;grid-area:visual}
+html[data-template="lavenderfield"] .pig-visual{display:none}
+html[data-template="lavenderfield"] .lavenderfield-visual{display:flex;flex-direction:column;align-items:center;gap:10px}
+.lvf-scene{position:relative;width:270px;height:180px;background:linear-gradient(#1a1424,#120e1a 60%);border-radius:14px;overflow:hidden}
+.lvf-row{position:absolute;left:-4%;right:-4%;height:26px;background:repeating-linear-gradient(90deg,#7a5aa8 0 14px,#5e4086 14px 22px);border-radius:50%/100%;opacity:0;transform:skewY(-4deg) scaleY(.3);transform-origin:50% 100%;transition:opacity .9s,transform .9s}
+#lvfR1{bottom:44%}#lvfR2{bottom:26%}#lvfR3{bottom:8%;height:32px}
+.lvf-bee{position:absolute;left:50%;bottom:56%;width:7px;height:7px;background:radial-gradient(#f0c040,#8a6810);border-radius:50%;opacity:0;transition:opacity .7s}
+.lvf-bee::after{content:'';position:absolute;top:-3px;left:1px;width:5px;height:4px;background:#f0f0e8aa;border-radius:50%}
+.lvf-haze{position:absolute;left:0;right:0;bottom:0;height:56%;background:linear-gradient(transparent,#9a7ac822);opacity:0;transition:opacity 1.2s}
+.lavenderfield-caption{}
+
+/* 石桥 stonebridge: 拱影跨溪、苔痕上石 */
+.stonebridge-visual{display:none;grid-area:visual}
+html[data-template="stonebridge"] .pig-visual{display:none}
+html[data-template="stonebridge"] .stonebridge-visual{display:flex;flex-direction:column;align-items:center;gap:10px}
+.stb-scene{position:relative;width:270px;height:180px}
+.stb-arch{position:absolute;left:50%;bottom:30%;transform:translateX(-50%);width:150px;height:56px;background:#6a6a60;border-radius:75px 75px 0 0}
+.stb-arch::after{content:'';position:absolute;left:22px;right:22px;bottom:0;height:40px;background:transparent;border-radius:55px 55px 0 0;box-shadow:inset 0 0 0 60px #1a1a16}
+.stb-arch::before{content:'';position:absolute;left:-8px;right:-8px;top:-8px;height:10px;background:#7a7a70;border-radius:4px}
+.stb-water{position:absolute;left:6%;right:6%;bottom:8%;height:26%;background:linear-gradient(#2e4a58,#1c303c);border-radius:10px;opacity:.3;transition:opacity 1s}
+.stb-stone{position:absolute;bottom:8%;width:26px;height:14px;background:radial-gradient(circle at 40% 35%,#8a8a80,#4e4e46);border-radius:50%;opacity:0;transition:opacity .8s}
+#stbS1{left:14%}#stbS2{left:70%}#stbS3{left:44%;bottom:12%}
+.stb-rip{position:absolute;left:30%;bottom:14%;width:44px;height:12px;border:2px solid #6a9ab066;border-radius:50%;opacity:0;transition:opacity .8s}
+.stonebridge-caption{}
