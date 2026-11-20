@@ -1364,6 +1364,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `pittosporum` | `1` トベラ配色 |
 | `choisya` | `1` メキシコオレンジ配色 |
 | `sarcococca` | `1` セイヨウアブラキ配色 |
+| `kalmia` | `1` カルミア配色 |
+| `leucothoe` | `1` レウコトエ配色 |
+| `andromeda` | `1` アンドロメダ配色 |
 | `skimmia` | `1` ミヤマシキミ配色 |
 | `hebe` | `1` ヘーベ配色 |
 | `escallonia` | `1` エスカロニア配色 |

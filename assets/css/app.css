@@ -2926,6 +2926,12 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .is-choisya .instrument{border-color:rgba(200,205,140,.4)}
 .is-sarcococca{background:linear-gradient(180deg,#1a241f 0%,#0b110d 100%)}
 .is-sarcococca .instrument{border-color:rgba(150,190,160,.4)}
+.is-kalmia{background:linear-gradient(180deg,#281d24 0%,#130d10 100%)}
+.is-kalmia .instrument{border-color:rgba(225,140,175,.4)}
+.is-leucothoe{background:linear-gradient(180deg,#1e2618 0%,#0e120a 100%)}
+.is-leucothoe .instrument{border-color:rgba(140,180,110,.4)}
+.is-andromeda{background:linear-gradient(180deg,#26201e 0%,#120e0d 100%)}
+.is-andromeda .instrument{border-color:rgba(200,150,140,.4)}
 .is-skimmia{background:linear-gradient(180deg,#291a17 0%,#140c0a 100%)}
 .is-skimmia .instrument{border-color:rgba(220,120,105,.4)}
 .is-hebe{background:linear-gradient(180deg,#221a2c 0%,#100c15 100%)}
