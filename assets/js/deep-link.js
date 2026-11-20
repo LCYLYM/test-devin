@@ -4284,6 +4284,9 @@
     if (params.get('clove') === '1') { document.body.classList.add('is-clove'); }
     if (params.get('vanilla') === '1') { document.body.classList.add('is-vanilla'); }
     if (params.get('galangal') === '1') { document.body.classList.add('is-galangal'); }
+    if (params.get('lemongrass') === '1') { document.body.classList.add('is-lemongrass'); }
+    if (params.get('pandan') === '1') { document.body.classList.add('is-pandan'); }
+    if (params.get('kaffir') === '1') { document.body.classList.add('is-kaffir'); }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -5914,6 +5917,9 @@
         if (params.get('clove') === '1') u.searchParams.set('clove', '1');
         if (params.get('vanilla') === '1') u.searchParams.set('vanilla', '1');
         if (params.get('galangal') === '1') u.searchParams.set('galangal', '1');
+        if (params.get('lemongrass') === '1') u.searchParams.set('lemongrass', '1');
+        if (params.get('pandan') === '1') u.searchParams.set('pandan', '1');
+        if (params.get('kaffir') === '1') u.searchParams.set('kaffir', '1');
         if (params.get('fuchsia') === '1') u.searchParams.set('fuchsia', '1');
         if (params.get('oleander') === '1') u.searchParams.set('oleander', '1');
         if (params.get('buddleia') === '1') u.searchParams.set('buddleia', '1');

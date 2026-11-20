@@ -1388,6 +1388,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `clove` | `1` クローブ配色 |
 | `vanilla` | `1` バニラ配色 |
 | `galangal` | `1` ガランガル配色 |
+| `lemongrass` | `1` レモングラス配色 |
+| `pandan` | `1` パンダン配色 |
+| `kaffir` | `1` カフィアライム配色 |
 | `fuchsia` | `1` フクシア配色 |
 | `oleander` | `1` キョウチクトウ配色 |
 | `buddleia` | `1` フサフジウツギ配色 |

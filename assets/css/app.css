@@ -2974,6 +2974,12 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .is-vanilla .instrument{border-color:rgba(205,195,150,.4)}
 .is-galangal{background:linear-gradient(180deg,#261d1a 0%,#120d0c 100%)}
 .is-galangal .instrument{border-color:rgba(200,135,105,.4)}
+.is-lemongrass{background:linear-gradient(180deg,#212614 0%,#0f1209 100%)}
+.is-lemongrass .instrument{border-color:rgba(170,185,80,.4)}
+.is-pandan{background:linear-gradient(180deg,#16261d 0%,#0a120d 100%)}
+.is-pandan .instrument{border-color:rgba(90,185,130,.4)}
+.is-kaffir{background:linear-gradient(180deg,#1a2614 0%,#0c1209 100%)}
+.is-kaffir .instrument{border-color:rgba(120,185,80,.4)}
 .is-fuchsia{background:linear-gradient(180deg,#2e1428 0%,#160a13 100%)}
 .is-fuchsia .instrument{border-color:rgba(230,100,200,.4)}
 .is-oleander{background:linear-gradient(180deg,#2c1720 0%,#150b0f 100%)}
