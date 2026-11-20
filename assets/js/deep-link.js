@@ -4212,6 +4212,9 @@
     if (params.get('silverbell') === '1') { document.body.classList.add('is-silverbell'); }
     if (params.get('snowbell') === '1') { document.body.classList.add('is-snowbell'); }
     if (params.get('persianironwood') === '1') { document.body.classList.add('is-persianironwood'); }
+    if (params.get('hydrangea') === '1') { document.body.classList.add('is-hydrangea'); }
+    if (params.get('rhododendron') === '1') { document.body.classList.add('is-rhododendron'); }
+    if (params.get('azalea') === '1') { document.body.classList.add('is-azalea'); }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -5782,6 +5785,9 @@
         if (params.get('silverbell') === '1') u.searchParams.set('silverbell', '1');
         if (params.get('snowbell') === '1') u.searchParams.set('snowbell', '1');
         if (params.get('persianironwood') === '1') u.searchParams.set('persianironwood', '1');
+        if (params.get('hydrangea') === '1') u.searchParams.set('hydrangea', '1');
+        if (params.get('rhododendron') === '1') u.searchParams.set('rhododendron', '1');
+        if (params.get('azalea') === '1') u.searchParams.set('azalea', '1');
       if (params.get('tile') === '1') u.searchParams.set('tile', '1');
       if (params.get('outline') === '1') u.searchParams.set('outline', '1');
       if (params.get('stripe') === '1') u.searchParams.set('stripe', '1');

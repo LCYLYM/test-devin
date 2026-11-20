@@ -1328,6 +1328,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `silverbell` | `1` ハクウンボク配色 |
 | `snowbell` | `1` エゴノキ配色 |
 | `persianironwood` | `1` パロチア配色 |
+| `hydrangea` | `1` 紫陽花配色 |
+| `rhododendron` | `1` シャクナゲ配色 |
+| `azalea` | `1` ツツジ配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 
