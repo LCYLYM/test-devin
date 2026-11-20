@@ -7595,3 +7595,50 @@ body[data-template=market] .market-visual{display:block}
 .mk-stall.s1{left:10%}.mk-stall.s2{left:40%}.mk-stall.s3{left:70%}
 .market-caption{text-align:center;font-size:11px;color:var(--dim);margin-top:10px}
 @media(prefers-reduced-motion:reduce){body[data-template=market] *{animation:none!important;transition:none!important}}
+
+/* storm 雷雨 */
+body[data-template=storm]{--bg:#0c0e16;--surface:#141824;--surface-2:#1c2230;--line:#38445a;--text:#d8dcec;--accent:#8a9ab8;--accent-rgb:138,154,184;--instrument:#141824;--muted:#7a88a4;--dim:#4a5470}
+.storm-visual{display:none;position:relative;margin-top:18px}
+body[data-template=storm] .charge-visual{display:none}
+body[data-template=storm] .storm-visual{display:block}
+.stm-scene{position:relative;height:200px;max-width:320px;margin:0 auto;overflow:hidden;border-radius:10px;background:linear-gradient(180deg,#181c2a,#0e1220)}
+.stm-cloud{position:absolute;top:0;height:52px;border-radius:50%;background:radial-gradient(ellipse at 50% 20%,#2c3448,#1a2030)}
+.stm-cloud.c1{left:-8%;width:66%}
+.stm-cloud.c2{right:-10%;width:60%;top:10px}
+.stm-bolt{position:absolute;top:46px;left:38%;width:4px;height:0;border-left:6px solid transparent;border-right:6px solid transparent;opacity:0}
+.stm-bolt::before{content:"";position:absolute;top:0;left:-4px;border-left:8px solid transparent;border-right:8px solid transparent;border-top:60px solid #f0e88a;transform:skewX(8deg)}
+.stm-bolt::after{content:"";position:absolute;top:52px;left:2px;border-left:8px solid transparent;border-right:8px solid transparent;border-top:44px solid #f0e88a;transform:skewX(-14deg)}
+#stmBolt2{left:64%;transform:scale(0.7)}
+.stm-rain{position:absolute;top:60px;left:0;right:0;bottom:0;background:repeating-linear-gradient(105deg,transparent 0 9px,rgba(138,154,200,0.4) 9px 10px);opacity:0;transition:opacity .6s}
+.stm-glow{position:absolute;top:36px;left:20%;right:20%;height:70px;background:radial-gradient(ellipse,rgba(240,232,138,0.35),transparent 70%);opacity:0;transition:opacity .12s}
+.storm-caption{text-align:center;font-size:11px;color:var(--dim);margin-top:10px}
+@media(prefers-reduced-motion:reduce){body[data-template=storm] *{animation:none!important;transition:none!important}}
+
+/* river 溪流 */
+body[data-template=river]{--bg:#0a141c;--surface:#101e28;--surface-2:#162a36;--line:#2a4e60;--text:#d4eaf2;--accent:#5aa8c8;--accent-rgb:90,168,200;--instrument:#101e28;--muted:#5e98b4;--dim:#38606f}
+.river-visual{display:none;position:relative;margin-top:18px}
+body[data-template=river] .charge-visual{display:none}
+body[data-template=river] .river-visual{display:block}
+.rv-scene{position:relative;height:190px;max-width:340px;margin:0 auto}
+.rv-svg{width:100%;height:100%}
+.rv-bed{fill:#1c3038}
+.rv-flow{stroke:var(--accent);stroke-width:5;opacity:0;transition:opacity .6s}
+.rv-leaf{fill:#7ab86a;opacity:0}
+.river-caption{text-align:center;font-size:11px;color:var(--dim);margin-top:10px}
+@media(prefers-reduced-motion:reduce){body[data-template=river] *{animation:none!important;transition:none!important}}
+
+/* canyon 峡谷 */
+body[data-template=canyon]{--bg:#16100a;--surface:#201810;--surface-2:#2c2014;--line:#52402c;--text:#f0dfc8;--accent:#c87848;--accent-rgb:200,120,72;--instrument:#201810;--muted:#b08058;--dim:#6e563c}
+.canyon-visual{display:none;position:relative;margin-top:18px}
+body[data-template=canyon] .charge-visual{display:none}
+body[data-template=canyon] .canyon-visual{display:block}
+.cyn-scene{position:relative;height:200px;max-width:320px;margin:0 auto;overflow:hidden;border-radius:10px;background:linear-gradient(180deg,#2a1c10,#16100a)}
+.cyn-sky{position:absolute;top:0;left:0;right:0;height:30px;background:linear-gradient(180deg,#d89050,#8a5028)}
+.cyn-wall{position:absolute;top:30px;bottom:0;width:26%;background:linear-gradient(90deg,#4a3018,#2e1e0e)}
+.cyn-wall.l{left:0;clip-path:polygon(0 0,100% 0,72% 100%,0 100%)}
+.cyn-wall.r{right:0;clip-path:polygon(0 0,100% 0,100% 100%,28% 100%)}
+.cyn-floor{position:absolute;bottom:0;left:0;right:0;height:26px;background:linear-gradient(180deg,#3a2814,#241808)}
+.cyn-light{position:absolute;top:0;left:30%;right:30%;height:140px;background:linear-gradient(180deg,rgba(240,190,110,0.5),transparent);clip-path:polygon(24% 0,76% 0,100% 100%,0 100%);opacity:0;transition:opacity .8s}
+.cyn-river{position:absolute;bottom:10px;left:42%;width:16%;height:14px;border-radius:50%;background:#4a90b8;opacity:0;transition:opacity .6s}
+.canyon-caption{text-align:center;font-size:11px;color:var(--dim);margin-top:10px}
+@media(prefers-reduced-motion:reduce){body[data-template=canyon] *{animation:none!important;transition:none!important}}
