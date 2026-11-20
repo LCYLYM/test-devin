@@ -6692,3 +6692,53 @@ body[data-template=teapot] .teapot-visual{display:block}
 .tpt-steam{position:absolute;left:60%;bottom:34%;width:6px;height:26px;background:radial-gradient(rgba(220,230,200,.4),transparent 70%);border-radius:50%;margin-left:8px}
 .tpt-steam.s2{margin-left:26px;height:32px}
 @media(prefers-reduced-motion:reduce){.ffy-bug,.mph-shadow,.tpt-pot{transition:none}}
+body[data-template=spiderweb]{--bg:#0c0e12;--surface:#14161c;--surface-2:#1c1e26;--line:#2e303a;--text:#d4d8e0;--accent:#a0a8b8;--accent-rgb:160,168,184;--instrument:#14161c;--muted:#5c6272;--dim:#5c6272}
+body[data-template=snail]{--bg:#100e08;--surface:#181510;--surface-2:#201c14;--line:#342e20;--text:#e8dcc4;--accent:#b89858;--accent-rgb:184,152,88;--instrument:#181510;--muted:#7a6a48;--dim:#7a6a48}
+body[data-template=hummingbird]{--bg:#061410;--surface:#0c1c16;--surface-2:#12241c;--line:#1e3c2c;--text:#c4e8d8;--accent:#48c8a8;--accent-rgb:72,200,168;--instrument:#0c1c16;--muted:#3a7a64;--dim:#3a7a64}
+.spiderweb-visual,.snail-visual,.hummingbird-visual{display:none;position:relative;margin-top:18px}
+body[data-template=spiderweb] .charge-visual,body[data-template=snail] .charge-visual,body[data-template=hummingbird] .charge-visual{display:none}
+body[data-template=spiderweb] .spiderweb-visual{display:block}
+.spw-scene{position:relative;height:180px;background:radial-gradient(ellipse at 50% 40%,#181c28,#0c0e12 75%);overflow:hidden}
+.spw-web{position:absolute;left:50%;top:46%;width:150px;height:150px;transform:translate(-50%,-50%)}
+.spw-radial{position:absolute;left:50%;top:50%;width:75px;height:2px;background:rgba(200,210,225,.8);transform-origin:left center;opacity:.08;transition:opacity .5s}
+.spw-radial.r1{transform:rotate(0deg)}
+.spw-radial.r2{transform:rotate(60deg)}
+.spw-radial.r3{transform:rotate(120deg)}
+.spw-radial.r4{transform:rotate(180deg)}
+.spw-radial.r5{transform:rotate(240deg)}
+.spw-radial.r6{transform:rotate(300deg)}
+.spw-ring{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);border:2px solid rgba(200,210,225,.8);border-radius:50%;opacity:.08;transition:opacity .5s}
+.spw-ring.q1{width:40px;height:40px}
+.spw-ring.q2{width:76px;height:76px}
+.spw-ring.q3{width:112px;height:112px}
+.spw-spider{position:absolute;left:50%;top:12%;width:16px;height:20px;margin-left:-8px;background:#1c1e28;border-radius:50%;transition:top .5s}
+.spw-spider::before,.spw-spider::after{content:'';position:absolute;top:4px;width:12px;height:16px;border-top:2px solid #3c404c;border-radius:50%}
+.spw-spider::before{left:-9px;transform:rotate(30deg)}
+.spw-spider::after{right:-9px;transform:rotate(-30deg)}
+.spiderweb-caption,.snail-caption,.hummingbird-caption{text-align:center;font-size:11px;color:var(--dim);margin-top:10px}
+body[data-template=snail] .snail-visual{display:block}
+.snl-scene{position:relative;height:180px;background:linear-gradient(#100e08 0%,#1e2a10 100%);overflow:hidden}
+.snl-leaf{position:absolute;left:8%;bottom:24%;width:84%;height:22px;background:linear-gradient(#4a7a30,#2c5018);border-radius:50% 4px 4px 50%}
+.snl-leaf::after{content:'';position:absolute;left:0;right:0;top:10px;height:2px;background:#3a6024}
+.snl-trail{position:absolute;left:14%;bottom:calc(24% + 20px);width:0;height:4px;background:linear-gradient(90deg,rgba(220,235,190,.7),rgba(220,235,190,.15));border-radius:2px;transition:width .5s}
+.snl-body{position:absolute;left:14%;bottom:calc(24% + 10px);width:52px;height:24px;background:linear-gradient(#b8a070,#8a7448);border-radius:50% 60% 40% 40%;transition:left .5s}
+.snl-shell{position:absolute;left:2px;top:-18px;width:26px;height:26px;background:radial-gradient(circle at 40% 40%,#c89858,#7a5428);border-radius:50%}
+.snl-shell::after{content:'';position:absolute;inset:5px;border:3px solid #5a3c1a;border-radius:50%;border-bottom-color:transparent}
+.snl-eye{position:absolute;right:2px;top:-14px;width:3px;height:14px;background:#a89060;border-radius:2px}
+.snl-eye.e1{right:2px;transform:rotate(-8deg)}
+.snl-eye.e2{right:9px;transform:rotate(8deg)}
+.snl-eye::after{content:'';position:absolute;top:-4px;left:-2px;width:7px;height:7px;background:#3a2c14;border-radius:50%}
+body[data-template=hummingbird] .hummingbird-visual{display:block}
+.hmb-scene{position:relative;height:180px;background:radial-gradient(ellipse at 50% 80%,#122c20,#061410 75%);overflow:hidden}
+.hmb-flower{position:absolute;bottom:22%;width:10px;height:40px;background:#3a6828}
+.hmb-flower::before{content:'';position:absolute;left:50%;top:-14px;width:26px;height:26px;margin-left:-13px;background:radial-gradient(#f06078,#b02040);border-radius:50% 50% 0 50%}
+.hmb-flower.f1{left:24%}
+.hmb-flower.f2{left:50%;bottom:16%;height:50px}
+.hmb-flower.f3{left:76%}
+.hmb-bird{position:absolute;left:24%;top:30%;width:30px;height:20px;transition:left .5s,top .1s}
+.hmb-bird::before{content:'';position:absolute;inset:0;background:linear-gradient(#48c8a8,#1c7a5c);border-radius:50% 50% 50% 20%}
+.hmb-beak{position:absolute;right:-14px;top:6px;width:16px;height:3px;background:#3a3428;transform:rotate(10deg)}
+.hmb-wing{position:absolute;top:-8px;width:20px;height:10px;background:rgba(120,220,190,.7);border-radius:50%}
+.hmb-wing.w1{left:0;transform:rotate(-20deg)}
+.hmb-wing.w2{left:4px;transform:rotate(20deg)}
+@media(prefers-reduced-motion:reduce){.spw-spider,.snl-body,.hmb-bird{transition:none}}
