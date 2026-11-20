@@ -4517,3 +4517,77 @@ box-shadow:0 0 8px 2px rgba(200,232,88,.5);transition:opacity .5s}
 @keyframes fj-float{from{transform:translate(0,0)}to{transform:translate(4px,-6px)}}
 .firejar-caption{font-size:11px;color:var(--muted);letter-spacing:.4px}
 @media(prefers-reduced-motion:reduce){.fj-fly.in{animation:none}.fj-fly{transition:none}}
+
+/* iter-1730: lava skin — wax blobs rise through the lamp as pay accrues */
+.lava-visual{display:none;flex-direction:column;align-items:center;gap:12px}
+body[data-template=lava]{--bg:#180e14;--surface:#21141c;--surface-2:#2a1a24;--line:#422433;--text:#f6e6ee;--accent:#f0608a;--accent-rgb:240,96,138;--instrument:#140a10;--muted:#b390a2;--dim:#765e6c}
+body[data-template=lava] .charge-visual{display:none}
+body[data-template=lava] .lava-visual{display:flex}
+body[data-template=lava] .energy-stage{margin:14px 0 8px}
+body[data-template=lava] .template-slider{background:#381e2e}
+body[data-template=lava] .template-switch button.selected{color:#f892ae}
+body[data-template=lava] .currency-pill{background:#21141c;border-color:#422433}
+.lava-lamp{position:relative;width:110px;height:190px;display:flex;flex-direction:column;align-items:center}
+.lava-base{width:56px;height:18px;background:linear-gradient(180deg,#5a4a50,#382e32);border-radius:6px 6px 10px 10px;order:3}
+.lava-top{width:44px;height:16px;background:linear-gradient(180deg,#5a4a50,#382e32);border-radius:8px 8px 0 0;order:1}
+.lava-glass{position:relative;width:64px;flex:1;overflow:hidden;order:2;
+background:linear-gradient(180deg,rgba(240,150,180,.18),rgba(200,80,120,.28));
+clip-path:polygon(18% 0,82% 0,100% 100%,0 100%);border-bottom:2px solid #4a3640}
+.lava-blob{position:absolute;left:50%;width:22px;height:20px;border-radius:50% 50% 46% 54%;
+background:radial-gradient(circle at 40% 30%,#ff9ab8,#e04070);box-shadow:0 0 12px rgba(240,96,138,.35);
+transform:translateX(-50%);transition:bottom 1s ease}
+#lavaB2{width:16px;height:15px;margin-left:-16px}
+#lavaB3{width:13px;height:12px;margin-left:14px}
+.instrument.is-working .lava-blob{animation:lava-wob 2.8s ease-in-out infinite}
+.instrument.is-working #lavaB2{animation-delay:.9s}
+.instrument.is-working #lavaB3{animation-delay:1.6s}
+@keyframes lava-wob{0%,100%{transform:translateX(-50%) scaleY(1)}50%{transform:translateX(-50%) scaleY(1.12)}}
+.lava-caption{font-size:11px;color:var(--muted);letter-spacing:.4px}
+@media(prefers-reduced-motion:reduce){.instrument.is-working .lava-blob{animation:none}.lava-blob{transition:none}}
+
+/* iter-1731: knit skin — a scarf grows row by row off the needles */
+.knit-visual{display:none;flex-direction:column;align-items:center;gap:12px}
+body[data-template=knit]{--bg:#180e18;--surface:#211520;--surface-2:#2a1c28;--line:#402638;--text:#f4e6f0;--accent:#c878a8;--accent-rgb:200,120,168;--instrument:#140a12;--muted:#b094aa;--dim:#766070}
+body[data-template=knit] .charge-visual{display:none}
+body[data-template=knit] .knit-visual{display:flex}
+body[data-template=knit] .energy-stage{margin:14px 0 8px}
+body[data-template=knit] .template-slider{background:#382030}
+body[data-template=knit] .template-switch button.selected{color:#e09cc4}
+body[data-template=knit] .currency-pill{background:#211520;border-color:#402638}
+.knit-scene{position:relative;width:190px;height:150px}
+.knit-needles{position:absolute;top:8px;left:50%;width:150px;height:20px;transform:translateX(-50%)}
+.kn-n1,.kn-n2{position:absolute;top:8px;width:130px;height:4px;background:#c8a860;border-radius:2px}
+.kn-n1{left:0;transform:rotate(7deg)}
+.kn-n2{left:20px;transform:rotate(-7deg)}
+.instrument.is-working .kn-n1{animation:kn-tick 1.8s ease-in-out infinite}
+@keyframes kn-tick{0%,100%{transform:rotate(7deg)}50%{transform:rotate(10deg)}}
+.knit-scarf{position:absolute;top:26px;left:50%;transform:translateX(-50%);width:92px;height:8px;
+border-radius:0 0 8px 8px;
+background:repeating-linear-gradient(180deg,#c878a8 0 8px,#a85888 8px 16px);
+transition:height .7s;box-shadow:0 6px 14px rgba(0,0,0,.3)}
+.knit-scarf::after{content:'';position:absolute;left:8px;right:8px;bottom:-8px;height:8px;
+background:repeating-linear-gradient(90deg,#c878a8 0 6px,transparent 6px 12px)}
+.knit-caption{font-size:11px;color:var(--muted);letter-spacing:.4px}
+@media(prefers-reduced-motion:reduce){.instrument.is-working .kn-n1{animation:none}.knit-scarf{transition:none}}
+
+/* iter-1732: juice skin — a fresh orange squeezes into a rising glass of juice */
+.juice-visual{display:none;flex-direction:column;align-items:center;gap:12px}
+body[data-template=juice]{--bg:#181004;--surface:#211808;--surface-2:#2c2010;--line:#463418;--text:#f8eed8;--accent:#f8a030;--accent-rgb:248,160,48;--instrument:#140c04;--muted:#c0a478;--dim:#806c48}
+body[data-template=juice] .charge-visual{display:none}
+body[data-template=juice] .juice-visual{display:flex}
+body[data-template=juice] .energy-stage{margin:14px 0 8px}
+body[data-template=juice] .template-slider{background:#3c2c10}
+body[data-template=juice] .template-switch button.selected{color:#f8b85e}
+body[data-template=juice] .currency-pill{background:#211808;border-color:#463418}
+.juice-scene{position:relative;width:150px;height:170px;display:flex;flex-direction:column;align-items:center;justify-content:flex-end}
+.juice-orange{position:absolute;top:10%;left:50%;transform:translateX(-50%);font-size:34px;transition:top .8s,opacity .8s;z-index:2}
+.juice-glass{position:relative;width:80px;height:110px;border-radius:0 0 14px 14px;overflow:hidden;
+background:rgba(200,220,230,.08);border:2px solid #6a5840;border-top:3px solid #6a5840}
+.juice-fill{position:absolute;left:0;right:0;bottom:0;height:6%;
+background:linear-gradient(180deg,#f8b040,#e08820);transition:height .8s}
+.juice-pulp{position:absolute;left:0;right:0;bottom:0;height:100%;
+background:radial-gradient(circle at 30% 30%,rgba(255,220,160,.4) 2px,transparent 3px),
+radial-gradient(circle at 65% 60%,rgba(255,220,160,.4) 2px,transparent 3px),
+radial-gradient(circle at 50% 80%,rgba(255,220,160,.35) 2px,transparent 3px);pointer-events:none}
+.juice-caption{font-size:11px;color:var(--muted);letter-spacing:.4px}
+@media(prefers-reduced-motion:reduce){.juice-fill,.juice-orange{transition:none}}
