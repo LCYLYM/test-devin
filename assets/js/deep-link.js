@@ -4182,6 +4182,9 @@
     if (params.get('elder') === '1') { document.body.classList.add('is-elder'); }
     if (params.get('sumac') === '1') { document.body.classList.add('is-sumac'); }
     if (params.get('buckeye') === '1') { document.body.classList.add('is-buckeye'); }
+    if (params.get('tupelo') === '1') { document.body.classList.add('is-tupelo'); }
+    if (params.get('locust') === '1') { document.body.classList.add('is-locust'); }
+    if (params.get('smoketree') === '1') { document.body.classList.add('is-smoketree'); }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -5722,6 +5725,9 @@
         if (params.get('elder') === '1') u.searchParams.set('elder', '1');
         if (params.get('sumac') === '1') u.searchParams.set('sumac', '1');
         if (params.get('buckeye') === '1') u.searchParams.set('buckeye', '1');
+        if (params.get('tupelo') === '1') u.searchParams.set('tupelo', '1');
+        if (params.get('locust') === '1') u.searchParams.set('locust', '1');
+        if (params.get('smoketree') === '1') u.searchParams.set('smoketree', '1');
       if (params.get('tile') === '1') u.searchParams.set('tile', '1');
       if (params.get('outline') === '1') u.searchParams.set('outline', '1');
       if (params.get('stripe') === '1') u.searchParams.set('stripe', '1');

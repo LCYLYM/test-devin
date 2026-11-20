@@ -1298,6 +1298,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `elder` | `1` 接骨木配色 |
 | `sumac` | `1` 盐肤木配色 |
 | `buckeye` | `1` 七叶树配色 |
+| `tupelo` | `1` 蓝果树配色 |
+| `locust` | `1` 刺槐配色 |
+| `smoketree` | `1` 黄栌配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 

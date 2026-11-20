@@ -2794,6 +2794,12 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .is-sumac .instrument{border-color:rgba(215,100,60,.4)}
 .is-buckeye{background:linear-gradient(180deg,#2a1f14 0%,#130d07 100%)}
 .is-buckeye .instrument{border-color:rgba(190,140,90,.4)}
+.is-tupelo{background:linear-gradient(180deg,#1c2624 0%,#0c1211 100%)}
+.is-tupelo .instrument{border-color:rgba(120,180,170,.4)}
+.is-locust{background:linear-gradient(180deg,#24281e 0%,#10130d 100%)}
+.is-locust .instrument{border-color:rgba(170,185,120,.4)}
+.is-smoketree{background:linear-gradient(180deg,#2b1f20 0%,#140e0f 100%)}
+.is-smoketree .instrument{border-color:rgba(200,140,150,.4)}
 .is-oatmeal{background:linear-gradient(180deg,#1d1912,#2f291e 50%,#433a2a)}
 .is-oatmeal .instrument{border-color:rgba(215,195,155,.4)}
 .is-thyme{background:linear-gradient(180deg,#121a14,#1c2a20 50%,#28392c)}
