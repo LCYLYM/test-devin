@@ -6163,3 +6163,40 @@ body[data-template=jumprope] .jumprope-visual{display:block}
 .jrp-leg.r{right:6px}
 .jrp-rope{position:absolute;left:50%;top:50%;width:200px;height:120px;transform:translate(-50%,-50%)}
 @media(prefers-reduced-motion:reduce){.stl-pole,.vbx-runner{transition:none}}
+body[data-template=plate]{--bg:#0e1418;--surface:#161e24;--surface-2:#1e2830;--line:#2e3c48;--text:#d0e0ec;--accent:#a8c8e0;--accent-rgb:168,200,224;--instrument:#161e24;--muted:#58748a;--dim:#58748a}
+body[data-template=tightrope]{--bg:#141208;--surface:#1c180e;--surface-2:#242014;--line:#3c341e;--text:#e8dcbe;--accent:#e0c040;--accent-rgb:224,192,64;--instrument:#1c180e;--muted:#8a7a44;--dim:#8a7a44}
+body[data-template=shateki]{--bg:#160c08;--surface:#1e120c;--surface-2:#261810;--line:#3e2418;--text:#ecd0be;--accent:#d05040;--accent-rgb:208,80,64;--instrument:#1e120c;--muted:#8a4c3c;--dim:#8a4c3c}
+.plate-visual,.tightrope-visual,.shateki-visual{display:none;position:relative;margin-top:18px}
+body[data-template=plate] .charge-visual,body[data-template=tightrope] .charge-visual,body[data-template=shateki] .charge-visual{display:none}
+body[data-template=plate] .plate-visual{display:block}
+.plt-scene{position:relative;height:180px;background:radial-gradient(ellipse at 50% 80%,#1e2c38,#0e1418 75%);overflow:hidden}
+.plt-pole{position:absolute;bottom:16%;width:4px;height:52%;background:#7a8a98;border-radius:2px}
+.plt-pole.p1{left:28%}
+.plt-pole.p2{left:50%}
+.plt-pole.p3{left:72%}
+.plt-plate{position:absolute;bottom:66%;width:52px;height:16px;background:linear-gradient(#e0ecf4,#98b8cc);border-radius:50%;opacity:.15;transition:opacity .5s}
+.plt-plate.p1{left:28%;transform:translateX(-50%)}
+.plt-plate.p2{left:50%;transform:translateX(-50%)}
+.plt-plate.p3{left:72%;transform:translateX(-50%)}
+.plate-caption,.tightrope-caption,.shateki-caption{text-align:center;font-size:11px;color:var(--dim);margin-top:10px}
+body[data-template=tightrope] .tightrope-visual{display:block}
+.trp-scene{position:relative;height:180px;background:linear-gradient(#141208 0%,#2c2410 60%,#141208);overflow:hidden}
+.trp-wire{position:absolute;left:6%;right:6%;top:56%;height:2px;background:#c8b060}
+.trp-wire::before{content:'';position:absolute;left:0;top:-14px;width:8px;height:16px;background:#8a7a44}
+.trp-wire::after{content:'';position:absolute;right:0;top:-14px;width:8px;height:16px;background:#8a7a44}
+.trp-walker{position:absolute;left:10%;top:32%;width:22px;height:44px;transition:left .4s}
+.trp-head{position:absolute;left:50%;top:0;width:14px;height:14px;margin-left:-7px;background:#e8c098;border-radius:50%}
+.trp-body{position:absolute;left:50%;top:14px;width:14px;height:30px;margin-left:-7px;background:linear-gradient(#d05040,#8a2818);border-radius:6px}
+.trp-pole{position:absolute;left:50%;top:18px;width:70px;height:3px;margin-left:-35px;background:#c8a860;border-radius:2px}
+.trp-flag{position:absolute;right:6%;top:30%;width:0;height:0;border-top:10px solid transparent;border-bottom:10px solid transparent;border-left:20px solid #e0c040}
+body[data-template=shateki] .shateki-visual{display:block}
+.shk-scene{position:relative;height:180px;background:radial-gradient(ellipse at 50% 20%,#2e180e,#160c08 75%);overflow:hidden}
+.shk-shelf{position:absolute;left:50%;top:18%;width:70%;height:6px;transform:translateX(-50%);background:#6a4828;border-radius:3px}
+.shk-prize{position:absolute;bottom:6px;width:20px;height:26px;border-radius:4px 4px 0 0;transition:opacity .4s}
+.shk-prize.p1{left:10%;background:linear-gradient(#e07840,#a84818)}
+.shk-prize.p2{left:44%;background:linear-gradient(#68a858,#3a6828)}
+.shk-prize.p3{left:78%;background:linear-gradient(#6888d0,#3a5888)}
+.shk-gun{position:absolute;left:12%;bottom:14%;width:44px;height:12px;background:#4a3a2a;border-radius:6px;transform-origin:left center}
+.shk-gun::after{content:'';position:absolute;right:-8px;top:3px;width:10px;height:6px;background:#8a7a5a;border-radius:3px}
+.shk-cork{position:absolute;left:20%;bottom:18%;width:8px;height:8px;background:#e8d8a8;border-radius:50%;opacity:0;transition:left .3s,opacity .3s}
+@media(prefers-reduced-motion:reduce){.trp-walker,.shk-cork{transition:none}}
