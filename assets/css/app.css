@@ -765,7 +765,8 @@ body[data-template=wave]{--bg:#0b1526}
 /* iter-175: 等价物换算徽章 */
 .payday.vs{color:#ffd166}
 /* iter-176: 达成 100% 撒花 */
-#energyStage{position:relative}
+/* NOTE: keep .energy-stage positioned by the base rule (position:relative) —
+   an id-level rule here would outrank per-skin .energy-stage overrides (e.g. trail's absolute fill) */
 .confetti-canvas{position:absolute;inset:0;pointer-events:none;z-index:5}
 /* iter-177: 费率胶囊可点 */
 .rate-pill{cursor:pointer;user-select:none}
