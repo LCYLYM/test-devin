@@ -4004,3 +4004,73 @@ font:650 15px 'Geist',sans-serif;color:#ffd88a;text-shadow:0 1px 6px rgba(0,0,0,
 animation:dig-pop 1.5s ease-out forwards}
 @keyframes dig-pop{0%{opacity:0;transform:translate(-50%,-50%) scale(.4)}18%{opacity:1;transform:translate(-50%,-60%) scale(1.15)}100%{opacity:0;transform:translate(-50%,-170%) scale(.9)}}
 @media(prefers-reduced-motion:reduce){.dig-coin{animation:none;opacity:0}}
+
+/* iter-1706: cable skin — cable car crosses a valley on a wire */
+.cable-visual{display:none;flex-direction:column;align-items:center;gap:12px}
+body[data-template=cable]{--bg:#0c1611;--surface:#12201a;--surface-2:#172a20;--line:#24382c;--text:#e2f2e6;--accent:#7ec8a0;--accent-rgb:126,200,160;--instrument:#08110d;--muted:#93b39c;--dim:#54705e}
+body[data-template=cable] .charge-visual{display:none}
+body[data-template=cable] .cable-visual{display:flex}
+body[data-template=cable] .energy-stage{margin:14px 0 8px}
+body[data-template=cable] .template-slider{background:#1e3325}
+body[data-template=cable] .template-switch button.selected{color:#a2dcbc}
+body[data-template=cable] .currency-pill{background:#12201a;border-color:#24382c}
+.cable-scene{position:relative;width:min(300px,80vw);height:140px}
+.cable-svg{position:absolute;inset:0;width:100%;height:100%}
+.cable-car{position:absolute;left:0;top:38%;transform:translateX(-50%);transition:left .8s linear,top .8s linear;z-index:3}
+.cable-hanger{display:block;width:2px;height:14px;background:#4a5a50;margin:0 auto}
+.cable-cabin{display:flex;align-items:center;justify-content:center;width:44px;height:30px;
+background:linear-gradient(180deg,#3c5a48,#2a4434);border:1px solid #557a5f;border-radius:6px 6px 8px 8px;
+box-shadow:0 6px 14px rgba(0,0,0,.4)}
+.cable-cabin::before{content:'';position:absolute;top:4px;left:5px;right:5px;height:9px;background:#0d1a12;border-radius:2px}
+.cable-pct{font-style:normal;font-size:9px;font-weight:700;color:#c8ecd8;position:relative;z-index:1;margin-top:9px}
+.cable-caption{font-size:11px;color:var(--muted);letter-spacing:.4px}
+@media(prefers-reduced-motion:reduce){.cable-car{transition:none}}
+
+/* iter-1707: hive skin — honeycomb cells fill with honey one by one */
+.hive-visual{display:none;flex-direction:column;align-items:center;gap:12px}
+body[data-template=hive]{--bg:#181204;--surface:#221a08;--surface-2:#2c2210;--line:#403318;--text:#f6ecd0;--accent:#f0c040;--accent-rgb:240,192,64;--instrument:#100c04;--muted:#b5a378;--dim:#756a48}
+body[data-template=hive] .charge-visual{display:none}
+body[data-template=hive] .hive-visual{display:flex}
+body[data-template=hive] .energy-stage{margin:14px 0 8px}
+body[data-template=hive] .template-slider{background:#3a2d10}
+body[data-template=hive] .template-switch button.selected{color:#f5d67a}
+body[data-template=hive] .currency-pill{background:#211a0a;border-color:#403318}
+.hive-comb{display:grid;grid-template-columns:repeat(4,54px);gap:7px;padding:18px;
+background:#241a08;border:1px solid #403318;border-radius:14px}
+.hive-cell{width:54px;height:60px;background:#33260e;border:1px solid #4a3a18;
+clip-path:polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%);transition:background .5s,box-shadow .5s;
+position:relative}
+.hive-cell::after{content:'🍯';position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:16px;opacity:0;transition:opacity .4s}
+.hive-cell.fill{background:linear-gradient(180deg,#e8b030,#c8861a);box-shadow:0 0 12px rgba(240,192,64,.35)}
+.hive-cell.fill::after{opacity:1}
+.hive-pct{font-size:14px;color:#e8cf90;font-variant-numeric:tabular-nums}
+.hive-caption{font-size:11px;color:var(--muted);letter-spacing:.4px}
+@media(prefers-reduced-motion:reduce){.hive-cell,.hive-cell::after{transition:none}}
+@media(max-width:520px){.hive-comb{grid-template-columns:repeat(4,44px);gap:6px}.hive-cell{width:44px;height:50px}}
+
+/* iter-1708: lantern skin — sky lantern drifts up through the night */
+.lantern-visual{display:none;flex-direction:column;align-items:center;gap:12px}
+body[data-template=lantern]{--bg:#140e10;--surface:#1d1418;--surface-2:#261a20;--line:#3a2830;--text:#f5e8e4;--accent:#f0a080;--accent-rgb:240,160,128;--instrument:#0f0a0c;--muted:#b0969a;--dim:#70585e}
+body[data-template=lantern] .charge-visual{display:none}
+body[data-template=lantern] .lantern-visual{display:flex}
+body[data-template=lantern] .energy-stage{margin:14px 0 8px}
+body[data-template=lantern] .template-slider{background:#342128}
+body[data-template=lantern] .template-switch button.selected{color:#f5bd9e}
+body[data-template=lantern] .currency-pill{background:#1d1418;border-color:#3a2830}
+.lantern-night{position:relative;width:230px;height:200px;border-radius:10px;overflow:hidden;
+background:radial-gradient(circle at 50% 120%,#2c1c26,#0e0910 70%);border:1px solid #3a2830}
+.lantern-star{position:absolute;width:3px;height:3px;border-radius:50%;background:#c8b8d0;opacity:.7}
+.lantern-star.s1{top:18%;left:16%}
+.lantern-star.s2{top:34%;right:22%;opacity:.5}
+.lantern-star.s3{top:12%;right:38%;width:2px;height:2px}
+.lantern-lamp{position:absolute;left:50%;bottom:8%;width:44px;height:56px;transform:translateX(-50%);
+background:linear-gradient(180deg,#f8cf9a,#e89058);border-radius:45% 45% 40% 40%;
+box-shadow:0 0 26px rgba(240,160,100,.5);transition:bottom .8s linear}
+.lantern-lamp::before{content:'';position:absolute;bottom:-5px;left:50%;transform:translateX(-50%);width:18px;height:7px;background:#8a5030;border-radius:50%}
+.lantern-glow{position:absolute;left:50%;top:62%;transform:translate(-50%,-50%);width:14px;height:16px;border-radius:50%;
+background:radial-gradient(circle,#fff4d0,#f8b050)}
+.lantern-pct{position:absolute;top:16px;left:50%;transform:translateX(-50%);font-size:10px;font-weight:650;color:#6a3818}
+.instrument.is-working .lantern-lamp{animation:lantern-drift 3.2s ease-in-out infinite}
+@keyframes lantern-drift{0%,100%{transform:translateX(-50%) rotate(-1.5deg)}50%{transform:translateX(-46%) rotate(1.5deg)}}
+.lantern-caption{font-size:11px;color:var(--muted);letter-spacing:.4px}
+@media(prefers-reduced-motion:reduce){.instrument.is-working .lantern-lamp{animation:none}.lantern-lamp{transition:none}}
