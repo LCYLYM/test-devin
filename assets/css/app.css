@@ -9177,6 +9177,9 @@ body[data-template=icehouse] .icehouse-visual{display:block}
 .skin-slots{display:inline-flex;gap:inherit}
 .skin-slots button{flex-shrink:0}
 #skinRoll.skin-roll{font-size:15px;line-height:1;padding:0 12px}
+.template-switch .skin-all{position:relative;z-index:1;display:inline-flex;align-items:center;justify-content:center;height:32px;padding:0 14px;color:#94999c;border-radius:50px;font-size:12px;flex-shrink:0}
+.template-switch .skin-all:hover{color:#d5d8d9}
+.template-switch .skin-all:focus-visible{outline:2px solid var(--accent);outline-offset:4px}
 .skin-slots.is-rolling{animation:skin-roll-in .45s var(--motion)}
 @keyframes skin-roll-in{0%{opacity:.15;transform:translateY(4px) scale(.96)}60%{opacity:1;transform:translateY(-2px) scale(1.01)}100%{opacity:1;transform:none}}
 @media(prefers-reduced-motion:reduce){.skin-slots.is-rolling{animation:none}}
