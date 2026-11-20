@@ -9180,3 +9180,43 @@ body[data-template=icehouse] .icehouse-visual{display:block}
 .skin-slots.is-rolling{animation:skin-roll-in .45s var(--motion)}
 @keyframes skin-roll-in{0%{opacity:.15;transform:translateY(4px) scale(.96)}60%{opacity:1;transform:translateY(-2px) scale(1.01)}100%{opacity:1;transform:none}}
 @media(prefers-reduced-motion:reduce){.skin-slots.is-rolling{animation:none}}
+
+body[data-template=ropewalk]{--bg:#14100a;--surface:#1e1810;--surface-2:#2a2214;--line:#453820;--text:#f2e8d2;--accent:#c8a86a;--accent-rgb:200,168,106;--instrument:#171209;--muted:#b09468;--dim:#6a5636}
+.ropewalk-visual{display:none;position:relative;margin-top:18px}
+body[data-template=ropewalk] .charge-visual{display:none}
+body[data-template=ropewalk] .ropewalk-visual{display:block}
+.rpw-scene{position:relative;height:150px;border-radius:16px;overflow:hidden;background:linear-gradient(180deg,#1a140a,#0e0a05)}
+.rpw-rack{position:absolute;bottom:42px;left:14%;width:72%;height:3px;background:#5a4a2c}
+.rpw-rack:before{content:'';position:absolute;top:3px;left:0;width:4px;height:26px;background:#4a3c24}
+.rpw-rack:after{content:'';position:absolute;top:3px;right:0;width:4px;height:26px;background:#4a3c24}
+.rpw-strand{position:absolute;bottom:45px;left:20%;width:60%;height:2px;background:#c8a86a;opacity:0;transition:opacity .5s}
+#rpwS1{bottom:45px}#rpwS2{bottom:50px}#rpwS3{bottom:55px}
+.rpw-twist{position:absolute;bottom:63px;left:27%;width:0;height:6px;background:repeating-linear-gradient(45deg,#d8b878 0 4px,#a8884e 4px 8px);border-radius:3px;opacity:0;transition:width .5s,opacity .5s}
+.ropewalk-caption{text-align:center;font-size:11px;color:var(--dim);margin-top:10px}
+body[data-template=printshop]{--bg:#16100e;--surface:#201814;--surface-2:#2c201a;--line:#4a342c;--text:#f2e4dc;--accent:#a87878;--accent-rgb:168,120,120;--instrument:#1b1310;--muted:#b09088;--dim:#6e5048}
+.printshop-visual{display:none;position:relative;margin-top:18px}
+body[data-template=printshop] .charge-visual{display:none}
+body[data-template=printshop] .printshop-visual{display:block}
+.prt-scene{position:relative;height:150px;border-radius:16px;overflow:hidden;background:linear-gradient(180deg,#1e1512,#0f0b09)}
+.prt-press{position:absolute;bottom:38px;left:16%;width:52px;height:56px;border:3px solid #6a4a3a;border-radius:3px;transition:transform .3s}
+.prt-press:before{content:'';position:absolute;top:6px;left:8px;right:8px;height:22px;background:#3a2a22}
+.prt-press:after{content:'';position:absolute;top:-12px;left:22px;width:8px;height:12px;background:#6a4a3a}
+.prt-line{position:absolute;top:26px;left:40%;width:52%;height:2px;background:#7a5c50}
+.prt-sheet{position:absolute;top:28px;width:18px;height:26px;background:linear-gradient(180deg,#e8dcc8,#d8c8ac);border:1px solid #8a7058;opacity:0;transition:opacity .5s}
+.prt-sheet:after{content:'';position:absolute;top:-3px;left:7px;width:4px;height:5px;background:#8a7058}
+#prtSh1{left:44%}#prtSh2{left:58%}#prtSh3{left:72%}
+.printshop-caption{text-align:center;font-size:11px;color:var(--dim);margin-top:10px}
+body[data-template=fishweir]{--bg:#0c1614;--surface:#12201c;--surface-2:#182c26;--line:#2a4a3e;--text:#d8efe4;--accent:#6ab0a0;--accent-rgb:106,176,160;--instrument:#0e1a16;--muted:#7aa898;--dim:#3e6256}
+.fishweir-visual{display:none;position:relative;margin-top:18px}
+body[data-template=fishweir] .charge-visual{display:none}
+body[data-template=fishweir] .fishweir-visual{display:block}
+.fwr-scene{position:relative;height:150px;border-radius:16px;overflow:hidden;background:linear-gradient(180deg,#12201a,#0a120e)}
+.fwr-water{position:absolute;bottom:0;left:0;width:100%;height:56px;background:linear-gradient(180deg,rgba(90,160,150,.35),rgba(50,90,80,.4))}
+.fwr-vl,.fwr-vr{position:absolute;bottom:14px;width:3px;height:60px;background:#6a5638}
+.fwr-vl{left:36%;transform:rotate(-18deg)}
+.fwr-vr{right:36%;transform:rotate(18deg)}
+.fwr-fish{position:absolute;bottom:36px;left:50%;width:14px;height:7px;background:#9ad0c0;border-radius:60% 40% 40% 60%;opacity:0;transition:transform .6s,opacity .5s}
+.fwr-fish:after{content:'';position:absolute;right:-4px;top:1px;border-left:5px solid #9ad0c0;border-top:3px solid transparent;border-bottom:3px solid transparent}
+#fwrF1{left:48%}#fwrF2{left:53%;transition-delay:.2s}
+.fishweir-caption{text-align:center;font-size:11px;color:var(--dim);margin-top:10px}
+@media(prefers-reduced-motion:reduce){body[data-template=printshop] .prt-press,body[data-template=fishweir] .fwr-fish{transition:none}}
