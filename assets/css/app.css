@@ -6779,3 +6779,46 @@ body[data-template=potofgold] .potofgold-visual{display:block}
 .pog-coins{position:absolute;left:0;right:0;bottom:0;height:0;background:repeating-linear-gradient(#e8b830 0 6px,#c89820 6px 8px);transition:height .5s}
 .pog-spark{position:absolute;left:50%;top:-14px;width:30px;height:16px;margin-left:-15px;background:radial-gradient(rgba(255,230,150,.9),transparent 70%);opacity:0;transition:opacity .4s}
 @media(prefers-reduced-motion:reduce){.ccd-bug,.dam-water,.pog-coins{transition:none}}
+body[data-template=koipond]{--bg:#0a1410;--surface:#121c16;--surface-2:#1a241c;--line:#2c3e32;--text:#d0e8d8;--accent:#e07830;--accent-rgb:224,120,48;--instrument:#121c16;--muted:#4e7a62;--dim:#4e7a62}
+body[data-template=zengarden]{--bg:#121110;--surface:#1a1916;--surface-2:#22211c;--line:#38362e;--text:#e2dfd4;--accent:#a8a898;--accent-rgb:168,168,152;--instrument:#1a1916;--muted:#75736a;--dim:#75736a}
+body[data-template=orchard]{--bg:#120c06;--surface:#1a140c;--surface-2:#221c12;--line:#3a301c;--text:#ecdcc2;--accent:#d84838;--accent-rgb:216,72,56;--instrument:#1a140c;--muted:#8a5c48;--dim:#8a5c48}
+.koipond-visual,.zengarden-visual,.orchard-visual{display:none;position:relative;margin-top:18px}
+body[data-template=koipond] .charge-visual,body[data-template=zengarden] .charge-visual,body[data-template=orchard] .charge-visual{display:none}
+body[data-template=koipond] .koipond-visual{display:block}
+.koi-scene{position:relative;height:180px;background:#0a1410;overflow:hidden}
+.koi-pond{position:absolute;left:50%;top:50%;width:78%;height:80%;transform:translate(-50%,-50%);background:radial-gradient(ellipse at 50% 40%,#1e4a58,#0e2c38 75%);border-radius:50%;overflow:hidden}
+.koi-ripple{position:absolute;left:50%;top:50%;width:60%;height:60%;transform:translate(-50%,-50%);border:2px solid rgba(160,220,230,.4);border-radius:50%;opacity:.2;transition:opacity .5s}
+.koi-food{position:absolute;left:50%;top:50%;width:10px;height:6px;margin:-3px 0 0 -5px;background:#e8d8a0;border-radius:50%;box-shadow:8px 4px 0 #e8d8a0,-9px 6px 0 #e8d8a0,3px -7px 0 #e8d8a0;opacity:0;transition:opacity .5s}
+.koi-fish{position:absolute;width:26px;height:13px;border-radius:50% 60% 60% 50%;opacity:0;transition:left .8s,top .8s,opacity .4s}
+.koi-fish::before{content:'';position:absolute;right:-7px;top:2px;width:0;height:0;border-top:4px solid transparent;border-bottom:4px solid transparent;border-left:8px solid currentColor}
+.koi-fish.f1{background:linear-gradient(#f87830,#d84810);color:#d84810;left:20%;top:30%}
+.koi-fish.f2{background:linear-gradient(#f0f0e8,#c8c8b8);color:#c8c8b8;left:70%;top:44%}
+.koi-fish.f3{background:linear-gradient(#f8c030,#d89010);color:#d89010;left:30%;top:66%}
+.koi-fish.f4{background:linear-gradient(#e85050,#a82828);color:#a82828;left:64%;top:70%}
+.koipond-caption,.zengarden-caption,.orchard-caption{text-align:center;font-size:11px;color:var(--dim);margin-top:10px}
+body[data-template=zengarden] .zengarden-visual{display:block}
+.zen-scene{position:relative;height:180px;background:#121110;overflow:hidden}
+.zen-sand{position:absolute;left:50%;top:12%;bottom:12%;width:74%;transform:translateX(-50%);background:linear-gradient(#3a382f,#2c2b24);border-radius:14px;overflow:hidden}
+.zen-line{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);border:2px solid rgba(200,195,175,.55);border-radius:50%;opacity:.12;transition:opacity .5s}
+.zen-line.l1{width:46px;height:30px}
+.zen-line.l2{width:76px;height:52px}
+.zen-line.l3{width:106px;height:74px}
+.zen-line.l4{width:136px;height:96px}
+.zen-stone{position:absolute;background:radial-gradient(circle at 35% 30%,#8a8878,#4c4a40);border-radius:50% 55% 55% 45%;opacity:0;transition:opacity .5s}
+.zen-stone.s1{left:32%;top:36%;width:26px;height:20px}
+.zen-stone.s2{left:52%;top:48%;width:18px;height:14px}
+.zen-stone.s3{left:42%;top:60%;width:13px;height:10px}
+body[data-template=orchard] .orchard-visual{display:block}
+.orc-scene{position:relative;height:180px;background:linear-gradient(#120c06 0%,#20300f 100%);overflow:hidden}
+.orc-ground{position:absolute;left:0;right:0;bottom:0;height:18%;background:linear-gradient(#3a4a1c,#283512)}
+.orc-tree{position:absolute;left:50%;bottom:14%;width:150px;height:140px;transform:translateX(-50%)}
+.orc-trunk{position:absolute;left:50%;bottom:0;width:12px;height:60px;margin-left:-6px;background:linear-gradient(#6a4a28,#4a3018);border-radius:5px}
+.orc-crown{position:absolute;left:50%;bottom:44px;width:140px;height:96px;transform:translateX(-50%);background:radial-gradient(ellipse at 50% 40%,#3c6620,#27491a);border-radius:50%}
+.orc-fruit{position:absolute;width:13px;height:13px;background:radial-gradient(circle at 35% 30%,#7a9a48,#5a7830);border-radius:50%;transition:transform .5s,background .5s}
+.orc-fruit.f1{left:20%;top:30%}
+.orc-fruit.f2{left:44%;top:16%}
+.orc-fruit.f3{left:66%;top:32%}
+.orc-fruit.f4{left:30%;top:58%}
+.orc-fruit.f5{left:58%;top:62%}
+.orc-fruit.f6{left:78%;top:55%}
+@media(prefers-reduced-motion:reduce){.koi-fish,.orc-fruit,.zen-line{transition:none}}
