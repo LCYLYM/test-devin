@@ -694,7 +694,7 @@ body.is-focus .instrument{min-height:100vh;min-height:100dvh;margin:0;border-rad
 display:flex;flex-direction:column;align-items:center;justify-content:center;gap:28px}
 body.is-focus .instrument-body{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:28px;width:100%}
 body.is-focus .value-cluster{padding-top:0}
-body.is-focus .energy-stage{margin:0 auto}
+body.is-focus .energy-stage{margin:0 auto;width:100%;align-self:stretch}
 body.is-focus::after{content:'按 z 退出专注';position:fixed;bottom:14px;right:16px;font-size:11px;
 color:var(--muted,#888);opacity:.45;pointer-events:none;letter-spacing:.5px}
 
