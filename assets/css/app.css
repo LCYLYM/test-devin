@@ -2932,6 +2932,12 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .is-broom .instrument{border-color:rgba(235,180,65,.4)}
 .is-lantana{background:linear-gradient(180deg,#2e1719 0%,#170a0c 100%)}
 .is-lantana .instrument{border-color:rgba(235,110,90,.4)}
+.is-mahonia{background:linear-gradient(180deg,#29220f 0%,#140f05 100%)}
+.is-mahonia .instrument{border-color:rgba(225,185,70,.4)}
+.is-photinia{background:linear-gradient(180deg,#2c1616 0%,#150a0a 100%)}
+.is-photinia .instrument{border-color:rgba(215,85,75,.4)}
+.is-aucuba{background:linear-gradient(180deg,#1e2818 0%,#0d130a 100%)}
+.is-aucuba .instrument{border-color:rgba(140,185,110,.4)}
 .is-hypericum{background:linear-gradient(180deg,#2b2310 0%,#151006 100%)}
 .is-hypericum .instrument{border-color:rgba(235,195,60,.4)}
 .is-daphne{background:linear-gradient(180deg,#2a1a1e 0%,#150c0e 100%)}

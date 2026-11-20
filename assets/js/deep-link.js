@@ -4254,6 +4254,9 @@
     if (params.get('hypericum') === '1') { document.body.classList.add('is-hypericum'); }
     if (params.get('daphne') === '1') { document.body.classList.add('is-daphne'); }
     if (params.get('potentilla') === '1') { document.body.classList.add('is-potentilla'); }
+    if (params.get('mahonia') === '1') { document.body.classList.add('is-mahonia'); }
+    if (params.get('photinia') === '1') { document.body.classList.add('is-photinia'); }
+    if (params.get('aucuba') === '1') { document.body.classList.add('is-aucuba'); }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -5863,6 +5866,9 @@
         if (params.get('gorse') === '1') u.searchParams.set('gorse', '1');
         if (params.get('broom') === '1') u.searchParams.set('broom', '1');
         if (params.get('lantana') === '1') u.searchParams.set('lantana', '1');
+        if (params.get('mahonia') === '1') u.searchParams.set('mahonia', '1');
+        if (params.get('photinia') === '1') u.searchParams.set('photinia', '1');
+        if (params.get('aucuba') === '1') u.searchParams.set('aucuba', '1');
         if (params.get('hypericum') === '1') u.searchParams.set('hypericum', '1');
         if (params.get('daphne') === '1') u.searchParams.set('daphne', '1');
         if (params.get('potentilla') === '1') u.searchParams.set('potentilla', '1');

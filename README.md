@@ -1367,6 +1367,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `gorse` | `1` ハリエニシダ配色 |
 | `broom` | `1` エニシダ配色 |
 | `lantana` | `1` ランタナ配色 |
+| `mahonia` | `1` ヒイラギナンテン配色 |
+| `photinia` | `1` カナメモチ配色 |
+| `aucuba` | `1` アオキ配色 |
 | `hypericum` | `1` オトギリソウ配色 |
 | `daphne` | `1` ジンチョウゲ配色 |
 | `potentilla` | `1` キジムシロ配色 |
