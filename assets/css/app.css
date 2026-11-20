@@ -6850,3 +6850,37 @@ body[data-template=bamboo] .bamboo-visual{display:block}
 .bmb-leaf{position:absolute;left:9px;bottom:100%;width:26px;height:7px;background:linear-gradient(90deg,#6ab848,#3c7828);border-radius:0 80% 0 80%;transform-origin:left center;opacity:0;transition:opacity .4s}
 .constellation-caption,.solarsystem-caption,.bamboo-caption{text-align:center;font-size:11px;color:var(--dim);margin-top:10px}
 @media(prefers-reduced-motion:reduce){.bmb-seg,.bmb-leaf,.cst-star{transition:none}}
+body[data-template=geode]{--bg:#100a18;--surface:#181024;--surface-2:#201830;--line:#382e4a;--text:#dcd0ec;--accent:#a068d8;--accent-rgb:160,104,216;--instrument:#181024;--muted:#6a5488;--dim:#6a5488}
+body[data-template=mandala]{--bg:#120c06;--surface:#1a1410;--surface-2:#241c12;--line:#3e3220;--text:#ecdcc4;--accent:#d8a058;--accent-rgb:216,160,88;--instrument:#1a1410;--muted:#8a6a48;--dim:#8a6a48}
+body[data-template=catapult]{--bg:#120e08;--surface:#1a1610;--surface-2:#241e14;--line:#3c3220;--text:#e8dcc4;--accent:#a87848;--accent-rgb:168,120,72;--instrument:#1a1610;--muted:#7a6448;--dim:#7a6448}
+.geode-visual,.mandala-visual,.catapult-visual{display:none;position:relative;margin-top:18px}
+body[data-template=geode] .charge-visual,body[data-template=mandala] .charge-visual,body[data-template=catapult] .charge-visual{display:none}
+body[data-template=geode] .geode-visual{display:block}
+.geo-scene{position:relative;height:180px;background:#100a18;overflow:hidden}
+.geo-rock{position:absolute;left:50%;top:50%;width:110px;height:70px;margin:-35px 0 0 -55px}
+.geo-half{position:absolute;top:0;width:50%;height:100%;background:radial-gradient(circle at 30% 30%,#6a6058,#38322c);transition:transform .6s}
+.geo-half.left{left:0;border-radius:60% 20% 20% 60%}
+.geo-half.right{right:0;border-radius:20% 60% 60% 20%}
+.geo-gem{position:absolute;background:linear-gradient(180deg,#c890f0,#7848b8);clip-path:polygon(50% 0,100% 70%,80% 100%,20% 100%,0 70%);opacity:0;transform:scale(.3);transition:transform .4s,opacity .3s}
+.geo-gem.g1{left:38%;top:22%;width:14px;height:22px}
+.geo-gem.g2{left:52%;top:30%;width:11px;height:17px}
+.geo-gem.g3{left:28%;top:36%;width:10px;height:15px}
+.geo-gem.g4{left:44%;top:48%;width:12px;height:18px}
+.geo-gem.g5{left:58%;top:52%;width:9px;height:13px}
+body[data-template=mandala] .mandala-visual{display:block}
+.mdl-scene{position:relative;height:180px;background:radial-gradient(circle at 50% 50%,#1a1208,#120c06 80%);overflow:hidden}
+.mdl-svg{position:absolute;left:50%;top:50%;width:170px;height:170px;transform:translate(-50%,-50%)}
+.mdl-ring{fill:none;stroke:rgba(216,160,88,.75);stroke-width:1.5;stroke-dasharray:0;stroke-dashoffset:0}
+.mdl-dot{fill:#f0c880;opacity:0;transition:opacity .4s}
+body[data-template=catapult] .catapult-visual{display:block}
+.ctp-scene{position:relative;height:180px;background:linear-gradient(#120e08 0%,#1c2410 100%);overflow:hidden}
+.ctp-ground{position:absolute;left:0;right:0;bottom:0;height:14%;background:linear-gradient(#3a4a1c,#283512)}
+.ctp-frame{position:absolute;left:50%;bottom:14%;width:70px;height:36px;margin-left:-35px;border:6px solid #6a4a28;border-bottom:none;border-radius:8px 8px 0 0}
+.ctp-wheel{position:absolute;bottom:-12px;width:16px;height:16px;background:radial-gradient(circle,#8a6a40,#4a3018);border-radius:50%}
+.ctp-wheel.w1{left:6px}
+.ctp-wheel.w2{right:6px}
+.ctp-arm{position:absolute;left:50%;bottom:calc(14% + 30px);width:64px;height:6px;margin-left:-6px;background:linear-gradient(#8a6a40,#5a3c20);border-radius:3px;transform-origin:6px 50%;transform:rotate(-30deg);transition:transform .1s}
+.ctp-stone{position:absolute;right:-8px;top:-9px;width:16px;height:16px;background:radial-gradient(circle at 35% 30%,#8a8278,#4a443c);border-radius:50%;opacity:0;transition:opacity .3s}
+.ctp-fly{position:absolute;left:52%;bottom:calc(14% + 60px);width:14px;height:14px;background:radial-gradient(circle at 35% 30%,#9a9288,#5a544a);border-radius:50%;opacity:0}
+.geode-caption,.mandala-caption,.catapult-caption{text-align:center;font-size:11px;color:var(--dim);margin-top:10px}
+@media(prefers-reduced-motion:reduce){.geo-half,.geo-gem,.mdl-dot,.ctp-stone{transition:none}}
