@@ -1271,6 +1271,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `douglasfir` | `1` 花旗松配色 |
 | `ponderosa` | `1` 西黄松配色 |
 | `yewtree` | `1` 红豆杉配色 |
+| `fir` | `1` 冷杉配色 |
+| `blackpine` | `1` 黑松配色 |
+| `scotspine` | `1` 樟子松配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 

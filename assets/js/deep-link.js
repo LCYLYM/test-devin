@@ -4155,6 +4155,9 @@
     if (params.get('douglasfir') === '1') { document.body.classList.add('is-douglasfir'); }
     if (params.get('ponderosa') === '1') { document.body.classList.add('is-ponderosa'); }
     if (params.get('yewtree') === '1') { document.body.classList.add('is-yewtree'); }
+    if (params.get('fir') === '1') { document.body.classList.add('is-fir'); }
+    if (params.get('blackpine') === '1') { document.body.classList.add('is-blackpine'); }
+    if (params.get('scotspine') === '1') { document.body.classList.add('is-scotspine'); }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -5668,6 +5671,9 @@
         if (params.get('douglasfir') === '1') u.searchParams.set('douglasfir', '1');
         if (params.get('ponderosa') === '1') u.searchParams.set('ponderosa', '1');
         if (params.get('yewtree') === '1') u.searchParams.set('yewtree', '1');
+        if (params.get('fir') === '1') u.searchParams.set('fir', '1');
+        if (params.get('blackpine') === '1') u.searchParams.set('blackpine', '1');
+        if (params.get('scotspine') === '1') u.searchParams.set('scotspine', '1');
       if (params.get('tile') === '1') u.searchParams.set('tile', '1');
       if (params.get('outline') === '1') u.searchParams.set('outline', '1');
       if (params.get('stripe') === '1') u.searchParams.set('stripe', '1');

@@ -2740,6 +2740,12 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .is-ponderosa .instrument{border-color:rgba(190,140,80,.4)}
 .is-yewtree{background:linear-gradient(180deg,#151a14 0%,#0f130f 100%)}
 .is-yewtree .instrument{border-color:rgba(134,168,110,.4)}
+.is-fir{background:linear-gradient(180deg,#131a16 0%,#0e1310 100%)}
+.is-fir .instrument{border-color:rgba(118,164,134,.4)}
+.is-blackpine{background:linear-gradient(180deg,#141613 0%,#0f110e 100%)}
+.is-blackpine .instrument{border-color:rgba(134,146,116,.4)}
+.is-scotspine{background:linear-gradient(180deg,#1c1710 0%,#15110a 100%)}
+.is-scotspine .instrument{border-color:rgba(194,140,76,.4)}
 .is-oatmeal{background:linear-gradient(180deg,#1d1912,#2f291e 50%,#433a2a)}
 .is-oatmeal .instrument{border-color:rgba(215,195,155,.4)}
 .is-thyme{background:linear-gradient(180deg,#121a14,#1c2a20 50%,#28392c)}
