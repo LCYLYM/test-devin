@@ -7255,3 +7255,55 @@ body[data-template=harbor] .harbor-visual{display:block}
 .hrb-gull{position:absolute;left:52%;top:22%;width:12px;height:5px;border-top:2px solid #d8dce0;border-radius:50%;opacity:0}
 .projector-caption,.trek-caption,.harbor-caption{text-align:center;font-size:11px;color:var(--dim);margin-top:10px}
 @media(prefers-reduced-motion:reduce){.prj-beam,.prj-screen,.trk-hiker,.trk-flag,.hrb-ship{transition:none}}
+
+/* staircase 旋梯 */
+body[data-template=staircase]{--bg:#121008;--surface:#1c1810;--surface-2:#282214;--line:#4c4028;--text:#e8dcc0;--accent:#b8a878;--accent-rgb:184,168,120;--instrument:#1c1810;--muted:#a89878;--dim:#685e44}
+.staircase-visual{display:none;position:relative;margin-top:18px}
+body[data-template=staircase] .charge-visual{display:none}
+body[data-template=staircase] .staircase-visual{display:block}
+.stc-scene{position:relative;height:200px;max-width:300px;margin:0 auto}
+.stc-step{position:absolute;width:44px;height:10px;background:linear-gradient(180deg,#4c4028,#2a2418);border-radius:2px;opacity:0.12;transition:opacity .5s}
+.stc-step:nth-of-type(1){bottom:12px;left:16%}
+.stc-step:nth-of-type(2){bottom:38px;left:32%}
+.stc-step:nth-of-type(3){bottom:64px;left:48%}
+.stc-step:nth-of-type(4){bottom:90px;left:38%}
+.stc-step:nth-of-type(5){bottom:116px;left:24%}
+.stc-step:nth-of-type(6){bottom:142px;left:36%}
+.stc-lamp{position:absolute;top:8px;left:50%;width:12px;height:12px;margin-left:-6px;border-radius:50%;background:radial-gradient(circle,#f0d888,#b8a878);box-shadow:0 0 16px 6px rgba(240,216,136,0.35);opacity:0;transition:opacity .5s}
+.staircase-caption{text-align:center;font-size:11px;color:var(--dim);margin-top:10px}
+@media(prefers-reduced-motion:reduce){body[data-template=staircase] *{animation:none!important;transition:none!important}}
+
+/* bakery 烘焙坊 */
+body[data-template=bakery]{--bg:#140e06;--surface:#1e150a;--surface-2:#2a1e0e;--line:#4c3620;--text:#f0dcbc;--accent:#d8a050;--accent-rgb:216,160,80;--instrument:#1e150a;--muted:#b89058;--dim:#6e5738}
+.bakery-visual{display:none;position:relative;margin-top:18px}
+body[data-template=bakery] .charge-visual{display:none}
+body[data-template=bakery] .bakery-visual{display:block}
+.bky-scene{position:relative;height:190px;max-width:300px;margin:0 auto}
+.bky-oven{position:absolute;bottom:14px;left:50%;transform:translateX(-50%);width:190px;height:120px;border-radius:16px 16px 8px 8px;background:linear-gradient(180deg,#3a2a16,#241a0c);border:2px solid #4c3620;overflow:hidden}
+.bky-oven::before{content:"";position:absolute;left:14px;right:14px;top:18px;bottom:14px;border-radius:10px;background:#100a04;border:1px solid #4c3620}
+.bky-glow{position:absolute;left:18px;right:18px;top:22px;bottom:18px;border-radius:8px;background:radial-gradient(ellipse at 50% 80%,rgba(255,170,60,0.5),transparent 70%);opacity:0}
+.bky-bread{position:absolute;left:50%;bottom:26px;width:90px;height:46px;margin-left:-45px;border-radius:46px 46px 12px 12px;background:radial-gradient(ellipse at 40% 30%,#e8dcc0,#b8a878);transform:scale(0.5);transform-origin:bottom center;transition:transform .6s,background .6s}
+.bky-steam{position:absolute;left:44%;top:30px;width:8px;height:18px;border-radius:8px;background:rgba(232,220,192,0.35);filter:blur(3px);opacity:0}
+#bkyS2{left:56%}
+.bakery-caption{text-align:center;font-size:11px;color:var(--dim);margin-top:10px}
+@media(prefers-reduced-motion:reduce){body[data-template=bakery] *{animation:none!important;transition:none!important}}
+
+/* castle 城堡 */
+body[data-template=castle]{--bg:#0e1018;--surface:#161a26;--surface-2:#1e2434;--line:#38405a;--text:#d8dce8;--accent:#98a0b8;--accent-rgb:152,160,184;--instrument:#161a26;--muted:#8890a8;--dim:#565e76}
+.castle-visual{display:none;position:relative;margin-top:18px}
+body[data-template=castle] .charge-visual{display:none}
+body[data-template=castle] .castle-visual{display:block}
+.cst2-scene{position:relative;height:210px;max-width:320px;margin:0 auto}
+.cst2-ground{position:absolute;bottom:0;left:0;right:0;height:12px;background:linear-gradient(180deg,#1a2414,#10160a);border-radius:6px 6px 0 0}
+.cst2-keep{position:absolute;bottom:10px;left:50%;width:80px;margin-left:-40px;height:0;background:linear-gradient(180deg,#4a5268,#323a4e);border:2px solid #38405a;border-bottom:none;transition:height .6s}
+.cst2-keep::before{content:"";position:absolute;top:-8px;left:-2px;right:-2px;height:8px;background:repeating-linear-gradient(90deg,#4a5268 0 10px,transparent 10px 16px)}
+.cst2-tower{position:absolute;bottom:10px;width:34px;height:90px;background:linear-gradient(180deg,#505872,#3a4258);border:2px solid #38405a;border-bottom:none;border-radius:4px 4px 0 0;opacity:0;transition:opacity .5s}
+.cst2-tower::before{content:"";position:absolute;top:-9px;left:-2px;right:-2px;height:9px;background:repeating-linear-gradient(90deg,#505872 0 8px,transparent 8px 12px)}
+.cst2-tower.t1{left:16%}
+.cst2-tower.t2{right:16%;height:104px}
+.cst2-flag{position:absolute;width:0;height:0;border-top:7px solid transparent;border-bottom:7px solid transparent;border-left:18px solid #c85038;opacity:0;transition:opacity .4s}
+#cst2F{bottom:96px;left:calc(16% + 34px)}
+#cst2F2{bottom:112px;right:calc(16% - 18px);transform:scaleX(-1)}
+.cst2-flag::before{content:"";position:absolute;right:100%;top:-14px;width:2px;height:14px;background:#38405a}
+.castle-caption{text-align:center;font-size:11px;color:var(--dim);margin-top:10px}
+@media(prefers-reduced-motion:reduce){body[data-template=castle] *{animation:none!important;transition:none!important}}
