@@ -5867,3 +5867,32 @@ body[data-template=rubbing] .rubbing-visual{display:block}
 .rbg-edge{position:absolute;inset:0;box-shadow:inset 0 0 12px rgba(0,0,0,.35);border-radius:4px}
 .rbg-dab{position:absolute;left:20%;top:20%;width:22px;height:22px;background:radial-gradient(circle,#38383a,#1c1c1e);border-radius:50%;opacity:.9;transition:left .4s,top .4s,opacity .4s;box-shadow:0 3px 8px rgba(0,0,0,.5)}
 @media(prefers-reduced-motion:reduce){.rbg-dab{transition:opacity .4s}}
+body[data-template=loom]{--bg:#181008;--surface:#20180c;--surface-2:#282010;--line:#443316;--text:#ecdcc0;--accent:#c87840;--accent-rgb:200,120,64;--instrument:#20180c;--muted:#9a7248;--dim:#9a7248}
+body[data-template=mosaic]{--bg:#0a1216;--surface:#101a20;--surface-2:#162228;--line:#28373e;--text:#d0e4ec;--accent:#58a8c8;--accent-rgb:88,168,200;--instrument:#101a20;--muted:#557c8c;--dim:#557c8c}
+body[data-template=seal]{--bg:#140e0a;--surface:#1c1410;--surface-2:#241a14;--line:#3c2a20;--text:#ecd8c8;--accent:#d83830;--accent-rgb:216,56,48;--instrument:#1c1410;--muted:#96685c;--dim:#96685c}
+.loom-visual,.mosaic-visual,.seal-visual{display:none;position:relative;margin-top:18px}
+body[data-template=loom] .charge-visual,body[data-template=mosaic] .charge-visual,body[data-template=seal] .charge-visual{display:none}
+body[data-template=loom] .loom-visual{display:block}
+.lom-scene{position:relative;height:180px;background:radial-gradient(ellipse at 50% 60%,#2a1e0c,#181008 75%);overflow:hidden}
+.lom-frame{position:absolute;left:50%;top:50%;width:150px;height:130px;transform:translate(-50%,-50%)}
+.lom-beam{position:absolute;left:0;right:0;height:10px;background:linear-gradient(#7a5a30,#5a4020);border-radius:3px}
+.lom-beam.t{top:0}.lom-beam.b{bottom:0}
+.lom-warp{position:absolute;left:8px;right:8px;top:10px;bottom:10px;background:repeating-linear-gradient(90deg,rgba(230,200,140,.35) 0 3px,transparent 3px 9px)}
+.lom-cloth{position:absolute;left:8px;right:8px;top:10px;height:0;background:repeating-linear-gradient(0deg,#c87840 0 6px,#a85830 6px 12px);transition:height .5s}
+.lom-shuttle{position:absolute;left:6%;top:10%;width:26px;height:12px;background:linear-gradient(#d8a850,#a07030);border-radius:50% 50% 50% 50%/60% 60% 40% 40%;transition:left .3s,top .4s}
+.loom-caption,.mosaic-caption,.seal-caption{text-align:center;font-size:11px;color:var(--dim);margin-top:10px}
+body[data-template=mosaic] .mosaic-visual{display:block}
+.msc-scene{position:relative;height:180px;width:180px;margin:0 auto;background:#0e1a20;border-radius:8px;overflow:hidden;display:grid;grid-template-columns:repeat(4,1fr);gap:3px;padding:10px}
+.msc-tile{background:linear-gradient(145deg,#3a6878,#1e3c48);border-radius:3px;opacity:.25;transition:transform .5s,opacity .5s;transform:rotateY(90deg)}
+.msc-tile.t2,.msc-tile.t3{background:linear-gradient(145deg,#c8a040,#8a6420)}
+.msc-tile.t5,.msc-tile.t6,.msc-tile.t7,.msc-tile.t8{background:linear-gradient(145deg,#d8b050,#a87828)}
+.msc-tile.t10,.msc-tile.t11{background:linear-gradient(145deg,#e0bc60,#b08830)}
+.msc-glyph{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:64px;font-weight:700;color:#18303c;text-shadow:0 1px 0 rgba(255,255,255,.25);pointer-events:none}
+body[data-template=seal] .seal-visual{display:block}
+.sea-scene{position:relative;height:180px;background:radial-gradient(ellipse at 50% 60%,#281810,#140e0a 75%);overflow:hidden}
+.sea-paper{position:absolute;left:50%;bottom:14%;width:150px;height:110px;margin-left:-75px;background:linear-gradient(#f0e8d8,#d8ccb4);border-radius:3px;transform:rotate(-2deg)}
+.sea-stamp{position:absolute;left:50%;top:12%;width:56px;height:64px;margin-left:-28px;background:linear-gradient(#7a3028,#4a1810);border-radius:8px;transition:top .5s cubic-bezier(.5,0,.8,.4)}
+.sea-stamp::before{content:'';position:absolute;left:50%;top:-24px;width:26px;height:28px;margin-left:-13px;background:linear-gradient(#8a4838,#5a2818);border-radius:6px 6px 0 0}
+.sea-face{position:absolute;left:6px;right:6px;bottom:-4px;height:16px;background:#d83830;border-radius:3px}
+.sea-print{position:absolute;left:50%;bottom:32%;transform:translate(-50%,-50%) scale(1.4);font-family:'Kaiti SC','STKaiti',KaiTi,serif;font-size:44px;color:#c82820;opacity:0;transition:opacity .5s,transform .5s;text-shadow:0 0 1px #c82820}
+@media(prefers-reduced-motion:reduce){.lom-shuttle,.sea-stamp{transition:none}}
