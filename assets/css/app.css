@@ -3513,3 +3513,120 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .is-focus .tint-layer{display:none}
 .motto-line{font-size:.72rem;opacity:.65;letter-spacing:.04em;margin-top:2px}
 .is-quiet .toast-stack,.is-quiet .click-ripple,.is-quiet .confetti-piece{display:none}
+
+/* iter-1686: sand skin — hourglass, borderless card, number buried in the sand */
+.sand-visual{display:none;flex-direction:column;align-items:center;gap:14px}
+body[data-template=sand]{--bg:#221a0e;--surface:#2c2314;--surface-2:#382c18;--line:#453823;--text:#f2e6cd;--accent:#e0b45a;--accent-rgb:224,180,90;--instrument:#0000;--muted:#b3a17d;--dim:#7c6c4d}
+body[data-template=sand] .instrument{border:0;background:transparent;box-shadow:none;padding-top:14px;min-height:0}
+body[data-template=sand] .charge-visual{display:none}
+body[data-template=sand] .sand-visual{display:flex}
+body[data-template=sand] .energy-stage{margin:14px 0 8px}
+body[data-template=sand] .template-slider{background:#3d3119}
+body[data-template=sand] .template-switch button.selected{color:#f0cd85}
+body[data-template=sand] .currency-pill{background:#2a2110;border-color:#4a3c1e}
+body[data-template=sand] .period-tabs button.selected{color:#f0dcb0}
+.sand-glass{position:relative;width:150px;height:250px;
+border:3px solid #6e5a34;border-radius:70px/60px;overflow:hidden;
+background:linear-gradient(180deg,rgba(255,244,214,.05),rgba(255,244,214,.02));
+box-shadow:0 12px 34px rgba(0,0,0,.4),inset 0 0 30px rgba(224,180,90,.05)}
+.sand-top{position:absolute;left:0;right:0;top:0;height:48%;border-bottom:1px solid #6e5a34}
+.sand-topfill{position:absolute;left:0;right:0;top:0;height:100%;
+background:linear-gradient(180deg,#d8a944,#b8862f);clip-path:polygon(0 0,100% 0,62% 100%,38% 100%);
+transition:height .8s linear}
+.sand-stream{position:absolute;left:50%;bottom:-4px;width:2px;height:14px;background:#f0cd85;transform:translateX(-50%);opacity:0}
+.instrument.is-working .sand-stream{animation:sand-drop .5s ease-in infinite}
+@keyframes sand-drop{from{transform:translate(-50%,-6px);opacity:1}to{transform:translate(-50%,14px);opacity:0}}
+.sand-neck{position:absolute;left:50%;top:48%;width:10px;height:8px;transform:translateX(-50%);background:#6e5a34;border-radius:2px}
+.sand-bottom{position:absolute;left:0;right:0;bottom:0;top:52%}
+.sand-fill{position:absolute;left:0;right:0;bottom:0;height:0%;
+background:linear-gradient(0deg,#d8a944,#c8953a);clip-path:polygon(18% 100%,82% 100%,58% 0,42% 0);
+transition:height .8s linear;display:flex;align-items:flex-start;justify-content:center}
+.sand-pct{padding-top:6px;font-size:13px;font-weight:650;color:#241a06;font-variant-numeric:tabular-nums}
+.sand-caption{font-size:12px;color:var(--muted);letter-spacing:.4px}
+@media(prefers-reduced-motion:reduce){.instrument.is-working .sand-stream{animation:none}.sand-fill,.sand-topfill{transition:none}}
+@media(max-width:520px){.sand-glass{width:120px;height:200px}}
+
+/* iter-1687: dial skin — circular sundial card, shadow hand sweeps the day */
+.dial-visual{display:none;flex-direction:column;align-items:center;gap:14px}
+body[data-template=dial]{--bg:#1e1710;--surface:#292017;--surface-2:#342918;--line:#453a28;--text:#f4ead6;--accent:#e8b04c;--accent-rgb:232,176,76;--instrument:#0000;--muted:#b3a488;--dim:#7c6e52}
+body[data-template=dial] .instrument{border:0;background:transparent;box-shadow:none}
+body[data-template=dial] .charge-visual{display:none}
+body[data-template=dial] .dial-visual{display:flex}
+body[data-template=dial] .energy-stage{margin:10px 0}
+body[data-template=dial] .template-slider{background:#3c3018}
+body[data-template=dial] .template-switch button.selected{color:#f2c979}
+body[data-template=dial] .currency-pill{background:#281f10;border-color:#463a20}
+body[data-template=dial] .period-tabs button.selected{color:#edd9ad}
+.dial-plate{position:relative;width:min(250px,70vw);aspect-ratio:1;border-radius:50%;
+background:radial-gradient(circle at 50% 38%,#3a2f1c,#241b0f 72%);
+border:2px solid #564628;box-shadow:0 16px 44px rgba(0,0,0,.5),inset 0 0 50px rgba(232,176,76,.06)}
+.dial-face{position:absolute;inset:0}
+.dial-marks i{position:absolute;left:50%;top:50%;width:2px;height:12px;background:#8a7446;transform-origin:50% 0}
+.dial-marks i:nth-child(1){transform:translate(-50%,-115px)}
+.dial-marks i:nth-child(2){transform:translate(-50%,103px)}
+.dial-marks i:nth-child(3){transform:translate(-50%,-6px) rotate(90deg) translateY(-109px)}
+.dial-marks i:nth-child(4){transform:translate(-50%,-6px) rotate(-90deg) translateY(-109px)}
+.dial-hand{position:absolute;left:calc(50% - 1.5px);top:50%;width:3px;height:38%;
+background:linear-gradient(0deg,transparent,#e8b04c);transform-origin:50% 0;
+transform:rotate(0deg);transition:transform .8s linear;filter:drop-shadow(0 0 6px rgba(232,176,76,.5))}
+.dial-hand::after{content:'';position:absolute;left:50%;top:0;width:26px;height:26px;border-radius:50%;
+background:radial-gradient(circle,#f2c979,#a8781f);transform:translate(-50%,-50%)}
+.dial-pin{position:absolute;left:50%;top:50%;width:12px;height:12px;border-radius:50%;
+background:#f2c979;transform:translate(-50%,-50%);box-shadow:0 0 10px rgba(232,176,76,.8)}
+.dial-pct{position:absolute;left:50%;top:68%;transform:translateX(-50%);
+font-size:17px;font-weight:600;color:#f4e3bb;font-variant-numeric:tabular-nums}
+.dial-caption{font-size:12px;color:var(--muted);letter-spacing:.4px}
+@media(prefers-reduced-motion:reduce){.dial-hand{transition:none}}
+
+/* iter-1688: trail skin — mountain ridge fills the whole card, hiker flag marks progress */
+.trail-visual{display:none;position:absolute;inset:0}
+body[data-template=trail]{--bg:#121a13;--surface:#1a241a;--surface-2:#212d20;--line:#2f3d2b;--text:#e7f2df;--accent:#7cc48f;--accent-rgb:124,196,143;--instrument:#0d120d;--muted:#9db392;--dim:#64765e}
+body[data-template=trail] .instrument{position:relative;overflow:hidden;min-height:470px;border-color:#243021}
+body[data-template=trail] .charge-visual{display:none}
+body[data-template=trail] .trail-visual{display:block}
+body[data-template=trail] .energy-stage{position:absolute;inset:0;margin:0}
+body[data-template=trail] .value-cluster{position:relative;z-index:3;padding-top:24px}
+body[data-template=trail] .instrument-toolbar{position:relative;z-index:3}
+body[data-template=trail] .instrument-footer{position:absolute;bottom:16px;left:20px;right:20px;z-index:3}
+body[data-template=trail] .template-slider{background:#28361f}
+body[data-template=trail] .template-switch button.selected{color:#a5ddb6}
+body[data-template=trail] .currency-pill{background:#172116;border-color:#33482b}
+body[data-template=trail] .period-tabs button.selected{color:#c8e8cf}
+.trail-svg{position:absolute;inset:0;width:100%;height:100%}
+.trail-ridge{fill:#172016}
+.trail-flag{position:absolute;transform:translate(-50%,-115%);z-index:4;transition:left .8s linear,top .8s linear}
+.trail-pct{display:block;background:#7cc48f;color:#0d140d;font-size:11px;font-weight:650;
+padding:2px 8px;border-radius:12px 12px 12px 3px;white-space:nowrap;box-shadow:0 3px 10px rgba(0,0,0,.45)}
+.trail-flag::before{content:'';display:block;width:8px;height:8px;border-radius:50%;background:#dff0d6;margin:0 auto 3px;box-shadow:0 0 10px rgba(124,196,143,.9)}
+.trail-caption{position:absolute;right:20px;top:86px;z-index:4;font-size:11px;color:#8ba57f;letter-spacing:.4px}
+@media(prefers-reduced-motion:reduce){.trail-flag{transition:none}}
+@media(max-width:760px){body[data-template=trail] .instrument{min-height:430px}.trail-caption{top:76px}}
+
+/* iter-1689: metro skin — salary as subway line, train rides station to station */
+.metro-visual{display:none;flex-direction:column;align-items:center;gap:16px;width:100%}
+body[data-template=metro]{--bg:#0e1620;--surface:#141f2d;--surface-2:#1a2738;--line:#273750;--text:#e3eefc;--accent:#5fb0e8;--accent-rgb:95,176,232;--instrument:#0a1219;--muted:#8fa5c0;--dim:#57697f}
+body[data-template=metro] .charge-visual{display:none}
+body[data-template=metro] .metro-visual{display:flex}
+body[data-template=metro] .energy-stage{margin:30px 0 20px;width:100%}
+body[data-template=metro] .template-slider{background:#1d2c42}
+body[data-template=metro] .template-switch button.selected{color:#8cc8f2}
+body[data-template=metro] .currency-pill{background:#132033;border-color:#2c3f5c}
+body[data-template=metro] .period-tabs button.selected{color:#b9d9f5}
+.metro-line{width:min(560px,100%);padding:0 8px}
+.metro-track{position:relative;height:6px;border-radius:6px;background:#24344d}
+.metro-fill{position:absolute;left:0;top:0;bottom:0;width:0%;border-radius:6px;
+background:linear-gradient(90deg,#3a7cc4,#5fb0e8);transition:width .8s linear}
+.metro-train{position:absolute;top:-11px;left:-14px;width:28px;height:28px;border-radius:8px;
+background:#5fb0e8;display:flex;align-items:center;justify-content:center;color:#0a1219;
+box-shadow:0 0 16px rgba(95,176,232,.6);transition:left .8s linear}
+.metro-train .icon{width:15px;height:15px}
+.instrument.is-working .metro-train{animation:metro-bob .7s ease-in-out infinite}
+@keyframes metro-bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-2px)}}
+.metro-stops{display:flex;justify-content:space-between;margin-top:12px;font-size:10px;color:#7187a3;font-variant-numeric:tabular-nums}
+.metro-stop{display:flex;flex-direction:column;align-items:center;gap:4px}
+.metro-stop i{width:7px;height:7px;border-radius:50%;background:#24344d;border:1.5px solid #4a6284}
+.metro-stop.on i{background:#5fb0e8;border-color:#5fb0e8;box-shadow:0 0 8px rgba(95,176,232,.7)}
+.metro-stop.on{color:#cfe6fb}
+.metro-pct{font-size:15px;color:#b9d9f5;font-variant-numeric:tabular-nums;text-align:center;margin-top:10px}
+.metro-caption{font-size:12px;color:var(--muted);letter-spacing:.4px}
+@media(prefers-reduced-motion:reduce){.instrument.is-working .metro-train{animation:none}.metro-fill,.metro-train{transition:none}}

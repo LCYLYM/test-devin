@@ -51,10 +51,10 @@
     var template = params.get('template') || params.get('skin');
     if (template === 'daily') {
       var dayNum = Math.floor(Date.now() / 864e5);
-      var dailyList = ['pig', 'charge', 'meter', 'pixel', 'neon', 'mono', 'paper', 'term', 'ecg', 'wave', 'therm'];
+      var dailyList = ['pig', 'charge', 'meter', 'pixel', 'neon', 'mono', 'paper', 'term', 'ecg', 'wave', 'therm', 'receipt', 'sand', 'dial', 'trail', 'metro'];
       template = dailyList[dayNum % dailyList.length];
     }
-    if (template === 'random') template = ['charge','meter','pixel','pig','neon','mono','paper','term','ecg','wave','therm','receipt'][Math.floor(Math.random() * 12)];
+    if (template === 'random') template = ['charge','meter','pixel','pig','neon','mono','paper','term','ecg','wave','therm','receipt','sand','dial','trail','metro'][Math.floor(Math.random() * 16)];
     if (template) app.setTemplate(template);
     else {
       // First-visit default follows the OS: light mode gets the paper skin.
@@ -186,7 +186,7 @@
       document.body.style.setProperty('--accent', accent);
     }
 
-    var THEME_COLORS = {pig:'#1a1716',charge:'#131415',meter:'#171715',pixel:'#151515',neon:'#0c0e18',mono:'#111111',paper:'#f2efe7',term:'#0d1117',ecg:'#160a0a',wave:'#0b1526',therm:'#181310',receipt:'#181512'};
+    var THEME_COLORS = {pig:'#1a1716',charge:'#131415',meter:'#171715',pixel:'#151515',neon:'#0c0e18',mono:'#111111',paper:'#f2efe7',term:'#0d1117',ecg:'#160a0a',wave:'#0b1526',therm:'#181310',receipt:'#181512',sand:'#221a0e',dial:'#1e1710',trail:'#121a13',metro:'#0e1620'};
     function applyThemeColor(t) {
       var m = document.querySelector('meta[name=theme-color]');
       if (m && THEME_COLORS[t]) m.content = THEME_COLORS[t];
@@ -4745,14 +4745,14 @@
     } else if (e.key === '?') {
       if (window.SalaryApp) window.SalaryApp.openDialog('aboutDialog');
     } else if (e.key === 't' && window.SalaryApp) {
-      var skins = ['pig', 'charge', 'meter', 'pixel', 'neon', 'mono', 'paper', 'term', 'ecg', 'wave', 'therm'];
+      var skins = ['pig', 'charge', 'meter', 'pixel', 'neon', 'mono', 'paper', 'term', 'ecg', 'wave', 'therm', 'receipt', 'sand', 'dial', 'trail', 'metro'];
       var cur = window.SalaryApp.getState().preferences.template;
       window.SalaryApp.setTemplate(skins[(skins.indexOf(cur) + 1) % skins.length]);
     } else if (e.key === 'p' && window.SalaryApp) {
       var st = window.SalaryApp.getState();
       window.SalaryApp.setPeriod(st.preferences.period === 'day' ? 'month' : 'day');
     } else if (/^[0-9]$/.test(e.key) && window.SalaryApp) {
-      var skinKeys = ['pig','charge','meter','pixel','neon','mono','paper','term','ecg','wave'];
+      var skinKeys = ['pig','charge','meter','pixel','neon','mono','paper','term','ecg','wave','therm','receipt','sand','dial','trail','metro'];
       var direct = e.key === '0' ? skinKeys[9] : skinKeys[Number(e.key) - 1];
       if (direct) window.SalaryApp.setTemplate(direct);
     } else if (e.key === 'q') {
