@@ -1361,6 +1361,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `beautybush` | `1` ビューティブッシュ配色 |
 | `ninebark` | `1` アメリカコデマリ配色 |
 | `aronia` | `1` アロニア配色 |
+| `fuchsia` | `1` フクシア配色 |
+| `oleander` | `1` キョウチクトウ配色 |
+| `buddleia` | `1` フサフジウツギ配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 
