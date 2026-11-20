@@ -7048,3 +7048,43 @@ body[data-template=billiards] .billiards-visual{display:block}
 .bls-cue::after{content:'';position:absolute;right:-9px;top:1px;width:9px;height:9px;background:#f0f0f0;border-radius:50%}
 .sunrise-caption,.moonrise-caption,.billiards-caption{text-align:center;font-size:11px;color:var(--dim);margin-top:10px}
 @media(prefers-reduced-motion:reduce){.snr-sky,.snr-sun,.mnr-moon,.mnr-stars,.bls-ball,.bls-cue{transition:none}}
+body[data-template=golf]{--bg:#0c140c;--surface:#141c14;--surface-2:#1c261c;--line:#30402e;--text:#d8ecd4;--accent:#58b060;--accent-rgb:88,176,96;--instrument:#141c14;--muted:#5a8060;--dim:#5a8060}
+body[data-template=bowling]{--bg:#140e0a;--surface:#1c1610;--surface-2:#28201a;--line:#423224;--text:#ecdcce;--accent:#d85848;--accent-rgb:216,88,72;--instrument:#1c1610;--muted:#8a6450;--dim:#8a6450}
+body[data-template=meadow]{--bg:#0c1208;--surface:#141a10;--surface-2:#1c2416;--line:#303e28;--text:#dce8d0;--accent:#78c060;--accent-rgb:120,192,96;--instrument:#141a10;--muted:#648054;--dim:#648054}
+.golf-visual,.bowling-visual,.meadow-visual{display:none;position:relative;margin-top:18px}
+body[data-template=golf] .charge-visual,body[data-template=bowling] .charge-visual,body[data-template=meadow] .charge-visual{display:none}
+body[data-template=golf] .golf-visual{display:block}
+.glf-scene{position:relative;height:180px;background:linear-gradient(#1a2c14,#0c140c);overflow:hidden}
+.glf-green{position:absolute;left:0;right:0;bottom:0;height:34%;background:linear-gradient(#4a8838,#2c5c20);border-radius:60% 40% 0 0/100% 40% 0 0}
+.glf-hole{position:absolute;right:14%;bottom:26%;width:16px;height:6px;background:#0a0a0a;border-radius:50%}
+.glf-flag{position:absolute;right:19%;bottom:26%;width:3px;height:34px;background:#d8d0b8}
+.glf-flag::after{content:'';position:absolute;left:3px;top:0;width:16px;height:10px;background:#e04038;clip-path:polygon(0 0,100% 50%,0 100%)}
+.glf-svg{position:absolute;inset:0;width:100%;height:100%}
+.glf-arc{stroke:rgba(255,255,255,.5);stroke-width:1.5;stroke-dasharray:90}
+.glf-ball{position:absolute;bottom:30%;left:18%;width:10px;height:10px;background:radial-gradient(circle at 35% 30%,#fff,#b8bcc0);border-radius:50%;transition:opacity .3s}
+body[data-template=bowling] .bowling-visual{display:block}
+.bwl-scene{position:relative;height:180px;background:#140e0a;overflow:hidden}
+.bwl-lane{position:absolute;left:0;right:0;bottom:12%;height:44%;background:linear-gradient(#c8a068,#8a6030);border-top:4px solid #5c3c18;border-bottom:4px solid #5c3c18}
+.bwl-pins{position:absolute;right:10%;bottom:16%;width:60px;height:60px}
+.bwl-pin{position:absolute;width:10px;height:26px;background:linear-gradient(#f0f0ea,#d0ccc0);border-radius:5px 5px 3px 3px;transform-origin:50% 90%;transition:transform .3s,opacity .3s}
+.bwl-pin::before{content:'';position:absolute;top:5px;left:0;right:0;height:3px;background:#c03028;border-radius:2px}
+.bwl-pin#bwlP1{left:25px;top:0}
+.bwl-pin#bwlP2{left:12px;top:10px}
+.bwl-pin#bwlP3{left:38px;top:10px}
+.bwl-pin#bwlP4{left:0;top:20px}
+.bwl-pin#bwlP5{left:25px;top:20px}
+.bwl-pin#bwlP6{left:50px;top:20px}
+.bwl-ball{position:absolute;left:8%;bottom:20%;width:20px;height:20px;background:radial-gradient(circle at 35% 30%,#484858,#101018);border-radius:50%;transition:left .15s linear,opacity .3s}
+body[data-template=meadow] .meadow-visual{display:block}
+.mdw-scene{position:relative;height:180px;background:linear-gradient(#1a2a16,#0c1208);overflow:hidden}
+.mdw-field{position:absolute;left:0;right:0;bottom:0;height:40%;background:linear-gradient(#3a6028,#243c18)}
+.mdw-grass{position:absolute;bottom:38%;width:4px;height:0;background:linear-gradient(#6aa848,#3c7828);border-radius:3px 3px 0 0;transform-origin:bottom center}
+.mdw-grass.g1{left:22%}
+.mdw-grass.g2{left:40%}
+.mdw-grass.g3{left:56%}
+.mdw-grass.g4{left:72%}
+.mdw-flower{position:absolute;bottom:calc(38% + 26px);width:14px;height:14px;background:radial-gradient(circle at 50% 30%,#f8d860,#e08820);border-radius:50% 50% 50% 50%/60% 60% 40% 40%;opacity:0;transform:scale(.3);transition:transform .4s,opacity .3s}
+.mdw-flower#mdwFl1{left:40%}
+.mdw-flower#mdwFl2{left:60%}
+.golf-caption,.bowling-caption,.meadow-caption{text-align:center;font-size:11px;color:var(--dim);margin-top:10px}
+@media(prefers-reduced-motion:reduce){.bwl-pin,.bwl-ball,.mdw-flower,.glf-ball{transition:none}}
