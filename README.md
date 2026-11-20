@@ -20,7 +20,7 @@
 | 加班 | 加班计时器 + 按天补记，算出真实时薪 |
 | 多币种 | Frankfurter 实时汇率换算，含「津巴布韦 · 亿万富翁」趣味模式 |
 | 分享海报 | 一键生成 1080×1440 收入海报 + 二维码 |
-| 二百四十种皮肤 | 存钱罐（默认）/ 充电 / 刻度 / 像素 / 霓虹 / 极简 / 纸墨 / 终端 / 心电 / 水球 / 温度 / 收据 / 沙漏 / 日晷 / 登径 / 地铁 / 电梯 / 日食 / 翻牌 / 唱片 / 星图 / 盆栽 / 皮影 / 潮汐 / 火箭 / 气球 / 鱼缸 / 风筝 / 瀑布 / 面包机 / 篝火 / 缆车 / 蜂巢 / 天灯 / 算盘 / 摩天轮 / 雪花球 / 地震仪 / 梯田 / 娃娃机 / 老虎机 / 多米诺 / 火柴 / 爆米花 / 方块 / 钓鱼 / 陶艺 / 烟花棒 / 折纸 / 打字机 / 极光 / 猫咪 / 转经筒 / 钢琴 / 萤火罐 / 熔岩灯 / 织毛衣 / 榨汁机 / 彩虹 / 盆景 / 贩卖机 / 灯塔 / 跑步机 / 烤箱 / 许愿池 / 沙雕 / 水墨 / 蜡烛 / 秋千 / 扭蛋机 / 冲浪 / 望远镜 / 漂流瓶 / 弹珠台 / 莲池 / 泡面 / 齿轮 / 侵略者 / 扫雷 / 皮影 / 温室 / 棋路 / 麻将 / 天平 / 日历 / 风车 / 烤串 / 归航 / 罗盘 / 潜水 / 冰凌 / 雪人 / 拉花 / 火车 / 爬山虎 / 打铁 / 糖葫芦 / 龙舟 / 石磨 / 滚筒 / 木鱼 / 寿司 / 棉花糖 / 陀螺 / 喷泉 / 雪橇 / 万花筒 / 工夫茶 / 拼图 / 竹简 / 纸伞 / 蒸笼 / 火锅 / 水车 / 爆竹 / 糖画 / 弹弓 / 大鼓 / 变脸 / 舞狮 / 糖炒栗子 / 冰雕 / 走马灯 / 打水漂 / 拍立得 / 跷跷板 / 霓虹灯管 / 吹泡泡 / 烤披萨 / 吹糖人 / 孔明灯 / 铜钱串 / 沙画 / 拨浪鼓 / 套圈 / 喷墨 / 盖碗茶 / 空竹 / 刺绣 / 七巧板 / 中国结 / 拓片 / 织布 / 马赛克 / 印章 / 铜锣 / 编钟 / 古筝 / 推磨 / 竹蜻蜓 / 剪纸 / 呼啦圈 / 魔方 / 套娃 / 冰壶 / 抛球 / 悠悠球 / 风车 / 弹珠道 / 御神签 / 飞镖 / 彩罐 / 剑玉 / 跳箱 / 竹马 / 绳跳 / 皿回 / 钢索 / 射的 / 福笑 / 镜饼 / 羽子板 / 将棋 / 歌牌 / 西瓜 / 相扑 / 金鱼 / 暖帘 / 火山 / 深海 / 化蝶 / 珍珠 / 蚁巢 / 葵花 / 节拍 / 旋臂 / 电路 / 吊桥 / 风向 / 钟楼 / 望远 / 水槽 / 玻璃园 / 筑巢 / 酵面 / 发酵 / 弓道 / 投篮 / 怀表 / 滑索 / 旋木 / 滑雪 / 萤火 / 月相 / 急须 / 蛛网 / 蜗牛 / 蜂鸟 / 蜕蝉 / 大坝 / 金瓮 / 鲤池 / 枯山水 / 果园 / 星座 / 太阳系 / 竹林 / 晶洞 / 曼陀罗 / 投石车 / 樱吹雪 / 线香 / 宝塔 / 雷达 / 火星车 / 冰山 / 彗星 / 星云 / 龙卷 / 玫瑰 / 蒲公英 / 棋局 / 日出 / 月升 / 桌球 / 高尔夫 / 保龄球 / 草甸 / 间歇泉 / 葡萄园 / 珊瑚礁 |
+| 二百四十三种皮肤 | 存钱罐（默认）/ 充电 / 刻度 / 像素 / 霓虹 / 极简 / 纸墨 / 终端 / 心电 / 水球 / 温度 / 收据 / 沙漏 / 日晷 / 登径 / 地铁 / 电梯 / 日食 / 翻牌 / 唱片 / 星图 / 盆栽 / 皮影 / 潮汐 / 火箭 / 气球 / 鱼缸 / 风筝 / 瀑布 / 面包机 / 篝火 / 缆车 / 蜂巢 / 天灯 / 算盘 / 摩天轮 / 雪花球 / 地震仪 / 梯田 / 娃娃机 / 老虎机 / 多米诺 / 火柴 / 爆米花 / 方块 / 钓鱼 / 陶艺 / 烟花棒 / 折纸 / 打字机 / 极光 / 猫咪 / 转经筒 / 钢琴 / 萤火罐 / 熔岩灯 / 织毛衣 / 榨汁机 / 彩虹 / 盆景 / 贩卖机 / 灯塔 / 跑步机 / 烤箱 / 许愿池 / 沙雕 / 水墨 / 蜡烛 / 秋千 / 扭蛋机 / 冲浪 / 望远镜 / 漂流瓶 / 弹珠台 / 莲池 / 泡面 / 齿轮 / 侵略者 / 扫雷 / 皮影 / 温室 / 棋路 / 麻将 / 天平 / 日历 / 风车 / 烤串 / 归航 / 罗盘 / 潜水 / 冰凌 / 雪人 / 拉花 / 火车 / 爬山虎 / 打铁 / 糖葫芦 / 龙舟 / 石磨 / 滚筒 / 木鱼 / 寿司 / 棉花糖 / 陀螺 / 喷泉 / 雪橇 / 万花筒 / 工夫茶 / 拼图 / 竹简 / 纸伞 / 蒸笼 / 火锅 / 水车 / 爆竹 / 糖画 / 弹弓 / 大鼓 / 变脸 / 舞狮 / 糖炒栗子 / 冰雕 / 走马灯 / 打水漂 / 拍立得 / 跷跷板 / 霓虹灯管 / 吹泡泡 / 烤披萨 / 吹糖人 / 孔明灯 / 铜钱串 / 沙画 / 拨浪鼓 / 套圈 / 喷墨 / 盖碗茶 / 空竹 / 刺绣 / 七巧板 / 中国结 / 拓片 / 织布 / 马赛克 / 印章 / 铜锣 / 编钟 / 古筝 / 推磨 / 竹蜻蜓 / 剪纸 / 呼啦圈 / 魔方 / 套娃 / 冰壶 / 抛球 / 悠悠球 / 风车 / 弹珠道 / 御神签 / 飞镖 / 彩罐 / 剑玉 / 跳箱 / 竹马 / 绳跳 / 皿回 / 钢索 / 射的 / 福笑 / 镜饼 / 羽子板 / 将棋 / 歌牌 / 西瓜 / 相扑 / 金鱼 / 暖帘 / 火山 / 深海 / 化蝶 / 珍珠 / 蚁巢 / 葵花 / 节拍 / 旋臂 / 电路 / 吊桥 / 风向 / 钟楼 / 望远 / 水槽 / 玻璃园 / 筑巢 / 酵面 / 发酵 / 弓道 / 投篮 / 怀表 / 滑索 / 旋木 / 滑雪 / 萤火 / 月相 / 急须 / 蛛网 / 蜗牛 / 蜂鸟 / 蜕蝉 / 大坝 / 金瓮 / 鲤池 / 枯山水 / 果园 / 星座 / 太阳系 / 竹林 / 晶洞 / 曼陀罗 / 投石车 / 樱吹雪 / 线香 / 宝塔 / 雷达 / 火星车 / 冰山 / 彗星 / 星云 / 龙卷 / 玫瑰 / 蒲公英 / 棋局 / 日出 / 月升 / 桌球 / 高尔夫 / 保龄球 / 草甸 / 间歇泉 / 葡萄园 / 珊瑚礁 / 壁炉 / 温泉 / 溜冰 |
 
 ## 深链分享
 
@@ -33,7 +33,7 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | 参数 | 取值 |
 | --- | --- |
 | `salary` | 月薪数字，如 `15000` |
-| `template` | `pig` / `charge` / `meter` / `pixel` / `neon` / `mono` / `paper` / `term` / `ecg` / `wave` / `therm` / `receipt` / `sand` / `dial` / `trail` / `metro` / `lift` / `eclipse` / `flap` / `vinyl` / `const` / `plant` / `shadow` / `tide` / `rocket` / `balloon` / `aqua` / `kite` / `falls` / `toast` / `ember` / `cable` / `hive` / `lantern` / `abacus` / `ferris` / `globe` / `seismo` / `terrace` / `crane` / `slots` / `domino` / `match` / `popcorn` / `tetris` / `fishing` / `pottery` / `sparkler` / `origami` / `typewriter` / `aurora` / `catnap` / `prayer` / `piano` / `firejar` / `lava` / `knit` / `juice` / `rainbow` / `bonsai` / `vending` / `lighthouse` / `treadmill` / `oven` / `wishing` / `sandcastle` / `inkwash` / `candle` / `swing` / `gacha` / `surf` / `scope` / `bottle` / `pinball` / `lotus` / `ramen` / `gear` / `invader` / `mine` / `puppet` / `sprout` / `hop` / `mahjong` / `scale` / `tearoff` / `windmill` / `grill` / `dock` / `compass` / `sub` / `icicle` / `snowman` / `latte` / `train` / `ivy` / `forge` / `tanghulu` / `dragonboat` / `mill` / `laundry` / `muyu` / `sushi` / `mallow` / `top` / `fountain` / `sled` / `kaleido` / `gongfu` / `jigsaw` / `scroll` / `parasol` / `steamer` / `hotpot` / `waterwheel` / `firecrack` / `sugarart` / `sling` / `bigdrum` / `faceoff` / `liondance` / `chestnut` / `icesculpt` / `zoetrope` / `stoneskip` / `polaroid` / `seesaw` / `neontube` / `bubble` / `pizza` / `sugarman` / `skylantern` / `coin` / `sandart` / `rattle` / `ringtoss` / `inkjet` / `gaiwan` / `diabolo` / `stitch` / `tangram` / `knot` / `rubbing` / `loom` / `mosaic` / `seal` / `gong` / `bianzhong` / `zither` / `grind` / `copter` / `papercut` / `hula` / `rubik` / `nesting` / `curling` / `juggle` / `yoyo` / `pinwheel` / `marble` / `omikuji` / `darts` / `pinata` / `kendama` / `vaultbox` / `stilts` / `jumprope` / `plate` / `tightrope` / `shateki` / `fukuwarai` / `kagami` / `hagoita` / `shogi` / `karuta` / `suika` / `sumo` / `goldfish` / `noren` / `volcano` / `abyss` / `chrysalis` / `oyster` / `antfarm` / `sunflower` / `metronome` / `spiral` / `circuit` / `drawbridge` / `weathervane` / `bigben` / `telescope` / `aquarium` / `terrarium` / `nest` / `sourdough` / `ferment` / `archery` / `basketball` / `pendulum` / `zipline` / `carousel` / `ski` / `firefly` / `moonphase` / `teapot` / `spiderweb` / `snail` / `hummingbird` / `cicada` / `dam` / `potofgold` / `koipond` / `zengarden` / `orchard` 、`constellation` 、`solarsystem` 、`bamboo` 、`geode` 、`mandala` 、`catapult` 、`sakura` 、`incense` 、`pagoda` 、`radar` 、`rover` 、`iceberg` 、`comet` 、`nebula` 、`tornado` 、`rose` 、`dandelion` 、`chess` 、`sunrise` 、`moonrise` 、`billiards` 、`golf` 、`bowling` 、`meadow` 、`geyser` 、`vineyard` 、`reef`（`skin` 同义，`random`/`daily` 特殊值） |
+| `template` | `pig` / `charge` / `meter` / `pixel` / `neon` / `mono` / `paper` / `term` / `ecg` / `wave` / `therm` / `receipt` / `sand` / `dial` / `trail` / `metro` / `lift` / `eclipse` / `flap` / `vinyl` / `const` / `plant` / `shadow` / `tide` / `rocket` / `balloon` / `aqua` / `kite` / `falls` / `toast` / `ember` / `cable` / `hive` / `lantern` / `abacus` / `ferris` / `globe` / `seismo` / `terrace` / `crane` / `slots` / `domino` / `match` / `popcorn` / `tetris` / `fishing` / `pottery` / `sparkler` / `origami` / `typewriter` / `aurora` / `catnap` / `prayer` / `piano` / `firejar` / `lava` / `knit` / `juice` / `rainbow` / `bonsai` / `vending` / `lighthouse` / `treadmill` / `oven` / `wishing` / `sandcastle` / `inkwash` / `candle` / `swing` / `gacha` / `surf` / `scope` / `bottle` / `pinball` / `lotus` / `ramen` / `gear` / `invader` / `mine` / `puppet` / `sprout` / `hop` / `mahjong` / `scale` / `tearoff` / `windmill` / `grill` / `dock` / `compass` / `sub` / `icicle` / `snowman` / `latte` / `train` / `ivy` / `forge` / `tanghulu` / `dragonboat` / `mill` / `laundry` / `muyu` / `sushi` / `mallow` / `top` / `fountain` / `sled` / `kaleido` / `gongfu` / `jigsaw` / `scroll` / `parasol` / `steamer` / `hotpot` / `waterwheel` / `firecrack` / `sugarart` / `sling` / `bigdrum` / `faceoff` / `liondance` / `chestnut` / `icesculpt` / `zoetrope` / `stoneskip` / `polaroid` / `seesaw` / `neontube` / `bubble` / `pizza` / `sugarman` / `skylantern` / `coin` / `sandart` / `rattle` / `ringtoss` / `inkjet` / `gaiwan` / `diabolo` / `stitch` / `tangram` / `knot` / `rubbing` / `loom` / `mosaic` / `seal` / `gong` / `bianzhong` / `zither` / `grind` / `copter` / `papercut` / `hula` / `rubik` / `nesting` / `curling` / `juggle` / `yoyo` / `pinwheel` / `marble` / `omikuji` / `darts` / `pinata` / `kendama` / `vaultbox` / `stilts` / `jumprope` / `plate` / `tightrope` / `shateki` / `fukuwarai` / `kagami` / `hagoita` / `shogi` / `karuta` / `suika` / `sumo` / `goldfish` / `noren` / `volcano` / `abyss` / `chrysalis` / `oyster` / `antfarm` / `sunflower` / `metronome` / `spiral` / `circuit` / `drawbridge` / `weathervane` / `bigben` / `telescope` / `aquarium` / `terrarium` / `nest` / `sourdough` / `ferment` / `archery` / `basketball` / `pendulum` / `zipline` / `carousel` / `ski` / `firefly` / `moonphase` / `teapot` / `spiderweb` / `snail` / `hummingbird` / `cicada` / `dam` / `potofgold` / `koipond` / `zengarden` / `orchard` 、`constellation` 、`solarsystem` 、`bamboo` 、`geode` 、`mandala` 、`catapult` 、`sakura` 、`incense` 、`pagoda` 、`radar` 、`rover` 、`iceberg` 、`comet` 、`nebula` 、`tornado` 、`rose` 、`dandelion` 、`chess` 、`sunrise` 、`moonrise` 、`billiards` 、`golf` 、`bowling` 、`meadow` 、`geyser` 、`vineyard` 、`reef` 、`fireplace` 、`onsen` 、`iceskate`（`skin` 同义，`random`/`daily` 特殊值） |
 | `currency` | `CNY` / `USD` / `EUR` / `JPY` / `KRW` / `HKD` / `VND` / `IDR` / `GBP` / `SGD` / `AUD` / `ZIM` |
 | `period` | `day` / `month` |
 | `demo` | `1` 开启演示模式（数字可设倍速，如 `60`） |
@@ -463,7 +463,7 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `cedar` | `1` 雪松配色 |
 | `wheat` | `1` 麦浪配色 |
 | `cave` | `1` 洞穴配色 |
-| `meadow` 、`geyser` 、`vineyard` 、`reef` | `1` 草甸配色 |
+| `meadow` 、`geyser` 、`vineyard` 、`reef` 、`fireplace` 、`onsen` 、`iceskate` | `1` 草甸配色 |
 | `porcelain` | `1` 瓷器配色 |
 | `twilight` | `1` 暮色配色 |
 | `abyss` | `1` 深渊配色 |
@@ -497,7 +497,7 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `cliff` | `1` 崖壁配色 |
 | `tundra` | `1` 苔原配色 |
 | `canyon` | `1` 峡谷配色 |
-| `reef` | `1` 礁石配色 |
+| `reef` 、`fireplace` 、`onsen` 、`iceskate` | `1` 礁石配色 |
 | `umber` | `1` 赭土配色 |
 | `violet` | `1` 紫罗兰配色 |
 | `verdant` | `1` 翠绿配色 |
@@ -511,7 +511,7 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `brick` | `1` 砖红配色 |
 | `rosewood` | `1` 紫檀配色 |
 | `marsh` | `1` 沼泽配色 |
-| `iceberg` 、`comet` 、`nebula` 、`tornado` 、`rose` 、`dandelion` 、`chess` 、`sunrise` 、`moonrise` 、`billiards` 、`golf` 、`bowling` 、`meadow` 、`geyser` 、`vineyard` 、`reef` | `1` 冰山配色 |
+| `iceberg` 、`comet` 、`nebula` 、`tornado` 、`rose` 、`dandelion` 、`chess` 、`sunrise` 、`moonrise` 、`billiards` 、`golf` 、`bowling` 、`meadow` 、`geyser` 、`vineyard` 、`reef` 、`fireplace` 、`onsen` 、`iceskate` | `1` 冰山配色 |
 | `willow` | `1` 柳树配色 |
 | `volcano` | `1` 火山配色 |
 | `glade` | `1` 林间配色 |
@@ -525,7 +525,7 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `winter` | `1` 冬色配色 |
 | `spring` | `1` 春色配色 |
 | `summer` | `1` 夏色配色 |
-| `bamboo` 、`geode` 、`mandala` 、`catapult` 、`sakura` 、`incense` 、`pagoda` 、`radar` 、`rover` 、`iceberg` 、`comet` 、`nebula` 、`tornado` 、`rose` 、`dandelion` 、`chess` 、`sunrise` 、`moonrise` 、`billiards` 、`golf` 、`bowling` 、`meadow` 、`geyser` 、`vineyard` 、`reef` | `1` 竹色配色 |
+| `bamboo` 、`geode` 、`mandala` 、`catapult` 、`sakura` 、`incense` 、`pagoda` 、`radar` 、`rover` 、`iceberg` 、`comet` 、`nebula` 、`tornado` 、`rose` 、`dandelion` 、`chess` 、`sunrise` 、`moonrise` 、`billiards` 、`golf` 、`bowling` 、`meadow` 、`geyser` 、`vineyard` 、`reef` 、`fireplace` 、`onsen` 、`iceskate` | `1` 竹色配色 |
 | `flame` | `1` 火焰配色 |
 | `pastel` | `1` 粉彩配色 |
 | `mahogany` | `1` 红木配色 |
