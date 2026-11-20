@@ -1469,6 +1469,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `gruyere` | `1` グリュイエール配色 |
 | `manchego` | `1` マンチェゴ配色 |
 | `camembert` | `1` カマンベール配色 |
+| `brioche` | `1` ブリオッシュ配色 |
+| `focaccia` | `1` フォカッチャ配色 |
+| `ciabatta` | `1` チャバタ配色 |
 | `fuchsia` | `1` フクシア配色 |
 | `oleander` | `1` キョウチクトウ配色 |
 | `buddleia` | `1` フサフジウツギ配色 |
