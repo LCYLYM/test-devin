@@ -3154,6 +3154,12 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .is-ikura .instrument{border-color:rgba(240,95,40,.4)}
 .is-tobiko{background:linear-gradient(180deg,#291508 0%,#140a04 100%)}
 .is-tobiko .instrument{border-color:rgba(245,125,30,.4)}
+.is-unagi{background:linear-gradient(180deg,#1f1813 0%,#0f0b08 100%)}
+.is-unagi .instrument{border-color:rgba(160,105,70,.4)}
+.is-hamachi{background:linear-gradient(180deg,#1a1f26 0%,#0c0e12 100%)}
+.is-hamachi .instrument{border-color:rgba(110,145,200,.4)}
+.is-maguro{background:linear-gradient(180deg,#281416 0%,#140a0a 100%)}
+.is-maguro .instrument{border-color:rgba(220,75,85,.4)}
 .is-fuchsia{background:linear-gradient(180deg,#2e1428 0%,#160a13 100%)}
 .is-fuchsia .instrument{border-color:rgba(230,100,200,.4)}
 .is-oleander{background:linear-gradient(180deg,#2c1720 0%,#150b0f 100%)}

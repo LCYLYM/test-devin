@@ -1478,6 +1478,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `uni` | `1` ウニ配色 |
 | `ikura` | `1` イクラ配色 |
 | `tobiko` | `1` トビコ配色 |
+| `unagi` | `1` ウナギ配色 |
+| `hamachi` | `1` ハマチ配色 |
+| `maguro` | `1` マグロ配色 |
 | `fuchsia` | `1` フクシア配色 |
 | `oleander` | `1` キョウチクトウ配色 |
 | `buddleia` | `1` フサフジウツギ配色 |
