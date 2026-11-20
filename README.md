@@ -24,7 +24,7 @@
 
 ## 深链分享
 
-把月薪和皮肤写进链接，发给朋友开箱即用：
+把月薪和皮肤写进链接，发给朋友开箱即用。全部 446 种皮肤见[皮肤图鉴](https://xd.syal.site/skins.html)：
 
 ```
 https://xd.syal.site/?salary=30000&template=pig&demo=1
