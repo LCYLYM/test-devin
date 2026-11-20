@@ -1439,6 +1439,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `artichoke` | `1` アーティチョーク配色 |
 | `kohlrabi` | `1` コールラビ配色 |
 | `rutabaga` | `1` ルタバガ配色 |
+| `parsnip` | `1` パースニップ配色 |
+| `celeriac` | `1` セロリアック配色 |
+| `jicama` | `1` ヒカマ配色 |
 | `fuchsia` | `1` フクシア配色 |
 | `oleander` | `1` キョウチクトウ配色 |
 | `buddleia` | `1` フサフジウツギ配色 |

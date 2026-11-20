@@ -3076,6 +3076,12 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .is-kohlrabi .instrument{border-color:rgba(155,180,105,.4)}
 .is-rutabaga{background:linear-gradient(180deg,#251e28 0%,#110e13 100%)}
 .is-rutabaga .instrument{border-color:rgba(175,135,190,.4)}
+.is-parsnip{background:linear-gradient(180deg,#25221b 0%,#12100d 100%)}
+.is-parsnip .instrument{border-color:rgba(195,185,140,.4)}
+.is-celeriac{background:linear-gradient(180deg,#22241a 0%,#10110c 100%)}
+.is-celeriac .instrument{border-color:rgba(165,175,115,.4)}
+.is-jicama{background:linear-gradient(180deg,#242019 0%,#110f0c 100%)}
+.is-jicama .instrument{border-color:rgba(190,160,120,.4)}
 .is-fuchsia{background:linear-gradient(180deg,#2e1428 0%,#160a13 100%)}
 .is-fuchsia .instrument{border-color:rgba(230,100,200,.4)}
 .is-oleander{background:linear-gradient(180deg,#2c1720 0%,#150b0f 100%)}
