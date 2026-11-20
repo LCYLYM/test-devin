@@ -9727,3 +9727,48 @@ html[data-template="hayloft"] .hayloft-visual{display:flex;flex-direction:column
 .hyl-dust{position:absolute;left:50%;top:22%;width:80px;height:50px;background:radial-gradient(#f0d88844,transparent 70%);border-radius:50%;opacity:0;transform:translateX(-50%);transition:opacity 1s}
 .hayloft-caption{}
 @media (prefers-reduced-motion:reduce){.mlr-flow::after{animation:none}}
+
+/* 盐沼 saltmarsh: 水草连绵、白鹭独立 */
+.saltmarsh-visual{display:none;grid-area:visual}
+html[data-template="saltmarsh"] .pig-visual{display:none}
+html[data-template="saltmarsh"] .saltmarsh-visual{display:flex;flex-direction:column;align-items:center;gap:10px}
+.smr-scene{position:relative;width:270px;height:180px}
+.smr-pool{position:absolute;left:8%;right:8%;bottom:8%;height:40%;background:linear-gradient(#2e4438,#1c2c22);border-radius:50%/30%;opacity:.3;transition:opacity 1s}
+.smr-grass{position:absolute;bottom:16%;width:7px;background:linear-gradient(#8ab878,#4a7a3e);clip-path:polygon(30% 0,70% 0,100% 100%,0 100%);opacity:0;height:8px;transition:opacity .8s,height .8s}
+#smrG1{left:24%}#smrG2{left:46%}#smrG3{left:68%}
+.smr-egret{position:absolute;left:56%;bottom:34%;width:12px;height:22px;background:#e8e8e0;border-radius:50% 50% 40% 40%;opacity:0;transition:opacity 1s}
+.smr-egret::before{content:'';position:absolute;top:-8px;left:6px;width:5px;height:12px;background:#e8e8e0;border-radius:4px;transform:rotate(-14deg)}
+.smr-egret::after{content:'';position:absolute;top:-10px;left:10px;width:9px;height:3px;background:#d8a030;transform:rotate(-14deg)}
+.saltmarsh-caption,.stonefield-caption,.fishpond-caption{font-size:12px;color:var(--muted)}
+
+/* 石滩 stonefield: 卵石成滩、苔衣渐染 */
+.stonefield-visual{display:none;grid-area:visual}
+html[data-template="stonefield"] .pig-visual{display:none}
+html[data-template="stonefield"] .stonefield-visual{display:flex;flex-direction:column;align-items:center;gap:10px}
+.stf-scene{position:relative;width:270px;height:180px;background:linear-gradient(#1c1c18,#121210 70%);border-radius:14px}
+.stf-scene::after{content:'';position:absolute;left:0;right:0;bottom:0;height:40%;background:linear-gradient(#2c2c26,#1c1c16);border-radius:50% 50% 14px 14px/60% 60% 0 0}
+.stf-stone{position:absolute;border-radius:50%;opacity:0;transition:opacity .7s}
+#stfS1{left:20%;bottom:14%;width:38px;height:24px;background:radial-gradient(circle at 40% 35%,#9a9a90,#5a5a52)}
+#stfS2{left:38%;bottom:18%;width:28px;height:19px;background:radial-gradient(circle at 40% 35%,#8a8a80,#4a4a44)}
+#stfS3{left:54%;bottom:12%;width:44px;height:26px;background:radial-gradient(circle at 40% 35%,#a8a89a,#5e5e54)}
+#stfS4{left:70%;bottom:20%;width:24px;height:17px;background:radial-gradient(circle at 40% 35%,#94948a,#50504a)}
+#stfS5{left:44%;bottom:26%;width:18px;height:13px;background:radial-gradient(circle at 40% 35%,#a2a298,#56564e)}
+.stf-lichen{position:absolute;left:50%;bottom:22%;width:60px;height:22px;background:radial-gradient(#7a9a5a66,transparent 70%);border-radius:50%;opacity:0;transform:translateX(-50%);transition:opacity 1.2s}
+.stonefield-caption{}
+
+/* 鱼塘 fishpond: 锦鲤回游、涟漪推莲 */
+.fishpond-visual{display:none;grid-area:visual}
+html[data-template="fishpond"] .pig-visual{display:none}
+html[data-template="fishpond"] .fishpond-visual{display:flex;flex-direction:column;align-items:center;gap:10px}
+.fsp-scene{position:relative;width:270px;height:180px}
+.fsp-water{position:absolute;left:8%;right:8%;bottom:8%;height:64%;background:radial-gradient(ellipse at 50% 40%,#2e5650,#16302c);border-radius:50%/34%;border:3px solid #3a4a34}
+.fsp-koi{position:absolute;bottom:30%;width:22px;height:11px;border-radius:60% 40% 40% 60%;opacity:0;transition:left 2.4s linear,opacity .8s}
+.fsp-koi::after{content:'';position:absolute;right:-6px;top:1px;width:9px;height:9px;clip-path:polygon(0 50%,100% 0,100% 100%)}
+#fspK1{background:linear-gradient(#e07830,#a84814)}
+#fspK1::after{background:#e07830}
+#fspK2{background:linear-gradient(#e8e0d0,#b8ac98);bottom:44%}
+#fspK2::after{background:#e8e0d0}
+.fsp-ring{position:absolute;left:50%;bottom:36%;width:40px;height:14px;border:2px solid #7ab8a866;border-radius:50%;opacity:0;transform:translateX(-50%);transition:opacity .7s}
+.fsp-lily{position:absolute;left:66%;bottom:46%;width:26px;height:10px;background:#4a7a44;border-radius:50%;opacity:0;transition:opacity .9s}
+.fsp-lily::after{content:'';position:absolute;left:8px;top:-7px;width:10px;height:9px;background:#e8a8b8;border-radius:50% 50% 0 50%}
+.fishpond-caption{}
