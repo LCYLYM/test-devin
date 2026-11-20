@@ -3160,6 +3160,12 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .is-hamachi .instrument{border-color:rgba(110,145,200,.4)}
 .is-maguro{background:linear-gradient(180deg,#281416 0%,#140a0a 100%)}
 .is-maguro .instrument{border-color:rgba(220,75,85,.4)}
+.is-umeshu{background:linear-gradient(180deg,#262015 0%,#141008 100%)}
+.is-umeshu .instrument{border-color:rgba(220,180,80,.4)}
+.is-soju{background:linear-gradient(180deg,#15221e 0%,#0a1210 100%)}
+.is-soju .instrument{border-color:rgba(90,190,150,.4)}
+.is-makgeolli{background:linear-gradient(180deg,#26241f 0%,#141310 100%)}
+.is-makgeolli .instrument{border-color:rgba(230,222,195,.4)}
 .is-fuchsia{background:linear-gradient(180deg,#2e1428 0%,#160a13 100%)}
 .is-fuchsia .instrument{border-color:rgba(230,100,200,.4)}
 .is-oleander{background:linear-gradient(180deg,#2c1720 0%,#150b0f 100%)}

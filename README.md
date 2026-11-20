@@ -1481,6 +1481,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `unagi` | `1` ウナギ配色 |
 | `hamachi` | `1` ハマチ配色 |
 | `maguro` | `1` マグロ配色 |
+| `umeshu` | `1` ウメシュ配色 |
+| `soju` | `1` ソジュ配色 |
+| `makgeolli` | `1` マッコリ配色 |
 | `fuchsia` | `1` フクシア配色 |
 | `oleander` | `1` キョウチクトウ配色 |
 | `buddleia` | `1` フサフジウツギ配色 |
