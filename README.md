@@ -1280,6 +1280,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `oak` | `1` 橡树配色 |
 | `elm` | `1` 榆树配色 |
 | `beech` | `1` 山毛榉配色 |
+| `alder` | `1` 赤杨配色 |
+| `aspen` | `1` 山杨配色 |
+| `poplar` | `1` 钻天杨配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 
