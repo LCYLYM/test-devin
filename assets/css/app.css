@@ -2920,6 +2920,12 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .is-ninebark .instrument{border-color:rgba(200,110,115,.4)}
 .is-aronia{background:linear-gradient(180deg,#231622 0%,#110a10 100%)}
 .is-aronia .instrument{border-color:rgba(160,90,150,.4)}
+.is-pittosporum{background:linear-gradient(180deg,#1c241b 0%,#0c100b 100%)}
+.is-pittosporum .instrument{border-color:rgba(110,160,110,.4)}
+.is-choisya{background:linear-gradient(180deg,#24241a 0%,#12120a 100%)}
+.is-choisya .instrument{border-color:rgba(200,205,140,.4)}
+.is-sarcococca{background:linear-gradient(180deg,#1a241f 0%,#0b110d 100%)}
+.is-sarcococca .instrument{border-color:rgba(150,190,160,.4)}
 .is-skimmia{background:linear-gradient(180deg,#291a17 0%,#140c0a 100%)}
 .is-skimmia .instrument{border-color:rgba(220,120,105,.4)}
 .is-hebe{background:linear-gradient(180deg,#221a2c 0%,#100c15 100%)}

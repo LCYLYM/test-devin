@@ -4260,6 +4260,9 @@
     if (params.get('skimmia') === '1') { document.body.classList.add('is-skimmia'); }
     if (params.get('hebe') === '1') { document.body.classList.add('is-hebe'); }
     if (params.get('escallonia') === '1') { document.body.classList.add('is-escallonia'); }
+    if (params.get('pittosporum') === '1') { document.body.classList.add('is-pittosporum'); }
+    if (params.get('choisya') === '1') { document.body.classList.add('is-choisya'); }
+    if (params.get('sarcococca') === '1') { document.body.classList.add('is-sarcococca'); }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -5866,6 +5869,9 @@
         if (params.get('beautybush') === '1') u.searchParams.set('beautybush', '1');
         if (params.get('ninebark') === '1') u.searchParams.set('ninebark', '1');
         if (params.get('aronia') === '1') u.searchParams.set('aronia', '1');
+        if (params.get('pittosporum') === '1') u.searchParams.set('pittosporum', '1');
+        if (params.get('choisya') === '1') u.searchParams.set('choisya', '1');
+        if (params.get('sarcococca') === '1') u.searchParams.set('sarcococca', '1');
         if (params.get('fuchsia') === '1') u.searchParams.set('fuchsia', '1');
         if (params.get('oleander') === '1') u.searchParams.set('oleander', '1');
         if (params.get('buddleia') === '1') u.searchParams.set('buddleia', '1');
