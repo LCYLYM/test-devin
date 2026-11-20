@@ -26,5 +26,6 @@
 
 ## 链接
 - 站点: https://xd.syal.site/
+- 皮肤图鉴（446 种主题索引）: https://xd.syal.site/skins.html
 - 源码: https://github.com/LCYLYM/test-devin
 - 作者: 生鱼安乐 https://github.com/LCYLYM
