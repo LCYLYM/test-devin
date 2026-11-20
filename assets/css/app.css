@@ -2980,6 +2980,12 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .is-pandan .instrument{border-color:rgba(90,185,130,.4)}
 .is-kaffir{background:linear-gradient(180deg,#1a2614 0%,#0c1209 100%)}
 .is-kaffir .instrument{border-color:rgba(120,185,80,.4)}
+.is-quinoa{background:linear-gradient(180deg,#25201a 0%,#120f0c 100%)}
+.is-quinoa .instrument{border-color:rgba(195,165,120,.4)}
+.is-amaranth{background:linear-gradient(180deg,#271a20 0%,#130c0f 100%)}
+.is-amaranth .instrument{border-color:rgba(215,110,150,.4)}
+.is-spelt{background:linear-gradient(180deg,#262218 0%,#121008 100%)}
+.is-spelt .instrument{border-color:rgba(200,175,105,.4)}
 .is-fuchsia{background:linear-gradient(180deg,#2e1428 0%,#160a13 100%)}
 .is-fuchsia .instrument{border-color:rgba(230,100,200,.4)}
 .is-oleander{background:linear-gradient(180deg,#2c1720 0%,#150b0f 100%)}
