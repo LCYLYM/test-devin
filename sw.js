@@ -3,10 +3,10 @@ const CACHE = 'xindong-v629';
 const SHELL = [
   './',
   './index.html',
-  './assets/css/app.css?v=20261130d',
-  './assets/js/salary-engine.js?v=20261130d',
-  './assets/js/app.js?v=20261130d',
-  './assets/js/deep-link.js?v=20261130d',
+  './assets/css/app.css?v=20261204e',
+  './assets/js/salary-engine.js?v=20261204e',
+  './assets/js/app.js?v=20261204e',
+  './assets/js/deep-link.js?v=20261204e',
   './assets/img/favicon.svg',
   './assets/img/piggy.webp',
   './site.webmanifest'

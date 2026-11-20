@@ -131,7 +131,8 @@
   function genHash(s){let x=7;for(let i=0;i<s.length;i++)x=(x*33+s.charCodeAt(i))>>>0;return x;}
   function buildGen(name){
     const gs=$('genScene');if(!gs)return;
-    const dv=document.querySelector('.'+name+'-visual');
+    const dvs=[...document.querySelectorAll('.'+name+'-visual')];
+    const dv=dvs.find(el=>getComputedStyle(el).display!=='none')||dvs[0]||null;
     const dedicated=dv?getComputedStyle(dv).display!=='none':false;
     const cv=document.querySelector('.charge-visual');
     const alive=dedicated&&dv.offsetHeight>4;
