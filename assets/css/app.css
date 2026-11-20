@@ -3094,6 +3094,12 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .is-tatsoi .instrument{border-color:rgba(95,180,120,.4)}
 .is-escarole{background:linear-gradient(180deg,#1f2617 0%,#0e120a 100%)}
 .is-escarole .instrument{border-color:rgba(150,185,100,.4)}
+.is-kabocha{background:linear-gradient(180deg,#17241d 0%,#0a110d 100%)}
+.is-kabocha .instrument{border-color:rgba(90,180,130,.4)}
+.is-butternut{background:linear-gradient(180deg,#281f12 0%,#140f08 100%)}
+.is-butternut .instrument{border-color:rgba(220,160,65,.4)}
+.is-delicata{background:linear-gradient(180deg,#262315 0%,#12110a 100%)}
+.is-delicata .instrument{border-color:rgba(210,190,100,.4)}
 .is-fuchsia{background:linear-gradient(180deg,#2e1428 0%,#160a13 100%)}
 .is-fuchsia .instrument{border-color:rgba(230,100,200,.4)}
 .is-oleander{background:linear-gradient(180deg,#2c1720 0%,#150b0f 100%)}
