@@ -1409,6 +1409,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `blackbean` | `1` 黒豆配色 |
 | `kidneybean` | `1` キドニーマメ配色 |
 | `mungbean` | `1` ムングマメ配色 |
+| `navybean` | `1` ネイビービーン配色 |
+| `pinto` | `1` ピントマメ配色 |
+| `limabean` | `1` ライマメ配色 |
 | `fuchsia` | `1` フクシア配色 |
 | `oleander` | `1` キョウチクトウ配色 |
 | `buddleia` | `1` フサフジウツギ配色 |

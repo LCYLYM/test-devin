@@ -3016,6 +3016,12 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .is-kidneybean .instrument{border-color:rgba(215,90,95,.4)}
 .is-mungbean{background:linear-gradient(180deg,#1d2419 0%,#0d110b 100%)}
 .is-mungbean .instrument{border-color:rgba(135,175,110,.4)}
+.is-navybean{background:linear-gradient(180deg,#222020 0%,#100f0f 100%)}
+.is-navybean .instrument{border-color:rgba(175,170,165,.4)}
+.is-pinto{background:linear-gradient(180deg,#261d15 0%,#120e09 100%)}
+.is-pinto .instrument{border-color:rgba(200,140,95,.4)}
+.is-limabean{background:linear-gradient(180deg,#1f241c 0%,#0e110d 100%)}
+.is-limabean .instrument{border-color:rgba(145,175,130,.4)}
 .is-fuchsia{background:linear-gradient(180deg,#2e1428 0%,#160a13 100%)}
 .is-fuchsia .instrument{border-color:rgba(230,100,200,.4)}
 .is-oleander{background:linear-gradient(180deg,#2c1720 0%,#150b0f 100%)}
