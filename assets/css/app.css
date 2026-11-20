@@ -4818,3 +4818,85 @@ background:radial-gradient(circle at 50% 50%,rgba(90,88,82,.5),transparent 70%);
 .ink-brush{position:absolute;left:74%;top:8%;font-size:24px;transform:rotate(-30deg);opacity:.9;transition:top .9s,opacity .5s}
 .inkwash-caption{font-size:11px;color:var(--muted);letter-spacing:.4px}
 @media(prefers-reduced-motion:reduce){.ink-blot,.ink-pool,.ink-brush{transition:none}}
+
+/* iter-1742: candle skin — wax burns down, flame flickers */
+.candle-visual{display:none;flex-direction:column;align-items:center;gap:12px}
+body[data-template=candle]{--bg:#181008;--surface:#211810;--surface-2:#2b2014;--line:#45331c;--text:#f6ecd8;--accent:#f0b040;--accent-rgb:240,176,64;--instrument:#140c06;--muted:#bfa580;--dim:#7f6c4e}
+body[data-template=candle] .charge-visual{display:none}
+body[data-template=candle] .candle-visual{display:flex}
+body[data-template=candle] .energy-stage{margin:14px 0 8px}
+body[data-template=candle] .template-slider{background:#3c2c14}
+body[data-template=candle] .template-switch button.selected{color:#f5c86e}
+body[data-template=candle] .currency-pill{background:#211810;border-color:#45331c}
+.cnd-scene{position:relative;width:110px;height:175px;display:flex;flex-direction:column;align-items:center;justify-content:flex-end}
+.cnd-flame{position:absolute;left:50%;transform:translateX(-50%);bottom:auto;width:14px;height:24px;
+border-radius:50% 50% 50% 50%/62% 62% 38% 38%;
+background:radial-gradient(circle at 50% 75%,#fff8d0,#f8a020);box-shadow:0 0 18px 4px rgba(248,176,64,.45);z-index:3;top:12px}
+.instrument.is-working .cnd-flame{animation:cnd-flick .28s ease-in-out infinite alternate}
+@keyframes cnd-flick{from{transform:translateX(-50%) scale(1) rotate(-2deg)}to{transform:translateX(-50%) scale(1.1,1.16) rotate(3deg)}}
+.cnd-wick{position:absolute;top:32px;left:50%;transform:translateX(-50%);width:3px;height:10px;background:#2a1c0c;z-index:2}
+.cnd-wax{position:absolute;bottom:22px;left:50%;transform:translateX(-50%);width:34px;height:90px;
+background:linear-gradient(180deg,#f0e0c0,#d8c4a0);border-radius:8px 8px 4px 4px;
+transition:height .8s linear;overflow:visible}
+.cnd-drip{position:absolute;top:0;right:4px;width:8px;height:16px;background:#e8d4b0;border-radius:0 4px 6px 4px}
+.cnd-pool{position:absolute;bottom:8px;left:50%;transform:translateX(-50%);width:30px;height:12px;
+background:radial-gradient(ellipse,#e8d4b0,#c8b088);border-radius:50%;opacity:.2;transition:width .8s,opacity .8s}
+.candle-caption{font-size:11px;color:var(--muted);letter-spacing:.4px}
+@media(prefers-reduced-motion:reduce){.instrument.is-working .cnd-flame{animation:none}.cnd-wax,.cnd-pool{transition:none}}
+
+/* iter-1743: swing skin — the swing arcs higher as the day pays out */
+.swing-visual{display:none;flex-direction:column;align-items:center;gap:12px}
+body[data-template=swing]{--bg:#0e1610;--surface:#14201a;--surface-2:#1a281f;--line:#26402e;--text:#e0f0e6;--accent:#88c8a0;--accent-rgb:136,200,160;--instrument:#0a120c;--muted:#90b49e;--dim:#587260}
+body[data-template=swing] .charge-visual{display:none}
+body[data-template=swing] .swing-visual{display:flex}
+body[data-template=swing] .energy-stage{margin:14px 0 8px}
+body[data-template=swing] .template-slider{background:#203828}
+body[data-template=swing] .template-switch button.selected{color:#a4d8b8}
+body[data-template=swing] .currency-pill{background:#14201a;border-color:#26402e}
+.swg-scene{position:relative;width:190px;height:170px}
+.swg-frame{position:absolute;left:20px;right:20px;top:0;bottom:0}
+.swg-frame::before,.swg-frame::after{content:'';position:absolute;top:8px;bottom:30px;width:6px;
+background:#7a5a38;border-radius:3px}
+.swg-frame::before{left:0;transform:rotate(8deg)}
+.swg-frame::after{right:0;transform:rotate(-8deg)}
+.swg-bar{position:absolute;top:8px;left:-4px;right:-4px;height:7px;background:#7a5a38;border-radius:4px}
+.swg-seat-wrap{position:absolute;top:14px;left:50%;width:70px;height:110px;transform-origin:top center;
+transform:translateX(-50%);transition:transform .3s ease-in-out}
+.swg-rope{position:absolute;top:0;width:3px;height:78px;background:#c8b088}
+.swg-rope.r1{left:16px}
+.swg-rope.r2{right:16px}
+.swg-seat{position:absolute;bottom:18px;left:0;right:0;height:12px;background:#8a5a30;border-radius:5px}
+.swg-ground{position:absolute;bottom:14px;left:10px;right:10px;height:12px;
+background:radial-gradient(ellipse,#5a7a48,#3c5a30);border-radius:50%}
+.swing-caption{font-size:11px;color:var(--muted);letter-spacing:.4px}
+@media(prefers-reduced-motion:reduce){.swg-seat-wrap{transition:none}}
+
+/* iter-1744: gacha skin — knob turns, capsule drops out of the globe */
+.gacha-visual{display:none;flex-direction:column;align-items:center;gap:12px}
+body[data-template=gacha]{--bg:#180e14;--surface:#21141c;--surface-2:#2a1a24;--line:#422638;--text:#f8e6f0;--accent:#f088a8;--accent-rgb:240,136,168;--instrument:#140a10;--muted:#b894a6;--dim:#785e6c}
+body[data-template=gacha] .charge-visual{display:none}
+body[data-template=gacha] .gacha-visual{display:flex}
+body[data-template=gacha] .energy-stage{margin:14px 0 8px}
+body[data-template=gacha] .template-slider{background:#3a1e30}
+body[data-template=gacha] .template-switch button.selected{color:#f8a8c0}
+body[data-template=gacha] .currency-pill{background:#21141c;border-color:#422638}
+.gch-machine{position:relative;width:140px;height:190px;display:flex;flex-direction:column;align-items:center}
+.gch-globe{position:relative;width:104px;height:104px;border-radius:50%;overflow:hidden;
+background:radial-gradient(circle at 35% 30%,rgba(255,255,255,.18),rgba(200,180,220,.06));
+border:3px solid #c8b0d0;margin-top:6px}
+.gch-ball{position:absolute;width:20px;height:20px;border-radius:50%;transition:opacity .4s}
+.gch-ball:nth-child(1){left:22%;top:56%;background:#f06080}
+.gch-ball:nth-child(2){left:50%;top:66%;background:#58b8e8}
+.gch-ball:nth-child(3){left:64%;top:50%;background:#f0d040}
+.gch-ball:nth-child(4){left:32%;top:38%;background:#78c878}
+.gch-ball:nth-child(5){left:56%;top:78%;background:#c878e8}
+.gch-knob{width:34px;height:34px;border-radius:50%;background:#e8d0e0;border:3px solid #9a7a94;
+margin-top:4px;transition:transform .6s;position:relative}
+.gch-knob::after{content:'';position:absolute;top:50%;left:50%;width:4px;height:14px;background:#7a5a76;
+transform:translate(-50%,-90%)}
+.gch-chute{width:44px;height:24px;background:#1a0e18;border:2px solid #9a7a94;border-radius:0 0 8px 8px}
+.gch-drop{position:absolute;left:50%;transform:translateX(-50%);top:30%;width:18px;height:18px;
+border-radius:50% 50% 50% 50%;background:linear-gradient(180deg,#f8a0c0 50%,#f0d040 50%);
+opacity:0;transition:top .7s ease-in,opacity .5s;z-index:2}
+.gacha-caption{font-size:11px;color:var(--muted);letter-spacing:.4px}
+@media(prefers-reduced-motion:reduce){.gch-knob,.gch-drop,.gch-ball{transition:none}}
