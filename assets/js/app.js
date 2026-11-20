@@ -127,17 +127,24 @@
   }
 
   var genAssist={'abacus':1,'abyss':1,'antfarm':1,'apiary':1,'apothecary':1,'arcade':1,'archery':1,'atrium':1,'aurora':1,'aviary':1,'bamboo':1,'bambooforest':1,'bath':1,'beacon':1,'billiards':1,'bog':1,'bonfire':1,'bowling':1,'brickkiln':1,'bridge':1,'brook':1,'cabin':1,'candleworks':1,'cannery':1,'catnap':1,'carousel':1,'cave':1,'cellar':1,'chapel':1,'charcoal':1,'chess':1,'circuit':1,'clothesline':1,'coin':1,'coldframe':1,'constellation':1,'coop':1,'coralreef':1,'courtyard':1,'cranberry':1,'crater':1,'creamery':1,'dandelion':1,'delta':1,'distillery':1,'domino':1,'dovecote':1,'drydock':1,'duckpond':1,'dusk':1,'ferment':1,'firefly':1,'fireplace':1,'fishweir':1,'fountain':1,'gallery':1,'garden':1,'geode':1,'geyser':1,'glacier':1,'glade':1,'glassworks':1,'goldfish':1,'granary':1,'grange':1,'greenhouse':1,'grotto':1,'grove':1,'harvest':1,'hayloft':1,'herbgarden':1,'hut':1,'icehouse':1,'igloo':1,'jacuzzi':1,'jellyfish':1,'jukebox':1,'jumprope':1,'karuta':1,'kelp':1,'kitchen':1,'koipond':1,'lantern':1,'lavenderfield':1,'library':1,'lilypad':1,'mandala':1,'marina':1,'market':1,'marsh':1,'match':1,'meadow':1,'mint':1,'monastery':1,'mosaic':1,'movie':1,'museum':1,'mushroomfarm':1,'nebula':1,'nest':1,'noren':1,'nori':1,'oasis':1,'onsen':1,'orchard':1,'origamicrane':1,'paddy':1,'pagoda':1,'papermill':1,'peatbog':1,'piano':1,'planetarium':1,'plate':1,'plaza':1,'popcorn':1,'prairie':1,'printshop':1,'quay':1,'radar':1,'rain':1,'rainbow':1,'reef':1,'riceterrace':1,'rooftop':1,'rookery':1,'ropewalk':1,'rose':1,'sakura':1,'saltmarsh':1,'saltpan':1,'sawmill':1,'sheepfold':1,'shrine':1,'silkworm':1,'ski':1,'smokehouse':1,'snowy':1,'solarsystem':1,'spiderweb':1,'spiral':1,'staircase':1,'stitch':1,'stonefield':1,'studio':1,'suika':1,'sunflower':1,'tangram':1,'tannery':1,'tavern':1,'teapot':1,'terrace':1,'terrarium':1,'tidepool':1,'tornado':1,'trek':1,'tundra':1,'typewriter':1,'vineyard':1,'windchime':1,'woodpile':1,'workshop':1,'zengarden':1}
-  let genFor='',genKind=-1,genEls=[];
+  let genFor='',genKind=-1,genEls=[],genRetry=0,genStash=[];
   function genHash(s){let x=7;for(let i=0;i<s.length;i++)x=(x*33+s.charCodeAt(i))>>>0;return x;}
   function buildGen(name){
     const gs=$('genScene');if(!gs)return;
+    // restore inline display/minHeight we set for the previous skin so stale
+    // hides/blocks do not leak across skins or poison re-entry measurements
+    if(genFor!==name&&genStash.length){genStash.forEach(e=>{e.style.display='';e.style.minHeight='';});genStash=[];}
     const dvs=[...document.querySelectorAll('.'+name+'-visual')];
     const dv=dvs.find(el=>getComputedStyle(el).display!=='none')||dvs[0]||null;
     const dedicated=dv?getComputedStyle(dv).display!=='none':false;
     const cv=document.querySelector('.charge-visual');
     const alive=dedicated&&dv.offsetHeight>4;
-    if(alive&&!genAssist[name]){gs.hidden=true;genFor=name;genKind=-1;genEls=[];return;}
+    if(alive&&!genAssist[name]){gs.hidden=true;genFor=name;genKind=-1;genEls=[];genRetry=0;return;}
     if(genFor===name)return;
+    // layout may not have settled right after a template switch; retry a few
+    // ticks instead of permanently hiding the designed visual for a blank one
+    if(dv&&!alive&&!genAssist[name]&&genRetry<12){genRetry++;gs.hidden=true;return;}
+    genRetry=0;
     genFor=name;
     if(genAssist[name]&&dv){
       const ids=[...dv.querySelectorAll('[id]')];
@@ -146,14 +153,14 @@
         leaves.forEach(e=>{if(!ids.includes(e))ids.push(e);});
       }
       if(ids.length){
-        if(cv)cv.style.display='none';
-        if(dv.offsetHeight<4){dv.style.display='block';dv.style.minHeight='170px';}
+        if(cv){cv.style.display='none';if(!genStash.includes(cv))genStash.push(cv);}
+        if(dv.offsetHeight<4){dv.style.display='block';dv.style.minHeight='170px';if(!genStash.includes(dv))genStash.push(dv);}
         genKind=-2;genEls=ids;gs.hidden=true;return;
       }
     }
     genKind=genHash(name)%8;gs.classList.toggle('gen-grid',genKind===7);
-    if(cv)cv.style.display='none';
-    if(dv)dv.style.display='none';
+    if(cv){cv.style.display='none';if(!genStash.includes(cv))genStash.push(cv);}
+    if(dv){dv.style.display='none';if(!genStash.includes(dv))genStash.push(dv);}
     const accent=getComputedStyle(document.body).getPropertyValue('--accent').trim()||'#ff833f';
     gs.style.setProperty('--gc',accent);
     let html='';
