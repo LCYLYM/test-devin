@@ -6522,3 +6522,45 @@ body[data-template=terrarium] .terrarium-visual{display:block}
 .trr-rock.r1{left:22%}
 .trr-rock.r2{right:22%}
 @media(prefers-reduced-motion:reduce){.tsc-tube,.aqm-water,.trr-plant{transition:none}}
+body[data-template=nest]{--bg:#120e08;--surface:#1a150e;--surface-2:#221c12;--line:#382e1e;--text:#e8d8c0;--accent:#b08850;--accent-rgb:176,136,80;--instrument:#1a150e;--muted:#7c6444;--dim:#7c6444}
+body[data-template=sourdough]{--bg:#140e06;--surface:#1c160c;--surface-2:#241e10;--line:#3c2e1a;--text:#ecdcc2;--accent:#d8a060;--accent-rgb:216,160,96;--instrument:#1c160c;--muted:#8a6c48;--dim:#8a6c48}
+body[data-template=ferment]{--bg:#120e04;--surface:#1a150a;--surface-2:#221c10;--line:#38301c;--text:#e8e0bc;--accent:#c8b840;--accent-rgb:200,184,64;--instrument:#1a150a;--muted:#7c7440;--dim:#7c7440}
+.nest-visual,.sourdough-visual,.ferment-visual{display:none;position:relative;margin-top:18px}
+body[data-template=nest] .charge-visual,body[data-template=sourdough] .charge-visual,body[data-template=ferment] .charge-visual{display:none}
+body[data-template=nest] .nest-visual{display:block}
+.nst-scene{position:relative;height:180px;background:radial-gradient(ellipse at 50% 20%,#243c1a,#120e08 75%);overflow:hidden}
+.nst-branch{position:absolute;left:14%;bottom:34%;width:72%;height:8px;background:#4a341c;border-radius:4px}
+.nst-branch::before{content:'';position:absolute;left:8%;top:-10px;width:20px;height:12px;background:#4a7030;border-radius:50% 0}
+.nst-branch::after{content:'';position:absolute;right:10%;top:-12px;width:22px;height:14px;background:#4a7030;border-radius:50% 0}
+.nst-cup{position:absolute;left:50%;bottom:30%;width:96px;height:40px;transform:translateX(-50%);background:#5a4024;border-radius:8px 8px 46px 46px;opacity:0;transition:opacity .5s}
+.nst-twig{position:absolute;left:0;right:0;height:5px;background:repeating-linear-gradient(90deg,#7a5a30 0 14px,#5a4024 14px 22px);border-radius:3px}
+.nst-twig.t1{top:4px}
+.nst-twig.t2{top:12px;transform:rotate(-2deg)}
+.nst-twig.t3{top:20px;transform:rotate(2deg)}
+.nst-twig.t4{top:28px;transform:rotate(-1deg)}
+.nst-twig.t5{top:34px}
+.nst-egg{position:absolute;bottom:36%;width:14px;height:18px;background:radial-gradient(circle at 35% 30%,#e8f0f8,#b8c8d8);border-radius:50% 50% 50% 50%/60% 60% 40% 40%;opacity:0;transition:opacity .5s}
+.nst-egg.e1{left:calc(50% - 20px)}
+.nst-egg.e2{left:calc(50% - 7px)}
+.nst-egg.e3{left:calc(50% + 6px)}
+.nest-caption,.sourdough-caption,.ferment-caption{text-align:center;font-size:11px;color:var(--dim);margin-top:10px}
+body[data-template=sourdough] .sourdough-visual{display:block}
+.srd-scene{position:relative;height:180px;background:radial-gradient(ellipse at 50% 90%,#2a1a0c,#140e06 75%);overflow:hidden}
+.srd-oven{position:absolute;left:50%;bottom:16%;width:160px;height:100px;transform:translateX(-50%);background:#1a120a;border:5px solid #4a3820;border-radius:10px}
+.srd-oven::before{content:'';position:absolute;left:8%;right:8%;bottom:10px;height:4px;background:#3a2c18}
+.srd-loaf{position:absolute;left:50%;bottom:16px;width:70px;height:44px;transform:translateX(-50%) scale(.6);background:radial-gradient(circle at 50% 30%,#e8d8b0,#8a5c28);border-radius:50% 50% 14px 14px;transition:transform .5s,background .5s}
+.srd-score{position:absolute;left:16px;top:8px;width:38px;height:8px;border-top:3px solid rgba(90,55,20,.7);border-radius:50%;transform:rotate(-12deg)}
+.srd-heat{position:absolute;top:8px;width:14px;height:22px;background:radial-gradient(rgba(240,140,50,.35),transparent 70%);border-radius:50%}
+.srd-heat.h1{left:24%}
+.srd-heat.h2{left:66%}
+body[data-template=ferment] .ferment-visual{display:block}
+.fmn-scene{position:relative;height:180px;background:radial-gradient(ellipse at 50% 70%,#26200c,#120e04 75%);overflow:hidden}
+.fmn-jar{position:absolute;left:50%;bottom:16%;width:90px;height:120px;transform:translateX(-50%);background:rgba(200,220,190,.08);border:4px solid rgba(190,200,160,.4);border-radius:10px 10px 16px 16px;overflow:hidden}
+.fmn-mash{position:absolute;left:0;right:0;bottom:0;height:30%;background:linear-gradient(#c8b840,#8a7c20);transition:height .5s}
+.fmn-bubble{position:absolute;bottom:10%;width:7px;height:7px;background:rgba(240,235,180,.75);border-radius:50%;opacity:0;transition:bottom .8s,opacity .4s}
+.fmn-bubble.b1{left:22%}
+.fmn-bubble.b2{left:44%}
+.fmn-bubble.b3{left:60%}
+.fmn-bubble.b4{left:76%}
+.fmn-lid{position:absolute;left:50%;top:-4px;width:100px;height:14px;transform:translateX(-50%);background:#6a5a3a;border-radius:6px}
+@media(prefers-reduced-motion:reduce){.srd-loaf,.fmn-bubble,.nst-egg{transition:none}}
