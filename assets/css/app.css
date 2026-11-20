@@ -2914,6 +2914,12 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .is-snowberry .instrument{border-color:rgba(225,210,190,.4)}
 .is-winterberry{background:linear-gradient(180deg,#2c1316 0%,#150809 100%)}
 .is-winterberry .instrument{border-color:rgba(230,85,80,.4)}
+.is-beautybush{background:linear-gradient(180deg,#2c1a21 0%,#160c10 100%)}
+.is-beautybush .instrument{border-color:rgba(225,120,150,.4)}
+.is-ninebark{background:linear-gradient(180deg,#2a1a1d 0%,#150c0e 100%)}
+.is-ninebark .instrument{border-color:rgba(200,110,115,.4)}
+.is-aronia{background:linear-gradient(180deg,#231622 0%,#110a10 100%)}
+.is-aronia .instrument{border-color:rgba(160,90,150,.4)}
 .is-oatmeal{background:linear-gradient(180deg,#1d1912,#2f291e 50%,#433a2a)}
 .is-oatmeal .instrument{border-color:rgba(215,195,155,.4)}
 .is-thyme{background:linear-gradient(180deg,#121a14,#1c2a20 50%,#28392c)}

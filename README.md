@@ -1358,6 +1358,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `beautyberry` | `1` ムラサキシキブ配色 |
 | `snowberry` | `1` スノーベリー配色 |
 | `winterberry` | `1` ウインターベリー配色 |
+| `beautybush` | `1` ビューティブッシュ配色 |
+| `ninebark` | `1` アメリカコデマリ配色 |
+| `aronia` | `1` アロニア配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 

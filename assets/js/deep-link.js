@@ -4242,6 +4242,9 @@
     if (params.get('beautyberry') === '1') { document.body.classList.add('is-beautyberry'); }
     if (params.get('snowberry') === '1') { document.body.classList.add('is-snowberry'); }
     if (params.get('winterberry') === '1') { document.body.classList.add('is-winterberry'); }
+    if (params.get('beautybush') === '1') { document.body.classList.add('is-beautybush'); }
+    if (params.get('ninebark') === '1') { document.body.classList.add('is-ninebark'); }
+    if (params.get('aronia') === '1') { document.body.classList.add('is-aronia'); }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -5842,6 +5845,9 @@
         if (params.get('beautyberry') === '1') u.searchParams.set('beautyberry', '1');
         if (params.get('snowberry') === '1') u.searchParams.set('snowberry', '1');
         if (params.get('winterberry') === '1') u.searchParams.set('winterberry', '1');
+        if (params.get('beautybush') === '1') u.searchParams.set('beautybush', '1');
+        if (params.get('ninebark') === '1') u.searchParams.set('ninebark', '1');
+        if (params.get('aronia') === '1') u.searchParams.set('aronia', '1');
       if (params.get('tile') === '1') u.searchParams.set('tile', '1');
       if (params.get('outline') === '1') u.searchParams.set('outline', '1');
       if (params.get('stripe') === '1') u.searchParams.set('stripe', '1');
