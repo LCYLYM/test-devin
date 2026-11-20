@@ -4425,7 +4425,7 @@
     var titleParam = params.get('title');
     if (titleParam) window.__customTitle = titleParam.trim().slice(0, 30);
     if (params.get('tabearn') === '1' || window.__customTitle) {
-      var baseT = window.__customTitle || '薪动';
+      var baseT = window.__customTitle || document.title;
       document.title = baseT;
       if (params.get('tabearn') === '1') {
         setInterval(function () {
