@@ -2866,6 +2866,12 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .is-gardenia .instrument{border-color:rgba(195,215,150,.4)}
 .is-hibiscus{background:linear-gradient(180deg,#301418 0%,#17080a 100%)}
 .is-hibiscus .instrument{border-color:rgba(235,95,105,.4)}
+.is-jasmine{background:linear-gradient(180deg,#20261c 0%,#0e120a 100%)}
+.is-jasmine .instrument{border-color:rgba(200,215,160,.4)}
+.is-bougainvillea{background:linear-gradient(180deg,#311525 0%,#180a12 100%)}
+.is-bougainvillea .instrument{border-color:rgba(240,90,180,.4)}
+.is-clematis{background:linear-gradient(180deg,#1d1c2e 0%,#0d0c16 100%)}
+.is-clematis .instrument{border-color:rgba(130,120,225,.4)}
 .is-oatmeal{background:linear-gradient(180deg,#1d1912,#2f291e 50%,#433a2a)}
 .is-oatmeal .instrument{border-color:rgba(215,195,155,.4)}
 .is-thyme{background:linear-gradient(180deg,#121a14,#1c2a20 50%,#28392c)}
