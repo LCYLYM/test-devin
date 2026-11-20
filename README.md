@@ -1382,6 +1382,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `caraway` | `1` キャラウェイ配色 |
 | `cardamom` | `1` カルダモン配色 |
 | `turmeric` | `1` ターメリック配色 |
+| `anise` | `1` アニス配色 |
+| `fenugreek` | `1` フェヌグリーク配色 |
+| `allspice` | `1` オールスパイス配色 |
 | `fuchsia` | `1` フクシア配色 |
 | `oleander` | `1` キョウチクトウ配色 |
 | `buddleia` | `1` フサフジウツギ配色 |

@@ -2962,6 +2962,12 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .is-cardamom .instrument{border-color:rgba(140,175,120,.4)}
 .is-turmeric{background:linear-gradient(180deg,#2a2112 0%,#150f07 100%)}
 .is-turmeric .instrument{border-color:rgba(215,170,60,.4)}
+.is-anise{background:linear-gradient(180deg,#202418 0%,#0f110b 100%)}
+.is-anise .instrument{border-color:rgba(160,175,105,.4)}
+.is-fenugreek{background:linear-gradient(180deg,#252214 0%,#111008 100%)}
+.is-fenugreek .instrument{border-color:rgba(195,175,90,.4)}
+.is-allspice{background:linear-gradient(180deg,#261c15 0%,#120d09 100%)}
+.is-allspice .instrument{border-color:rgba(195,130,90,.4)}
 .is-fuchsia{background:linear-gradient(180deg,#2e1428 0%,#160a13 100%)}
 .is-fuchsia .instrument{border-color:rgba(230,100,200,.4)}
 .is-oleander{background:linear-gradient(180deg,#2c1720 0%,#150b0f 100%)}
