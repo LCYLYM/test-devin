@@ -4215,3 +4215,72 @@ transition:top .8s linear;z-index:2}
 .crane-display i{font-style:normal;font-size:10px;color:var(--dim);margin-left:8px;letter-spacing:1px}
 .crane-caption{font-size:11px;color:var(--muted);letter-spacing:.4px}
 @media(prefers-reduced-motion:reduce){.instrument.is-working .crane-arm{animation:none}.crane-arm,.crane-toy{transition:none}}
+
+/* iter-1715: slots skin — three reels settle on ¥ ¥ ¥ as the shift pays out */
+.slots-visual{display:none;flex-direction:column;align-items:center;gap:12px}
+body[data-template=slots]{--bg:#181204;--surface:#221a08;--surface-2:#2c2210;--line:#483818;--text:#f8ecd0;--accent:#f0c040;--accent-rgb:240,192,64;--instrument:#140e04;--muted:#baa678;--dim:#7a6a44}
+body[data-template=slots] .charge-visual{display:none}
+body[data-template=slots] .slots-visual{display:flex}
+body[data-template=slots] .energy-stage{margin:14px 0 8px}
+body[data-template=slots] .template-slider{background:#3c2e10}
+body[data-template=slots] .template-switch button.selected{color:#f5d67a}
+body[data-template=slots] .currency-pill{background:#221a08;border-color:#483818}
+.slots-machine{padding:16px 18px 12px;background:linear-gradient(180deg,#5a1e1e,#3c1212);
+border-radius:14px;border:2px solid #7a2828;box-shadow:0 8px 20px rgba(0,0,0,.4)}
+.slot-win{display:flex;gap:8px;padding:6px;background:#0e0808;border-radius:8px;overflow:hidden;height:44px}
+.slot-reel{display:flex;flex-direction:column;transition:transform .5s cubic-bezier(.2,.8,.3,1)}
+.slot-reel span{width:52px;height:44px;display:flex;align-items:center;justify-content:center;
+font-size:24px;background:#f4ead8;border-radius:4px;margin:0 0 0;color:#1a1208}
+.slot-reel span:last-child{color:#c02020;font-weight:900}
+.slot-led{margin-top:10px;text-align:center;font-size:13px;font-weight:700;color:#f8d878;
+font-variant-numeric:tabular-nums;letter-spacing:1px}
+.slots-caption{font-size:11px;color:var(--muted);letter-spacing:.4px}
+@media(prefers-reduced-motion:reduce){.slot-reel{transition:none}}
+
+/* iter-1716: domino skin — tiles topple one by one down the row */
+.domino-visual{display:none;flex-direction:column;align-items:center;gap:12px}
+body[data-template=domino]{--bg:#0e141c;--surface:#141c26;--surface-2:#1a2430;--line:#28344a;--text:#e2ecf6;--accent:#a8c8e8;--accent-rgb:168,200,232;--instrument:#0a1018;--muted:#8ea4bc;--dim:#54647a}
+body[data-template=domino] .charge-visual{display:none}
+body[data-template=domino] .domino-visual{display:flex}
+body[data-template=domino] .energy-stage{margin:14px 0 8px}
+body[data-template=domino] .template-slider{background:#22304a}
+body[data-template=domino] .template-switch button.selected{color:#bcd8f0}
+body[data-template=domino] .currency-pill{background:#141c26;border-color:#28344a}
+.domino-row{display:flex;align-items:flex-end;gap:10px;height:110px;padding:0 10px 6px;
+border-bottom:3px solid #3c4c64}
+.dom-tile{display:block;width:16px;height:70px;border-radius:3px;transform-origin:bottom center;
+background:linear-gradient(180deg,#f0ead8,#d8ccb0);border:1px solid #b0a288;position:relative;
+transition:transform .25s ease-in}
+.dom-tile::before{content:'';position:absolute;top:6px;left:50%;transform:translateX(-50%);width:8px;height:8px;
+border-radius:50%;background:#3c3428}
+.dom-tile::after{content:'';position:absolute;bottom:8px;left:50%;transform:translateX(-50%);width:8px;height:8px;
+border-radius:50%;background:#3c3428;box-shadow:0 12px 0 #3c3428}
+.domino-caption{font-size:11px;color:var(--muted);letter-spacing:.4px}
+@media(max-width:520px){.dom-tile{height:58px;width:13px}}
+@media(prefers-reduced-motion:reduce){.dom-tile{transition:none}}
+
+/* iter-1717: match skin — matches ignite down the line, burning through the shift */
+.match-visual{display:none;flex-direction:column;align-items:center;gap:12px}
+body[data-template=match]{--bg:#160e08;--surface:#1f1410;--surface-2:#281a14;--line:#40281c;--text:#f6e8d8;--accent:#f08040;--accent-rgb:240,128,64;--instrument:#120a06;--muted:#b09480;--dim:#76604e}
+body[data-template=match] .charge-visual{display:none}
+body[data-template=match] .match-visual{display:flex}
+body[data-template=match] .energy-stage{margin:14px 0 8px}
+body[data-template=match] .template-slider{background:#382014}
+body[data-template=match] .template-switch button.selected{color:#f8a86a}
+body[data-template=match] .currency-pill{background:#1f1410;border-color:#40281c}
+.match-row{display:flex;gap:16px;height:96px;align-items:flex-end;padding-bottom:8px;
+border-bottom:3px solid #44301e}
+.mt-stick{position:relative;width:5px;height:62px;border-radius:2px;background:#d8b070;display:block}
+.mt-stick::before{content:'';position:absolute;top:-8px;left:50%;transform:translateX(-50%);width:9px;height:9px;
+border-radius:50%;background:#8a2a1a}
+.mt-stick.lit::before{background:#e04020;box-shadow:0 0 8px rgba(240,128,40,.8)}
+.mt-stick.burnt{background:#4a3628}
+.mt-stick.burnt::before{background:#2a1a10;box-shadow:none}
+.mt-flame{position:absolute;top:-26px;left:50%;transform:translateX(-50%) scale(0);width:12px;height:18px;
+border-radius:50% 50% 50% 50%/60% 60% 40% 40%;background:radial-gradient(circle at 50% 80%,#ffd860,#f06020);
+transform-origin:bottom center;transition:transform .3s}
+.mt-stick.lit .mt-flame{transform:translateX(-50%) scale(1);animation:mt-flick .5s ease-in-out infinite alternate}
+.mt-stick.burnt .mt-flame{transform:translateX(-50%) scale(0);animation:none}
+@keyframes mt-flick{from{transform:translateX(-50%) scale(1) rotate(-3deg)}to{transform:translateX(-50%) scale(1.12) rotate(3deg)}}
+.match-caption{font-size:11px;color:var(--muted);letter-spacing:.4px}
+@media(prefers-reduced-motion:reduce){.mt-flame,.mt-stick{transition:none}.mt-stick.lit .mt-flame{animation:none}}
