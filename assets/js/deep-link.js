@@ -4200,6 +4200,9 @@
     if (params.get('tallowtree') === '1') { document.body.classList.add('is-tallowtree'); }
     if (params.get('osage') === '1') { document.body.classList.add('is-osage'); }
     if (params.get('soapberry') === '1') { document.body.classList.add('is-soapberry'); }
+    if (params.get('fringetree') === '1') { document.body.classList.add('is-fringetree'); }
+    if (params.get('katsura') === '1') { document.body.classList.add('is-katsura'); }
+    if (params.get('styrax') === '1') { document.body.classList.add('is-styrax'); }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -5758,6 +5761,9 @@
         if (params.get('tallowtree') === '1') u.searchParams.set('tallowtree', '1');
         if (params.get('osage') === '1') u.searchParams.set('osage', '1');
         if (params.get('soapberry') === '1') u.searchParams.set('soapberry', '1');
+        if (params.get('fringetree') === '1') u.searchParams.set('fringetree', '1');
+        if (params.get('katsura') === '1') u.searchParams.set('katsura', '1');
+        if (params.get('styrax') === '1') u.searchParams.set('styrax', '1');
       if (params.get('tile') === '1') u.searchParams.set('tile', '1');
       if (params.get('outline') === '1') u.searchParams.set('outline', '1');
       if (params.get('stripe') === '1') u.searchParams.set('stripe', '1');

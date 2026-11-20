@@ -2830,6 +2830,12 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .is-osage .instrument{border-color:rgba(210,175,80,.4)}
 .is-soapberry{background:linear-gradient(180deg,#292113 0%,#130e07 100%)}
 .is-soapberry .instrument{border-color:rgba(210,165,80,.4)}
+.is-fringetree{background:linear-gradient(180deg,#26241f 0%,#12110d 100%)}
+.is-fringetree .instrument{border-color:rgba(210,200,170,.4)}
+.is-katsura{background:linear-gradient(180deg,#2a1f1a 0%,#140e0c 100%)}
+.is-katsura .instrument{border-color:rgba(195,140,105,.4)}
+.is-styrax{background:linear-gradient(180deg,#26231e 0%,#12100c 100%)}
+.is-styrax .instrument{border-color:rgba(200,190,150,.4)}
 .is-oatmeal{background:linear-gradient(180deg,#1d1912,#2f291e 50%,#433a2a)}
 .is-oatmeal .instrument{border-color:rgba(215,195,155,.4)}
 .is-thyme{background:linear-gradient(180deg,#121a14,#1c2a20 50%,#28392c)}
