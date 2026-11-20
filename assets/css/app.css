@@ -2752,6 +2752,12 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .is-stonepine .instrument{border-color:rgba(140,168,104,.4)}
 .is-pinon{background:linear-gradient(180deg,#1a1812 0%,#14120d 100%)}
 .is-pinon .instrument{border-color:rgba(180,160,110,.4)}
+.is-oak{background:linear-gradient(180deg,#2a1c0f 0%,#120a04 100%)}
+.is-oak .instrument{border-color:rgba(198,150,92,.4)}
+.is-elm{background:linear-gradient(180deg,#1f2a1b 0%,#0d130b 100%)}
+.is-elm .instrument{border-color:rgba(150,182,118,.4)}
+.is-beech{background:linear-gradient(180deg,#2f1e16 0%,#140c07 100%)}
+.is-beech .instrument{border-color:rgba(206,140,102,.4)}
 .is-oatmeal{background:linear-gradient(180deg,#1d1912,#2f291e 50%,#433a2a)}
 .is-oatmeal .instrument{border-color:rgba(215,195,155,.4)}
 .is-thyme{background:linear-gradient(180deg,#121a14,#1c2a20 50%,#28392c)}

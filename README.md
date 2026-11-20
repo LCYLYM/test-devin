@@ -1277,6 +1277,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `whitepine` | `1` 白松配色 |
 | `stonepine` | `1` 意大利石松配色 |
 | `pinon` | `1` 矮松配色 |
+| `oak` | `1` 橡树配色 |
+| `elm` | `1` 榆树配色 |
+| `beech` | `1` 山毛榉配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 
