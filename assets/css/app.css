@@ -3630,3 +3630,76 @@ box-shadow:0 0 16px rgba(95,176,232,.6);transition:left .8s linear}
 .metro-pct{font-size:15px;color:#b9d9f5;font-variant-numeric:tabular-nums;text-align:center;margin-top:10px}
 .metro-caption{font-size:12px;color:var(--muted);letter-spacing:.4px}
 @media(prefers-reduced-motion:reduce){.instrument.is-working .metro-train{animation:none}.metro-fill,.metro-train{transition:none}}
+
+/* iter-1690: lift skin — elevator floors, doors open at 100% = off work */
+.lift-visual{display:none;flex-direction:column;align-items:center;gap:12px}
+body[data-template=lift]{--bg:#16140f;--surface:#1f1c14;--surface-2:#28231a;--line:#38311f;--text:#efe7d2;--accent:#c9a96e;--accent-rgb:201,169,110;--instrument:#0f0d09;--muted:#a99f86;--dim:#6f6650}
+body[data-template=lift] .charge-visual{display:none}
+body[data-template=lift] .lift-visual{display:flex}
+body[data-template=lift] .energy-stage{margin:16px 0 10px}
+body[data-template=lift] .template-slider{background:#332a17}
+body[data-template=lift] .template-switch button.selected{color:#e3c896}
+body[data-template=lift] .currency-pill{background:#201c10;border-color:#3f3620}
+.lift-panel{position:relative;width:190px;height:210px;background:#1a1710;border:2px solid #3d3320;border-radius:6px;overflow:hidden;box-shadow:0 14px 34px rgba(0,0,0,.5)}
+.lift-floor{position:absolute;top:12px;left:50%;transform:translateX(-50%);z-index:4;
+font:600 26px ui-monospace,monospace;color:#f0d9a8;background:#0c0a06;border:1px solid #3d3320;
+padding:2px 12px;border-radius:4px;letter-spacing:2px}
+.lift-arrow{position:absolute;top:48px;left:50%;transform:translateX(-50%);z-index:4;color:#c9a96e;font-size:14px;animation:lift-blink 1s step-end infinite}
+.lift-arrow.off{color:#4a4230;animation:none}
+@keyframes lift-blink{50%{opacity:.25}}
+.lift-doors{position:absolute;left:14px;right:14px;bottom:0;top:78px;display:flex}
+.lift-door{flex:1;background:linear-gradient(90deg,#3a3222,#564a30 50%,#3a3222);border-top:1px solid #6e5c36;transition:transform 1.2s ease;position:relative;z-index:2}
+.lift-door.l{transform-origin:left;border-right:1px solid #241e12}
+.lift-door.r{transform-origin:right;border-left:1px solid #241e12}
+.lift-doors.open .lift-door.l{transform:translateX(-96%)}
+.lift-doors.open .lift-door.r{transform:translateX(96%)}
+.lift-hall{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
+color:#c9a96e;font-size:15px;letter-spacing:6px;background:radial-gradient(circle,#3d3016,#1a1408 75%);opacity:.55}
+.lift-doors.open .lift-hall{opacity:1}
+.lift-pct{font-size:14px;color:#c9bd9c;font-variant-numeric:tabular-nums}
+.lift-caption{font-size:11px;color:var(--muted);letter-spacing:.4px}
+@media(prefers-reduced-motion:reduce){.lift-door{transition:none}.lift-arrow{animation:none}}
+
+/* iter-1691: eclipse skin — moon slides across the sun, corona burns at the end */
+.eclipse-visual{display:none;flex-direction:column;align-items:center;gap:12px}
+body[data-template=eclipse]{--bg:#0b0d12;--surface:#12151d;--surface-2:#181d29;--line:#242c3e;--text:#e9eef8;--accent:#f0a24c;--accent-rgb:240,162,76;--instrument:#08090d;--muted:#8f9ab0;--dim:#57617a}
+body[data-template=eclipse] .charge-visual{display:none}
+body[data-template=eclipse] .eclipse-visual{display:flex}
+body[data-template=eclipse] .energy-stage{margin:14px 0 8px}
+body[data-template=eclipse] .template-slider{background:#232c40}
+body[data-template=eclipse] .template-switch button.selected{color:#f5bc78}
+body[data-template=eclipse] .currency-pill{background:#141a26;border-color:#2c3850}
+.eclipse-sky{position:relative;width:250px;height:140px;overflow:hidden;border-radius:8px;
+background:radial-gradient(circle at 50% 60%,#1d2230,#0a0c11 75%)}
+.eclipse-sun{position:absolute;left:50%;top:50%;width:110px;height:110px;border-radius:50%;transform:translate(-50%,-50%);
+background:radial-gradient(circle at 42% 38%,#ffe6ad,#f0a24c 55%,#c96f1e 85%);
+box-shadow:0 0 34px rgba(240,162,76,.55)}
+.eclipse-corona{position:absolute;left:50%;top:50%;width:150px;height:150px;border-radius:50%;transform:translate(-50%,-50%);
+background:radial-gradient(circle,rgba(255,220,150,.0) 40%,rgba(255,220,150,.45) 55%,transparent 72%);opacity:0;transition:opacity .8s}
+.eclipse-moon{position:absolute;top:50%;width:96px;height:96px;border-radius:50%;transform:translateY(-50%);
+background:radial-gradient(circle at 38% 34%,#23252c,#0b0c10 70%);box-shadow:inset -6px -4px 12px rgba(255,255,255,.04);transition:left .8s linear}
+.eclipse-pct{font-size:15px;color:#e8cfa8;font-variant-numeric:tabular-nums}
+.eclipse-caption{font-size:11px;color:var(--muted);letter-spacing:.4px}
+@media(prefers-reduced-motion:reduce){.eclipse-moon,.eclipse-corona{transition:none}}
+
+/* iter-1692: flap skin — airport split-flap board showing progress digits */
+.flap-visual{display:none;flex-direction:column;align-items:center;gap:12px}
+body[data-template=flap]{--bg:#101216;--surface:#161a20;--surface-2:#1c222b;--line:#28313f;--text:#e8eef7;--accent:#8ec3ff;--accent-rgb:142,195,255;--instrument:#0b0d10;--muted:#94a3b8;--dim:#586375}
+body[data-template=flap] .charge-visual{display:none}
+body[data-template=flap] .flap-visual{display:flex}
+body[data-template=flap] .energy-stage{margin:16px 0 8px}
+body[data-template=flap] .template-slider{background:#1c2636}
+body[data-template=flap] .template-switch button.selected{color:#a9d0ff}
+body[data-template=flap] .currency-pill{background:#131923;border-color:#2a3850}
+.flap-board{display:flex;gap:7px;padding:16px 18px;background:#0a0c0f;border:1px solid #2a3342;border-radius:10px;box-shadow:0 12px 30px rgba(0,0,0,.5),inset 0 2px 0 rgba(255,255,255,.04)}
+.flap-tile{width:44px;height:60px;display:flex;align-items:center;justify-content:center;
+font:600 38px/1 ui-monospace,'Cascadia Mono',monospace;color:#dfe9f7;
+background:linear-gradient(180deg,#20262f 49%,#181d24 51%);border-radius:5px;border:1px solid #333d4e;
+position:relative;text-shadow:0 1px 0 #000}
+.flap-tile::after{content:'';position:absolute;left:0;right:0;top:50%;height:1px;background:#0a0c0f}
+.flap-tile.dot{width:22px;background:none;border:0;font-size:34px;color:#8ec3ff}
+.flap-tile.dot::after{display:none}
+.flap-tile.flap-pct{width:30px;font-size:22px;color:#8ec3ff}
+.flap-pct{font-size:0}
+.flap-caption{font-size:11px;color:var(--muted);letter-spacing:.4px}
+@media(max-width:520px){.flap-tile{width:36px;height:50px;font-size:30px}}
