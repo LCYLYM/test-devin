@@ -6044,3 +6044,36 @@ body[data-template=yoyo] .yoyo-visual{display:block}
 .yoy-disc{position:absolute;left:50%;top:8%;width:44px;height:44px;margin-left:-22px;background:radial-gradient(circle at 40% 35%,#f07070,#982828);border-radius:50%;transition:top .6s}
 .yoy-axle{position:absolute;left:50%;top:50%;width:10px;height:10px;margin:-5px;background:#f0e0c0;border-radius:50%}
 @media(prefers-reduced-motion:reduce){.jug-arm,.jug-ball{transition:none}}
+body[data-template=pinwheel]{--bg:#0a1418;--surface:#101c22;--surface-2:#16242c;--line:#284048;--text:#d0e8f0;--accent:#58b8c8;--accent-rgb:88,184,200;--instrument:#101c22;--muted:#548896;--dim:#548896}
+body[data-template=marble]{--bg:#10141a;--surface:#181c24;--surface-2:#202430;--line:#323a48;--text:#dcdce8;--accent:#e06080;--accent-rgb:224,96,128;--instrument:#181c24;--muted:#686e80;--dim:#686e80}
+body[data-template=omikuji]{--bg:#160c0c;--surface:#1e1212;--surface-2:#261818;--line:#422424;--text:#eed2cc;--accent:#d84848;--accent-rgb:216,72,72;--instrument:#1e1212;--muted:#9a6262;--dim:#9a6262}
+.pinwheel-visual,.marble-visual,.omikuji-visual{display:none;position:relative;margin-top:18px}
+body[data-template=pinwheel] .charge-visual,body[data-template=marble] .charge-visual,body[data-template=omikuji] .charge-visual{display:none}
+body[data-template=pinwheel] .pinwheel-visual{display:block}
+.pnw-scene{position:relative;height:180px;background:radial-gradient(ellipse at 50% 50%,#142e38,#0a1418 75%);overflow:hidden}
+.pnw-stick{position:absolute;left:50%;top:48%;width:6px;height:44%;margin-left:-3px;background:linear-gradient(#a8845a,#6a5230);border-radius:3px}
+.pnw-wheel{position:absolute;left:50%;top:34%;width:110px;height:110px;transform:translate(-50%,-50%);transition:transform .15s linear}
+.pnw-blade{position:absolute;width:0;height:0;left:50%;top:50%;border:26px solid transparent}
+.pnw-blade.b1{border-bottom:52px solid #e05050;transform:rotate(0deg) translateY(-1px)}
+.pnw-blade.b2{border-bottom:52px solid #f0b838;transform:rotate(90deg) translateY(-1px)}
+.pnw-blade.b3{border-bottom:52px solid #48a868;transform:rotate(180deg) translateY(-1px)}
+.pnw-blade.b4{border-bottom:52px solid #4898d8;transform:rotate(270deg) translateY(-1px)}
+.pnw-blade{transform-origin:0 0}
+.pnw-pin{position:absolute;left:50%;top:50%;width:14px;height:14px;margin:-7px;background:#f0e0c0;border-radius:50%}
+.pnw-wind{position:absolute;top:26%;width:56px;height:12px;border:2px solid rgba(160,220,240,.3);border-radius:50%}
+.pnw-wind.w1{left:6%}
+.pnw-wind.w2{right:6%}
+.pinwheel-caption,.marble-caption,.omikuji-caption{text-align:center;font-size:11px;color:var(--dim);margin-top:10px}
+body[data-template=marble] .marble-visual{display:block}
+.mrb-scene{position:relative;height:180px;background:radial-gradient(ellipse at 50% 50%,#1c2430,#10141a 75%);overflow:hidden}
+.mrb-svg{position:absolute;left:50%;top:50%;width:200px;height:140px;transform:translate(-50%,-50%)}
+.mrb-ball{position:absolute;left:7%;top:14%;width:16px;height:16px;margin:-8px;background:radial-gradient(circle at 35% 30%,#f08098,#b03050);border-radius:50%;transition:left .3s,top .3s}
+.mrb-goal{position:absolute;left:88%;top:86%;width:26px;height:10px;background:linear-gradient(#58b870,#2a7040);border-radius:4px}
+body[data-template=omikuji] .omikuji-visual{display:block}
+.omk-scene{position:relative;height:180px;background:radial-gradient(ellipse at 50% 70%,#2c1414,#160c0c 75%);overflow:hidden}
+.omk-box{position:absolute;left:50%;bottom:14%;width:76px;height:82px;transform:translateX(-50%);background:linear-gradient(#b03838,#701818);border-radius:10px;transition:transform .1s}
+.omk-hole{position:absolute;left:50%;top:8px;width:26px;height:14px;margin-left:-13px;background:#3a0c0c;border-radius:50%}
+.omk-sticks{position:absolute;left:50%;top:-16px;width:44px;height:20px;margin-left:-22px;background:repeating-linear-gradient(90deg,#d8c8a0 0 5px,transparent 5px 8px);border-radius:2px}
+.omk-paper{position:absolute;left:50%;bottom:-60px;width:88px;height:56px;margin-left:-44px;background:linear-gradient(#f4ecd8,#e0d0ac);border-radius:3px;display:flex;align-items:center;justify-content:center;transition:bottom .6s,opacity .5s;opacity:0}
+.omk-text{font-family:'Kaiti SC','STKaiti',KaiTi,serif;font-size:22px;color:#a01818;font-weight:700}
+@media(prefers-reduced-motion:reduce){.pnw-wheel,.omk-box{transition:none}}
