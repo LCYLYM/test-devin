@@ -5352,3 +5352,36 @@ body[data-template=laundry] .laundry-visual{display:block}
 .ldy-bubble.b3{left:72%;top:20%;width:8px;height:8px;animation:ldyUp 2.8s ease-in infinite -2s}
 @keyframes ldyUp{0%{transform:translateY(16px);opacity:0}20%{opacity:.9}100%{transform:translateY(-20px);opacity:0}}
 @media(prefers-reduced-motion:reduce){.dgb-ripple,.dgb-paddle,.ldy-bubble{animation:none}}
+body[data-template=muyu]{--bg:#161006;--surface:#1e160a;--surface-2:#261e0e;--line:#483a1e;--text:#f0e6cc;--accent:#c89858;--accent-rgb:200,152,88;--instrument:#1e160a;--muted:#a88958;--dim:#a88958}
+.muyu-visual,.sushi-visual,.mallow-visual{display:none;position:relative;margin-top:18px}
+body[data-template=muyu] .charge-visual,body[data-template=sushi] .charge-visual,body[data-template=mallow] .charge-visual{display:none}
+body[data-template=muyu] .muyu-visual{display:block}
+.myu-scene{position:relative;height:180px;background:radial-gradient(ellipse at 50% 80%,#2a1e0c,#161006 75%);overflow:hidden}
+.myu-fish{position:absolute;left:50%;bottom:26%;width:110px;height:80px;margin-left:-55px;background:radial-gradient(ellipse at 40% 35%,#b07830,#6a4418);border-radius:50% 50% 46% 46%;transition:transform .12s}
+.myu-mouth{position:absolute;left:50%;top:18%;width:64px;height:18px;margin-left:-32px;background:#3a2408;border-radius:50%;clip-path:ellipse(50% 50% at 50% 0)}
+.myu-stick{position:absolute;left:calc(50% + 40px);bottom:52%;width:7px;height:70px;background:linear-gradient(#d8b070,#8a6030);border-radius:4px;transform:rotate(-20deg);transform-origin:bottom center;transition:transform .12s}
+.myu-stick::before{content:'';position:absolute;left:50%;top:-14px;width:16px;height:16px;margin-left:-8px;background:#e8c080;border-radius:50%}
+.myu-merit{position:absolute;left:50%;bottom:64%;transform:translateX(-50%);font-size:13px;color:#f0d890;opacity:0}
+.myu-ripple{position:absolute;left:50%;bottom:24%;width:130px;height:16px;margin-left:-65px;border:2px solid rgba(200,152,88,.25);border-radius:50%}
+.muyu-caption,.sushi-caption,.mallow-caption{text-align:center;font-size:11px;color:var(--dim);margin-top:10px}
+body[data-template=sushi] .sushi-visual{display:block}
+.ssh-scene{position:relative;height:170px;background:linear-gradient(#160e10 0%,#241418 100%);overflow:hidden}
+.ssh-belt{position:absolute;left:0;right:0;bottom:24%;height:26px;background:repeating-linear-gradient(90deg,#3a2e32 0 30px,#2a2126 30px 60px);animation:sshMove 4s linear infinite}
+@keyframes sshMove{0%{background-position:0 0}100%{background-position:60px 0}}
+.ssh-plate{position:absolute;bottom:calc(24% + 18px);width:52px;height:12px;background:#e8e0d8;border-radius:50%;transition:left .3s}
+.ssh-plate .ssh-food{position:absolute;left:50%;bottom:6px;transform:translateX(-50%);font-size:24px;font-style:normal;transition:opacity .3s}
+.ssh-chop{position:absolute;left:50%;bottom:30%;transform:translateX(-50%);font-size:30px;opacity:0;transition:bottom .5s,opacity .5s}
+body[data-template=mallow] .mallow-visual{display:block}
+.mlw-scene{position:relative;height:170px;background:radial-gradient(ellipse at 50% 100%,#3a1808,#181008 70%);overflow:hidden}
+.mlw-fire{position:absolute;left:30%;right:30%;bottom:6%;height:30%}
+.mlw-fire i{position:absolute;bottom:0;width:18px;height:30px;background:radial-gradient(ellipse at 50% 100%,#f8a028,#e04818 70%,transparent);border-radius:50% 50% 20% 20%;opacity:.8;animation:mlwFlick .8s ease-in-out infinite}
+.mlw-fire i:nth-child(1){left:10%}
+.mlw-fire i:nth-child(2){left:44%;animation-delay:-.3s}
+.mlw-fire i:nth-child(3){left:76%;animation-delay:-.55s}
+@keyframes mlwFlick{0%,100%{transform:scaleY(1)}50%{transform:scaleY(1.3)}}
+.mlw-skewer{position:absolute;left:50%;bottom:38%;width:6px;height:96px;margin-left:-3px;background:#a88050}
+.mlw-mallow{position:absolute;left:50%;top:-6px;width:44px;height:44px;margin-left:-22px;background:#f8ecd8;border-radius:14px;transition:background .7s,transform .2s}
+.mlw-smoke{position:absolute;left:50%;bottom:70%;width:30px;height:40px;margin-left:-15px;opacity:0;transition:opacity .6s}
+.mlw-smoke::before{content:'';position:absolute;left:8px;bottom:0;width:5px;height:30px;background:linear-gradient(transparent,rgba(200,200,200,.4));border-radius:50%;animation:mlwUp 2.8s ease-in infinite}
+@keyframes mlwUp{0%{transform:translateY(10px);opacity:0}30%{opacity:.8}100%{transform:translateY(-14px);opacity:0}}
+@media(prefers-reduced-motion:reduce){.ssh-belt,.mlw-fire i,.mlw-smoke::before{animation:none}}
