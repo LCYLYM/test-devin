@@ -7187,3 +7187,31 @@ body[data-template=bath] .bath-visual{display:block}
 .bth-bubble{position:absolute;bottom:20px;left:50%;width:6px;height:6px;background:rgba(255,255,255,.85);border-radius:50%;opacity:0}
 .jukebox-caption,.musicbox-caption,.bath-caption{text-align:center;font-size:11px;color:var(--dim);margin-top:10px}
 @media(prefers-reduced-motion:reduce){.msx-lid,.msx-dancer,.jkb-arch,.jkb-tube{transition:none}}
+body[data-template=dive]{--bg:#08141c;--surface:#101e26;--surface-2:#162830;--line:#263e48;--text:#c8e0e8;--accent:#58b8e0;--accent-rgb:88,184,224;--instrument:#101e26;--muted:#4e7484;--dim:#4e7484}
+body[data-template=observatory]{--bg:#0a0e18;--surface:#121620;--surface-2:#1a1f2c;--line:#2c344a;--text:#ccd4e8;--accent:#8898c0;--accent-rgb:136,152,192;--instrument:#121620;--muted:#5c6480;--dim:#5c6480}
+body[data-template=darkroom]{--bg:#100606;--surface:#180c0c;--surface-2:#221212;--line:#3c2222;--text:#e8d0d0;--accent:#e04838;--accent-rgb:224,72,56;--instrument:#180c0c;--muted:#7a4c48;--dim:#7a4c48}
+.dive-visual,.observatory-visual,.darkroom-visual{display:none;position:relative;margin-top:18px}
+body[data-template=dive] .charge-visual,body[data-template=observatory] .charge-visual,body[data-template=darkroom] .charge-visual{display:none}
+body[data-template=dive] .dive-visual{display:block}
+.dve-scene{position:relative;height:180px;background:linear-gradient(#1a2e3a,#08141c);overflow:hidden}
+.dve-pool{position:absolute;left:0;right:0;bottom:0;height:24%;background:linear-gradient(#2a7a9a,#144258)}
+.dve-board{position:absolute;left:14%;top:34%;width:80px;height:6px;background:linear-gradient(#e0dcd0,#a8a08c);border-radius:3px}
+.dve-board::after{content:'';position:absolute;right:-6px;top:6px;width:8px;height:60px;background:#6a6456}
+.dve-diver{position:absolute;left:28%;bottom:58%;width:12px;height:20px;background:linear-gradient(#f0c090,#c07840);border-radius:5px 5px 8px 8px;transform-origin:50% 0}
+.dve-diver::before{content:'';position:absolute;top:-7px;left:50%;width:8px;height:8px;margin-left:-4px;background:#f0d0b0;border-radius:50%}
+.dve-ripple{position:absolute;left:28%;bottom:14%;width:60px;height:10px;margin-left:-14px;border:2px solid rgba(150,220,240,.7);border-radius:50%;opacity:0;transform:scale(.5)}
+body[data-template=observatory] .observatory-visual{display:block}
+.obv-scene{position:relative;height:180px;background:linear-gradient(#0a0e18,#141a2c 70%,#0a0e18);overflow:hidden}
+.obv-sky{position:absolute;inset:0;background-image:radial-gradient(1px 1px at 18% 22%,rgba(255,255,255,.6),transparent),radial-gradient(1px 1px at 42% 12%,rgba(255,255,255,.4),transparent),radial-gradient(1.5px 1.5px at 68% 26%,rgba(255,255,255,.5),transparent),radial-gradient(1px 1px at 88% 16%,rgba(255,255,255,.5),transparent)}
+.obv-dome{position:absolute;left:50%;bottom:30%;width:96px;height:52px;margin-left:-48px;background:radial-gradient(ellipse at 50% 100%,#8a94a8,#4a5468);border-radius:48px 48px 0 0;overflow:hidden}
+.obv-shutter{position:absolute;left:50%;top:-4px;width:14px;height:56px;margin-left:-7px;background:#12141c;transition:transform .5s}
+.obv-scope{position:absolute;left:50%;bottom:6px;width:8px;height:34px;margin-left:-4px;background:linear-gradient(#c8b060,#8a7430);border-radius:3px;transform-origin:50% 100%;opacity:0;transition:opacity .4s}
+.obv-base{position:absolute;left:50%;bottom:6%;width:110px;height:28%;margin-left:-55px;background:linear-gradient(#6a6f78,#3a3f48);border-radius:4px}
+body[data-template=darkroom] .darkroom-visual{display:block}
+.dkr-scene{position:relative;height:180px;background:#100606;overflow:hidden}
+.dkr-lamp{position:absolute;left:50%;top:6%;width:30px;height:16px;margin-left:-15px;background:#7a1410;border-radius:4px;box-shadow:0 18px 30px 10px rgba(220,60,40,.25)}
+.dkr-tray{position:absolute;left:50%;bottom:14%;width:130px;height:26px;margin-left:-65px;background:linear-gradient(#3a3a3a,#222);border-radius:6px;border:2px solid #181818}
+.dkr-photo{position:absolute;left:50%;bottom:22%;width:74px;height:52px;margin-left:-37px;background:#f0ece0;border:3px solid #d8d0c0;opacity:.15;transform:rotate(-2deg)}
+.dkr-img{position:absolute;inset:4px;background:linear-gradient(#6a8a5a 0 55%,#4a3828 55%);opacity:.9}
+.dive-caption,.observatory-caption,.darkroom-caption{text-align:center;font-size:11px;color:var(--dim);margin-top:10px}
+@media(prefers-reduced-motion:reduce){.obv-shutter,.obv-scope{transition:none}}
