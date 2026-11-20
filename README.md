@@ -1427,6 +1427,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `mangosteen` | `1` マンゴスチン配色 |
 | `rambutan` | `1` ランブータン配色 |
 | `durian` | `1` ドリアン配色 |
+| `kumquat` | `1` キンカン配色 |
+| `clementine` | `1` クレメンタイン配色 |
+| `satsuma` | `1` サツマミカン配色 |
 | `fuchsia` | `1` フクシア配色 |
 | `oleander` | `1` キョウチクトウ配色 |
 | `buddleia` | `1` フサフジウツギ配色 |

@@ -3052,6 +3052,12 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .is-rambutan .instrument{border-color:rgba(220,80,70,.4)}
 .is-durian{background:linear-gradient(180deg,#212415 0%,#0f1209 100%)}
 .is-durian .instrument{border-color:rgba(160,180,80,.4)}
+.is-kumquat{background:linear-gradient(180deg,#281f0f 0%,#140f06 100%)}
+.is-kumquat .instrument{border-color:rgba(235,160,45,.4)}
+.is-clementine{background:linear-gradient(180deg,#291d0e 0%,#150e06 100%)}
+.is-clementine .instrument{border-color:rgba(240,140,40,.4)}
+.is-satsuma{background:linear-gradient(180deg,#2a1c0c 0%,#150d05 100%)}
+.is-satsuma .instrument{border-color:rgba(245,120,35,.4)}
 .is-fuchsia{background:linear-gradient(180deg,#2e1428 0%,#160a13 100%)}
 .is-fuchsia .instrument{border-color:rgba(230,100,200,.4)}
 .is-oleander{background:linear-gradient(180deg,#2c1720 0%,#150b0f 100%)}
