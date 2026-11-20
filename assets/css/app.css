@@ -10090,3 +10090,65 @@ html[data-template="stonebridge"] .stonebridge-visual{display:flex;flex-directio
 .gen-bloom{position:absolute;left:50%;top:50%;width:110px;height:110px;margin:-55px 0 0 -55px;border-radius:50%;background:radial-gradient(circle,var(--gc) 0%,transparent 68%);opacity:0}
 .gen-halo{position:absolute;left:50%;top:50%;width:70px;height:70px;border:1px solid var(--gc);border-radius:50%;transform:translate(-50%,-50%);opacity:0}
 .gen-tile{height:24px;background:var(--gc);border-radius:5px;opacity:0;transform:scale(.6)}
+
+/* iter-2134: every -visual hidden by default */
+.aurora-visual,.catnap-visual,.typewriter-visual{display:none}
+/* iter-2134: every skin shows its own scene */
+body[data-template=alpenglow] .alpenglow-visual{display:block}
+body[data-template=apothecary] .apothecary-visual{display:block}
+body[data-template=aurora] .aurora-visual{display:block}
+body[data-template=bambooforest] .bambooforest-visual{display:block}
+body[data-template=biolum] .biolum-visual{display:block}
+body[data-template=brewery] .brewery-visual{display:block}
+body[data-template=candleworks] .candleworks-visual{display:block}
+body[data-template=catnap] .catnap-visual{display:block}
+body[data-template=cenote] .cenote-visual{display:block}
+body[data-template=charcoal] .charcoal-visual{display:block}
+body[data-template=charge] .charge-visual{display:block}
+body[data-template=ciderpress] .ciderpress-visual{display:block}
+body[data-template=cliffside] .cliffside-visual{display:block}
+body[data-template=clothesline] .clothesline-visual{display:block}
+body[data-template=coldframe] .coldframe-visual{display:block}
+body[data-template=coralreef] .coralreef-visual{display:block}
+body[data-template=creamery] .creamery-visual{display:block}
+body[data-template=distillery] .distillery-visual{display:block}
+body[data-template=duckpond] .duckpond-visual{display:block}
+body[data-template=fishpond] .fishpond-visual{display:block}
+body[data-template=glowcave] .glowcave-visual{display:block}
+body[data-template=grotto] .grotto-visual{display:block}
+body[data-template=hayloft] .hayloft-visual{display:block}
+body[data-template=herbgarden] .herbgarden-visual{display:block}
+body[data-template=hoodoo] .hoodoo-visual{display:block}
+body[data-template=hut] .hut-visual{display:block}
+body[data-template=icecrack] .icecrack-visual{display:block}
+body[data-template=karst] .karst-visual{display:block}
+body[data-template=lavenderfield] .lavenderfield-visual{display:block}
+body[data-template=mangrove] .mangrove-visual{display:block}
+body[data-template=millrace] .millrace-visual{display:block}
+body[data-template=moonlake] .moonlake-visual{display:block}
+body[data-template=murmur] .murmur-visual{display:block}
+body[data-template=nori] .nori-visual{display:block}
+body[data-template=outpost] .outpost-visual{display:block}
+body[data-template=papermill] .papermill-visual{display:block}
+body[data-template=pigsty] .pigsty-visual{display:block}
+body[data-template=pumphouse] .pumphouse-visual{display:block}
+body[data-template=quay] .quay-visual{display:block}
+body[data-template=redwood] .redwood-visual{display:block}
+body[data-template=riceterrace] .riceterrace-visual{display:block}
+body[data-template=rookery] .rookery-visual{display:block}
+body[data-template=saltmarsh] .saltmarsh-visual{display:block}
+body[data-template=scaffold] .scaffold-visual{display:block}
+body[data-template=semaphore] .semaphore-visual{display:block}
+body[data-template=springhouse] .springhouse-visual{display:block}
+body[data-template=startrails] .startrails-visual{display:block}
+body[data-template=stonearch] .stonearch-visual{display:block}
+body[data-template=stonebridge] .stonebridge-visual{display:block}
+body[data-template=stonefield] .stonefield-visual{display:block}
+body[data-template=tannery] .tannery-visual{display:block}
+body[data-template=tent] .tent-visual{display:block}
+body[data-template=tideflat] .tideflat-visual{display:block}
+body[data-template=travertine] .travertine-visual{display:block}
+body[data-template=typewriter] .typewriter-visual{display:block}
+body[data-template=watchmaker] .watchmaker-visual{display:block}
+body[data-template=windchime] .windchime-visual{display:block}
+body[data-template=woodpile] .woodpile-visual{display:block}
