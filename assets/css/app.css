@@ -9541,3 +9541,44 @@ html[data-template="clothesline"] .clothesline-visual{display:flex;flex-directio
 #clnC2{left:45.5%;background:linear-gradient(#c8b088,#988058)}
 #clnC3{left:66.5%;background:linear-gradient(#98b888,#688a58)}
 .clothesline-caption{}
+
+/* 纸坊 papermill: 抄纸帘起、湿纸上墙 */
+.papermill-visual{display:none;grid-area:visual}
+html[data-template="papermill"] .pig-visual{display:none}
+html[data-template="papermill"] .papermill-visual{display:flex;flex-direction:column;align-items:center;gap:10px}
+.pml-scene{position:relative;width:270px;height:180px}
+.pml-vat{position:absolute;left:22%;bottom:10%;width:96px;height:40px;background:linear-gradient(#4a3c24,#2e2412);border-radius:6px;border-top:4px solid #5e4e30}
+.pml-vat::after{content:'';position:absolute;left:6px;right:6px;top:4px;height:8px;background:#8a7a55;border-radius:4px;opacity:.7}
+.pml-mold{position:absolute;left:34%;bottom:34%;width:58px;height:10px;background:#6a5a38;border:2px solid #4a3c22;border-radius:3px;transition:transform .4s}
+.pml-sheet{position:absolute;right:14%;width:34px;height:46px;background:linear-gradient(#f0ead0,#d0c8a8);border-radius:2px;opacity:0;transition:opacity .8s;box-shadow:0 2px 4px rgba(0,0,0,.3)}
+#pmlS1{bottom:14%}#pmlS2{bottom:28%;right:18%}#pmlS3{bottom:42%;right:22%}
+.papermill-caption,.onsen-caption,.pigsty-caption{font-size:12px;color:var(--muted)}
+
+/* 温泉 onsen: 汤池腾汽 */
+.onsen-visual{display:none;grid-area:visual}
+html[data-template="onsen"] .pig-visual{display:none}
+html[data-template="onsen"] .onsen-visual{display:flex;flex-direction:column;align-items:center;gap:10px}
+.ons-scene{position:relative;width:270px;height:180px}
+.ons-rocks{position:absolute;left:14%;right:14%;bottom:8%;height:56%;background:radial-gradient(ellipse at 50% 100%,#4a4640,#2a2620 80%);border-radius:50% 50% 24% 24%/70% 70% 20% 20%}
+.ons-rocks::before{content:'';position:absolute;left:-14px;top:24%;width:34px;height:26px;background:#3a3630;border-radius:50%}
+.ons-pool{position:absolute;left:24%;right:24%;bottom:18%;height:38%;background:radial-gradient(ellipse at 50% 45%,#5a9aa8,#2a5a66);border-radius:50% 50% 30% 30%/80% 80% 24% 24%;opacity:.35;transition:opacity 1s}
+.ons-steam{position:absolute;left:50%;width:12px;height:22px;background:radial-gradient(#c8d8d8aa,#88989855);border-radius:50%;opacity:0;filter:blur(4px);transition:opacity .8s}
+#onsS1{margin-left:-26px}#onsS2{margin-left:-4px}#onsS3{margin-left:18px}
+.onsen-caption{}
+
+/* 猪圈 pigsty: 泥坑打滚、小猪甩尾 */
+.pigsty-visual{display:none;grid-area:visual}
+html[data-template="pigsty"] .pig-visual{display:none}
+html[data-template="pigsty"] .pigsty-visual{display:flex;flex-direction:column;align-items:center;gap:10px}
+.sty-scene{position:relative;width:270px;height:180px}
+.sty-fence{position:absolute;left:8%;right:8%;bottom:8%;height:44%;border:4px solid #5a4428;border-top-width:0;border-radius:0 0 8px 8px}
+.sty-fence::before{content:'';position:absolute;left:0;right:0;top:18%;height:5px;background:#5a4428}
+.sty-fence::after{content:'';position:absolute;left:0;right:0;top:55%;height:5px;background:#5a4428}
+.sty-mud{position:absolute;left:20%;right:20%;bottom:9%;height:22%;background:radial-gradient(ellipse,#5a4028,#3a2818);border-radius:50%/60%;opacity:.4;transition:opacity 1s}
+.sty-pig{position:absolute;left:38%;bottom:18%;width:56px;height:34px;background:linear-gradient(#d8a0a8,#a86870);border-radius:50% 46% 44% 48%/64% 64% 40% 40%;transition:transform .3s}
+.sty-pig::before{content:'';position:absolute;left:-9px;top:22%;width:16px;height:15px;background:#c89098;border-radius:50% 50% 40% 40%}
+.sty-pig::after{content:'';position:absolute;left:-11px;top:28%;width:7px;height:5px;background:#e8b8bc;border-radius:50%}
+.sty-ear{position:absolute;left:2px;top:-5px;width:11px;height:10px;background:#c89098;border-radius:50% 50% 0 50%}
+.sty-tail{position:absolute;right:-8px;top:38%;width:12px;height:4px;border:2px solid #c89098;border-left:none;border-radius:0 8px 8px 0;transform-origin:0 50%;transition:transform .2s}
+.sty-splash{position:absolute;left:30%;bottom:14%;width:70px;height:18px;background:radial-gradient(#6a483088,transparent 70%);border-radius:50%;opacity:0;transition:opacity .6s}
+.pigsty-caption{}
