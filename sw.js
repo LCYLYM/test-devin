@@ -51,7 +51,8 @@ self.addEventListener('fetch', (e) => {
   }
   if (url.origin !== location.origin) return;
   if (e.request.mode === 'navigate') {
-    e.respondWith(fetch(e.request).catch(() => caches.match('./index.html')));
+    e.respondWith(fetch(e.request).catch(() =>
+      caches.match(e.request).then((hit) => hit || caches.match('./index.html'))));
     return;
   }
   e.respondWith(
