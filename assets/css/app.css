@@ -9814,3 +9814,44 @@ html[data-template="sauna"] .sauna-visual{display:flex;flex-direction:column;ali
 .sau-ladle{position:absolute;left:56%;bottom:30%;width:8px;height:30px;background:#8a6a40;border-radius:4px;transform:rotate(-20deg);opacity:0;transition:opacity .8s}
 .sau-ladle::after{content:'';position:absolute;bottom:-8px;left:-6px;width:18px;height:12px;background:#9a7a48;border-radius:0 0 10px 10px}
 .sauna-caption{}
+
+/* 崖居 cliffside: 凿壁成屋、窗光渐亮 */
+.cliffside-visual{display:none;grid-area:visual}
+html[data-template="cliffside"] .pig-visual{display:none}
+html[data-template="cliffside"] .cliffside-visual{display:flex;flex-direction:column;align-items:center;gap:10px}
+.clf-scene{position:relative;width:270px;height:180px}
+.clf-rock{position:absolute;left:14%;bottom:0;width:56%;height:88%;background:linear-gradient(#5a5044,#382f26 70%);clip-path:polygon(0 100%,0 30%,15% 8%,45% 0,75% 5%,95% 22%,100% 55%,100% 100%);border-radius:0 24px 0 0}
+.clf-dwelling{position:absolute;left:26%;bottom:38%;width:60px;height:46px;background:#241c14;border-radius:8px 8px 2px 2px;border-top:5px solid #6a5a42}
+.clf-dwelling::after{content:'';position:absolute;left:-8px;right:-8px;top:-14px;height:10px;background:#4a3c28;clip-path:polygon(0 100%,50% 0,100% 100%)}
+.clf-win{position:absolute;left:38%;bottom:48%;width:16px;height:14px;background:radial-gradient(#f0c060,#a07820);border-radius:2px;opacity:0;transition:opacity 1s;box-shadow:0 0 12px #f0c06088}
+.clf-ladder{position:absolute;left:24%;bottom:8%;width:14px;height:60px;background:repeating-linear-gradient(#7a5c34 0 4px,transparent 4px 9px);border-left:3px solid #5a4224;border-right:3px solid #5a4224;opacity:0;transition:opacity .9s}
+.clf-bird{position:absolute;bottom:70%;width:14px;height:6px;border-left:7px solid #8a8a80;border-right:7px solid #8a8a80;border-radius:50%;opacity:0;transition:left 2.4s linear,opacity .8s}
+.cliffside-caption,.springhouse-caption,.riceterrace-caption{font-size:12px;color:var(--muted)}
+
+/* 泉屋 springhouse: 泉眼涌水、檐下滴落 */
+.springhouse-visual{display:none;grid-area:visual}
+html[data-template="springhouse"] .pig-visual{display:none}
+html[data-template="springhouse"] .springhouse-visual{display:flex;flex-direction:column;align-items:center;gap:10px}
+.sph-scene{position:relative;width:270px;height:180px}
+.sph-hut{position:absolute;left:56%;bottom:30%;width:74px;height:56px;background:linear-gradient(#4a3c26,#2e2414);border-radius:4px}
+.sph-hut::before{content:'';position:absolute;left:-8px;right:-8px;top:-16px;height:14px;background:#6a5636;clip-path:polygon(0 100%,50% 0,100% 100%)}
+.sph-spring{position:absolute;left:16%;bottom:10%;width:66px;height:40%;background:radial-gradient(ellipse at 50% 30%,#4a8aa0,#22485a);border-radius:50% 50% 12px 12px/60% 60% 10px 10px;opacity:.35;transition:opacity 1s}
+.sph-drip{position:absolute;left:60%;bottom:34%;width:4px;height:14px;background:linear-gradient(#a8d8e8,#5a9ab0);border-radius:2px;opacity:0;animation:sph-dr 1.6s ease-in infinite}
+@keyframes sph-dr{0%{transform:translateY(-8px);opacity:0}40%{opacity:1}100%{transform:translateY(10px);opacity:0}}
+.sph-rip{position:absolute;left:20%;bottom:16%;width:40px;height:12px;border:2px solid #7ab8cc66;border-radius:50%;opacity:0;transition:opacity .7s}
+.sph-mist{position:absolute;left:50%;top:14%;width:90px;height:34px;background:radial-gradient(#9ac8d833,transparent 70%);border-radius:50%;opacity:0;transition:opacity 1.2s}
+.springhouse-caption{}
+
+/* 梯田 riceterrace: 层层灌田、水镜映天 */
+.riceterrace-visual{display:none;grid-area:visual}
+html[data-template="riceterrace"] .pig-visual{display:none}
+html[data-template="riceterrace"] .riceterrace-visual{display:flex;flex-direction:column;align-items:center;gap:10px}
+.rt-scene{position:relative;width:270px;height:180px}
+.rt-t1,.rt-t2,.rt-t3{position:absolute;left:50%;transform:translateX(-50%);border-radius:0 0 50% 50%/0 0 100% 100%;opacity:0;transition:opacity .9s;border:2px solid #4a6a3a;border-top:3px solid #6a8a4a}
+.rt-t1{bottom:52%;width:120px;height:26px;background:linear-gradient(#4a7a8a,#2e565e)}
+.rt-t2{bottom:30%;width:170px;height:28px;background:linear-gradient(#4a7a8a,#2e565e)}
+.rt-t3{bottom:8%;width:220px;height:30px;background:linear-gradient(#4a7a8a,#2e565e)}
+.rt-shine{position:absolute;left:50%;bottom:56%;width:70px;height:14px;background:radial-gradient(#c8e8f066,transparent 70%);border-radius:50%;transform:translateX(-50%);opacity:0;transition:opacity 1s}
+.rt-bird{position:absolute;left:70%;top:16%;width:13px;height:7px;border-left:6px solid #d8d8cc;border-right:6px solid #d8d8cc;border-radius:50%;opacity:0;transition:opacity 1s}
+.riceterrace-caption{}
+@media (prefers-reduced-motion:reduce){.sph-drip{animation:none}}
