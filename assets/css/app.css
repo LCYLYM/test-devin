@@ -7642,3 +7642,50 @@ body[data-template=canyon] .canyon-visual{display:block}
 .cyn-river{position:absolute;bottom:10px;left:42%;width:16%;height:14px;border-radius:50%;background:#4a90b8;opacity:0;transition:opacity .6s}
 .canyon-caption{text-align:center;font-size:11px;color:var(--dim);margin-top:10px}
 @media(prefers-reduced-motion:reduce){body[data-template=canyon] *{animation:none!important;transition:none!important}}
+
+/* dawn 黎明 */
+body[data-template=dawn]{--bg:#120e14;--surface:#1a1620;--surface-2:#241e2c;--line:#443a4e;--text:#ece0e0;--accent:#e89a5a;--accent-rgb:232,154,90;--instrument:#1a1620;--muted:#a88a80;--dim:#625458}
+.dawn-visual{display:none;position:relative;margin-top:18px}
+body[data-template=dawn] .charge-visual{display:none}
+body[data-template=dawn] .dawn-visual{display:block}
+.dw-scene{position:relative;height:200px;max-width:340px;margin:0 auto;overflow:hidden;border-radius:10px}
+.dw-sky{position:absolute;inset:0;background:linear-gradient(180deg,#141024 0%,#3a2848 40%,#c86438 72%,#e89a5a 90%);opacity:0;transition:opacity 1s}
+.dw-sun{position:absolute;bottom:12%;left:50%;width:44px;height:44px;margin-left:-22px;border-radius:50%;background:radial-gradient(circle,#ffe8b8,#e8a050);box-shadow:0 0 40px rgba(255,220,150,0.6);transition:bottom .8s}
+.dw-horizon{position:absolute;bottom:0;left:0;right:0;height:34px;background:linear-gradient(180deg,#241a20,#160f14);border-radius:50% 50% 0 0/24px 24px 0 0}
+.dw-bird{position:absolute;top:34%;width:18px;height:8px;opacity:0}
+.dw-bird::before{content:"";position:absolute;left:0;width:9px;height:8px;border-top:2px solid #2a2030;border-radius:50% 0 0 0;transform:rotate(12deg)}
+.dw-bird::after{content:"";position:absolute;right:0;width:9px;height:8px;border-top:2px solid #2a2030;border-radius:0 50% 0 0;transform:rotate(-12deg)}
+.dawn-caption{text-align:center;font-size:11px;color:var(--dim);margin-top:10px}
+@media(prefers-reduced-motion:reduce){body[data-template=dawn] *{animation:none!important;transition:none!important}}
+
+/* cabin 木屋 */
+body[data-template=cabin]{--bg:#14100a;--surface:#1e160e;--surface-2:#2a2014;--line:#4c3a26;--text:#eeddc4;--accent:#b8784a;--accent-rgb:184,120,74;--instrument:#1e160e;--muted:#a8825a;--dim:#665038}
+.cabin-visual{display:none;position:relative;margin-top:18px}
+body[data-template=cabin] .charge-visual{display:none}
+body[data-template=cabin] .cabin-visual{display:block}
+.cb-scene{position:relative;height:200px;max-width:300px;margin:0 auto}
+.cb-house{position:absolute;bottom:20px;left:50%;transform:translateX(-50%);width:140px;height:84px;background:repeating-linear-gradient(180deg,#5a3a20 0 12px,#4a301a 12px 14px);border:2px solid #3a2814;border-bottom:none}
+.cb-roof{position:absolute;top:-30px;left:-14px;right:-14px;height:0;border-left:84px solid transparent;border-right:84px solid transparent;border-bottom:32px solid #3a2414}
+.cb-window{position:absolute;top:22px;left:18px;width:28px;height:26px;border:3px solid #3a2814;background:#f0c060;box-shadow:0 0 14px rgba(240,192,96,0.5);opacity:0.15;transition:opacity .5s}
+.cb-door{position:absolute;bottom:0;right:20px;width:28px;height:44px;background:#3a2814;border-radius:4px 4px 0 0}
+.cb-chimney{position:absolute;bottom:120px;left:calc(50% + 34px);width:16px;height:34px;background:#4a3018}
+.cb-smoke{position:absolute;bottom:152px;left:calc(50% + 36px);width:14px;height:14px;border-radius:50%;background:rgba(200,190,180,0.4);filter:blur(3px);opacity:0}
+.cabin-caption{text-align:center;font-size:11px;color:var(--dim);margin-top:10px}
+@media(prefers-reduced-motion:reduce){body[data-template=cabin] *{animation:none!important;transition:none!important}}
+
+/* origamicrane 纸鹤 */
+body[data-template=origamicrane]{--bg:#121010;--surface:#1c1816;--surface-2:#28221e;--line:#4a423a;--text:#ece4d8;--accent:#d8d0c0;--accent-rgb:216,208,192;--instrument:#1c1816;--muted:#b0a898;--dim:#6a6156}
+.origamicrane-visual{display:none;position:relative;margin-top:18px}
+body[data-template=origamicrane] .charge-visual{display:none}
+body[data-template=origamicrane] .origamicrane-visual{display:block}
+.oc-scene{position:relative;height:200px;max-width:320px;margin:0 auto;overflow:hidden;border-radius:10px;background:linear-gradient(180deg,#1a1816,#14110e)}
+.oc-arc{position:absolute;top:20%;left:10%;right:10%;height:50%;border-top:1px dashed rgba(216,208,192,0.25);border-radius:50%}
+.oc-crane{position:absolute;top:62%;left:8%;width:70px;height:44px;transition:left .4s,top .4s}
+.oc-body{position:absolute;top:14px;left:14px;width:36px;height:16px;background:#d8d0c0;clip-path:polygon(0 60%,30% 0,70% 0,100% 60%,70% 100%,30% 100%)}
+.oc-neck{position:absolute;top:0;left:48px;width:18px;height:22px;background:#d8d0c0;clip-path:polygon(0 100%,20% 0,60% 0,40% 100%)}
+.oc-neck::after{content:"";position:absolute;top:0;left:8px;width:12px;height:8px;background:#d8d0c0;clip-path:polygon(0 50%,100% 0,100% 100%)}
+.oc-wing{position:absolute;top:2px;width:26px;height:20px;background:#c8bfae;transform-origin:50% 100%}
+.oc-wing.wl{left:6px;clip-path:polygon(50% 100%,0 0,100% 30%)}
+.oc-wing.wr{left:32px;clip-path:polygon(50% 100%,100% 0,0 30%)}
+.origamicrane-caption{text-align:center;font-size:11px;color:var(--dim);margin-top:10px}
+@media(prefers-reduced-motion:reduce){body[data-template=origamicrane] *{animation:none!important;transition:none!important}}
