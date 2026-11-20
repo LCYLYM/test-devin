@@ -3166,6 +3166,12 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .is-soju .instrument{border-color:rgba(90,190,150,.4)}
 .is-makgeolli{background:linear-gradient(180deg,#26241f 0%,#141310 100%)}
 .is-makgeolli .instrument{border-color:rgba(230,222,195,.4)}
+.is-baijiu{background:linear-gradient(180deg,#22141a 0%,#100a0d 100%)}
+.is-baijiu .instrument{border-color:rgba(200,60,80,.4)}
+.is-awamori{background:linear-gradient(180deg,#1a1e26 0%,#0d0f13 100%)}
+.is-awamori .instrument{border-color:rgba(100,140,220,.4)}
+.is-shochu{background:linear-gradient(180deg,#231f18 0%,#121008 100%)}
+.is-shochu .instrument{border-color:rgba(190,160,100,.4)}
 .is-fuchsia{background:linear-gradient(180deg,#2e1428 0%,#160a13 100%)}
 .is-fuchsia .instrument{border-color:rgba(230,100,200,.4)}
 .is-oleander{background:linear-gradient(180deg,#2c1720 0%,#150b0f 100%)}

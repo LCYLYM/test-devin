@@ -1484,6 +1484,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `umeshu` | `1` ウメシュ配色 |
 | `soju` | `1` ソジュ配色 |
 | `makgeolli` | `1` マッコリ配色 |
+| `baijiu` | `1` バイジウ配色 |
+| `awamori` | `1` アワモリ配色 |
+| `shochu` | `1` ショウチュウ配色 |
 | `fuchsia` | `1` フクシア配色 |
 | `oleander` | `1` キョウチクトウ配色 |
 | `buddleia` | `1` フサフジウツギ配色 |
