@@ -9677,3 +9677,53 @@ html[data-template="brewery"] .brewery-visual{display:flex;flex-direction:column
 .brw-bub{position:absolute;left:30%;width:8px;height:8px;background:#e8d898aa;border-radius:50%;opacity:0;transition:opacity .5s}
 #brwB1{margin-left:0}#brwB2{margin-left:26px}
 .brewery-caption{}
+
+/* 花草甸 meadow: 野花次第开放 */
+.meadow-visual{display:none;grid-area:visual}
+html[data-template="meadow"] .pig-visual{display:none}
+html[data-template="meadow"] .meadow-visual{display:flex;flex-direction:column;align-items:center;gap:10px}
+.mdw-scene{position:relative;width:270px;height:180px;background:linear-gradient(#1a2a16,#101a0e 70%);border-radius:14px}
+.mdw-scene::after{content:'';position:absolute;left:0;right:0;bottom:0;height:34%;background:linear-gradient(#2a3e1e,#1c2a12);border-radius:60% 40% 14px 14px/40% 40% 0 0}
+.mdw-f{position:absolute;bottom:14%;width:6px;height:22px;background:#4a7a30;border-radius:3px;opacity:0;transform:scale(.4);transform-origin:50% 100%;transition:opacity .8s,transform .8s}
+.mdw-f::before{content:'';position:absolute;top:-9px;left:-5px;width:16px;height:14px;border-radius:50%;background:radial-gradient(#f0d060 30%,#c89830)}
+#mdwF1{left:22%}#mdwF2{left:34%;bottom:20%}
+#mdwF2::before{background:radial-gradient(#e08098 30%,#a05068)}
+#mdwF3{left:50%}
+#mdwF3::before{background:radial-gradient(#b090e0 30%,#7858a8)}
+#mdwF4{left:64%;bottom:22%}
+#mdwF4::before{background:radial-gradient(#f0f0e8 30%,#b8b8a0)}
+#mdwF5{left:76%}
+#mdwF5::before{background:radial-gradient(#e8a050 30%,#a86828)}
+.mdw-bfly{position:absolute;left:44%;bottom:56%;width:12px;height:9px;opacity:0;transition:opacity .8s}
+.mdw-bfly::before,.mdw-bfly::after{content:'';position:absolute;top:0;width:7px;height:9px;background:#e8a8c8;border-radius:60% 40% 60% 40%}
+.mdw-bfly::before{left:0;transform:rotate(-16deg)}
+.mdw-bfly::after{right:0;transform:rotate(16deg) scaleX(-1)}
+.meadow-caption,.millrace-caption,.hayloft-caption{font-size:12px;color:var(--muted)}
+
+/* 水渠 millrace: 渠水流动、落叶逐流 */
+.millrace-visual{display:none;grid-area:visual}
+html[data-template="millrace"] .pig-visual{display:none}
+html[data-template="millrace"] .millrace-visual{display:flex;flex-direction:column;align-items:center;gap:10px}
+.mlr-scene{position:relative;width:270px;height:180px}
+.mlr-channel{position:absolute;left:6%;right:6%;bottom:16%;height:44%;background:linear-gradient(#3a3226,#28201a);border-radius:10px;border:3px solid #4a4030;border-top-width:5px}
+.mlr-flow{position:absolute;left:10%;right:10%;bottom:22%;height:30%;background:linear-gradient(#4a86a0,#2e5a70);border-radius:8px;opacity:.25;transition:opacity 1s;overflow:hidden}
+.mlr-flow::after{content:'';position:absolute;inset:0;background:repeating-linear-gradient(90deg,transparent 0 22px,#ffffff18 22px 30px);animation:mlr-run 2.4s linear infinite}
+@keyframes mlr-run{to{transform:translateX(30px)}}
+.mlr-ripple{position:absolute;bottom:30%;width:30px;height:9px;border:1.5px solid #7ab8d066;border-radius:50%;opacity:0;transition:opacity .7s}
+#mlrR1{left:24%}#mlrR2{left:60%}
+.mlr-leaf{position:absolute;bottom:36%;width:12px;height:8px;background:#c8a040;border-radius:60% 0 60% 0;opacity:0;transition:left 2.4s linear,opacity .7s}
+.millrace-caption{}
+
+/* 草棚 hayloft: 干草上垛 */
+.hayloft-visual{display:none;grid-area:visual}
+html[data-template="hayloft"] .pig-visual{display:none}
+html[data-template="hayloft"] .hayloft-visual{display:flex;flex-direction:column;align-items:center;gap:10px}
+.hyl-scene{position:relative;width:270px;height:180px}
+.hyl-frame{position:absolute;left:16%;right:16%;bottom:8%;height:70%;border:6px solid #4a3a22;border-bottom-width:0;border-radius:6px 6px 0 0}
+.hyl-frame::before{content:'';position:absolute;left:-10px;right:-10px;top:-20px;height:16px;background:linear-gradient(#6a5428,#4a3820);clip-path:polygon(0 100%,50% 0,100% 100%)}
+.hyl-bale{position:absolute;width:44px;height:24px;background:linear-gradient(#d8b050,#a8802c);border-radius:6px;opacity:0;transition:opacity .7s}
+.hyl-bale::after{content:'';position:absolute;left:6px;right:6px;top:50%;height:2px;background:#8a6820}
+#hylB1{left:24%;bottom:10%}#hylB2{left:44%;bottom:10%}#hylB3{left:34%;bottom:24%}
+.hyl-dust{position:absolute;left:50%;top:22%;width:80px;height:50px;background:radial-gradient(#f0d88844,transparent 70%);border-radius:50%;opacity:0;transform:translateX(-50%);transition:opacity 1s}
+.hayloft-caption{}
+@media (prefers-reduced-motion:reduce){.mlr-flow::after{animation:none}}
