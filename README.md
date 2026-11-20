@@ -1241,6 +1241,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `moonwort` | `1` 阴地蕨配色 |
 | `grapefern` | `1` 葡萄蕨配色 |
 | `rattlesnake` | `1` 响尾蛇蕨配色 |
+| `staghorn` | `1` 鹿角蕨配色 |
+| `elkhorn` | `1` 麋角蕨配色 |
+| `birdsnest` | `1` 鸟巢蕨配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 
