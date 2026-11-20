@@ -4230,6 +4230,9 @@
     if (params.get('forsythia') === '1') { document.body.classList.add('is-forsythia'); }
     if (params.get('spiraea') === '1') { document.body.classList.add('is-spiraea'); }
     if (params.get('weigela') === '1') { document.body.classList.add('is-weigela'); }
+    if (params.get('mockorange') === '1') { document.body.classList.add('is-mockorange'); }
+    if (params.get('deutzia') === '1') { document.body.classList.add('is-deutzia'); }
+    if (params.get('barberry') === '1') { document.body.classList.add('is-barberry'); }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -5818,6 +5821,9 @@
         if (params.get('forsythia') === '1') u.searchParams.set('forsythia', '1');
         if (params.get('spiraea') === '1') u.searchParams.set('spiraea', '1');
         if (params.get('weigela') === '1') u.searchParams.set('weigela', '1');
+        if (params.get('mockorange') === '1') u.searchParams.set('mockorange', '1');
+        if (params.get('deutzia') === '1') u.searchParams.set('deutzia', '1');
+        if (params.get('barberry') === '1') u.searchParams.set('barberry', '1');
       if (params.get('tile') === '1') u.searchParams.set('tile', '1');
       if (params.get('outline') === '1') u.searchParams.set('outline', '1');
       if (params.get('stripe') === '1') u.searchParams.set('stripe', '1');

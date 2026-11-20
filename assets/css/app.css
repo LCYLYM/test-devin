@@ -2890,6 +2890,12 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .is-spiraea .instrument{border-color:rgba(215,185,175,.4)}
 .is-weigela{background:linear-gradient(180deg,#2e1520 0%,#160a0f 100%)}
 .is-weigela .instrument{border-color:rgba(225,100,140,.4)}
+.is-mockorange{background:linear-gradient(180deg,#23261e 0%,#10120d 100%)}
+.is-mockorange .instrument{border-color:rgba(190,200,150,.4)}
+.is-deutzia{background:linear-gradient(180deg,#28201f 0%,#130f0e 100%)}
+.is-deutzia .instrument{border-color:rgba(210,175,160,.4)}
+.is-barberry{background:linear-gradient(180deg,#2b1714 0%,#150a08 100%)}
+.is-barberry .instrument{border-color:rgba(215,100,80,.4)}
 .is-oatmeal{background:linear-gradient(180deg,#1d1912,#2f291e 50%,#433a2a)}
 .is-oatmeal .instrument{border-color:rgba(215,195,155,.4)}
 .is-thyme{background:linear-gradient(180deg,#121a14,#1c2a20 50%,#28392c)}

@@ -1346,6 +1346,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `forsythia` | `1` レンギョウ配色 |
 | `spiraea` | `1` シモツケ配色 |
 | `weigela` | `1` ハコネウツギ配色 |
+| `mockorange` | `1` バイカウツギ配色 |
+| `deutzia` | `1` ウツギ配色 |
+| `barberry` | `1` メギ配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 
