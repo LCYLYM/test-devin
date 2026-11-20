@@ -74,6 +74,24 @@ if _vd:
     missing.append('duplicate *-visual blocks: ' + ','.join(_vd))
 
 
+# iter-2149: CSS structure guards — the regressions fixed in #698/#699
+# must not come back: unbalanced braces, and a missing per-skin show rule
+# (a skin button whose scene can never display).
+_css = open(os.path.join(ROOT, 'assets/css/app.css'), encoding='utf-8').read()
+if _css.count('{') != _css.count('}'):
+    missing.append('unbalanced braces in app.css')
+for _s in sorted(set(_vis)):
+    if not re.search(r'data-template=' + re.escape(_s) + r'\][^{]*\.' + re.escape(_s)
+                     + r'-visual\{display:(block|flex)', _css):
+        missing.append('skin ' + _s + ' has no show rule for its visual')
+# an id selector that sets position/display would outrank every
+# body[data-template=X] .class override — the iter-2147 dead-scene bug
+for _m in re.finditer(r'#(\w+)\s*\{([^}]*)\}', _css):
+    if re.search(r'\bposition\s*:|\bdisplay\s*:', _m.group(2)):
+        if re.search(r'data-template=[a-z0-9]+\]\s*\.' + re.escape(_m.group(1)), _css):
+            missing.append('id selector #' + _m.group(1) + ' may outrank skin overrides')
+
+
 # iter-1724/iter-2060: JS must actually parse — prefer node --check, fall back to
 # a per-block const/let scan inside each top-level function.
 import shutil, subprocess
