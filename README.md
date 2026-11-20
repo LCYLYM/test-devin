@@ -1310,6 +1310,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `ailanthus` | `1` 臭椿配色 |
 | `toon` | `1` 香椿配色 |
 | `chinaberry` | `1` 楝树配色 |
+| `neem` | `1` 印楝配色 |
+| `camphor` | `1` 樟树配色 |
+| `goldenrain` | `1` 栾树配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 

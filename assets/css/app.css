@@ -2818,6 +2818,12 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .is-toon .instrument{border-color:rgba(200,110,95,.4)}
 .is-chinaberry{background:linear-gradient(180deg,#241b29 0%,#100c14 100%)}
 .is-chinaberry .instrument{border-color:rgba(175,130,200,.4)}
+.is-neem{background:linear-gradient(180deg,#1e2820 0%,#0d130f 100%)}
+.is-neem .instrument{border-color:rgba(125,185,145,.4)}
+.is-camphor{background:linear-gradient(180deg,#1d2620 0%,#0c110e 100%)}
+.is-camphor .instrument{border-color:rgba(110,175,135,.4)}
+.is-goldenrain{background:linear-gradient(180deg,#2b2415 0%,#141107 100%)}
+.is-goldenrain .instrument{border-color:rgba(215,185,90,.4)}
 .is-oatmeal{background:linear-gradient(180deg,#1d1912,#2f291e 50%,#433a2a)}
 .is-oatmeal .instrument{border-color:rgba(215,195,155,.4)}
 .is-thyme{background:linear-gradient(180deg,#121a14,#1c2a20 50%,#28392c)}
