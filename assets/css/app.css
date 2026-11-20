@@ -2692,6 +2692,12 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .is-bostonfern .instrument{border-color:rgba(130,170,108,.4)}
 .is-rabbitfoot{background:linear-gradient(180deg,#191813 0%,#13120e 100%)}
 .is-rabbitfoot .instrument{border-color:rgba(168,162,116,.4)}
+.is-buttonfern{background:linear-gradient(180deg,#151a14 0%,#0f130f 100%)}
+.is-buttonfern .instrument{border-color:rgba(138,168,118,.4)}
+.is-cliffbrake{background:linear-gradient(180deg,#161814 0%,#11120f 100%)}
+.is-cliffbrake .instrument{border-color:rgba(152,160,122,.4)}
+.is-lacefern{background:linear-gradient(180deg,#161b15 0%,#111410 100%)}
+.is-lacefern .instrument{border-color:rgba(146,176,128,.4)}
 .is-oatmeal{background:linear-gradient(180deg,#1d1912,#2f291e 50%,#433a2a)}
 .is-oatmeal .instrument{border-color:rgba(215,195,155,.4)}
 .is-thyme{background:linear-gradient(180deg,#121a14,#1c2a20 50%,#28392c)}
