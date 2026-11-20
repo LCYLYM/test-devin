@@ -9345,3 +9345,39 @@ html[data-template="nori"] .nori-visual{display:flex;flex-direction:column;align
 #norSh1{left:22%}#norSh2{left:44%}#norSh3{left:66%}
 .nori-caption{}
 @media (prefers-reduced-motion:reduce){.nor-sheet{transition:opacity .8s}}
+
+/* 药铺 apothecary: 悬草阴干、石臼捣药 */
+.apothecary-visual{display:none;grid-area:visual}
+html[data-template="apothecary"] .pig-visual{display:none}
+html[data-template="apothecary"] .apothecary-visual{display:flex;flex-direction:column;align-items:center;gap:10px}
+.apo-scene{position:relative;width:270px;height:180px}
+.apo-shelf{position:absolute;left:10%;right:10%;top:14%;height:4px;background:#5a4428;border-radius:2px}
+.apo-herb{position:absolute;top:18%;width:14px;height:34px;background:linear-gradient(#6a8a4a,#3e5a2a);clip-path:polygon(50% 0,100% 25%,70% 100%,30% 100%,0 25%);opacity:0;transition:opacity .8s;transform-origin:50% 0}
+#apoH1{left:22%}#apoH2{left:46%}#apoH3{left:70%}
+.apo-mortar{position:absolute;left:50%;bottom:10%;transform:translateX(-50%);width:44px;height:26px;background:linear-gradient(#7a7a72,#4a4a44);border-radius:0 0 22px 22px;border-top:3px solid #8a8a80}
+.apo-mortar::after{content:'';position:absolute;left:50%;top:-16px;width:8px;height:24px;background:#6a6a60;border-radius:4px;transform:rotate(-30deg)}
+.apothecary-caption,.tidepool-caption,.grotto-caption{font-size:12px;color:var(--muted)}
+
+/* 潮池 tidepool: 潮水漫池、海葵绽放 */
+.tidepool-visual{display:none;grid-area:visual}
+html[data-template="tidepool"] .pig-visual{display:none}
+html[data-template="tidepool"] .tidepool-visual{display:flex;flex-direction:column;align-items:center;gap:10px}
+.tdp-scene{position:relative;width:270px;height:180px}
+.tdp-rock{position:absolute;left:12%;right:12%;bottom:8%;height:62%;background:radial-gradient(ellipse at 50% 100%,#3a3630,#241f18 75%);border-radius:50% 50% 20% 20%/60% 60% 16% 16%}
+.tdp-water{position:absolute;left:22%;right:22%;bottom:16%;height:44%;background:radial-gradient(ellipse at 50% 60%,#3a7a8a99,#1a4a55cc);border-radius:50% 50% 24% 24%/70% 70% 20% 20%;opacity:.3;transition:opacity 1s}
+.tdp-anem{position:absolute;bottom:32%;width:20px;height:20px;border-radius:50%;background:radial-gradient(#e08090 30%,#8a4050);opacity:0;transform-origin:50% 100%;transition:opacity .8s,transform .8s}
+.tdp-anem::after{content:'';position:absolute;inset:-5px;border-radius:50%;background:repeating-conic-gradient(#e0809055 0 12deg,transparent 12deg 30deg)}
+#tdpA1{left:38%}#tdpA2{left:56%}
+.tdp-star{position:absolute;left:26%;bottom:22%;width:18px;height:18px;background:#d08050;clip-path:polygon(50% 0,62% 35%,98% 35%,68% 57%,79% 91%,50% 70%,21% 91%,32% 57%,2% 35%,38% 35%);opacity:0;transition:opacity .8s}
+.tidepool-caption{}
+
+/* 石窟 grotto: 天光入穴、暗池生光 */
+.grotto-visual{display:none;grid-area:visual}
+html[data-template="grotto"] .pig-visual{display:none}
+html[data-template="grotto"] .grotto-visual{display:flex;flex-direction:column;align-items:center;gap:10px}
+.grt-scene{position:relative;width:270px;height:180px;background:radial-gradient(ellipse at 50% 120%,#1a2030,#0a0d16 80%);border-radius:14px;overflow:hidden}
+.grt-stal{position:absolute;top:0;width:14px;background:linear-gradient(#3a4254,#242a3a);clip-path:polygon(0 0,100% 0,50% 100%);opacity:0;transition:opacity .8s}
+#grtS1{left:28%;height:46px}#grtS2{left:48%;height:64px}#grtS3{left:66%;height:38px}
+.grt-pool{position:absolute;left:18%;right:18%;bottom:8%;height:22%;background:radial-gradient(ellipse at 50% 40%,#4a6a8a,#16222e);border-radius:50%/40%;opacity:0;transition:opacity 1s}
+.grt-ray{position:absolute;left:52%;top:0;width:34px;height:75%;background:linear-gradient(rgba(240,230,160,.28),transparent 90%);clip-path:polygon(30% 0,70% 0,100% 100%,0 100%);opacity:0;transition:opacity 1.2s}
+.grotto-caption{}
