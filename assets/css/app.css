@@ -8110,3 +8110,40 @@ body[data-template=plaza] .plaza-visual{display:block}
 #pzP1{left:24%}#pzP2{left:50%}#pzP3{left:72%}
 .plaza-caption{text-align:center;font-size:11px;color:var(--dim);margin-top:10px}
 @media(prefers-reduced-motion:reduce){body[data-template=glade] .gd-shaft,body[data-template=cove] .cv2-tide,body[data-template=plaza] .pz-jet{transition:none}}
+
+body[data-template=ranch]{--bg:#141008;--surface:#201a10;--surface-2:#2a2214;--line:#403420;--text:#f4e8d0;--accent:#c89058;--accent-rgb:200,144,88;--instrument:#1a140c;--muted:#b09468;--dim:#6e5c40}
+.ranch-visual{display:none;position:relative;margin-top:18px}
+body[data-template=ranch] .charge-visual{display:none}
+body[data-template=ranch] .ranch-visual{display:block}
+.rn-scene{position:relative;height:150px;border-radius:16px;overflow:hidden;background:linear-gradient(180deg,#241c10,#1a1408)}
+.rn-sun{position:absolute;top:46%;right:14%;width:26px;height:26px;background:radial-gradient(circle,#ffd890,#e8a040);border-radius:50%;transition:top .6s}
+.rn-hills{position:absolute;bottom:0;width:100%;height:52px;background:radial-gradient(ellipse at 30% 0,#3a2e18 40%,transparent 70%),radial-gradient(ellipse at 75% 10%,#2e2414 40%,transparent 70%),linear-gradient(180deg,transparent,#221a0c)}
+.rn-fence{position:absolute;bottom:18px;width:100%;height:14px;background:repeating-linear-gradient(90deg,transparent 0 30px,#4a3a20 30px 34px),linear-gradient(0deg,transparent 5px,#4a3a20 5px 8px,transparent 8px)}
+.rn-cow{position:absolute;bottom:26px;width:26px;height:16px;background:#e8e0d0;border-radius:8px 8px 4px 4px}
+.rn-cow:before{content:'';position:absolute;top:4px;left:6px;width:8px;height:6px;background:#3a2c1c;border-radius:3px}
+#rnCow2{transform:scale(0.8)}
+.ranch-caption{text-align:center;font-size:11px;color:var(--dim);margin-top:10px}
+body[data-template=barn]{--bg:#140c08;--surface:#201410;--surface-2:#2a1a12;--line:#42281e;--text:#f0dcd0;--accent:#b85040;--accent-rgb:184,80,64;--instrument:#1a100c;--muted:#b08068;--dim:#705040}
+.barn-visual{display:none;position:relative;margin-top:18px}
+body[data-template=barn] .charge-visual{display:none}
+body[data-template=barn] .barn-visual{display:block}
+.bn-scene{position:relative;height:150px;border-radius:16px;overflow:hidden;background:linear-gradient(180deg,#1c1410,#140e08)}
+.bn-roof{position:absolute;top:14px;left:50%;transform:translateX(-50%);width:130px;height:34px;background:#58241c;clip-path:polygon(50% 0,100% 100%,0 100%)}
+.bn-wall{position:absolute;top:44px;left:50%;transform:translateX(-50%);width:110px;height:96px;background:#6e2c20;border:1px solid #4a1c14}
+.bn-loft{position:absolute;top:6px;left:50%;transform:translateX(-50%);width:22px;height:14px;background:#2c140e;border-radius:3px}
+.bn-door{position:absolute;bottom:0;left:50%;transform-origin:left center;width:36px;height:56px;background:#3a1c12;border:1px solid #2a120a;transform:translateX(-50%);transition:transform .5s}
+.bn-hay{position:absolute;bottom:10px;left:22%;width:30px;height:16px;background:#c8a040;border-radius:8px 8px 4px 4px}
+.bn-hen{position:absolute;bottom:8px;left:44%;width:12px;height:10px;background:#f0e8d8;border-radius:5px 5px 3px 3px}
+.barn-caption{text-align:center;font-size:11px;color:var(--dim);margin-top:10px}
+body[data-template=prairie]{--bg:#101206;--surface:#1a1e0e;--surface-2:#222812;--line:#343e1e;--text:#ecf0d0;--accent:#a8b858;--accent-rgb:168,184,88;--instrument:#14180a;--muted:#98a868;--dim:#5c6838}
+.prairie-visual{display:none;position:relative;margin-top:18px}
+body[data-template=prairie] .charge-visual{display:none}
+body[data-template=prairie] .prairie-visual{display:block}
+.pr2-scene{position:relative;height:150px;border-radius:16px;overflow:hidden;background:linear-gradient(180deg,#181e0c,#101408)}
+.pr2-sky{position:absolute;top:0;width:100%;height:60px;background:linear-gradient(180deg,#1e2810,transparent)}
+.pr2-grass{position:absolute;bottom:0;width:100%;height:64px}
+.pr2-w1,.pr2-w2,.pr2-w3{position:absolute;bottom:0;width:34%;height:56px;background:linear-gradient(180deg,rgba(150,170,80,.5),rgba(90,110,50,.8));border-radius:50% 50% 0 0;transform-origin:bottom}
+.pr2-w1{left:0}.pr2-w2{left:33%}.pr2-w3{left:66%}
+.pr2-bison{position:absolute;bottom:30px;left:70%;width:34px;height:22px;background:#4a3626;border-radius:10px 12px 6px 6px}
+.prairie-caption{text-align:center;font-size:11px;color:var(--dim);margin-top:10px}
+@media(prefers-reduced-motion:reduce){body[data-template=ranch] .rn-cow,body[data-template=barn] .bn-hen,body[data-template=prairie] .pr2-bison{transition:none}}
