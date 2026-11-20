@@ -5658,3 +5658,35 @@ body[data-template=stoneskip] .stoneskip-visual{display:block}
 .stk-ring{position:absolute;bottom:26%;width:40px;height:14px;margin-left:-20px;border:2px solid rgba(160,220,240,.5);border-radius:50%;opacity:0;transition:transform .5s,opacity .5s}
 .stk-ring.r1{left:24%}.stk-ring.r2{left:40%}.stk-ring.r3{left:56%}.stk-ring.r4{left:72%}.stk-ring.r5{left:86%}
 @media(prefers-reduced-motion:reduce){.zoe-drum{transition:none}}
+body[data-template=polaroid]{--bg:#141210;--surface:#1c1a16;--surface-2:#242220;--line:#3c3830;--text:#e8e0d0;--accent:#e8e0d0;--accent-rgb:232,224,208;--instrument:#1c1a16;--muted:#989080;--dim:#989080}
+body[data-template=seesaw]{--bg:#141008;--surface:#1c1810;--surface-2:#242018;--line:#3c3020;--text:#e8d8b0;--accent:#c8a040;--accent-rgb:200,160,64;--instrument:#1c1810;--muted:#907848;--dim:#907848}
+body[data-template=neontube]{--bg:#0c0810;--surface:#141018;--surface-2:#1c1620;--line:#342040;--text:#f0d0e0;--accent:#f048a0;--accent-rgb:240,72,160;--instrument:#141018;--muted:#986088;--dim:#986088}
+.polaroid-visual,.seesaw-visual,.neontube-visual{display:none;position:relative;margin-top:18px}
+body[data-template=polaroid] .charge-visual,body[data-template=seesaw] .charge-visual,body[data-template=neontube] .charge-visual{display:none}
+body[data-template=polaroid] .polaroid-visual{display:block}
+.pol-scene{position:relative;height:190px;background:radial-gradient(ellipse at 50% 50%,#242018,#141210 75%);overflow:hidden}
+.pol-frame{position:absolute;left:50%;top:50%;width:120px;height:150px;margin-left:-60px;transform:translateY(-50%) rotate(-4deg);background:#f8f4e8;border-radius:4px;box-shadow:0 6px 18px rgba(0,0,0,.5);padding:10px 10px 0}
+.pol-photo{width:100%;height:78%;background:linear-gradient(160deg,#5a6858,#3a4438);display:flex;align-items:center;justify-content:center;gap:6px;transition:opacity .6s,filter .6s}
+.pol-coin{font-style:normal;font-size:24px;color:#f0d060;text-shadow:0 1px 2px rgba(0,0,0,.4)}
+.pol-pig{font-style:normal;font-size:26px}
+.pol-label{margin-top:8px;text-align:center;font-size:11px;color:#8a7a60;font-family:cursive}
+.polaroid-caption,.seesaw-caption,.neontube-caption{text-align:center;font-size:11px;color:var(--dim);margin-top:10px}
+body[data-template=seesaw] .seesaw-visual{display:block}
+.ssw-scene{position:relative;height:180px;background:linear-gradient(#141008 0%,#2a2410 100%);overflow:hidden}
+.ssw-pivot{position:absolute;left:50%;bottom:18%;width:26px;height:34px;margin-left:-13px;background:linear-gradient(#6a5838,#483820);clip-path:polygon(50% 0,0 100%,100% 100%)}
+.ssw-plank{position:absolute;left:50%;bottom:34%;width:230px;height:12px;transform:translateX(-50%) rotate(-12deg);background:linear-gradient(#8a7048,#5a4828);border-radius:6px;transition:transform .6s ease}
+.ssw-side{position:absolute;top:-46px;width:70px;display:flex;justify-content:center;gap:4px;align-items:flex-end}
+.ssw-side.l{left:6px}
+.ssw-side.r{right:6px}
+.ssw-coin{width:14px;height:14px;background:radial-gradient(circle at 35% 35%,#f8dc78,#c89030);border-radius:50%;box-shadow:0 1px 2px rgba(0,0,0,.4)}
+.ssw-coin:nth-child(2){margin-bottom:6px}
+.ssw-coin:nth-child(3){margin-bottom:12px}
+.ssw-coin:nth-child(4){margin-bottom:4px}
+.ssw-coin:nth-child(5){margin-bottom:16px}
+.ssw-rest{font-style:normal;font-size:26px}
+body[data-template=neontube] .neontube-visual{display:block}
+.ntb-scene{position:relative;height:170px;background:radial-gradient(ellipse at 50% 50%,#1c1024,#0c0810 75%);overflow:hidden}
+.ntb-svg{position:absolute;left:0;right:0;top:35px;width:100%;height:100px}
+.ntb-txt{font-family:'Kaiti SC','STKaiti',KaiTi,serif;font-size:64px;fill:none;stroke:#f048a0;stroke-width:2.5;transition:opacity .5s,text-shadow .5s}
+#ntbT2{stroke:#38c8f0}
+@media(prefers-reduced-motion:reduce){.pol-photo,.ntb-txt{transition:none}}
