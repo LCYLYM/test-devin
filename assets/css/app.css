@@ -6956,3 +6956,32 @@ body[data-template=iceberg] .iceberg-visual{display:block}
 .icb-mass{position:absolute;left:50%;bottom:-92px;transform:translateX(-50%);width:88px;height:96px;background:linear-gradient(#a8c8d8,#5888a0);clip-path:polygon(10% 0,90% 0,78% 70%,50% 100%,22% 70%);opacity:.9}
 .radar-caption,.rover-caption,.iceberg-caption{text-align:center;font-size:11px;color:var(--dim);margin-top:10px}
 @media(prefers-reduced-motion:reduce){.rdr-sweep{animation:none}.rvr-track,.rvr-body,.icb-berg{transition:none}}
+body[data-template=comet]{--bg:#060a14;--surface:#0c1220;--surface-2:#141a2c;--line:#263052;--text:#ccd8f0;--accent:#b8d8ff;--accent-rgb:184,216,255;--instrument:#0c1220;--muted:#5c6a94;--dim:#5c6a94}
+body[data-template=nebula]{--bg:#0c0818;--surface:#141024;--surface-2:#1c1832;--line:#322c52;--text:#d8cff0;--accent:#b078e8;--accent-rgb:176,120,232;--instrument:#141024;--muted:#685a98;--dim:#685a98}
+body[data-template=tornado]{--bg:#0c1014;--surface:#141a1e;--surface-2:#1c242a;--line:#303c44;--text:#d0dade;--accent:#90a8b8;--accent-rgb:144,168,184;--instrument:#141a1e;--muted:#5e707a;--dim:#5e707a}
+.comet-visual,.nebula-visual,.tornado-visual{display:none;position:relative;margin-top:18px}
+body[data-template=comet] .charge-visual,body[data-template=nebula] .charge-visual,body[data-template=tornado] .charge-visual{display:none}
+body[data-template=comet] .comet-visual{display:block}
+.cmt-scene{position:relative;height:180px;background:linear-gradient(#0c1224,#060a14);overflow:hidden}
+.cmt-stars{position:absolute;inset:0;background-image:radial-gradient(1px 1px at 15% 40%,rgba(255,255,255,.6),transparent),radial-gradient(1px 1px at 45% 20%,rgba(255,255,255,.4),transparent),radial-gradient(1.5px 1.5px at 70% 60%,rgba(255,255,255,.5),transparent),radial-gradient(1px 1px at 85% 30%,rgba(255,255,255,.5),transparent),radial-gradient(1px 1px at 30% 75%,rgba(255,255,255,.4),transparent)}
+.cmt-tail{position:absolute;right:8%;top:34%;height:4px;width:30%;background:linear-gradient(90deg,rgba(184,216,255,.9),rgba(140,180,240,.4) 60%,transparent);border-radius:2px;filter:blur(1px)}
+.cmt-head{position:absolute;right:8%;top:33%;width:14px;height:14px;background:radial-gradient(circle at 35% 35%,#fff,#b8d8ff 60%,#5a88c8);border-radius:50%;box-shadow:0 0 14px 4px rgba(184,216,255,.6)}
+body[data-template=nebula] .nebula-visual{display:block}
+.nbl-scene{position:relative;height:180px;background:#0c0818;overflow:hidden}
+.nbl-gas{position:absolute;left:50%;top:50%;border-radius:50%;filter:blur(10px)}
+.nbl-gas.g1{width:120px;height:80px;background:radial-gradient(ellipse,rgba(176,120,232,.5),transparent)}
+.nbl-gas.g2{width:100px;height:70px;background:radial-gradient(ellipse,rgba(120,140,232,.5),transparent)}
+.nbl-gas.g3{width:80px;height:60px;background:radial-gradient(ellipse,rgba(232,120,180,.4),transparent)}
+.nbl-star{position:absolute;left:50%;top:50%;width:16px;height:16px;background:radial-gradient(circle,#fff8e0,#ffd860 50%,transparent 75%);border-radius:50%;box-shadow:0 0 20px 6px rgba(255,220,120,.6);opacity:0}
+body[data-template=tornado] .tornado-visual{display:block}
+.trn-scene{position:relative;height:180px;background:linear-gradient(#1c2430,#0c1014 60%,#141a14);overflow:hidden}
+.trn-cloud{position:absolute;left:0;right:0;top:0;height:26%;background:linear-gradient(#2c3644,#1a222c);border-radius:0 0 50% 50%}
+.trn-funnel{position:absolute;left:50%;top:20%;bottom:8%;width:0;transform:translateX(-50%)}
+.trn-band{position:absolute;left:50%;transform:translateX(-50%);background:linear-gradient(90deg,transparent,rgba(180,195,205,.7),transparent);border-radius:50%;opacity:0;transition:opacity .4s}
+.trn-band#trnB1{top:0;width:90px;height:16px}
+.trn-band#trnB2{top:30%;width:64px;height:14px}
+.trn-band#trnB3{top:60%;width:40px;height:12px}
+.trn-band#trnB4{bottom:0;width:20px;height:10px}
+.trn-debris{position:absolute;left:50%;bottom:8%;width:5px;height:5px;background:#6a5a40;border-radius:2px;opacity:0}
+.comet-caption,.nebula-caption,.tornado-caption{text-align:center;font-size:11px;color:var(--dim);margin-top:10px}
+@media(prefers-reduced-motion:reduce){.trn-debris{transition:none}}
