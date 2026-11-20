@@ -60,6 +60,20 @@ for needle in ['navigator.share', "e.key === 'z'", "e.key === 'm'", "e.key === '
         missing.append('deep-link.js missing ' + needle)
 
 
+# iter-2139: HTML structure guards — the regressions fixed in #682/#684/#689
+# must not come back: unclosed divs, duplicate ids, duplicate *-visual blocks.
+if len(re.findall(r'<div\b', html)) != len(re.findall(r'</div>', html)):
+    missing.append('unbalanced <div> tags in index.html')
+_ids = re.findall(r'id="([^"]+)"', html)
+_dups = sorted(i for i in set(_ids) if _ids.count(i) > 1)
+if _dups:
+    missing.append('duplicate element ids: ' + ','.join(_dups[:8]))
+_vis = re.findall(r'class="([a-z0-9]+)-visual', html)
+_vd = sorted(v for v in set(_vis) if _vis.count(v) > 1)
+if _vd:
+    missing.append('duplicate *-visual blocks: ' + ','.join(_vd))
+
+
 # iter-1724/iter-2060: JS must actually parse — prefer node --check, fall back to
 # a per-block const/let scan inside each top-level function.
 import shutil, subprocess
