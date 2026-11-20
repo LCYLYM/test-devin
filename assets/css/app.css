@@ -3142,6 +3142,12 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .is-focaccia .instrument{border-color:rgba(205,170,85,.4)}
 .is-ciabatta{background:linear-gradient(180deg,#24211a 0%,#11100c 100%)}
 .is-ciabatta .instrument{border-color:rgba(200,185,140,.4)}
+.is-sourdough{background:linear-gradient(180deg,#252019 0%,#120f0c 100%)}
+.is-sourdough .instrument{border-color:rgba(195,160,120,.4)}
+.is-pretzel{background:linear-gradient(180deg,#261a12 0%,#120d08 100%)}
+.is-pretzel .instrument{border-color:rgba(200,115,60,.4)}
+.is-baguette{background:linear-gradient(180deg,#262115 0%,#12100a 100%)}
+.is-baguette .instrument{border-color:rgba(215,180,105,.4)}
 .is-fuchsia{background:linear-gradient(180deg,#2e1428 0%,#160a13 100%)}
 .is-fuchsia .instrument{border-color:rgba(230,100,200,.4)}
 .is-oleander{background:linear-gradient(180deg,#2c1720 0%,#150b0f 100%)}

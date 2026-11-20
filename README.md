@@ -1472,6 +1472,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `brioche` | `1` ブリオッシュ配色 |
 | `focaccia` | `1` フォカッチャ配色 |
 | `ciabatta` | `1` チャバタ配色 |
+| `sourdough` | `1` サワードウ配色 |
+| `pretzel` | `1` プレッツェル配色 |
+| `baguette` | `1` バゲット配色 |
 | `fuchsia` | `1` フクシア配色 |
 | `oleander` | `1` キョウチクトウ配色 |
 | `buddleia` | `1` フサフジウツギ配色 |
