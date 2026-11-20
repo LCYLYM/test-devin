@@ -1304,6 +1304,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `euonymus` | `1` 卫矛配色 |
 | `figtree` | `1` 无花果树配色 |
 | `plane` | `1` 悬铃木配色 |
+| `baobab` | `1` 猴面包树配色 |
+| `kapok` | `1` 木棉配色 |
+| `paulownia` | `1` 泡桐配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 

@@ -2806,6 +2806,12 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .is-figtree .instrument{border-color:rgba(140,185,125,.4)}
 .is-plane{background:linear-gradient(180deg,#26261e 0%,#11110c 100%)}
 .is-plane .instrument{border-color:rgba(185,180,125,.4)}
+.is-baobab{background:linear-gradient(180deg,#2a2018 0%,#140e09 100%)}
+.is-baobab .instrument{border-color:rgba(190,150,110,.4)}
+.is-kapok{background:linear-gradient(180deg,#2d1518 0%,#14080a 100%)}
+.is-kapok .instrument{border-color:rgba(220,90,90,.4)}
+.is-paulownia{background:linear-gradient(180deg,#251c2c 0%,#110c16 100%)}
+.is-paulownia .instrument{border-color:rgba(175,140,210,.4)}
 .is-oatmeal{background:linear-gradient(180deg,#1d1912,#2f291e 50%,#433a2a)}
 .is-oatmeal .instrument{border-color:rgba(215,195,155,.4)}
 .is-thyme{background:linear-gradient(180deg,#121a14,#1c2a20 50%,#28392c)}

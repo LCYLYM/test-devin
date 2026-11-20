@@ -4188,6 +4188,9 @@
     if (params.get('euonymus') === '1') { document.body.classList.add('is-euonymus'); }
     if (params.get('figtree') === '1') { document.body.classList.add('is-figtree'); }
     if (params.get('plane') === '1') { document.body.classList.add('is-plane'); }
+    if (params.get('baobab') === '1') { document.body.classList.add('is-baobab'); }
+    if (params.get('kapok') === '1') { document.body.classList.add('is-kapok'); }
+    if (params.get('paulownia') === '1') { document.body.classList.add('is-paulownia'); }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -5734,6 +5737,9 @@
         if (params.get('euonymus') === '1') u.searchParams.set('euonymus', '1');
         if (params.get('figtree') === '1') u.searchParams.set('figtree', '1');
         if (params.get('plane') === '1') u.searchParams.set('plane', '1');
+        if (params.get('baobab') === '1') u.searchParams.set('baobab', '1');
+        if (params.get('kapok') === '1') u.searchParams.set('kapok', '1');
+        if (params.get('paulownia') === '1') u.searchParams.set('paulownia', '1');
       if (params.get('tile') === '1') u.searchParams.set('tile', '1');
       if (params.get('outline') === '1') u.searchParams.set('outline', '1');
       if (params.get('stripe') === '1') u.searchParams.set('stripe', '1');
