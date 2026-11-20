@@ -9930,3 +9930,38 @@ html[data-template="stonebridge"] .stonebridge-visual{display:flex;flex-directio
 .scf-floor:nth-of-type(5){bottom:72%}
 .scf-tarp{position:absolute;left:12%;top:4%;width:60%;height:14%;background:linear-gradient(135deg,rgba(60,140,90,.85),rgba(40,110,70,.85));border-radius:4px 4px 0 0;transform-origin:top left;opacity:0;transition:opacity .6s}
 .scaffold-caption{margin-top:10px;font-size:12px;letter-spacing:2px;opacity:.55;text-align:center}
+
+/* glowcave skin */
+[data-template="glowcave"] .glowcave-visual{display:block}
+.glowcave-visual{display:none}
+.glw-scene{position:relative;height:190px;border-radius:18px;overflow:hidden;background:linear-gradient(180deg,#04080a 0%,#081418 60%,#06100f 100%)}
+.glw-roof{position:absolute;left:0;top:0;width:100%;height:34%;background:radial-gradient(ellipse at 20% 0%,#0a1418 55%,transparent 60%),radial-gradient(ellipse at 60% 0%,#0c1a1e 60%,transparent 65%),radial-gradient(ellipse at 90% 0%,#0a161a 50%,transparent 58%)}
+.glw-worm{position:absolute;width:64px;height:24px;opacity:0;transition:opacity .8s}
+.glw-worm::before,.glw-worm::after{content:"";position:absolute;width:3px;height:3px;border-radius:50%;background:#7ef0c8;box-shadow:0 0 6px 2px rgba(126,240,200,.7),12px 4px 0 0 #7ef0c8,12px 4px 6px 2px rgba(126,240,200,.6),26px -2px 0 0 #7ef0c8,26px -2px 6px 2px rgba(126,240,200,.55),40px 6px 0 0 #7ef0c8,40px 6px 6px 2px rgba(126,240,200,.5),54px 0 0 0 #7ef0c8,54px 0 6px 2px rgba(126,240,200,.6)}
+#glwW1{left:14%;top:14%}
+#glwW2{left:44%;top:8%}
+#glwW3{left:70%;top:18%}
+.glw-boat{position:absolute;bottom:22%;width:30px;height:8px;background:#1a1410;border-radius:0 0 12px 12px;transition:left .3s}
+.glw-boat::before{content:"";position:absolute;left:11px;top:-8px;width:7px;height:8px;border-radius:50% 50% 0 0;background:#1a1410}
+.glw-refl{position:absolute;left:0;bottom:0;width:100%;height:22%;background:linear-gradient(180deg,rgba(126,240,200,.18),transparent);opacity:0}
+.glowcave-caption{margin-top:10px;font-size:12px;letter-spacing:2px;opacity:.55;text-align:center}
+
+/* murmur skin */
+[data-template="murmur"] .murmur-visual{display:block}
+.murmur-visual{display:none}
+.mrm-scene{position:relative;height:190px;border-radius:18px;overflow:hidden;background:linear-gradient(180deg,#241a38 0%,#3a2440 55%,#14101e 100%)}
+.mrm-sun{position:absolute;left:50%;bottom:14%;width:44px;height:22px;margin-left:-22px;border-radius:22px 22px 0 0;background:radial-gradient(ellipse at 50% 100%,#e8a060,#c86848);opacity:.8}
+.mrm-flock{position:absolute;border-radius:48% 52% 55% 45%/60% 45% 55% 40%;background:radial-gradient(ellipse at 40% 45%,rgba(26,20,32,.95) 40%,rgba(26,20,32,.5) 75%,transparent),repeating-radial-gradient(circle at 55% 50%,rgba(20,14,26,.8) 0 1px,transparent 1px 4px);transition:opacity .8s}
+#mrmF1{left:22%;top:22%;width:150px;height:60px}
+#mrmF2{left:48%;top:38%;width:110px;height:46px}
+#mrmF3{left:34%;top:12%;width:80px;height:36px}
+.murmur-caption{margin-top:10px;font-size:12px;letter-spacing:2px;opacity:.55;text-align:center}
+
+/* alpenglow skin */
+[data-template="alpenglow"] .alpenglow-visual{display:block}
+.alpenglow-visual{display:none}
+.alg-scene{position:relative;height:190px;border-radius:18px;overflow:hidden;background:linear-gradient(180deg,#12101c 0%,#241c30 55%,#38283c 100%)}
+.alg-warm{position:absolute;left:0;bottom:0;width:100%;height:60%;background:radial-gradient(ellipse at 50% 100%,rgba(240,150,90,.5),transparent 70%);opacity:0;transition:opacity .8s}
+.alg-peak{position:absolute;left:50%;bottom:-6%;width:0;height:0;margin-left:-46%;border-left:46vw solid transparent;border-right:46vw solid transparent;border-bottom:150px solid #2a2434;filter:drop-shadow(0 -2px 0 rgba(255,255,255,.06))}
+.alg-glow{position:absolute;left:0;bottom:0;width:100%;height:100%;background:linear-gradient(180deg,#f0b070 0%,#e07858 55%,#7a4a58 100%);clip-path:polygon(50% 38%,0 100%,100% 100%);transition:clip-path .5s;mix-blend-mode:screen;opacity:.9}
+.alpenglow-caption{margin-top:10px;font-size:12px;letter-spacing:2px;opacity:.55;text-align:center}
