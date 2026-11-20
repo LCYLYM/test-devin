@@ -9096,3 +9096,40 @@ body[data-template=lumbercamp] .lumbercamp-visual{display:block}
 #lbLog1{right:22%}#lbLog2{right:22%;bottom:28px}
 .lumbercamp-caption{text-align:center;font-size:11px;color:var(--dim);margin-top:10px}
 @media(prefers-reduced-motion:reduce){body[data-template=mushroomfarm] .mu-shroom,body[data-template=glassworks] .gl-blob,body[data-template=lumbercamp] .lb-top{transition:none}}
+
+body[data-template=silkworm]{--bg:#161410;--surface:#211d15;--surface-2:#2c271c;--line:#4a422c;--text:#f4efe0;--accent:#e0d8c0;--accent-rgb:224,216,192;--instrument:#1a1710;--muted:#b5ab8c;--dim:#6e654a}
+.silkworm-visual{display:none;position:relative;margin-top:18px}
+body[data-template=silkworm] .charge-visual{display:none}
+body[data-template=silkworm] .silkworm-visual{display:block}
+.skw-scene{position:relative;height:150px;border-radius:16px;overflow:hidden;background:linear-gradient(180deg,#1c1810,#0e0b07)}
+.skw-tray{position:absolute;bottom:30px;left:18%;width:64%;height:12px;background:#8a6c44;border-radius:6px;border:2px solid #5e4728}
+.skw-t2{bottom:70px;left:28%;width:44%}
+.skw-cocoon{position:absolute;width:12px;height:9px;background:#f0e8d0;border-radius:50%;opacity:0;transition:opacity .5s}
+#skwC1{bottom:44px;left:30%}#skwC2{bottom:44px;left:46%}#skwC3{bottom:82px;left:44%}
+.skw-moth{position:absolute;bottom:96px;left:52%;width:16px;height:12px;background:#e8dcc0;border-radius:50%;opacity:0;transition:transform .2s,opacity .4s}
+.skw-moth:before,.skw-moth:after{content:'';position:absolute;top:-3px;width:9px;height:10px;background:rgba(240,230,200,.75);border-radius:50%}
+.skw-moth:before{left:-5px;transform:rotate(-24deg)}
+.skw-moth:after{right:-5px;transform:rotate(24deg)}
+.silkworm-caption{text-align:center;font-size:11px;color:var(--dim);margin-top:10px}
+body[data-template=cranberry]{--bg:#160a0c;--surface:#211014;--surface-2:#2c181e;--line:#4a2430;--text:#f6dde2;--accent:#c83848;--accent-rgb:200,56,72;--instrument:#1a0d10;--muted:#b87884;--dim:#6e3c48}
+.cranberry-visual{display:none;position:relative;margin-top:18px}
+body[data-template=cranberry] .charge-visual{display:none}
+body[data-template=cranberry] .cranberry-visual{display:block}
+.cb-scene{position:relative;height:150px;border-radius:16px;overflow:hidden;background:linear-gradient(180deg,#1a1114,#0d080a)}
+.cb-water{position:absolute;bottom:0;left:0;width:100%;height:64px;background:linear-gradient(180deg,#2a3a44,#1c2a32)}
+.cb-vine{position:absolute;bottom:56px;left:10%;width:80%;height:8px;background:repeating-linear-gradient(90deg,#3a4a28 0 10px,transparent 10px 18px)}
+.cb-berry{position:absolute;bottom:8px;width:10px;height:10px;background:radial-gradient(circle at 35% 35%,#e8606a,#a01828);border-radius:50%;opacity:0;transition:bottom .6s,opacity .5s}
+#cbB1{left:26%}#cbB2{left:42%}#cbB3{left:58%}#cbB4{left:72%}
+.cranberry-caption{text-align:center;font-size:11px;color:var(--dim);margin-top:10px}
+body[data-template=bog]{--bg:#10140e;--surface:#171e15;--surface-2:#1f291c;--line:#34452e;--text:#e4eedc;--accent:#7a9868;--accent-rgb:122,152,104;--instrument:#141a12;--muted:#8ea67e;--dim:#4c6144}
+.bog-visual{display:none;position:relative;margin-top:18px}
+body[data-template=bog] .charge-visual{display:none}
+body[data-template=bog] .bog-visual{display:block}
+.bg-scene{position:relative;height:150px;border-radius:16px;overflow:hidden;background:linear-gradient(180deg,#141a12,#0a0e09)}
+.bg-water{position:absolute;bottom:0;left:0;width:100%;height:66px;background:linear-gradient(180deg,#1e2a1e,#141d14)}
+.bg-mound{position:absolute;bottom:52px;left:12%;width:34%;height:12px;background:#2e3a24;border-radius:50%}
+.bg-bub{position:absolute;bottom:20px;width:7px;height:7px;background:rgba(160,190,140,.5);border-radius:50%;border:1px solid rgba(190,220,160,.4)}
+#bgB1{left:30%}#bgB2{left:52%}#bgB3{left:70%}
+.bg-wisp{position:absolute;top:30%;left:30%;width:12px;height:14px;background:radial-gradient(ellipse,#cfe8a0,#7a9a48);border-radius:50%;filter:blur(1px);opacity:0;transition:left .8s,top .8s}
+.bog-caption{text-align:center;font-size:11px;color:var(--dim);margin-top:10px}
+@media(prefers-reduced-motion:reduce){body[data-template=silkworm] .skw-moth,body[data-template=cranberry] .cb-berry{transition:none}}
