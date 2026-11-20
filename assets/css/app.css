@@ -2950,6 +2950,12 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .is-lovage .instrument{border-color:rgba(115,175,125,.4)}
 .is-marjoram{background:linear-gradient(180deg,#24201c 0%,#110f0d 100%)}
 .is-marjoram .instrument{border-color:rgba(190,160,120,.4)}
+.is-hyssop{background:linear-gradient(180deg,#1b2028 0%,#0c0e13 100%)}
+.is-hyssop .instrument{border-color:rgba(120,140,210,.4)}
+.is-savory{background:linear-gradient(180deg,#222016 0%,#100f0a 100%)}
+.is-savory .instrument{border-color:rgba(180,160,95,.4)}
+.is-epazote{background:linear-gradient(180deg,#1f2614 0%,#0e1209 100%)}
+.is-epazote .instrument{border-color:rgba(150,180,80,.4)}
 .is-fuchsia{background:linear-gradient(180deg,#2e1428 0%,#160a13 100%)}
 .is-fuchsia .instrument{border-color:rgba(230,100,200,.4)}
 .is-oleander{background:linear-gradient(180deg,#2c1720 0%,#150b0f 100%)}

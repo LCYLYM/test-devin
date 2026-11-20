@@ -4272,6 +4272,9 @@
     if (params.get('chervil') === '1') { document.body.classList.add('is-chervil'); }
     if (params.get('lovage') === '1') { document.body.classList.add('is-lovage'); }
     if (params.get('marjoram') === '1') { document.body.classList.add('is-marjoram'); }
+    if (params.get('hyssop') === '1') { document.body.classList.add('is-hyssop'); }
+    if (params.get('savory') === '1') { document.body.classList.add('is-savory'); }
+    if (params.get('epazote') === '1') { document.body.classList.add('is-epazote'); }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -5890,6 +5893,9 @@
         if (params.get('chervil') === '1') u.searchParams.set('chervil', '1');
         if (params.get('lovage') === '1') u.searchParams.set('lovage', '1');
         if (params.get('marjoram') === '1') u.searchParams.set('marjoram', '1');
+        if (params.get('hyssop') === '1') u.searchParams.set('hyssop', '1');
+        if (params.get('savory') === '1') u.searchParams.set('savory', '1');
+        if (params.get('epazote') === '1') u.searchParams.set('epazote', '1');
         if (params.get('fuchsia') === '1') u.searchParams.set('fuchsia', '1');
         if (params.get('oleander') === '1') u.searchParams.set('oleander', '1');
         if (params.get('buddleia') === '1') u.searchParams.set('buddleia', '1');
