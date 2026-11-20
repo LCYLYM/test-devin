@@ -9631,3 +9631,49 @@ html[data-template="tideflat"] .tideflat-visual{display:flex;flex-direction:colu
 .tfl-bird{position:absolute;left:60%;bottom:36%;width:14px;height:9px;background:#e8e0d0;border-radius:50% 50% 40% 40%;opacity:0;transition:opacity .8s}
 .tfl-bird::after{content:'';position:absolute;right:-4px;top:1px;width:7px;height:4px;background:#e8e0d0;clip-path:polygon(0 50%,100% 0,80% 100%)}
 .tideflat-caption{}
+
+/* 珊瑚礁 coralreef: 珊瑚抽枝、游鱼穿梭 */
+.coralreef-visual{display:none;grid-area:visual}
+html[data-template="coralreef"] .pig-visual{display:none}
+html[data-template="coralreef"] .coralreef-visual{display:flex;flex-direction:column;align-items:center;gap:10px}
+.crl-scene{position:relative;width:270px;height:180px;background:linear-gradient(#0e2230,#08141e);border-radius:14px;overflow:hidden}
+.crl-sea{position:absolute;left:0;right:0;bottom:0;height:22%;background:#0a1a26}
+.crl-cor{position:absolute;bottom:12%;background:#e08070;opacity:0;transform-origin:50% 100%;transition:opacity .8s,transform .8s;clip-path:polygon(50% 0,58% 30%,72% 22%,62% 48%,80% 44%,60% 70%,64% 100%,36% 100%,40% 70%,20% 44%,38% 48%,28% 22%,42% 30%)}
+#crlC1{left:26%;width:34px;height:56px}
+#crlC2{left:48%;width:26px;height:44px;background:#c868a0}
+#crlC3{left:66%;width:30px;height:50px;background:#e8a860}
+.crl-fish{position:absolute;bottom:52%;width:18px;height:10px;background:#f0c860;border-radius:60% 40% 40% 60%;opacity:0;transition:left 2s linear,opacity .7s}
+.crl-fish::after{content:'';position:absolute;right:-5px;top:1px;width:8px;height:8px;background:#f0c860;clip-path:polygon(0 50%,100% 0,100% 100%)}
+.crl-bub{position:absolute;left:42%;width:7px;height:7px;background:#9ac8d8aa;border-radius:50%;opacity:0;transition:opacity .6s}
+.coralreef-caption,.rookery-caption,.brewery-caption{font-size:12px;color:var(--muted)}
+
+/* 栖林 rookery: 群鸟栖枝 */
+.rookery-visual{display:none;grid-area:visual}
+html[data-template="rookery"] .pig-visual{display:none}
+html[data-template="rookery"] .rookery-visual{display:flex;flex-direction:column;align-items:center;gap:10px}
+.rky-scene{position:relative;width:270px;height:180px}
+.rky-tree{position:absolute;left:30%;bottom:8%;width:9px;height:110px;background:#3a2c18;border-radius:5px}
+.rky-tree::before,.rky-tree::after{content:'';position:absolute;background:#3a2c18;border-radius:4px}
+.rky-tree::before{left:-26px;top:22%;width:34px;height:6px;transform:rotate(-18deg)}
+.rky-tree::after{right:-30px;top:38%;width:38px;height:6px;transform:rotate(14deg)}
+.rky-tree2{position:absolute;left:62%;bottom:8%;width:7px;height:86px;background:#2e2210;border-radius:4px}
+.rky-tree2::after{content:'';position:absolute;left:-20px;top:30%;width:28px;height:5px;background:#2e2210;border-radius:3px;transform:rotate(-14deg)}
+.rky-bird{position:absolute;width:11px;height:8px;background:#2a2a2e;border-radius:50% 50% 40% 40%;opacity:0;transition:opacity .6s}
+.rky-bird::after{content:'';position:absolute;right:-3px;top:1px;width:5px;height:4px;background:#2a2a2e;clip-path:polygon(0 50%,100% 20%,80% 100%)}
+#rkyB1{left:24%;bottom:66%}#rkyB2{left:36%;bottom:74%}#rkyB3{left:58%;bottom:56%}#rkyB4{left:66%;bottom:48%}
+.rookery-caption{}
+
+/* 酒坊 brewery: 醪液翻沫、酒桶渐满 */
+.brewery-visual{display:none;grid-area:visual}
+html[data-template="brewery"] .pig-visual{display:none}
+html[data-template="brewery"] .brewery-visual{display:flex;flex-direction:column;align-items:center;gap:10px}
+.brw-scene{position:relative;width:270px;height:180px}
+.brw-vat{position:absolute;left:24%;bottom:12%;width:70px;height:78px;background:linear-gradient(#5a4020,#38260e);border-radius:8px 8px 12px 12px;border:2px solid #2a1c08}
+.brw-vat::before{content:'';position:absolute;left:-4px;right:-4px;top:30%;height:6px;background:#7a5a2c;border-radius:3px}
+.brw-foam{position:absolute;left:26%;bottom:54%;width:66px;height:16px;background:radial-gradient(#f0e8c8,#c8b888);border-radius:50% 50% 30% 30%;opacity:0;transition:opacity .8s}
+.brw-barrel{position:absolute;left:60%;bottom:12%;width:50px;height:44px;background:linear-gradient(#6a4a26,#422a10);border-radius:12px;opacity:0;transform:scale(.7);transition:opacity .9s,transform .9s}
+.brw-barrel::before,.brw-barrel::after{content:'';position:absolute;left:-3px;right:-3px;height:5px;background:#3a3a3a;border-radius:3px}
+.brw-barrel::before{top:22%}.brw-barrel::after{bottom:22%}
+.brw-bub{position:absolute;left:30%;width:8px;height:8px;background:#e8d898aa;border-radius:50%;opacity:0;transition:opacity .5s}
+#brwB1{margin-left:0}#brwB2{margin-left:26px}
+.brewery-caption{}
