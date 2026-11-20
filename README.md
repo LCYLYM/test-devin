@@ -1445,6 +1445,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `arugula` | `1` ルッコラ配色 |
 | `radicchio` | `1` ラディッキオ配色 |
 | `mizuna` | `1` ミズナ配色 |
+| `endive` | `1` アンディーブ配色 |
+| `tatsoi` | `1` ターサイ配色 |
+| `escarole` | `1` エスカロール配色 |
 | `fuchsia` | `1` フクシア配色 |
 | `oleander` | `1` キョウチクトウ配色 |
 | `buddleia` | `1` フサフジウツギ配色 |

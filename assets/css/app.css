@@ -3088,6 +3088,12 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .is-radicchio .instrument{border-color:rgba(205,85,140,.4)}
 .is-mizuna{background:linear-gradient(180deg,#1c2419 0%,#0d110c 100%)}
 .is-mizuna .instrument{border-color:rgba(135,175,115,.4)}
+.is-endive{background:linear-gradient(180deg,#22251b 0%,#10120c 100%)}
+.is-endive .instrument{border-color:rgba(170,175,115,.4)}
+.is-tatsoi{background:linear-gradient(180deg,#17241b 0%,#0a110c 100%)}
+.is-tatsoi .instrument{border-color:rgba(95,180,120,.4)}
+.is-escarole{background:linear-gradient(180deg,#1f2617 0%,#0e120a 100%)}
+.is-escarole .instrument{border-color:rgba(150,185,100,.4)}
 .is-fuchsia{background:linear-gradient(180deg,#2e1428 0%,#160a13 100%)}
 .is-fuchsia .instrument{border-color:rgba(230,100,200,.4)}
 .is-oleander{background:linear-gradient(180deg,#2c1720 0%,#150b0f 100%)}
