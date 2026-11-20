@@ -1349,6 +1349,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `mockorange` | `1` バイカウツギ配色 |
 | `deutzia` | `1` ウツギ配色 |
 | `barberry` | `1` メギ配色 |
+| `pyracantha` | `1` トキワサンザシ配色 |
+| `cotoneaster` | `1` コトネアスター配色 |
+| `viburnum` | `1` ガマズミ配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 

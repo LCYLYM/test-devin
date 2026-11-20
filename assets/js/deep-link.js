@@ -4233,6 +4233,9 @@
     if (params.get('mockorange') === '1') { document.body.classList.add('is-mockorange'); }
     if (params.get('deutzia') === '1') { document.body.classList.add('is-deutzia'); }
     if (params.get('barberry') === '1') { document.body.classList.add('is-barberry'); }
+    if (params.get('pyracantha') === '1') { document.body.classList.add('is-pyracantha'); }
+    if (params.get('cotoneaster') === '1') { document.body.classList.add('is-cotoneaster'); }
+    if (params.get('viburnum') === '1') { document.body.classList.add('is-viburnum'); }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -5824,6 +5827,9 @@
         if (params.get('mockorange') === '1') u.searchParams.set('mockorange', '1');
         if (params.get('deutzia') === '1') u.searchParams.set('deutzia', '1');
         if (params.get('barberry') === '1') u.searchParams.set('barberry', '1');
+        if (params.get('pyracantha') === '1') u.searchParams.set('pyracantha', '1');
+        if (params.get('cotoneaster') === '1') u.searchParams.set('cotoneaster', '1');
+        if (params.get('viburnum') === '1') u.searchParams.set('viburnum', '1');
       if (params.get('tile') === '1') u.searchParams.set('tile', '1');
       if (params.get('outline') === '1') u.searchParams.set('outline', '1');
       if (params.get('stripe') === '1') u.searchParams.set('stripe', '1');
