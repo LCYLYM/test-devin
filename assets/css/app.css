@@ -7963,3 +7963,57 @@ body[data-template=workshop] .workshop-visual{display:block}
 .ws-lamp::after{content:"";position:absolute;top:14px;left:-30px;right:-30px;height:70px;background:radial-gradient(ellipse,rgba(240,210,140,0.3),transparent 70%)}
 .workshop-caption{text-align:center;font-size:11px;color:var(--dim);margin-top:10px}
 @media(prefers-reduced-motion:reduce){body[data-template=workshop] *{animation:none!important;transition:none!important}}
+
+/* bay 海湾 */
+body[data-template=bay]{--bg:#0a141c;--surface:#101e2a;--surface-2:#182a38;--line:#2e5068;--text:#d6e8f2;--accent:#4a8ab8;--accent-rgb:74,138,184;--instrument:#101e2a;--muted:#5e92b4;--dim:#385a70}
+.bay-visual{display:none;position:relative;margin-top:18px}
+body[data-template=bay] .charge-visual{display:none}
+body[data-template=bay] .bay-visual{display:block}
+.by-scene{position:relative;height:200px;max-width:340px;margin:0 auto;overflow:hidden;border-radius:10px;background:linear-gradient(180deg,#16283a,#0c1c2a)}
+.by-head{position:absolute;top:0;bottom:0;width:24%;background:linear-gradient(180deg,#2e4438,#1c2c22)}
+.by-head.l{left:0;clip-path:polygon(0 0,100% 0,60% 100%,0 100%)}
+.by-head.r{right:0;clip-path:polygon(0 0,100% 0,100% 100%,40% 100%)}
+.by-water{position:absolute;bottom:0;left:0;right:0;height:84px;background:linear-gradient(180deg,#1c4058,#0e2838)}
+.by-yacht{position:absolute;bottom:36px;left:8%;width:46px;height:34px;transition:left .4s linear}
+.by-yacht::before{content:"";position:absolute;bottom:0;left:0;width:46px;height:11px;background:#e8e4d8;border-radius:0 0 22px 22px}
+.by-yacht::after{content:"";position:absolute;bottom:11px;left:14px;width:0;height:0;border-bottom:24px solid #f4f0e4;border-right:14px solid transparent;border-left:2px solid transparent}
+.by-birds{position:absolute;top:30px;left:40%;width:60px;height:20px;opacity:0;transition:opacity .5s}
+.by-birds::before{content:"~ ~";position:absolute;font-size:18px;color:#c8d8e4;letter-spacing:8px;font-family:serif}
+.bay-caption{text-align:center;font-size:11px;color:var(--dim);margin-top:10px}
+@media(prefers-reduced-motion:reduce){body[data-template=bay] *{animation:none!important;transition:none!important}}
+
+/* gate 城门 */
+body[data-template=gate]{--bg:#140e0a;--surface:#1e1610;--surface-2:#2a2016;--line:#4e3a2a;--text:#ecdcC8;--accent:#b85a3a;--accent-rgb:184,90,58;--instrument:#1e1610;--muted:#a87858;--dim:#644a3a}
+.gate-visual{display:none;position:relative;margin-top:18px}
+body[data-template=gate] .charge-visual{display:none}
+body[data-template=gate] .gate-visual{display:block}
+.gt-scene{position:relative;height:200px;max-width:300px;margin:0 auto}
+.gt-wall{position:absolute;bottom:0;left:0;right:0;height:70px;background:repeating-linear-gradient(0deg,#3a2a1c 0 12px,#2e2216 12px 14px)}
+.gt-tower{position:absolute;bottom:60px;left:50%;transform:translateX(-50%);width:110px;height:96px;background:linear-gradient(180deg,#4a3020,#342214)}
+.gt-roof{position:absolute;top:-26px;left:-12px;right:-12px;height:0;border-left:67px solid transparent;border-right:67px solid transparent;border-bottom:28px solid #5e3a1e}
+.gt-win{position:absolute;top:16px;width:20px;height:24px;border:2px solid #2a1c10;background:#f0b860;box-shadow:0 0 10px rgba(240,184,96,0.5);opacity:0.15;transition:opacity .5s}
+#gtW1{left:20px}#gtW2{right:20px}
+.gt-door{position:absolute;bottom:70px;left:50%;transform:translateX(-50%);width:14px;height:56px;background:repeating-linear-gradient(90deg,#241812 0 6px,#2e1e16 6px 8px);transition:width .6s}
+.gt-flag{position:absolute;bottom:178px;left:50%;width:0;height:0;border-top:7px solid transparent;border-bottom:7px solid transparent;border-left:20px solid #c8452a;opacity:0;transition:opacity .4s}
+.gt-flag::before{content:"";position:absolute;right:100%;top:-16px;width:2px;height:16px;background:#2a1c10}
+.gate-caption{text-align:center;font-size:11px;color:var(--dim);margin-top:10px}
+@media(prefers-reduced-motion:reduce){body[data-template=gate] *{animation:none!important;transition:none!important}}
+
+/* dojo 道场 */
+body[data-template=dojo]{--bg:#141008;--surface:#1e180e;--surface-2:#2a2214;--line:#4c4028;--text:#ecdfc0;--accent:#c8a050;--accent-rgb:200,160,80;--instrument:#1e180e;--muted:#a8925c;--dim:#665840}
+.dojo-visual{display:none;position:relative;margin-top:18px}
+body[data-template=dojo] .charge-visual{display:none}
+body[data-template=dojo] .dojo-visual{display:block}
+.dj-scene{position:relative;height:200px;max-width:320px;margin:0 auto}
+.dj-mat{position:absolute;bottom:16px;left:8%;right:8%;height:56px;border:3px solid #4c4028;background:repeating-linear-gradient(0deg,#a89058 0 9px,#98804c 9px 12px)}
+.dj-fig{position:absolute;bottom:64px;left:44%;width:46px;height:76px;opacity:0;transition:opacity .6s}
+.dj-head{position:absolute;top:0;left:16px;width:14px;height:14px;border-radius:50%;background:#d8b890}
+.dj-body{position:absolute;top:14px;left:10px;width:26px;height:38px;border-radius:8px 8px 4px 4px;background:#e8e4da}
+.dj-body::before{content:"";position:absolute;top:8px;left:0;right:0;height:6px;background:#4a3a2a}
+.dj-arm{position:absolute;top:18px;left:-4px;width:14px;height:8px;border-radius:4px;background:#e8e4da;transform-origin:right center;transform:rotate(-40deg);transition:transform .6s}
+.dj-board{position:absolute;top:20px;right:14%;width:44px;height:60px;border:3px solid #4c4028;background:#efe8d4;opacity:0.15;transition:opacity .5s}
+.dj-board::before{content:"";position:absolute;inset:8px;border:2px solid #b0a288;border-radius:50%}
+.dj-scroll{position:absolute;top:14px;left:14%;width:30px;height:0;background:linear-gradient(180deg,#efe4cc,#d8c8a4);border-radius:0 0 4px 4px;transition:height .7s}
+.dj-scroll::before{content:"";position:absolute;top:-4px;left:-3px;right:-3px;height:4px;background:#6a5a38;border-radius:2px}
+.dojo-caption{text-align:center;font-size:11px;color:var(--dim);margin-top:10px}
+@media(prefers-reduced-motion:reduce){body[data-template=dojo] *{animation:none!important;transition:none!important}}
