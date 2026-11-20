@@ -6006,3 +6006,41 @@ body[data-template=nesting] .nesting-visual{display:block}
 .nst-face::after{right:22%}
 .nst-cap{position:absolute;left:50%;top:10%;width:100px;height:60px;margin-left:-50px;background:linear-gradient(#d86848,#983824);border-radius:48% 48% 0 0;z-index:5;transition:top .5s}
 @media(prefers-reduced-motion:reduce){.hul-hoop{transition:none}}
+body[data-template=curling]{--bg:#0a1418;--surface:#101c24;--surface-2:#162430;--line:#28404e;--text:#d0e8f4;--accent:#5098c8;--accent-rgb:80,152,200;--instrument:#101c24;--muted:#527a92;--dim:#527a92}
+body[data-template=juggle]{--bg:#140e08;--surface:#1c1610;--surface-2:#241e14;--line:#3c301c;--text:#ecdcc0;--accent:#e08838;--accent-rgb:224,136,56;--instrument:#1c1610;--muted:#967848;--dim:#967848}
+body[data-template=yoyo]{--bg:#140c0c;--surface:#1c1212;--surface-2:#241818;--line:#3e2424;--text:#ecd0cc;--accent:#d85050;--accent-rgb:216,80,80;--instrument:#1c1212;--muted:#985e5e;--dim:#985e5e}
+.curling-visual,.juggle-visual,.yoyo-visual{display:none;position:relative;margin-top:18px}
+body[data-template=curling] .charge-visual,body[data-template=juggle] .charge-visual,body[data-template=yoyo] .charge-visual{display:none}
+body[data-template=curling] .curling-visual{display:block}
+.cur-scene{position:relative;height:180px;background:linear-gradient(#0a1418 0%,#1c3a48 100%);overflow:hidden}
+.cur-ice{position:absolute;left:0;right:0;bottom:0;height:42%;background:linear-gradient(#2a5a70,#183848)}
+.cur-ring{position:absolute;bottom:12%;left:82%;border:2px solid rgba(180,230,250,.5);border-radius:50%}
+.cur-ring.r1{width:14px;height:14px;margin-left:-7px;background:rgba(220,60,60,.5)}
+.cur-ring.r2{width:34px;height:34px;margin-left:-17px}
+.cur-ring.r3{width:56px;height:56px;margin-left:-28px}
+.cur-ring.r4{width:80px;height:80px;margin-left:-40px}
+.cur-stone{position:absolute;left:10%;bottom:18%;width:34px;height:18px;background:linear-gradient(#7a8898,#4a5868);border-radius:50%;transition:left .5s,bottom .5s}
+.cur-handle{position:absolute;left:50%;top:-8px;width:16px;height:10px;margin-left:-8px;background:#d85050;border-radius:6px 6px 0 0}
+.cur-brush{position:absolute;bottom:26%;width:22px;height:6px;background:#c8a050;border-radius:3px;transform:rotate(-14deg);opacity:.7}
+.cur-brush.b1{left:34%}
+.cur-brush.b2{left:50%}
+.curling-caption,.juggle-caption,.yoyo-caption{text-align:center;font-size:11px;color:var(--dim);margin-top:10px}
+body[data-template=juggle] .juggle-visual{display:block}
+.jug-scene{position:relative;height:180px;background:radial-gradient(ellipse at 50% 60%,#2a1e10,#140e08 75%);overflow:hidden}
+.jug-body{position:absolute;left:50%;bottom:8%;width:44px;height:80px;margin-left:-22px}
+.jug-head{position:absolute;left:50%;top:0;width:20px;height:20px;margin-left:-10px;background:#e0b890;border-radius:50%}
+.jug-torso{position:absolute;left:50%;top:20px;width:20px;height:42px;margin-left:-10px;background:linear-gradient(#4a8a78,#2a5848);border-radius:8px}
+.jug-arm{position:absolute;top:26px;width:8px;height:30px;background:#c89868;border-radius:4px;transform-origin:top}
+.jug-arm.l{left:2px}
+.jug-arm.r{right:2px}
+.jug-ball{position:absolute;left:50%;bottom:30%;width:14px;height:14px;border-radius:50%;transition:left .1s,bottom .1s}
+.jug-ball.b1{background:#e04840}
+.jug-ball.b2{background:#e0b838}
+.jug-ball.b3{background:#48a858}
+body[data-template=yoyo] .yoyo-visual{display:block}
+.yoy-scene{position:relative;height:180px;background:radial-gradient(ellipse at 50% 50%,#2c1616,#140c0c 75%);overflow:hidden}
+.yoy-hand{position:absolute;left:50%;top:4%;width:34px;height:18px;margin-left:-17px;background:linear-gradient(#d8b088,#a88058);border-radius:8px}
+.yoy-string{position:absolute;left:50%;top:12%;width:2px;height:10%;margin-left:-1px;background:#e8dcc0;transition:height .6s}
+.yoy-disc{position:absolute;left:50%;top:8%;width:44px;height:44px;margin-left:-22px;background:radial-gradient(circle at 40% 35%,#f07070,#982828);border-radius:50%;transition:top .6s}
+.yoy-axle{position:absolute;left:50%;top:50%;width:10px;height:10px;margin:-5px;background:#f0e0c0;border-radius:50%}
+@media(prefers-reduced-motion:reduce){.jug-arm,.jug-ball{transition:none}}
