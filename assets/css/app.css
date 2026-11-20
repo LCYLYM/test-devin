@@ -6479,3 +6479,46 @@ body[data-template=bigben] .bigben-visual{display:block}
 .bbn-win.w2{bottom:52px}
 .bbn-win.w3{bottom:78px}
 @media(prefers-reduced-motion:reduce){.dwb-leaf,.wvn-arrow,.bbn-hand{transition:none}}
+body[data-template=telescope]{--bg:#0a0c1a;--surface:#121424;--surface-2:#1a1c30;--line:#2a2e48;--text:#ccd4ec;--accent:#98a8e0;--accent-rgb:152,168,224;--instrument:#121424;--muted:#5a628a;--dim:#5a628a}
+body[data-template=aquarium]{--bg:#041418;--surface:#0a1e24;--surface-2:#102830;--line:#1e3c48;--text:#b8dce8;--accent:#40b8c8;--accent-rgb:64,184,200;--instrument:#0a1e24;--muted:#3c6a76;--dim:#3c6a76}
+body[data-template=terrarium]{--bg:#0a120a;--surface:#121a12;--surface-2:#1a2418;--line:#2c3c2c;--text:#d0e4cc;--accent:#68b878;--accent-rgb:104,184,120;--instrument:#121a12;--muted:#4e7a56;--dim:#4e7a56}
+.telescope-visual,.aquarium-visual,.terrarium-visual{display:none;position:relative;margin-top:18px}
+body[data-template=telescope] .charge-visual,body[data-template=aquarium] .charge-visual,body[data-template=terrarium] .charge-visual{display:none}
+body[data-template=telescope] .telescope-visual{display:block}
+.tsc-scene{position:relative;height:180px;background:radial-gradient(ellipse at 50% 30%,#1a2038,#0a0c1a 75%);overflow:hidden}
+.tsc-star{position:absolute;width:4px;height:4px;background:#f0f0ff;border-radius:50%;opacity:.8}
+.tsc-star.s1{left:18%;top:16%}
+.tsc-star.s2{left:78%;top:12%}
+.tsc-star.s3{left:66%;top:30%}
+.tsc-star.s4{left:30%;top:24%}
+.tsc-moon{position:absolute;left:72%;top:40%;width:34px;height:34px;transform:translateX(-50%);background:radial-gradient(circle at 35% 35%,#f0ead0,#b8a878);border-radius:50%;opacity:.3;transition:opacity .5s,transform .5s}
+.tsc-tube{position:absolute;left:32%;bottom:30%;width:110px;height:26px;background:linear-gradient(#6a5838,#3c3018);border-radius:13px;transform-origin:left center;transition:transform .3s}
+.tsc-lens{position:absolute;right:-4px;top:3px;width:14px;height:20px;background:radial-gradient(#98c8e8,#3a6888);border-radius:50%}
+.tsc-mount{position:absolute;left:40%;bottom:14%;width:6px;height:34px;background:#4a3c24}
+.tsc-mount::before{content:'';position:absolute;left:-14px;bottom:-4px;width:34px;height:6px;background:#4a3c24;border-radius:3px}
+.tsc-comet{position:absolute;left:90%;top:22%;width:8px;height:8px;background:#f0f8ff;border-radius:50%;box-shadow:-14px 0 10px rgba(200,220,255,.6);opacity:0;transition:left .4s,opacity .4s}
+.telescope-caption,.aquarium-caption,.terrarium-caption{text-align:center;font-size:11px;color:var(--dim);margin-top:10px}
+body[data-template=aquarium] .aquarium-visual{display:block}
+.aqm-scene{position:relative;height:180px;background:#041418;overflow:hidden}
+.aqm-tank{position:absolute;left:50%;top:14%;bottom:12%;width:72%;transform:translateX(-50%);border:4px solid rgba(140,200,220,.5);border-radius:8px;overflow:hidden;background:rgba(20,40,50,.4)}
+.aqm-water{position:absolute;left:0;right:0;bottom:0;height:0;background:linear-gradient(rgba(60,150,190,.35),rgba(30,90,130,.5));transition:height .5s}
+.aqm-bubble{position:absolute;bottom:6px;width:6px;height:6px;background:rgba(200,240,255,.6);border-radius:50%}
+.aqm-bubble.b1{left:24%}
+.aqm-bubble.b2{left:50%;bottom:14px}
+.aqm-bubble.b3{left:70%}
+.aqm-fish{position:absolute;left:15%;top:40%;width:24px;height:13px;background:linear-gradient(#f89830,#d05818);border-radius:50% 60% 60% 50%;opacity:0;transition:left 1.2s,opacity .5s}
+.aqm-fish::before{content:'';position:absolute;right:-8px;top:2px;width:0;height:0;border-top:5px solid transparent;border-bottom:5px solid transparent;border-left:9px solid #d05818}
+.aqm-grass{position:absolute;left:14%;bottom:0;width:60%;height:26px;background:repeating-linear-gradient(90deg,transparent 0 8px,#3a8a4a 8px 11px);border-radius:0 0 4px 4px;opacity:0;transition:opacity .5s}
+body[data-template=terrarium] .terrarium-visual{display:block}
+.trr-scene{position:relative;height:180px;background:radial-gradient(ellipse at 50% 80%,#18281a,#0a120a 75%);overflow:hidden}
+.trr-dome{position:absolute;left:50%;bottom:14%;width:150px;height:120px;transform:translateX(-50%);background:rgba(180,220,200,.08);border:3px solid rgba(160,210,180,.45);border-radius:75px 75px 12px 12px;overflow:hidden}
+.trr-moss{position:absolute;left:50%;bottom:0;width:20%;height:18px;transform:translateX(-50%);background:radial-gradient(#6a9a4a,#3c6a28);border-radius:50% 50% 0 0;transition:width .6s}
+.trr-plant{position:absolute;bottom:12px;width:5px;height:0;background:linear-gradient(#78c060,#4a8a38);border-radius:3px 3px 0 0;transition:height .5s}
+.trr-plant.p1{left:32%}
+.trr-plant.p2{left:48%}
+.trr-plant.p3{left:62%}
+.trr-plant::before{content:'';position:absolute;left:-4px;top:-6px;width:13px;height:8px;background:#6ab050;border-radius:50% 50% 0 0}
+.trr-rock{position:absolute;bottom:6px;width:14px;height:9px;background:#7a7268;border-radius:50%}
+.trr-rock.r1{left:22%}
+.trr-rock.r2{right:22%}
+@media(prefers-reduced-motion:reduce){.tsc-tube,.aqm-water,.trr-plant{transition:none}}
