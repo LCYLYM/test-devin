@@ -51,10 +51,10 @@
     var template = params.get('template') || params.get('skin');
     if (template === 'daily') {
       var dayNum = Math.floor(Date.now() / 864e5);
-      var dailyList = ['pig', 'charge', 'meter', 'pixel', 'neon', 'mono', 'paper', 'term', 'ecg', 'wave', 'therm', 'receipt', 'sand', 'dial', 'trail', 'metro', 'lift', 'eclipse', 'flap', 'vinyl', 'const', 'plant', 'shadow', 'tide', 'rocket', 'balloon', 'aqua', 'kite', 'falls', 'toast', 'ember', 'cable', 'hive', 'lantern', 'abacus', 'ferris', 'globe', 'seismo', 'terrace', 'crane', 'slots', 'domino', 'match', 'popcorn', 'tetris', 'fishing'];
+      var dailyList = ['pig', 'charge', 'meter', 'pixel', 'neon', 'mono', 'paper', 'term', 'ecg', 'wave', 'therm', 'receipt', 'sand', 'dial', 'trail', 'metro', 'lift', 'eclipse', 'flap', 'vinyl', 'const', 'plant', 'shadow', 'tide', 'rocket', 'balloon', 'aqua', 'kite', 'falls', 'toast', 'ember', 'cable', 'hive', 'lantern', 'abacus', 'ferris', 'globe', 'seismo', 'terrace', 'crane', 'slots', 'domino', 'match', 'popcorn', 'tetris', 'fishing', 'pottery', 'sparkler', 'origami'];
       template = dailyList[dayNum % dailyList.length];
     }
-    if (template === 'random') template = ['charge','meter','pixel','pig','neon','mono','paper','term','ecg','wave','therm','receipt','sand','dial','trail','metro','lift','eclipse','flap','vinyl','const','plant','shadow','tide','rocket','balloon','aqua','kite','falls','toast','ember','cable','hive','lantern','abacus','ferris','globe','seismo','terrace','crane','slots','domino','match','popcorn','tetris','fishing'][Math.floor(Math.random() * 46)];
+    if (template === 'random') template = ['charge','meter','pixel','pig','neon','mono','paper','term','ecg','wave','therm','receipt','sand','dial','trail','metro','lift','eclipse','flap','vinyl','const','plant','shadow','tide','rocket','balloon','aqua','kite','falls','toast','ember','cable','hive','lantern','abacus','ferris','globe','seismo','terrace','crane','slots','domino','match','popcorn','tetris','fishing','pottery','sparkler','origami'][Math.floor(Math.random() * 49)];
     if (template) app.setTemplate(template);
     else {
       // First-visit default follows the OS: light mode gets the paper skin.
@@ -186,7 +186,7 @@
       document.body.style.setProperty('--accent', accent);
     }
 
-    var THEME_COLORS = {pig:'#1a1716',charge:'#131415',meter:'#171715',pixel:'#151515',neon:'#0c0e18',mono:'#111111',paper:'#f2efe7',term:'#0d1117',ecg:'#160a0a',wave:'#0b1526',therm:'#181310',receipt:'#181512',sand:'#221a0e',dial:'#1e1710',trail:'#121a13',metro:'#0e1620',lift:'#16140f',eclipse:'#0b0d12',flap:'#101216',vinyl:'#150e1c',const:'#0a1020',plant:'#0f180c',shadow:'#1c140c',tide:'#0a161c',rocket:'#120f14',balloon:'#181208',aqua:'#081418',kite:'#161508',falls:'#0a141c',toast:'#181008',ember:'#140c08',cable:'#0c1611',hive:'#181204',lantern:'#140e10', abacus:'#181008', ferris:'#160e14', globe:'#0c1420', seismo:'#16100e', terrace:'#0e1610', crane:'#180e16', slots:'#181204', domino:'#0e141c', match:'#160e08', popcorn:'#181404', tetris:'#0c1418', fishing:'#0c1614'};
+    var THEME_COLORS = {pig:'#1a1716',charge:'#131415',meter:'#171715',pixel:'#151515',neon:'#0c0e18',mono:'#111111',paper:'#f2efe7',term:'#0d1117',ecg:'#160a0a',wave:'#0b1526',therm:'#181310',receipt:'#181512',sand:'#221a0e',dial:'#1e1710',trail:'#121a13',metro:'#0e1620',lift:'#16140f',eclipse:'#0b0d12',flap:'#101216',vinyl:'#150e1c',const:'#0a1020',plant:'#0f180c',shadow:'#1c140c',tide:'#0a161c',rocket:'#120f14',balloon:'#181208',aqua:'#081418',kite:'#161508',falls:'#0a141c',toast:'#181008',ember:'#140c08',cable:'#0c1611',hive:'#181204',lantern:'#140e10', abacus:'#181008', ferris:'#160e14', globe:'#0c1420', seismo:'#16100e', terrace:'#0e1610', crane:'#180e16', slots:'#181204', domino:'#0e141c', match:'#160e08', popcorn:'#181404', tetris:'#0c1418', fishing:'#0c1614', pottery:'#18100a', sparkler:'#0e0c14', origami:'#180e14'};
     function applyThemeColor(t) {
       var m = document.querySelector('meta[name=theme-color]');
       if (m && THEME_COLORS[t]) m.content = THEME_COLORS[t];
@@ -4745,7 +4745,7 @@
     } else if (e.key === '?') {
       if (window.SalaryApp) window.SalaryApp.openDialog('aboutDialog');
     } else if (e.key === 't' && window.SalaryApp) {
-      var skins = ['pig', 'charge', 'meter', 'pixel', 'neon', 'mono', 'paper', 'term', 'ecg', 'wave', 'therm', 'receipt', 'sand', 'dial', 'trail', 'metro', 'lift', 'eclipse', 'flap', 'vinyl', 'const', 'plant', 'shadow', 'tide', 'rocket', 'balloon', 'aqua', 'kite', 'falls', 'toast', 'ember', 'cable', 'hive', 'lantern', 'abacus', 'ferris', 'globe', 'seismo', 'terrace', 'crane', 'slots', 'domino', 'match', 'popcorn', 'tetris', 'fishing'];
+      var skins = ['pig', 'charge', 'meter', 'pixel', 'neon', 'mono', 'paper', 'term', 'ecg', 'wave', 'therm', 'receipt', 'sand', 'dial', 'trail', 'metro', 'lift', 'eclipse', 'flap', 'vinyl', 'const', 'plant', 'shadow', 'tide', 'rocket', 'balloon', 'aqua', 'kite', 'falls', 'toast', 'ember', 'cable', 'hive', 'lantern', 'abacus', 'ferris', 'globe', 'seismo', 'terrace', 'crane', 'slots', 'domino', 'match', 'popcorn', 'tetris', 'fishing', 'pottery', 'sparkler', 'origami'];
       var cur = window.SalaryApp.getState().preferences.template;
       window.SalaryApp.setTemplate(skins[(skins.indexOf(cur) + 1) % skins.length]);
     } else if (e.key === 'p' && window.SalaryApp) {
