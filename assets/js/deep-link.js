@@ -4248,6 +4248,9 @@
     if (params.get('fuchsia') === '1') { document.body.classList.add('is-fuchsia'); }
     if (params.get('oleander') === '1') { document.body.classList.add('is-oleander'); }
     if (params.get('buddleia') === '1') { document.body.classList.add('is-buddleia'); }
+    if (params.get('gorse') === '1') { document.body.classList.add('is-gorse'); }
+    if (params.get('broom') === '1') { document.body.classList.add('is-broom'); }
+    if (params.get('lantana') === '1') { document.body.classList.add('is-lantana'); }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -5854,6 +5857,9 @@
         if (params.get('fuchsia') === '1') u.searchParams.set('fuchsia', '1');
         if (params.get('oleander') === '1') u.searchParams.set('oleander', '1');
         if (params.get('buddleia') === '1') u.searchParams.set('buddleia', '1');
+        if (params.get('gorse') === '1') u.searchParams.set('gorse', '1');
+        if (params.get('broom') === '1') u.searchParams.set('broom', '1');
+        if (params.get('lantana') === '1') u.searchParams.set('lantana', '1');
       if (params.get('tile') === '1') u.searchParams.set('tile', '1');
       if (params.get('outline') === '1') u.searchParams.set('outline', '1');
       if (params.get('stripe') === '1') u.searchParams.set('stripe', '1');

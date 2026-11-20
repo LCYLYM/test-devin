@@ -2926,6 +2926,12 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .is-oleander .instrument{border-color:rgba(225,110,145,.4)}
 .is-buddleia{background:linear-gradient(180deg,#21182c 0%,#100b16 100%)}
 .is-buddleia .instrument{border-color:rgba(160,120,220,.4)}
+.is-gorse{background:linear-gradient(180deg,#2c2510 0%,#151106 100%)}
+.is-gorse .instrument{border-color:rgba(240,205,70,.4)}
+.is-broom{background:linear-gradient(180deg,#2b2110 0%,#150f06 100%)}
+.is-broom .instrument{border-color:rgba(235,180,65,.4)}
+.is-lantana{background:linear-gradient(180deg,#2e1719 0%,#170a0c 100%)}
+.is-lantana .instrument{border-color:rgba(235,110,90,.4)}
 .is-oatmeal{background:linear-gradient(180deg,#1d1912,#2f291e 50%,#433a2a)}
 .is-oatmeal .instrument{border-color:rgba(215,195,155,.4)}
 .is-thyme{background:linear-gradient(180deg,#121a14,#1c2a20 50%,#28392c)}

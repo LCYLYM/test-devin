@@ -1364,6 +1364,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `fuchsia` | `1` フクシア配色 |
 | `oleander` | `1` キョウチクトウ配色 |
 | `buddleia` | `1` フサフジウツギ配色 |
+| `gorse` | `1` ハリエニシダ配色 |
+| `broom` | `1` エニシダ配色 |
+| `lantana` | `1` ランタナ配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 
