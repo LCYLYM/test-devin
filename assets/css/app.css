@@ -7307,3 +7307,53 @@ body[data-template=castle] .castle-visual{display:block}
 .cst2-flag::before{content:"";position:absolute;right:100%;top:-14px;width:2px;height:14px;background:#38405a}
 .castle-caption{text-align:center;font-size:11px;color:var(--dim);margin-top:10px}
 @media(prefers-reduced-motion:reduce){body[data-template=castle] *{animation:none!important;transition:none!important}}
+
+/* voyage 远航 */
+body[data-template=voyage]{--bg:#0a1018;--surface:#101c28;--surface-2:#162634;--line:#2c4a64;--text:#d8e8f4;--accent:#4a90c8;--accent-rgb:74,144,200;--instrument:#101c28;--muted:#6c98b8;--dim:#3e5a72}
+.voyage-visual{display:none;position:relative;margin-top:18px}
+body[data-template=voyage] .charge-visual{display:none}
+body[data-template=voyage] .voyage-visual{display:block}
+.vyg-scene{position:relative;height:200px;max-width:340px;margin:0 auto;overflow:hidden;border-radius:8px}
+.vyg-sun{position:absolute;top:14px;right:20px;width:36px;height:36px;border-radius:50%;background:radial-gradient(circle,#f0d888,#c8a048);box-shadow:0 0 24px rgba(240,216,136,0.3);opacity:0.8}
+.vyg-sea{position:absolute;bottom:0;left:0;right:0;height:56px;background:linear-gradient(180deg,#18344c,#0c1e30)}
+.vyg-sea::before{content:"";position:absolute;top:0;left:0;right:0;height:2px;background:repeating-linear-gradient(90deg,rgba(74,144,200,0.5) 0 22px,transparent 22px 44px)}
+.vyg-boat{position:absolute;bottom:34px;left:-12%;width:44px;height:34px;transition:left .3s linear}
+.vyg-sail{position:absolute;left:10px;bottom:14px;width:0;height:0;border-bottom:30px solid #e8dcc0;border-right:16px solid transparent;border-left:2px solid transparent}
+.vyg-hull{position:absolute;bottom:0;left:0;width:44px;height:10px;background:#6a4020;border-radius:0 0 20px 20px}
+.vyg-land{position:absolute;bottom:44px;right:-2px;width:0;height:0;border-bottom:26px solid #2a4a3a;border-left:16px solid transparent;border-right:16px solid transparent;opacity:0;transition:opacity .6s}
+.voyage-caption{text-align:center;font-size:11px;color:var(--dim);margin-top:10px}
+@media(prefers-reduced-motion:reduce){body[data-template=voyage] *{animation:none!important;transition:none!important}}
+
+/* sauna 桑拿 */
+body[data-template=sauna]{--bg:#140e08;--surface:#201409;--surface-2:#2e1e0e;--line:#54402a;--text:#f0dcc0;--accent:#c88a4a;--accent-rgb:200,138,74;--instrument:#201409;--muted:#b08050;--dim:#70583c}
+.sauna-visual{display:none;position:relative;margin-top:18px}
+body[data-template=sauna] .charge-visual{display:none}
+body[data-template=sauna] .sauna-visual{display:block}
+.sun-scene{position:relative;height:200px;max-width:320px;margin:0 auto}
+.sun-room{position:absolute;inset:0;border-radius:12px;background:linear-gradient(180deg,#2e1e0e,#1c1208);border:2px solid #54402a;overflow:hidden}
+.sun-room::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(0deg,transparent 0 26px,rgba(84,64,42,0.35) 26px 28px)}
+.sun-bench{position:absolute;bottom:26px;left:20px;right:90px;height:14px;background:linear-gradient(180deg,#6a4c28,#4c3618);border-radius:3px}
+.sun-stone{position:absolute;bottom:16px;right:28px;width:46px;height:30px;border-radius:50% 50% 20% 20%;background:radial-gradient(ellipse at 40% 30%,#5a5248,#322c24)}
+.sun-steam{position:absolute;inset:0;background:radial-gradient(ellipse at 60% 70%,rgba(240,220,192,0.4),transparent 70%);opacity:0;transition:opacity .8s}
+.sun-thermo{position:absolute;top:18px;right:14px;width:12px;height:80px;border-radius:6px;border:2px solid #54402a;background:#180e06}
+.sun-merc{position:absolute;bottom:2px;left:2px;right:2px;height:0;border-radius:3px;background:linear-gradient(180deg,#e88048,#c85030);transition:height .6s}
+.sauna-caption{text-align:center;font-size:11px;color:var(--dim);margin-top:10px}
+@media(prefers-reduced-motion:reduce){body[data-template=sauna] *{animation:none!important;transition:none!important}}
+
+/* tidepool 潮池 */
+body[data-template=tidepool]{--bg:#081410;--surface:#0e1e18;--surface-2:#142a20;--line:#28443a;--text:#c8e8dc;--accent:#3a9a8a;--accent-rgb:58,154,138;--instrument:#0e1e18;--muted:#5aa896;--dim:#36584c}
+.tidepool-visual{display:none;position:relative;margin-top:18px}
+body[data-template=tidepool] .charge-visual{display:none}
+body[data-template=tidepool] .tidepool-visual{display:block}
+.tp-scene{position:relative;height:190px;max-width:320px;margin:0 auto;border-radius:12px;background:linear-gradient(180deg,#101c14,#0a140e);overflow:hidden;border:2px solid #28443a}
+.tp-rock{position:absolute;border-radius:45%;background:radial-gradient(ellipse at 35% 30%,#3a4438,#222a22)}
+.tp-rock.r1{left:8%;bottom:30%;width:64px;height:38px}
+.tp-rock.r2{right:10%;bottom:44%;width:80px;height:30px}
+.tp-creature{position:absolute;border-radius:50%;opacity:0;transition:opacity .5s}
+.tp-creature.c1{left:20%;bottom:42%;width:18px;height:18px;background:radial-gradient(circle,#e86a8a,#a03858)}
+.tp-creature.c2{right:24%;bottom:34%;width:14px;height:14px;background:radial-gradient(circle,#f0b848,#a87818)}
+.tp-creature.c3{left:52%;bottom:26%;width:12px;height:16px;border-radius:50% 50% 20% 20%;background:radial-gradient(circle at 40% 30%,#8ac8e8,#3a7aa8)}
+.tp-water{position:absolute;bottom:0;left:0;right:0;height:8%;background:linear-gradient(180deg,rgba(58,154,138,0.35),rgba(24,84,74,0.6));transition:height .8s}
+.tp-water::before{content:"";position:absolute;top:0;left:0;right:0;height:2px;background:repeating-linear-gradient(90deg,rgba(138,200,232,0.5) 0 18px,transparent 18px 36px)}
+.tidepool-caption{text-align:center;font-size:11px;color:var(--dim);margin-top:10px}
+@media(prefers-reduced-motion:reduce){body[data-template=tidepool] *{animation:none!important;transition:none!important}}
