@@ -4074,3 +4074,75 @@ background:radial-gradient(circle,#fff4d0,#f8b050)}
 @keyframes lantern-drift{0%,100%{transform:translateX(-50%) rotate(-1.5deg)}50%{transform:translateX(-46%) rotate(1.5deg)}}
 .lantern-caption{font-size:11px;color:var(--muted);letter-spacing:.4px}
 @media(prefers-reduced-motion:reduce){.instrument.is-working .lantern-lamp{animation:none}.lantern-lamp{transition:none}}
+
+/* iter-1709: abacus skin — progress digits pulled onto real beads */
+.abacus-visual{display:none;flex-direction:column;align-items:center;gap:12px}
+body[data-template=abacus]{--bg:#181008;--surface:#221808;--surface-2:#2c1e0c;--line:#423018;--text:#f2e4c8;--accent:#d8a05c;--accent-rgb:216,160,92;--instrument:#120c06;--muted:#b59a70;--dim:#756040}
+body[data-template=abacus] .charge-visual{display:none}
+body[data-template=abacus] .abacus-visual{display:flex}
+body[data-template=abacus] .energy-stage{margin:14px 0 8px}
+body[data-template=abacus] .template-slider{background:#3a2a12}
+body[data-template=abacus] .template-switch button.selected{color:#e8b878}
+body[data-template=abacus] .currency-pill{background:#211808;border-color:#423018}
+.abacus-frame{position:relative;display:flex;gap:26px;padding:14px 22px 16px;
+background:linear-gradient(180deg,#4a3014,#3a2410);border-radius:10px;border:2px solid #5c3e1c;
+box-shadow:inset 0 2px 6px rgba(0,0,0,.4)}
+.ab-beam{position:absolute;left:8px;right:8px;top:44px;height:8px;background:#2a1a08;border-radius:2px;
+box-shadow:0 1px 0 rgba(255,220,150,.15)}
+.abacus-rod{position:relative;width:34px;height:180px}
+.ab-rail{position:absolute;left:50%;top:0;bottom:0;width:4px;transform:translateX(-50%);background:#201405;border-radius:2px}
+.ab-bead{position:absolute;left:50%;transform:translateX(-50%);width:26px;height:15px;border-radius:50%;
+background:radial-gradient(circle at 35% 30%,#e8b878,#8a5a28);box-shadow:0 1px 3px rgba(0,0,0,.5);
+transition:top .35s ease,background .3s}
+.ab-heaven{top:8px}
+.ab-heaven.on{background:radial-gradient(circle at 35% 30%,#ffd890,#c8861a)}
+.ab-earth{background:radial-gradient(circle at 35% 30%,#d8a860,#7a4c20)}
+.ab-earth.on{background:radial-gradient(circle at 35% 30%,#ffd890,#c8861a)}
+.abacus-caption{font-size:11px;color:var(--muted);letter-spacing:.4px}
+@media(prefers-reduced-motion:reduce){.ab-bead{transition:none}}
+
+/* iter-1710: ferris skin — wheel turns once a day, cabins light as they board */
+.ferris-visual{display:none;flex-direction:column;align-items:center;gap:12px}
+body[data-template=ferris]{--bg:#160e14;--surface:#1f141c;--surface-2:#281a24;--line:#3c2634;--text:#f6e8f0;--accent:#e86aa8;--accent-rgb:232,106,168;--instrument:#120a10;--muted:#b292a8;--dim:#745e6c}
+body[data-template=ferris] .charge-visual{display:none}
+body[data-template=ferris] .ferris-visual{display:flex}
+body[data-template=ferris] .energy-stage{margin:14px 0 8px}
+body[data-template=ferris] .template-slider{background:#381e30}
+body[data-template=ferris] .template-switch button.selected{color:#f09cc4}
+body[data-template=ferris] .currency-pill{background:#1f141c;border-color:#3c2634}
+.ferris-svg{width:min(260px,70vw);height:auto}
+.fer-strut{stroke:#5a3c50;stroke-width:5;stroke-linecap:round}
+.fer-rim{fill:none;stroke:#8a5c78;stroke-width:4}
+.fer-spoke{stroke:#5a3c50;stroke-width:2}
+.fer-cab{fill:#3c2836;stroke:#8a5c78;stroke-width:1.5;transition:fill .4s}
+.fer-cab.lit{fill:#f0d060;stroke:#f8e8a0;filter:drop-shadow(0 0 4px rgba(240,208,96,.7))}
+.fer-booth{fill:#3c2434;stroke:#5a3c50}
+.fer-pct{fill:#f0d0e0;font-size:9px;font-weight:700}
+.ferris-caption{font-size:11px;color:var(--muted);letter-spacing:.4px}
+@media(prefers-reduced-motion:reduce){.fer-cab{transition:none}}
+
+/* iter-1711: globe skin — snow settles on the little house as the day pays out */
+.globe-visual{display:none;flex-direction:column;align-items:center;gap:10px}
+body[data-template=globe]{--bg:#0c1420;--surface:#121c2a;--surface-2:#182434;--line:#26344a;--text:#e0ecf8;--accent:#9ecfff;--accent-rgb:158,207,255;--instrument:#0a1018;--muted:#92aac4;--dim:#56687e}
+body[data-template=globe] .charge-visual{display:none}
+body[data-template=globe] .globe-visual{display:flex}
+body[data-template=globe] .energy-stage{margin:14px 0 8px}
+body[data-template=globe] .template-slider{background:#1e2c44}
+body[data-template=globe] .template-switch button.selected{color:#bcdcff}
+body[data-template=globe] .currency-pill{background:#121c2a;border-color:#26344a}
+.globe-dome{position:relative;width:170px;height:170px;border-radius:50%;overflow:hidden;
+background:radial-gradient(circle at 35% 28%,#2c4060,#101c2c 75%);
+border:3px solid #3c5068;box-shadow:inset 0 0 30px rgba(158,207,255,.15),0 10px 24px rgba(0,0,0,.4)}
+.globe-house{position:absolute;left:50%;bottom:16%;transform:translateX(-50%);font-size:34px;z-index:2}
+.globe-snow{position:absolute;left:0;right:0;bottom:0;height:6%;
+background:linear-gradient(180deg,#f4faff,#d8e8f4);transition:height .8s;z-index:3}
+.globe-flake{position:absolute;width:4px;height:4px;border-radius:50%;background:#e8f2fc;opacity:0;z-index:4}
+.globe-flake.f1{left:30%}
+.globe-flake.f2{left:55%;animation-delay:.9s}
+.globe-flake.f3{left:72%;animation-delay:1.7s}
+.instrument.is-working .globe-flake{animation:globe-fall 2.6s linear infinite}
+@keyframes globe-fall{0%{top:8%;opacity:0}15%{opacity:.9}85%{opacity:.9}100%{top:88%;opacity:0}}
+.globe-base{width:110px;padding:5px 0 7px;text-align:center;font-size:12px;font-weight:700;color:#c8dcf0;
+background:linear-gradient(180deg,#4a3018,#33200e);border-radius:6px;border:1px solid #5c3e1c}
+.globe-caption{font-size:11px;color:var(--muted);letter-spacing:.4px}
+@media(prefers-reduced-motion:reduce){.instrument.is-working .globe-flake{animation:none}.globe-snow{transition:none}}
