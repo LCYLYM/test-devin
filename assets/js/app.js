@@ -1318,7 +1318,7 @@
   function animate(tick){
     frame=0;if(!latest||document.hidden)return;
     const elapsed=Math.min(250,tick-lastTime)/1000;
-    const speed=latest.demo?20:1;
+    const speed=latest.demo?(window.SalaryApp?.getState().demo?.speed||20):1;
     const step=latest.working ? latest.secondRate*(latest.fun?1e-8:1)*elapsed*speed:0;
     let target=latest.displayAmount+step;
     const cap=(latest.period==='month'?window.SalaryApp?.getState().config.salary:latest.snapshot.daySalary)*latest.currency.rate/(latest.fun?1e8:1);
