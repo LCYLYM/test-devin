@@ -1262,6 +1262,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `ginkgo` | `1` 银杏配色 |
 | `cycad` | `1` 苏铁配色 |
 | `monkeypuzzle` | `1` 猴谜树配色 |
+| `sequoia` | `1` 巨杉配色 |
+| `redwood` | `1` 北美红杉配色 |
+| `bristlecone` | `1` 狐尾松配色 |
 
 皮肤共 12 套，新「收据」皮：`?template=receipt`。
 

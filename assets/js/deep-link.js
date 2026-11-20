@@ -4146,6 +4146,9 @@
     if (params.get('ginkgo') === '1') { document.body.classList.add('is-ginkgo'); }
     if (params.get('cycad') === '1') { document.body.classList.add('is-cycad'); }
     if (params.get('monkeypuzzle') === '1') { document.body.classList.add('is-monkeypuzzle'); }
+    if (params.get('sequoia') === '1') { document.body.classList.add('is-sequoia'); }
+    if (params.get('redwood') === '1') { document.body.classList.add('is-redwood'); }
+    if (params.get('bristlecone') === '1') { document.body.classList.add('is-bristlecone'); }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -5650,6 +5653,9 @@
         if (params.get('ginkgo') === '1') u.searchParams.set('ginkgo', '1');
         if (params.get('cycad') === '1') u.searchParams.set('cycad', '1');
         if (params.get('monkeypuzzle') === '1') u.searchParams.set('monkeypuzzle', '1');
+        if (params.get('sequoia') === '1') u.searchParams.set('sequoia', '1');
+        if (params.get('redwood') === '1') u.searchParams.set('redwood', '1');
+        if (params.get('bristlecone') === '1') u.searchParams.set('bristlecone', '1');
       if (params.get('tile') === '1') u.searchParams.set('tile', '1');
       if (params.get('outline') === '1') u.searchParams.set('outline', '1');
       if (params.get('stripe') === '1') u.searchParams.set('stripe', '1');

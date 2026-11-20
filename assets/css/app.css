@@ -2722,6 +2722,12 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .is-cycad .instrument{border-color:rgba(132,168,106,.4)}
 .is-monkeypuzzle{background:linear-gradient(180deg,#121a14 0%,#0d130e 100%)}
 .is-monkeypuzzle .instrument{border-color:rgba(114,162,110,.4)}
+.is-sequoia{background:linear-gradient(180deg,#1d1410 0%,#150f0b 100%)}
+.is-sequoia .instrument{border-color:rgba(190,110,72,.4)}
+.is-redwood{background:linear-gradient(180deg,#1e1311 0%,#160e0c 100%)}
+.is-redwood .instrument{border-color:rgba(198,102,86,.4)}
+.is-bristlecone{background:linear-gradient(180deg,#191712 0%,#13110d 100%)}
+.is-bristlecone .instrument{border-color:rgba(172,152,112,.4)}
 .is-oatmeal{background:linear-gradient(180deg,#1d1912,#2f291e 50%,#433a2a)}
 .is-oatmeal .instrument{border-color:rgba(215,195,155,.4)}
 .is-thyme{background:linear-gradient(180deg,#121a14,#1c2a20 50%,#28392c)}
