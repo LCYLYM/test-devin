@@ -6274,3 +6274,41 @@ body[data-template=suika] .suika-visual{display:block}
 .sui-fruit.f3{margin-left:-15px}
 .sui-fruit.f4{margin-left:-10px}
 @media(prefers-reduced-motion:reduce){.shg-piece,.krt-card,.krt-hand{transition:none}}
+body[data-template=sumo]{--bg:#141008;--surface:#1c1610;--surface-2:#241e14;--line:#3c3020;--text:#ecdcc0;--accent:#c09868;--accent-rgb:192,152,104;--instrument:#1c1610;--muted:#8a6c4a;--dim:#8a6c4a}
+body[data-template=goldfish]{--bg:#120c06;--surface:#1a120a;--surface-2:#221a10;--line:#3a2a1a;--text:#ecd8c0;--accent:#e06030;--accent-rgb:224,96,48;--instrument:#1a120a;--muted:#8a5838;--dim:#8a5838}
+body[data-template=noren]{--bg:#0c1016;--surface:#141820;--surface-2:#1c202c;--line:#2c3648;--text:#d0dcec;--accent:#4a6898;--accent-rgb:74,104,152;--instrument:#141820;--muted:#4e5e7c;--dim:#4e5e7c}
+.sumo-visual,.goldfish-visual,.noren-visual{display:none;position:relative;margin-top:18px}
+body[data-template=sumo] .charge-visual,body[data-template=goldfish] .charge-visual,body[data-template=noren] .charge-visual{display:none}
+body[data-template=sumo] .sumo-visual{display:block}
+.smo-scene{position:relative;height:180px;background:radial-gradient(ellipse at 50% 70%,#2e2210,#141008 75%);overflow:hidden}
+.smo-ring{position:absolute;left:50%;bottom:14%;width:150px;height:46px;transform:translateX(-50%);background:#d0b888;border:6px solid #6a5428;border-radius:50%}
+.smo-rikishi{position:absolute;bottom:26%;width:42px;height:56px;transition:left .5s,opacity .5s}
+.smo-rikishi.you{left:26%}
+.smo-rikishi.foe{left:58%}
+.smo-rikishi .smo-head{position:absolute;left:50%;top:0;width:16px;height:16px;margin-left:-8px;background:#e0b088;border-radius:50%}
+.smo-rikishi::before{content:'';position:absolute;left:50%;top:16px;width:38px;height:34px;margin-left:-19px;background:#e0b088;border-radius:46% 46% 30% 30%}
+.smo-rikishi .smo-belt{position:absolute;left:50%;top:36px;width:26px;height:10px;margin-left:-13px;background:#3a3028;border-radius:3px}
+.smo-rikishi.you .smo-belt{background:#c04848}
+.smo-rikishi.foe .smo-belt{background:#385888}
+.sumo-caption,.goldfish-caption,.noren-caption{text-align:center;font-size:11px;color:var(--dim);margin-top:10px}
+body[data-template=goldfish] .goldfish-visual{display:block}
+.gfs-scene{position:relative;height:180px;background:linear-gradient(#120c06 0%,#1e3a52 100%);overflow:hidden}
+.gfs-bowl{position:absolute;left:50%;bottom:12%;width:180px;height:120px;transform:translateX(-50%);background:linear-gradient(rgba(120,180,220,.25),rgba(60,110,160,.35));border:4px solid rgba(160,200,230,.5);border-top:none;border-radius:0 0 90px 90px;overflow:hidden}
+.gfs-bowl::before{content:'';position:absolute;left:0;right:0;top:8px;height:3px;background:rgba(160,200,230,.5)}
+.gfs-fish{position:absolute;width:22px;height:12px;background:linear-gradient(#f87830,#d04810);border-radius:50% 60% 60% 50%;transition:left 1s,top 1s,opacity .4s}
+.gfs-fish::before{content:'';position:absolute;right:-8px;top:2px;width:0;height:0;border-top:5px solid transparent;border-bottom:5px solid transparent;border-left:9px solid #d04810}
+.gfs-fish.f1{left:20%;top:40%}
+.gfs-fish.f2{left:55%;top:60%}
+.gfs-fish.f3{left:35%;top:70%}
+.gfs-fish.f4{left:65%;top:35%}
+.gfs-poi{position:absolute;top:-6px;width:44px;height:44px;background:rgba(240,220,180,.4);border:3px solid #e0c8a0;border-radius:50%;transition:left .8s}
+body[data-template=noren] .noren-visual{display:block}
+.nrn-scene{position:relative;height:180px;background:linear-gradient(#0c1016 0%,#1a2418 100%);overflow:hidden}
+.nrn-glow{position:absolute;inset:0;background:radial-gradient(ellipse at 50% 100%,rgba(240,180,80,.4),transparent 65%)}
+.nrn-rod{position:absolute;left:10%;right:10%;top:16%;height:6px;background:#6a4a28;border-radius:3px}
+.nrn-curtain{position:absolute;top:16%;width:26%;height:60%;background:linear-gradient(#4a6898,#2c4468);border-radius:0 0 6px 6px;transition:transform .5s,opacity .5s}
+.nrn-curtain.c1{left:10%}
+.nrn-curtain.c2{left:37%}
+.nrn-curtain.c3{left:64%}
+.nrn-curtain::after{content:'';position:absolute;left:0;right:0;bottom:0;height:8px;background:rgba(255,255,255,.12)}
+@media(prefers-reduced-motion:reduce){.gfs-fish,.nrn-curtain{transition:none}}
