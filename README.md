@@ -1361,6 +1361,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `beautybush` | `1` ビューティブッシュ配色 |
 | `ninebark` | `1` アメリカコデマリ配色 |
 | `aronia` | `1` アロニア配色 |
+| `skimmia` | `1` ミヤマシキミ配色 |
+| `hebe` | `1` ヘーベ配色 |
+| `escallonia` | `1` エスカロニア配色 |
 | `fuchsia` | `1` フクシア配色 |
 | `oleander` | `1` キョウチクトウ配色 |
 | `buddleia` | `1` フサフジウツギ配色 |

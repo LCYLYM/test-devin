@@ -4257,6 +4257,9 @@
     if (params.get('mahonia') === '1') { document.body.classList.add('is-mahonia'); }
     if (params.get('photinia') === '1') { document.body.classList.add('is-photinia'); }
     if (params.get('aucuba') === '1') { document.body.classList.add('is-aucuba'); }
+    if (params.get('skimmia') === '1') { document.body.classList.add('is-skimmia'); }
+    if (params.get('hebe') === '1') { document.body.classList.add('is-hebe'); }
+    if (params.get('escallonia') === '1') { document.body.classList.add('is-escallonia'); }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -5854,6 +5857,9 @@
         if (params.get('abelia') === '1') u.searchParams.set('abelia', '1');
         if (params.get('nandina') === '1') u.searchParams.set('nandina', '1');
         if (params.get('pieris') === '1') u.searchParams.set('pieris', '1');
+        if (params.get('skimmia') === '1') u.searchParams.set('skimmia', '1');
+        if (params.get('hebe') === '1') u.searchParams.set('hebe', '1');
+        if (params.get('escallonia') === '1') u.searchParams.set('escallonia', '1');
         if (params.get('beautyberry') === '1') u.searchParams.set('beautyberry', '1');
         if (params.get('snowberry') === '1') u.searchParams.set('snowberry', '1');
         if (params.get('winterberry') === '1') u.searchParams.set('winterberry', '1');

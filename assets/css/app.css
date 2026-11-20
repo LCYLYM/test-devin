@@ -2920,6 +2920,12 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .is-ninebark .instrument{border-color:rgba(200,110,115,.4)}
 .is-aronia{background:linear-gradient(180deg,#231622 0%,#110a10 100%)}
 .is-aronia .instrument{border-color:rgba(160,90,150,.4)}
+.is-skimmia{background:linear-gradient(180deg,#291a17 0%,#140c0a 100%)}
+.is-skimmia .instrument{border-color:rgba(220,120,105,.4)}
+.is-hebe{background:linear-gradient(180deg,#221a2c 0%,#100c15 100%)}
+.is-hebe .instrument{border-color:rgba(165,130,215,.4)}
+.is-escallonia{background:linear-gradient(180deg,#2d181f 0%,#160b0e 100%)}
+.is-escallonia .instrument{border-color:rgba(225,105,140,.4)}
 .is-fuchsia{background:linear-gradient(180deg,#2e1428 0%,#160a13 100%)}
 .is-fuchsia .instrument{border-color:rgba(230,100,200,.4)}
 .is-oleander{background:linear-gradient(180deg,#2c1720 0%,#150b0f 100%)}
