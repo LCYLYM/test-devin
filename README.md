@@ -1379,6 +1379,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `hyssop` | `1` ヒソップ配色 |
 | `savory` | `1` サボリー配色 |
 | `epazote` | `1` エパソテ配色 |
+| `caraway` | `1` キャラウェイ配色 |
+| `cardamom` | `1` カルダモン配色 |
+| `turmeric` | `1` ターメリック配色 |
 | `fuchsia` | `1` フクシア配色 |
 | `oleander` | `1` キョウチクトウ配色 |
 | `buddleia` | `1` フサフジウツギ配色 |
