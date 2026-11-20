@@ -34,10 +34,10 @@ for ic in manifest.get('icons', []):
 
 buttons = set(re.findall(r'data-template="(\w+)"', html))
 js = open(os.path.join(ROOT, 'assets/js/app.js'), encoding='utf-8').read()
-valid = re.search(r"\['charge','meter','pixel','pig','neon','mono','paper','term','ecg','wave','therm','receipt','sand','dial','trail','metro','lift','eclipse','flap','vinyl','const','plant','shadow','tide','rocket','balloon','aqua','kite','falls','toast','ember','cable','hive','lantern','abacus','ferris','globe','seismo','terrace','crane','slots','domino','match','popcorn','tetris','fishing','pottery','sparkler','origami'\]", js)
+valid = re.search(r"\['charge','meter','pixel','pig','neon','mono','paper','term','ecg','wave','therm','receipt','sand','dial','trail','metro','lift','eclipse','flap','vinyl','const','plant','shadow','tide','rocket','balloon','aqua','kite','falls','toast','ember','cable','hive','lantern','abacus','ferris','globe','seismo','terrace','crane','slots','domino','match','popcorn','tetris','fishing','pottery','sparkler','origami','typewriter','aurora','catnap'\]", js)
 if not valid:
     missing.append('app.js template whitelist missing a skin')
-extra = buttons - {'charge','meter','pixel','pig','neon','mono','paper','term','ecg','wave','therm','receipt','sand','dial','trail','metro','lift','eclipse','flap','vinyl','const','plant','shadow','tide','rocket','balloon','aqua','kite','falls','toast','ember','cable','hive','lantern','abacus','ferris','globe','seismo','terrace','crane','slots','domino','match','popcorn','tetris','fishing','pottery','sparkler','origami'}
+extra = buttons - {'charge','meter','pixel','pig','neon','mono','paper','term','ecg','wave','therm','receipt','sand','dial','trail','metro','lift','eclipse','flap','vinyl','const','plant','shadow','tide','rocket','balloon','aqua','kite','falls','toast','ember','cable','hive','lantern','abacus','ferris','globe','seismo','terrace','crane','slots','domino','match','popcorn','tetris','fishing','pottery','sparkler','origami','typewriter','aurora','catnap'}
 if extra:
     missing.append('template buttons not in JS whitelist: ' + ','.join(sorted(extra)))
 
@@ -67,3 +67,29 @@ if missing:
 print('smoke check passed:',
       len(re.findall(r'(?:src|href)="\./', html)), 'local refs OK,',
       len(required), 'required files present')
+
+# iter-1724: guard against duplicate top-level const/let in functions (parse-fatal)
+lines = js.split('\n')
+func_ranges = []
+i = 0
+while i < len(lines):
+    if re.match(r'\s*(?:async\s+)?function\s+\w+\s*\(', lines[i]):
+        depth = 0
+        start = i
+        while True:
+            depth += lines[i].count('{') - lines[i].count('}')
+            i += 1
+            if depth <= 0 or i >= len(lines):
+                break
+        func_ranges.append((start+1, i))
+    else:
+        i += 1
+dup_err = []
+for a, b in func_ranges:
+    seen = {}
+    for j in range(a-1, b):
+        m2 = re.match(r'    (?:const|let) (\w+)\s*=', lines[j])
+        if m2:
+            if m2.group(1) in seen: dup_err.append((m2.group(1), j+1))
+            seen[m2.group(1)] = j+1
+assert not dup_err, f"duplicate top-level const in function: {dup_err}"
