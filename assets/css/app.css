@@ -5837,3 +5837,33 @@ body[data-template=stitch] .stitch-visual{display:block}
 .sth-needle{position:absolute;left:18%;top:60%;width:4px;height:26px;background:linear-gradient(#d8d8e0,#9898a8);border-radius:2px;transform:rotate(40deg);transition:left .5s,top .5s}
 .sth-needle::after{content:'';position:absolute;left:-1px;top:-4px;width:6px;height:6px;border:1.5px solid #b8b8c8;border-radius:50%}
 @media(prefers-reduced-motion:reduce){.gwn-steam{animation:none}}
+body[data-template=tangram]{--bg:#180e06;--surface:#20160c;--surface-2:#281e10;--line:#463318;--text:#f0dcbc;--accent:#e08840;--accent-rgb:224,136,64;--instrument:#20160c;--muted:#9e7c50;--dim:#9e7c50}
+body[data-template=knot]{--bg:#140808;--surface:#1c1010;--surface-2:#241414;--line:#402020;--text:#f0d0c8;--accent:#d82828;--accent-rgb:216,40,40;--instrument:#1c1010;--muted:#9a6060;--dim:#9a6060}
+body[data-template=rubbing]{--bg:#101010;--surface:#181818;--surface-2:#202020;--line:#343434;--text:#dcdcd8;--accent:#909098;--accent-rgb:144,144,152;--instrument:#181818;--muted:#6e6e76;--dim:#6e6e76}
+.tangram-visual,.knot-visual,.rubbing-visual{display:none;position:relative;margin-top:18px}
+body[data-template=tangram] .charge-visual,body[data-template=knot] .charge-visual,body[data-template=rubbing] .charge-visual{display:none}
+body[data-template=tangram] .tangram-visual{display:block}
+.tgm-scene{position:relative;height:180px;background:radial-gradient(ellipse at 50% 55%,#2a1c0c,#180e06 75%);overflow:hidden}
+.tgm-piece{position:absolute;left:50%;top:50%;opacity:.15;transition:opacity .5s,transform .6s}
+.tgm-piece.p1{width:0;height:0;margin:-40px 0 0 -40px;border:30px solid transparent;border-bottom:52px solid #d86030;transform:rotate(-25deg)}
+.tgm-piece.p2{width:0;height:0;margin:-44px 0 0 -12px;border:24px solid transparent;border-bottom:44px solid #e08840}
+.tgm-piece.p3{width:0;height:0;margin:-16px 0 0 -50px;border:18px solid transparent;border-top:34px solid #b8a030}
+.tgm-piece.p4{width:26px;height:26px;margin:8px 0 0 -46px;background:#70a050;transform:rotate(30deg)}
+.tgm-piece.p5{width:0;height:0;margin:-8px 0 0 18px;border:16px solid transparent;border-left:30px solid #4898b8}
+.tgm-piece.p6{width:0;height:0;margin:10px 0 0 22px;border:14px solid transparent;border-top:26px solid #8060a8}
+.tgm-piece.p7{width:0;height:0;margin:-30px 0 0 26px;border:13px solid transparent;border-bottom:24px solid #c85070}
+.tangram-caption,.knot-caption,.rubbing-caption{text-align:center;font-size:11px;color:var(--dim);margin-top:10px}
+body[data-template=knot] .knot-visual{display:block}
+.knt-scene{position:relative;height:180px;background:radial-gradient(ellipse at 50% 45%,#281414,#140808 75%);overflow:hidden}
+.knt-svg{position:absolute;left:50%;top:50%;width:130px;height:130px;transform:translate(-50%,-50%);filter:drop-shadow(0 2px 6px rgba(216,40,40,.4))}
+.knt-tassel{position:absolute;left:50%;bottom:8%;width:4px;height:26px;background:linear-gradient(#d82828,#801010);border-radius:2px}
+.knt-tassel.t1{margin-left:-14px;transform:rotate(8deg)}
+.knt-tassel.t2{margin-left:10px;transform:rotate(-8deg)}
+body[data-template=rubbing] .rubbing-visual{display:block}
+.rbg-scene{position:relative;height:180px;background:radial-gradient(ellipse at 50% 50%,#242420,#101010 75%);overflow:hidden}
+.rbg-stone{position:absolute;left:50%;top:50%;width:130px;height:130px;transform:translate(-50%,-50%);background:linear-gradient(160deg,#4a4a48,#2c2c2a);border-radius:10px;padding:12px}
+.rbg-paper{width:100%;height:100%;background:linear-gradient(#e8e2d4,#d0c8b8);border-radius:4px;position:relative;overflow:hidden}
+.rbg-text{position:absolute;left:0;right:0;top:14%;text-align:center;font-family:'Kaiti SC','STKaiti',KaiTi,serif;font-size:38px;line-height:1.15;color:#28282a;opacity:.08;transition:opacity .8s}
+.rbg-edge{position:absolute;inset:0;box-shadow:inset 0 0 12px rgba(0,0,0,.35);border-radius:4px}
+.rbg-dab{position:absolute;left:20%;top:20%;width:22px;height:22px;background:radial-gradient(circle,#38383a,#1c1c1e);border-radius:50%;opacity:.9;transition:left .4s,top .4s,opacity .4s;box-shadow:0 3px 8px rgba(0,0,0,.5)}
+@media(prefers-reduced-motion:reduce){.rbg-dab{transition:opacity .4s}}
