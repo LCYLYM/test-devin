@@ -13,6 +13,7 @@ a.home{color:var(--accent);text-decoration:none}
 .card{background:var(--panel);border:1px solid #ffffff10;border-radius:12px;padding:14px 12px;display:flex;flex-direction:column;gap:6px;text-decoration:none;color:var(--text);transition:transform .15s,border-color .15s}
 .card:hover{transform:translateY(-2px);border-color:var(--accent)}
 .card.today{border-color:var(--accent)}.card .today-tag{position:absolute;top:8px;right:8px;font-style:normal;font-size:10px;color:var(--accent)}.card{position:relative}
+.card.current{outline:2px solid var(--accent);outline-offset:-2px}.card .cur-tag{position:absolute;bottom:8px;right:8px;font-style:normal;font-size:10px;color:var(--accent)}
 .card i{width:14px;height:14px;border-radius:50%;background:var(--dot);box-shadow:0 0 8px var(--dot)}
 .card b{font-size:14px;font-weight:600}.card span{font-size:11px;color:var(--dim);font-family:ui-monospace,monospace}
 footer{max-width:960px;margin:40px auto 0;color:var(--dim);font-size:13px}
@@ -479,9 +480,12 @@ footer{max-width:960px;margin:40px auto 0;color:var(--dim);font-size:13px}
 <script>
 var q=document.getElementById('q'),cards=document.querySelectorAll('.card'),count=document.getElementById('count'),lucky=document.getElementById('lucky');
 function vis(){return [].slice.call(cards).filter(function(c){return c.style.display!=='none';});}
-q.addEventListener('input',function(){var v=q.value.trim().toLowerCase();cards.forEach(function(c){c.style.display=!v||c.textContent.toLowerCase().indexOf(v)>-1?'':'none';});count.textContent=vis().length+' / '+cards.length;});
+q.addEventListener('input',function(){var v=q.value.trim().toLowerCase();cards.forEach(function(c){var key=c.querySelector('b').textContent+c.querySelector('span').textContent;c.style.display=!v||key.toLowerCase().indexOf(v)>-1?'':'none';});count.textContent=vis().length+' / '+cards.length;});
 q.addEventListener('keydown',function(e){if(e.key==='Enter'&&!e.isComposing){var f=vis()[0];if(f)location.href=f.href;}});
 lucky.addEventListener('click',function(){var v=vis();if(v.length)location.href=v[Math.floor(Math.random()*v.length)].href;});
 var dn=Math.floor(Date.now()/864e5)%cards.length;cards[dn].classList.add('today');cards[dn].insertAdjacentHTML('beforeend','<em class="today-tag">今日</em>');
+try{var cur=JSON.parse(localStorage.getItem('salaryFlow.v2')||'null'),curT=cur&&cur.preferences&&/^\w+$/.test(cur.preferences.template)&&cur.preferences.template;
+if(!curT)curT=(window.matchMedia&&matchMedia('(prefers-color-scheme: light)').matches)?'paper':'pig';
+if(curT){var cc=document.querySelector('.card[href$="skin='+curT+'"]');if(cc){cc.classList.add('current');cc.insertAdjacentHTML('beforeend','<em class="cur-tag">使用中</em>');}}}catch(e){}
 </script>
 </body></html>
