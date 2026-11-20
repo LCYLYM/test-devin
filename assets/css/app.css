@@ -3010,6 +3010,12 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .is-lentil .instrument{border-color:rgba(205,140,80,.4)}
 .is-adzuki{background:linear-gradient(180deg,#271519 0%,#13090c 100%)}
 .is-adzuki .instrument{border-color:rgba(200,80,90,.4)}
+.is-blackbean{background:linear-gradient(180deg,#191518 0%,#0b0a0b 100%)}
+.is-blackbean .instrument{border-color:rgba(120,105,120,.4)}
+.is-kidneybean{background:linear-gradient(180deg,#291417 0%,#14090b 100%)}
+.is-kidneybean .instrument{border-color:rgba(215,90,95,.4)}
+.is-mungbean{background:linear-gradient(180deg,#1d2419 0%,#0d110b 100%)}
+.is-mungbean .instrument{border-color:rgba(135,175,110,.4)}
 .is-fuchsia{background:linear-gradient(180deg,#2e1428 0%,#160a13 100%)}
 .is-fuchsia .instrument{border-color:rgba(230,100,200,.4)}
 .is-oleander{background:linear-gradient(180deg,#2c1720 0%,#150b0f 100%)}

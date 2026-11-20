@@ -4302,6 +4302,9 @@
     if (params.get('chickpea') === '1') { document.body.classList.add('is-chickpea'); }
     if (params.get('lentil') === '1') { document.body.classList.add('is-lentil'); }
     if (params.get('adzuki') === '1') { document.body.classList.add('is-adzuki'); }
+    if (params.get('blackbean') === '1') { document.body.classList.add('is-blackbean'); }
+    if (params.get('kidneybean') === '1') { document.body.classList.add('is-kidneybean'); }
+    if (params.get('mungbean') === '1') { document.body.classList.add('is-mungbean'); }
     var tintParam = params.get('tint');
     if (tintParam) {
       var tc = decodeURIComponent(tintParam).trim();
@@ -5950,6 +5953,9 @@
         if (params.get('chickpea') === '1') u.searchParams.set('chickpea', '1');
         if (params.get('lentil') === '1') u.searchParams.set('lentil', '1');
         if (params.get('adzuki') === '1') u.searchParams.set('adzuki', '1');
+        if (params.get('blackbean') === '1') u.searchParams.set('blackbean', '1');
+        if (params.get('kidneybean') === '1') u.searchParams.set('kidneybean', '1');
+        if (params.get('mungbean') === '1') u.searchParams.set('mungbean', '1');
         if (params.get('fuchsia') === '1') u.searchParams.set('fuchsia', '1');
         if (params.get('oleander') === '1') u.searchParams.set('oleander', '1');
         if (params.get('buddleia') === '1') u.searchParams.set('buddleia', '1');

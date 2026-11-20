@@ -1406,6 +1406,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `chickpea` | `1` ヒヨコマメ配色 |
 | `lentil` | `1` レンズマメ配色 |
 | `adzuki` | `1` アズキ配色 |
+| `blackbean` | `1` 黒豆配色 |
+| `kidneybean` | `1` キドニーマメ配色 |
+| `mungbean` | `1` ムングマメ配色 |
 | `fuchsia` | `1` フクシア配色 |
 | `oleander` | `1` キョウチクトウ配色 |
 | `buddleia` | `1` フサフジウツギ配色 |
