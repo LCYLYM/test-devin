@@ -4591,3 +4591,81 @@ radial-gradient(circle at 65% 60%,rgba(255,220,160,.4) 2px,transparent 3px),
 radial-gradient(circle at 50% 80%,rgba(255,220,160,.35) 2px,transparent 3px);pointer-events:none}
 .juice-caption{font-size:11px;color:var(--muted);letter-spacing:.4px}
 @media(prefers-reduced-motion:reduce){.juice-fill,.juice-orange{transition:none}}
+
+/* iter-1733: rainbow skin — arcs appear band by band after the rain */
+.rainbow-visual{display:none;flex-direction:column;align-items:center;gap:12px}
+body[data-template=rainbow]{--bg:#101418;--surface:#161d24;--surface-2:#1c2530;--line:#2c3848;--text:#e4edf6;--accent:#f07090;--accent-rgb:240,112,144;--instrument:#0c1016;--muted:#90a4b6;--dim:#586a7c}
+body[data-template=rainbow] .charge-visual{display:none}
+body[data-template=rainbow] .rainbow-visual{display:flex}
+body[data-template=rainbow] .energy-stage{margin:14px 0 8px}
+body[data-template=rainbow] .template-slider{background:#243040}
+body[data-template=rainbow] .template-switch button.selected{color:#f898b0}
+body[data-template=rainbow] .currency-pill{background:#161d24;border-color:#2c3848}
+.rain-scene{position:relative;width:230px;height:150px;border-radius:10px;overflow:hidden;
+background:linear-gradient(180deg,#3c5878,#6a88a8)}
+.rain-sky{position:absolute;inset:0}
+.rain-cloud{position:absolute;font-size:26px;opacity:.85}
+.rain-cloud.c1{top:8px;left:14px}
+.rain-cloud.c2{top:16px;right:18px;font-size:20px}
+.rain-ground{position:absolute;left:0;right:0;bottom:0;height:16px;background:#4a6a4a}
+.rain-arc{position:absolute;left:50%;bottom:12px;border-radius:50% 50% 0 0;border-style:solid;
+border-bottom:0;opacity:0;transition:opacity .6s;transform:translateX(-50%)}
+.rain-arc.a1{width:200px;height:100px;border-width:8px 8px 0;border-color:#e84848}
+.rain-arc.a2{width:184px;height:92px;border-width:8px 8px 0;border-color:#f0a030;bottom:12px}
+.rain-arc.a3{width:168px;height:84px;border-width:8px 8px 0;border-color:#f0d040}
+.rain-arc.a4{width:152px;height:76px;border-width:8px 8px 0;border-color:#58b858}
+.rain-arc.a5{width:136px;height:68px;border-width:8px 8px 0;border-color:#5888d8}
+.rainbow-caption{font-size:11px;color:var(--muted);letter-spacing:.4px}
+@media(prefers-reduced-motion:reduce){.rain-arc{transition:none}}
+
+/* iter-1734: bonsai skin — branches grow and shape up on the trunk */
+.bonsai-visual{display:none;flex-direction:column;align-items:center;gap:12px}
+body[data-template=bonsai]{--bg:#0e140c;--surface:#141c12;--surface-2:#1a2416;--line:#2a3a22;--text:#e4f0dc;--accent:#78b858;--accent-rgb:120,184,88;--instrument:#0a1008;--muted:#94ac8a;--dim:#5c6e56}
+body[data-template=bonsai] .charge-visual{display:none}
+body[data-template=bonsai] .bonsai-visual{display:flex}
+body[data-template=bonsai] .energy-stage{margin:14px 0 8px}
+body[data-template=bonsai] .template-slider{background:#24341e}
+body[data-template=bonsai] .template-switch button.selected{color:#9cd07e}
+body[data-template=bonsai] .currency-pill{background:#141c12;border-color:#2a3a22}
+.bonsai-scene{position:relative;width:170px;height:170px}
+.bonsai-tree{position:absolute;bottom:52px;left:50%;transform:translateX(-50%);width:100px;height:110px}
+.bn-trunk{position:absolute;bottom:0;left:50%;transform:translateX(-50%);width:9px;height:46px;
+background:linear-gradient(90deg,#5a4028,#3a2818);border-radius:4px 4px 0 0}
+.bn-branch{position:absolute;background:radial-gradient(circle at 40% 40%,#7ec464,#4a8834);
+border-radius:50% 50% 45% 55%;transform-origin:bottom center;transition:all .7s ease;opacity:.3}
+.bn-branch.br1{width:44px;height:26px;bottom:38px;left:2px}
+.bn-branch.br2{width:40px;height:24px;bottom:38px;right:2px}
+.bn-branch.br3{width:34px;height:22px;bottom:56px;left:14px}
+.bn-branch.br4{width:30px;height:20px;bottom:56px;right:16px}
+.bonsai-pot{position:absolute;bottom:20px;left:50%;transform:translateX(-50%);width:70px;height:30px;
+background:linear-gradient(180deg,#6a4a30,#4a3020);border-radius:4px 4px 12px 12px;border-top:3px solid #8a6244}
+.bn-snip{position:absolute;top:6px;right:22px;font-size:20px;opacity:.8}
+.instrument.is-working .bn-snip{animation:bn-snip 2.6s ease-in-out infinite}
+@keyframes bn-snip{0%,100%{transform:rotate(0)}50%{transform:rotate(-14deg) translateY(2px)}}
+.bonsai-caption{font-size:11px;color:var(--muted);letter-spacing:.4px}
+@media(prefers-reduced-motion:reduce){.instrument.is-working .bn-snip{animation:none}.bn-branch{transition:none}}
+
+/* iter-1735: vending skin — items drop from the spiral shelf into the pickup slot */
+.vending-visual{display:none;flex-direction:column;align-items:center;gap:12px}
+body[data-template=vending]{--bg:#0c141c;--surface:#121c26;--surface-2:#182430;--line:#263850;--text:#e2ecf8;--accent:#58b8e8;--accent-rgb:88,184,232;--instrument:#0a1018;--muted:#8eabc4;--dim:#566e84}
+body[data-template=vending] .charge-visual{display:none}
+body[data-template=vending] .vending-visual{display:flex}
+body[data-template=vending] .energy-stage{margin:14px 0 8px}
+body[data-template=vending] .template-slider{background:#1e3246}
+body[data-template=vending] .template-switch button.selected{color:#8cd0f0}
+body[data-template=vending] .currency-pill{background:#121c26;border-color:#263850}
+.vend-machine{position:relative;width:190px;height:160px;border-radius:10px;overflow:hidden;
+background:linear-gradient(180deg,#2a3c50,#1a2634);border:2px solid #3c5470}
+.vend-shelf{position:absolute;top:12px;left:12px;right:12px;display:grid;grid-template-columns:repeat(6,1fr);gap:6px}
+.vend-item{display:block;height:34px;border-radius:5px;
+background:linear-gradient(180deg,#f0d040,#c09820);border:1px solid #e8c850;transition:opacity .4s}
+.vend-item:nth-child(2n){background:linear-gradient(180deg,#e86868,#b84040);border-color:#d88080}
+.vend-item:nth-child(3n){background:linear-gradient(180deg,#68b8e8,#3890c0);border-color:#80c8f0}
+.vend-door{position:absolute;left:0;right:0;bottom:0;height:52px;background:#101a26;border-top:2px solid #3c5470;
+display:flex;align-items:center;justify-content:center}
+.vend-flap{width:120px;height:26px;background:#0a121c;border:2px solid #3c5470;border-radius:4px}
+.vend-drop{position:absolute;left:50%;transform:translateX(-50%);top:12%;width:18px;height:18px;
+background:linear-gradient(180deg,#f0d040,#c09820);border-radius:4px;opacity:0;
+transition:top .6s ease-in,opacity .5s;z-index:2}
+.vending-caption{font-size:11px;color:var(--muted);letter-spacing:.4px}
+@media(prefers-reduced-motion:reduce){.vend-item,.vend-drop{transition:none}}
