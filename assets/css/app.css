@@ -3124,6 +3124,12 @@ body[data-opacity] .instrument{opacity:var(--inst-opacity,1)}
 .is-chive .instrument{border-color:rgba(120,185,85,.4)}
 .is-ramp{background:linear-gradient(180deg,#1d2518 0%,#0e120b 100%)}
 .is-ramp .instrument{border-color:rgba(145,180,100,.4)}
+.is-pecorino{background:linear-gradient(180deg,#24231c 0%,#11110d 100%)}
+.is-pecorino .instrument{border-color:rgba(200,195,150,.4)}
+.is-gouda{background:linear-gradient(180deg,#272012 0%,#130f08 100%)}
+.is-gouda .instrument{border-color:rgba(220,165,70,.4)}
+.is-brie{background:linear-gradient(180deg,#25231f 0%,#12110e 100%)}
+.is-brie .instrument{border-color:rgba(205,195,175,.4)}
 .is-fuchsia{background:linear-gradient(180deg,#2e1428 0%,#160a13 100%)}
 .is-fuchsia .instrument{border-color:rgba(230,100,200,.4)}
 .is-oleander{background:linear-gradient(180deg,#2c1720 0%,#150b0f 100%)}

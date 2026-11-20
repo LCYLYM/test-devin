@@ -1463,6 +1463,9 @@ https://xd.syal.site/?salary=30000&template=pig&demo=1
 | `shallot` | `1` エシャロット配色 |
 | `chive` | `1` チャイブ配色 |
 | `ramp` | `1` 行者ニンニク配色 |
+| `pecorino` | `1` ペコリーノ配色 |
+| `gouda` | `1` ゴーダ配色 |
+| `brie` | `1` ブリー配色 |
 | `fuchsia` | `1` フクシア配色 |
 | `oleander` | `1` キョウチクトウ配色 |
 | `buddleia` | `1` フサフジウツギ配色 |
